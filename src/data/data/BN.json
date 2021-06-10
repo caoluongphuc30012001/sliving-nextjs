@@ -1,0 +1,1023 @@
+{
+    "label": "BN",
+    "value": "Bắc Ninh",
+    "district": [
+        {
+            "value": "Bắc Ninh",
+            "pre": "Thành phố",
+            "ward": [
+                {
+                    "value": "Đại Phúc",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đáp Cầu",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Hạp Lĩnh",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Hòa Long",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Khắc Niệm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Khúc Xuyên",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Kim Chân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Kinh Bắc",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nam Sơn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ninh Xá",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Phong Khê",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Suối Hoa",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Thị Cầu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tiền An",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Vạn An",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Vân Dương",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Vệ An",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Võ Cường",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Vũ Ninh",
+                    "pre": "Phường"
+                }
+            ],
+            "street": [
+                "18",
+                "1A",
+                "1B",
+                "22",
+                "24",
+                "286",
+                "36",
+                "38",
+                "53",
+                "6",
+                "715",
+                "Âu Cơ",
+                "Bà Chúa Kho",
+                "Ba Huyện",
+                "Bế Văn Đàn",
+                "Bình Than",
+                "Bò Sơn",
+                "Bồ Sơn",
+                "Bồ Sơn 1",
+                "Bò Sơn 2",
+                "Bồ Sơn 2",
+                "Bò Sơn 3",
+                "Bồ Sơn 3",
+                "Bò Sơn 4",
+                "Bồ Sơn 4",
+                "Bùi Xuân Phái",
+                "Cao Bá Quát",
+                "Cao Lỗ Vương",
+                "Chế Lan Viên",
+                "Chu Mẫu",
+                "Chu Văn An",
+                "Cổ Mễ",
+                "Cổng Tiền",
+                "Cổng Tiền 2",
+                "Cù Chính Lan",
+                "D18",
+                "Đa Cấu",
+                "Đa Cấu 2",
+                "Đại Phúc",
+                "Đại Phúc - 33",
+                "Đại Phúc 10",
+                "Đại Phúc 14",
+                "Đại Phúc 24",
+                "Đại Phúc 29",
+                "Đại Phúc 30",
+                "Đại Phúc 7",
+                "Đại Phúc 8",
+                "Đại Phúc 9",
+                "Đại Tráng",
+                "Đăng Đạo",
+                "Đặng Trần Côn",
+                "Đạo Chân",
+                "Đào Duy Từ",
+                "Đấu Mã",
+                "Đỗ Trọng Vỹ",
+                "Dốc Pháo Thủ",
+                "Đông Cốc",
+                "Đồng Soi",
+                "Dương Ổ",
+                "Giang Văn Minh",
+                "H",
+                "H2",
+                "Hà Thành",
+                "Hai Bà Trưng",
+                "Hai Vân",
+                "Hàn Mặc Tử",
+                "Hàn Thuyên",
+                "Hàng Cây",
+                "Hàng Mã",
+                "Hồ Ngọc Lân",
+                "Hồ Ngọc Lân 1",
+                "Hồ Ngọc Lân 2",
+                "Hồ Ngọc Lân 3",
+                "Hồ Ngọc Lân 4",
+                "Hòa Đình",
+                "Hòa Đình 2",
+                "Hòa Long",
+                "Hoài Thanh",
+                "Hoàng Đạo Thúy",
+                "Hoàng Hoa Thám",
+                "Hoàng Long",
+                "Hoàng Quốc Việt",
+                "Hoàng Tích Chí",
+                "Hoàng Tích Chù",
+                "Hoàng Văn Thái",
+                "Hoàng Văn Thụ",
+                "Huyền Quang",
+                "Khả Lễ",
+                "Khả Lễ 1",
+                "Khả Lễ 2",
+                "Khả Lễ 3",
+                "Kim Đồng",
+                "Kim Lân",
+                "Kinh  Bắc 17",
+                "Kinh Bắc",
+                "Kinh Bắc 1",
+                "Kinh Bắc 16",
+                "Kinh Bắc 20",
+                "Kinh Bắc 27",
+                "Kinh Bắc 28",
+                "Kinh Bắc 3",
+                "Kinh Bắc 35",
+                "Kinh Bắc 37",
+                "Kinh Bắc 42",
+                "Kinh Bắc 44",
+                "Kinh Bắc 5",
+                "Kinh Bắc 54",
+                "Kinh Bắc 55",
+                "Kinh Bắc 56",
+                "Kinh Bắc 57",
+                "Kinh Bắc 58",
+                "Kinh Bắc 62",
+                "Kinh Bắc 74",
+                "Kinh Bắc 76",
+                "Kinh Bắc 8",
+                "Kinh Bắc 86",
+                "Kinh Bắc 87",
+                "Kinh Dương Vương",
+                "Lạc Long Quân",
+                "Lãm Làng",
+                "Lãm Trại",
+                "Làng Khả Lễ",
+                "Lê Chân",
+                "Lê Đình Tấn",
+                "Lê Đức Thọ",
+                "Lê Hồng Phong",
+                "Lê Lai",
+                "Lê Phụng Hiểu",
+                "Lê Quý Đôn",
+                "Lê Thái Tổ",
+                "Lê Thanh Nghị",
+                "Lê Thánh Tông",
+                "Lê Trọng Tấn",
+                "Lê Văn Duyệt",
+                "Lê Văn Hưu",
+                "Lê Văn Thịnh",
+                "Lương Ngọc Quyến",
+                "Lương Thế Vinh",
+                "Luy Lâu",
+                "Lý Anh Tông",
+                "Lý Cao Tông",
+                "Lý Chiêu Hoàng",
+                "Lý Đăng Đạo",
+                "Lý Đạo Thành",
+                "Lý Nhân Tông",
+                "Lý Quốc Sư",
+                "Lý Thái Tổ",
+                "Lý Thái Tông",
+                "Lý Thần Tông",
+                "Lý Thánh Tông",
+                "Lý Thế Tông",
+                "Lý Thường Kiệt",
+                "Mạc Đĩnh Chi",
+                "Mai Bang",
+                "Minh Khai",
+                "Nam Cao",
+                "Ngô Đăng Sở",
+                "Ngô Gia Khảm",
+                "Ngô Gia Tự",
+                "Ngô Miễn Thiệu",
+                "Ngô Quyền",
+                "Ngô Sỹ Liên",
+                "Ngô Tất Tố",
+                "Ngô Xuân Quảng",
+                "Ngọc Hân Công Chúa",
+                "Nguyễn Bình",
+                "Nguyễn Bỉnh Quân",
+                "Nguyễn Cao",
+                "Nguyễn Chiêu Huấn",
+                "Nguyễn Công Hãn",
+                "Nguyễn Công Hãng",
+                "Nguyễn Công Trứ",
+                "Nguyễn Đăng",
+                "Nguyễn Đăng Đạo",
+                "Nguyễn Đình Chiểu",
+                "Nguyễn Đình Khôi",
+                "Nguyễn Du",
+                "Nguyễn Đức Cảnh",
+                "Nguyễn Gia Thiều",
+                "Nguyễn Giản Thanh",
+                "Nguyễn Hữu Huân",
+                "Nguyễn Hữu Nghiêm",
+                "Nguyễn Huy Tưởng",
+                "Nguyễn Khắc Cần",
+                "Nguyễn Khuyến",
+                "Nguyễn Nhân Kính",
+                "Nguyễn Quang Ca",
+                "Nguyễn Quyền",
+                "Nguyễn Tảo",
+                "Nguyễn Thái Học",
+                "Nguyễn Thị Lựu",
+                "Nguyễn Thị Minh Khai",
+                "Nguyễn Trãi",
+                "Nguyễn Tri Phương",
+                "Nguyễn Trường Tộ",
+                "Nguyễn Tự Cường",
+                "Nguyễn Văn Côn",
+                "Nguyễn Văn Cừ",
+                "Nguyễn Văn Siêu",
+                "Nguyễn Văn Trỗi",
+                "Nguyễn Viết Xuân",
+                "Nguyễn Xuân Chính",
+                "Nhà Chung",
+                "Niềm Xá",
+                "Phạm Ngũ Lão",
+                "Phan Đăng Lưu",
+                "Phan Huy Chú",
+                "Phố Vũ",
+                "Phù Đổng Thiên Vương",
+                "Phúc Sơn",
+                "Phương Cầu",
+                "Phượng Vỹ",
+                "Phương Vỹ 2",
+                "Quốc Lộ 1",
+                "Quốc lộ 18",
+                "Quốc lộ 1A",
+                "Quốc lộ 1B",
+                "Quốc Lộ 38",
+                "Quỳnh Đôi",
+                "Rạp Hát",
+                "Sao Mai",
+                "Sơn Trung",
+                "Tạ Quang Bửu",
+                "Tản Đà",
+                "Thái Bảo",
+                "Thành Bắc",
+                "Thành Cổ",
+                "Thanh Niên",
+                "Thanh Phương",
+                "Thành Sơn",
+                "Thị Trung",
+                "Thiên Đức",
+                "Thiện Đức",
+                "Thịnh Trung",
+                "Thụ Ninh",
+                "Thượng Đồng",
+                "Tiền An",
+                "Tỉnh Lộ 278",
+                "Tỉnh lộ 286",
+                "Tỉnh lộ 291",
+                "Tô Hiến Thành",
+                "Tô Hiệu",
+                "Tô Ngọc Vân",
+                "Tôn Thất Tùng",
+                "Trần Bình Trọng",
+                "Trần Công",
+                "Trần Hưng Đạo",
+                "Trần Huy Liễu",
+                "Trần Khánh Dư",
+                "Trần Lưu",
+                "Trần Lựu",
+                "Trần Nguyên Hãn",
+                "Trần Quốc Toản",
+                "Triệu Việt Vương",
+                "Trương Văn Lĩnh",
+                "Văn Cao",
+                "Vạn Hạnh",
+                "Văn Miếu",
+                "Vân Trại",
+                "Việt Trang",
+                "Võ Cường",
+                "Võ Cường 10",
+                "Võ Cường 107",
+                "Võ Cường 11",
+                "Võ Cường 110",
+                "Võ Cường 117",
+                "Võ Cường 14",
+                "Võ Cường 17",
+                "Võ Cường 18",
+                "Võ Cường 3",
+                "Võ Cường 38",
+                "Võ Cường 5",
+                "Võ Cường 6",
+                "Võ Cường 66",
+                "Võ Cường 7",
+                "Võ Cường 73",
+                "Võ Cường 8",
+                "Võ Cường 87",
+                "Võ Cường 99",
+                "Võ Thị Sáu",
+                "Vũ Đại Phúc",
+                "Vũ Diệu",
+                "Vũ Giới",
+                "Vũ Kiệt",
+                "Vũ Ninh",
+                "Vũ Ninh 33",
+                "Vương Văn Trà",
+                "Xuân Ái",
+                "Xuân Diệu",
+                "Xuân Ổ",
+                "Xuân Ổ A",
+                "Xuân Ổ B",
+                "Xuân Viên",
+                "Y Na",
+                "Yna"
+            ]
+        },
+        {
+            "value": "Gia Bình",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Bình Dương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Cao Đức",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đại Bái",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đại Lai",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đông Cứu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Gia Bình",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Giang Sơn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lãng Ngâm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nhân Thắng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quỳnh Phú",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Song Giang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thái Bảo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Vạn Ninh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Xuân Lai",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "282",
+                "284",
+                "Phú Dư",
+                "Quốc Lộ 17",
+                "Quốc lộ 228",
+                "Thiên Thai",
+                "Tỉnh lộ 280",
+                "Tỉnh lộ 282",
+                "Vũ Tuyên Hoàng"
+            ]
+        },
+        {
+            "value": "Lương Tài",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "An Thịnh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Bình Định",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lai Hạ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lâm Thao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Minh Tân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mỹ Hương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phú Hòa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phú Lương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Phú",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Lãng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thứa",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Trung Chính",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trung Kênh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trừng Xá",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "280",
+                "285",
+                "Cổ Lãm",
+                "Giáp Văn Cương",
+                "Lương Tài",
+                "Phương Xá",
+                "Tỉnh lộ 280",
+                "Tỉnh lộ 281",
+                "Tỉnh Lộ 283",
+                "Tỉnh lộ 284",
+                "Tỉnh lộ 285"
+            ]
+        },
+        {
+            "value": "Quế Võ",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Bằng An",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Bồng Lai",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Cách Bi",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Châu Phong",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Chi Lăng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đại Xuân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đào Viên",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đức Long",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hán Quảng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mộ Đạo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ngọc Xá",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nhân Hoà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phố Mới",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Phù Lãng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phù Lương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phương Liễu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phượng Mao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quế Tân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Việt Hùng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Việt Thống",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Yên Giả",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "18",
+                "22",
+                "24",
+                "279",
+                "291",
+                "36",
+                "42",
+                "Bằng An",
+                "Giang Liễu",
+                "Hà Liễu",
+                "Lạc Vệ",
+                "Lãm Làng",
+                "Mai Cương",
+                "Mao Dộc",
+                "Mao Trung",
+                "Mao Yên",
+                "Phương Cầu",
+                "Quốc lộ 18",
+                "Tỉnh lộ 291"
+            ]
+        },
+        {
+            "value": "Thuận Thành",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "An Bình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đại Đồng Thành",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đình Tổ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Gia Đông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hà Mãn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hồ",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Hồ Huyện",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Hoài Thượng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mão Điền",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nghĩa Đạo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ngũ Thái",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nguyệt Đức",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ninh Xá",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Song Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Song Liễu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Khương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trạm Lộ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trí Quả",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Xuân Lâm",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "282",
+                "38",
+                "Âu Cơ",
+                "Công Hà",
+                "Đại Bái",
+                "Đông Cốc",
+                "Đông Côi",
+                "Khám",
+                "Luy Lâu",
+                "Mai Bang",
+                "Nghĩa xá",
+                "Nguyễn Chí Tố",
+                "Nguyễn Cư Đạo",
+                "Nguyễn Du",
+                "Phố Keo",
+                "Quốc Lộ 17",
+                "Quốc lộ 18",
+                "Quốc lộ 281",
+                "Quốc Lộ 282",
+                "Quốc Lộ 38",
+                "Quốc lộ 38B",
+                "Tam Á",
+                "Thanh Hoài",
+                "Thuận Thành 3",
+                "Thuận Thành 5",
+                "Tỉnh lộ 280",
+                "Tỉnh lộ 282",
+                "Tỉnh Lộ 283",
+                "Vương Văn Trà"
+            ]
+        },
+        {
+            "value": "Tiên Du",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Cảnh Hưng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đại Đồng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hiên Vân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hoàn Sơn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lạc Vệ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Liên Bão",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lim",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Minh Đạo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nội Duệ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phật Tích",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phú Lâm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Chi",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tri Phương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Việt Đoàn",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "285",
+                "295",
+                "295B",
+                "38",
+                "Đại Thượng",
+                "Đại Vi",
+                "Dương Húc",
+                "Hoài Trung",
+                "Hoàn Sơn",
+                "Khẩu Đông",
+                "Lạc Vệ",
+                "Lý Thường Kiệt",
+                "Ngô Xá",
+                "P",
+                "Quốc lộ 1A",
+                "Quốc Lộ 38",
+                "Tỉnh lộ 270",
+                "Tỉnh lộ 276",
+                "Tỉnh lộ 287",
+                "Tỉnh lộ 295",
+                "TS11",
+                "TS3"
+            ]
+        },
+        {
+            "value": "Từ Sơn",
+            "pre": "Thị xã",
+            "ward": [
+                {
+                    "value": "Châu Khê",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đình Bảng",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đồng Kỵ",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đông Ngàn",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đồng Nguyên",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đồng Nguyên",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hương Mạc",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phù Chẩn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phù Khê",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tam Sơn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Hồng",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Trang Hạ",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Tương Giang",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "15",
+                "1A",
+                "25",
+                "295",
+                "6",
+                "Bính Hạ",
+                "Đa Hội",
+                "Đại Đình",
+                "Đồng Kỵ 1",
+                "ĐT 179",
+                "HN2",
+                "Hoàng Quốc Việt",
+                "Hữu Nghị",
+                "Lê Hồng Phong",
+                "Lê Quang Đạo",
+                "Lê Thái Tổ",
+                "Long Vĩ",
+                "Lý Chiêu Hoàng",
+                "Lý Đạo Thành",
+                "Lý Thái Tổ",
+                "Lý Thánh Tông",
+                "Lý Thường Kiệt",
+                "Lý Tự Trọng",
+                "Minh Khai",
+                "Ngoại Thương",
+                "Nguyễn Công Hãng",
+                "Nguyễn Giáo",
+                "Nguyên Phi Ỷ Lan",
+                "Nguyễn Văn Cừ",
+                "Nguyễn Văn Trỗi",
+                "Phù Lưu",
+                "Quốc lộ 1A",
+                "Số 5",
+                "Số 6",
+                "Tân Thành",
+                "Tỉnh lộ 179",
+                "Tỉnh Lộ 277",
+                "Tỉnh lộ 287",
+                "Tỉnh lộ 295",
+                "Tô Hiến Thành",
+                "Trần Phú",
+                "Trang Liệt",
+                "Viềng",
+                "Yên Lã"
+            ]
+        },
+        {
+            "value": "Yên Phong",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Chờ",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Đông Phong",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đông Thọ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đông Tiến",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Dũng Liệt",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hòa Tiến",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Long Châu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tam Đa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tam Giang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thụy Hòa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trung Nghĩa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Văn Môn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Yên Phụ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Yên Trung",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "16",
+                "18",
+                "286",
+                "295",
+                "Ấp Đồn",
+                "Phú Mẫn",
+                "Quốc lộ 16",
+                "Quốc lộ 18",
+                "Tỉnh lộ 271",
+                "Tỉnh Lộ 277",
+                "Tỉnh lộ 286",
+                "Tỉnh lộ 295"
+            ]
+        }
+    ]
+}

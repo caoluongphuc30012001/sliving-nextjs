@@ -1,0 +1,636 @@
+{
+    "label": "DDB",
+    "value": "Điện Biên",
+    "district": [
+        {
+            "value": "Điện Biên",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Hẹ Muông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hua Thanh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Lói",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Nhà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Phăng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Pồn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Nhạn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Tấu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Na Tông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Na Ư",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Noong Bua",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Noong Hẹt",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Noong Luống",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Núa Ngam",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pá Khoang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Thơm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phu Luông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pom Lót",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sam Mứn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh An",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Chăn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Hưng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Luông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Xương",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Yên",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "12",
+                "AH 13",
+                "Hoàng Công Chất",
+                "Quốc Lộ 12",
+                "Quốc lộ 279",
+                "Võ Nguyên Giáp"
+            ]
+        },
+        {
+            "value": "Điện Biên Đông",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Chiềng Sơ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Điện Biên Đông",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Háng Lìa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Keo Lôm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Luân Giới",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Luân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Na Son",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nong U",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phì Nhừ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phình Giàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pú Hồng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pú Nhi",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tìa Dình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Xa Dung",
+                    "pre": "Xã"
+                }
+            ],
+            "street": []
+        },
+        {
+            "value": "Điện Biên Phủ",
+            "pre": "Thành phố",
+            "ward": [
+                {
+                    "value": "Him Lam",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Mường Thanh",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nam Thanh",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Noong Bua",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Tà Lèng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Thanh",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Thanh Bình",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Thanh Minh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thanh Trường",
+                    "pre": "Phường"
+                }
+            ],
+            "street": [
+                "12",
+                "Hòa Bình",
+                "Hoàng Công Chất",
+                "Lê Trọng Tấn",
+                "Nguyễn Hữu Thọ",
+                "Quốc lộ 279",
+                "Sùng Phái Sinh",
+                "Trần Can",
+                "Trường Chinh",
+                "Võ Nguyên Giáp"
+            ]
+        },
+        {
+            "value": "Mường Ảng",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Ẳng Cang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ẳng Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ẳng Tở",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Búng Lao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Ảng",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Mường Đăng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Lạn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nặm Lịch",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ngối Cáy",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Xuân Lao",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Quốc lộ 279"
+            ]
+        },
+        {
+            "value": "Mường Chà",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Hừa Ngài",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Huổi Lèng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Huổi Mí",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ma Thì Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Chà",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Mường Mươn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Tùng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Na Sang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Nèn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Ham",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phìn Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sa Lông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sá Tổng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Si Pa Phìn",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "12",
+                "6"
+            ]
+        },
+        {
+            "value": "Mường Lay",
+            "pre": "Thị xã",
+            "ward": [
+                {
+                    "value": "Lay Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Na Lay",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Sông Đà",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "12",
+                "6",
+                "Tỉnh lộ 127"
+            ]
+        },
+        {
+            "value": "Mường Nhé",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Chung Chải",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Huổi Lếch",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Leng Su Sìn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Nhé",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Toong",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Kè",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Vì",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pá Mỳ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Lâm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sen Thượng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sín Thầu",
+                    "pre": "Xã"
+                }
+            ],
+            "street": []
+        },
+        {
+            "value": "Nậm Pồ",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Chà Cang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Chà Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Chà Tở",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Bủng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Na Cô Sa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Hỳ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Khoa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Chua",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Khăn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Nhừ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Tin",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Tần",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phìn Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Vàng Đán",
+                    "pre": "Xã"
+                }
+            ],
+            "street": []
+        },
+        {
+            "value": "Tủa Chùa",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Huổi Só",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lao Xả Phình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Báng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Đun",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sáng Nhè",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sín Chải",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sính Phình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tả Phìn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tả Sìn Thàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trung Thu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tủa Chùa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tủa Thàng",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "6"
+            ]
+        },
+        {
+            "value": "Tuần Giáo",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Chiềng Đông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Chiềng Sinh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mùn Chung",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Khong",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Mùn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Thín",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Sáy",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Tòng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phình Sáng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pú Nhung",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pú Xi",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quài Cang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quài Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quài Tở",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Rạng Đông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ta Ma",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tênh Phông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tỏa Tình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tuần Giáo",
+                    "pre": "Thị trấn"
+                }
+            ],
+            "street": [
+                "6",
+                "Quốc lộ 6"
+            ]
+        }
+    ]
+}

@@ -1,8 +1,11 @@
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: "Sliving",
   },
+  pathPrefix: `/`,
   plugins: [
+    `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     {
@@ -14,22 +17,64 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/gatsby-config.js`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/contents/`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`,
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: "videos",
+        path: `${__dirname}/src/videos/`,
       },
-      __key: "pages",
+
+    },
+
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`,
+      },
+
+    },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1200,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `Json`, // a fixed string
+      },
     },
   ],
 };
+

@@ -1,0 +1,26 @@
+{
+  "HEADER": {
+    "HOMEPAGE": {
+      "HOME": "Home",
+      "PRODUCT": "Products",
+      "SOLUTION": "Solutions",
+      "COOPERATION": "Cooperation",
+      "SUPPORT": "Support",
+      "ABOUTUS": "About Us",
+      "CONTACTUS": "Contact Us",
+      "PROJECT": "Project",
+      "BLOG": "Blog",
+      "PRODUCT&SOLUTION": "Product and Solution"
+    },
+    "REGISTER": "REGISTER",
+    "EMAIL": "EMAIL",
+    "SEARCHKEYWORD": "Search for keywords"
+  },
+  "ADDRESS": {
+    "ADDRESS": "ADDRESS",
+    "ADDRESSCOMPANY": "Block 5, Lot I-3B-1, Street N6, Saigon Hi-Tech Park, Ward Tan Phu, Thu Duc City, Ho Chi Minh City, Vietnam, 700000"
+  },
+  "CONTACTPHONE": "CONTACTPHONE",
+  "HEADQUARTERS": "HEADQUARTERS",
+  "SHOWROOM": "SHOWROOM"
+}
