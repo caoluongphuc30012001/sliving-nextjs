@@ -1,0 +1,549 @@
+{
+    "label": "LCH",
+    "value": "Lai Châu",
+    "district": [
+        {
+            "value": "Lai Châu",
+            "pre": "Thị xã",
+            "ward": [
+                {
+                    "value": "Đoàn Kết",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Đông Phong",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nậm Loỏng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quyết Thắng",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Quyết Tiến",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "San Thàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Phong",
+                    "pre": "Phường"
+                }
+            ],
+            "street": [
+                "2B2",
+                "30/4",
+                "58",
+                "9C",
+                "Bế Văn Đàn",
+                "Chu Văn An",
+                "Điện Biên Phủ",
+                "Hồ Tùng Mậu",
+                "Hoàng Minh Giám",
+                "Hoàng Quốc Việt",
+                "Hoàng Văn Thái",
+                "Hoàng Văn Thụ",
+                "Lê Lợi",
+                "Nguyễn Chí Thanh",
+                "Nguyễn Đức Cảnh",
+                "Nguyễn Thái Bình",
+                "Nguyễn Tri Phương",
+                "Phạm Ngọc Thạch",
+                "Pusamcap",
+                "Quốc lộ 4D",
+                "Thanh Niên",
+                "Tỉnh lộ 128",
+                "Tôn Đức Thắng",
+                "Trần Hưng Đạo",
+                "Trần Huy Liệu",
+                "Trần Khát Chân",
+                "Trần Phú",
+                "Trần Quang Diệu",
+                "Trần Quốc Toản",
+                "Trần Văn Thọ",
+                "Trường Chinh",
+                "Võ Nguyên Giáp",
+                "Võ Văn Kiệt"
+            ]
+        },
+        {
+            "value": "Mường Tè",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Bum Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Bum Tở",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ka Lăng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Kan Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mù Cả",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Tè",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Nậm Khao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Ủ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Vệ Sử",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tá Bạ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tà Tổng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thu Lũm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Vàng San",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Xã Mường Tè",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Tỉnh lộ 127"
+            ]
+        },
+        {
+            "value": "Nậm Nhùn",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Hua Bum",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lê Lợi",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Mô",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Ban",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Chà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Hàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Manh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Nhùn",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Nậm Pì",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pú Đao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trung Chải",
+                    "pre": "Xã"
+                }
+            ],
+            "street": []
+        },
+        {
+            "value": "Phong Thổ",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Bản Lang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Dào San",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hoang Thèn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Huổi Luông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Khổng Lào",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lản Nhì Thàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ma Ly Chải",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ma Ly Pho",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mồ Sì San",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mù Sang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường So",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Xe",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Vây Sử",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phong Thổ",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Sì Lở Lầu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sin Súi Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tung Qua Lìn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Vàng Ma Chải",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "12",
+                "Quốc lộ 100",
+                "Quốc lộ 4D",
+                "Tỉnh lộ 128",
+                "Tỉnh lộ 132"
+            ]
+        },
+        {
+            "value": "Sìn Hồ",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Căn Co",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Chăn Nưa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hồng Thu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Làng Mô",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Lùng Thàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ma Quai",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ma Quai,",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Cha",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Cuổi",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Hăn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Mạ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Tăm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Noong Hẻo",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Pa Khóa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pa Tần",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phăng Sô Lin",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phìn Hồ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pu Sam Cáp",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sà Dề Phìn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sìn Hồ",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Tả Ngảo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tả Phìn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tủa Sín Chải",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Tỉnh lộ 128"
+            ]
+        },
+        {
+            "value": "Tam Đường",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Bản Bo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Bản Giang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Bản Hon",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Bình Lư",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Giang Ma",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hồ Thầu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Khun Há",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nà Tăm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nùng Nàng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sơn Bình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Sùng Phài",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tả Lèng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tam Đường",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Thèn Xin",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Quốc lộ 32",
+                "Quốc lộ 4D"
+            ]
+        },
+        {
+            "value": "Tân Uyên",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Hố Mít",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Khoa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Cần",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nậm Sỏ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pắc Ta",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phúc Khoa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tà Mít",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Uyên",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Thân Thuộc",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trung Đồng",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Quốc lộ 32"
+            ]
+        },
+        {
+            "value": "Than Uyên",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Hua Nà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Khoen On",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Cang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Kim",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Mít",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Mường Than",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Pha Mu",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Phúc Than",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ta Gia",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tà Hừa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tà Mung",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Than Uyên",
+                    "pre": "Thị trấn"
+                }
+            ],
+            "street": [
+                "Quốc lộ 32"
+            ]
+        }
+    ]
+}

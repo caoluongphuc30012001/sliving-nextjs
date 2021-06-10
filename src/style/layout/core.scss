@@ -1,0 +1,141 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.fs-14 {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-24 {
+    font-size: 24px;
+
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-34 {
+    font-size: 34px;
+
+}
+
+.fs-48 {
+    font-size: 48px;
+}
+
+.fs-64 {
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: -1px;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.just-cont-bt {
+    justify-content: space-between;
+}
+
+.just-cont-fl-end {
+    justify-content: flex-end;
+}
+
+.just-cont-center {
+    justify-content: center;
+}
+
+
+.txt-hover {
+    cursor: pointer;
+
+    &:hover {
+        color: #1A7DD8;
+        text-decoration: underline;
+    }
+}
+
+.txt-blue {
+    color: #1A7DD8;
+}
+
+.img-obj-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-pointer {
+    cursor: pointer;
+}
+
+.position-fixed {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    z-index: 999999;
+}
+
+@media (max-width:425px) {
+    .fs-32 {
+        font-size: 28px;
+    }
+
+    .fs-48 {
+        font-size: 32px;
+    }
+}
+
+.container-wrap {
+    margin-left: 135px;
+    margin-right: 135px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*-----coppy text slick slide----*/
+.slick-slider {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.slick-list.draggable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,129 @@
+.news-page {
+    padding-top: 54px;
+    padding-bottom: 50px;
+
+
+    .news-page-wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        column-gap: 15px;
+    }
+
+
+    .news-page-left {
+        width: 700px;
+    }
+
+    .news-page-right {
+        width: 470px;
+        align-self: flex-start;
+    }
+
+    .post-news {
+        margin-top: 105px;
+    }
+}
+
+
+.slide-prod-line {
+    .slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: #F47403;
+    }
+
+    .slick-dots li button:before {
+        font-size: 18px;
+
+    }
+
+    .slick-dots {
+        li {
+            button {
+                &:hover {
+                    color: #F47403;
+
+                    &::before {
+                        color: #F47403;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-current {
+        .prod-line-wrap {
+
+            background: #F9F9F9;
+            box-shadow: 0px 8px 8px rgb(38 50 56 / 12%), 0px 16px 24px rgb(38 50 56 / 8%);
+            border-radius: 10px;
+        }
+    }
+
+}
+
+.news-page-body {
+    margin-top: 50px;
+    display: flex;
+
+    &-in-left {
+        flex: 1.8;
+
+        &-video {
+            video {
+                width: 100%;
+            }
+        }
+    }
+
+    &-in-right {
+        flex: 1.2;
+
+        &-title {
+            margin-left: 15px;
+        }
+
+        &-card {
+            display: flex;
+            margin: 16px;
+            font-size: 15px;
+            display: flex !important;
+            border: 2px solid #f1f1f1;
+
+            &-video {
+                flex: 1;
+                margin: 16px;
+                width: 176px;
+                height: 120px;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-text {
+                flex: 2;
+                margin-top: 16px;
+                margin-bottom: 0px !important;
+
+                &-description {
+                    margin-bottom: 10px !important;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .news-page-body {
+        flex-direction: column;
+    }
+}

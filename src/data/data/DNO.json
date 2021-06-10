@@ -1,0 +1,443 @@
+{
+    "label": "DNO",
+    "value": "Đắk Nông",
+    "district": [
+        {
+            "value": "Cư Jút",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Cư KNia",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đăk Đrông",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đăk Wil",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ea Pô",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Ea T'ling",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Nam Dong",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tâm Thắng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trúc Sơn",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "14",
+                "Bà Triệu",
+                "Hùng Vương",
+                "Kim Đồng",
+                "Lê Hồng Phong",
+                "Liên Tỉnh 5",
+                "Nguyễn Tất Thành",
+                "Nguyễn Thị Minh Khai",
+                "Nguyễn Văn Linh",
+                "Phạm Văn Đồng",
+                "Quang Trung",
+                "Quốc lộ 14",
+                "Trần Hưng Đạo",
+                "Ybih Aleo"
+            ]
+        },
+        {
+            "value": "Dăk GLong",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Đắk Ha",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk PLao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk R'Măng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Som",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Hòa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Khê",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Quảng Sơn",
+                    "pre": "Thị trấn"
+                }
+            ],
+            "street": [
+                "Bon R'Bút",
+                "Quốc lộ 28",
+                "Quốc Lộ 28B",
+                "Tỉnh Lộ 684",
+                "Tỉnh lộ 693"
+            ]
+        },
+        {
+            "value": "Dăk Mil",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Đắk Gằn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Lao",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Mil",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Đắk N'Drót",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk R'La",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Sắk",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đức Mạnh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đức Minh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Long Sơn",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thuận An",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "14",
+                "Đức Tân",
+                "Hoàng Diệu",
+                "Hùng Vương",
+                "Lê Duẩn",
+                "Nguyễn Chí Thanh",
+                "Nguyễn Trãi",
+                "Nơ Trang Gưh",
+                "Phan Bội Châu",
+                "Quang Trung",
+                "Quốc lộ 14",
+                "Trần Hưng Đạo"
+            ]
+        },
+        {
+            "value": "Dăk R'Lấp",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Đắk Ru",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Sin",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Wer",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đạo Nghĩa",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Hưng Bình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Kiến Đức",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Kiến Thành",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nghĩa Thắng",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nhân Cơ",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nhân Đạo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Tín",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "14",
+                "Nguyễn Tất Thành",
+                "Quốc lộ 14",
+                "Tỉnh Lộ 681",
+                "Trần Hưng Đạo"
+            ]
+        },
+        {
+            "value": "Dăk Song",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Đắk Hoà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk Môl",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk N'Drung",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đức An",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Nam Bình",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nâm N'Jang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thuận Hà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Thuận Hạnh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Trường Xuân",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Đăk Rung",
+                "Quốc lộ 14",
+                "Quốc lộ 14C",
+                "Tỉnh lộ 4"
+            ]
+        },
+        {
+            "value": "Gia Nghĩa",
+            "pre": "Thị xã",
+            "ward": [
+                {
+                    "value": "Đắk Nia",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk R’Moan",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nghĩa Đức",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nghĩa Phú",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nghĩa Tân",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nghĩa Thành",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Nghĩa Trung",
+                    "pre": "Phường"
+                },
+                {
+                    "value": "Quảng Thành",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "23/3",
+                "3/2",
+                "An Dương Vương",
+                "Bà Triệu",
+                "Chu Văn An",
+                "D4",
+                "Đào Duy Từ",
+                "Điện Biên Phủ",
+                "Đinh Tiên Hoàng",
+                "Hàm Nghi",
+                "Hồ Chí Minh",
+                "Hùng Vương",
+                "Huỳnh Thúc Kháng",
+                "Kim Đồng",
+                "Lê Duẩn",
+                "Lê Hồng Phong",
+                "Lê Lai",
+                "Lê Lợi",
+                "Lê Thánh Tông",
+                "Lý Thường Kiệt",
+                "Lý Tự Trọng",
+                "Mạc Thị Bưởi",
+                "N1",
+                "N3",
+                "Ngô Mây",
+                "Ngô Tất Tố",
+                "Nguyễn Đức Cảnh",
+                "Nguyễn Hữu Thọ",
+                "Nguyễn Trãi",
+                "Nguyễn Trung Trực",
+                "Nguyễn Văn Trỗi",
+                "Nhân Cơ",
+                "Nơ Trang Long",
+                "Phạm Ngọc Thạch",
+                "Phan Đình Phùng",
+                "Quang Trung",
+                "Quốc lộ 14",
+                "Quốc lộ 28",
+                "Tôn Đức Thắng",
+                "Trần Đại Nghĩa",
+                "Trần Phú",
+                "Vành Đai",
+                "Võ Thị Sáu",
+                "Vũ Anh Ba",
+                "Yniê"
+            ]
+        },
+        {
+            "value": "Krông Nô",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Buôn Choah",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đăk Drô",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đăk Mâm",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Đăk Nang",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đăk Sôr",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đức Xuyên",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nam Đà",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nâm N'Đir",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nâm Nung",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Nam Xuân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Phú",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Tân Thành",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Hùng Vương",
+                "Quốc lộ 28",
+                "Tỉnh lộ 4"
+            ]
+        },
+        {
+            "value": "Tuy Đức",
+            "pre": "Huyện",
+            "ward": [
+                {
+                    "value": "Đắk Búk So",
+                    "pre": "Thị trấn"
+                },
+                {
+                    "value": "Đắk Ngo",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Đắk R'Tíh",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Tâm",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Tân",
+                    "pre": "Xã"
+                },
+                {
+                    "value": "Quảng Trực",
+                    "pre": "Xã"
+                }
+            ],
+            "street": [
+                "Quốc lộ 14C"
+            ]
+        }
+    ]
+}

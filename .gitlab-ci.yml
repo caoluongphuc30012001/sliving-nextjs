@@ -1,0 +1,32 @@
+# This file is a template, and might need editing before it works on your project.
+# variables:
+#   GIT_SUBMODULE_STRATEGY: recursive
+
+image: node:latest
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ee/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  before_script:
+# Create ssh-key and pull submodule
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - echo "$SSH_DEPLOY_KEY"
+    - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - git submodule update --init --recursive
+  script:
+    - npm install
+    - ./node_modules/.bin/gatsby build --prefix-paths
+    - cp -rf src/images public/images
+    - ls public/
+# Chưa xử lý phần xóa các file cũ của folder /var/www/html/docs.sliving/. Hiện tại chỉ ghi đè các file cùng tên
+    - scp -i ~/.ssh/id_rsa -P 22006 -r public/* sst-ci@sst-ci.vm.sunshinetech.ai:/var/www/html/docs.sliving/
+  only:
+    - dev
+  tags:
+    - runner-191 
