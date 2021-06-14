@@ -17,6 +17,21 @@
             object-fit: cover;
         }
     }
+
+    .btn-more {
+        &:hover {
+            background-color: #004BA1;
+
+            span {
+                color: #f2f2f2 !important;
+            }
+        }
+    }
+
+    #solution-id,
+    #product-id {
+        scroll-margin-top: 80px;
+    }
 }
 
 .solution-product-body {
