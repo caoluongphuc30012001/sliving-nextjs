@@ -12,7 +12,9 @@ import SectionBannerReason from "./body/section-banner-reason";
 import SectionProject from "./body/section-project";
 import SectionVideo from "./body/section-Video";
 import SectionSlideNews from "./body/section-slide-news";
+import { useTranslation } from 'react-i18next';
 const HomePage = () => {
+    const { t } = useTranslation();
     return (
         <Layout>
             <div className="home-page-main">
@@ -22,7 +24,7 @@ const HomePage = () => {
                 <SectionIntroduce />
                 <SectionSlides />
                 <SectionBannerReason />
-                <Sectionorizontal title={'Sliving IoT - Chúng tôi là ai?'} urlImg={imgIot}>
+                <Sectionorizontal title={t(`who-are-we`)} urlImg={imgIot}>
                     <span>
                         <span>  Những lĩnh vực phát triển của công ty :</span>
                         <ul>
@@ -32,8 +34,8 @@ const HomePage = () => {
                             <li>Xây dựng các chương trình máy tính như Firmware, Cloud Server</li>
                             <li>AI ( Trí tuệ nhân tạo )</li>
                         </ul>
-                                Trong những năm qua, Sliving luôn không ngừng phát triển và cho ra đời các giải pháp công nghệ tiên tiến giúp mỗi người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi nhất...
-                            </span>
+                        Trong những năm qua, Sliving luôn không ngừng phát triển và cho ra đời các giải pháp công nghệ tiên tiến giúp mỗi người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi nhất...
+                    </span>
                 </Sectionorizontal>
                 <SectionVideo />
                 <SectionProject />

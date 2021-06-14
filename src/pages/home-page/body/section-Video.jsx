@@ -7,10 +7,14 @@ import Image1 from "@images/image-video/image1.svg";
 import Image2 from "@images/image-video/image2.svg";
 import Image3 from "@images/image-video/image3.svg";
 import Image4 from "@images/image-video/image4.svg";
-import Video1 from "@videos/home-page/slide-1.mp4";
-import Video2 from "@videos/home-page/slide-2.mp4";
-import Video3 from "@videos/home-page/slide-3.mp4";
-import Video4 from "@videos/home-page/slide-4.mp4";
+import Video1 from "@videos/home-page/slide-1.webp";
+import Video2 from "@videos/home-page/slide-2.webp";
+import Video3 from "@videos/home-page/slide-3.webp";
+import Video4 from "@videos/home-page/slide-4.webp";
+import VideoWebm1 from "@videos/home-page/slide-1.webm";
+import VideoWebm2 from "@videos/home-page/slide-2.webm";
+import VideoWebm3 from "@videos/home-page/slide-3.webm";
+import VideoWebm4 from "@videos/home-page/slide-4.webm";
 import IconPlay from "@images/icon/icon-play.svg";
 import closeImg from "@images/icon/close.svg";
 import arrowNext from "@images/icon/navigate_before.svg";
@@ -59,20 +63,24 @@ const SectionVideo = () => {
             <Slider {...settings}>
                 <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
-                        <source src={Video1} type="video/mp4" />
+                        <source src={Video1} type="video/webp" />
+                        <source src={VideoWebm1} type="video/webm" />
                     </video>
                 </div>
                 <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
-                        <source src={Video2} type="video/mp4" />
+                        <source src={Video2} type="video/webp" />
+                        <source src={VideoWebm2} type="video/webm" />
                     </video>
                 </div>  <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
-                        <source src={Video3} type="video/mp4" />
+                        <source src={Video3} type="video/webp" />
+                        <source src={VideoWebm3} type="video/webm" />
                     </video>
                 </div>  <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
-                        <source src={Video4} type="video/mp4" />
+                        <source src={Video4} type="video/webp" />
+                        <source src={VideoWebm4} type="video/webm" />
                     </video>
                 </div>
             </Slider>

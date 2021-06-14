@@ -1,5 +1,27 @@
 .home-page-main {
     background-color: #F9F9F9;
+
+    .card-slide {
+        .btn-content {
+            button {
+                min-width: 250px;
+
+            }
+        }
+    }
+
+    .card-section {
+        .btn-more {
+            &:hover {
+                background-color: #004BA1;
+
+                span {
+                    color: #f2f2f2 !important;
+                }
+            }
+        }
+    }
+
 }
 
 .hp-banner {
