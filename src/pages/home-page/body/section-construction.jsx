@@ -7,7 +7,9 @@ import supermarket from "@images/home-page/body-2/supermarket.svg";
 import PrevArrow from "@components/button/button-prev-arrow";
 import NextArrow from "@components/button/button-next-arrow";
 import ButtonContent from "@components/button/button-content";
+import { useTranslation } from 'react-i18next';
 const SectionConstruction = () => {
+    const { t } = useTranslation();
     const settings = {
         dots: false,
         infinite: true,
@@ -50,31 +52,31 @@ const SectionConstruction = () => {
     return <div className="card-slide container-wrap">
         <div className="title card-slide-title ">
             <span className="section-title fs-32 fw-bold">
-                Lựa chọn công trình bạn muốn thi công
+                {t(`select-contrucstion`)}
             </span>
         </div>
         <div className="select-ct">
-            <ButtonContent boder={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={"Công trình dân dụng"} isCnt={true} />
-            <ButtonContent boder={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={"Công trình thương mại"} isCnt={true} />
+            <ButtonContent boder={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={t(`${'civil-works'}`)} isCnt={true} />
+            <ButtonContent boder={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={t(`${'commercial-construction'}`)} isCnt={true} />
         </div>
         <div className="slide-prods">
             <Slider {...settings}>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
                         <img src={apartment} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Tòa Nhà</span></div>
+                        <div className="prod-wrap-title fs-16"><span>{t(`Building`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
                         <img src={hospital} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Bệnh viện</span></div>
+                        <div className="prod-wrap-title fs-16"><span>{t(`Hospital`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
                         <img src={supermarket} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Siêu thị</span></div>
+                        <div className="prod-wrap-title fs-16"><span>{t(`Supermarket`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">

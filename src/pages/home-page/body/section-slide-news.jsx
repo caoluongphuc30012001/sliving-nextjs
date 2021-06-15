@@ -6,7 +6,9 @@ import Slider from "react-slick";
 import CardTitleHeader from "@components/card/card-title-header";
 import PrevArrow from "@components/button/button-prev-arrow";
 import NextArrow from "@components/button/button-next-arrow";
+import { useTranslation } from 'react-i18next';
 const SectionSlideNews = () => {
+    const { t } = useTranslation();
     const settings = {
         dots: false,
         infinite: false,
@@ -45,7 +47,7 @@ const SectionSlideNews = () => {
     return (
         <div className="news-slide">
             <div className="container-wrap news-slide-wrap">
-                <CardTitleHeader title={"Tin Tức"} />
+                <CardTitleHeader title={t(`News`)} />
                 <div className="slide-wrap">
                     <Slider {...settings}>
                         <div className="news-wrap">
