@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby';
 import logo from "@images/logo/logo-v2.svg";
 import PortfolioContext from "../../context/context";
-import imgIn from "@images/icon/social/v2-linkedin.svg";
-import imgFace from "@images/icon/social/v2-facebook.svg";
-import imgtwit from "@images/icon/social/v2-twitter.svg";
+// import imgIn from "@images/icon/social/v2-linkedin.svg";
+// import imgFace from "@images/icon/social/v2-facebook.svg";
+// import imgtwit from "@images/icon/social/v2-twitter.svg";
 import imgSearch from "@images/icon/icon-search.svg";
 const isBrowser = typeof window !== "undefined";
 const NavBar = () => {
@@ -19,11 +19,14 @@ const NavBar = () => {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 0) {
                     if (document.getElementById("menu-topbar")) {
-                        document.getElementById("menu-topbar").style.top = "0";
+                        document.getElementById("menu-topbar").style.transform = "translate(0px,-62px)";
+                        document.getElementById("header-nav").style.transform = "translate(0px,-62px)";
                     }
                 } else {
                     if (document.getElementById("menu-topbar")) {
-                        document.getElementById("menu-topbar").style.top = "unset";
+                        document.getElementById("menu-topbar").style.transform = "translate(0px,0px)";
+                        document.getElementById("header-nav").style.transform = "translate(0px,0px)";
+
                     }
                 }
             }, true)
@@ -46,7 +49,7 @@ const NavBar = () => {
     };
     return (
         <div className="top-navbar">
-            <div className="header-nav d-flex al-center just-cont-fl-end">
+            <div className="header-nav d-flex al-center just-cont-fl-end" id="header-nav">
                 <div className="header-nav-wrap d-flex al-center ">
                     <div className="header-nav-wrap_left d-flex al-center">
                         <div className="nav-language" >
@@ -61,15 +64,15 @@ const NavBar = () => {
                             </Dropdown>
                         </div>
                         <div className="nav-social d-flex al-center just-cont-bt" >
-                            <div className="nav-social-wrap"><img src={imgIn} alt="in" /></div>
+                            {/* <div className="nav-social-wrap"><img src={imgIn} alt="in" /></div>
                             <div className="nav-social-wrap"><img src={imgFace} alt="in" /></div>
-                            <div className="nav-social-wrap"><img src={imgtwit} alt="in" /></div>
+                            <div className="nav-social-wrap"><img src={imgtwit} alt="in" /></div> */}
                         </div>
                     </div>
                     <div className="nav-group-search">
                         <InputGroup className="group-search-wrap">
                             <FormControl
-                                placeholder={t(`HEADER.SEARCHKEYWORD`)}
+                                placeholder={t(`HEADER.SEARCH_KEY_WORD`)}
                                 aria-label="Recipient's username"
                                 aria-describedby="basic-addon2"
                             />
@@ -106,7 +109,7 @@ const NavBar = () => {
                         </Navbar.Collapse>
                     </Navbar>
                 </div>
-            </div >
+            </div>
         </div>
     );
 }

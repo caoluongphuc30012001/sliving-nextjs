@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ButtonLink from "../../button/button-link";
 const Sectionorizontal = ({ title, urlImg, children }) => {
+    const { t } = useTranslation()
     return (
         <div className="section-horizontal container-wrap">
             <div className="section-horizontal-wrap">
@@ -11,7 +13,7 @@ const Sectionorizontal = ({ title, urlImg, children }) => {
                     <div className="section-description">
                         {children}
                     </div>
-                    <ButtonLink title={"Tìm hiểu thêm"} />
+                    <ButtonLink title={t(`More_Information`)} />
                 </div>
                 <div className="section-horizontal-wrap_right  ">
                     <div className="img-info">

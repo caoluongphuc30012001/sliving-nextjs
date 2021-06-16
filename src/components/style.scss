@@ -12,25 +12,42 @@
 *    6.2 - Imagery
 *  7.0 - Footer
 */
-
-/*--------------------------------------1.navbar - product ------------------------------ */
-
 /*--------------------------------------2.nav bar (main) ------------------------------ */
-
 .page-wrap {
-    margin-top: 80px;
+    margin-top: 142px;
     background-color: #F9F9F9;
 }
 
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1051;
+}
+
+.header-nav {
+    transform: translate(0px, 0px);
+    transition: transform 0.2s;
+    transition-timing-function: ease;
+    position: relative;
+    z-index: 1052;
+}
+
+
 .menu {
     background-color: #1A7DD8;
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0;
     right: 0;
     margin: auto;
     z-index: 1050;
-    transition: all cubic-bezier(0.39, 0.575, 0.565, 1);
+    transform: translate(0px, 0px);
+    transition: transform 0.2s;
+    transition-timing-function: ease;
+
 
     .nav-header {
         padding: 20px 0 !important;
@@ -881,6 +898,11 @@
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: fit-content;
+
+    &:hover {
+        text-decoration: none !important;
+    }
 
     span {
         color: #FE9903;
@@ -1337,6 +1359,8 @@
         color: #ADADAD;
     }
 
+
+
     .select-contries__control {
         background-color: #f9f9f9;
         min-height: unset;
@@ -1372,6 +1396,15 @@
         .contact-search {
             border: 1px solid hsl(0, 0%, 80%);
             border-radius: 4px;
+
+            .react-select-container {
+
+                .select-contries__indicators.countries-wrap {
+                    border-right: 2px solid #ADADAD;
+
+                }
+            }
+
         }
 
         .contact-search-input {
@@ -1433,7 +1466,10 @@
                     cursor: pointer;
                 }
             }
+
         }
+
+
 
         .css-yk16xz-control {
             border-color: unset;
@@ -1548,6 +1584,10 @@
 
                 }
 
+                &::placeholder {
+                    color: #ADADAD;
+                }
+
                 &:hover,
                 &:focus {
                     box-shadow: unset;
@@ -1562,8 +1602,7 @@
 .card-horizonal {
     border-radius: 4px;
     margin-top: 15px;
-    //box-shadow: 0px 0px 6px #c5c5c5;
-    border: 1px solid #5c5c5c;
+    border: 1px solid #ADADAD;
 
     &-link {
         &:hover {

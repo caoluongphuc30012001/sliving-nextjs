@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { Image } from "react-bootstrap";
 import Logo from "@images/logo/LOGO.png";
 import arrowRight from "@images/icon/arrow_right_alt.svg";
 import { Link } from "gatsby"
+import { useTranslation } from 'react-i18next';
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <div className="main-footer">
             <div className="container-wrap">
@@ -12,30 +13,30 @@ const Footer = () => {
                     <div className="footer-wrap__left">
                         <div className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
-                                <li className="fw-bold">Product</li>
-                                <li className="">Employee database</li>
-                                <li className="">Payroll</li>
-                                <li className="">Absences</li>
-                                <li className="">Time tracking</li>
-                                <li className="">Shift planner</li>
-                                <li className="">Recruiting</li>
+                                <li className="fw-bold">{t(`Product`)}</li>
+                                <li className="">{t(`Employee_database`)}</li>
+                                <li className="">{t(`Payroll`)}</li>
+                                <li className="">{t(`Absences`)}</li>
+                                <li className="">{t(`Time_tracking`)}</li>
+                                <li className="">{t(`Shift_planner`)}</li>
+                                <li className="">{t(`Recruiting`)}</li>
                             </ul>
                         </div>
                         <div className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
-                                <li className="fw-bold">Information</li>
-                                <li className="">FAQ</li>
-                                <li className="">Blog</li>
-                                <li className="">Support</li>
+                                <li className="fw-bold">{t(`Information`)}</li>
+                                <li className="">{t(`FAQ`)}</li>
+                                <li className="">{t(`Blog`)}</li>
+                                <li className="">{t(`Support`)}</li>
                             </ul>
                         </div>
                         <div className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
-                                <li className="fw-bold">Company</li>
-                                <li className="">About us</li>
-                                <li className="">Careers</li>
-                                <li className="">Contact us</li>
-                                <li className="">Lift media</li>
+                                <li className="fw-bold">{t(`Company`)}</li>
+                                <li className="">{t(`About_us`)}</li>
+                                <li className="">{t(`Careers`)}</li>
+                                <li className="">{t(`Contact_us`)}</li>
+                                <li className="">{t(`Lift_media`)}</li>
                             </ul>
                         </div>
                     </div>
@@ -43,10 +44,10 @@ const Footer = () => {
                         <div className="footer-wrap__right-search">
                             <div className="search-group">
                                 <div className="search-group-wrapper">
-                                    <span className="fw-bold fs-16">Giữ liên lạc với chúng tôi để cập nhập những thông tin mới nhất về sản phẩm.</span>
+                                    <span className="fw-bold fs-16">{t(`Stay_in_touches`)}</span>
                                 </div>
                                 <div className="search-group-wrapper search-group-input">
-                                    <input type="text" id="inputEmail" placeholder="Email adress" />
+                                    <input type="text" id="inputEmail" placeholder={t(`Your_Email`)} />
                                     <button type="button" className="btn btn-default " aria-label="arrow right"><img src={arrowRight} alt="icon arrow right" /></button>
                                 </div>
                                 <div className="search-group-wrapper">
@@ -63,10 +64,10 @@ const Footer = () => {
                     </div>
                     <div className="logo-wrap-right">
                         <div className="logo-wrap-item">
-                            <Link to="/" className="logo-wrap-rignt__nav fw-bold fs-16">Terms</Link>
+                            <Link to="/" className="logo-wrap-rignt__nav fw-bold fs-16">{t(`Terms`)}</Link>
                         </div >
                         <div className="logo-wrap-item">
-                            <Link to="/" className="logo-wrap-rignt__nav fw-bold fs-16">Privacy</Link>
+                            <Link to="/" className="logo-wrap-rignt__nav fw-bold fs-16">{t(`Privacy`)}</Link>
                         </div>
                         <div className="logo-wrap-item">
                             <Link to="/" className="logo-wrap-rignt__nav fw-bold fs-16">Cookies</Link>

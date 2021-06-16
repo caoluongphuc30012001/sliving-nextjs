@@ -106,6 +106,21 @@ exports.createPages = async function ({ page, actions, graphql }) {
       })
     }
   })
+
+  createPage({
+    path: "product-solution/1",
+    component: require.resolve("./src/pages/product-solution-page/index.js"),
+    context: {
+      url: "solution-id"
+    }
+  })
+  createPage({
+    path: "product-solution/2",
+    component: require.resolve("./src/pages/product-solution-page/index.js"),
+    context: {
+      url: "product-id"
+    }
+  })
 }
 
 exports.onCreateWebpackConfig = ({ actions }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 const CardInfo = ({ title, description, isImage, imgR, imgL, ...props }) => {
     return (
         <div className="card-info container-wrap">

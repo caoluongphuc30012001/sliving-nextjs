@@ -9,11 +9,10 @@ import Slider from "react-slick";
 import PrevArrow from "../../button/button-prev-arrow.jsx";
 import NextArrow from "../../button/button-next-arrow.jsx";
 import DataProductSolution from "@query/product-solution";
-
+import { useTranslation } from 'react-i18next';
 SwiperCore.use([Navigation]);
-	
-
-const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow }) => {
+const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id }) => {
+	const { t } = useTranslation();
 	const dataAllProducts = DataProductSolution();
 	const dataLED = dataAllProducts.dataLED.edges;
 	const dataSwitch = dataAllProducts.dataSwitch.edges;
@@ -23,29 +22,28 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 	const dataSmartCurtain = dataAllProducts.dataSmartCurtain.edges;
 	const dataSmartMeasurement = dataAllProducts.dataSmartMeasurement.edges;
 	const dataZigbeeKit = dataAllProducts.dataZigbeeKit.edges;
-
 	const [post, setPost] = useState(dataLED);
 	const arrProduct = [
 		{ title: "LED", id: 0, isActive: true },
-		{ title: "Công tắc", id: 1, isActive: false },
-		{ title: "Ô cắm", id: 2, isActive: false },
-		{ title: "Cảm biến", id: 3, isActive: false },
-		{ title: "Hệ thống điều hòa", id: 4, isActive: false },
-		{ title: "Rèm thông minh", id: 5, isActive: false },
-		{ title: "Đo lường thông minh", id: 6, isActive: false },
+		{ title: "navProduct.Switches", id: 1, isActive: false },
+		{ title: "navProduct.Sockets", id: 2, isActive: false },
+		{ title: "navProduct.Sensors", id: 3, isActive: false },
+		{ title: "navProduct.Air_Conditioning_System", id: 4, isActive: false },
+		{ title: "navProduct.Smart_Curtain", id: 5, isActive: false },
+		{ title: "navProduct.Smart_Measurement", id: 6, isActive: false },
 		{ title: "Zigbee KIT", id: 7, isActive: false },
+		{ title: "navProduct.Door_motor_gate", id: 8, isActive: false },
 	];
-
 	const settings = {
 		useTransform: false,
 		className: "slide-vertical",
 		dots: dots ? dots : false,
-		infinite: infinite,
-		lop: true,
+		infinite: post.length > 4 && infinite ? true : false,
+		loop: false,
 		slidesToShow: 4,
-		rows: rows,
-		slidesToRow: 2,
 		slidesToScroll: 1,
+		rows: (post.length >= 16 && rows === 4) ? 4 : (post.length > 12 && rows === 4) ? 3 : (post.length <= 12 && post.length > 8 && rows === 4) ? 2 : (post.length <= 8 && post.length > 4 && rows === 4) ? 2 : (post.length <= 4 && rows === 4) ? 1 : rows,
+		slidesToRow: 1,
 		initialSlide: 0,
 		responsive: [
 			{
@@ -75,25 +73,22 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		nextArrow: isArrow ? <NextArrow /> : '',
 		prevArrow: isArrow ? <PrevArrow /> : '',
 		swipeToSlide: true,
-		afterChange: function (index) {
-
-		}
 	};
 	const clickProduct = (id) => {
-		arrProduct.map((prod) => (prod.isActive = id === prod.id ? true : false));
-			if(id === 0){ setPost(dataLED); };
-			if(id === 1){	setPost(dataSwitch); };
-			if(id === 2){	setPost(dataSocket); };
-			if(id === 3){	setPost(dataSensor); };
-			if(id === 4){	setPost(dataAirConditioningSystem); };
-			if(id === 5){	setPost(dataSmartCurtain); };
-			if(id === 6){	setPost(dataSmartMeasurement); };
-			if(id === 7){	setPost(dataZigbeeKit); };
+		arrProduct.forEach((prod) => (prod.isActive = id === prod.id ? true : false));
+		setPost([]);
+		if (id === 0) { setPost(dataLED); };
+		if (id === 1) { setPost(dataSwitch); };
+		if (id === 2) { setPost(dataSocket); };
+		if (id === 3) { setPost(dataSensor); };
+		if (id === 4) { setPost(dataAirConditioningSystem); };
+		if (id === 5) { setPost(dataSmartCurtain); };
+		if (id === 6) { setPost(dataSmartMeasurement); };
+		if (id === 7) { setPost(dataZigbeeKit); };
 	}
-
 	return (
 		<div className="slide-sols txt-blue ">
-			<CardHeader title={title} />
+			<CardHeader title={t(`${title}`)} id={id} />
 			{isMenu && (<div className="slide-nav">
 				<Nav>
 					{arrProduct && arrProduct.map((prod, index) => {
@@ -104,7 +99,8 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 								onKeyDown={() => clickProduct(prod.id)}
 								className={`nav-prod ${prod.isActive ? 'is-active-slide' : ''}`}
 								role="button"
-								tabIndex="0">{prod.title}</div>)
+								tabIndex="0">{t(`${prod.title}`)}</div>)
+
 					})}
 				</Nav>
 			</div>)}

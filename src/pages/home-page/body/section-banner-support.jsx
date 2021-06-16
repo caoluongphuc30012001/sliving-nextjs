@@ -12,10 +12,10 @@ const SectionBannerSuport = () => {
                         <span className=" fs-32 fw-bold txt-blue">{t(`Help_Us_Know`)}</span>
                     </Col>
                     <Col xl={8} md={12} xs={12} className="banner-wrap-btn d-flex al-center">
-                        <div className="banner-btn"> <ButtonContent boder={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Investor`)} /></div>
-                        <div className="banner-btn"> <ButtonContent boder={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Architect`)} /></div>
-                        <div className="banner-btn"> <ButtonContent boder={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Distributor`)} /></div>
-                        <div className="banner-btn"> <ButtonContent boder={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Contractor`)} /></div>
+                        <div className="banner-btn"> <ButtonContent border={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Investor`)} /></div>
+                        <div className="banner-btn"> <ButtonContent border={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Architect`)} /></div>
+                        <div className="banner-btn"> <ButtonContent border={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Distributor`)} /></div>
+                        <div className="banner-btn"> <ButtonContent border={'3px solid #1A7DD8'} background={'#ffffff'} color={'#1A7DD8'} title={t(`Contractor`)} /></div>
                     </Col>
                 </Row>
             </div>

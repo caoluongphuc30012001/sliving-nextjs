@@ -52,12 +52,12 @@ const SectionConstruction = () => {
     return <div className="card-slide container-wrap">
         <div className="title card-slide-title ">
             <span className="section-title fs-32 fw-bold">
-                {t(`select-contrucstion`)}
+                {t(`select_contrucstion`)}
             </span>
         </div>
         <div className="select-ct">
-            <ButtonContent boder={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={t(`${'civil-works'}`)} isCnt={true} />
-            <ButtonContent boder={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={t(`${'commercial-construction'}`)} isCnt={true} />
+            <ButtonContent border={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={t(`${'civil_works'}`)} isCnt={true} />
+            <ButtonContent border={'2px solid #F47403'} background={'#ffffff'} color={'#5C5C5C'} title={t(`${'commercial_construction'}`)} isCnt={true} />
         </div>
         <div className="slide-prods">
             <Slider {...settings}>
