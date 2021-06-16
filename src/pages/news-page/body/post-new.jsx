@@ -2,8 +2,9 @@ import React from 'react';
 import Slider from "react-slick";
 import CardProductLine from '@components/card/card-product-line/card-product-line';
 import FormPagination from '@components/pagination/form-pagination';
-
+import { useTranslation } from 'react-i18next';
 const PostNews = (props) => {
+    const { t } = useTranslation();
     const post = props.data;
     const settings = {
         dots: true,
@@ -44,19 +45,19 @@ const PostNews = (props) => {
     };
     return (
         <>
-            <FormPagination title={"Bài viết mới"} variable={"bài viết"} />
+            <FormPagination title={t(`New_Posts`)} variable={t(`posts`)} />
             <div className="posts-new">
                 <Slider {...settings}>
                     {
-                        (post && post.map(({node}) => {
+                        (post && post.map(({ node }) => {
                             return (
-                                <CardProductLine 
+                                <CardProductLine
                                     key={node.frontmatter.id}
                                     title={""}
                                     subtitle={node.frontmatter.subtitle}
                                     slug={node.frontmatter.slug}
-                                    description={""}
-                                    imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} 
+                                    description={node.frontmatter.description}
+                                    imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src}
                                     data={post.slice(0, 5)}
                                 />
                             )
@@ -66,6 +67,5 @@ const PostNews = (props) => {
             </div>
         </>
     )
-
 }
 export default PostNews;

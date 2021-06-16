@@ -13,7 +13,7 @@ const SectionAbout = ({ data }) => {
                         <span className="">Get the latest Sliving Thermostat updates</span>
                     </div>
                     <button className="btn-about-prod" onClick={() => (navigate("/contact-page/"))}>
-                        <span className="fs-18">{t(`where-to-sell`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
+                        <span className="fs-18">{t(`where_to_sell`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
                     </button>
                 </div>
                 <div className="prod-about-img">

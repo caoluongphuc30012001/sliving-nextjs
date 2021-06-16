@@ -6,9 +6,11 @@ import SwiperCore, {
     Autoplay,
     Pagination
 } from 'swiper/core';
+import { useTranslation } from 'react-i18next';
 // install Swiper modules
 SwiperCore.use([Autoplay, Pagination]);
 const SectionHorizontalSlide = (props) => {
+    const { t } = useTranslation();
     const [post, setPost] = useState([]);
     useEffect(() => {
         setPost(props.data);
@@ -46,7 +48,7 @@ const SectionHorizontalSlide = (props) => {
                                                                 <span>  {node.frontmatter.title}</span>
                                                             </div>
                                                             <div className="horizontal-slide__des swiper-no-swiping" >
-                                                                <span className="fw-bold fs-16">SẢN PHẨM ĐƯỢC SỬ DỤNG</span>
+                                                                <span className="fw-bold fs-16">{t(`PRODUCTS_BE_USED`)}</span>
                                                                 <ul>
                                                                     <li>
                                                                         <span>The powerful system</span>
@@ -66,7 +68,7 @@ const SectionHorizontalSlide = (props) => {
                                                                 </ul>
                                                             </div>
                                                             <div className="horizontal-slide__des">
-                                                                <span className="fw-bold">GIẢI PHÁP SỬ DỤNG</span>
+                                                                <span className="fw-bold">{t(`USE_THE_SOLUTION`)}</span>
                                                                 <div>
                                                                     <span>The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and comfortable.</span>
                                                                 </div>

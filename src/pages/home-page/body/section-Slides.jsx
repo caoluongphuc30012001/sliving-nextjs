@@ -9,10 +9,10 @@ const SectionSlides = () => {
   return (
     <div className="container-wrap">
       <div className="slide-solution-wrap">
-        <CardSlideVertical url={'solution-id'} infinite={true} rows={1} data={post} title={t(`Solution_Suggestions`)} isArrow={true} />
+        <CardSlideVertical id={1} infinite={true} rows={1} data={post} title={t(`Solution_Suggestions`)} isArrow={true} />
       </div>
       <div className="slide-product-wrap">
-        <CardSlideVertical url={'product-id'} infinite={true} rows={1} data={post} title={t(`Sliving_IOT_Products`)} isMenu={true} isArrow={true} />
+        <CardSlideVertical id={2} infinite={true} rows={1} data={post} title={t(`Sliving_IOT_Products`)} isMenu={true} isArrow={true} />
       </div>
     </div>
   );

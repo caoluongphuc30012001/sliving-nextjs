@@ -40,9 +40,11 @@ const Layout = ({ children }) => {
             {isMobile && <NavBarMobile />}
             <div className="page">
                 {isDesktop && <NavBar />}
-                <div className="page-wrap">
-                    {children}
-                </div>
+                <article>
+                    <div className="page-wrap" id="page-main">
+                        {children}
+                    </div>
+                </article>
                 <Footer />
                 <ButtonRounded />
             </div>
