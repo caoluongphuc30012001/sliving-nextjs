@@ -58,6 +58,33 @@ const DataProductSolution = () => {
         }
       }
     }
+    dataGateWay: allMarkdownRemark (
+      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/gateway)/"}}
+      sort: {fields: frontmatter___id}) {
+      edges {
+        node {
+          html
+          frontmatter {
+            id 
+            title  
+            alt
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            } 
+            type
+            slug
+            property_1
+            property_2
+            property_3
+            property_4 
+          }
+        }
+      }
+    }
     dataLED: allMarkdownRemark (
       filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"}}
       sort: {fields: frontmatter___id}) {
