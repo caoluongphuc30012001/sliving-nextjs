@@ -8,7 +8,6 @@ import ProductSlide from "./body/product-slide";
 import DataProductSolution from "@query/product-solution";
 const SolutionProduct = ({ pageContext: { url } }) => {
   const queryAllDataProduct = DataProductSolution();
-  const [urlSelect, setUrlSelect] = useState("");
   const dataSolutionSlide = queryAllDataProduct.dataSolution.edges;
   useEffect(() => {
     if (url === "solution-id") {

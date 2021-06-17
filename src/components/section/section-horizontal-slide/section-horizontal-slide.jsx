@@ -3,12 +3,11 @@ import CardTitleHeader from "../../card/card-title-header";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Swiper core and required modules
 import SwiperCore, {
-    Autoplay,
     Pagination
 } from 'swiper/core';
 import { useTranslation } from 'react-i18next';
 // install Swiper modules
-SwiperCore.use([Autoplay, Pagination]);
+SwiperCore.use([Pagination]);
 const SectionHorizontalSlide = (props) => {
     const { t } = useTranslation();
     const [post, setPost] = useState([]);
@@ -23,11 +22,7 @@ const SectionHorizontalSlide = (props) => {
             <div className="container-wrap">
                 <CardTitleHeader title={props.title} />
                 <div className="horizontal-slide">
-                    <Swiper spaceBetween={30} autoplay={{
-                        "delay": 3000,
-                        "disableOnInteraction": false,
-                        "pauseOnMouseEnter": true
-                    }} pagination={{
+                    <Swiper spaceBetween={30} pagination={{
                         "clickable": true
                     }} loop={true} className="section-swiper">
                         {post && post.map(({ node }) => {

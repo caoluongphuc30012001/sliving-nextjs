@@ -5,7 +5,7 @@
         .btn-content {
             button {
                 min-width: 250px;
-
+                width: 100%;
             }
         }
     }
@@ -110,7 +110,7 @@ ol.carousel-indicators li.active {
     background-color: #231f2080 !important;
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     ol.carousel-indicators {
         width: 100%;
         margin: auto;
@@ -121,28 +121,19 @@ ol.carousel-indicators li.active {
 }
 
 
-@media (max-width:1024px) {
+@media only screen and (max-width:1024px) {
     .hp-banner {
         .hp-banner-wrap {
             width: 100%;
+            padding-left: 35px;
 
-            .hp-banner-description {
-                width: calc(100% / 3);
-            }
         }
     }
 
 }
 
-@media (max-width:768px) {
-    .hp-banner {
-        .hp-banner-wrap {
-            width: fit-content;
-        }
-    }
-}
 
-@media (max-width:426px) {
+@media only screen and (max-width:425px) {
     .hp-banner {
         margin-top: 0;
 
@@ -160,7 +151,7 @@ ol.carousel-indicators li.active {
     }
 }
 
-@media(max-width:376px) and (min-width:321px) {
+@media only screen and (max-width:376px) and (min-width:321px) {
     .hp-banner {
         margin-top: 0;
 
