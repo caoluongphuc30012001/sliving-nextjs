@@ -14,6 +14,7 @@ SwiperCore.use([Navigation]);
 const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id }) => {
 	const { t } = useTranslation();
 	const dataAllProducts = DataProductSolution();
+	const dataGateWay = dataAllProducts.dataGateWay.edges;
 	const dataLED = dataAllProducts.dataLED.edges;
 	const dataSwitch = dataAllProducts.dataSwitch.edges;
 	const dataSocket = dataAllProducts.dataSocket.edges;
@@ -85,6 +86,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		if (id === 5) { setPost(dataSmartCurtain); };
 		if (id === 6) { setPost(dataSmartMeasurement); };
 		if (id === 7) { setPost(dataZigbeeKit); };
+		if (id === 8) { setPost(dataGateWay); };
 	}
 	return (
 		<div className="slide-sols txt-blue ">
