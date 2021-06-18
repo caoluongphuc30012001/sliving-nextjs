@@ -42,36 +42,36 @@ export const navData = {
             arrMenu: [
                 {
                     id: '0',
-                    title: 'Giải đáp kỹ thuật',
+                    title: 'Technical_solutions',
                     isActive: true,
                     path: "/", isHover: false
                 },
                 {
                     id: '1',
-                    title: 'Hướng dẫn thi công ',
+                    title: 'Construction_Manual',
                     isActive: true,
                     path: "/", isHover: false
                 }, {
                     id: '2',
-                    title: 'Định mức vật tư thi công',
+                    title: 'Agricultural_Materials',
                     isActive: true,
                     path: "/", isHover: false
                 },
                 {
                     id: '3',
-                    title: 'Nhận diện sản phẩm',
+                    title: 'Product_Identification',
                     isActive: true,
                     path: "/", isHover: false
                 },
                 {
                     id: '4',
-                    title: 'Quy định bảo hành sản phẩm',
+                    title: 'Product_Warranty',
                     isActive: true,
                     path: "/", isHover: false
                 },
                 {
                     id: '5',
-                    title: 'Download tài liệu',
+                    title: 'Documents_Download',
                     isActive: true,
                     path: "/", isHover: false
                 },
@@ -82,7 +82,7 @@ export const navData = {
             title: 'HEADER.HOMEPAGE.PROJECT'
             ,
             isActive: false,
-            path: "/solution"
+            path: "/"
             ,
             isHover: false,
         },
@@ -91,7 +91,7 @@ export const navData = {
             id: '3',
             title: 'HEADER.HOMEPAGE.ABOUTUS',
             isActive: false,
-            path: "/about",
+            path: "/introduction-page",
             isHover: false,
         },
         {
