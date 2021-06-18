@@ -31,7 +31,6 @@ const DataHomePage = () => {
             }
           }
           alt
-          isActive
         }
       }
     }
