@@ -2,11 +2,11 @@ import React from 'react';
 import Body from './news-page-detail';
 import Layout from "@components/layout.jsx";
 import "../style.scss"
-const IndexPage = ({ location }) => {
+const IndexPage = ({ pageContext }) => {
     return (
         <Layout>
             {
-                (location.state && <Body data={location.state.data} slug={location.state.slug} />)
+                (pageContext && <Body data={pageContext.data} node={pageContext.node} />)
             }
         </Layout>
     )
