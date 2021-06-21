@@ -13,16 +13,16 @@ const SlideProductLine = (props) => {
     return (
         <Slider {...settings} className="slide-prod-line">
             {
-                ( post && post.map(({node}) => {
+                (post && post.map(({ node }) => {
                     return (
-                        <CardProductLine 
+                        <CardProductLine
                             key={node.frontmatter.id}
                             title={node.frontmatter.title}
                             subtitle={""}
                             slug={node.frontmatter.slug}
                             description={node.frontmatter.description}
-                            imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} 
-                            isBtn={true} 
+                            imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                            isBtn={true}
                             data={post.slice(0, 5)}
                         />
                     )
