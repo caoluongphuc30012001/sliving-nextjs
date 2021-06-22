@@ -1,20 +1,20 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Navbar, Image, Nav, Dropdown, InputGroup, FormControl } from "react-bootstrap";
+import React, { useContext, useEffect } from "react";
+import { Navbar, Image, Nav, InputGroup, FormControl } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
-import { Link } from 'gatsby';
+import { Link } from '@wapps/gatsby-plugin-i18next';
 import logo from "@images/logo/logo-v2.svg";
 import PortfolioContext from "../../context/context";
 // import imgIn from "@images/icon/social/v2-linkedin.svg";
 // import imgFace from "@images/icon/social/v2-facebook.svg";
 // import imgtwit from "@images/icon/social/v2-twitter.svg";
 import imgSearch from "@images/icon/icon-search.svg";
+import LanguageSwitcher from "./switterLaguage";
 const isBrowser = typeof window !== "undefined";
 const NavBar = () => {
-    const [language, setLanguage] = useState("");
-    const [isChange, setIsChange] = useState(false);
+    const { arrNav } = useContext(PortfolioContext);
+    const { menus } = arrNav;
+    const { t } = useTranslation();
     useEffect(() => {
-        setLanguage(localStorage.getItem("i18nextLng"));
-        setIsChange(language === "vn" ? true : false);
         if (isBrowser) {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 0) {
@@ -26,22 +26,11 @@ const NavBar = () => {
                     if (document.getElementById("menu-topbar")) {
                         document.getElementById("menu-topbar").style.transform = "translate(0px,0px)";
                         document.getElementById("header-nav").style.transform = "translate(0px,0px)";
-
                     }
                 }
             }, true)
         }
-
-    }, [language, isChange]);
-    const valueFlag = ({ vn: "vn", en: "en" });
-    const { arrNav } = useContext(PortfolioContext);
-    const { menus } = arrNav;
-    const { t } = useTranslation();
-    const { i18n } = useTranslation();
-    function changeFlag(lgn) {
-        i18n.changeLanguage(lgn)
-        setIsChange(lgn === "vn" ? true : false);
-    };
+    }, []);
     function activePage(id) {
         menus && (menus.map((itemMenu) => (
             itemMenu.isActive = itemMenu.id === id ? true : false
@@ -53,15 +42,7 @@ const NavBar = () => {
                 <div className="header-nav-wrap d-flex al-center ">
                     <div className="header-nav-wrap_left d-flex al-center">
                         <div className="nav-language" >
-                            <Dropdown className="dropdown-language">
-                                <Dropdown.Toggle className="drop-toggle dropdown-toggle" variant="#ffffff" id="dropdown-basic">
-                                    <span>  {isChange ? 'Việt Nam' : 'English'}</span>
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-customize" id="dropdown-customize">
-                                    <Dropdown.Item onClick={() => changeFlag(valueFlag.vn)}>Việt Nam</Dropdown.Item>
-                                    <Dropdown.Item onClick={() => changeFlag(valueFlag.en)}>English</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
+                            <LanguageSwitcher />
                         </div>
                         <div className="nav-social d-flex al-center just-cont-bt" >
                             {/* <div className="nav-social-wrap"><img src={imgIn} alt="in" /></div>

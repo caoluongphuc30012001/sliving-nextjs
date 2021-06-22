@@ -6,6 +6,8 @@ import SectionArticleSLide from "./body/section-article-slide.jsx";
 import "../introduction-page/style.scss";
 import SectionSolution from "./body/section-solution.jsx";
 import SectionSupport from "./body/section-support.jsx";
+import { withI18next } from '@wapps/gatsby-plugin-i18next';
+import { graphql } from 'gatsby';
 const IntroductionPage = () => {
     return (
         <Layout>
@@ -19,4 +21,11 @@ const IntroductionPage = () => {
         </Layout>
     );
 };
-export default IntroductionPage;
+export default withI18next()(IntroductionPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+      ...LocaleFragment
+    }
+  }
+`;

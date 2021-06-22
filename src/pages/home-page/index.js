@@ -13,6 +13,7 @@ import SectionProject from "./body/section-project";
 import SectionVideo from "./body/section-Video";
 import SectionSlideNews from "./body/section-slide-news";
 import { useTranslation } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 const HomePage = () => {
     const { t } = useTranslation();
     return (
@@ -44,4 +45,4 @@ const HomePage = () => {
         </Layout>
     );
 }
-export default HomePage;
+export default withTranslation()(HomePage);

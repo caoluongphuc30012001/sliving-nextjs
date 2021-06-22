@@ -1,11 +1,11 @@
 .support-pages {
-  padding-top   : 54px;
-  padding-bottom: 72px;
+    padding-top   : 54px;
+    padding-bottom: 72px;
 
-  .slick-dots {
-      bottom    : -48px;
-      text-align: left;
-      color     : #5C5C5C;
+    .slick-dots {
+        bottom    : -48px;
+        text-align: left;
+        color     : #5C5C5C;
 
         li.slick-active {
             >div {
@@ -147,8 +147,8 @@
 // //=================== table dropdown ===========================//
 
 .btn-light:first-child {
-  border-left : hidden;
-  border-right: hidden;
+    border-left : hidden;
+    border-right: hidden;
 }
 
 .table-dropdown {
@@ -355,56 +355,56 @@
 }
 
 .support-slider {
-  .image-container {
-      width : 670px;
-      height: 206px;
-  }
+    .image-container {
+        width : 670px;
+        height: 206px;
+    }
 
 
-  .image-example {
-      object-fit: cover;
-      width     : 211px;
-      height    : 120px;
-  }
+    .image-example {
+        object-fit: cover;
+        width     : 211px;
+        height    : 120px;
+    }
 
-  .text-description {
-      color         : #ADADAD;
-      max-width     : 389px;
-      letter-spacing: 0.25px;
-  }
+    .text-description {
+        color         : #ADADAD;
+        max-width     : 389px;
+        letter-spacing: 0.25px;
+    }
 
-  .container-below-image {
-      margin-top: 8px;
-      font-size : 12px;
-  }
+    .container-below-image {
+        margin-top: 8px;
+        font-size : 12px;
+    }
 
-  @media only screen and (max-width: 480px) {
-      img {
-          width: 375px;
-      }
+    @media only screen and (max-width: 480px) {
+        img {
+            width: 375px;
+        }
 
-      text {
-          font-size: 16px;
-      }
+        text {
+            font-size: 16px;
+        }
 
-      .row {
-          display: block;
-      }
-  }
+        .row {
+            display: block;
+        }
+    }
 
-  @media only screen and (max-width: 1024px) {
-      img {
-          width: 400px;
-      }
+    @media only screen and (max-width: 1024px) {
+        img {
+            width: 400px;
+        }
 
-      text {
-          font-size: 16px;
-      }
+        text {
+            font-size: 16px;
+        }
 
-      .row {
-          display: block;
-      }
-  }
+        .row {
+            display: block;
+        }
+    }
 }
 
 /*------------------ support-page ---------------------*/

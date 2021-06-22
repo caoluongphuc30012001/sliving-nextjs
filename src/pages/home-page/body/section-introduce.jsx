@@ -5,8 +5,11 @@ import CardSection from "@components/card/card-content/card-section.jsx";
 import { useTranslation } from 'react-i18next';
 import { ArcRotateCamera, Vector3, HemisphericLight, SceneLoader, Color3 } from "@babylonjs/core";
 import SceneComponent from "@components/SceneComponent";
-import "babylonjs-loaders";
+import "@babylonjs/loaders";
+const isBrowser = typeof window !== "undefined";
 const onSceneReady = (scene) => {
+  //var camera = new FreeCamera("camera1", new Vector3(-25, 25, -25), scene);
+  // var camera = new ArcRotateCamera("camera", Tools.ToRadians(90), Tools.ToRadians(65), 12, new Vector3(0, 25, -40), scene);
   var camera = new ArcRotateCamera("camera1", -Math.PI / 2, Math.PI / 4, 3, new Vector3(0, 60, -40), scene);
   camera.setTarget(Vector3.Zero());
   const canvas = scene.getEngine().getRenderingCanvas();
@@ -15,9 +18,16 @@ const onSceneReady = (scene) => {
   camera.attachControl(canvas, true);
   var light = new HemisphericLight("light", new Vector3(1, 1, 0), scene);
   light.intensity = 0.7;
-  SceneLoader.ImportMeshAsync("", "Villa-Floorplan-js/", "Villa.babylon", scene, function () {
-    scene.position = new Vector3(0, -1, 0);
-  });
+  if (isBrowser) {
+    SceneLoader.ImportMeshAsync("", `${window.location.origin}/Villa-Floorplan-js/`, "Villa.babylon", scene, function () {
+      // var dataScene = SceneSerializer.Serialize(scene);
+      // dataScene = JSON.stringify(dataScene);
+      // console.log("dâta", dataScene);
+      // SceneLoader.Append("", "data:" + dataScene, scene, function (newScene) {
+      //   console.log("Chargement de la scene avec Append", newScene);
+      // });
+    });
+  }
 };
 const SectionIntroduce = () => {
   const { t } = useTranslation()
