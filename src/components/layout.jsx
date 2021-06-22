@@ -6,6 +6,7 @@ import "./style.scss";
 import NavBar from "./navbar/navbar";
 import Footer from "./footer/footer";
 import ButtonRounded from "@components/button/button-card-rounded";
+import { withTranslation } from 'react-i18next';
 import NavBarMobile from './navbar/navbar-mobile';
 const isBrowser = typeof window !== "undefined";
 const Layout = ({ children }) => {
@@ -51,4 +52,4 @@ const Layout = ({ children }) => {
         </PortfolioProvider>
     )
 }
-export default Layout;
+export default withTranslation()(Layout);

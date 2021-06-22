@@ -6,6 +6,8 @@ import ProductSuggest from './body/product-suggest';
 import PostNews from './body/post-new';
 import DataNewsPage from "@query/news-page";
 import { useTranslation } from 'react-i18next';
+import { withI18next } from '@wapps/gatsby-plugin-i18next';
+import { graphql } from 'gatsby';
 const NewsPage = () => {
     const { t } = useTranslation();
     const data = DataNewsPage();
@@ -39,4 +41,11 @@ const NewsPage = () => {
         </Layout>
     )
 }
-export default NewsPage;
+export default withI18next()(NewsPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+      ...LocaleFragment
+    }
+  }
+`;

@@ -7,7 +7,7 @@ const SectionSlides = () => {
   const data = DataHomePage();
   const post = data.dataSectionSlides.edges.slice(0, 10);
   return (
-    <div className="container-wrap">
+    <div className="section-slide">
       <div className="slide-solution-wrap">
         <CardSlideVertical id={1} infinite={true} rows={1} data={post} title={t(`Solution_Suggestions`)} isArrow={true} />
       </div>

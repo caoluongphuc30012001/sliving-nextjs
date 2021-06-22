@@ -75,6 +75,24 @@ module.exports = {
         typeName: `Json`, // a fixed string
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/i18n/locate`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: '@wapps/gatsby-plugin-i18next',
+      options: {
+        availableLngs: ['vn', 'en'],
+        fallbackLng: 'vn',
+        lng: "vn",
+        i18nextOptions: {
+          debug: false,
+        },
+      },
+    },
   ],
 };
 

@@ -110,6 +110,13 @@ ol.carousel-indicators li.active {
     background-color: #231f2080 !important;
 }
 
+/*------------- slide --------------------- */
+.section-slide {
+    max-width: 1140px;
+    margin: auto;
+}
+
+
 @media only screen and (max-width: 1024px) {
     ol.carousel-indicators {
         width: 100%;

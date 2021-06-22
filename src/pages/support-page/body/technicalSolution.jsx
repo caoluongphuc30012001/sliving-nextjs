@@ -209,7 +209,7 @@ const TechnicalSol = () => {
                           {/* </div> */}
 
                         </Row>
-                        </div>
+                      </div>
                     )
                   })
                 }

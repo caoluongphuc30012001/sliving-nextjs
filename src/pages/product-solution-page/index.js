@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import "../../i18n/i18n";
+import "./product.scss";
 import SectionApplication from "./body/section-application";
 import SolutionSlide from "./body/solution-slide";
 import Layout from "@components/layout";
-import "./product.scss";
 import ProductSlide from "./body/product-slide";
 import DataProductSolution from "@query/product-solution";
+import { withI18next } from '@wapps/gatsby-plugin-i18next';
+import { graphql } from 'gatsby';
 const SolutionProduct = ({ pageContext: { url } }) => {
   const queryAllDataProduct = DataProductSolution();
   const dataSolutionSlide = queryAllDataProduct.dataSolution.edges;
@@ -32,4 +34,12 @@ const SolutionProduct = ({ pageContext: { url } }) => {
   </Layout>
 }
 
-export default SolutionProduct;
+export default withI18next()(SolutionProduct);
+
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+      ...LocaleFragment
+    }
+  }
+`;
