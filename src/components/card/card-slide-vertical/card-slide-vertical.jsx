@@ -24,7 +24,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 	const dataSmartMeasurement = dataAllProducts.dataSmartMeasurement.edges;
 	const dataZigbeeKit = dataAllProducts.dataZigbeeKit.edges;
 	const [post, setPost] = useState(dataLED);
-	const arrProduct = [
+	const [arrProduct] = useState([
 		{ title: "LED", id: 0, isActive: true },
 		{ title: "navProduct.Switches", id: 1, isActive: false },
 		{ title: "navProduct.Sockets", id: 2, isActive: false },
@@ -34,7 +34,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		{ title: "navProduct.Smart_Measurement", id: 6, isActive: false },
 		{ title: "Zigbee KIT", id: 7, isActive: false },
 		{ title: "navProduct.Door_motor_gate", id: 8, isActive: false },
-	];
+	]);
 	const settings = {
 		useTransform: false,
 		className: "slide-vertical",
