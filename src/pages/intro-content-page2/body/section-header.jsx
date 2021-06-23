@@ -5,7 +5,9 @@ import { useTranslation } from 'react-i18next';
 const SectionHeader = () => {
     const { t } = useTranslation();
     return (
+            
         <div className="section-introduction__header">
+            
             <div className="container-wrap">
                 <div className="section-introduction-wrap">
                     <div className="introduction-title fs-48 txt-blue">

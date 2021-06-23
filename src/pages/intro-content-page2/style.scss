@@ -1,0 +1,198 @@
+.introduction-page {
+    padding-bottom: 95px;
+
+    .image-top-header {
+        max-width: 1903px;
+        width    : 100%;
+    }
+
+    .Top-header-container {
+        margin-top: 58px;
+        max-width : 770px;
+        height    : 279px;
+
+        .Top-header-title {
+            color         : #1A7DD8;
+            text-shadow   : 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+            font-weight   : bold;
+            font-size     : 48px;
+            align-items   : center;
+            text-align    : center;
+            letter-spacing: -1px;
+            font-family   : Arial;
+            margin        : 0px;
+        }
+
+        .Smart-living {
+            color         : #1A7DD8;
+            text-shadow   : 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+            font-weight   : bold;
+            font-size     : 96px;
+            letter-spacing: -3px;
+            line-height   : 104px;
+            align-items   : center;
+            text-align    : center;
+        }
+
+        .Top-header-description {
+            margin-top : 24px;
+            max-width  : 502px;
+            align-items: center;
+            text-align : center;
+            color      : #3F3F3F;
+            font-size  : 16px;
+            line-height: 24px;
+            margin-left: 97px;
+        }
+    }
+}
+
+.button-more-info1 {
+    .btn-about-prod {
+        position  : absolute;
+        margin-top: 32px;
+        width     : 100%;
+        max-width : 211px;
+    }
+}
+
+.article-header {
+    color         : #1A7DD8;
+    font-weight   : bold;
+    font-size     : 48px;
+    line-height   : 56px;
+    letter-spacing: -1px;
+}
+
+.article-header-third {
+    color         : #1A7DD8;
+    font-size     : 48px;
+    font-weight   : bold;
+    max-width     : 470px;
+    width         : 100%;
+    letter-spacing: -1px;
+}
+
+.article-description-third {
+    max-width  : 470px;
+    width      : 100%;
+    color      : #5C5C5C;
+    font-size  : 16px;
+    line-height: 24px;
+    margin-top : 8px;
+}
+
+.introduction-content2 {
+    padding-top : 62px;
+    margin-left : 103px;
+    margin-right: 135px;
+}
+
+.image2 {
+    max-width    : 670px;
+    max-height   : 400px;
+    border-radius: 10px;
+    height       : 100%;
+}
+
+.image3 {
+    max-width    : 670px;
+    max-height   : 400px;
+    border-radius: 10px;
+    height       : 100%;
+}
+
+.image4 {
+    max-width    : 670px;
+    max-height   : 400px;
+    border-radius: 10px;
+    height       : 100%;
+}
+
+.image5 {
+    max-width    : 670px;
+    max-height   : 400px;
+    border-radius: 10px;
+    height       : 100%;
+}
+
+.article-wrap-right {
+    max-width    : 570px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.introduction-content3 {
+    padding-top : 62px;
+    margin-left : 103px;
+    margin-right: 135px;
+
+    .article-wrap-right {
+        background-color: #004BA1;
+        padding         : 6px 16px 32px 32px;
+    }
+
+    .article-header-bottom {
+        color         : #F6ECD8;
+        font-size     : 32px;
+        line-height   : 40px;
+        letter-spacing: -0.5px;
+        margin        : 24px 0px;
+        max-width     : 406px;
+        width         : 100%;
+        border-bottom : solid 1px #F6ECD8;
+        padding-bottom: 26.67px;
+    }
+
+    .article-title-bottom {
+        color      : #F6ECD8;
+        font-weight: bold;
+        margin     : 0px;
+    }
+
+    .article-desctiption-bottom {
+        color    : #F6ECD8;
+        max-width: 406px;
+        width    : 100%;
+    }
+
+    .image6 {
+        max-width    : 1170px;
+        max-height   : 497px;
+        border-radius: 10px;
+        height       : 100%;
+        position     : absolute;
+    }
+
+    .project {
+        color         : #1A7DD8;
+        display       : flex;
+        align-items   : center;
+        letter-spacing: -0.5px;
+        font-weight   : bold;
+        font-size     : 32px;
+        line-height   : 40px;
+        margin        : 10px 0px;
+    }
+
+    .seeMore {
+        display        : flex;
+        margin-top     : 28px !important;
+        flex-direction : row;
+        justify-content: flex-end;
+        padding        : 4px;
+        color          : #1A7DD8;
+        font-weight    : bold;
+        font-size      : 16px;
+        margin         : 0px 10px;
+        letter-spacing : 0.2px;
+
+        &:hover {
+            text-decoration: underline;
+            cursor         : pointer;
+        }
+    }
+
+    .article-wrap-container {
+        margin-top: 32px;
+    }
+}
