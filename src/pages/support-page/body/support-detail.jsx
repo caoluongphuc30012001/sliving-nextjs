@@ -2,6 +2,8 @@ import React from 'react';
 import Video1 from "@videos/home-page/slide-1.webp";
 import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
 import DataSupportPage from "@query/support-page";
+import { withI18next } from '@wapps/gatsby-plugin-i18next';
+import { graphql } from 'gatsby';
 const SupportDetail = () => {
     const data = DataSupportPage();
     const posts = data.dataAgriculturalMaterialNorm.edges.splice(0, 3);
@@ -90,4 +92,12 @@ const SupportDetail = () => {
         </div>
     )
 }
-export default SupportDetail;
+export default withI18next()(SupportDetail);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+      ...LocaleFragment
+    }
+  }
+`;
+

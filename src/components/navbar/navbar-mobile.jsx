@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 import logo from "@images/logo/logo-v2.svg";
 import flagVN from "@images/flag/flag-vn/vn-true.svg";
 import flagVNflase from "@images/flag/flag-vn/vn-false.svg";

@@ -1,4 +1,4 @@
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 const CardTitleHeader = ({ title, id, isShow }, ...props) => {

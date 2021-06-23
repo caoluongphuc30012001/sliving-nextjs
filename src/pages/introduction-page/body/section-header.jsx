@@ -1,6 +1,6 @@
 import React from 'react';
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
 const SectionHeader = () => {
     const { t } = useTranslation();

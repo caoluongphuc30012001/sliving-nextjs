@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import imgArticle from "@images/introduction-page/section-article.svg";
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import { useTranslation } from 'react-i18next';
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 const SectionArticle = () => {
     const { t } = useTranslation();
     return (

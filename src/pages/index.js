@@ -24,7 +24,6 @@ const IndexPage = () => {
   );
 };
 export default withI18next()(IndexPage);
-
 export const query = graphql`
   query($lng: String!) {
     locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
