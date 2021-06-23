@@ -6,7 +6,7 @@ import Searchicon from "@images/icon/searchicon.svg";
 import DropArrow from "@images/icon/dropdownArrow.svg";
 import DataSupportPage from "@query/support-page";
 import FormPagination from '@components/pagination/form-pagination';
-import { Link } from "gatsby";
+import { Link } from "@wapps/gatsby-plugin-i18next";
 import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'react-bootstrap'
 const TechnicalSol = () => {
@@ -190,7 +190,7 @@ const TechnicalSol = () => {
                                 </Link>
                                 <div className="container-below-image">
                                   <div className="row">
-                                    <span class="fs-12 fw-bold">Công trình :</span><span class="fs-12">Căn hộ</span>
+                                    <span className="fs-12 fw-bold">Công trình :</span><span className="fs-12">Căn hộ</span>
                                   </div>
                                 </div>
                               </div>
@@ -200,9 +200,9 @@ const TechnicalSol = () => {
                           <Col >
                             <div className="first-slider-wrap__right">
                               <Link to={`/support-page/${node.frontmatter.slug}`}>
-                                <div class="text-title fs-16 fw-bold">{node.frontmatter.title}</div>
-                                <div class="text-date fs-12">{node.frontmatter.date}</div>
-                                <div class="text-description fs-14">{node.frontmatter.description}</div>
+                                <div className="text-title fs-16 fw-bold">{node.frontmatter.title}</div>
+                                <div className="text-date fs-12">{node.frontmatter.date}</div>
+                                <div className="text-description fs-14">{node.frontmatter.description}</div>
                               </Link>
                             </div>
                           </Col>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import { useTranslation } from 'react-i18next';
-import Image4 from "../../../images/intro-content2/image4.png";
+import iconArrowRight from "@images/icon/icon-arrow right.svg";
+import Image4 from "@images/intro-content2/image4.png";
 const SectionArticleFour = () => {
     const { t } = useTranslation();
     return (
@@ -19,10 +19,10 @@ const SectionArticleFour = () => {
                             </div>
                             <div className="article-description fs-16">{t(`facial-recognition`)}
                                 <ul>
-                                   <li> {t(`Face-ID`)}</li> 
-                                   <li>  {t(`Identify-strangers`)}</li> 
-                                   <li>  {t(`recognition-camera`)}</li> 
-                                   <li>  {t(`Control-elevators`)}</li> 
+                                    <li> {t(`Face-ID`)}</li>
+                                    <li>  {t(`Identify-strangers`)}</li>
+                                    <li>  {t(`recognition-camera`)}</li>
+                                    <li>  {t(`Control-elevators`)}</li>
                                 </ul>
                             </div>
                             <div className="button-more-info1">
