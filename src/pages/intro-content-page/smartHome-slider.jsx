@@ -1,14 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import { Row, Col, Image } from 'react-bootstrap';
-import Image1 from "../../images/intro-content/rectangle1.png";
-import Image2 from "../../images/intro-content/rectangle2.png";
-import Image3 from "../../images/intro-content/rectangle3.png";
-import Image4 from "../../images/intro-content/rectangle4.png";
-import "./intro-content.scss";
-
+import Image1 from "@images/intro-content/rectangle1.png";
+import Image2 from "@images/intro-content/rectangle2.png";
+import Image3 from "@images/intro-content/rectangle3.png";
+import Image4 from "@images/intro-content/rectangle4.png";
 const NewsPageSlider = () => {
-
     const settings = {
         dots: false,
         infinite: true,
@@ -60,15 +57,12 @@ const NewsPageSlider = () => {
                         <Col className="col-5">
                             <Image className="video-cover" src={Image1} alt="Image 1" fluid />
                         </Col>
-
                         <Col className="col-7">
-                            <div class="text-day"> 16/10/2020</div>
-                            <div class="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+                            <div className="text-day"> 16/10/2020</div>
+                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
                         </Col>
                     </Row>
                 </div>
-
-
                 <div className="news-small-card">
                     <Row>
                         <Col className="col-5">
@@ -76,12 +70,11 @@ const NewsPageSlider = () => {
                         </Col>
 
                         <Col className="col-7">
-                            <div class="text-day"> 16/10/2020</div>
-                            <div class="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+                            <div className="text-day"> 16/10/2020</div>
+                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
                         </Col>
                     </Row>
                 </div>
-
                 <div className="news-small-card">
                     <Row>
                         <Col className="col-5">
@@ -89,21 +82,19 @@ const NewsPageSlider = () => {
                         </Col>
 
                         <Col className="col-7">
-                            <div class="text-day"> 16/10/2020</div>
-                            <div class="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+                            <div className="text-day"> 16/10/2020</div>
+                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
                         </Col>
                     </Row>
                 </div>
-
                 <div className="news-small-card">
                     <Row>
                         <Col className="col-5">
                             <Image className="video-cover" src={Image4} alt="Image 1" fluid />
                         </Col>
-
                         <Col className="col-7">
-                            <div class="text-day"> 16/10/2020</div>
-                            <div class="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+                            <div className="text-day"> 16/10/2020</div>
+                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
                         </Col>
                     </Row>
                 </div>
@@ -111,5 +102,4 @@ const NewsPageSlider = () => {
         </div>
     );
 }
-
 export default NewsPageSlider;

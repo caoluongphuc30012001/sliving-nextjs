@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react';
 import CardTitleHeader from "@components/card/card-title-header";
 import Slider from "react-slick";
 import Modal from "react-modal";

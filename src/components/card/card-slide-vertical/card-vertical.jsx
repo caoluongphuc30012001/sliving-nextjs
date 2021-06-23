@@ -1,6 +1,6 @@
 import React from "react";
 import imgPer from "@images/home-page/slide/permission.svg";
-import { Link } from "gatsby";
+import { Link } from "@wapps/gatsby-plugin-i18next";
 const CardVertical = ({ imgUrl, description, path }) => {
     return (
         <div className="card-sol">

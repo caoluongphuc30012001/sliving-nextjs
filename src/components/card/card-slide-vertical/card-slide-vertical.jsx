@@ -11,7 +11,7 @@ import NextArrow from "../../button/button-next-arrow.jsx";
 import DataProductSolution from "@query/product-solution";
 import { useTranslation } from 'react-i18next';
 SwiperCore.use([Navigation]);
-const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id }) => {
+const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id, isShow }) => {
 	const { t } = useTranslation();
 	const dataAllProducts = DataProductSolution();
 	const dataGateWay = dataAllProducts.dataGateWay.edges;
@@ -90,7 +90,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 	}
 	return (
 		<div className="slide-sols txt-blue ">
-			<CardHeader title={t(`${title}`)} id={id} />
+			{title && (<CardHeader title={t(`${title}`)} id={id} isShow={isShow} />)}
 			{isMenu && (<div className="slide-nav">
 				<Nav>
 					{arrProduct && arrProduct.map((prod, index) => {

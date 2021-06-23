@@ -35,42 +35,40 @@ const SectionHorizontalSlide = (props) => {
                                                 alt={node.frontmatter.alt} />
                                         </div>
                                         <div className="horizontal-slide__right">
-                                            {post && post.map(({ node }) => {
-                                                return (node.frontmatter.isActive && (
-                                                    <div key={node.frontmatter.id} className="horizontal-slide__group">
-                                                        <div className="horizontal__group-wrap">
-                                                            <div className="horizontal-slide__title fs-48 fw-bold swiper-no-swiping">
-                                                                <span>  {node.frontmatter.title}</span>
-                                                            </div>
-                                                            <div className="horizontal-slide__des swiper-no-swiping" >
-                                                                <span className="fw-bold fs-16">{t(`PRODUCTS_BE_USED`)}</span>
-                                                                <ul>
-                                                                    <li>
-                                                                        <span>The powerful system</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <span>The powerful system</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <span>The powerful system</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <span>The powerful system</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        <span>The powerful system</span>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div className="horizontal-slide__des">
-                                                                <span className="fw-bold">{t(`USE_THE_SOLUTION`)}</span>
-                                                                <div>
-                                                                    <span>The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and comfortable.</span>
-                                                                </div>
+                                            {node.frontmatter && (
+                                                <div className="horizontal-slide__group">
+                                                    <div className="horizontal__group-wrap">
+                                                        <div className="horizontal-slide__title fs-48 fw-bold swiper-no-swiping">
+                                                            <span>  {node.frontmatter.title}</span>
+                                                        </div>
+                                                        <div className="horizontal-slide__des swiper-no-swiping" >
+                                                            <span className="fw-bold fs-16">{t(`PRODUCTS_BE_USED`)}</span>
+                                                            <ul>
+                                                                <li>
+                                                                    <span>The powerful system</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span>The powerful system</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span>The powerful system</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span>The powerful system</span>
+                                                                </li>
+                                                                <li>
+                                                                    <span>The powerful system</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="horizontal-slide__des">
+                                                            <span className="fw-bold">{t(`USE_THE_SOLUTION`)}</span>
+                                                            <div>
+                                                                <span>The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and comfortable.</span>
                                                             </div>
                                                         </div>
-                                                    </div>))
-                                            })}
+                                                    </div>
+                                                </div>)}
                                         </div>
                                     </div>
                                 </SwiperSlide>)

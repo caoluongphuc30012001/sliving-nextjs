@@ -51,6 +51,12 @@
 
         .hp-banner-btn {
             margin-top: 62px;
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }

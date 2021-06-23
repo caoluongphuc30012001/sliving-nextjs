@@ -22,8 +22,11 @@ const ButtonRounded = () => {
                 }
             }, true)
         }
+        return () => {
+            setIsScroll(true);
+        }
 
-    }, [isScroll])
+    }, [])
     return (
         <>
             {isScroll && (<div

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import Image6 from "../../../images/intro-content2/image6.png";
+import Image6 from "@images/intro-content2/image6.png";
 const SectionArticleSecond = () => {
     const { t } = useTranslation();
     return (
@@ -11,12 +11,10 @@ const SectionArticleSecond = () => {
                     <Col>
                         <h4 className="project">{t(`Outstanding_Project`)}</h4>
                     </Col>
-
                     <Col>
                         <p className="seeMore"> {t(`More_Info`)} </p>
                     </Col>
                 </Row>
-
                 <Row noGutters className="article-wrap-container">
                     <Col xs={6} className="article-wrap-left">
                         <img className="image6" src={Image6} alt="sliving second banner" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby";
+import { Link } from "@wapps/gatsby-plugin-i18next";
 import { Row, Col } from "react-bootstrap";
 import iconPlay from "@images/icon/play_arrow.svg";
 const CardHorizonal = (props) => {

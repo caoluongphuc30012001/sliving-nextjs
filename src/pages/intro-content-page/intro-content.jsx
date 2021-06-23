@@ -1,15 +1,57 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import { Image } from "react-bootstrap";
-import Image1 from "../../images/intro-content/group3.png";
-import ListIcon from "../../images/intro-content/group2.png";
-import "../intro-content-page/intro-content.scss";
-import ImageVideo from "../../images/intro-content/poster.png";
-import IconPlay from "../../images/icon/icon-play.svg";
-import Video1 from "../../images/image-video/video1.mp4";
+import React, { useState, useEffect, useCallback } from 'react';
+import { Row, Col, Image } from 'react-bootstrap';
+import Modal from "react-modal";
+import Image1 from "@images/intro-content/group3.png";
+import ListIcon from "@images/intro-content/group2.png";
+import ImageVideo from "@images/intro-content/poster.png";
+import IconPlay from "@images/icon/icon-play.svg";
+import Video1 from "@images/image-video/video1.mp4";
 import News from "./smartHome-slider.jsx";
-
+import "./intro-content.scss";
+Modal.setAppElement('#___gatsby')
 const IntroContent = () => {
+    const [isShowing, setIsShowing] = useState(false);
+    const escFunction = useCallback((event) => {
+        if (event.keyCode === 27) {
+            setIsShowing(false);
+        }
+    }, []);
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+        return () => {
+            document.removeEventListener("keydown", escFunction, false);
+        };
+    }, [escFunction]);
+    const closeModal = (e) => {
+        setIsShowing(!isShowing);
+        e.preventDefault();
+        document.documentElement.style.overflowY = "auto";
+    }
+    const openModal = (e) => {
+        setIsShowing(!isShowing);
+        e.preventDefault();
+        document.documentElement.style.overflowY = "hidden";
+    }
+    const Modals = () => {
+        return (<Modal className="modal" id="modal-introduction"
+            isOpen={isShowing}
+            onRequestClose={closeModal}>
+            <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <button type="button" className="modal-close-button modal-close-btn" data-dismiss="modal" aria-label="Close" onClick={(event) => closeModal(event)}>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div className="modal-body">
+                        <video muted autoPlay loop playsInline width="100%">
+                            <source src={Video1} type="video/mp4"></source>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </Modal>)
+    }
     return (
         <div className="mainPage-container fluid container-wrap">
             <Row>
@@ -17,13 +59,11 @@ const IntroContent = () => {
                     <span className="time-post-name fs-12 fw-bold">Sliving</span><span className="time-post-date fs-12"> đăng vào lúc 24/05/2021 - 15:29</span>
                     <h3 className="text-title">5 Lý do chọn lựa SLIVING</h3>
                     <Image className="image-header" src={Image1} alt="Image 1" fluid />
-
                     <div className="list-item container">
                         <Row>
                             <Col sm={2} xs={12}>
                                 <Image className="list-icon" src={ListIcon} alt="Image 2" fluid />
                             </Col>
-
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">01.</h3>
                                 <p className="text-small-title"> Sản phẩm chất lượng quốc tế</p>
@@ -35,7 +75,6 @@ const IntroContent = () => {
                             <Col sm={2} xs={12}>
                                 <Image className="list-icon" src={ListIcon} alt="Image 2" fluid />
                             </Col>
-
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">02.</h3>
                                 <p className="text-small-title"> Dãy sản phẩm và giải pháp đa dạng</p>
@@ -46,24 +85,20 @@ const IntroContent = () => {
                                 <p className="text-description"> - AI (Trí tuệ nhân tạo). </p>
                             </Col>
                         </Row>
-
                         <Row className="mt-5">
                             <Col sm={2} xs={12}>
                                 <Image className="list-icon" src={ListIcon} alt="Image 2" fluid />
                             </Col>
-
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">03.</h3>
                                 <p className="text-small-title"> Khả năng cung ứng lớn</p>
                                 <span className="text-description fs-12">Với mục tiêu dẫn đầu thị trường công nghệ thông minh, Sliving là doanh nghiệp đầu tiên được cấp giấy phép sản xuất các thiết bị trong hệ sinh thái Smart Living. Nhà máy sản xuất có diện tích gần 4500m2, tổng công suất ước đạt</span><span className="time-post-name fs-12 fw-bold"> 270 nghìn thiết bị/năm.</span><span className="text-description fs-12"> Trong đó, công suất giai đoạn 1 của dự án sẽ là</span><span className="time-post-name fs-12 fw-bold"> 135 nghìn sản phẩm/năm</span><span className="text-description fs-12"> và tăng dần vào giai đoạn 2, đạt 100% công suất từ tháng 6/2025.</span>
                             </Col>
                         </Row>
-
                         <Row className="mt-5">
                             <Col sm={2} xs={12}>
                                 <Image className="list-icon" src={ListIcon} alt="Image 2" fluid />
                             </Col>
-
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">04.</h3>
                                 <p className="text-small-title"> Hỗ trợ kỹ thuật và bảo hành chu đáo</p>
@@ -71,12 +106,10 @@ const IntroContent = () => {
 
                             </Col>
                         </Row>
-
                         <Row className="mt-5">
                             <Col sm={2} xs={12}>
                                 <Image className="list-icon" src={ListIcon} alt="Image 2" fluid />
                             </Col>
-
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">05.</h3>
                                 <p className="text-small-title"> Năng lực và Kinh nghiệm đã được chứng minh</p>
@@ -87,38 +120,19 @@ const IntroContent = () => {
                                 </ul>
                                 <div className="video-play">
                                     <Image className="Image-Video" src={ImageVideo} alt="Image Video" fluid />
-                                    <Image className="Icon-Play" src={IconPlay} alt="Icon Play" fluid data-toggle="modal" data-target="#exampleModalCenter" />
+                                    <Image className="Icon-Play" src={IconPlay} alt="Icon Play" fluid onClick={(event) => { openModal(event) }} />
                                 </div>
-
-                                <div class="modal" id="exampleModalCenter">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" data-dismiss="modal" data-backdrop="false">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <video width="100%" controls>
-                                                    <source src={Video1} type="video/mp4"></source>
-                                                </video>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>  
+                                <Modals />
                             </Col>
                         </Row>
                     </div>
                 </Col>
-
                 <Col sm={5} xs={12} className="right-page container">
                     <h3 className="text-title-news">Tin tức đề xuất</h3>
                     <News />
                 </Col>
-
             </Row>
         </div>
     )
 }
-
 export default IntroContent;

@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import imgArticle from "@images/introduction-page/section-article.svg";
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import { useTranslation } from 'react-i18next';
-import { navigate } from 'gatsby';
+import { Link } from "@wapps/gatsby-plugin-i18next";
 const SectionArticle = () => {
     const { t } = useTranslation();
     return (
@@ -23,9 +23,11 @@ const SectionArticle = () => {
                                 </span>
                             </div>
                             <div className="button-more">
-                                <button className="btn-about-prod" onClick={() => (navigate("/intro-content-page2/"))}>
-                                    <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
-                                </button>
+                                <Link to="/intro-content-page2/">
+                                    <button className="btn-about-prod">
+                                        <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </Col>

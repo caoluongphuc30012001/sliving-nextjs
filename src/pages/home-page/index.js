@@ -25,7 +25,7 @@ const HomePage = () => {
                 <SectionIntroduce />
                 <SectionSlides />
                 <SectionBannerReason />
-                <Sectionorizontal title={t(`who_are_we`)} urlImg={imgIot}>
+                <Sectionorizontal title={t(`who_are_we`)} urlImg={imgIot} url={'/introduction-page/'}>
                     <span>
                         <span>  Những lĩnh vực phát triển của công ty :</span>
                         <ul>

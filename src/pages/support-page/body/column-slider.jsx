@@ -71,14 +71,14 @@ const SupportPageSlider = () => {
           fontSize: "12px",
         }}
 
-        // activeStyle={{
-        //   width: 13,
-        //   height: 13,
-        //   display: "inline-block",
+      // activeStyle={{
+      //   width: 13,
+      //   height: 13,
+      //   display: "inline-block",
 
-        //   backgroundSize: 'contain',
-        //   backgroundRepeat: "no-repeat"
-        // }}
+      //   backgroundSize: 'contain',
+      //   backgroundRepeat: "no-repeat"
+      // }}
       >
         {i + 1}
       </div>
@@ -93,15 +93,15 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
 
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -111,15 +111,15 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
 
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -129,14 +129,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -146,14 +146,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -163,14 +163,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -180,15 +180,15 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
 
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -198,14 +198,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -215,14 +215,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -232,14 +232,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -249,14 +249,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -266,14 +266,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -283,14 +283,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -300,14 +300,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -317,14 +317,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -334,14 +334,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -351,14 +351,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -368,14 +368,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -385,14 +385,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -402,14 +402,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -419,14 +419,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -436,14 +436,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -453,14 +453,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -470,14 +470,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
@@ -487,14 +487,14 @@ const SupportPageSlider = () => {
               <Image className="mb-4 image-example" src={Image1} alt="Image 1" fluid />
               <div className="container-below-image">
                 <div className="row">
-                  <h7 class="text font-weight-bold mb-2">Công trình <span class="text font-weight-normal"> : Căn hộ</span></h7>
+                  <h7 className="text font-weight-bold mb-2">Công trình <span className="text font-weight-normal"> : Căn hộ</span></h7>
                 </div>
               </div>
             </Col>
             <Col sm={8} xs={12}>
-              <div class="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-              <div class="text-date"> 16/10/2020</div>
-              <div class="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
+              <div className="text-title md-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
+              <div className="text-date"> 16/10/2020</div>
+              <div className="text-description mb-4"> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</div>
             </Col>
           </Row>
         </div>
