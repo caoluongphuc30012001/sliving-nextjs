@@ -23,7 +23,7 @@ const SectionArticle = () => {
                                 </span>
                             </div>
                             <div className="button-more">
-                                <Link to="/intro-content-page2/">
+                                <Link to="/intro-content-page/">
                                     <button className="btn-about-prod">
                                         <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
                                     </button>
