@@ -1,4 +1,4 @@
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 const CardProductLine = ({ title, subtitle, slug, description, imgUrl, isBtn, data }) => {

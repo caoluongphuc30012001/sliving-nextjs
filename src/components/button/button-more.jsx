@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 const Div = styled.div`
 background-color:  ${props => props.backgroundColor};
 border: ${props => props.border};
@@ -21,6 +21,5 @@ const ButtonMore = ({ url, backgroundColor, color, border, boxShadow, title, bor
                 </Span>
             </Div>
         </Link>)
-
 }
 export default ButtonMore;

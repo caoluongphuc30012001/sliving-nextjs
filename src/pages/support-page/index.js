@@ -4,11 +4,11 @@ import TechnicalSolution from "./body/technicalSolution.jsx";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
 const SupportPage = () => {
-    return (
-        <Layout>
-            <TechnicalSolution />
-        </Layout>
-    );
+  return (
+    <Layout>
+      <TechnicalSolution />
+    </Layout>
+  );
 };
 export default withI18next()(SupportPage);
 export const query = graphql`

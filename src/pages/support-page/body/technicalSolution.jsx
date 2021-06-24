@@ -6,9 +6,9 @@ import Searchicon from "@images/icon/searchicon.svg";
 import DropArrow from "@images/icon/dropdownArrow.svg";
 import DataSupportPage from "@query/support-page";
 import FormPagination from '@components/pagination/form-pagination';
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap';
 const TechnicalSol = () => {
   const { t } = useTranslation();
   const data = DataSupportPage();
