@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import { useTranslation } from 'react-i18next';
 import Image2 from "@images/intro-content2/image2.png";
+import { Link } from "gatsby";
 const SectionArticleSecond = () => {
     const { t } = useTranslation();
     return (
@@ -27,9 +28,11 @@ const SectionArticleSecond = () => {
                                 </ul>
                             </div>
                             <div className="button-more-info1">
-                                <button className="btn-about-prod">
-                                    <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
-                                </button>
+                                <Link to="/introduct-detail-page/smart-home">
+                                    <button className="btn-about-prod">
+                                        <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </Col>

@@ -5,7 +5,7 @@ p {
     padding: 0;
 }
 
-.solution-main {
+.introduct-main {
     margin-bottom: 98px;
 
     img {
@@ -13,7 +13,7 @@ p {
         height: 100%;
     }
 
-    .solution-header {
+    .introduct-header {
         max-width: 1440px;
         max-height: 649px;
         width: 100%;
@@ -22,7 +22,7 @@ p {
         margin-left: auto;
         margin-right: auto;
 
-        .solution-section-header {
+        .introduct-section-header {
             position: absolute;
             bottom: -51px;
             left: 96px;
@@ -64,7 +64,7 @@ p {
         }
     }
 
-    #section-solutions-slide {
+    #section-introducts-slide {
         max-width: 1170px;
         margin-left: auto;
         margin-right: auto;
@@ -79,7 +79,7 @@ p {
             margin: auto;
 
             h3 {
-                font-size: 32px;
+                font-size: 36px;
                 font-weight: bold;
             }
         }
@@ -147,8 +147,13 @@ p {
 
     }
 
-    .solution-section-content {
+    .introduct-section-content {
         margin-top: 54px;
+
+        &:hover {
+            box-shadow: 0px 12px 12px rgba(28, 65, 84, 0.1), 0px 24px 24px rgba(28, 65, 84, 0.05), 0px 64px 64px rgba(28, 65, 84, 0.04);
+            border-radius: 10px 10px 0px 10px;
+        }
 
         .section-content-wrap {
             column-gap: 30px;
@@ -179,16 +184,37 @@ p {
                 .btn-research-wrap {
                     width: fit-content;
                     height: 48px;
-                    background-color: #F47403;
+                    background-color: #FFFFFF;
                     border: none;
                     padding: 5px 15px;
                     justify-content: space-between;
                     margin-top: 56px;
                     margin-bottom: 90px;
                     border-radius: 16px;
+                    border: 1px solid #F47403;
+
+                    #btn-research-arrow {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background-color: #F47403;
+
+                        span {
+                            color: #FFFFFF;
+                        }
+
+                        #btn-research-arrow {
+                            display: block;
+                        }
+
+                        #btn-research-arrow-F4 {
+                            display: none;
+                        }
+                    }
 
                     span {
-                        color: #ffffff;
+                        color: #F47403;
                     }
 
                     img {
@@ -202,7 +228,7 @@ p {
     }
 
     .section-second {
-        .solution-section-content {
+        .introduct-section-content {
             .section-content-wrap {
                 direction: rtl;
 
@@ -213,7 +239,7 @@ p {
         }
     }
 
-    .solution-slides-product {
+    .introduct-slides-product {
         margin-top: 54px;
 
         .slide-sols {
@@ -234,17 +260,30 @@ p {
         }
     }
 
+    .banner-slides {
+        margin-top: 54px;
+        margin-bottom: 54px;
+    }
+
     .section-slide-product {
         img {
             width: unset;
         }
 
         .introduction-content3 {
+            padding-top: 0;
             margin-left: 0;
             margin-right: 0;
-            padding-top: 0;
+        }
+
+        .article-wrap-right {
+            margin-left: 15px;
         }
     }
 
 
+}
+
+.section-first {
+    margin-top: 105px;
 }
