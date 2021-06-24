@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
 import Modal from "react-modal";
-import Image1 from "@images/intro-content/group3.png";
+import Image1 from "@images/intro-content/image1.png";
 import ListIcon from "@images/intro-content/group2.png";
 import ImageVideo from "@images/intro-content/poster.png";
 import IconPlay from "@images/icon/icon-play.svg";
 import Video1 from "@images/image-video/video1.mp4";
 import News from "./smartHome-slider.jsx";
 import "./intro-content.scss";
+import { useTranslation } from 'react-i18next';
 Modal.setAppElement('#___gatsby')
 const IntroContent = () => {
+    const { t } = useTranslation();
     const [isShowing, setIsShowing] = useState(false);
     const escFunction = useCallback((event) => {
         if (event.keyCode === 27) {
@@ -56,9 +58,10 @@ const IntroContent = () => {
         <div className="mainPage-container fluid container-wrap">
             <Row>
                 <Col sm={7} xs={12} className="left-page container">
-                    <span className="time-post-name fs-12 fw-bold">Sliving</span><span className="time-post-date fs-12"> đăng vào lúc 24/05/2021 - 15:29</span>
-                    <h3 className="text-title">5 Lý do chọn lựa SLIVING</h3>
+                    <span className="time-post-name fs-12 fw-bold">Sliving</span><span className="time-post-date fs-12"> {t(`posted-at`)} 24/05/2021 - 15:29</span>
+                    <h3 className="text-title">{t(`5-reasons`)}</h3>
                     <Image className="image-header" src={Image1} alt="Image 1" fluid />
+                    <p className="text-title-middle">{t(`IoT-Flatform`)}</p>
                     <div className="list-item container">
                         <Row>
                             <Col sm={2} xs={12}>
@@ -66,8 +69,8 @@ const IntroContent = () => {
                             </Col>
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">01.</h3>
-                                <p className="text-small-title"> Sản phẩm chất lượng quốc tế</p>
-                                <p className="text-description"> Đặt mình vào tâm thế của khách hàng nhằm thấu hiểu điều mà khách hàng mong đợi. Vượt qua những rào cản suy nghĩ về chất lượng của các sản phẩm thiết bị thông minh trong nước. Chúng tôi đã và đang hoàn thiện tốt sản phẩm của mình chứng minh cho khách hàng bằng hàng loạt các chứng chỉ về chất lượng quốc tế mà chúng tôi đã và sẽ nhận được trong thời gian tới, MFi là một trong số đó. </p>
+                                <p className="text-small-title"> {t(`International-quality`)}</p>
+                                <p className="text-description"> {t(`customers-shoes`)}</p>
                             </Col>
                         </Row>
 
@@ -77,12 +80,12 @@ const IntroContent = () => {
                             </Col>
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">02.</h3>
-                                <p className="text-small-title"> Dãy sản phẩm và giải pháp đa dạng</p>
-                                <p className="text-description"> - Xây dựng thiết kế giao diện các ứng dụng di động (Mobile App), trang mạng (website) cho việc giám sát, điều khiển và giới thiệu sản phẩm.  </p>
-                                <p className="text-description"> - Thiết kế phần cứng (Hardware) của Sản phẩm. </p>
-                                <p className="text-description"> - Sản xuất thiết bị công nghệ thông minh. </p>
-                                <p className="text-description"> - Xây dựng các chương trình máy tính như Firmware, Cloud Server. </p>
-                                <p className="text-description"> - AI (Trí tuệ nhân tạo). </p>
+                                <p className="text-small-title"> {t(`Wide-range`)}</p>
+                                <p className="text-description">  {t(`Designing-interfaces`)} </p>
+                                <p className="text-description"> {t(`Design-hardware`)} </p>
+                                <p className="text-description"> {t(`Producing-smart`)}  </p>
+                                <p className="text-description"> {t(`Building-computer`)} </p>
+                                <p className="text-description"> {t(`AI`)} </p>
                             </Col>
                         </Row>
                         <Row className="mt-5">
@@ -91,8 +94,8 @@ const IntroContent = () => {
                             </Col>
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">03.</h3>
-                                <p className="text-small-title"> Khả năng cung ứng lớn</p>
-                                <span className="text-description fs-12">Với mục tiêu dẫn đầu thị trường công nghệ thông minh, Sliving là doanh nghiệp đầu tiên được cấp giấy phép sản xuất các thiết bị trong hệ sinh thái Smart Living. Nhà máy sản xuất có diện tích gần 4500m2, tổng công suất ước đạt</span><span className="time-post-name fs-12 fw-bold"> 270 nghìn thiết bị/năm.</span><span className="text-description fs-12"> Trong đó, công suất giai đoạn 1 của dự án sẽ là</span><span className="time-post-name fs-12 fw-bold"> 135 nghìn sản phẩm/năm</span><span className="text-description fs-12"> và tăng dần vào giai đoạn 2, đạt 100% công suất từ tháng 6/2025.</span>
+                                <p className="text-small-title"> {t(`Strong-supply`)}</p>
+                                <span className="text-description fs-12">{t(`goal-leading1`)}</span><span className="time-post-name fs-12 fw-bold"> {t(`goal-leading2`)}</span><span className="text-description fs-12">  {t(`goal-leading3`)}</span><span className="time-post-name fs-12 fw-bold">  {t(`goal-leading4`)}</span><span className="text-description fs-12">  {t(`goal-leading5`)}</span>
                             </Col>
                         </Row>
                         <Row className="mt-5">
@@ -101,8 +104,8 @@ const IntroContent = () => {
                             </Col>
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">04.</h3>
-                                <p className="text-small-title"> Hỗ trợ kỹ thuật và bảo hành chu đáo</p>
-                                <p className="text-description"> Đội ngũ nhân viên dự án, kỹ thuật và bán hàng sẵn sàng tư vấn/hỗ trợ cho khách hàng các giải pháp phù hợp cho từng nhu cầu sử dụng, tiết kiệm chi phí. </p>
+                                <p className="text-small-title"> {t(`Technical-warranty-support`)}</p>
+                                <p className="text-description"> {t(`Project-staffs`)}</p>
 
                             </Col>
                         </Row>
@@ -112,11 +115,11 @@ const IntroContent = () => {
                             </Col>
                             <Col sm={10} xs={12}>
                                 <h3 className="text-title-number">05.</h3>
-                                <p className="text-small-title"> Năng lực và Kinh nghiệm đã được chứng minh</p>
+                                <p className="text-small-title"> {t(`Proven-Competence`)}</p>
                                 <ul>
-                                    <li><span className="time-post-name fs-12 fw-bold">07 DỰ ÁN</span><span className="text-description fs-12"> sử dụng thiết bị thông minh SLIVING.</span></li>
-                                    <li><span className="text-description fs-12">Hơn</span><span className="time-post-name fs-12 fw-bold"> 300 000 THIẾT BỊ</span><span className="text-description fs-12"> đã được lắp đặt.</span> </li>
-                                    <li><span className="text-description fs-12">Hơn</span><span className="time-post-name fs-12 fw-bold"> 120 nhân viên</span><span className="text-description fs-12"> đang phát triển và sáng tạo liên tục nhằm thúc đẩy các sản phẩm SLIVING ngày càng hoàn hảo hơn.</span> </li>
+                                    <li><span className="time-post-name fs-12 fw-bold">07 {t(`PROJECT`)}</span><span className="text-description fs-12"> {t(`SLIVING's-smart`)}</span></li>
+                                    <li><span className="text-description fs-12">{t(`More-than`)}</span><span className="time-post-name fs-12 fw-bold"> 300 000 {t(`DEVICES`)}</span><span className="text-description fs-12"> {t(`was-installed`)}</span> </li>
+                                    <li><span className="text-description fs-12">{t(`More-than`)}</span><span className="time-post-name fs-12 fw-bold"> 120 {t(`employees`)}</span><span className="text-description fs-12"> {t(`better-and-better`)}</span> </li>
                                 </ul>
                                 <div className="video-play">
                                     <Image className="Image-Video" src={ImageVideo} alt="Image Video" fluid />
@@ -128,7 +131,7 @@ const IntroContent = () => {
                     </div>
                 </Col>
                 <Col sm={5} xs={12} className="right-page container">
-                    <h3 className="text-title-news">Tin tức đề xuất</h3>
+                    <h3 className="text-title-news">{t(`Recommended-news`)}</h3>
                     <News />
                 </Col>
             </Row>
