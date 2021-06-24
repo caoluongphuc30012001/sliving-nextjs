@@ -17,6 +17,9 @@ const CardTitleHeader = ({ title, id, isShow }, ...props) => {
         } else {
             setIsMobile(true);
         }
+        return () => {
+            setIsMobile(false);
+        }
     }, [])
     return (<div className="card-title-header d-flex al-center txt-blue just-cont-bt">
         <div className="card-title-header__title fs-32 fw-bold "><span>{t(`${title}`)}</span></div>
