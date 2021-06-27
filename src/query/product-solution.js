@@ -11,9 +11,12 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
@@ -21,12 +24,39 @@ const DataProductSolution = () => {
                 }
               }
             }
-            type
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -38,9 +68,12 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
@@ -48,12 +81,39 @@ const DataProductSolution = () => {
                 }
               }
             }
-            type
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -64,23 +124,53 @@ const DataProductSolution = () => {
       edges {
         node {
           html
-          frontmatter {
-            id 
-            title  
-            alt
+frontmatter {
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
                   src
                 }
               }
-            } 
-            type
+            }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -92,22 +182,52 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
                   src
                 }
               }
-            } 
-            type
+            }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -119,22 +239,52 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
                   src
                 }
               }
-            } 
-            type
+            }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -146,22 +296,52 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
                   src
                 }
               }
-            } 
-            type
+            }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -173,21 +353,52 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
                   src
                 }
               }
-            } 
+            }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -199,22 +410,52 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
                   src
                 }
               }
-            } 
-            type
+            }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -226,9 +467,12 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
@@ -236,11 +480,39 @@ const DataProductSolution = () => {
                 }
               }
             }
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -252,9 +524,12 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt 
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
@@ -262,12 +537,39 @@ const DataProductSolution = () => {
                 }
               }
             }
-            type
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -279,9 +581,12 @@ const DataProductSolution = () => {
         node {
           html
           frontmatter {
-            id 
-            title  
-            alt 
+            id
+            date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
@@ -289,12 +594,39 @@ const DataProductSolution = () => {
                 }
               }
             }
-            type
+            featuredVideo {
+            publicURL
+          }
+            alt
             slug
-            property_1
-            property_2
-            property_3
-            property_4 
+            property_1 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }

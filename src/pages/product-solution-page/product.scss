@@ -85,7 +85,6 @@
     align-items: center;
     justify-content: space-between;
     width: 190px;
-    margin-top: 56px;
     margin-bottom: 90px;
     border-radius: 16px;
 
@@ -383,4 +382,22 @@
     }
 
 
+}
+
+.section-about__img {
+    width: 100%;
+}
+
+.prod-slide__img {
+    width: 100%;
+}
+
+.section-about-banner {
+    position: relative;
+}
+
+.btn-about-prod {
+    position: absolute;
+    top: 54%;
+    left: 9%;
 }
