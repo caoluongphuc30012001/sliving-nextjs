@@ -10,10 +10,10 @@ const SolutionHeader = () => {
                     <img src={solutionImg} alt="" />
                 </div>
                 <div className="solution-section-header">
-                    <div className="section-header__title"><h3>{t(`Smart-lighting`)}</h3></div>
+                    <div className="section-header__title"><h3>{t(`Smart-Parking`)}</h3></div>
                     <div className="section-header__description">
                         <p>
-                        {t(`core-feature`)}
+                        {t(`private-vehicles`)}
                         </p>
                     </div>
                 </div>

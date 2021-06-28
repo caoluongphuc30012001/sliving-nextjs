@@ -78,7 +78,9 @@ const NavBar = () => {
                                                 <div className="nav-child">
                                                     <div className="nav-child-wrap">
                                                         {nav.arrMenu && nav.arrMenu.map((menu, indexMenu) => {
-                                                            return <div key={indexMenu} className="child-wrap-item"><span className="child-wrap-item__title">{t(`${menu.title}`)}</span></div>
+                                                            return <div key={indexMenu} className="child-wrap-item"><span className="child-wrap-item__title"><Link className="nav-link" to="/smart-parking-page">{t(`${menu.title}`)}</Link></span></div>
+                                                            
+                                                            
                                                         })}
                                                     </div>
                                                 </div>
