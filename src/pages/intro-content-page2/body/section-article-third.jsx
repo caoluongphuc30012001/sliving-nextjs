@@ -23,9 +23,11 @@ const SectionArticleThird = () => {
                                 </ul>
                             </div>
                             <div className="button-more-info1">
+                            <a href="/smart-parking-page">
                                 <button className="btn-about-prod">
                                     <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
                                 </button>
+                                </a>
                             </div>
                         </div>
                     </Col>
