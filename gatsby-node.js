@@ -124,7 +124,7 @@ exports.createPages = async function ({ page, actions, graphql }) {
       path: `/support-page/${edge.node.frontmatter.slug}/`,
       component: require.resolve("./src/template/supportpage.jsx"),
       context: {
-        slug: edge.node.frontmatter.slug,
+        node: edge.node,
         data: supportPage.data.dataProductIdentification.edges,
       },
     })

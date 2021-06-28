@@ -132,8 +132,6 @@ const QueryNewsPage = () => {
       }
     }
   } `;
-
   return (queryStr);
 };
-
 module.exports.QueryNewsPage = QueryNewsPage;

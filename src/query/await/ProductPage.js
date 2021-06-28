@@ -26,28 +26,28 @@ const QueryProductPage = () => {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }

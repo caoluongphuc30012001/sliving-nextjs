@@ -8,12 +8,9 @@ import ProdDetail from './body/prod-detail';
 import Specitification from './body/spectification';
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
-
-
 const Product = ({pageContext}) => {
     const [data, setData] = useState({});
     const [slide, setSlide] = useState([]);
-
     useEffect(() => {
         const tmp = pageContext.dataProd;
         setData(tmp);
@@ -27,7 +24,6 @@ const Product = ({pageContext}) => {
             setSlide(prev => [...prev, tmp.property_4.childImageSharp.fluid.src]);
         }
     }, [pageContext.data]);
-
     return (
         <Layout>
             <SectionNavBar />
@@ -58,7 +54,6 @@ const Product = ({pageContext}) => {
     )
 }
 export default withI18next()(Product);
-
 export const query = graphql`
   query($lng: String!) {
     locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
