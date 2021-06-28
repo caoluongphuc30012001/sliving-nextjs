@@ -23,7 +23,7 @@ const SlideProductLine = (props) => {
                             description={node.frontmatter.description}
                             imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} 
                             isBtn={true} 
-                            data={post.slice(0, 5)}
+                            url="news-page"
                         />
                     )
                 }))

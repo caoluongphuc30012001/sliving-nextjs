@@ -19,7 +19,7 @@ const DataProductSolution = () => {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -31,28 +31,28 @@ const DataProductSolution = () => {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -76,7 +76,7 @@ const DataProductSolution = () => {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -88,28 +88,28 @@ const DataProductSolution = () => {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -124,7 +124,7 @@ const DataProductSolution = () => {
       edges {
         node {
           html
-frontmatter {
+          frontmatter {
             id
             date
             title
@@ -133,7 +133,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -145,28 +145,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -190,7 +190,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -202,28 +202,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -247,7 +247,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -259,28 +259,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -304,7 +304,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -316,28 +316,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -361,7 +361,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -373,28 +373,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -418,7 +418,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -430,28 +430,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -475,7 +475,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -487,28 +487,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -532,7 +532,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -544,28 +544,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -589,7 +589,7 @@ frontmatter {
             type
             featuredImage {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
@@ -601,28 +601,28 @@ frontmatter {
             slug
             property_1 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_2 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_3 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }
             }
             property_4 {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1440) {
                   src
                 }
               }

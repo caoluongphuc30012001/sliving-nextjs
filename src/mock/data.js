@@ -6,12 +6,13 @@ export const navData = {
             title: 'HEADER.HOMEPAGE.PRODUCT&SOLUTION',
             isActive: true,
             path: "/product-solution-page", isHover: false,
+           // path: "/smart-parking-page", isHover: false,
             arrMenu: [
                 {
                     id: '0',
                     title: 'Smart Parking',
                     isActive: true,
-                    path: "/", isHover: false
+                    path: "/smart-parking-page", isHover: false,
                 },
                 {
                     id: '1',

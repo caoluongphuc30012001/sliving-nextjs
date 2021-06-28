@@ -14,8 +14,8 @@ const CardSuggest = (props) => {
                         (post && post.map(({ node }) => {
                             return (
                                 <Col key={node.frontmatter.id} md={12}>
-                                    <CardHorizonal slug={node.frontmatter.slug} isVideo={props.isVideo}
-                                        imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} data={post.slice(0, 5)} />
+                                    <CardHorizonal slug={node.frontmatter.slug} isVideo={props.isVideo} url={props.url}
+                                        imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} />
                                 </Col>
                             )
                         }))
