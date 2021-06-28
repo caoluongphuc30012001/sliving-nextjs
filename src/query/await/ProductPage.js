@@ -1,15 +1,17 @@
 const QueryProductPage = () => {
   const query = ` query {
     ProductPage:allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "contents/product-solution/"}}
+      filter: {fileAbsolutePath: {regex: "contents/product-solution/products/"}}
     ) {
       edges {
         node {
           frontmatter {
             id
-            slug
-            title
             date
+            title
+            subtitle
+            description
+            type
             featuredImage {
               childImageSharp {
                 fluid {
@@ -17,10 +19,39 @@ const QueryProductPage = () => {
                 }
               }
             }
-            property_1
-            property_2
-            property_3
-            property_4
+            featuredVideo {
+              publicURL
+            }
+            alt
+            slug
+            property_1 {
+              childImageSharp {
+                fluid(maxWidth: 1440) {
+                  src
+                }
+              }
+            }
+            property_2 {
+              childImageSharp {
+                fluid(maxWidth: 1440) {
+                  src
+                }
+              }
+            }
+            property_3 {
+              childImageSharp {
+                fluid(maxWidth: 1440) {
+                  src
+                }
+              }
+            }
+            property_4 {
+              childImageSharp {
+                fluid(maxWidth: 1440) {
+                  src
+                }
+              }
+            }
           }
         }
       }

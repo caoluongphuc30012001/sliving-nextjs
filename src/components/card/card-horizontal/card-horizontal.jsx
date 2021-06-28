@@ -12,16 +12,12 @@ const CardHorizonal = (props) => {
                             <img src={iconPlay} alt="" className="icon-play-video" />
                         )
                     }
-                    <Link to={`/news-page/${props.slug}`}
-                        className="card-horizonal-link"
-                        state={{ data: props.data, slug: props.slug }} >
+                    <Link to={`/${props.url}/${props.slug}`} className="card-horizonal-link" >
                         <img src={props.imgUrl} alt="" className="img-sliving" />
                     </Link>
                 </Col>
                 <Col className="card-horizonal-wrap__desc">
-                    <Link to={`/news-page/${props.slug}`}
-                        className="card-horizonal-link"
-                        state={{ data: props.data, slug: props.slug }} >
+                    <Link to={`/${props.url}/${props.slug}`} className="card-horizonal-link" >
                         <span className="horizonal-wrap__desc-date">
                             01/06/2021
                         </span>
