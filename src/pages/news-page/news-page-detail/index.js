@@ -4,11 +4,11 @@ import Layout from "@components/layout.jsx";
 import "../style.scss";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
-const IndexPage = ({ location }) => {
+const IndexPage = ({ pageContext }) => {
   return (
     <Layout>
       {
-        (location.state && <Body data={location.state.data} slug={location.state.slug} />)
+        (pageContext && <Body data={pageContext.data} node={pageContext.node} />)
       }
     </Layout>
   )
