@@ -19,6 +19,20 @@ const TechnicalSol = () => {
   const dataProductWarranty = data.dataProductWarranty.edges;
   const [post, setPost] = useState(dataTechnicalAnswer);
   const [titleSolution, setTitle] = useState("Technical_solutions");
+  const [arrContruction] = useState([
+    { id: 0, title: "Toà nhà" },
+    { id: 1, title: "Bệnh viện" },
+    { id: 2, title: "Siêu thị" },
+    { id: 3, title: "Trung tâm" },
+  ]);
+  const [arrGroupProduct] = useState([
+    { id: 0, title: "Technical_solutions", isActive: true },
+    { id: 1, title: "Construction_Manual", isActive: false },
+    { id: 2, title: "Agricultural_Materials", isActive: false },
+    { id: 3, title: "Product_Identification", isActive: false },
+    { id: 4, title: "Product_Warranty", isActive: false },
+    { id: 5, title: "Documents_Download", isActive: false }
+  ]);
   const [arrDrop] = useState([
     { id: 0, title: "Technical_solutions", isActive: true },
     { id: 1, title: "Construction_Manual", isActive: false },
@@ -99,7 +113,6 @@ const TechnicalSol = () => {
   }
   return (
     <div className="support-pages big-container fluid container-wrap">
-      {/* <div className="support-page-wrap"> */}
       <Row noGutters>
         <Col sm={5} xs={12}>
           <div className="support-page-left">
@@ -133,32 +146,30 @@ const TechnicalSol = () => {
                           {t(`Current_Construction`)} <img className="font-weight-bold" src={DropArrow} alt="" />
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item >Mới nhất</Dropdown.Item>
-                          <Dropdown.Item >Cũ nhất</Dropdown.Item>
+                          {arrContruction && arrContruction.map((product, index) => {
+                            return (<Dropdown.Item key={index}>{product.title}</Dropdown.Item>)
+                          })}
                         </Dropdown.Menu>
                       </Dropdown>
                     </Col>
-
                     <Col className="col-in-containerOutside">
                       <Dropdown>
                         <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
                           {t(`Product_Groups`)} <img className="font-weight-bold" src={DropArrow} alt="" />
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item >Mới nhất</Dropdown.Item>
-                          <Dropdown.Item >Cũ nhất</Dropdown.Item>
+                          {arrGroupProduct && arrGroupProduct.map((product, index) => {
+                            return (<Dropdown.Item key={index}>{t(`${product.title}`)}</Dropdown.Item>)
+                          })}
                         </Dropdown.Menu>
                       </Dropdown>
                     </Col>
-
                     <Col className="col-in-containerOutside">
                       <Dropdown>
                         <Dropdown.Toggle id=" dropdown-table">
                           {t(`Product_Features`)} <img className="font-weight-bold" src={DropArrow} alt="" />
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item >Mới nhất</Dropdown.Item>
-                          <Dropdown.Item >Cũ nhất</Dropdown.Item>
                         </Dropdown.Menu>
                       </Dropdown>
                     </Col>
@@ -196,7 +207,6 @@ const TechnicalSol = () => {
                               </div>
                             </div>
                           </Col>
-
                           <Col >
                             <div className="first-slider-wrap__right">
                               <Link to={`/support-page/${node.frontmatter.slug}`}>
@@ -206,8 +216,6 @@ const TechnicalSol = () => {
                               </Link>
                             </div>
                           </Col>
-                          {/* </div> */}
-
                         </Row>
                       </div>
                     )
@@ -219,9 +227,7 @@ const TechnicalSol = () => {
           </div>
         </Col>
       </Row>
-      {/* </div> */}
     </div >
   );
 }
-
 export default TechnicalSol;

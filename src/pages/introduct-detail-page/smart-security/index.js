@@ -24,7 +24,7 @@ const IntroductDetail = () => {
                     <SectionContent imgUrl={imgSecond} title={"Cửa Xoay Thông Minh"} description={"Là một thiết bị quản lý an ninh khu vực kết hợp với các phần mềm độc quyền. Thiết bị này có khả năng theo dõi các chuyến thăm của khách, quản lý công trình xây dựng và loại bỏ những người có ý định nhảy qua cổng để vào và làm tăng hiệu quả hoạt động trên trong khu vực quản lý."} />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={"Công tắc thông minh"} description={"Sử dụng công nghệ sinh trắc học trích xuất đặc điểm nhận diện khuôn mặt để xác thực cư dân, ứng dụng cho việc kiểm soát ra vào các khu vực cần giám sát cũng như sử dụng để gọi thang, mở barrier."} />
+                    <SectionContent imgUrl={imgThird} title={"Face ID"} description={"Sử dụng công nghệ sinh trắc học trích xuất đặc điểm nhận diện khuôn mặt để xác thực cư dân, ứng dụng cho việc kiểm soát ra vào các khu vực cần giám sát cũng như sử dụng để gọi thang, mở barrier."} />
                 </div>
                 <div className="section-slide-first">
                     <SectionSlidesProduct title={'Parking product'} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
+import iconArrowRightF4 from "@images/icon/icon-arrow-right-F47403.svg";
 import { navigate } from 'gatsby';
 import { useTranslation } from 'react-i18next';
 const SectionHeader = () => {
@@ -19,8 +20,9 @@ const SectionHeader = () => {
                         </p>
                     </div>
                     <div className="button-more">
-                        <button className="btn-about-prod" onClick={() => (navigate("/intro-content-page/"))}>
-                            <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
+                        <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap' onClick={() => (navigate("/intro-content-page/"))}>
+                            <span className="fs-18 fw-bold">{t(`More_Information`)}</span> <img id="btn-research-arrow-F4" src={iconArrowRightF4} alt="icon arrow right" />
+                            <img id="btn-research-arrow" src={iconArrowRight} alt="icon arrow right" />
                         </button>
                     </div>
                 </div></div>

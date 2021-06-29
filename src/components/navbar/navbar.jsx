@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Navbar, Image, Nav, InputGroup, FormControl } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
-import { Link } from 'gatsby';
+import { Link } from '@wapps/gatsby-plugin-i18next';
 import logo from "@images/logo/logo-v2.svg";
 import PortfolioContext from "../../context/context";
 // import imgIn from "@images/icon/social/v2-linkedin.svg";
@@ -44,11 +44,11 @@ const NavBar = () => {
                         <div className="nav-language" >
                             <LanguageSwitcher />
                         </div>
-                        <div className="nav-social d-flex al-center just-cont-bt" >
-                            {/* <div className="nav-social-wrap"><img src={imgIn} alt="in" /></div>
+                        {/* <div className="nav-social d-flex al-center just-cont-bt" >
+                            <div className="nav-social-wrap"><img src={imgIn} alt="in" /></div>
                             <div className="nav-social-wrap"><img src={imgFace} alt="in" /></div>
-                            <div className="nav-social-wrap"><img src={imgtwit} alt="in" /></div> */}
-                        </div>
+                            <div className="nav-social-wrap"><img src={imgtwit} alt="in" /></div>
+                        </div> */}
                     </div>
                     <div className="nav-group-search">
                         <InputGroup className="group-search-wrap">
@@ -71,22 +71,20 @@ const NavBar = () => {
                         <Navbar.Collapse id="responsive-navbar-nav" className="animation-nav" >
                             <Nav className=" nav-desktop" >
                                 {menus && menus.map((nav) => {
-                                    return <Link to={nav.path} className={`fs-16 link-menu ${nav.arrNav ? 'mega-menu' : ''} `} id={`nav-id-${nav.id}`} key={nav.id} onClick={() => activePage(nav.id)} >
+                                    return <div  className={`fs-16 link-menu ${nav.arrNav ? 'mega-menu' : ''} `} id={`nav-id-${nav.id}`} key={nav.id} onClick={() => activePage(nav.id)} >
                                         {nav && (<>
-                                            <span className={`item-menu link  ${nav.isActive ? 'is-active' : ''}`} id="item-menu" > {t(`${nav.title}`)}</span>
+                                            <Link to={nav.path} className={`item-menu link  ${nav.isActive ? 'is-active' : ''}`} id="item-menu" > {t(`${nav.title}`)}</Link>
                                             <div className="nav-childs">
                                                 <div className="nav-child">
                                                     <div className="nav-child-wrap">
                                                         {nav.arrMenu && nav.arrMenu.map((menu, indexMenu) => {
-                                                            return <div key={indexMenu} className="child-wrap-item"><span className="child-wrap-item__title"><Link className="nav-link" to="/smart-parking-page">{t(`${menu.title}`)}</Link></span></div>
-                                                            
-                                                            
+                                                            return <div key={indexMenu} className="child-wrap-item"><Link to={menu.path ? menu.path : '/'}><span className="child-wrap-item__title">{t(`${menu.title}`)}</span></Link></div>
                                                         })}
                                                     </div>
                                                 </div>
                                             </div>
                                         </>)}
-                                    </Link>
+                                    </div>
                                 })}
                             </Nav>
                         </Navbar.Collapse>

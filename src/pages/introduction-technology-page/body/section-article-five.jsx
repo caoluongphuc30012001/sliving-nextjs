@@ -1,8 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
+import iconArrowRightF4 from "@images/icon/icon-arrow-right-F47403.svg";
 import { useTranslation } from 'react-i18next';
 import Image5 from "@images/intro-content2/image5.png";
+import { Link } from 'gatsby';
 const SectionArticleThird = () => {
     const { t } = useTranslation();
     return (
@@ -22,10 +24,13 @@ const SectionArticleThird = () => {
                                     <li>  {t(`Provide-residents`)}</li>
                                 </ul>
                             </div>
-                            <div className="button-more-info1">
-                                <button className="btn-about-prod">
-                                    <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
-                                </button>
+                            <div className="btn-research">
+                                <Link to="/introduct-detail-page/smart-energy/">
+                                    <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>
+                                        <span className="fs-18 fw-bold">{t(`More_Information`)}</span> <img id="btn-research-arrow-F4" src={iconArrowRightF4} alt="icon arrow right" />
+                                        <img id="btn-research-arrow" src={iconArrowRight} alt="icon arrow right" />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </Col>

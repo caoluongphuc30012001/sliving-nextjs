@@ -18,23 +18,23 @@ const IntroductDetail = () => {
         <Layout>
             <div className="introduct-main" id="introduct-main">
                 <IntroductHeader />
-                <div className="section-first">
-                    <SectionContent imgUrl={imgFirst} title={"Chiếu sáng thông minh"} />
+                <div className="section-first section-first-left">
+                    <SectionContent imgUrl={imgFirst} title={"Chiếu sáng thông minh"} id={1}/>
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSecond} title={"Điều khiển điều hòa Thermostat"} />
+                    <SectionContent imgUrl={imgSecond} title={"Điều khiển điều hòa Thermostat"} id={2}/>
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={"Công tắc thông minh"} />
+                    <SectionContent imgUrl={imgThird} title={"Công tắc thông minh"} id={2}/>
                 </div>
                 <div className="section-second">
                     <SectionContent imgUrl={imgFour} title={"Sensor"} />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgFive} title={"Rèm thông minh thông minh"} />
+                    <SectionContent imgUrl={imgFive} title={"Rèm thông minh thông minh"} id={2}/>
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSix} title={"Động cơ cửa - cổng"} />
+                    <SectionContent imgUrl={imgSix} title={"Động cơ cửa - cổng"} id={2}/>
                 </div>
                 <div className="banner-slides">
                     <BannerSlide />
