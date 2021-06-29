@@ -58,4 +58,11 @@ const NewPageDetail = ({ data, node }) => {
     </>
   )
 }
-export default NewPageDetail;
+export default withI18next()(NewPageDetail);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+      ...LocaleFragment
+    }
+  }
+`;
