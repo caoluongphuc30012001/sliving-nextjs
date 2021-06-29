@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import { Row, Col, Image } from 'react-bootstrap';
-import Image1 from "@images/intro-content/rectangle1.png";
-import Image2 from "@images/intro-content/rectangle2.png";
-import Image3 from "@images/intro-content/rectangle3.png";
-import Image4 from "@images/intro-content/rectangle4.png";
+import DataIntroduction from "@query/introduction";
+import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
 const NewsPageSlider = () => {
+    const data = DataIntroduction();
+    const posts = data.dataIntroContentPage.edges;
+
     const settings = {
         dots: false,
         infinite: true,
@@ -52,52 +52,21 @@ const NewsPageSlider = () => {
     return (
         <div>
             <Slider className="news-slider" {...settings}>
-                <div className="news-small-card">
-                    <Row>
-                        <Col className="col-5">
-                            <Image className="video-cover" src={Image1} alt="Image 1" fluid />
-                        </Col>
-                        <Col className="col-7">
-                            <div className="text-day"> 16/10/2020</div>
-                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-                        </Col>
-                    </Row>
-                </div>
-                <div className="news-small-card">
-                    <Row>
-                        <Col className="col-5">
-                            <Image className="video-cover" src={Image2} alt="Image 1" fluid />
-                        </Col>
-
-                        <Col className="col-7">
-                            <div className="text-day"> 16/10/2020</div>
-                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-                        </Col>
-                    </Row>
-                </div>
-                <div className="news-small-card">
-                    <Row>
-                        <Col className="col-5">
-                            <Image className="video-cover" src={Image3} alt="Image 1" fluid />
-                        </Col>
-
-                        <Col className="col-7">
-                            <div className="text-day"> 16/10/2020</div>
-                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-                        </Col>
-                    </Row>
-                </div>
-                <div className="news-small-card">
-                    <Row>
-                        <Col className="col-5">
-                            <Image className="video-cover" src={Image4} alt="Image 1" fluid />
-                        </Col>
-                        <Col className="col-7">
-                            <div className="text-day"> 16/10/2020</div>
-                            <div className="text-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequ...</div>
-                        </Col>
-                    </Row>
-                </div>
+                {
+                    posts && posts.map(post => {
+                        return (
+                            <CardHorizonal
+                                key={post.node.frontmatter.id}
+                                date={post.node.frontmatter.date}
+                                title={post.node.frontmatter.title}
+                                imgUrl={post.node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                                slug={post.node.frontmatter.slug}
+                                alt={post.node.frontmatter.alt}
+                                url="intro-content-page"
+                            />
+                        )
+                    })
+                }
             </Slider>
         </div>
     );
