@@ -1,5 +1,5 @@
 import React from 'react';
-import SupportDetail from "../pages/support-page/body/support-detail";
+import SupportDetail from "@pages/support-page/body/support-detail";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
 const SupportPageTemplate = ({ pageContext }) => {

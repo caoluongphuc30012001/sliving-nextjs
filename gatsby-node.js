@@ -3,6 +3,7 @@ const path = require("path")
 const { QueryNewsPage } = require("./src/query/await/NewsPage");
 const { QueryProductPage } = require("./src/query/await/ProductPage");
 const { QuerySupportPage } = require("./src/query/await/SupportPage");
+const { QueryIntroductionPage } = require("./src/query/await/Introduction");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -16,6 +17,7 @@ exports.createPages = async function ({ page, actions, graphql }) {
   const productPage = await graphql(`${QueryProductPage()}`);
   const newsPage = await graphql(`${QueryNewsPage()}`);
   const supportPage = await graphql(`${QuerySupportPage()}`);
+  const introductionPage = await graphql(`${QueryIntroductionPage()}`);
 
   productPage.data.ProductPage.edges.forEach((edge) => {
     const product = edge.node.frontmatter;
@@ -155,6 +157,17 @@ exports.createPages = async function ({ page, actions, graphql }) {
       url: "product-id"
     }
   })
+
+  introductionPage.data.dataIntroContentPage.edges.forEach((edge) => {
+    createPage({
+      path: `/intro-content-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/intro-content-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataIntroContentPage.edges,
+      }
+    })
+  })
 }
 
 
@@ -165,7 +178,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@components": path.resolve(__dirname, "./src/components"),
         "@images": path.resolve(__dirname, "./src/images"),
         "@query": path.resolve(__dirname, "./src/query"),
-        "@videos": path.resolve(__dirname, "./src/videos")
+        "@videos": path.resolve(__dirname, "./src/videos"),
+        "@pages": path.resolve(__dirname, "./src/pages"),
       }
     }
   });
