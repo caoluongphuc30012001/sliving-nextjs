@@ -122,7 +122,7 @@ const TechnicalSol = () => {
             <div className="right-container">
               <h4 className="title-second fs-32 fw-bold">{t(`${titleSolution}`)}</h4>
               <div className="organize-dropdown container-wrap-page">
-                <FormPagination variable={t(`posts`)} />
+                <FormPagination count={post.length} variable={t(`posts`)} />
               </div>
               <div className="container-outside">
                 <div className="table-dropdown ">

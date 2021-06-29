@@ -39,20 +39,22 @@ const SupportDetail = ({ data, node }) => {
                                 {
                                     posts && posts.map((post) => {
                                         return (
-
-                                            <div key={post.node.frontmatter.id}>
-                                                <CardHorizonal
-                                                    slug={post.node.frontmatter.slug} isVideo={post.node.isVideo}
-                                                    imgUrl={post.node.frontmatter.featuredImage.childImageSharp.fluid.src}
-                                                    url="support-page" />
-                                            </div>
+                                            <CardHorizonal
+                                                key={post.node.frontmatter.id}
+                                                date={post.node.frontmatter.date}
+                                                title={post.node.frontmatter.title}
+                                                imgUrl={post.node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                                                slug={post.node.frontmatter.slug}
+                                                alt={post.node.frontmatter.alt}
+                                                url="support-page"
+                                            />
                                         )
                                     })
                                 }
                             </div>
                         </div>
                     </Layout>
-                ) 
+                )
             }
         </>
     )

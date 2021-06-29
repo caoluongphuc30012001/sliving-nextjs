@@ -14,8 +14,16 @@ const CardSuggest = (props) => {
                         (post && post.map(({ node }) => {
                             return (
                                 <Col key={node.frontmatter.id} md={12}>
-                                    <CardHorizonal slug={node.frontmatter.slug} isVideo={props.isVideo} url={props.url}
-                                        imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} />
+                                    <CardHorizonal
+                                        key={node.frontmatter.id}
+                                        date={node.frontmatter.date}
+                                        title={node.frontmatter.title}
+                                        imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                                        slug={node.frontmatter.slug}
+                                        alt={node.frontmatter.alt}
+                                        isVideo={props.isVideo}
+                                        url="news-page"
+                                    />
                                 </Col>
                             )
                         }))
