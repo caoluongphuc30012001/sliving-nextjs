@@ -21,7 +21,7 @@ const NewPageDetail = ({ data, node }) => {
               {
                 content && (
                   <>
-                    <div className="news-page-time"><span className="fs-16 fw-bold">Sliving</span> <span className="time-post">đăng vào lúc 24/05/2021 - {content.frontmatter.date}</span></div>
+                    <div className="news-page-time"><span className="fs-16 fw-bold">Sliving</span> <span className="time-post">đăng vào lúc {content.frontmatter.date}</span></div>
                     <div dangerouslySetInnerHTML={{ __html: content.html }} />
                   </>
                 )
@@ -41,8 +41,11 @@ const NewPageDetail = ({ data, node }) => {
                   return (
                     <CardHorizonal
                       key={post.node.frontmatter.id}
-                      slug={post.node.frontmatter.slug} isVideo="true"
+                      date={post.node.frontmatter.date}
+                      title={post.node.frontmatter.title}
                       imgUrl={post.node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                      slug={post.node.frontmatter.slug} 
+                      alt={post.node.frontmatter.alt}
                       url="news-page"
                     />
                   )
