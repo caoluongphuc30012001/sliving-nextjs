@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import VideoWebm1 from "@videos/home-page/slide-1.webp";
 import Video1 from "@videos/home-page/slide-1.mp4";
 import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
+import { withI18next } from '@wapps/gatsby-plugin-i18next';
+import { graphql } from 'gatsby';
 const NewPageDetail = ({ data, node }) => {
   const [content, setContent] = useState();
   const [posts, setPosts] = useState([]);
