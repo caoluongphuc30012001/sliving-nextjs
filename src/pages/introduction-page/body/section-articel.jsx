@@ -16,7 +16,7 @@ const SectionArticle = () => {
                     <Col xs={5} className="article-wrap__group-right">
                         <div>
                             <div className="article-title fs-48 fw-bold txt-blue">
-                                <span>{t(`Vision-Mission`)}</span>
+                                <h3>{t(`Vision-Mission`)}</h3>
                             </div>
                             <div className="article-description fs-16">
                                 <span>{t(`Leading-company`)}

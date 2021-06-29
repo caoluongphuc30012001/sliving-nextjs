@@ -6,30 +6,35 @@ export const navData = {
             title: 'HEADER.HOMEPAGE.PRODUCT&SOLUTION',
             isActive: true,
             path: "/product-solution-page", isHover: false,
-           // path: "/smart-parking-page", isHover: false,
             arrMenu: [
                 {
                     id: '0',
                     title: 'Smart Parking',
                     isActive: true,
-                    path: "/smart-parking-page", isHover: false,
+                    path: "/introduct-detail-page/smart-parking", isHover: false
                 },
                 {
                     id: '1',
                     title: 'Smart Home',
                     isActive: true,
-                    path: "/", isHover: false
+                    path: "/introduct-detail-page/smart-home", isHover: false
                 }, {
                     id: '2',
                     title: 'Saving Energy',
                     isActive: true,
-                    path: "/", isHover: false
+                    path: "/introduct-detail-page/smart-energy", isHover: false
                 },
                 {
-                    id: '2',
+                    id: '3',
                     title: 'Smart Security',
                     isActive: true,
-                    path: "/", isHover: false
+                    path: "/introduct-detail-page/smart-security", isHover: false
+                },
+                {
+                    id: '4',
+                    title: 'Smart Lighting',
+                    isActive: true,
+                    path: "/introduct-detail-page/smart-lighting", isHover: false
                 },
             ]
         },
@@ -78,15 +83,15 @@ export const navData = {
                 },
             ]
         },
-        {
-            id: '2',
-            title: 'HEADER.HOMEPAGE.PROJECT'
-            ,
-            isActive: false,
-            path: "/"
-            ,
-            isHover: false,
-        },
+        // {
+        //     id: '2',
+        //     title: 'HEADER.HOMEPAGE.PROJECT'
+        //     ,
+        //     isActive: false,
+        //     path: "/"
+        //     ,
+        //     isHover: false,
+        // },
         {
 
             id: '3',

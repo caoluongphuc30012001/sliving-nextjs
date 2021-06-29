@@ -7,8 +7,13 @@ const SectionApplication = () => {
             description={"The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable."}
             titleBtn={"Product_Consultation"}
             subtitle={"Sub-title explaining"}
-            color={"#004BA1"}
             isButton={true}
+            backgroundColor={'#F47403'}
+            color={'#ffffff'}
+            borderReadius={'16px'}
+            border={"none"}
+            padding={'4px 7px 4px 13px'}
+            fontWeight={'700'}
         />
         <div className="solution-header-img">
             <img src={headerSolImg} alt="sliving" />

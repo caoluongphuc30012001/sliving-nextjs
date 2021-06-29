@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
 import { Link } from "gatsby";
+import imgArrow from "@images/icon/icon-arrow white.svg";
 const Div = styled.div`
 background-color:  ${props => props.backgroundColor};
 border: ${props => props.border};
@@ -19,6 +20,7 @@ const ButtonMore = ({ url, backgroundColor, color, border, boxShadow, title, bor
             <Div className="btn-more b-shadow" padding={padding} backgroundColor={backgroundColor} border={border} borderReadius={borderReadius}>
                 <Span color={color} fontWeight={fontWeight}>{titleBtn ? t(`${titleBtn}`) : t(`More_Information`)}
                 </Span>
+                <img src={imgArrow} alt="icon arrow right" />
             </Div>
         </Link>)
 }
