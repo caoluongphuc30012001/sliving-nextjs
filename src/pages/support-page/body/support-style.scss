@@ -484,8 +484,9 @@
         height: 50%;
         object-fit: cover;
     }
-}
 
-.download__container:hover {
-    background: white;
+    img:hover {
+        transform: scale(1.4);
+        transition: 1.2s;
+    }
 }
