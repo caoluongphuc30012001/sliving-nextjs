@@ -8,12 +8,14 @@ import ProdDetail from './body/prod-detail';
 import Specitification from './body/spectification';
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
-const Product = ({pageContext}) => {
+const Product = ({ pageContext }) => {
     const [data, setData] = useState({});
     const [slide, setSlide] = useState([]);
+    const [name, setName] = useState("");
     useEffect(() => {
         const tmp = pageContext.dataProd;
         setData(tmp);
+        setName(tmp.title);
         if (tmp.property_2) {
             setSlide(prev => [...prev, tmp.property_2.childImageSharp.fluid.src]);
         }
@@ -26,7 +28,7 @@ const Product = ({pageContext}) => {
     }, [pageContext.data]);
     return (
         <Layout>
-            <SectionNavBar />
+            <SectionNavBar name={name}/>
             {
                 data.property_1 ? (
                     <SectionAbout banner={data.property_1.childImageSharp.fluid.src} />
