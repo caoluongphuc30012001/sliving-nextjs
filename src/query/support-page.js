@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const DataSupportPage = () => {
   const data = useStaticQuery(graphql`
   query {
-    dataTechnicalAnswer : allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/technical-answers)/"}}
+    dataTechnicalAnswer : allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/technical-solution)/"}}
     sort: {fields: frontmatter___date}) {
       edges {
         node {
@@ -26,7 +26,7 @@ const DataSupportPage = () => {
         }
       }
     } 
-    dataConstructionInstruction : allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/construction-instructions)/"}}
+    dataConstructionInstruction : allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/construction-manual)/"}}
     sort: {fields: frontmatter___date}) {
       edges {
         node {
@@ -50,7 +50,7 @@ const DataSupportPage = () => {
         }
       }
     } 
-    dataAgriculturalMaterialNorm: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/agricultural-material-norms)/"}}
+    dataAgriculturalMaterialNorm: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/agricultural-material-quota)/"}}
     sort: {fields: frontmatter___date}) {
       edges {
         node {
@@ -121,7 +121,34 @@ const DataSupportPage = () => {
           }
         }
       }
-    } 
+    }
+    dataDocumentsDownload: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(contents/support-page/documents-download)/"}}
+    sort: {fields: frontmatter___date}) {
+      edges {
+        node {
+          html
+          frontmatter {
+            id 
+            title 
+            description
+            date
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+            featuredVideo {
+              publicURL
+            }
+            alt 
+            slug 
+            type
+          }
+        }
+      }
+    }  
     }`);
   return (
     data

@@ -2,7 +2,7 @@ const QuerySupportPage = () => {
   const query = `
   query {
     dataTechnicalAnswer : allMarkdownRemark (
-      filter: {fileAbsolutePath: {regex: "contents/support-page/technical-answers/"}}
+      filter: {fileAbsolutePath: {regex: "contents/support-page/technical-solution/"}}
       sort: {fields: frontmatter___date}) {
       edges {
         node {
@@ -28,7 +28,7 @@ const QuerySupportPage = () => {
       }
     } 
     dataConstructionInstruction : allMarkdownRemark (
-      filter: {fileAbsolutePath: {regex: "contents/support-page/construction-instructions/"}}
+      filter: {fileAbsolutePath: {regex: "contents/support-page/construction-manual/"}}
       sort: {fields: frontmatter___date}) {
       edges {
         node {
@@ -54,7 +54,7 @@ const QuerySupportPage = () => {
       }
     } 
     dataAgriculturalMaterialNorm: allMarkdownRemark (
-      filter: {fileAbsolutePath: {regex: "contents/support-page/agricultural-material-norms/"}}
+      filter: {fileAbsolutePath: {regex: "contents/support-page/agricultural-material-quota/"}}
       sort: {fields: frontmatter___date}) {
       edges {
         node {

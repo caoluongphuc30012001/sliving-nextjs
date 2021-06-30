@@ -9,6 +9,7 @@ import FormPagination from '@components/pagination/form-pagination';
 import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'react-bootstrap';
+import DownLoadIcons from "@images/icon/download.png";
 const TechnicalSol = () => {
   const { t } = useTranslation();
   const data = DataSupportPage();
@@ -17,7 +18,9 @@ const TechnicalSol = () => {
   const dataAgriculturalMaterialNorm = data.dataAgriculturalMaterialNorm.edges;
   const dataProductIdentification = data.dataProductIdentification.edges;
   const dataProductWarranty = data.dataProductWarranty.edges;
+  const dataDocumentsDownload = data.dataDocumentsDownload.edges;
   const [post, setPost] = useState(dataTechnicalAnswer);
+  const [id, setId] = useState();
   const [titleSolution, setTitle] = useState("Technical_solutions");
   const [arrContruction] = useState([
     { id: 0, title: "Toà nhà" },
@@ -109,7 +112,8 @@ const TechnicalSol = () => {
     if (id === 2) { setPost(dataAgriculturalMaterialNorm) };
     if (id === 3) { setPost(dataProductIdentification) };
     if (id === 4) { setPost(dataProductWarranty) };
-    if (id === 5) { setPost([]) };
+    if (id === 5) { setPost(dataDocumentsDownload) };
+    setId(id);
   }
   return (
     <div className="support-pages big-container fluid container-wrap">
@@ -186,40 +190,76 @@ const TechnicalSol = () => {
               </Form>
               <Slider className="support-slider" {...settings} >
                 {
-                  post.map(({ node }) => {
-                    return (
-                      <div className="container-first-slider">
-                        <Row>
-                          <Col sm={5} xs={12}>
-                            <div className="image-container first-slider-wrap">
-                              <div className="first-slider-wrap__left">
-                                <Link to={`/support-page/${node.frontmatter.slug}`}>
-                                  <Image className="image-example"
-                                    src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="Image 1"
-                                    fluid
-                                  />
-                                </Link>
-                                <div className="container-below-image">
-                                  <div className="row">
-                                    <span className="fs-12 fw-bold">Công trình :</span><span className="fs-12">Căn hộ</span>
+                  id === 5 ? (
+                    post.map(({ node }) => {
+                      return (
+                        <div className="container-first-slider" key={node.frontmatter.id}>
+                          <Row>
+                            <Col sm={3} xs={12}>
+                              <div className="image-container first-slider-wrap">
+                                <div className="first-slider-wrap__left">
+                                  <a href={`${node.frontmatter.featuredVideo.publicURL}`} target="_blank" download>
+                                    <div className="download__container">
+                                      <img src={DownLoadIcons} alt="Image 1"/>
+                                    </div>
+                                  </a>
+                                  <div className="container-below-image">
+                                    <div className="row">
+                                      <span className="fs-12 fw-bold">Công trình :</span><span className="fs-12">Căn hộ</span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </Col>
-                          <Col >
-                            <div className="first-slider-wrap__right">
-                              <Link to={`/support-page/${node.frontmatter.slug}`}>
+                            </Col>
+                            <Col >
+                              <div className="first-slider-wrap__right">
                                 <div className="text-title fs-16 fw-bold">{node.frontmatter.title}</div>
                                 <div className="text-date fs-12">{node.frontmatter.date}</div>
                                 <div className="text-description fs-14">{node.frontmatter.description}</div>
-                              </Link>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    )
-                  })
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                      )
+                    })
+                  ) : (
+                    post.map(({ node }) => {
+                      return (
+                        <div className="container-first-slider" key={node.frontmatter.id}>
+                          <Row>
+                            <Col sm={5} xs={12}>
+                              <div className="image-container first-slider-wrap">
+                                <div className="first-slider-wrap__left">
+                                  <Link to={`/support-page/${node.frontmatter.slug}`}>
+                                    {
+                                      node.frontmatter.featuredImage && <Image className="image-example"
+                                        src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="Image 1"
+                                        fluid
+                                      />
+                                    }
+                                  </Link>
+                                  <div className="container-below-image">
+                                    <div className="row">
+                                      <span className="fs-12 fw-bold">Công trình :</span><span className="fs-12">Căn hộ</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </Col>
+                            <Col >
+                              <div className="first-slider-wrap__right">
+                                <Link to={`/support-page/${node.frontmatter.slug}`}>
+                                  <div className="text-title fs-16 fw-bold">{node.frontmatter.title}</div>
+                                  <div className="text-date fs-12">{node.frontmatter.date}</div>
+                                  <div className="text-description fs-14">{node.frontmatter.description}</div>
+                                </Link>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                      )
+                    })
+                  )
                 }
               </Slider>
               {post.length <= 0 && (<div className="no_result"><span >{t(`no_result`)}</span></div>)}
