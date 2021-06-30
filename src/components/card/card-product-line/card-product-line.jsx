@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import iconArrowRightF4 from "@images/icon/icon-arrow-orange.svg";
+import iconArrowRight from "@images/icon/icon-arrow white.svg";
 const CardProductLine = ({ title, subtitle, slug, description, imgUrl, isBtn, url }) => {
     const { t } = useTranslation();
     return (
@@ -22,7 +24,12 @@ const CardProductLine = ({ title, subtitle, slug, description, imgUrl, isBtn, ur
                         <div className="line-wrap__description">
                             <span>{description}</span>
                         </div>
-                        {isBtn && (<div className="fs-16 fw-bold btn-findout"><span>{t(`More_Information`)}</span></div>)}
+                        {isBtn && (<div className="btn-research">
+                            <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>
+                                <span className="fs-18 fw-bold">{t(`More_Information`)}</span> <img id="btn-research-arrow-F4" src={iconArrowRightF4} alt="icon arrow right" />
+                                <img id="btn-research-arrow" src={iconArrowRight} alt="icon arrow right" />
+                            </button>
+                        </div>)}
                     </Link>
                 </div>
             </div>

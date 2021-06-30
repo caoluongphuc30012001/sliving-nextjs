@@ -1,5 +1,5 @@
 import React from "react";
-import SolutionSuggestion from "@components/SolutionSuggestion";
+import SolutionSuggestion from "@components/card/SolutionSuggestion";
 import { useTranslation } from 'react-i18next';
 const SolutionSlide = (props) => {
   const { t } = useTranslation();

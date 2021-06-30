@@ -9,11 +9,10 @@ const SectionBannerReason = () => {
         <div className="hp-banner-wrap">
           <div className="hp-banner-title"><span>{t(`The_Reason`)}</span></div>
           <div className="hp-banner-description"><span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit...</span></div>
-          <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#ffffff'} borderReadius={'16px'} padding={'10px 20px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
+          <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#ffffff'} borderReadius={'16px'} padding={'4px 7px 4px 13px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
         </div>
       </div>
     </div>
   );
 }
 export default SectionBannerReason;
-

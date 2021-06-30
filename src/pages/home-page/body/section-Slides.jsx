@@ -1,6 +1,6 @@
 import React from 'react';
 import CardSlideVertical from "@components/card/card-slide-vertical/card-slide-vertical";
-import SolutionSuggestion from '@components/SolutionSuggestion';
+import SolutionSuggestion from '@components/card/SolutionSuggestion';
 import DataHomePage from "@query/home-page";
 import { useTranslation } from 'react-i18next';
 const SectionSlides = () => {

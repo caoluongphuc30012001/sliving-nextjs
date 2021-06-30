@@ -47,7 +47,7 @@ const SectionSlideNews = () => {
     return (
         <div className="news-slide">
             <div className="container-wrap news-slide-wrap">
-                <CardTitleHeader title={t(`News`)} />
+                <CardTitleHeader title={t(`News`)} id={3} />
                 <div className="slide-wrap">
                     <Slider {...settings}>
                         {

@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import home from "@images/home-page/body-2/home.svg";
+import malll from "@images/home-page/body-2/mall.svg";
 import apartment from "@images/home-page/body-2/apartment.svg";
 import hospital from "@images/home-page/body-2/hospital.svg";
 import supermarket from "@images/home-page/body-2/supermarket.svg";
@@ -80,44 +80,32 @@ const SectionConstruction = () => {
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
+                        <img src={malll} alt="" />
+                        <div className="prod-wrap-title fs-16"><span>{t(`Supermarket`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
+                        <img src={malll} alt="" />
+                        <div className="prod-wrap-title fs-16"><span>{t(`Supermarket`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
+                        <img src={malll} alt="" />
+                        <div className="prod-wrap-title fs-16"><span>{t(`Supermarket`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
+                        <img src={malll} alt="" />
+                        <div className="prod-wrap-title fs-16"><span>{t(`Supermarket`)}</span></div>
                     </div>
                 </div>
                 <div className="slide-prod">
                     <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
-                    </div>
-                </div>
-                <div className="slide-prod">
-                    <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
-                    </div>
-                </div>
-                <div className="slide-prod">
-                    <div className="slide-prod-wrap">
-                        <img src={home} alt="" />
-                        <div className="prod-wrap-title fs-16"><span>Sub-title Explaining</span></div>
+                        <img src={malll} alt="" />
+                        <div className="prod-wrap-title fs-16"><span>{t(`Supermarket`)}</span></div>
                     </div>
                 </div>
             </Slider>

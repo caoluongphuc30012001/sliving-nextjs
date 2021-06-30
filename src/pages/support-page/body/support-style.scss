@@ -68,7 +68,8 @@
 
 .title-second {
     color: #5C5C5C;
-    line-height: 48px;
+    line-height: 40px;
+    letter-spacing: -0.5px;
     text-align: left;
 
     @media only screen and (max-width: 480px) {
@@ -204,7 +205,7 @@
             justify-content: space-between;
             padding: 13px 8px;
             border: none !important;
-            color: #ADADAD;
+            color: #5c5c5c;
 
             img {
                 padding: 8px 5px;
@@ -265,8 +266,8 @@
 .container-outside {
     width: 100%;
     max-width: 670px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    border: 1px solid #ADADAD;
+    border-radius: 5px;
     height: 100%;
 }
 
@@ -351,7 +352,15 @@
         width: 100%;
         align-items: center;
     }
-
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0px 8px 8px rgb(38 50 56 / 12%), 0px 16px 24px rgb(38 50 56 / 8%);
+        .first-slider-wrap__right{
+            .text-title{
+                color: #F47403;
+            }
+        }
+    }
 }
 
 .support-slider {

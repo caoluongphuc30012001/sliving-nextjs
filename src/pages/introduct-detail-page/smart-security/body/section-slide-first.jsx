@@ -7,6 +7,9 @@ const SectionSlidesProduct = ({ title }) => {
     return (
         <article>
             <section className="introduct-slides-product container-wrap">
+            <div className="product-title txt-blue fw-bold">
+                    <h4>Sản phẩm trong hệ thống An ninh thông minh</h4>
+                </div>
                 <div className="slides-product__title fw-bold">
                     <span>{title}</span>
                 </div>
