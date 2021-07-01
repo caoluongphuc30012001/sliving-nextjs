@@ -10,7 +10,9 @@ import imgFirst from "@images/solution-page/body/section2.svg";
 import imgSecond from "@images/solution-page/body/PK-02-1.svg";
 import SectionSlidesProduct from './body/section-slide-first';
 import SectionSolutionLast from './body/section-last';
+import { useTranslation } from 'react-i18next';
 const SolutionPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <div className="solution-main" id="solution-main">
@@ -23,7 +25,7 @@ const SolutionPage = () => {
           <SectionContent imgUrl={imgSecond} />
         </div>
         <div className="section-slide-first">
-          <SectionSlidesProduct title={'LED Downlight'} />
+          <SectionSlidesProduct title={t(`LED-Downlight`)} />
         </div>
         <div className="section-slide-second">
           <SectionSlidesProduct title={'LED Panel'} />

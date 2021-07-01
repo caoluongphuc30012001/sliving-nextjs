@@ -6,7 +6,9 @@ import rectangle2 from "@images/introduction-page/smart-security/slide-2.svg";
 import rectangle3 from "@images/introduction-page/smart-security/slide-3.svg";
 import PrevArrow from "@components/button/button-prev-arrow";
 import NextArrow from "@components/button/button-next-arrow";
+import { useTranslation } from 'react-i18next';
 const IntroductSlides = () => {
+    const { t } = useTranslation();
     const settings = {
         dots: false,
         infinite: true,
@@ -63,15 +65,15 @@ const IntroductSlides = () => {
         <article>
             <section className="section-slides container-wrap" id="section-introducts-slide">
                 <div className="section-slides__title txt-blue fw-bold">
-                    <h3>SLIVING - Giải pháp an ninh thông minh cho bạn</h3>
+                    <h3>SLIVING - {t(`Smart-security-solution`)}</h3>
                 </div>
                 <div className="section-slides__slide">
                     <div>
                         <Slider {...settings}>
-                            <SlideChill title={"SMART SECURITY"} subtitle={"Solution content"} imgUrl={rectangle1} />
-                            <SlideChill title={"SMART SECURITY"} subtitle={"Solution content"} imgUrl={rectangle2} />
-                            <SlideChill title={"CHUNG SECURITY"} subtitle={"Solution content"} imgUrl={rectangle3} />
-                            <SlideChill title={"SMART SECURITY"} subtitle={"Solution content"} imgUrl={rectangle1} />
+                            <SlideChill title={t(`Smart-security`)} subtitle={"Solution content"} imgUrl={rectangle1} />
+                            <SlideChill title={t(`Smart-security`)} subtitle={"Solution content"} imgUrl={rectangle2} />
+                            <SlideChill title={t(`Smart-security`)} subtitle={"Solution content"} imgUrl={rectangle3} />
+                            <SlideChill title={t(`Smart-security`)} subtitle={"Solution content"} imgUrl={rectangle1} />
                         </Slider>
                     </div>
                 </div>

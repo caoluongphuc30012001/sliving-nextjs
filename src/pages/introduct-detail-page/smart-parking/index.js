@@ -10,7 +10,9 @@ import imgFirst from "@images/introduction-page/smart-parking/image5.png";
 import imgSecond from "@images/introduction-page/smart-parking/image6.png";
 import SectionSlidesProduct from './body/section-slide-first';
 import SectionSolutionLast from './body/section-last';
+import { useTranslation } from 'react-i18next';
 const SolutionPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <div className="solution-main" id="solution-main">
@@ -23,7 +25,7 @@ const SolutionPage = () => {
           <SectionContent imgUrl={imgSecond} />
         </div>
         <div className="section-slide-first">
-          <SectionSlidesProduct title={'Parking product'} />
+          <SectionSlidesProduct title={t(`Parking-products`)} />
         </div>
         <div className="section-slide-product">
           <SectionSolutionLast />

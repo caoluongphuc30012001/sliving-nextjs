@@ -6,7 +6,9 @@ import Image2 from "@images/introduction-page/smart-parking/image3.png";
 import Image3 from "@images/introduction-page/smart-parking/image4.png";
 import PrevArrow from "@components/button/button-prev-arrow";
 import NextArrow from "@components/button/button-next-arrow";
+import { useTranslation } from 'react-i18next';
 const SectionSlideProduct = () => {
+    const { t } = useTranslation();
     const settings = {
         dots: false,
         infinite: true,
@@ -63,15 +65,15 @@ const SectionSlideProduct = () => {
         <article>
             <section className="section-slides container-wrap" id="section-solutions-slide">
                 <div className="section-slides__title txt-blue fw-bold">
-                    <h3>SLIVING - Giải pháp chiếu sáng cho công trình của bạn</h3>
+                    <h3>SLIVING - {t(`Smart-parking-solution`)}</h3>
                 </div>
                 <div className="section-slides__slide">
                     <div>
                         <Slider {...settings}>
-                            <SlideChill title={"SMART PARKING"} subtitle={"Solution content"} imgUrl={Image1} />
-                            <SlideChill title={"SMART PARKING"} subtitle={"Solution content"} imgUrl={Image2} />
-                            <SlideChill title={"SMART PARKING"} subtitle={"Solution content"} imgUrl={Image3} />
-                            <SlideChill title={"SMART PARKING"} subtitle={"Solution content"} imgUrl={Image1} />
+                            <SlideChill title={t(`Smart-Parking`)} subtitle={"Solution content"} imgUrl={Image1} />
+                            <SlideChill title={t(`Smart-Parking`)} subtitle={"Solution content"} imgUrl={Image2} />
+                            <SlideChill title={t(`Smart-Parking`)} subtitle={"Solution content"} imgUrl={Image3} />
+                            <SlideChill title={t(`Smart-Parking`)} subtitle={"Solution content"} imgUrl={Image1} />
                         </Slider>
                     </div>
                 </div>
