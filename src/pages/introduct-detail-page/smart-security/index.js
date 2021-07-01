@@ -11,23 +11,25 @@ import imgThird from "@images/introduction-page/smart-security/banner-third.svg"
 import "./style.scss"
 import SectionSlidesProduct from './body/section-slide-first';
 import IntroductSlides from './body/section-introduct-slide';
+import { useTranslation } from 'react-i18next';
 const IntroductDetail = () => {
+    const { t } = useTranslation();
     return (
         <Layout>
             <div className="introduct-main" id="introduct-main">
                 <IntroductHeader />
                 <div><IntroductSlides /> </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgFirst} title={"Khóa Vân Tay Thông Minh"} description={"Sử dụng phương thức nhận dạng vân tay để đóng / mở cửa.Tích hợp máy quét thẻ từ, mật mã.Có đèn báo, âm báo rõ ràng cho các trường hợp.Có thể mở khóa từ xa thông qua tính năng bluetooth trên điện thoại."} />
+                    <SectionContent imgUrl={imgFirst} title= {t(`Smart-Fingerprint`)} description= {t(`fingerprint-recognition`)} />
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSecond} title={"Cửa Xoay Thông Minh"} description={"Là một thiết bị quản lý an ninh khu vực kết hợp với các phần mềm độc quyền. Thiết bị này có khả năng theo dõi các chuyến thăm của khách, quản lý công trình xây dựng và loại bỏ những người có ý định nhảy qua cổng để vào và làm tăng hiệu quả hoạt động trên trong khu vực quản lý."} />
+                    <SectionContent imgUrl={imgSecond} title={t(`Smart-Swing`)} description={t(`swing-door-descrip`)} />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={"Face ID"} description={"Sử dụng công nghệ sinh trắc học trích xuất đặc điểm nhận diện khuôn mặt để xác thực cư dân, ứng dụng cho việc kiểm soát ra vào các khu vực cần giám sát cũng như sử dụng để gọi thang, mở barrier."} />
+                    <SectionContent imgUrl={imgThird} title={t(`Face-ID-title`)} description={t(`biometric-technology`)} />
                 </div>
                 <div className="section-slide-first">
-                    <SectionSlidesProduct title={'Parking product'} />
+                    <SectionSlidesProduct title={t(`Parking-products`)} />
                 </div>
                 <div className="section-slide-product">
                     <SectionIntroductLast />

@@ -11,7 +11,9 @@ import imgThird from "@images/introduction-page/smart-energy/banner-third.svg";
 import "./style.scss"
 import SectionSlidesProduct from './body/section-slide-first';
 import IntroductSlides from './body/section-introduct-slide';
+import { useTranslation } from 'react-i18next';
 const IntroductDetail = () => {
+    const { t } = useTranslation();
     return (
         <Layout>
             <div className="introduct-main" id="introduct-main">
@@ -27,7 +29,7 @@ const IntroductDetail = () => {
                     <SectionContent imgUrl={imgThird} title={"This is solution’s long content "} description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
                 </div>
                 <div className="section-slide-first">
-                    <SectionSlidesProduct title={'Energy saving product'} />
+                    <SectionSlidesProduct title={t(`Energy-saving-product`)} />
                 </div>
                 <div className="section-slide-product">
                     <SectionIntroductLast />

@@ -11,30 +11,32 @@ import imgThird from "@images/introduction-page/smart-home/banner-third.svg";
 import imgFour from "@images/introduction-page/smart-home/banner-four.svg";
 import imgFive from "@images/introduction-page/smart-home/banner-five.svg";
 import imgSix from "@images/introduction-page/smart-home/banner-six.svg";
+import { useTranslation } from 'react-i18next';
 import "./style.scss"
 import BannerSlide from './body/banner-slide';
 const IntroductDetail = () => {
+    const { t } = useTranslation();
     return (
         <Layout>
             <div className="introduct-main" id="introduct-main">
                 <IntroductHeader />
                 <div className="section-first section-first-left">
-                    <SectionContent imgUrl={imgFirst} title={"Chiếu sáng thông minh"} id={1}/>
+                    <SectionContent imgUrl={imgFirst} title={t(`Smart-lighting`)} id={1}/>
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSecond} title={"Điều khiển điều hòa Thermostat"} id={2}/>
+                    <SectionContent imgUrl={imgSecond} title={t(`Thermostat-control`)} id={2}/>
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={"Công tắc thông minh"} id={2}/>
+                    <SectionContent imgUrl={imgThird} title={t(`Smart-switch`)} id={2}/>
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgFour} title={"Sensor"} />
+                    <SectionContent imgUrl={imgFour} title={t(`Sensor`)} />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgFive} title={"Rèm thông minh thông minh"} id={2}/>
+                    <SectionContent imgUrl={imgFive} title={t(`curtain`)} id={2}/>
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSix} title={"Động cơ cửa - cổng"} id={2}/>
+                    <SectionContent imgUrl={imgSix} title={t(`Door-Gate`)} id={2}/>
                 </div>
                 <div className="banner-slides">
                     <BannerSlide />
