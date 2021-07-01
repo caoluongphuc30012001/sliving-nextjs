@@ -1,13 +1,13 @@
 import React from 'react';
 import { Nav } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
-const SectionNavBar = () => {
+const SectionNavBar = ({ name }) => {
     const { t } = useTranslation();
     return (
         <div className="navbar-header">
             <div className="container-wrap navbar-header-wrap">
                 <div className="product-name">
-                    <span className="fs-16 fw-bold">PRODUCT'S NAME</span>
+                    <span className="fs-16 fw-bold">{name}</span>
                 </div>
                 <Nav fill variant="tabs" defaultActiveKey="link-0" className="navbar-header">
                     <Nav.Item>

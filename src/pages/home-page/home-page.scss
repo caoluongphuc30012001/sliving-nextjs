@@ -1,179 +1,184 @@
 .home-page-main {
-    background-color: #f9f9f9;
-  
-    .card-slide {
-      .btn-content {
-        button {
-          border-radius: 8px;
-          min-width: 320px;
-          width: 100%;
-          padding-top: 6px;
-          padding-bottom: 6px;
-        }
-      }
-    }
-  }
-  
-  .hp-banner {
-    background-image: url("../../images/home-page/banner/Banner.svg");
-    background-size: cover;
-  
-    .hp-banner-wrap {
-      text-align: left;
-      color: #ffffff;
-      padding-top: 48px;
-      padding-bottom: 74px;
-  
-      .hp-banner-title {
-        font-weight: bold;
-        letter-spacing: -0.5px;
-        font-size: 32px;
-        line-height: 48px;
-        margin-bottom: 8px;
-      }
-  
-      .hp-banner-description {
-        color: #f6ecd8;
-        font-size: 16px;
-        line-height: 24px;
-        max-width: 376px;
-      }
-  
-      .hp-banner-btn {
-        margin-top: 62px;
-        .btn-more {
-          display: flex;
-          align-items: center;
-          width: fit-content;
-          justify-content: space-between;
-        }
-        a {
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-  
-  .body-video {
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  
-  .hp-bd-product-row {
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-  }
-  
-  /*------------2. slide video -sectionVideo----------------*/
-  ol.carousel-indicators {
-    position: absolute;
-    bottom: 80px;
-    margin: 0;
-    left: 0;
-    right: 80px;
-    justify-content: flex-end;
-    opacity: 0.7;
-    gap: 16px;
-  }
-  
-  ol.carousel-indicators li,
-  ol.carousel-indicators li.active {
-    width: 1rem;
-    height: 1rem;
-    margin: 0;
-    border-radius: 50%;
-    border: 0;
-    background: transparent;
-  }
-  
-  ol.carousel-indicators li {
-    background: rgba(228, 219, 219, 0.664);
-  }
-  
-  ol.carousel-indicators li.active {
-    background: #f47403;
-    text-align: right;
-  }
-  
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    visibility: hidden;
-  }
-  
-  .ReactModal__Overlay {
-    background-color: #231f2080 !important;
-  }
-  
-  /*------------- slide --------------------- */
-  .section-slide {
-    max-width: 1140px;
-    margin: auto;
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    ol.carousel-indicators {
-      width: 100%;
-      margin: auto;
-      bottom: 20px;
-      right: 0;
-      justify-content: center;
-    }
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    .hp-banner {
-      .hp-banner-wrap {
+  background-color: #f9f9f9;
+
+  .card-slide {
+    .btn-content {
+      button {
+        border-radius: 8px;
+        min-width: 320px;
         width: 100%;
-        padding-left: 35px;
+        padding-top: 6px;
+        padding-bottom: 6px;
       }
     }
   }
-  
-  @media only screen and (max-width: 425px) {
-    .hp-banner {
-      margin-top: 0;
-  
-      .hp-banner-wrap {
-        .hp-banner-title {
-          width: fit-content;
-          line-height: 40px !important;
-          margin-bottom: 20px;
-        }
-  
-        .hp-banner-description {
-          width: fit-content;
+}
+
+.hp-banner {
+  background-image: url("../../images/home-page/banner/Banner.svg");
+  background-size: cover;
+
+  .hp-banner-wrap {
+    text-align: left;
+    color: #ffffff;
+    padding-top: 48px;
+    padding-bottom: 74px;
+
+    .hp-banner-title {
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 8px;
+    }
+
+    .hp-banner-description {
+      color: #f6ecd8;
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 376px;
+    }
+
+    .hp-banner-btn {
+      margin-top: 62px;
+      .btn-more {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        justify-content: space-between;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
         }
       }
     }
   }
-  
-  @media only screen and (max-width: 376px) and (min-width: 321px) {
-    .hp-banner {
-      margin-top: 0;
-  
-      .hp-banner-wrap {
-        .hp-banner-title {
-          font-size: 28px;
-          letter-spacing: -1px;
-        }
+}
+
+.body-video {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.hp-bd-product-row {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/*------------2. slide video -sectionVideo----------------*/
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 80px;
+  margin: 0;
+  left: 0;
+  right: 80px;
+  justify-content: flex-end;
+  opacity: 0.7;
+  gap: 16px;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  border-radius: 50%;
+  border: 0;
+  background: transparent;
+}
+
+ol.carousel-indicators li {
+  background: rgba(228, 219, 219, 0.664);
+}
+
+ol.carousel-indicators li.active {
+  background: #f47403;
+  text-align: right;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  visibility: hidden;
+}
+
+.ReactModal__Overlay {
+  background-color: #231f2080 !important;
+}
+
+/*------------- slide --------------------- */
+.section-slide {
+  max-width: 1140px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  ol.carousel-indicators {
+    width: 100%;
+    margin: auto;
+    bottom: 20px;
+    right: 0;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hp-banner {
+    .hp-banner-wrap {
+      width: 100%;
+      padding-left: 35px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .hp-banner {
+    margin-top: 0;
+
+    .hp-banner-wrap {
+      .hp-banner-title {
+        width: fit-content;
+        line-height: 40px !important;
+        margin-bottom: 20px;
+      }
+
+      .hp-banner-description {
+        width: fit-content;
       }
     }
   }
-  
-  .news-slide {
-    .slick-next {
-      right: -46px !important;
-    }
-  
-    .slick-next,
-    .slick-prev {
-      width: 40px;
-      height: 40px;
+}
+
+@media only screen and (max-width: 376px) and (min-width: 321px) {
+  .hp-banner {
+    margin-top: 0;
+
+    .hp-banner-wrap {
+      .hp-banner-title {
+        font-size: 28px;
+        letter-spacing: -1px;
+      }
     }
   }
-  
+}
+
+.news-slide {
+  .slick-next {
+    right: -46px !important;
+  }
+
+  .slick-next,
+  .slick-prev {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.news-wrap-img {
+  img {
+    max-height: 240px;
+  }
+}

@@ -45,7 +45,7 @@ const PostNews = (props) => {
     };
     return (
         <>
-            <FormPagination title={t(`New_Posts`)} count={props.data.length} variable={t(`posts`)} />
+            <FormPagination title={t(`New_Posts`)} count={props.data ? props.data.length : 0} variable={t(`posts`)} />
             <div className="posts-new">
                 <Slider {...settings}>
                     {

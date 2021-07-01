@@ -1,14 +1,14 @@
 import React from "react";
-import Image1 from "@images/news-page/news-v1.svg";
-import Image2 from "@images/news-page/news-v2.svg";
-import Image3 from "@images/news-page/news-v3.svg";
 import Slider from "react-slick";
 import CardTitleHeader from "@components/card/card-title-header";
 import PrevArrow from "@components/button/button-prev-arrow";
 import NextArrow from "@components/button/button-next-arrow";
 import { useTranslation } from 'react-i18next';
+import DataNewsPage from "@query/news-page";
+import { Link } from "gatsby";
 const SectionSlideNews = () => {
     const { t } = useTranslation();
+    const data = DataNewsPage().dataNewsPage.edges;
     const settings = {
         dots: false,
         infinite: false,
@@ -50,76 +50,24 @@ const SectionSlideNews = () => {
                 <CardTitleHeader title={t(`News`)} id={3} />
                 <div className="slide-wrap">
                     <Slider {...settings}>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image1} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image2} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image3} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image3} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image3} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image3} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="news-wrap">
-                            <div className="news-wrap-item">
-                                <div className="news-wrap-img">
-                                    <img src={Image3} alt="image1" />
-                                </div>
-                                <div className="news-wrap-description">
-                                    <div className="description_content">The powerful system hardware integrates the functions of different devices. Convenient operation and excellent interaction make the home life experience more natural and and comfortable.</div>
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            data && data.map(({ node }) => {
+                                return (
+                                    <div className="news-wrap" key={node.frontmatter.id}>
+                                        <div className="news-wrap-item">
+                                            <div className="news-wrap-img">
+                                                <Link to={`/news-page/${node.frontmatter.slug}`}>
+                                                    <img src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="image1" />
+                                                </Link>
+                                            </div>
+                                            <div className="news-wrap-description">
+                                                <div className="description_content">{node.frontmatter.description}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </Slider>
                 </div>
             </div>
