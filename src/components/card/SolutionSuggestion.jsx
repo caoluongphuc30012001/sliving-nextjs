@@ -118,7 +118,7 @@ const SolutionSuggestion = () => {
                         </div>
                       </div>
                       <div className="card-sol-des">
-                        <span className="fs-16 txt-blue">{item.title}</span>
+                        <span className="fs-16 txt-blue">{t(`${item.title}`)}</span>
                       </div>
                     </div>
                   </div>

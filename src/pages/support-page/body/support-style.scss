@@ -353,7 +353,6 @@
         align-items: center;
     }
     &:hover{
-        cursor: pointer;
         box-shadow: 0px 8px 8px rgb(38 50 56 / 12%), 0px 16px 24px rgb(38 50 56 / 8%);
         .first-slider-wrap__right{
             .text-title{
@@ -471,5 +470,23 @@
     .text-date {
         margin: 4px 0;
     }
+}
 
+.download__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    
+    img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    img:hover {
+        transform: scale(1.4);
+        transition: 1.2s;
+    }
 }
