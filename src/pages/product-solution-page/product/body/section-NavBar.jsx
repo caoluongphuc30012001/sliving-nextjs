@@ -7,7 +7,7 @@ const SectionNavBar = ({ name }) => {
         <div className="navbar-header">
             <div className="container-wrap navbar-header-wrap">
                 <div className="product-name">
-                    <span className="fs-16 fw-bold">{name}</span>
+                    <span className="fs-16 fw-bold">{name && name.toUpperCase()}</span>
                 </div>
                 <Nav fill variant="tabs" defaultActiveKey="link-0" className="navbar-header">
                     <Nav.Item>
