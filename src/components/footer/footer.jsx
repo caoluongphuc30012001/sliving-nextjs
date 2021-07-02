@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from "react-bootstrap";
+import { Image, Row, Col } from "react-bootstrap";
 import Logo from "@images/logo/LOGO.png";
 import arrowRight from "@images/icon/arrow_right_alt.svg";
 import { Link } from "gatsby"
@@ -10,8 +10,9 @@ const Footer = () => {
         <div className="main-footer">
             <div className="container-wrap">
                 <div className="main-footer-wrap">
-                    <div className="footer-wrap__left">
-                        <div className="footer-wrap__left-sub">
+
+                    <Row className="footer-wrap__left">
+                        <Col className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
                                 <li className="fw-bold">{t(`Product`)}</li>
                                 <li className="">{t(`Employee_database`)}</li>
@@ -21,16 +22,16 @@ const Footer = () => {
                                 <li className="">{t(`Shift_planner`)}</li>
                                 <li className="">{t(`Recruiting`)}</li>
                             </ul>
-                        </div>
-                        <div className="footer-wrap__left-sub">
+                        </Col>
+                        <Col className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
                                 <li className="fw-bold">{t(`Information`)}</li>
                                 <li className="">{t(`FAQ`)}</li>
                                 <li className="">{t(`Blog`)}</li>
                                 <li className="">{t(`Support`)}</li>
                             </ul>
-                        </div>
-                        <div className="footer-wrap__left-sub">
+                        </Col>
+                        <Col className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
                                 <li className="fw-bold">{t(`Company`)}</li>
                                 <li className="">{t(`About_us`)}</li>
@@ -38,8 +39,9 @@ const Footer = () => {
                                 <li className="">{t(`Contact_us`)}</li>
                                 <li className="">{t(`Lift_media`)}</li>
                             </ul>
-                        </div>
-                    </div>
+                        </Col>
+                    </Row>
+
                     <div className="footer-wrap__right">
                         <div className="footer-wrap__right-search">
                             <div className="search-group">
@@ -57,8 +59,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+
                 <hr />
-                <div className="logo-wrap" >
+                <Row className="logo-wrap" >
                     <div className="logo-wrap-left">
                         <Link to="/"> <Image src={Logo} className="img-obj-cover" alt="sliving sunshine tech" /> </Link>
                     </div>
@@ -73,7 +76,7 @@ const Footer = () => {
                             <Link to="/" className="logo-wrap-rignt__nav fw-bold fs-16">Cookies</Link>
                         </div>
                     </div>
-                </div>
+                </Row>
             </div>
         </div>
     );
