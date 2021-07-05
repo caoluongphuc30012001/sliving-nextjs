@@ -83,11 +83,11 @@ const IntroContent = () => {
                                 <Col sm={10} xs={12}>
                                     <h3 className="text-title-number">02.</h3>
                                     <p className="text-small-title"> {t(`Wide-range`)}</p>
-                                    <p className="text-description">  {t(`Designing-interfaces`)} </p>
-                                    <p className="text-description"> {t(`Design-hardware`)} </p>
-                                    <p className="text-description"> {t(`Producing-smart`)}  </p>
-                                    <p className="text-description"> {t(`Building-computer`)} </p>
-                                    <p className="text-description"> {t(`AI`)} </p>
+                                    <p className="text-description"> -{t(`Designing-interfaces`)} </p>
+                                    <p className="text-description"> -{t(`Design-hardware`)} </p>
+                                    <p className="text-description"> -{t(`Producing-smart`)}  </p>
+                                    <p className="text-description"> -{t(`Building-computer`)} </p>
+                                    <p className="text-description"> -{t(`AI`)} </p>
                                 </Col>
                             </Row>
                             <Row className="mt-5">
@@ -141,11 +141,8 @@ const IntroContent = () => {
             <div className="intro-reason-content">
                 <div className="hp-banner">
                     <div className="hp-banner-wrap container-wrap">
-                        <div className="hp-banner-title"><h4>Cơ hội nghề nghiệp</h4></div>
-                        <div className="hp-banner-description"><span>Giá trị cốt lõi là những chuẩn mực về thái độ, hành vi,
-                            niềm tin và giá trị, mà mỗi thành viên SLIVING được mong đợi thể hiện ở bất kỳ vị trí nào.
-                            Các giá trị cốt lõi này được hình thành từ giá trị của những người điều hành doanh nghiệp
-                            và tập thể người lao động,
+                        <div className="hp-banner-title"><h4>{t(`Career-opportunities`)}</h4></div>
+                        <div className="hp-banner-description"><span>{t(`embody-core-values`)}
                         </span></div>
                         <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#ffffff'} borderReadius={'16px'} padding={'10px 20px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
                     </div>

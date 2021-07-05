@@ -18,10 +18,10 @@ const SectionOutstanding = ({ title }) => {
                             </Col>
                         </Row>
                         <Row noGutters className="article-wrap-container">
-                            <Col xs={6} className="article-wrap-left">
-                                <img className="image6" src={Image6} alt="sliving second banner" />
+                            <Col sm={6} xs={12} className="article-wrap-left">
+                                <img className="image6 " src={Image6} class = "img-responsive" alt="sliving second banner" />
                             </Col>
-                            <Col xs={6} className="article-wrap-right">
+                            <Col sm={6} xs={12} className="article-wrap-right">
                                 <div>
                                     <div className="article-header-bottom fs-48 fw-bold">
                                         <span> {t(`NAME_CONSTRUCTIN`)}</span>
