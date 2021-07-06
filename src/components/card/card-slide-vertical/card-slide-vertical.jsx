@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import CardSlideChild from "./card-vertical";
 import CardHeader from "../card-title-header";
@@ -11,7 +11,7 @@ import NextArrow from "../../button/button-next-arrow.jsx";
 import DataProductSolution from "@query/product-solution";
 import { useTranslation } from 'react-i18next';
 SwiperCore.use([Navigation]);
-const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id, isShow }) => {
+const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id, isShow, params }) => {
 	const { t } = useTranslation();
 	const dataAllProducts = DataProductSolution();
 	const dataGateWay = dataAllProducts.dataGateWay.edges;
@@ -35,6 +35,13 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		{ title: "navProduct.Zigbee_KIT", id: 7, isActive: false },
 		{ title: "navProduct.Door_motor_gate", id: 8, isActive: false },
 	]);
+
+	useEffect(() => {
+		if(params) {
+			clickProduct(parseInt(params));
+		}
+	}, [params]);
+
 	const settings = {
 		useTransform: false,
 		className: "slide-vertical",
@@ -84,8 +91,8 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		if (id === 4) { setPost(dataAirConditioningSystem); };
 		if (id === 5) { setPost(dataSmartCurtain); };
 		if (id === 6) { setPost(dataSmartMeasurement); };
-		if (id === 7) { console.log(dataZigbeeKit); setPost(dataZigbeeKit); };
-		if (id === 8) { console.log(dataGateWay); setPost(dataGateWay); };
+		if (id === 7) { setPost(dataZigbeeKit); };
+		if (id === 8) { setPost(dataGateWay); };
 	}
 	return (
 		<div className="slide-sols txt-blue ">

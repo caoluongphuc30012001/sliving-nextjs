@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../i18n/i18n";
 import "./product.scss";
 import SectionApplication from "./body/section-application";
@@ -8,7 +8,9 @@ import ProductSlide from "./body/product-slide";
 import DataProductSolution from "@query/product-solution";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
-const SolutionProduct = ({ pageContext: { url } }) => {
+const SolutionProduct = ({ location, pageContext: { url } }) => {
+  const [params, setParams] = useState();
+  const refView = useRef(null);
   const queryAllDataProduct = DataProductSolution();
   const dataSolutionSlide = queryAllDataProduct.dataSolution.edges;
   useEffect(() => {
@@ -18,7 +20,17 @@ const SolutionProduct = ({ pageContext: { url } }) => {
     if (url === "product-id") {
       document.getElementById("product-id").scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, [url])
+  }, [url]);
+
+  useEffect(() => {
+    const url = new URLSearchParams(location.search);
+    setParams(url.get("id"));
+    console.log(params);
+    if (params) {
+      refView.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [params]);
+
   return <Layout>
     <div className="solution-page">
       <div className="solution-header">
@@ -27,8 +39,8 @@ const SolutionProduct = ({ pageContext: { url } }) => {
       <div className="solution-body" id="solution-id">
         <SolutionSlide dataSlide={dataSolutionSlide} />
       </div>
-      <div className="solution-product-body" id="product-id">
-        <ProductSlide />
+      <div className="solution-product-body" id="product-id" ref={refView}>
+        <ProductSlide params={params} />
       </div>
     </div>
   </Layout>
