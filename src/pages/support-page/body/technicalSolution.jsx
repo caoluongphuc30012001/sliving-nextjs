@@ -233,7 +233,7 @@ const TechnicalSol = () => {
                                   <Link to={`/support-page/${node.frontmatter.slug}`}>
                                     {
                                       node.frontmatter.featuredImage && <Image className="image-example"
-                                        src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="Image 1"
+                                        src={node.frontmatter.featuredImage.publicURL} alt="Image 1"
                                         fluid
                                       />
                                     }

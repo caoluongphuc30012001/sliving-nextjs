@@ -13,11 +13,7 @@ const QueryProductPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
               publicURL
@@ -25,32 +21,19 @@ const QueryProductPage = () => {
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }

@@ -43,7 +43,7 @@ const NewPageDetail = ({ data, node }) => {
                       key={post.node.frontmatter.id}
                       date={post.node.frontmatter.date}
                       title={post.node.frontmatter.title}
-                      imgUrl={post.node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                      imgUrl={post.node.frontmatter.featuredImage.publicURL}
                       slug={post.node.frontmatter.slug} 
                       alt={post.node.frontmatter.alt}
                       url="news-page"

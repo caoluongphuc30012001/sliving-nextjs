@@ -21,7 +21,7 @@ const SlideProductLine = (props) => {
                             subtitle={""}
                             slug={node.frontmatter.slug}
                             description={node.frontmatter.description}
-                            imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src} 
+                            imgUrl={node.frontmatter.featuredImage.publicURL} 
                             isBtn={true} 
                             url="news-page"
                         />
