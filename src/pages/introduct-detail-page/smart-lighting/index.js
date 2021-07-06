@@ -19,10 +19,10 @@ const SolutionPage = () => {
         <SolutionHeader />
         <SolutionSlides />
         <div className="section-first">
-          <SectionContent imgUrl={imgFirst} />
+          <SectionContent imgUrl={imgFirst} url={"smart-lighting-1-learn-more"} />
         </div>
         <div className="section-second">
-          <SectionContent imgUrl={imgSecond} />
+          <SectionContent imgUrl={imgSecond} url={"smart-lighting-2-learn-more"} />
         </div>
         <div className="section-slide-first">
           <SectionSlidesProduct title={t(`LED-Downlight`)} />

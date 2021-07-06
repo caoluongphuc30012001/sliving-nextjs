@@ -4,8 +4,9 @@ import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import { useTranslation } from 'react-i18next';
 import { Row } from "react-bootstrap";
 import { Link } from 'gatsby';
-const SectionContent = ({ imgUrl, title, description ,id }) => {
+const SectionContent = ({ imgUrl, title, description, url, id }) => {
     const { t } = useTranslation();
+    const lang = typeof window !== "undefined" ? window.localStorage.getItem("i18nextLng") : "";
     return (
         <article className="introduct-section-content container-wrap" id="section-content-1">
             <section>
@@ -24,7 +25,7 @@ const SectionContent = ({ imgUrl, title, description ,id }) => {
                             <li> Smart lighting</li>
                         </ul>
                         <div className="btn-research">
-                            <Link to={id===1 ? `/introduct-detail-page/smart-lighting`: ''}>
+                            <Link to={`/${lang}/${url}?id=${id}`}>
                                 <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>
                                     <span className="fs-18 fw-bold">{t(`More_Information`)}</span> <img id="btn-research-arrow-F4" src={iconArrowRightF4} alt="icon arrow right" />
                                     <img id="btn-research-arrow" src={iconArrowRight} alt="icon arrow right" />

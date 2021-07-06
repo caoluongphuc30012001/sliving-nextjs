@@ -20,13 +20,19 @@ const IntroductDetail = () => {
                 <IntroductHeader />
                 <div><IntroductSlides /> </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgFirst} title= {t(`Smart-Fingerprint`)} description= {t(`fingerprint-recognition`)} />
+                    <SectionContent url={"smart-fingerprint-lock-learn-more"}
+                        imgUrl={imgFirst} title= {t(`Smart-Fingerprint`)} 
+                        description= {t(`fingerprint-recognition`)} />
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSecond} title={t(`Smart-Swing`)} description={t(`swing-door-descrip`)} />
+                    <SectionContent url={"smart-swing-door-learn-more"}
+                        imgUrl={imgSecond} title={t(`Smart-Swing`)} 
+                        description={t(`swing-door-descrip`)} />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={t(`Face-ID-title`)} description={t(`biometric-technology`)} />
+                    <SectionContent url={"face-id-learn-more"}
+                        imgUrl={imgThird} title={t(`Face-ID-title`)} 
+                        description={t(`biometric-technology`)} />
                 </div>
                 <div className="section-slide-first">
                     <SectionSlidesProduct title={t(`Parking-products`)} />
