@@ -44,7 +44,8 @@
     "Sensors": "Cảm biến",
     "Air_Conditioning_System": "Hệ thống điều hòa",
     "Smart_Curtain": "Rèm thông minh",
-    "Smart_Measurement": "Đo lường thông minh",
+    "Smart_Meter": "Đo lường thông minh",
+    "Zigbee_KIT" : "Zigbee KIT",
     "Door_motor_gate": "Động cơ cửa - cổng"
   },
   "The_Reason": "Lý do bạn nên lựa chọn Sliving",

@@ -18,7 +18,7 @@ const CardSuggest = (props) => {
                                         key={node.frontmatter.id}
                                         date={node.frontmatter.date}
                                         title={node.frontmatter.title}
-                                        imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                                        imgUrl={node.frontmatter.featuredImage.publicURL}
                                         slug={node.frontmatter.slug}
                                         alt={node.frontmatter.alt}
                                         isVideo={props.isVideo}
