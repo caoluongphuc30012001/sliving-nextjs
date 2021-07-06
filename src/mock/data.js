@@ -1,3 +1,7 @@
+import Image2 from "@images/intro-content2/image2.png";
+import Image3 from "@images/intro-content2/image3.png";
+import Image4 from "@images/intro-content2/image4.png";
+import Image5 from "@images/intro-content2/image5.png";
 
 export const navData = {
     menus: [
@@ -135,7 +139,44 @@ export const aboutData = {
             title: "SHOWROOM",
             phone: ""
         },
-
     }
-
 }
+
+export const dataSolutionSuggestion = [
+    {
+        id: 1,
+        img: Image2,
+        title: "Smart Home",
+        path: "introduct-detail-page/smart-home",
+    },
+    {
+        id: 2,
+        img: Image3,
+        title: "Smart Parking",
+        path: "smart-parking-page"
+    },
+    {
+        id: 3,
+        img: Image4,
+        title: "Security Control",
+        path: "introduct-detail-page/smart-security"
+    },
+    {
+        id: 4,
+        img: Image5,
+        title: "Smart Energy",
+        path: "introduction-technology-page"
+    },
+    {
+        id: 5,
+        img: Image2,
+        title: "Smart Home",
+        path: "introduct-detail-page/smart-home",
+    },
+    {
+        id: 6,
+        img: Image3,
+        title: "Smart Parking",
+        path: "smart-parking-page"
+    },
+]

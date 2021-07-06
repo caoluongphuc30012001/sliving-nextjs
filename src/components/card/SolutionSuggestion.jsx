@@ -6,50 +6,9 @@ import { useTranslation } from 'react-i18next';
 import PrevArrow from "@components/button/button-prev-arrow.jsx";
 import NextArrow from "@components/button/button-next-arrow.jsx";
 import CardHeader from "@components/card/card-title-header";
-import Image2 from "@images/intro-content2/image2.png";
-import Image3 from "@images/intro-content2/image3.png";
-import Image4 from "@images/intro-content2/image4.png";
-import Image5 from "@images/intro-content2/image5.png";
-const SolutionSuggestion = () => {
+
+const SolutionSuggestion = ({ data }) => {
   const { t } = useTranslation();
-  const data = [
-    {
-      id: 1,
-      img: Image2,
-      title: "Smart Home",
-      path: "introduct-detail-page/smart-home",
-    },
-    {
-      id: 2,
-      img: Image3,
-      title: "Smart Parking",
-      path: "smart-parking-page"
-    },
-    {
-      id: 3,
-      img: Image4,
-      title: "Security Control",
-      path: "introduct-detail-page/smart-security"
-    },
-    {
-      id: 4,
-      img: Image5,
-      title: "Smart Management",
-      path: "introduction-technology-page"
-    },
-    {
-      id: 5,
-      img: Image2,
-      title: "Smart Home",
-      path: "introduct-detail-page/smart-home",
-    },
-    {
-      id: 6,
-      img: Image3,
-      title: "Smart Parking",
-      path: "smart-parking-page"
-    },
-  ];
   const settings = {
     useTransform: false,
     className: "slide-vertical",

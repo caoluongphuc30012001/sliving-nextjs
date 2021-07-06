@@ -1,6 +1,7 @@
 import React from 'react';
 import CardSlideVertical from "@components/card/card-slide-vertical/card-slide-vertical";
 import SolutionSuggestion from '@components/card/SolutionSuggestion';
+import { dataSolutionSuggestion } from "@mock/data";
 import DataHomePage from "@query/home-page";
 import { useTranslation } from 'react-i18next';
 const SectionSlides = () => {
@@ -10,7 +11,7 @@ const SectionSlides = () => {
   return (
     <div className="section-slide">
       <div className="slide-solution-wrap">
-        <SolutionSuggestion />
+        <SolutionSuggestion data={dataSolutionSuggestion} />
       </div>
       <div className="slide-product-wrap">
         <CardSlideVertical id={2} infinite={true} rows={1} data={post} title={t(`Sliving_IOT_Products`)} isMenu={true} isArrow={true} />
