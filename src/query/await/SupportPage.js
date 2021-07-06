@@ -15,11 +15,7 @@ const QuerySupportPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt
             slug
@@ -41,11 +37,7 @@ const QuerySupportPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt
             slug
@@ -67,11 +59,7 @@ const QuerySupportPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt
             slug
@@ -93,11 +81,7 @@ const QuerySupportPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt
             slug
@@ -119,11 +103,7 @@ const QuerySupportPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt
             slug

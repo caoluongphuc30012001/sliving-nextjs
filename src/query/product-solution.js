@@ -18,44 +18,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -75,44 +58,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -132,44 +98,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -189,44 +138,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -246,44 +178,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -303,51 +218,34 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
       }
     }
     dataSmartMeasurement: allMarkdownRemark (
-      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-measurement)/"}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-meter)/"}}
       sort: {fields: frontmatter___id}) {
       edges {
         node {
@@ -360,44 +258,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -417,44 +298,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -474,44 +338,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -531,44 +378,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }
@@ -588,44 +418,27 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
-            publicURL
-          }
+              publicURL
+            }
             alt
             slug
             property_1 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_2 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_3 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
             }
             property_4 {
-              childImageSharp {
-                fluid(maxWidth: 1440) {
-                  src
-                }
-              }
+              publicURL
+            }
+            property_5 {
+              publicURL
             }
           }
         }

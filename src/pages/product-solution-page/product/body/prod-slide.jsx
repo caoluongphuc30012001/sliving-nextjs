@@ -16,9 +16,9 @@ const ProdSlide = ({ slide }) => {
                 }} loop={true} direction={'vertical'} className="swiper-prod" >
                     {
                         slide && slide.length > 0 ? (
-                            slide.map(item => {
+                            slide.map((item, index) => {
                                 return (
-                                    <SwiperSlide>
+                                    <SwiperSlide key={index}>
                                         <img className="prod-slide__img" src={item} alt="" />
                                     </SwiperSlide>
                                 )

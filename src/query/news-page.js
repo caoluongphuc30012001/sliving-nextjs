@@ -18,11 +18,7 @@ const DataNewsPage = () => {
             date  
             alt
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             slug
           }
@@ -44,11 +40,7 @@ const DataNewsPage = () => {
             date  
             alt
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             slug
           }
@@ -70,11 +62,7 @@ const DataNewsPage = () => {
             date  
             alt
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             slug
           }
@@ -95,11 +83,7 @@ const DataNewsPage = () => {
             date  
             alt
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             slug
           }
@@ -120,11 +104,7 @@ const DataNewsPage = () => {
             date  
             alt
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             slug
           }
@@ -146,11 +126,7 @@ const DataNewsPage = () => {
             date  
             alt
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             slug
           }

@@ -24,11 +24,7 @@ const DataHomePage = () => {
           id
           title
           featuredImage {
-            childImageSharp {
-              fluid {
-                src
-              }
-            }
+            publicURL
           }
           alt
         }
@@ -43,11 +39,7 @@ const DataHomePage = () => {
           title
           date
           featuredImage {
-            childImageSharp {
-              fluid {
-                src
-              }
-            }
+            publicURL
           }
           alt
           slug

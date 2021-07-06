@@ -44,7 +44,8 @@
     "Sensors": "Sensors",
     "Air_Conditioning_System": "Air Conditioning System",
     "Smart_Curtain": "Smart Curtain",
-    "Smart_Measurement": "Smart Measurement",
+    "Smart_Meter": "Smart Measurement",
+    "Zigbee_KIT" : "Zigbee KIT",
     "Door_motor_gate": "Door Motor Gate"
   },
   "The_Reason": "The Reasons Why You Should Choose Sliving",

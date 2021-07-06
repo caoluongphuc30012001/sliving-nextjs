@@ -57,7 +57,7 @@ const PostNews = (props) => {
                                     subtitle={node.frontmatter.subtitle}
                                     slug={node.frontmatter.slug}
                                     description={node.frontmatter.description}
-                                    imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                                    imgUrl={node.frontmatter.featuredImage.publicURL}
                                     url="news-page"
                                 />
                             )

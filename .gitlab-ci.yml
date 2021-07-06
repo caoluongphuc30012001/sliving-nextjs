@@ -16,6 +16,14 @@ cache:
 
 test:
   stage: test
+  before_script:
+    # Create ssh-key and pull submodule
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - echo "$SSH_DEPLOY_KEY"
+    - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - git submodule update --init --recursive
   script:
     - npm install
     - ./node_modules/.bin/gatsby build --prefix-paths

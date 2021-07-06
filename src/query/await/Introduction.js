@@ -15,11 +15,7 @@ const QueryIntroductionPage = () => {
             description
             type
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
               publicURL
