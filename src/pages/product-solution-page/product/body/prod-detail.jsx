@@ -8,7 +8,7 @@ const ProdDetail = () => {
                 <div className="prod-detail-header container">
                     <CardSection title={"Sliving Thermostat has recevied the following certifications"} />
                 </div>
-                <div className="prod-detail-body">
+                <div className="prod-detail-body container-wrap">
                     <Table bordered hover size="sm-3" className="prod-detail-table">
                         <thead>
                             <tr>

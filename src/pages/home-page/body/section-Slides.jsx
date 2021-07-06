@@ -10,7 +10,7 @@ const SectionSlides = () => {
   return (
     <div className="section-slide">
       <div className="slide-solution-wrap">
-        <SolutionSuggestion />
+        <SolutionSuggestion id={1}/>
       </div>
       <div className="slide-product-wrap">
         <CardSlideVertical id={2} infinite={true} rows={1} data={post} title={t(`Sliving_IOT_Products`)} isMenu={true} isArrow={true} />

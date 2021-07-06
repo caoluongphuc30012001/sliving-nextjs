@@ -6,9 +6,11 @@ import NextArrow from "@components/button/button-next-arrow";
 import { useTranslation } from 'react-i18next';
 import DataNewsPage from "@query/news-page";
 import { Link } from "gatsby";
+import UseGetLgn from "@hook/useGetLgn";
 const SectionSlideNews = () => {
     const { t } = useTranslation();
     const data = DataNewsPage().dataNewsPage.edges;
+    const Lgn =UseGetLgn();
     const settings = {
         dots: false,
         infinite: false,
@@ -56,7 +58,7 @@ const SectionSlideNews = () => {
                                     <div className="news-wrap" key={node.frontmatter.id}>
                                         <div className="news-wrap-item">
                                             <div className="news-wrap-img">
-                                                <Link to={`/news-page/${node.frontmatter.slug}`}>
+                                                <Link to={`${Lgn}news-page/${node.frontmatter.slug}`}>
                                                     <img src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="image1" />
                                                 </Link>
                                             </div>

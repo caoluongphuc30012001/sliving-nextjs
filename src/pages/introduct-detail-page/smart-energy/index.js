@@ -16,7 +16,7 @@ const IntroductDetail = () => {
     const { t } = useTranslation();
     return (
         <Layout>
-            <div className="introduct-main" id="introduct-main">
+            <div className="introduct-main energy-page" id="introduct-main">
                 <IntroductHeader />
                 <div><IntroductSlides /> </div>
                 <div className="section-first">

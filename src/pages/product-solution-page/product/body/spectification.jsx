@@ -6,7 +6,7 @@ const Specitification = () => {
         <div className="spectifi">
             <div className="spectifi-wrap">
                 <CardSection title={"Spectifications"} />
-                <div className="spectifi-wrap-body">
+                <div className="spectifi-wrap-body container-wrap">
                     <Table bordered={false} hover size="sm" className="spec-table">
                         <thead>
                             <tr>

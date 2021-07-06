@@ -21,7 +21,12 @@ p {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-
+    .introduct-header-img{
+      max-width: 1440px;
+      min-height: 649px;
+      width: 100%;
+      height: 100%;
+    }
     .introduct-section-header {
       position: absolute;
       bottom: -51px;
@@ -271,7 +276,6 @@ p {
     }
 
     .slides-product__title {
-      width: 200px;
       span {
         font-weight: bold;
         font-size: 16px;

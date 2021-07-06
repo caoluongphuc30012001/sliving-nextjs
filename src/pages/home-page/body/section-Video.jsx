@@ -98,7 +98,7 @@ const SectionVideo = () => {
     }
     return (
         <div className="body-video container-wrap">
-            <CardTitleHeader title={"Videos"} />
+            <CardTitleHeader title={"Video"} />
             <div className="card-video center">
                 <div className="App">
                     <Modals />

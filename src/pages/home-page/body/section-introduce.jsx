@@ -16,7 +16,7 @@ const SectionIntroduce = () => {
             dataImg={imgProd}
             subtitle={data.dataSectionIntroduce.edges[0].node.frontmatter.subTitle}
             description={data.dataSectionIntroduce.edges[0].node.frontmatter.description}
-            isButton={true} backgroundColor={'#F47403'} color={'#ffffff'} borderReadius={'16px'} border={"none"} padding={'4px 7px 4px 13px'} fontWeight={'700'} />
+            isButton={true} backgroundColor={'#F47403'} color={'#f9f9f9'} borderReadius={'16px'} border={"none"} padding={'4px 7px 4px 13px'} fontWeight={'700'} />
         )
       }
     </>

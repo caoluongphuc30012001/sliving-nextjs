@@ -147,7 +147,7 @@ const IntroContent = () => {
                             Các giá trị cốt lõi này được hình thành từ giá trị của những người điều hành doanh nghiệp
                             và tập thể người lao động,
                         </span></div>
-                        <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#ffffff'} borderReadius={'16px'} padding={'10px 20px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
+                        <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#f9f9f9'} borderReadius={'16px'} padding={'10px 20px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
                     </div>
                 </div>
             </div>

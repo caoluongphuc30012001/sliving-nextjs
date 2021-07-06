@@ -1,5 +1,5 @@
 import React from 'react';
-import solutionImg from "@images/solution-page/header/header.svg";
+import solutionImg from "@images/introduction-page/smart-parking/banner.svg";
 import { useTranslation } from 'react-i18next';
 const SolutionHeader = () => {
     const { t } = useTranslation();

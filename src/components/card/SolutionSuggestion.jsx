@@ -10,8 +10,10 @@ import Image2 from "@images/intro-content2/image2.png";
 import Image3 from "@images/intro-content2/image3.png";
 import Image4 from "@images/intro-content2/image4.png";
 import Image5 from "@images/intro-content2/image5.png";
+import UseGetLgn from "@hook/useGetLgn";
 const SolutionSuggestion = () => {
   const { t } = useTranslation();
+  const Lgn = UseGetLgn();
   const data = [
     {
       id: 1,
@@ -92,7 +94,7 @@ const SolutionSuggestion = () => {
   return (
     <>
       <div className="slide-sols txt-blue ">
-        <CardHeader title={t(`Solution_Suggestions`)} />
+        <CardHeader title={t(`Solution_Suggestions`)} id={1}/>
         <div className="slide-body">
           <Slider {...settings}>
             {
@@ -101,7 +103,7 @@ const SolutionSuggestion = () => {
                   <div className="card-sol" key={item.id}>
                     <div className="card-sol-wrap" >
                       <div className="card-sol-header">
-                        <Link to={`/${item.path}`} className="card-link">
+                        <Link to={`${Lgn}${item.path}`} className="card-link">
                           <img src={item.img} alt="" />
                         </Link>
                       </div>
@@ -131,5 +133,4 @@ const SolutionSuggestion = () => {
     </>
   )
 }
-
 export default SolutionSuggestion
