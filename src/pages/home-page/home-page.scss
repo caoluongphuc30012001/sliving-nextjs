@@ -163,6 +163,21 @@ ol.carousel-indicators li.active {
       }
     }
   }
+
+  .home-page-main {
+    .card-slide {
+      .btn-content {
+        button {
+          border-radius: 8px;
+          min-width: 0px;
+          width: 100%;
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+      }
+    }
+  }
+  
 }
 
 .news-slide {
@@ -181,4 +196,12 @@ ol.carousel-indicators li.active {
   img {
     max-height: 240px;
   }
+}
+
+.slide-prods .slide-prod .slide-prod-wrap {
+  width: unset;
+  max-width: 160px;
+  max-height: 160px;
+  border: 5px solid #1a7dd8;
+  border-radius: 8px;
 }

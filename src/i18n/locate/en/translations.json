@@ -150,11 +150,11 @@
   "International-quality": "International quality products",
   "customers-shoes": "Putting yourself in the customers' shoes is a strategy we employ here at Sliving to understand what the customer needs. To change the customer's uncertainty about the domestic smart product quality, we have been perfecting our products. This is proved by multiple international quality certificates that we have and will receive in the near future, MFi is one of them.",
   "Wide-range": "Wide range of products and solutions",
-  "Designing-interfaces": "- Designing interfaces for mobile applications (Mobile App), and websites for monitoring, controlling, and introducing products.",
-  "Design-hardware": "- Design hardware products",
-  "Producing-smart": "- Producing smart technology equipment.",
-  "Building-computer": "- Building computer programs such as Firmware, Cloud Server.",
-  "AI": "- AI (Artificial Intelligence).",
+  "Designing-interfaces": " Designing interfaces for mobile applications (Mobile App), monitoring websites to control, and introduce products.",
+  "Design-hardware": " Design hardware products",
+  "Producing-smart": " Producing smart technology equipment.",
+  "Building-computer": " Building computer programs such as Firmware, Cloud Server.",
+  "AI": " AI (Artificial Intelligence).",
   "Strong-supply": "Strong supply chain",
   "goal-leading1": "Intending to lead the smart technology market, Sliving is the first enterprise licensed to manufacture devices in the Smart Living ecosystem. The factory has an area of ​​nearly 4500m2, the total production capacity is estimated at",
   "goal-leading2": " 270,000 devices/year.",
@@ -202,6 +202,8 @@
   "Face-ID-title": "Face ID",
   "fingerprint-recognition": "Use fingerprint recognition method to close / open the door. Integrated with magnetic card scanner, password. There are clear lights and tones for all cases. Can unlock remotely via bluetooth feature on the phone.",
   "swing-door-descrip": "As a security management device combined with other proprietary software, this device can track visitors, manage construction work, eliminate people who intend to jump through the gate to enter and increase the operation efficiency in the management area.",
-  "biometric-technology": "Using facial recognition biometric technology to authenticate residents, control access to monitor areas as well as using the elevator, and opening the barriers."
+  "biometric-technology": "Using facial recognition biometric technology to authenticate residents, control access to monitor areas as well as using the elevator, and opening the barriers.",
+  "specialized-business": "Specialized business areas: ",
+  "Over-the-years": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, and convenient life."
   
 }

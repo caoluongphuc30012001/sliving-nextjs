@@ -1,7 +1,9 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 const CardInfo = ({ title, description, isImage, imgR, imgL, ...props }) => {
-    return (
+    const { t } = useTranslation();
+    return ( 
         <div className="card-info container-wrap">
             <div className="card-info-wrap">
                 <div className="">
@@ -11,16 +13,16 @@ const CardInfo = ({ title, description, isImage, imgR, imgL, ...props }) => {
                         </div>
                         <div className="info-des">
                             <span>
-                                <span>  Những lĩnh vực phát triển của công ty :</span>
+                                <span>  {t(`specialized-business`)}</span>
                                 <ul>
-                                    <li>Xây dựng thiết kế giao diện các ứng dụng di động (Mobile App), trang mạng (website) cho việc giám sát, điều khiển và giới thiệu sản phẩm.</li>
-                                    <li>Thiết kế phần cứng (Hardware) của Sản phẩm</li>
-                                    <li>Sản xuất thiết bị công nghệ thông minh</li>
-                                    <li>Xây dựng các chương trình máy tính như Firmware, Cloud Server</li>
-                                    <li>AI ( Trí tuệ nhân tạo )</li>
+                                    <li>{t(`Designing-interfaces`)} </li>
+                                    <li>{t(`Design-hardware`)}</li>
+                                    <li>{t(`Producing-smart`)}</li>
+                                    <li>{t(`Building-computer`)}</li>
+                                    <li>{t(`AI`)}</li>
                                 </ul>
-                                Trong những năm qua, Sliving luôn không ngừng phát triển và cho ra đời các giải pháp công nghệ tiên tiến giúp mỗi người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi nhất...
-                            </span>
+                                {t(`Over-the-years`)}
+                                  </span>
                         </div>
                         <div className="info-more fs-18 fw-bold"><span >Tìm hiểu thêm</span></div>
                     </Col>

@@ -16,7 +16,7 @@ const SectionApplication = () => {
             fontWeight={'700'}
         />
         <div className="solution-header-img">
-            <img src={headerSolImg} alt="sliving" />
+            <img class = "img-responsive" src={headerSolImg} alt="sliving" />
         </div>
     </>)
 }
