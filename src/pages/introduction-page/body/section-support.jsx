@@ -7,7 +7,7 @@ const SectionSupport = () => {
         <div className="section-introduction__support">
             <div className="container-wrap">
                 <div className="form-support">
-                    <div className="title-support fs-32 fw-bold txt-blue">
+                    <div xs={6} sm={12} className="title-support fs-32 fw-bold txt-blue">
                         <span>{t(`How_Can_We_help`)}</span>
                     </div>
                     <div className="form-support-wrap">
