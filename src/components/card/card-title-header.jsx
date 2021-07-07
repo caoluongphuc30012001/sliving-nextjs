@@ -24,17 +24,17 @@ const CardTitleHeader = ({ title, id, isShow }, ...props) => {
     }, [])
     return (
         <div className="container-wrap">
-        <Row className="card-title-header d-flex al-center txt-blue just-cont-bt">
-            <Col  className="card-title-header__title fs-32 fw-bold "><span>{t(`${title}`)}</span></Col>
-            <Col>
+        <div className="card-title-header d-flex al-center txt-blue just-cont-bt">
+            <div  className="card-title-header__title fs-32 fw-bold "><span>{t(`${title}`)}</span></div>
+            <div>
             {!isMobile && !isShow && (
                 <Link to={id === 1 ? '/introduction-technology-page/' : id === 2 ? `/product-solution/${id}` : id === 3 ? `/news-page` : ''}>
                     <div className="card-title-header__btn-more txt-hover fs-18 fw-bold"> <span>{t(`More_Info`)}</span></div>
                 </Link>
             )
             }
-            </Col>
-        </Row >
+            </div>
+        </div >
          </div>
         );
 }

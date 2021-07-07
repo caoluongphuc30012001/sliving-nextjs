@@ -1498,8 +1498,9 @@ a.btn-link-a {
 }
 
 .form-support {
-  width : 718px;
+  max-width : 718px;
   margin: auto;
+  width: 100%;
 
   .title-support {
     text-align   : center;
