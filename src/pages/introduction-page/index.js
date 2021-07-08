@@ -9,17 +9,17 @@ import SectionSupport from "./body/section-support.jsx";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
 const IntroductionPage = () => {
-    return (
-        <Layout>
-            <div className="introduction-page" id="introduction-page">
-                <SectionHeader />
-                <SectionArticle />
-                <SectionArticleSLide />
-                <SectionSolution />
-                <SectionSupport />
-            </div>
-        </Layout>
-    );
+  return (
+    <Layout>
+      <div className="introduction-page" id="introduction-page">
+        <SectionHeader />
+        <SectionArticle />
+        <SectionArticleSLide />
+        <SectionSolution />
+        <SectionSupport />
+      </div>
+    </Layout>
+  );
 };
 export default withI18next()(IntroductionPage);
 export const query = graphql`

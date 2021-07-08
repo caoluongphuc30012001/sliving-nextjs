@@ -31,7 +31,7 @@ const SectionHorizontalSlide = (props) => {
                                     <div className="horizontal-slide-wrap">
                                         <div className="horizontal-slide__left">
                                             <img
-                                                src={node.frontmatter.featuredImage.childImageSharp.fluid.src}
+                                                src={node.frontmatter.featuredImage.publicURL}
                                                 alt={node.frontmatter.alt} />
                                         </div>
                                         <div className="horizontal-slide__right">

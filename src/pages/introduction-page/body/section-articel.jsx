@@ -12,10 +12,10 @@ const SectionArticle = () => {
         <div className="section-introduction__article">
             <div className="introduction__article-wrap">
                 <Row noGutters className="article-wrap__group">
-                    <Col xs={7} className="article-wrap__group-left">
+                    <Col  className="article-wrap__group-left">
                         <img src={imgArticle} alt="sliving introduction" />
                     </Col>
-                    <Col xs={5} className="article-wrap__group-right">
+                    <Col  className="article-wrap__group-right">
                         <div>
                             <div className="article-title fs-48 fw-bold txt-blue">
                                 <h3>{t(`Vision-Mission`)}</h3>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from '@reach/router';
 import { useEffect } from 'react';
 export default function UseGetLgn (){

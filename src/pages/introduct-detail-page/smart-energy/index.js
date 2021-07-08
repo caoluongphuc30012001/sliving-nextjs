@@ -20,13 +20,16 @@ const IntroductDetail = () => {
                 <IntroductHeader />
                 <div><IntroductSlides /> </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgFirst} title={"This is solution’s long content "} description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
+                    <SectionContent imgUrl={imgFirst} title={"This is solution’s long content "} url={"/introduct-detail-page/smart-energy-1-learn-more"} 
+                        description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSecond} title={"This is solution’s long content "} description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
+                    <SectionContent imgUrl={imgSecond} title={"This is solution’s long content "} url={"/introduct-detail-page/smart-energy-2-learn-more"} 
+                        description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={"This is solution’s long content "} description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
+                    <SectionContent imgUrl={imgThird} title={"This is solution’s long content "} url={"/introduct-detail-page/smart-energy-3-learn-more"} 
+                        description={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."} />
                 </div>
                 <div className="section-slide-first">
                     <SectionSlidesProduct title={t(`Energy-saving-product`)} />

@@ -167,7 +167,198 @@ exports.createPages = async function ({ page, actions, graphql }) {
         data: introductionPage.data.dataIntroContentPage.edges,
       }
     })
-  })
+  });
+
+  introductionPage.data.dataSmartLighting1.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartLighting1.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartLighting2.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartLighting2.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartParking1.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartParking1.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartParking2.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detal-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartParking2.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataFaceID.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataFaceID.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartFingerprintLock.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartFingerprintLock.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartSwingDoor.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartSwingDoor.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartEnergy1.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartEnergy1.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartEnergy2.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartEnergy2.edges,
+      }
+    })
+  });
+
+  introductionPage.data.dataSmartEnergy3.edges.forEach((edge) => {
+    createPage({
+      path: `/introduct-detail-page/${edge.node.frontmatter.slug}`,
+      component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+      context: {
+        node: edge.node,
+        data: introductionPage.data.dataSmartEnergy3.edges,
+      }
+    })
+  });
+
+  createPage({
+    path: `/introduct-detail-page/smart-lighting-1-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartLighting1.edges[0].node,
+      data: introductionPage.data.dataSmartLighting1.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-lighting-2-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartLighting2.edges[0].node,
+      data: introductionPage.data.dataSmartLighting2.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-parking-1-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartParking1.edges[0].node,
+      data: introductionPage.data.dataSmartParking1.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-parking-2-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartParking2.edges[0].node,
+      data: introductionPage.data.dataSmartParking2.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-energy-1-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartEnergy1.edges[0].node,
+      data: introductionPage.data.dataSmartEnergy1.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-energy-2-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartEnergy2.edges[0].node,
+      data: introductionPage.data.dataSmartEnergy2.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-energy-3-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartEnergy3.edges[0].node,
+      data: introductionPage.data.dataSmartEnergy3.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-fingerprint-lock-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartFingerprintLock.edges[0].node,
+      data: introductionPage.data.dataSmartFingerprintLock.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/smart-swing-door-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataSmartSwingDoor.edges[0].node,
+      data: introductionPage.data.dataSmartSwingDoor.edges,
+    }
+  });
+  createPage({
+    path: `/introduct-detail-page/face-id-learn-more`,
+    component: require.resolve("./src/template/Introduct-detail-page.jsx"),
+    context: {
+      node: introductionPage.data.dataFaceID.edges[0].node,
+      data: introductionPage.data.dataFaceID.edges,
+    }
+  });
 }
 
 
@@ -180,7 +371,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@query": path.resolve(__dirname, "./src/query"),
         "@videos": path.resolve(__dirname, "./src/videos"),
         "@pages": path.resolve(__dirname, "./src/pages"),
+<<<<<<< HEAD
         "@hook": path.resolve(__dirname,"./src/hook")
+=======
+        "@hook": path.resolve(__dirname,"./src/hook"),
+        "@mock": path.resolve(__dirname, "./src/mock"),
+>>>>>>> a3d6176d6e8163fd09a41b9deb36f03d23991be0
       }
     }
   });

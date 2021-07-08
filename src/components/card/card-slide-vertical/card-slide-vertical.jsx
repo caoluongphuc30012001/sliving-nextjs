@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import CardSlideChild from "./card-vertical";
 import CardHeader from "../card-title-header";
@@ -11,7 +11,7 @@ import NextArrow from "../../button/button-next-arrow.jsx";
 import DataProductSolution from "@query/product-solution";
 import { useTranslation } from 'react-i18next';
 SwiperCore.use([Navigation]);
-const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id, isShow }) => {
+const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id, isShow, params }) => {
 	const { t } = useTranslation();
 	const dataAllProducts = DataProductSolution();
 	const dataGateWay = dataAllProducts.dataGateWay.edges;
@@ -31,10 +31,17 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		{ title: "navProduct.Sensors", id: 3, isActive: false },
 		{ title: "navProduct.Air_Conditioning_System", id: 4, isActive: false },
 		{ title: "navProduct.Smart_Curtain", id: 5, isActive: false },
-		{ title: "navProduct.Smart_Measurement", id: 6, isActive: false },
-		{ title: "Zigbee KIT", id: 7, isActive: false },
+		{ title: "navProduct.Smart_Meter", id: 6, isActive: false },
+		{ title: "navProduct.Zigbee_KIT", id: 7, isActive: false },
 		{ title: "navProduct.Door_motor_gate", id: 8, isActive: false },
 	]);
+
+	useEffect(() => {
+		if(params) {
+			clickProduct(parseInt(params));
+		}
+	}, [params]);
+
 	const settings = {
 		useTransform: false,
 		className: "slide-vertical",
@@ -53,13 +60,15 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 					slidesToShow: 4,
 					slidesToScroll: 4,
 					infinite: true,
+					dots:false
 				}
 			},
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					dots:false
 				}
 			},
 
@@ -67,7 +76,8 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					dots:false
 				}
 			}
 		],
@@ -77,7 +87,6 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 	};
 	const clickProduct = (id) => {
 		arrProduct.forEach((prod) => (prod.isActive = id === prod.id ? true : false));
-		setPost([]);
 		if (id === 0) { setPost(dataLED); };
 		if (id === 1) { setPost(dataSwitch); };
 		if (id === 2) { setPost(dataSocket); };
@@ -93,16 +102,14 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 			{title && (<CardHeader title={t(`${title}`)} id={id} isShow={isShow} />)}
 			{isMenu && (<div className="slide-nav">
 				<Nav>
-					{arrProduct && arrProduct.map((prod, index) => {
+					{arrProduct.map((prod, index) => {
 						return (
 							<div
 								key={index}
 								onClick={() => clickProduct(prod.id)}
-								onKeyDown={() => clickProduct(prod.id)}
 								className={`nav-prod ${prod.isActive ? 'is-active-slide' : ''}`}
 								role="button"
 								tabIndex="0">{t(`${prod.title}`)}</div>)
-
 					})}
 				</Nav>
 			</div>)}
@@ -113,8 +120,8 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 							return (
 								<CardSlideChild
 									key={node.frontmatter.id}
-									imgUrl={node.frontmatter.featuredImage.childImageSharp.fluid.src}
-									description={node.frontmatter.title}
+									imgUrl={node.frontmatter.featuredImage.publicURL}
+									title={node.frontmatter.title}
 									path={node.frontmatter.slug}
 								/>
 							)

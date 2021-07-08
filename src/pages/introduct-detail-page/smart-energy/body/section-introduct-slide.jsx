@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from "react-slick";
-import vector from "@images/solution-page/body/Vector.svg";
 import rectangle1 from "@images/introduction-page/smart-energy/slide-1.svg";
 import rectangle2 from "@images/introduction-page/smart-energy/slide-2.svg";
 import rectangle3 from "@images/introduction-page/smart-energy/slide-3.svg";

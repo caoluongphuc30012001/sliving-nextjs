@@ -2,8 +2,17 @@ import React from "react";
 import imgPer from "@images/home-page/slide/permission.svg";
 import { Link } from "gatsby";
 import useGetLgn from "@hook/useGetLgn";
-const CardVertical = ({ imgUrl, description, path }) => {
+const CardVertical = ({ imgUrl, title, path }) => {
     const Lgn = useGetLgn();
+    const standardized = (str) => {
+        var convertToArray = str.toLowerCase().split(' ');
+        var result = convertToArray.map((val) => {
+          return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+        });
+        
+        return result.join(' ');
+      }
+
     return (
         <div className="card-sol">
             <div className="card-sol-wrap" >
@@ -25,7 +34,7 @@ const CardVertical = ({ imgUrl, description, path }) => {
                     </div>
                 </div>
                 <div className="card-sol-des">
-                    <span className="fs-16 txt-blue">{description}</span>
+                    <span className="fs-16 txt-blue">{standardized(title)}</span>
                 </div>
             </div>
         </div >

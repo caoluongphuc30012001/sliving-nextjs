@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
+import Layout from "@components/layout.jsx";
+import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import VideoWebm1 from "@videos/home-page/slide-1.webp";
 import Video1 from "@videos/home-page/slide-1.mp4";
-import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
-const NewPageDetail = ({ data, node }) => {
+import { graphql } from 'gatsby';
+const IntroductDetailPage = ({ pageContext }) => {
   const [content, setContent] = useState();
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
-    setContent(node);
-    setPosts(data.filter(item => {
-      return item.node.frontmatter.slug !== node.frontmatter.slug;
+    setContent(pageContext.node);
+    setPosts(pageContext.data.filter(item => {
+      return item.node.frontmatter.slug !== pageContext.node.frontmatter.slug;
     }));
-  }, [data, node]);
+  }, []);
+
   return (
-    <>
+    <Layout>
       {
-        data && (
+        pageContext && (
           <div className="news-page-body container-wrap">
             <div className="news-page-body-in-left">
               {
@@ -30,7 +33,6 @@ const NewPageDetail = ({ data, node }) => {
                 <video muted autoPlay loop playsInline>
                   <source src={VideoWebm1} type="video/webp" />
                   <source src={Video1} type="video/mp4" />
-
                 </video>
               </div>
             </div>
@@ -44,9 +46,9 @@ const NewPageDetail = ({ data, node }) => {
                       date={post.node.frontmatter.date}
                       title={post.node.frontmatter.title}
                       imgUrl={post.node.frontmatter.featuredImage.publicURL}
-                      slug={post.node.frontmatter.slug} 
+                      slug={post.node.frontmatter.slug}
                       alt={post.node.frontmatter.alt}
-                      url="news-page"
+                      url="introduct-detail-page"
                     />
                   )
                 })
@@ -55,7 +57,14 @@ const NewPageDetail = ({ data, node }) => {
           </div>
         )
       }
-    </>
+    </Layout>
   )
 }
-export default NewPageDetail;
+export default withI18next()(IntroductDetailPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+      ...LocaleFragment
+    }
+  }
+`;

@@ -13,11 +13,7 @@ const DataSupportPage = () => {
             description
             date
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt 
             slug 
@@ -37,11 +33,7 @@ const DataSupportPage = () => {
             description
             date
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt 
             slug 
@@ -61,11 +53,7 @@ const DataSupportPage = () => {
             description
             date
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt 
             slug 
@@ -85,11 +73,7 @@ const DataSupportPage = () => {
             description
             date
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt 
             slug 
@@ -109,11 +93,7 @@ const DataSupportPage = () => {
             description
             date
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             alt 
             slug 
@@ -133,11 +113,7 @@ const DataSupportPage = () => {
             description
             date
             featuredImage {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
+              publicURL
             }
             featuredVideo {
               publicURL

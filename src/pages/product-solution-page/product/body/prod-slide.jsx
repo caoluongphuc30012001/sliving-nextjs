@@ -11,14 +11,14 @@ const ProdSlide = ({ slide }) => {
     return (
         <div className="prod-slide">
             <div className="prod-slide-wrap">
-                <Swiper pagination={{
+                <Swiper spaceBetween={30} pagination={{
                     "clickable": true
                 }} loop={true} direction={'vertical'} className="swiper-prod" >
                     {
                         slide && slide.length > 0 ? (
-                            slide.map(item => {
+                            slide.map((item, index) => {
                                 return (
-                                    <SwiperSlide>
+                                    <SwiperSlide key={index}>
                                         <img className="prod-slide__img" src={item} alt="" />
                                     </SwiperSlide>
                                 )

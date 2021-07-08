@@ -1,8 +1,6 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import ButtonMore from "@components/button/button-more.jsx";
 const Sectionorizontal = ({ title, urlImg, children }) => {
-    const { t } = useTranslation()
     return (
         <div className="section-horizontal container-wrap">
             <div className="section-horizontal-wrap">

@@ -7,8 +7,8 @@
     .solution-header-img {
         width: 100%;
         height: 100%;
-        width: 1440px;
-        height: 560px;
+        max-width: 1440px;
+        max-height: 560px;
         margin: auto;
 
         img {
@@ -96,8 +96,12 @@
 .navbar-header {
     background-color: #f2f2f2;
     height: 60px;
-
     .navbar-header-wrap {
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -133,13 +137,18 @@
         margin: auto;
         position: relative;
         left: -8px;
-        .btn-about-prod{
+        .btn-about-prod {
             position: absolute;
             z-index: 2;
             top: 68%;
             left: 9.5%;
             margin-top: 0;
             margin-bottom: 0;
+        }
+        .section-about__img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
     .about-prod-wrap {
@@ -170,9 +179,12 @@
 /*--------------------------------------2. product slide------------------------------------------------ */
 
 .prod-slide {
-    width: 1440px;
-    height: 560px;
-    margin: auto;
+    max-width: 1440px;
+    max-height: 560px;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
     .swiper-prod-detail {
         display: flex;
@@ -181,10 +193,16 @@
 
     .prod-slide-wrap {
         .swiper-container-pointer-events.swiper-container-vertical {
-            height: 560px;
+            max-height: 560px;
+            height: 100%;
         }
 
         .swiper-prod {
+            .prod-slide__img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
             .swiper-pagination {
                 right: 30px;
                 bottom: 30px;
@@ -205,20 +223,30 @@
             }
 
             .prod-slide-wrap__left {
+                max-width: 835px;
+                max-height: 560px;
+                width: 100%;
+                height: 100%;
                 img {
-                    width: 835px;
-                    height: 560px;
+                    max-width: 835px;
+                    max-height: 560px;
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
 
             .prod-slide-wrap__right {
-                width: 605px;
-                height: 560px;
-                padding: 98px 141px 186px 59px;
+                max-width: 605px;
+                max-height: 560px;
+                width: 100%;
+                height: 100%;
+
                 background-color: #c9856b;
                 color: #f9f9f9;
-
+                .prod-slide-group {
+                    padding: 98px 141px 186px 59px;
+                }
                 .prod-slide-title {
                     line-height: 56px;
                     letter-spacing: -1px;
@@ -251,8 +279,6 @@
             margin-top: 16px;
         }
         .prod-detail-body {
-            margin-left: 347px;
-            margin-right: 347px;
             .prod-detail-table {
                 thead {
                     tr {
@@ -282,33 +308,6 @@
         }
     }
 }
-
-/*-------------------------------4. Babylon js ----------------------------------*/
-.babylon-villa {
-    max-width: 1440px;
-    max-height: 670px;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-}
-
-/*----------------------------------------@media---------------------------------------------------------- */
-@media (max-width: 768px) {
-    .solution-page {
-        .slick-dots {
-            li {
-                width: 6px;
-            }
-        }
-    }
-
-    .slick-dots {
-        li {
-            width: 6px;
-        }
-    }
-}
-
 .Thermostat {
     margin-bottom: 67px;
 
@@ -368,5 +367,169 @@
         line-height: 1em;
         content: "\200C";
         display: block;
+    }
+}
+
+/*-------------------------------4. Babylon js ----------------------------------*/
+.babylon-villa {
+    max-width: 1440px;
+    max-height: 670px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/*----------------------------------------@media---------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .navbar-header {
+        height: fit-content;
+        .navbar-header-wrap {
+            max-width: 970px;
+            .product-name {
+                text-align: center;
+            }
+            .nav-tabs {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+        .navbar-header-wrap .nav-tabs .nav-link {
+            width: 100%;
+            padding: 18px !important ;
+            white-space: nowrap;
+        }
+        .nav-item {
+            width: 100%;
+            .nav-link {
+                width: 100%;
+            }
+        }
+    }
+    .prod-slide {
+        .prod-slide-wrap {
+            .swiper-prod {
+                max-height: 385px !important;
+                .prod-slide__img {
+                    height: 385px;
+                }
+                .prod-slide-wrap__left {
+                    max-width: 623px;
+                    max-height: 400px;
+                    img {
+                        max-height: 400px;
+                    }
+                }
+                .prod-slide-wrap__right {
+                    .prod-slide-group {
+                        padding: 18px 18px 140px 30px;
+                    }
+                    max-width: 401px;
+                    height: 400px;
+                }
+                .swiper-pagination {
+                    display: unset;
+                    .swiper-pagination-bullet {
+                        padding: 5px;
+                    }
+                }
+            }
+            .swiper-container-pointer-events {
+                .swiper-container-vertical {
+                    max-height: 400px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .solution-page {
+        .slick-dots {
+            li {
+                width: 6px;
+            }
+        }
+    }
+
+    .slick-dots {
+        li {
+            width: 6px;
+        }
+    }
+    .navbar-header {
+        .navbar-header-wrap {
+            max-width: 700px;
+            display: block;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .navbar-header {
+        .navbar-header-wrap {
+            .nav-tabs {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+                padding-bottom: 18px;
+                .nav-link {
+                    padding: 10px !important;
+                    border-color: unset;
+                    border: none;
+                }
+                .nav-item {
+                    background-color: #f9f9f9;
+                }
+                .active {
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+    .prod-slide .prod-slide-wrap .swiper-prod .swiper-pagination {
+        top: calc(100% / 1.5);
+        right: 10px;
+        .swiper-pagination-bullet {
+            padding: 3px;
+            height: 6px;
+            width: 6px;
+        }
+    }
+    .section-about-prod .section-about-banner .btn-about-prod {
+        padding: 4px;
+        border-radius: 10px;
+        height: fit-content;
+        span {
+            font-size: 12px !important;
+        }
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .prod-details .prod-detail .prod-detail-body .table-bordered td,
+    .prod-details .prod-detail .prod-detail-body .table-bordered th {
+        white-space: normal;
+        font-size: 12px;
+        padding: 5px;
+    }
+    .prod-slide {
+        margin-top: 19px;
+    }
+    .prod-slide .prod-slide-wrap .swiper-prod {
+        height: 175px;
+        .prod-slide__img {
+            height: 175px;
+        }
+    }
+    .spectifi-wrap-body .table thead th {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    .spectifi-wrap-body .table td, .spectifi-wrap-body .table th {
+        font-size: 12px;
+    }
+}
+@media (max-width: 425px) {
+    .spectifi {
+        width: 425px;
+        overflow-x: auto;
     }
 }

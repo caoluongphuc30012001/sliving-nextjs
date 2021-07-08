@@ -1,12 +1,12 @@
 import React from 'react';
-import CardSection from '@components/card/card-content/card-section';
+import CardHeader from '@components/card/card-content/card-header';
 import { Table } from "react-bootstrap";
 const ProdDetail = () => {
     return (
         <div className="prod-details">
             <div className="prod-detail">
                 <div className="prod-detail-header container">
-                    <CardSection title={"Sliving Thermostat has recevied the following certifications"} />
+                    <CardHeader title={"Sliving Thermostat has recevied the following certifications"} />
                 </div>
                 <div className="prod-detail-body container-wrap">
                     <Table bordered hover size="sm-3" className="prod-detail-table">

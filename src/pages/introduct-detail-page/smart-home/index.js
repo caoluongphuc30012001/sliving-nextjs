@@ -21,10 +21,16 @@ const IntroductDetail = () => {
             <div className="introduct-main" id="introduct-main">
                 <IntroductHeader />
                 <div className="section-first section-first-left">
-                    <SectionContent imgUrl={imgFirst} title={t(`Smart-lighting`)} id={1}/>
+                    <SectionContent
+                        imgUrl={imgFirst} title={t(`Smart-lighting`)}
+                        url="introduct-detail-page/smart-lighting" id="smart-lighting"
+                    />
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSecond} title={t(`Thermostat-control`)} id={2}/>
+                    <SectionContent
+                        imgUrl={imgSecond} title={t(`Thermostat-control`)}
+                        url={"product-solution-page"} id="4"
+                    />
                 </div>
                 <div className="section-first">
                     <SectionContent imgUrl={imgThird} title={t(`Smart-switch`)} id={2} description={<ul>
@@ -45,10 +51,14 @@ const IntroductDetail = () => {
                         </ul>}/>
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgFive} title={t(`curtain`)} id={2}/>
+                    <SectionContent imgUrl={imgFive} title={t(`curtain`)}
+                        url={"product-solution-page"} id="5"
+                    />
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgSix} title={t(`Door-Gate`)} id={2}/>
+                    <SectionContent imgUrl={imgSix} title={t(`Door-Gate`)}
+                        url={"product-solution-page"} id="8"
+                    />
                 </div>
                 <div className="banner-slides">
                     <BannerSlide />

@@ -12,26 +12,30 @@ const Product = ({ pageContext }) => {
     const [data, setData] = useState({});
     const [slide, setSlide] = useState([]);
     const [name, setName] = useState("");
+    const [imgURL, setImgURL] = useState();
     useEffect(() => {
         const tmp = pageContext.dataProd;
         setData(tmp);
         setName(tmp.title);
         if (tmp.property_2) {
-            setSlide(prev => [...prev, tmp.property_2.childImageSharp.fluid.src]);
+            setSlide(prev => [...prev, tmp.property_2.publicURL]);
         }
         if (tmp.property_3) {
-            setSlide(prev => [...prev, tmp.property_3.childImageSharp.fluid.src]);
+            setSlide(prev => [...prev, tmp.property_3.publicURL]);
         }
         if (tmp.property_4) {
-            setSlide(prev => [...prev, tmp.property_4.childImageSharp.fluid.src]);
+            setSlide(prev => [...prev, tmp.property_4.publicURL]);
         }
-    }, [pageContext.data]);
+        if(tmp.property_5) {
+            setImgURL(tmp.property_5.publicURL);
+        }
+    }, []);
     return (
         <Layout>
             <SectionNavBar name={name}/>
             {
                 data.property_1 ? (
-                    <SectionAbout banner={data.property_1.childImageSharp.fluid.src} />
+                    <SectionAbout banner={data.property_1.publicURL} />
                 ) : (
                     <SectionAbout />
                 )
@@ -47,7 +51,7 @@ const Product = ({ pageContext }) => {
                 data.featuredVideo ? (
                     <Thermostat videoUrl={data.featuredVideo.publicURL} />
                 ) : (
-                    <Thermostat />
+                    <Thermostat imgURL={imgURL}/>
                 )
             }
             <ProdDetail />

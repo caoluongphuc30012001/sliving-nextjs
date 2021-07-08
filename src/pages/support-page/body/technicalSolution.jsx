@@ -191,11 +191,11 @@ const TechnicalSol = () => {
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
-                                  <a href={`${node.frontmatter.featuredVideo.publicURL}`} target="_blank" download>
+                                  <Link href={`${node.frontmatter.featuredVideo.publicURL}`} >
                                     <div className="download__container">
-                                      <img src={DownLoadIcons} alt="Image 1"/>
+                                      <img src={DownLoadIcons} alt="icon download" />
                                     </div>
-                                  </a>
+                                  </Link>
                                   <div className="container-below-image">
                                     <div className="row">
                                       <span className="fs-12 fw-bold">Công trình :</span><span className="fs-12">Căn hộ</span>
@@ -226,7 +226,7 @@ const TechnicalSol = () => {
                                   <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}>
                                     {
                                       node.frontmatter.featuredImage && <Image className="image-example"
-                                        src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="Image 1"
+                                        src={node.frontmatter.featuredImage.publicURL} alt="Image 1"
                                         fluid
                                       />
                                     }

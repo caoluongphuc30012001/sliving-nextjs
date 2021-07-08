@@ -1,11 +1,11 @@
 import React from 'react';
-import CardSection from '@components/card/card-content/card-section';
+import CardHeader from '@components/card/card-content/card-header';
 import { Table } from "react-bootstrap";
 const Specitification = () => {
     return (
         <div className="spectifi">
             <div className="spectifi-wrap">
-                <CardSection title={"Spectifications"} />
+                <CardHeader title={"Spectifications"} />
                 <div className="spectifi-wrap-body container-wrap">
                     <Table bordered={false} hover size="sm" className="spec-table">
                         <thead>

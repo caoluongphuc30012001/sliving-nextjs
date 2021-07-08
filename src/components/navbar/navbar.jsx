@@ -14,7 +14,6 @@ const isBrowser = typeof window !== "undefined";
 const NavBar = () => {
     const location = useLocation();
     const pathName = location.pathname;
-    console.log("location",location);
     const { arrNav } = useContext(PortfolioContext);
     const { menus } = arrNav;
     const { t } = useTranslation();

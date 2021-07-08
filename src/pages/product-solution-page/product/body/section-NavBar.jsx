@@ -5,7 +5,7 @@ const SectionNavBar = ({ name }) => {
     const { t } = useTranslation();
     return (
         <div className="navbar-header">
-            <div className="container-wrap navbar-header-wrap">
+            <div className="navbar-header-wrap">
                 <div className="product-name">
                     <span className="fs-16 fw-bold">{name && name.toUpperCase()}</span>
                 </div>

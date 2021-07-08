@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
         setInfoCompany({ ...addressData, ...aboutData });
         if (isBrowser) {
             window.addEventListener("resize", () => {
-                if (window.innerWidth > 769) {
+                if (window.innerWidth > 836) {
                     setIsDesktop(true);
                     setIsMobile(false);
                 } else {
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
                     setIsMobile(true);
                 }
             });
-            if (window.innerWidth > 769) {
+            if (window.innerWidth > 836) {
                 setIsDesktop(true);
                 setIsMobile(false);
             } else {

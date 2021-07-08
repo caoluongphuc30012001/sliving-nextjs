@@ -59,7 +59,7 @@ const SectionSlideNews = () => {
                                         <div className="news-wrap-item">
                                             <div className="news-wrap-img">
                                                 <Link to={`${Lgn}news-page/${node.frontmatter.slug}`}>
-                                                    <img src={node.frontmatter.featuredImage.childImageSharp.fluid.src} alt="image1" />
+                                                    <img src={node.frontmatter.featuredImage.publicURL} alt="image1" />
                                                 </Link>
                                             </div>
                                             <div className="news-wrap-description">

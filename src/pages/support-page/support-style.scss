@@ -161,7 +161,9 @@
 
 .table-dropdown {
     padding: 2px;
-
+    .row{
+     flex-wrap: unset;
+    }
     .btn-light {
         //width           : 100%;
         text-align: center;
