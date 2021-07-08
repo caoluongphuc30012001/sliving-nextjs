@@ -31,7 +31,7 @@ const SectionArticleSecond = () => {
                                 </ul>
                             </div>
                             <div className="btn-research">
-                                <Link to={`${Lgn}/introduct-detail-page/smart-home`}>
+                                <Link to={`${Lgn}introduct-detail-page/smart-home`}>
                                     <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>
                                         <span className="fs-18 fw-bold">{t(`More_Information`)}</span> <img id="btn-research-arrow-F4" src={iconArrowRightF4} alt="icon arrow right" />
                                         <img id="btn-research-arrow" src={iconArrowRight} alt="icon arrow right" />

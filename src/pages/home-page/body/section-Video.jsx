@@ -61,23 +61,23 @@ const SectionVideo = () => {
                 <Image src={closeImg} alt="close image" />
             </button>
             <Slider {...settings}>
-                <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
+                <div className="modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
                         <source src={Video1} type="video/webp" />
                         <source src={VideoWebm1} type="video/webm" />
                     </video>
                 </div>
-                <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
+                <div className="modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
                         <source src={Video2} type="video/webp" />
                         <source src={VideoWebm2} type="video/webm" />
                     </video>
-                </div>  <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
+                </div>  <div className="modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
                         <source src={Video3} type="video/webp" />
                         <source src={VideoWebm3} type="video/webm" />
                     </video>
-                </div>  <div className="embed-responsive embed-responsive-16by9 modal-video-wrap">
+                </div>  <div className="modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
                         <source src={Video4} type="video/webp" />
                         <source src={VideoWebm4} type="video/webm" />

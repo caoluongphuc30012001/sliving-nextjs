@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHorizontalSlide from "@components/section/section-horizontal-slide/section-horizontal-slide";
+import SectionOutstanding from "@components/section/section-outstanding";
 import { useTranslation } from 'react-i18next';
 import DataHomePage from "@query/home-page";
 const SectionIntroductLast = () => {
@@ -7,7 +7,7 @@ const SectionIntroductLast = () => {
     const data = DataHomePage();
     return (
         <div className="container-wrap section-outstanding">
-            <SectionHorizontalSlide data={data.dataSectionProject.edges} title={t(`Outstanding_Project`)} />
+            <SectionOutstanding  title={t(`Outstanding_Project`)} />
         </div>
     )
 }

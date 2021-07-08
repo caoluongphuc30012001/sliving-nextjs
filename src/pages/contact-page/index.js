@@ -3,6 +3,7 @@ import ContactPages from './contact-page';
 import Layout from "@components/layout";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
+import "./style.scss";
 const ContactPage = () => {
 
     return (<Layout>

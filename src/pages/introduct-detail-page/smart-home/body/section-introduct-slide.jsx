@@ -17,9 +17,8 @@ const IntroductSlides = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                 }
             },
             {
@@ -27,7 +26,6 @@ const IntroductSlides = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
                 }
             },
             {
@@ -50,11 +48,11 @@ const IntroductSlides = () => {
                         <div>{subtitle}</div>
                         <div className="fw-bold">{title}</div>
                     </div>
-                    <div className="chill__body-right">
+                    {/* <div className="chill__body-right">
                         <div className="btn-slides_chill">
                             <img src={vector} alt="icon vector" />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

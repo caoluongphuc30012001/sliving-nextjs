@@ -136,7 +136,7 @@ const TechnicalSol = () => {
               </div>
               <div className="container-outside">
                 <div className="table-dropdown ">
-                  <Row>
+                  <Row noGutters>
                     <Col className="col-in-containerOutside">
                       <Dropdown>
                         <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
@@ -187,11 +187,11 @@ const TechnicalSol = () => {
                     post.map(({ node }) => {
                       return (
                         <div className="container-first-slider" key={node.frontmatter.id}>
-                          <Row>
+                          <Row noGutters>
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
-                                  <Link href={`${node.frontmatter.featuredVideo.publicURL}`} >
+                                  <Link href={`${Lgn}${node.frontmatter.featuredVideo.publicURL}`} >
                                     <div className="download__container">
                                       <img src={DownLoadIcons} alt="icon download" />
                                     </div>
@@ -219,7 +219,7 @@ const TechnicalSol = () => {
                     post.map(({ node }) => {
                       return (
                         <div className="container-first-slider" key={node.frontmatter.id}>
-                          <Row>
+                          <Row noGutters>
                             <Col sm={5} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">

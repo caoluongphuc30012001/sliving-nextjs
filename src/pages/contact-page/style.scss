@@ -1,1 +1,15 @@
-
+@media (max-width: 475px) {
+    .contact-form-search
+        .contact-form-body
+        .contact-search
+        .react-select-container
+        .select-contries__indicators.countries-wrap {
+        border-right: unset;
+    }
+    .leaflet-container{
+        max-width: calc(100% - 10px) !important;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 385px;
+    }
+}

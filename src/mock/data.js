@@ -153,7 +153,7 @@ export const dataSolutionSuggestion = [
         id: 2,
         img: Image3,
         title: "Smart Parking",
-        path: "smart-parking-page"
+        path: "introduct-detail-page/smart-parking"
     },
     {
         id: 3,
@@ -165,7 +165,7 @@ export const dataSolutionSuggestion = [
         id: 4,
         img: Image5,
         title: "Smart Energy",
-        path: "introduction-technology-page"
+        path: "introduct-detail-page/smart-energy"
     },
     {
         id: 5,

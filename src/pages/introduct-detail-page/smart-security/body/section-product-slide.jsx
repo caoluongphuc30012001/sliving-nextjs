@@ -17,9 +17,8 @@ const SectionSlideProduct = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                 }
             },
             {
@@ -27,7 +26,6 @@ const SectionSlideProduct = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
                 }
             },
             {

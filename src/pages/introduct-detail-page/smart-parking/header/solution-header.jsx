@@ -7,14 +7,12 @@ const SolutionHeader = () => {
         <article>
             <section className="solution-header">
                 <div className="solution-header-img">
-                    <img src={solutionImg} alt="" />
+                    <img src={solutionImg} alt="giải pháp bãi đỗ xe thông minh sliving" />
                 </div>
                 <div className="solution-section-header">
                     <div className="section-header__title"><h3>{t(`Smart-Parking`)}</h3></div>
                     <div className="section-header__description">
-                        
-                        {t(`private-vehicles`)}
-                        
+                        <p> {t(`private-vehicles`)}</p>
                     </div>
                 </div>
             </section>
