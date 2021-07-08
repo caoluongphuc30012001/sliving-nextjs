@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from "react-slick";
-import vector from "@images/solution-page/body/Vector.svg";
 import rectangle1 from "@images/introduction-page/smart-energy/slide-1.svg";
 import rectangle2 from "@images/introduction-page/smart-energy/slide-2.svg";
 import rectangle3 from "@images/introduction-page/smart-energy/slide-3.svg";
@@ -52,11 +51,11 @@ const IntroductSlides = () => {
                         <div>{subtitle}</div>
                         <div className="fw-bold">{title}</div>
                     </div>
-                    <div className="chill__body-right">
+                    {/* <div className="chill__body-right">
                         <div className="btn-slides_chill">
                             <img src={vector} alt="icon vector" />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )

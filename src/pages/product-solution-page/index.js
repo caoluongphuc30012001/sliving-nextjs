@@ -25,7 +25,6 @@ const SolutionProduct = ({ location, pageContext: { url } }) => {
   useEffect(() => {
     const url = new URLSearchParams(location.search);
     setParams(url.get("id"));
-    console.log(params);
     if (params) {
       refView.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }

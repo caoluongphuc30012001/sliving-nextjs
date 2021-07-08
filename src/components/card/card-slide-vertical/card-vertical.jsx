@@ -1,7 +1,9 @@
 import React from "react";
 import imgPer from "@images/home-page/slide/permission.svg";
 import { Link } from "gatsby";
+import useGetLgn from "@hook/useGetLgn";
 const CardVertical = ({ imgUrl, title, path }) => {
+    const Lgn = useGetLgn();
     const standardized = (str) => {
         var convertToArray = str.toLowerCase().split(' ');
         var result = convertToArray.map((val) => {
@@ -15,7 +17,7 @@ const CardVertical = ({ imgUrl, title, path }) => {
         <div className="card-sol">
             <div className="card-sol-wrap" >
                 <div className="card-sol-header">
-                    <Link to={`/product/${path}/`} className="card-link">
+                    <Link to={`${Lgn}product/${path}/`} className="card-link">
                         <img src={imgUrl} alt="" />
                     </Link>
                 </div>

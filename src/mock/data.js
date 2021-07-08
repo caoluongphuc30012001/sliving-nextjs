@@ -8,36 +8,36 @@ export const navData = {
         {
             id: '0',
             title: 'HEADER.HOMEPAGE.PRODUCT&SOLUTION',
-            isActive: true,
+            isActive: false,
             path: "/product-solution-page", isHover: false,
             arrMenu: [
                 {
                     id: '0',
                     title: 'Smart Parking',
-                    isActive: true,
+                    isActive: false,
                     path: "/introduct-detail-page/smart-parking", isHover: false
                 },
                 {
                     id: '1',
                     title: 'Smart Home',
-                    isActive: true,
+                    isActive: false,
                     path: "/introduct-detail-page/smart-home", isHover: false
                 }, {
                     id: '2',
                     title: 'Saving Energy',
-                    isActive: true,
+                    isActive: false,
                     path: "/introduct-detail-page/smart-energy", isHover: false
                 },
                 {
                     id: '3',
                     title: 'Smart Security',
-                    isActive: true,
+                    isActive: false,
                     path: "/introduct-detail-page/smart-security", isHover: false
                 },
                 {
                     id: '4',
                     title: 'Smart Lighting',
-                    isActive: true,
+                    isActive: false,
                     path: "/introduct-detail-page/smart-lighting", isHover: false
                 },
             ]
@@ -53,36 +53,36 @@ export const navData = {
                 {
                     id: '0',
                     title: 'Technical_solutions',
-                    isActive: true,
+                    isActive: false,
                     path: "/", isHover: false
                 },
                 {
                     id: '1',
                     title: 'Construction_Manual',
-                    isActive: true,
+                    isActive: false,
                     path: "/", isHover: false
                 }, {
                     id: '2',
                     title: 'Agricultural_Materials',
-                    isActive: true,
+                    isActive: false,
                     path: "/", isHover: false
                 },
                 {
                     id: '3',
                     title: 'Product_Identification',
-                    isActive: true,
+                    isActive: false,
                     path: "/", isHover: false
                 },
                 {
                     id: '4',
                     title: 'Product_Warranty',
-                    isActive: true,
+                    isActive: false,
                     path: "/", isHover: false
                 },
                 {
                     id: '5',
                     title: 'Documents_Download',
-                    isActive: true,
+                    isActive: false,
                     path: "/", isHover: false
                 },
             ]

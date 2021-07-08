@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
+import useGetLgn from "@hook/useGetLgn";
 // styles
 const pageStyles = {
   color: "#232129",
@@ -26,6 +26,7 @@ const codeStyles = {
 
 // markup
 const NotFoundPage = () => {
+  const Lgn = useGetLgn();
   return (
     <main style={pageStyles}>
       <title>Not found</title>
@@ -45,7 +46,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to={`${Lgn}`}>Go home</Link>.
       </p>
     </main>
   )

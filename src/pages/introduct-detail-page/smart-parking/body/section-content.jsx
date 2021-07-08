@@ -3,8 +3,10 @@ import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import iconArrowRightF4 from "@images/icon/icon-arrow-right-F47403.svg";
 import { useTranslation } from 'react-i18next';
 import { Link } from "gatsby";
+import useGetLgn from "@hook/useGetLgn";
 const SectionContent = ({ imgUrl, title, description, url }) => {
     const { t } = useTranslation();
+    const Lgn = useGetLgn();
     return (
         <article className="solution-section-content container-wrap" id="section-content-1">
             <section className="section-content-wrap row" noGutters>
@@ -23,12 +25,14 @@ const SectionContent = ({ imgUrl, title, description, url }) => {
                         </ul>
                     </p>
                     <div className="btn-research">
-                        <Link to={`/introduct-detail-page/${url}`}>
+                        <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>
+                        <Link to={`${Lgn}introduct-detail-page/${url}`}>
                             <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>
                                 <span className="fs-18 fw-bold">{t(`More_Information`)}</span> <img id="btn-research-arrow-F4" src={iconArrowRightF4} alt="icon arrow right" />
                                 <img id="btn-research-arrow" src={iconArrowRight} alt="icon arrow right" />
                             </button>
                         </Link>
+                        </button>
                     </div>
                 </div>
             </section>

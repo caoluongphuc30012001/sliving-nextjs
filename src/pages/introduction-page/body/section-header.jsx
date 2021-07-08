@@ -2,8 +2,10 @@ import React from 'react';
 import iconArrowRight from "@images/icon/icon-arrow right.svg";
 import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
+import useGetLgn from "@hook/useGetLgn";
 const SectionHeader = () => {
     const { t } = useTranslation();
+    const Lgn = useGetLgn();
     return (
         <div className="section-introduction__header">
             <div className="container-wrap">
@@ -18,7 +20,7 @@ const SectionHeader = () => {
                         </p>
                     </div>
                     <div className="button-more">
-                        <Link to="/introduction-technology-page/">
+                        <Link to={`${Lgn}introduction-technology-page/`}>
                             <button className="btn-about-prod">
                                 <span className="fs-18">{t(`More_Information`)}</span> <img src={iconArrowRight} alt="icon arrow right" />
                             </button>

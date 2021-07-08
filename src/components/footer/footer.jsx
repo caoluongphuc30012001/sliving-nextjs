@@ -4,14 +4,15 @@ import Logo from "@images/logo/LOGO.png";
 import arrowRight from "@images/icon/arrow_right_alt.svg";
 import { Link } from "gatsby"
 import { useTranslation } from 'react-i18next';
+import useGetLgn from "@hook/useGetLgn";
 const Footer = () => {
     const { t } = useTranslation();
+    const Lgn = useGetLgn();
     return (
         <div className="main-footer">
             <div className="container-wrap">
                 <div className="main-footer-wrap">
-
-                    <Row className="footer-wrap__left">
+                    <Row className="footer-wrap__left" noGutters>
                         <Col className="footer-wrap__left-sub">
                             <ul className="list-unstyled double-space">
                                 <li className="fw-bold">{t(`Product`)}</li>
@@ -63,7 +64,7 @@ const Footer = () => {
                 <hr />
                 <Row className="logo-wrap" >
                     <div className="logo-wrap-left">
-                        <Link to="/"> <Image src={Logo} className="img-obj-cover" alt="sliving sunshine tech" /> </Link>
+                        <Link to={`${Lgn}`}> <Image src={Logo} className="img-obj-cover" alt="sliving sunshine tech" /> </Link>
                     </div>
                     <div className="logo-wrap-right">
                         <div className="logo-wrap-item">

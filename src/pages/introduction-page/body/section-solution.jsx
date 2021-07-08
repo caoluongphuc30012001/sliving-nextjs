@@ -5,7 +5,7 @@ const SectionSolution = () => {
     return (
         <div className="section-introduction__solution">
             <div className="introduction__solution-wrap container-wrap">
-                <SolutionSuggestion data={dataSolutionSuggestion} />
+                <SolutionSuggestion id={1}  data={dataSolutionSuggestion} />
             </div>
         </div>
     );

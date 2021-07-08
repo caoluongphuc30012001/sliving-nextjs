@@ -371,6 +371,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@query": path.resolve(__dirname, "./src/query"),
         "@videos": path.resolve(__dirname, "./src/videos"),
         "@pages": path.resolve(__dirname, "./src/pages"),
+        "@hook": path.resolve(__dirname,"./src/hook"),
         "@mock": path.resolve(__dirname, "./src/mock"),
       }
     }
