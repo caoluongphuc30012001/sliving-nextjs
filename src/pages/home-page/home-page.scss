@@ -44,7 +44,8 @@
       .btn-more {
         display: flex;
         align-items: center;
-        width: fit-content;
+        max-width: 215px;
+        width: 100%;
         justify-content: space-between;
       }
       a {
@@ -113,16 +114,6 @@ ol.carousel-indicators li.active {
 .section-slide {
   max-width: 1140px;
   margin: auto;
-}
-
-@media only screen and (max-width: 1024px) {
-  ol.carousel-indicators {
-    width: 100%;
-    margin: auto;
-    bottom: 20px;
-    right: 0;
-    justify-content: center;
-  }
 }
 
 @media only screen and (max-width: 1024px) {

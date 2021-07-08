@@ -6,9 +6,10 @@ import { useTranslation } from 'react-i18next';
 import PrevArrow from "@components/button/button-prev-arrow.jsx";
 import NextArrow from "@components/button/button-next-arrow.jsx";
 import CardHeader from "@components/card/card-title-header";
-
+import useGetLgn from "@hook/useGetLgn";
 const SolutionSuggestion = ({ data }) => {
   const { t } = useTranslation();
+  const Lgn =useGetLgn();
   const settings = {
     useTransform: false,
     className: "slide-vertical",
@@ -32,8 +33,8 @@ const SolutionSuggestion = ({ data }) => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
         }
       },
       {
@@ -51,7 +52,7 @@ const SolutionSuggestion = ({ data }) => {
   return (
     <>
       <div className="slide-sols txt-blue ">
-        <CardHeader title={t(`Solution_Suggestions`)} />
+        <CardHeader title={t(`Solution_Suggestions`)} id={1}/>
         <div className="slide-body">
           <Slider {...settings}>
             {
@@ -60,7 +61,7 @@ const SolutionSuggestion = ({ data }) => {
                   <div className="card-sol" key={item.id}>
                     <div className="card-sol-wrap" >
                       <div className="card-sol-header">
-                        <Link to={`/${item.path}`} className="card-link">
+                        <Link to={`${Lgn}${item.path}`} className="card-link">
                           <img src={item.img} alt="" />
                         </Link>
                       </div>
@@ -90,5 +91,4 @@ const SolutionSuggestion = ({ data }) => {
     </>
   )
 }
-
 export default SolutionSuggestion

@@ -8,7 +8,7 @@ import slivingicon from "../images/logo/logo-small.svg";
 import { Head } from '@wapps/gatsby-plugin-i18next';
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
     <>
       <Head hreflang>
@@ -19,7 +19,7 @@ const IndexPage = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet" />
       </Head>
-      <HomePage />
+      <HomePage props={props}/>
     </>
   );
 };

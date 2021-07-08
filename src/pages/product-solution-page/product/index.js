@@ -17,7 +17,6 @@ const Product = ({ pageContext }) => {
         const tmp = pageContext.dataProd;
         setData(tmp);
         setName(tmp.title);
-        console.log(tmp);
         if (tmp.property_2) {
             setSlide(prev => [...prev, tmp.property_2.publicURL]);
         }

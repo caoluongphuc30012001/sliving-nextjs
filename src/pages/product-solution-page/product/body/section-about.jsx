@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const SectionAbout = ({ banner }) => {
     const { t } = useTranslation();
     return (
-        <div className="container-wrap section-about-prod">
+        <div className="section-about-prod">
             {
                 banner ? (
                     <div className="section-about-banner">
@@ -16,7 +16,7 @@ const SectionAbout = ({ banner }) => {
                         </button>
                     </div>
                 ) : (
-                    <div className="about-prod-wrap">
+                    <div className="container-wrap  about-prod-wrap">
                         <div className="prod-about">
                             <div className="prod-about-title fs-64 fw-bold txt-blue">
                                 <span className="">Get the latest Sliving Thermostat updates</span>

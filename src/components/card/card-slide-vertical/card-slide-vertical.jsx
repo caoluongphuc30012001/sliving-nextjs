@@ -60,13 +60,15 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 					slidesToShow: 4,
 					slidesToScroll: 4,
 					infinite: true,
+					dots:false
 				}
 			},
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					dots:false
 				}
 			},
 
@@ -74,7 +76,8 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					dots:false
 				}
 			}
 		],

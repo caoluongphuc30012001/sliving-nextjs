@@ -9,12 +9,18 @@ import PortfolioContext from "../../context/context";
 // import imgtwit from "@images/icon/social/v2-twitter.svg";
 import imgSearch from "@images/icon/icon-search.svg";
 import LanguageSwitcher from "./switterLaguage";
+import { useLocation } from "@reach/router";
 const isBrowser = typeof window !== "undefined";
 const NavBar = () => {
+    const location = useLocation();
+    const pathName = location.pathname;
     const { arrNav } = useContext(PortfolioContext);
     const { menus } = arrNav;
     const { t } = useTranslation();
     useEffect(() => {
+        menus.forEach(element => {
+            element.isActive = pathName.indexOf(element.path) > -1 ? true : false;
+        })
         if (isBrowser) {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 0) {
@@ -31,11 +37,11 @@ const NavBar = () => {
             }, true)
         }
     }, []);
-    function activePage(id) {
-        menus && (menus.map((itemMenu) => (
+    const activePage = (id) => {
+        return menus && (menus.map((itemMenu) => (
             itemMenu.isActive = itemMenu.id === id ? true : false
         )))
-    };
+    }
     return (
         <div className="top-navbar">
             <div className="header-nav d-flex al-center just-cont-fl-end" id="header-nav">
@@ -71,7 +77,8 @@ const NavBar = () => {
                         <Navbar.Collapse id="responsive-navbar-nav" className="animation-nav" >
                             <Nav className=" nav-desktop" >
                                 {menus && menus.map((nav) => {
-                                    return <div  className={`fs-16 link-menu ${nav.arrNav ? 'mega-menu' : ''} `} id={`nav-id-${nav.id}`} key={nav.id} onClick={() => activePage(nav.id)} >
+                                    return <div className={`fs-16 link-menu ${nav.arrNav ? 'mega-menu' : ''} `} id={`nav-id-${nav.id}`} key={nav.id} onClick={() => activePage(nav.id)} role="button"
+                                        tabIndex={0} onKeyDown={() => activePage(nav.id)}>
                                         {nav && (<>
                                             <Link to={nav.path} className={`item-menu link  ${nav.isActive ? 'is-active' : ''}`} id="item-menu" > {t(`${nav.title}`)}</Link>
                                             <div className="nav-childs">

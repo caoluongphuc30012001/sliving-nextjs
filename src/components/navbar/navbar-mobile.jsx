@@ -26,7 +26,7 @@ const NavBarMobile = () => {
     };
     return (
         <div className=" menu menu-wrapper" id="menu-mobile-wrap">
-            <Navbar className="nav-header" collapseOnSelect expand="lg"  >
+            <Navbar className="nav-header container-wrap" collapseOnSelect expand="lg"  >
                 <Navbar.Brand href="/" className="logo" >
                     <Image src={logo} />
                 </Navbar.Brand>

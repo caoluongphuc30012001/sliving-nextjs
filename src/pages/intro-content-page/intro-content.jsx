@@ -144,7 +144,7 @@ const IntroContent = () => {
                         <div className="hp-banner-title"><h4>{t(`Career-opportunities`)}</h4></div>
                         <div className="hp-banner-description"><span>{t(`embody-core-values`)}
                         </span></div>
-                        <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#ffffff'} borderReadius={'16px'} padding={'10px 20px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
+                        <div className="hp-banner-btn"> <ButtonMore backgroundColor={'#F47403'} color={'#f9f9f9'} borderReadius={'16px'} padding={'10px 20px'} fontWeight={'700'} url={'/intro-content-page/'} /></div>
                     </div>
                 </div>
             </div>

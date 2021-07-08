@@ -33,14 +33,22 @@ const IntroductDetail = () => {
                     />
                 </div>
                 <div className="section-first">
-                    <SectionContent imgUrl={imgThird} title={t(`Smart-switch`)}
-                        url={"product-solution-page"} id="1"
-                    />
+                    <SectionContent imgUrl={imgThird} title={t(`Smart-switch`)} id={2} description={<ul>
+                            <li> Touch 4 nút</li>
+                            <li> Cong tac co hình chữ nhật</li>
+                            <li> Touch WIFI</li>
+                            <li> Touch Rem</li>
+                            <li> Touch Bình Nước Nóng</li>
+                        </ul>}/>
                 </div>
                 <div className="section-second">
-                    <SectionContent imgUrl={imgFour} title={t(`Sensor`)}
-                        url={"product-solution-page"} id="3"
-                    />
+                    <SectionContent imgUrl={imgFour} title={t(`Sensor`)} description={<ul>
+                            <li> Power Socket V3</li>
+                            <li> Pir</li>
+                            <li> Cảm Biến Siêu Âm</li>
+                            <li> Light Sensor</li>
+                            <li> Ổ Cắm Hình Chữ Nhật</li>
+                        </ul>}/>
                 </div>
                 <div className="section-first">
                     <SectionContent imgUrl={imgFive} title={t(`curtain`)}

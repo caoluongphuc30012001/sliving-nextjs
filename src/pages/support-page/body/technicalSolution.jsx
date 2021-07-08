@@ -10,7 +10,9 @@ import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
 import { Row, Col } from 'react-bootstrap';
 import DownLoadIcons from "@images/icon/download.png";
+import useGetLgn from "@hook/useGetLgn";
 const TechnicalSol = () => {
+  const Lgn = useGetLgn();
   const { t } = useTranslation();
   const data = DataSupportPage();
   const dataTechnicalAnswer = data.dataTechnicalAnswer.edges;
@@ -48,25 +50,16 @@ const TechnicalSol = () => {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 6,
+    slidesToShow: post.length > 6 ? 6 : 3,
+    slidesToScroll: post.length > 6 ? 6 : 3,
     vertical: true,
-    row: 6,
+    row: post.length > 6 ? 6 : 3,
     responsive: [
-      {
-        breakpoint: 2000,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 6,
-          infinite: true,
-          dots: true
-        }
-      },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 6,
+          slidesToScroll: 6,
           infinite: true,
           dots: true
         }
@@ -198,11 +191,11 @@ const TechnicalSol = () => {
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
-                                  <a href={`${node.frontmatter.featuredVideo.publicURL}`} target="_blank" download>
+                                  <Link href={`${node.frontmatter.featuredVideo.publicURL}`} >
                                     <div className="download__container">
-                                      <img src={DownLoadIcons} alt="Image 1"/>
+                                      <img src={DownLoadIcons} alt="icon download" />
                                     </div>
-                                  </a>
+                                  </Link>
                                   <div className="container-below-image">
                                     <div className="row">
                                       <span className="fs-12 fw-bold">Công trình :</span><span className="fs-12">Căn hộ</span>
@@ -230,7 +223,7 @@ const TechnicalSol = () => {
                             <Col sm={5} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
-                                  <Link to={`/support-page/${node.frontmatter.slug}`}>
+                                  <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}>
                                     {
                                       node.frontmatter.featuredImage && <Image className="image-example"
                                         src={node.frontmatter.featuredImage.publicURL} alt="Image 1"
@@ -248,7 +241,7 @@ const TechnicalSol = () => {
                             </Col>
                             <Col >
                               <div className="first-slider-wrap__right">
-                                <Link to={`/support-page/${node.frontmatter.slug}`}>
+                                <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}>
                                   <div className="text-title fs-16 fw-bold">{node.frontmatter.title}</div>
                                   <div className="text-date fs-12">{node.frontmatter.date}</div>
                                   <div className="text-description fs-14">{node.frontmatter.description}</div>
