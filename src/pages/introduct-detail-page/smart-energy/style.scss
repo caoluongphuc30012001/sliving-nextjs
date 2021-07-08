@@ -21,9 +21,10 @@ p {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 105px;
     .introduct-header-img{
       max-width: 1440px;
-      min-height: 649px;
+      max-height: 649px;
       width: 100%;
       height: 100%;
     }
@@ -305,8 +306,6 @@ p {
         font-weight: bold;
         font-size: 32px;
         line-height: 40px;
-        display: flex;
-        align-items: center;
         text-align: center;
         letter-spacing: -0.5px;
       }
@@ -322,10 +321,6 @@ p {
   }
 
   .section-slide-product {
-    img {
-      width: unset;
-    }
-
     .introduction-content3 {
       padding-top: 0;
       margin-left: 0;
@@ -334,16 +329,8 @@ p {
         padding: 0;
       }
     }
-
-    .article-wrap-right {
-      margin-left: 15px;
-    }
     
   }
-}
-
-.section-first {
-  margin-top: 113px;
 }
 .energy-page{
   .slides-chill__body{

@@ -135,7 +135,19 @@
     padding: 0;
   }
 }
-
+.article-wrap-container{
+  .article-wrap-left{
+    img{
+      max-width: 600px;
+      max-height: 498px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+}
 @media (max-width: 1024px) {
   .introduction-page .section-introduction__header .section-introduction-wrap {
     padding-top: 50px;

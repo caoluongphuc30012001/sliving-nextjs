@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect,useMemo } from "react";
 import { Navbar, Image, Nav, InputGroup, FormControl } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 import { Link } from '@wapps/gatsby-plugin-i18next';
