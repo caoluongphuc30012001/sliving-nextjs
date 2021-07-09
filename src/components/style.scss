@@ -38,7 +38,7 @@
 .is-acitve-subMenu {
   background-color: #f47403;
   color: #ffffff;
-  span{
+  span {
     color: #ffffff;
   }
 }
@@ -111,7 +111,8 @@
   z-index: 2;
   background-color: #ffffff;
   font-weight: 400;
-  box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16),
+    0px 4px 8px rgba(38, 50, 56, 0.08);
   border-radius: 5px;
   transition: all 0.3s ease;
   visibility: hidden;
@@ -1390,7 +1391,8 @@ a.btn-link-a {
 .banner {
   background-color: #f2f2f2;
   padding: 18px 0;
-  box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+  box-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16),
+    0px 4px 8px rgba(38, 50, 56, 0.08);
 
   .btn-content {
     button {
@@ -1587,7 +1589,6 @@ a.btn-link-a {
 
 .form-support {
   max-width: 718px;
-  width: 100%;
   margin: auto;
   width: 100%;
 
@@ -1723,7 +1724,8 @@ a.btn-link-a {
   margin-bottom: 54px;
   .card-horizonal {
     &:hover {
-      box-shadow: 0px 8px 8px rgb(38 50 56 / 12%), 0px 16px 24px rgb(38 50 56 / 8%);
+      box-shadow: 0px 8px 8px rgb(38 50 56 / 12%),
+        0px 16px 24px rgb(38 50 56 / 8%);
       border: none;
       .horizonal-wrap__desc-text {
         cursor: pointer;
@@ -1983,6 +1985,10 @@ a.btn-link-a {
   .nav-header {
     flex-direction: row-reverse;
     justify-content: flex-end !important;
+
+    .logo {
+      margin-left: 100px;
+    }
   }
 
   .page-wrap {
@@ -1998,7 +2004,6 @@ a.btn-link-a {
 
   .nav-mobile {
     position: absolute;
-    height: 100vh;
     box-shadow: 0 0 0px #85888c;
 
     .nav-link {
@@ -2081,7 +2086,7 @@ a.btn-link-a {
   }
 
   .card-sol {
-    padding: 0;
+    padding: 10px 35px;
     .card-sol-des {
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -2094,8 +2099,10 @@ a.btn-link-a {
 
   .card-slide {
     .slide-prods {
+      margin: 0 100px;
       .slide-prod {
         .slide-prod-wrap {
+          margin: auto;
           .prod-wrap-title {
             white-space: nowrap;
           }
@@ -2156,6 +2163,7 @@ a.btn-link-a {
       .section-swiper {
         .swiper-pagination {
           left: unset !important;
+          bottom: 20px;
         }
       }
     }
@@ -2256,7 +2264,10 @@ a.btn-link-a {
     margin: auto;
     white-space: normal;
   }
-  .section-horizontal-slide .horizontal-slide .horizontal-slide-wrap .horizontal__group-wrap {
+  .section-horizontal-slide
+    .horizontal-slide
+    .horizontal-slide-wrap
+    .horizontal__group-wrap {
     .horizontal-slide__title {
       font-size: 18px;
     }
@@ -2555,7 +2566,10 @@ a.btn-link-a {
     font-size: 30px;
   }
 
-  .section-horizontal-slide .horizontal-slide .section-swiper .swiper-pagination {
+  .section-horizontal-slide
+    .horizontal-slide
+    .section-swiper
+    .swiper-pagination {
     left: unset !important;
     bottom: 0;
   }
@@ -2687,17 +2701,19 @@ a.btn-link-a {
       }
 
       .prod-line-wrap {
-        width: 670px;
+        max-width: 670px;
         background: #f9f9f9;
         position: relative;
         margin: 0px 15px 30px;
+        width: 100%;
 
         .prod-line-wrap__header {
-          width: 670px;
+          max-width: 670px;
           height: 380px;
           background-color: #ffffff;
           border-top-left-radius: 16px;
           border-top-right-radius: 16px;
+          width: 100%;
 
           img {
             width: 100%;
@@ -2803,18 +2819,20 @@ a.btn-link-a {
     }
     .card-prod-line {
       .prod-line-wrap {
-        width: 320px;
+        max-width: 320px;
         background: #f9f9f9;
         position: relative;
         margin: 0px 14px 30px;
         border-radius: 10px;
+        width: 100%;
 
         .prod-line-wrap__header {
-          width: 320px;
+          max-width: 320px;
           height: 260px;
           background-color: #ffffff;
           border-top-left-radius: 16px;
           border-top-right-radius: 16px;
+          width: 100%;
 
           img {
             width: 100%;
@@ -2859,6 +2877,68 @@ a.btn-link-a {
     .slick-dots .slick-active {
       button {
         color: #f47403;
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .card-prod-line {
+      margin-top: 54px !important;
+      max-width: 310px !important;
+      width: 100%;
+
+      .prod-line-wrap {
+        max-width: 320px;
+        background: #f9f9f9;
+        position: relative;
+        margin: 0px 14px 30px;
+        border-radius: 10px;
+        width: 100%;
+
+        .prod-line-wrap__header {
+          max-width: 320px;
+          height: 260px;
+          background-color: #ffffff;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            object-fit: cover;
+          }
+        }
+
+        .prod-line-wrap__body {
+          width: inherit;
+          padding: 10px 29.5px 29.5px 16px;
+
+          .line-wrap__subtitle {
+            color: #5c5c5c;
+          }
+
+          .line-wrap__description {
+            color: #adadad;
+            //height            : 72px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    .pagination-sort {
+      .pagination-sort-body {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 140px;
       }
     }
   }

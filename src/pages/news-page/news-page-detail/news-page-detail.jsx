@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import VideoWebm1 from "@videos/home-page/slide-1.webp";
 import Video1 from "@videos/home-page/slide-1.mp4";
 import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
+import { useTranslation } from 'react-i18next';
 const NewPageDetail = ({ data, node }) => {
+  const { t } = useTranslation(); 
   const [content, setContent] = useState();
   const [posts, setPosts] = useState([]);
 
@@ -21,7 +23,7 @@ const NewPageDetail = ({ data, node }) => {
               {
                 content && (
                   <>
-                    <div className="news-page-time"><span className="fs-16 fw-bold">Sliving</span> <span className="time-post">đăng vào lúc {content.frontmatter.date}</span></div>
+                    <div className="news-page-time"><span className="fs-16 fw-bold">Sliving</span> <span className="time-post">{t(`posted-at`)} {content.frontmatter.date}</span></div>
                     <div dangerouslySetInnerHTML={{ __html: content.html }} />
                   </>
                 )

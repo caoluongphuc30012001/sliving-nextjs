@@ -8,6 +8,7 @@ import DataNewsPage from "@query/news-page";
 import { useTranslation } from 'react-i18next';
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
+import { Row, Col } from 'react-bootstrap';
 const NewsPage = () => {
     const { t } = useTranslation();
     const data = DataNewsPage();
@@ -22,7 +23,7 @@ const NewsPage = () => {
     return (
         <Layout>
             <div className="news-page container-wrap">
-                <div className="news-page-wrap">
+                <Row className="news-page-wrap">
                     <div className="news-page-left news-page-column">
                         <div className="product-line">
                             <SlideProductLine data={dataProductLine} />
@@ -36,7 +37,21 @@ const NewsPage = () => {
                         <ProductSuggest title={t(`Latest_News`)} data={dataNewsSuggest} />
                         <ProductSuggest title={t(`Latest_Video`)} data={dataNewsVideo} isVideo={true} />
                     </div>
-                </div>
+
+
+                    {/* <div className="news-page-left news-page-column">
+                        <div className="product-line">
+                            <Row>
+                            <Col>
+                            <SlideProductLine data={dataProductLine} />
+                            </Col>
+                            <Col className="news-page-right news-page-column">
+                            <ProductSuggest title={t(`Smart_Home`)} data={dataSmartHome} />
+                            </Col>
+                            </Row>
+                        </div>
+                    </div> */}
+                </Row>
             </div>
         </Layout>
     )

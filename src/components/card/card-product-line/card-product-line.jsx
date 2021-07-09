@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+ import { Link } from "gatsby";
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import iconArrowRightF4 from "@images/icon/icon-arrow-orange.svg";
