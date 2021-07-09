@@ -10,7 +10,7 @@ const SectionSlidesProduct = ({ title }) => {
         <article>
             <section className="introduct-slides-product container-wrap">
             <div className="product-title txt-blue fw-bold">
-                    <h4>{t(`Smart-security-solution`)}</h4>
+                    <h4>{t(`Smart-Security-system`)}</h4>
                 </div>
                 <div className="slides-product__title fw-bold">
                     <span>{title}</span>

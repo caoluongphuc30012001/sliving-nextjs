@@ -45,7 +45,7 @@
     "Air_Conditioning_System": "Hệ thống điều hòa",
     "Smart_Curtain": "Rèm thông minh",
     "Smart_Meter": "Đo lường thông minh",
-    "Zigbee_KIT" : "Zigbee KIT",
+    "Zigbee_KIT": "Zigbee KIT",
     "Door_motor_gate": "Động cơ cửa - cổng"
   },
   "The_Reason": "Lý do bạn nên lựa chọn Sliving",
@@ -174,18 +174,20 @@
   "Recommended-news": "Tin tức đề xuất",
   "IoT-Flatform": "Nhà tiên phong cung cấp giải pháp toàn diện về IoT Flatform tại Việt Nam",
   "Smart-parking-solution": "Giải pháp đỗ xe cho công trình của bạn",
-  "private-vehicles": " Tại các thành phố lớn, lượng phương tiện giao thông càng tăng cao, trong khi quỹ đất dành cho bãi đỗ, gửi xe lại chưa được tăng theo tương xứng. Mô hình bãi đổ xe thông minh hoạt động hoàn toàn tự động, tiết kiệm thời gian, góp phần gia tăng sức chứa cho bến bãi và tạo thêm nhiều tiện ích cho người sử dụng. Chỉ với sự kết hợp chặt chẽ của 4 sản phẩm : Cảm biến siêu âm, hộp đèn led, bảng led và camera tạo nên sự khác biệt so với các bãi đổ xe thông thường.",
-  "Lighting-solutions": "Giải pháp chiếu sáng cho công trình của bạn",
+  "private-vehicles": "Bạn thường lo lắng trên đường rằng không biết bãi xe sắp đến còn chỗ trống hay không. Khi đến nơi bạn lại loay hoay mất thời gian đi tìm chỗ trống trong hầm. Tất cả những rắc rối trên đều được giải quyết bằng giải pháp Smart Parking - bãi đỗ xe thông minh của SLiving.",
+  "Lighting-solutions": "Giải pháp chiếu sáng thông minh cho bạn",
   "Smart-lighting": "Chiếu sáng thông minh",
   "core-feature": "Tính năng cốt lõi của chiếu sáng thông minh là tính linh hoạt của hệ thống điều khiển – có nghĩa là người dùng sẽ không cần dựa vào công tắc treo tường truyền thống để bật/tắt đèn. Hệ thống này sẽ giúp điều khiển ánh sáng ở bất cứ nơi nào trong ngôi nhà thông qua ứng dụng trên điện thoại di động hoặc máy tính bảng. Không chỉ có vậy, sản phẩm chiếu sáng thông minh còn có nhiều đặc điểm cực kỳ nổi bật như có thể tự điều chỉnh công suất, độ sáng, hẹn giờ tắt mở, thay đổi màu sắc theo điệu nhạc...",
   "Career-opportunities": "Cơ hội nghề nghiệp",
   "embody-core-values": "Giá trị cốt lõi là những chuẩn mực về thái độ, hành vi, niềm tin và giá trị, mà mỗi thành viên SLIVING được mong đợi thể hiện ở bất kỳ vị trí nào. Các giá trị cốt lõi này được hình thành từ giá trị của những người điều hành doanh nghiệp và tập thể người lao động.",
   "Smart-security-solution": "Giải pháp an ninh thông minh cho bạn",
   "Energy-saving": "Tiết kiệm năng lượng",
-  "collect-energy": "Giải pháp này có nhiều tính năng như: thu thập tự động giá trị các thông số năng lượng: tổng năng lượng tiêu thụ tích lũy (bao gồm số điện, tấn hơi, mét khối nước…), năng lượng tiêu thụ tức thời và chất lượng năng lượng…; gửi ngay các cảnh báo, sự kiện bất thường qua web trên máy tính, qua ứng dụng trên điện thoại thông minh và máy tính bảng. Nhờ thông tin này, người dùng có thể kịp thời xử lý các sự cố, tránh được tai nạn cháy nổ, hư hỏng máy móc do sự cố điện...",
-  "Smart-Security-system": "Sản phẩm trong hệ thống an ninh thông minh",
+  "collect-energy": "Giải pháp tiết kiệm năng lượng của SLiving",
+  "Smart-Security-system": "Sản phẩm trong hệ thống An ninh thông minh",
+  "Smart-parking-product": "Sản phẩm  trong hệ thống Bãi xe thông minh ",
   "Energy-saving-product": "Sản phẩm tiết kiệm năng lượng",
   "Parking-products": "Sản phẩm đậu xe",
+  "Smart_security_product": "Sản phẩm an ninh thông minh",
   "smart-energy": "Năng lượng thông minh",
   "SMART-OFFICE": "VĂN PHÒNG THÔNG MINH",
   "SMART-APARTMENT": "NHÀ THÔNG MINH",
@@ -195,14 +197,43 @@
   "Smart-switch": "Công tắc thông minh",
   "Sensor": "Cảm biến",
   "Door-Gate": "Động cơ cửa - cổng",
-  "security-description": "Hệ thống an ninh thông minh với các thiết bị an ninh được chế tạo ra nhằm mục đích thay thế con người bảo vệ tài sản, cá nhân hóa đời sống riêng tư một cách toàn diện nhất.",
+  "security-description": "Giải pháp an ninh thông minh của SLiving xây dựng một hệ thống an ninh “đa lớp” giúp đảm bảo không gian riêng tư, an toàn cho mỗi khách hàng và dễ dàng kiểm soát cho các nhà quản lý.",
   "Smart-security": "An ninh thông minh",
   "Smart-Fingerprint": "Khóa Vân Tay Thông Minh",
   "Smart-Swing": "Cửa Xoay Thông Minh",
   "Face-ID-title": "Nhận diện khuôn mặt",
-  "fingerprint-recognition": "Sử dụng phương thức nhận dạng vân tay để đóng / mở cửa.Tích hợp máy quét thẻ từ, mật mã.Có đèn báo, âm báo rõ ràng cho các trường hợp.Có thể mở khóa từ xa thông qua tính năng bluetooth trên điện thoại.",
-  "swing-door-descrip": "Là thiết bị quản lý an ninh kết hợp với các phần mềm độc quyền khác, thiết bị này có thể theo dõi khách ra vào, quản lý công việc xây dựng, loại bỏ những người có ý định nhảy qua cổng để ra vào, tăng hiệu quả hoạt động trong khu vực quản lý.",
-  "biometric-technology": "Sử dụng công nghệ sinh trắc học trích xuất đặc điểm nhận diện khuôn mặt để xác thực cư dân, ứng dụng cho việc kiểm soát ra vào các khu vực cần giám sát cũng như sử dụng để gọi thang, mở barrier.",
+  "fingerprint-recognition": {
+    "step_1": "Sử dụng phương thức nhận dạng vân tay để đóng / mở cửa.",
+    "step_2": "Tích hợp máy quét thẻ từ, mật mã.Có đèn báo, âm báo rõ ràng cho các trường hợp.",
+    "step_3": "Có đèn báo, âm báo rõ ràng cho các trường hợp",
+    "step_4": "Có thể mở khóa từ xa thông qua tính năng bluetooth trên điện thoại."
+  },
+  "swing-door-descrip": {
+    "step_1": "Thiết bị quản lý an ninh khu vực kết hợp với các phần mềm độc quyền",
+    "step_2": "Tích hợp hệ thống nhận diện khuôn mặt hoặc thẻ từ",
+    "step_3": "Kết hợp với thang máy thông minh để gọi tầng tự động",
+    "step_4": "Tự động mở cửa khi có thông báo khẩn cấp"
+  },
+  "biometric-technology": {
+    "step_1": "Sử dụng công nghệ sinh trắc học trích xuất đặc điểm nhận diện khuôn mặt",
+    "step_2": "Xác thực cư dân, kiểm soát ra vào các khu vực cần giám sát cũng như sử dụng để gọi thang, mở barrier",
+    "step_3": "Tích hợp vào camera an ninh",
+    "step_4": "Nhận diện được nhiều gương mặt cùng lúc"
+  },
   "specialized-business": "Những lĩnh vực phát triển của công ty :",
-  "Over-the-years": "Trong những năm qua, Sliving luôn không ngừng phát triển và cho ra đời các giải pháp công nghệ tiên tiến giúp mỗi người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi nhất..."
+  "Over-the-years": "Trong những năm qua, Sliving luôn không ngừng phát triển và cho ra đời các giải pháp công nghệ tiên tiến giúp mỗi người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi nhất...",
+  "smart_energy": {
+    "section_1": {
+      "title": "Thiết bị điện “sống” cùng bạn",
+      "subDescription": "Các thiết bị như đèn, máy lạnh, máy nước nóng,...hoạt động và nghỉ ngơi theo thói quen và nhu cầu người dùng:",
+      "description_1": "Thiết bị điện đồng loạt tắt khi chọn kịch bản “Ra ngoài”",
+      "description_2": "Khi bạn ngủ sâu, nhiệt độ máy lạnh tăng dần",
+      "description_3": "Đèn trong phòng điều chỉnh độ sáng phù hợp nhu cầu sử dụng,..."
+    },
+    "section_2": {
+      "title": "Chủ động giám sát năng lượng tiêu thụ",
+      "subDescription": "Thông số điện, nước cập nhật nhanh chóng và dễ dàng thông qua các thiết bị đo lường kết nối ứng dụng điện thoại.Qua đó giúp bạn theo dõi cũng như phát hiện sớm những sự cố rò rỉ bất ngờ."
+    }
+  },
+  "footer-description":"Xin chào, chúng tôi là Lift Media. Mục tiêu của chúng tôi là chuyển đổi những tác động tích cực từ cách mạng hóa cách các công ty tương tác với khách hàng và nhóm của họ."
 }

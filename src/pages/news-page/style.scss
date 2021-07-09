@@ -78,7 +78,8 @@
     display: flex;
 
     &-in-left {
-        width: 670px;
+        max-width: 670px;
+        width: 100%;
         flex: 1.8;
         color: #5c5c5c;
         line-height: 24px;

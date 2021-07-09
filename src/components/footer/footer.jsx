@@ -54,7 +54,7 @@ const Footer = () => {
                                     <button type="button" className="btn btn-default " aria-label="arrow right"><img src={arrowRight} alt="icon arrow right" /></button>
                                 </div>
                                 <div className="search-group-wrapper">
-                                    <span className="fs-16 search-group-wrapper__sub">Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing how companies engage with their clients & their team.</span>
+                                    <span className="fs-16 search-group-wrapper__sub">{t(`footer-description`)}</span>
                                 </div>
                             </div>
                         </div>

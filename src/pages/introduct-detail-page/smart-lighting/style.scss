@@ -117,7 +117,8 @@ p {
         .slides-chill__body {
           background-color: #f2f2f2;
           padding-top: 18px;
-          padding-left: 32px;
+          padding-left: 15px;
+          padding-right: 15px;
           padding-bottom: 52px;
           justify-content: space-between;
           border-bottom-left-radius: 8px;
@@ -128,8 +129,6 @@ p {
               &:first-child {
                 font-size: 16px;
                 line-height: 24px;
-                display: flex;
-                align-items: center;
                 color: #858585;
               }
 
@@ -138,9 +137,7 @@ p {
                 font-weight: bold;
                 font-size: 24px;
                 line-height: 36px;
-                display: flex;
-                align-items: center;
-                letter-spacing: -0.25px;
+                letter-spacing: -0.5px;
                 text-transform: uppercase;
                 color: #5c5c5c;
               }
@@ -209,7 +206,7 @@ p {
           width: fit-content;
           height: 48px;
           padding: 12px 6px 12px 13px;
-          margin-top: 32px;
+          margin-top: 80px;
           margin-bottom: 64px;
           #btn-research-arrow {
             display: none;
@@ -282,8 +279,11 @@ p {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.2px;
-        text-decoration-line: underline;
         color: #5c5c5c;
+        &:hover {
+          cursor: pointer;
+          text-decoration-line: underline;
+        }
       }
     }
   }
@@ -299,4 +299,3 @@ p {
     }
   }
 }
-

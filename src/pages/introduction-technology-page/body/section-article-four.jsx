@@ -16,7 +16,7 @@ const SectionArticleFour = () => {
                     <Col xs={7} className="article-wrap-left">
                         <img className="image4" src={Image4} alt="sliving second banner" />
                     </Col>
-                    <Col xs={5} className="article-wrap-right">
+                    <Col xs={5} className="article-wrap-right section-outstanding-project">
                         <div>
                             <div className="article-header fs-48 fw-bold txt-blue">
                                 <span>{t(`Security-control`)}</span>

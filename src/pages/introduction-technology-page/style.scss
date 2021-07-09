@@ -167,13 +167,13 @@
         width    : 100%;
     }
 
-    .image6 {
-        max-width    : 1170px;
-        max-height   : 497px;
-        border-radius: 10px;
-        height       : 100%;
-        position     : absolute;
-    }
+    // .image6 {
+    //     max-width    : 1170px;
+    //     max-height   : 497px;
+    //     border-radius: 10px;
+    //     height       : 100%;
+    //     position     : absolute;
+    // }
 
     .project {
         color         : #1A7DD8;
@@ -261,7 +261,11 @@
       }
     }
   }
-
+  .introduction-page {
+    .section-outstanding-project{
+        gap: 0 !important;
+    }
+  }
   @media (max-width:1024px){
     .introduction-page {
         .section-introduction__article {

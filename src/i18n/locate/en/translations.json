@@ -45,7 +45,7 @@
     "Air_Conditioning_System": "Air Conditioning System",
     "Smart_Curtain": "Smart Curtain",
     "Smart_Meter": "Smart Measurement",
-    "Zigbee_KIT" : "Zigbee KIT",
+    "Zigbee_KIT": "Zigbee KIT",
     "Door_motor_gate": "Door Motor Gate"
   },
   "The_Reason": "The Reasons Why You Should Choose Sliving",
@@ -174,7 +174,7 @@
   "Recommended-news": "Recommended news",
   "IoT-Flatform": "A pioneer in providing comprehensive solutions for IoT Flatform in Vietnam",
   "Smart-parking-solution": "Parking solution for your project",
-  "private-vehicles": "There is a massive increase in the number of private vehicles in big cities, but the parking spaces are not commensurate with the parking demand. The smart parking system works fully automatically, saving time, contribute to increase the capacity of the parking lot and create more utilities for the users. Only with the combination of 4 products: Ultrasonic sensor, led lightbox, led panel and a camera will create the difference compared to normal parking lots.",
+  "private-vehicles": "You often worry on the road that you do not know if the upcoming parking lot is available or not. When you get there, you will have to waste time looking for an empty place in the cellar. All the above problems are solved by Smart Parking solution - smart parking of SLiving.",
   "Lighting-solutions": "Smart lighting solutions for your projects",
   "Smart-lighting": "Smart lighting",
   "core-feature": "The core feature of smart lighting is the flexibility of the control system – meaning the users won't need to rely on traditional wall switches to turn the lights on/off. This system will help control the light anywhere in the house through an app on a mobile phone, or tablet. Not only that, smart lighting products also have many extremely outstanding features such as being able to manually adjust power, brightness, timer on and off, changing colors according to the music... ",
@@ -182,10 +182,12 @@
   "embody-core-values": "Each SLIVING member is expected to embody core values ​​such as attitudes, behaviors, beliefs, and values in any position in the organization. These core values ​​are formed from the values ​​of the people who run the business and the collective of workers.",
   "Smart-security-solution": "Smart security solutions for you",
   "Energy-saving": "Energy saving",
-  "collect-energy": "This solution has many features such as auto collect energy parameters: total accumulated energy consumption (including electricity, tons of steam, cubic meters of water...), instantaneous energy consumption and energy quality,... Sending alerts instantly about unusual events via the website on computers, or via apps on smartphones and tablets. Thanks to this information, users can promptly handle incidents, avoid fire accidents, and damage to machinery because of electrical problems, etc.",
+  "collect-energy": "SLiving's energy-saving solution",
   "Smart-Security-system": "Products in the Smart Security system",
+  "Smart-parking-product": "Products in the Smart Parking system",
   "Energy-saving-product": "Energy-saving product",
   "Parking-products": "Parking products",
+  "Smart_security_product": "Smart security product",
   "smart-energy": "SMART ENERGY",
   "SMART-OFFICE": "SMART OFFICE",
   "SMART-APARTMENT": "SMART HOME",
@@ -195,15 +197,43 @@
   "Smart-switch": "Smart switch",
   "Sensor": "Sensor",
   "Door-Gate": "Door-Gate motor",
-  "security-description": "Smart security system uses security devices to protect assets in place of human, personalize private life in the most comprehensive way.",
+  "security-description": "SLiving's smart security solution builds a “multi-layer” security system that ensures a private, safe space for each customer and is easy to control for managers.",
   "Smart-security": "Smart security",
   "Smart-Fingerprint": "Smart Fingerprint Lock",
   "Smart-Swing": "Smart Swing Door",
   "Face-ID-title": "Face ID",
-  "fingerprint-recognition": "Use fingerprint recognition method to close / open the door. Integrated with magnetic card scanner, password. There are clear lights and tones for all cases. Can unlock remotely via bluetooth feature on the phone.",
-  "swing-door-descrip": "As a security management device combined with other proprietary software, this device can track visitors, manage construction work, eliminate people who intend to jump through the gate to enter and increase the operation efficiency in the management area.",
-  "biometric-technology": "Using facial recognition biometric technology to authenticate residents, control access to monitor areas as well as using the elevator, and opening the barriers.",
+  "fingerprint-recognition": {
+    "step_1": "Use fingerprint recognition method to close / open the door.",
+    "step_2": "Integrated with magnetic card scanner, password.",
+    "step_3": "There are clear lights and tones for all cases.",
+    "step_4": "Can unlock remotely via bluetooth feature on the phone."
+  },
+  "swing-door-descrip": {
+    "step_1": "Area security management device combined with proprietary software",
+    "step_2": "Integrated facial recognition system or magnetic card",
+    "step_3": "Combine with smart elevator to call floors automatically",
+    "step_4": "Automatically open the door when there is an emergency notification"
+  },
+  "biometric-technology": {
+    "step_1": "Using biometric technology to extract facial features",
+    "step_2": "Authenticate residents, control access to areas to be monitored as well as use to call elevators, open barriers",
+    "step_3": "Integrated into security camera",
+    "step_4": "Can recognize multiple faces at the same time"
+  },
   "specialized-business": "Specialized business areas: ",
-  "Over-the-years": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, and convenient life."
-  
+  "Over-the-years": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, and convenient life.",
+  "smart_energy": {
+    "section_1": {
+      "title": "Electrical equipment “lives” with you",
+      "subDescription": "Equipment such as lights, air conditioners, water heaters, etc. operate and rest according to user habits and needs:",
+      "description_1": "Electrical equipment turns off simultaneously when selecting the scenario “Going out”",
+      "description_2": "When you sleep deeply, the temperature of the air conditioner increases gradually",
+      "description_3": "The lights in the room can be adjusted to suit your needs."
+    },
+    "section_2": {
+      "title": "Actively monitor energy consumption",
+      "subDescription": "Electricity and water parameters are updated quickly and easily through measuring devices connected to the phone application. Thereby helping you to monitor and detect unexpected leaks early."
+    }
+  },
+  "footer-description":"Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing how companies engage with their clients & their team."
 }

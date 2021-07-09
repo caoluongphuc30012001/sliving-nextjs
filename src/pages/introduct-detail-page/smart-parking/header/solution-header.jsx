@@ -5,7 +5,7 @@ const SolutionHeader = () => {
     const { t } = useTranslation();
     return (
         <article>
-            <section className="solution-header">
+            <section className="solution-header smart-parking">
                 <div className="solution-header-img">
                     <img src={solutionImg} alt="giải pháp bãi đỗ xe thông minh sliving" />
                 </div>
