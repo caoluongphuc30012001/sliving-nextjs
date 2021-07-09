@@ -10,11 +10,17 @@ const LanguageSwitcher = ({ changeLng }) => {
         i18n.changeLanguage(lgn)
         setIsChange(lgn === "vn" ? true : false);
     };
-    const [language, setLanguage] = useState("");
+    const [language] = useState(localStorage.getItem("i18nextLng"));
     const [isChange, setIsChange] = useState(false);
     useEffect(() => {
-        setLanguage(localStorage.getItem("i18nextLng"));
-        setIsChange(language === "vn" ? true : false);
+        if (language === "vn") {
+            setIsChange(true)
+            return null;
+        }
+        if (language !== "vn") {
+            setIsChange(false)
+            return null;
+        }
         if (isBrowser) {
             const pathPublic = window.location.href;
             if (typeof pathPublic === "string") {

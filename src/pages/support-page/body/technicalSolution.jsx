@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./support-style.scss";
 import Slider from "react-slick";
 import { Form, Dropdown, Image } from "react-bootstrap";
@@ -8,9 +8,11 @@ import DataSupportPage from "@query/support-page";
 import FormPagination from '@components/pagination/form-pagination';
 import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Accordion, Card } from 'react-bootstrap';
 import DownLoadIcons from "@images/icon/download.png";
 import useGetLgn from "@hook/useGetLgn";
+import iconDropdown from "@images/icon/dropdownArrow.svg";
+import iconSort from "@images/icon/sort-icon.svg";
 const TechnicalSol = () => {
   const Lgn = useGetLgn();
   const { t } = useTranslation();
@@ -95,7 +97,18 @@ const TechnicalSol = () => {
       </div>
     )
   };
+  const [titleSuport, SetTitleSuport] = useState("Technical_solutions");
+  const [isMobile, SetIsMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth > 662) {
+      SetIsMobile(false);
+    }
+    if (window.innerWidth <= 662) {
+      SetIsMobile(true);
+    }
+  }, [isMobile])
   const handleClick = (id, title) => {
+    SetTitleSuport(title)
     arrDrop.forEach((item) => {
       item.isActive = id === item.id ? true : false;
     })
@@ -114,7 +127,7 @@ const TechnicalSol = () => {
         <Col sm={5} xs={12}>
           <div className="support-page-left">
             <div className="left-container">
-              <div className="technical-dropdown card">
+              {!isMobile && (<div className="technical-dropdown card">
                 {
                   arrDrop && arrDrop.map(item => {
                     return (
@@ -122,6 +135,25 @@ const TechnicalSol = () => {
                     )
                   })
                 }
+
+              </div>)}
+              <div className="technical-mobile">
+                {isMobile && (<Accordion >
+                  <Card>
+                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                      {t(`${titleSuport}`)} <span><img src={iconDropdown} alt="icon dropdown sliving" /></span>
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="0">
+                      <Card.Body>{
+                        arrDrop && arrDrop.map(item => {
+                          return (
+                            <Dropdown.Item className={`${item.isActive ? 'is-active-item' : ''}`} onClick={() => handleClick(item.id, item.title)}>{t(`${item.title}`)}</Dropdown.Item>
+                          )
+                        })
+                      }</Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                </Accordion>)}
               </div>
             </div>
           </div>
@@ -134,53 +166,100 @@ const TechnicalSol = () => {
               <div className="organize-dropdown container-wrap-page">
                 <FormPagination count={post.length} variable={t(`posts`)} />
               </div>
-              <div className="container-outside">
-                <div className="table-dropdown ">
-                  <Row noGutters>
-                    <Col className="col-in-containerOutside">
-                      <Dropdown>
-                        <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
-                          {t(`Current_Construction`)} <img className="font-weight-bold" src={DropArrow} alt="" />
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                          {arrContruction && arrContruction.map((product, index) => {
-                            return (<Dropdown.Item key={index}>{product.title}</Dropdown.Item>)
-                          })}
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </Col>
-                    <Col className="col-in-containerOutside">
-                      <Dropdown>
-                        <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
-                          {t(`Product_Groups`)} <img className="font-weight-bold" src={DropArrow} alt="" />
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                          {arrGroupProduct && arrGroupProduct.map((product, index) => {
-                            return (<Dropdown.Item key={index}>{t(`${product.title}`)}</Dropdown.Item>)
-                          })}
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </Col>
-                    <Col className="col-in-containerOutside">
-                      <Dropdown>
-                        <Dropdown.Toggle id=" dropdown-table">
-                          {t(`Product_Features`)} <img className="font-weight-bold" src={DropArrow} alt="" />
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </Col>
-                  </Row>
-                </div>
-              </div>
+
+              {!isMobile && (<div className="container-outside"><div className="table-dropdown ">
+                <Row noGutters>
+                  <Col className="col-in-containerOutside">
+                    <Dropdown>
+                      <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
+                        {t(`Current_Construction`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        {arrContruction && arrContruction.map((product, index) => {
+                          return (<Dropdown.Item key={index}>{product.title}</Dropdown.Item>)
+                        })}
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Col>
+                  <Col className="col-in-containerOutside">
+                    <Dropdown>
+                      <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
+                        {t(`Product_Groups`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        {arrGroupProduct && arrGroupProduct.map((product, index) => {
+                          return (<Dropdown.Item key={index}>{t(`${product.title}`)}</Dropdown.Item>)
+                        })}
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Col>
+                  <Col className="col-in-containerOutside">
+                    <Dropdown>
+                      <Dropdown.Toggle id=" dropdown-table">
+                        {t(`Product_Features`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Col>
+                </Row>
+              </div> </div>)}
               <Form className="container-belowDrop">
                 <Form.Group controlId="searchBar">
                   <div className="search-wrapper-supportpage ">
-                    <Form.Control className="form-control form-control container-wrap-page" type="text" placeholder={t(`Search`)} />
+                    <Form.Control className="form-control form-control container-wrap-page form-tech-mobile" type="text" placeholder={t(`Search`)} />
                     <button type="button" className="btn btn-search fs-12 " aria-label="search icon"><img src={Searchicon} alt="" /></button>
                   </div>
                 </Form.Group>
               </Form>
+              <div className="technical-table-mobile table-dropdown">
+                {isMobile && (<Accordion >
+                  <Accordion.Toggle as={Card.Header} eventKey="0">
+                    <div className="icon-sort-tech">
+                      <img src={iconSort} alt="" />
+                    </div>
+                  </Accordion.Toggle>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>{
+                      <Row noGutters>
+                        <Col className="col-in-containerOutside">
+                          <Dropdown>
+                            <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
+                              {t(`Current_Construction`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                              {arrContruction && arrContruction.map((product, index) => {
+                                return (<Dropdown.Item key={index}>{product.title}</Dropdown.Item>)
+                              })}
+                            </Dropdown.Menu>
+                          </Dropdown>
+                        </Col>
+                        <Col className="col-in-containerOutside">
+                          <Dropdown>
+                            <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
+                              {t(`Product_Groups`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                              {arrGroupProduct && arrGroupProduct.map((product, index) => {
+                                return (<Dropdown.Item key={index}>{t(`${product.title}`)}</Dropdown.Item>)
+                              })}
+                            </Dropdown.Menu>
+                          </Dropdown>
+                        </Col>
+                        <Col className="col-in-containerOutside">
+                          <Dropdown>
+                            <Dropdown.Toggle id=" dropdown-table">
+                              {t(`Product_Features`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                            </Dropdown.Menu>
+                          </Dropdown>
+                        </Col>
+                      </Row>
+                    }</Card.Body>
+                  </Accordion.Collapse>
+                </Accordion>)}
+              </div>
               <Slider className="support-slider" {...settings} >
                 {
                   id === 5 ? (

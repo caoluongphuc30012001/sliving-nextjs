@@ -9,6 +9,7 @@ export const navData = {
             id: '0',
             title: 'HEADER.HOMEPAGE.PRODUCT&SOLUTION',
             isActive: false,
+            isToggle:false,
             path: "/product-solution-page", isHover: false,
             arrMenu: [
                 {
@@ -47,8 +48,9 @@ export const navData = {
             id: '1',
             title: 'HEADER.HOMEPAGE.SUPPORT',
             isActive: false,
-            path: "/support-page/",
             isHover: false,
+            isToggle:false,
+            path: "/support-page/",
             arrMenu: [
                 {
                     id: '0',

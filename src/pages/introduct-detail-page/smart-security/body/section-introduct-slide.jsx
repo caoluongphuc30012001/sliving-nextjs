@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-import vector from "@images/solution-page/body/Vector.svg";
+// import vector from "@images/solution-page/body/Vector.svg";
 import rectangle1 from "@images/introduction-page/smart-security/slide-1.svg";
 import rectangle2 from "@images/introduction-page/smart-security/slide-2.svg";
 import rectangle3 from "@images/introduction-page/smart-security/slide-3.svg";
@@ -12,15 +12,17 @@ const IntroductSlides = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     infinite: true,
                 }
             },
@@ -28,7 +30,7 @@ const IntroductSlides = () => {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     initialSlide: 2
                 }
             },
@@ -47,9 +49,9 @@ const IntroductSlides = () => {
         return (
             <div className="slides-chill" >
                 <img src={imgUrl} alt="" className="slides-cill_img" />
-                <div className="slides-chill__body d-flex al-center">
+                <div className="slides-chill__body">
                     <div className="chill__body-left">
-                        <div>{subtitle}</div>
+                        {/* <div>{subtitle}</div> */}
                         <div className="fw-bold">{title}</div>
                     </div>
                     {/* <div className="chill__body-right">

@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-import vector from "@images/solution-page/body/Vector.svg";
+// import vector from "@images/solution-page/body/Vector.svg";
 import Image1 from "@images/introduction-page/smart-parking/image2.png";
 import Image2 from "@images/introduction-page/smart-parking/image3.png";
 import Image3 from "@images/introduction-page/smart-parking/image4.png";
@@ -12,22 +12,24 @@ const SectionSlideProduct = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -45,9 +47,9 @@ const SectionSlideProduct = () => {
         return (
             <div className="slides-chill" >
                 <img src={imgUrl} alt="" className="slides-cill_img" />
-                <div className="slides-chill__body d-flex al-center">
+                <div className="slides-chill__body">
                     <div className="chill__body-left">
-                        <div>{subtitle}</div>
+                        {/* <div>{subtitle}</div> */}
                         <div className="fw-bold">{title}</div>
                     </div>
                     {/* <div className="chill__body-right">

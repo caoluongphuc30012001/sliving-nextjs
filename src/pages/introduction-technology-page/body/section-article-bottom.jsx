@@ -11,11 +11,8 @@ const SectionArticleSecond = () => {
                     <Col>
                         <h4 className="project">{t(`Outstanding_Project`)}</h4>
                     </Col>
-                    <Col>
-                        <p className="seeMore"> {t(`More_Info`)} </p>
-                    </Col>
                 </Row>
-                <Row noGutters className="article-wrap-container">
+                <Row noGutters className="article-wrap-container section-outstanding-project">
                     <Col xs={6} className="article-wrap-left">
                         <img className="image6" src={Image6} alt="sliving second banner" />
                     </Col>
