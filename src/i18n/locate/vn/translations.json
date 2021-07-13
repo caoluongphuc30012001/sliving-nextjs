@@ -1,4 +1,4 @@
-{
+  {
   "HEADER": {
     "HOMEPAGE": {
       "HOME": "Trang Chủ",
@@ -235,5 +235,17 @@
       "subDescription": "Thông số điện, nước cập nhật nhanh chóng và dễ dàng thông qua các thiết bị đo lường kết nối ứng dụng điện thoại.Qua đó giúp bạn theo dõi cũng như phát hiện sớm những sự cố rò rỉ bất ngờ."
     }
   },
-  "footer-description":"Xin chào, chúng tôi là Lift Media. Mục tiêu của chúng tôi là chuyển đổi những tác động tích cực từ cách mạng hóa cách các công ty tương tác với khách hàng và nhóm của họ."
+  "footer-description":"Xin chào, chúng tôi là Lift Media. Mục tiêu của chúng tôi là chuyển đổi những tác động tích cực từ cách mạng hóa cách các công ty tương tác với khách hàng và nhóm của họ.",
+  "Search-parking": "Tìm kiếm vị trí đỗ xe dễ dàng",
+  "vacant-spot": "Khi đến bãi xe, người dùng dễ dàng đến được vị trí chỗ trống thông qua:",
+  "fastest-route": "Ứng dụng hướng dẫn đường đi nhanh nhất",
+  "direction-the-basements": "Bảng đèn led chỉ hướng trong các tầng hầm",
+  "Reserve-parking": "Đặt trước chỗ đỗ xe nhanh chóng",
+  "System-automatic": "Hệ thống hoàn toàn tự động, sử dụng công nghệ cảm biến, cập nhật chính xác các thông tin cần thiết để đặt chỗ như:",
+  "position-vacancies": "Số lượng, vị trí chỗ trống trong từng khu vực, tầng hầm",
+  "Operation-hours": "Thời gian hoạt động của bãi xe",
+  "Corresponding-parking-fees": "Phí gửi xe tương ứng theo thời gian thực",
+  "After-parking": "Sau khi gửi xe, người dùng hoàn toàn yên tâm làm việc khi ứng dụng sẽ cập nhật các thông tin:",
+  "Parking-status": "Tình trạng phiên đỗ xe",
+  "Notify-the-users": "Thông báo khi sắp hết thời gian đăng kí để tránh mất thêm chi phí"
 }
