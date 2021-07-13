@@ -247,5 +247,9 @@
   "Corresponding-parking-fees": "Phí gửi xe tương ứng theo thời gian thực",
   "After-parking": "Sau khi gửi xe, người dùng hoàn toàn yên tâm làm việc khi ứng dụng sẽ cập nhật các thông tin:",
   "Parking-status": "Tình trạng phiên đỗ xe",
-  "Notify-the-users": "Thông báo khi sắp hết thời gian đăng kí để tránh mất thêm chi phí"
+  "Notify-the-users": "Thông báo khi sắp hết thời gian đăng kí để tránh mất thêm chi phí",
+  "Ultrasonic-sensors": "Cảm Biến Siêu Âm",
+  "Power-Socket-V3": "Ổ cắm điện V3",
+  "Light-Sensor": "Cảm biến ánh sáng",
+  "Rectangular-Socket": "Ổ Cắm Hình Chữ Nhật"
 }

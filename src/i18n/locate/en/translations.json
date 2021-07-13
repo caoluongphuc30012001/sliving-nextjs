@@ -247,5 +247,9 @@
   "Corresponding-parking-fees": "Corresponding parking fees in real time",
   "After-parking": "After parking, users are assured to work while the application will update these information:",
   "Parking-status": "Parking status",
-  "Notify-the-users": "Notify the users when the registration period is about to end to avoid additional costs"
+  "Notify-the-users": "Notify the users when the registration period is about to end to avoid additional costs",
+  "Ultrasonic-sensors": "Ultrasonic sensors",
+  "Power-Socket-V3": "Power Socket V3",
+  "Light-Sensor": "Light Sensor",
+  "Rectangular-Socket": "Rectangular Socket"
 }

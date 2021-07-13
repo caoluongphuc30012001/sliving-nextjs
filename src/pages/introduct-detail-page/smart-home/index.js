@@ -41,17 +41,15 @@ const IntroductDetail = () => {
             imgUrl={imgThird}
             title={t(`Smart-switch`)}
             id={2}
-            subDescription={
-              "Sử dụng công nghệ nhận diện khuôn mặt để giám sát người ra vào các khu vực cần kiểm soát."
-            }
+            subDescription={t(`facial-recognition`)}
             description={
               <ul>
                 <li>
-                  Gọi thang máy bằng công nghệ nhận diện khuôn mặt (Face ID)
+                {t(`Face-ID`)}
                 </li>
-                <li> Nhận diện người lạ</li>
-                <li> Chấm công bằng camera nhận diện khuôn mặt</li>
-                <li> Điều khiển thang máy, điều khiển cửa quay (turnstiles)</li>
+                <li> {t(`Identify-strangers`)}</li>
+                <li> {t(`recognition-camera`)}</li>
+                <li> {t(`Control-elevators`)}</li>
               </ul>
             }
           />
@@ -62,11 +60,11 @@ const IntroductDetail = () => {
             title={t(`Sensor`)}
             description={
               <ul>
-                <li> Power Socket V3</li>
+                <li> {t(`Power-Socket-V3`)}</li>
                 <li> Pir</li>
-                <li> Cảm Biến Siêu Âm</li>
-                <li> Light Sensor</li>
-                <li> Ổ Cắm Hình Chữ Nhật</li>
+                <li> {t(`Ultrasonic-sensors`)}</li>
+                <li> {t(`Light-Sensor`)}</li>
+                <li> {t(`Rectangular-Socket`)}</li>
               </ul>
             }
           />
