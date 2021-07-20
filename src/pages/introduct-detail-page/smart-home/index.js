@@ -26,6 +26,8 @@ const IntroductDetail = () => {
             title={t(`Smart-lighting`)}
             url="introduct-detail-page/smart-lighting"
             id="smart-lighting"
+            subDescription={t(`smart-home.section_1.subDescription`)}
+            description={""}
           />
         </div>
         <div className="section-second">
@@ -34,24 +36,22 @@ const IntroductDetail = () => {
             title={t(`Thermostat-control`)}
             url={"product-solution-page"}
             id="4"
+            subDescription={t(`smart-home.section_2.subDescription`)}
+            description={""}
           />
         </div>
         <div className="section-first">
           <SectionContent
             imgUrl={imgThird}
             title={t(`Smart-switch`)}
+            url={"product-solution-page"}
             id={2}
-            subDescription={
-              "Sử dụng công nghệ nhận diện khuôn mặt để giám sát người ra vào các khu vực cần kiểm soát."
-            }
+            subDescription={t(`smart-home.section_3.subDescription`)}
             description={
               <ul>
-                <li>
-                  Gọi thang máy bằng công nghệ nhận diện khuôn mặt (Face ID)
-                </li>
-                <li> Nhận diện người lạ</li>
-                <li> Chấm công bằng camera nhận diện khuôn mặt</li>
-                <li> Điều khiển thang máy, điều khiển cửa quay (turnstiles)</li>
+                <li> {t(`smart-home.section_3.description_1`)}</li>
+                <li> {t(`smart-home.section_3.description_2`)}</li>
+                <li> {t(`smart-home.section_3.description_3`)}</li>
               </ul>
             }
           />
@@ -60,13 +60,13 @@ const IntroductDetail = () => {
           <SectionContent
             imgUrl={imgFour}
             title={t(`Sensor`)}
+            url={"product-solution-page"}
+            subDescription={t(`smart-home.section-4.subDescription`)}
             description={
               <ul>
-                <li> Power Socket V3</li>
-                <li> Pir</li>
-                <li> Cảm Biến Siêu Âm</li>
-                <li> Light Sensor</li>
-                <li> Ổ Cắm Hình Chữ Nhật</li>
+                <li> {t(`smart-home.section_4.description_1`)}</li>
+                <li> {t(`smart-home.section_4.description_2`)}</li>
+                <li> {t(`smart-home.section_4.description_3`)}</li>
               </ul>
             }
           />
@@ -77,6 +77,12 @@ const IntroductDetail = () => {
             title={t(`curtain`)}
             url={"product-solution-page"}
             id="5"
+            description={
+              <ul>
+                  <li> {t(`smart-home.section_5.description_1`)}</li>
+                <li> {t(`smart-home.section_5.description_2`)}</li>
+              </ul>
+            }
           />
         </div>
         <div className="section-second">
@@ -85,6 +91,11 @@ const IntroductDetail = () => {
             title={t(`Door-Gate`)}
             url={"product-solution-page"}
             id="8"
+            description={
+              <ul>
+                <li> Door Motor Gate</li>
+              </ul>
+            }
           />
         </div>
         <div className="banner-slides">

@@ -124,7 +124,14 @@ ol.carousel-indicators li.active {
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  .home-page-main {
+    ol.carousel-indicators {
+      bottom: 20px;
+      right: 45px;
+    }
+  }
+}
 @media only screen and (max-width: 425px) {
   .hp-banner {
     margin-top: 0;
@@ -138,6 +145,14 @@ ol.carousel-indicators li.active {
 
       .hp-banner-description {
         width: fit-content;
+      }
+    }
+  }
+  .banner{
+    .banner-wrap-title{
+      span{
+        line-height: 32px;
+        letter-spacing: 0.5px;
       }
     }
   }
@@ -168,7 +183,6 @@ ol.carousel-indicators li.active {
       }
     }
   }
-  
 }
 
 .news-slide {

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import CardTitleHeader from "@components/card/card-title-header";
 import Slider from "react-slick";
 import Modal from "react-modal";
-import { Image } from 'react-bootstrap';
+import { Image, Spinner } from 'react-bootstrap';
 import Image1 from "@images/image-video/image1.svg";
 import Image2 from "@images/image-video/image2.svg";
 import Image3 from "@images/image-video/image3.svg";
@@ -53,6 +53,10 @@ const SectionVideo = () => {
         nextArrow: <ButtonArrow arrow={arrowPrev} />,
         prevArrow: <ButtonArrow arrow={arrowNext} />
     };
+    const [isloading, setIsLoading] = useState(false);
+    useEffect(() => {
+        setIsLoading(false);
+    }, [])
     const Modals = () => {
         return <Modal className="modal modal-video" id="modal-video"
             isOpen={isShowing}
@@ -60,7 +64,10 @@ const SectionVideo = () => {
             <button type="button" className="modal-close-button modal-close-btn" data-dismiss="modal" aria-label="Close" onClick={(event) => closeModal(event)}>
                 <Image src={closeImg} alt="close image" />
             </button>
-            <Slider {...settings}>
+            {isloading && (<div className="modal-loading">
+                <Spinner animation="border" />
+            </div>)}
+            {!isloading && (<Slider {...settings}>
                 <div className="modal-video-wrap">
                     <video muted autoPlay loop playsInline className="embed-responsive-item">
                         <source src={Video1} type="video/webp" />
@@ -83,7 +90,7 @@ const SectionVideo = () => {
                         <source src={VideoWebm4} type="video/webm" />
                     </video>
                 </div>
-            </Slider>
+            </Slider>)}
         </Modal>
     }
     const closeModal = (e) => {
@@ -95,6 +102,10 @@ const SectionVideo = () => {
         setIsShowing(!isShowing);
         e.preventDefault();
         document.documentElement.style.overflowY = "hidden";
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
     }
     return (
         <div className="body-video container-wrap">

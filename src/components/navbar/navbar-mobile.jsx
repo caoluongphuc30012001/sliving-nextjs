@@ -34,7 +34,6 @@ const NavBarMobile = () => {
         })
     }
     const HandelSubMenu = (menuId, subMemuId) => {
-        console.log("start");
         setIsToggle(false);
         menus.map((map) => {
             if (menuId === map.id) {
@@ -43,7 +42,6 @@ const NavBarMobile = () => {
                 })
             }
         })
-        console.log("menus",menus);
     }
     useEffect(() => {
         setIsToggle(true);

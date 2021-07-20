@@ -157,7 +157,6 @@ exports.createPages = async function ({ page, actions, graphql }) {
       url: "product-id"
     }
   })
-
   introductionPage.data.dataIntroContentPage.edges.forEach((edge) => {
     createPage({
       path: `/intro-content-page/${edge.node.frontmatter.slug}`,

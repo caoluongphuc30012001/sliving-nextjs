@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonMore from "./../../button/button-more";
 import { useTranslation } from 'react-i18next';
-const CardHeader = ({ title, subtitle, description, backgroundColor, color, isButton, border, titleBtn, borderReadius }) => {
+const CardHeader = ({ title, subtitle, description, backgroundColor, color, isButton, border, titleBtn, borderReadius,url }) => {
     const { t } = useTranslation();
     return (
         <div className="section-header">
@@ -14,6 +14,7 @@ const CardHeader = ({ title, subtitle, description, backgroundColor, color, isBu
                 border={border ? border : ' 2px solid #004BA1'}
                 titleBtn={titleBtn}
                 borderReadius={borderReadius}
+                url={url}
             /></div>)}
         </div>
     );

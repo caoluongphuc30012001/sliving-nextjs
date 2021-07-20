@@ -10,9 +10,9 @@ const SectionArticleThird = () => {
     const { t } = useTranslation();
     const Lgn = useGetLgn();
     return (
-        <div className="section-introduction__article">
+        <div className="section-introduction__article ">
             <div className="introduction-content2">
-                <Row noGutters className="article-wrap-container">
+                <Row noGutters className="article-wrap-container section-introdution-parking">
                     <Col xs={5} className="article-wrap-left-third">
                         <div>
                             <div className="article-header-third fs-48 fw-bold txt-blue">
