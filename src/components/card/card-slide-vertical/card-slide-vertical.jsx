@@ -10,8 +10,10 @@ import PrevArrow from "../../button/button-prev-arrow.jsx";
 import NextArrow from "../../button/button-next-arrow.jsx";
 import DataProductSolution from "@query/product-solution";
 import { useTranslation } from 'react-i18next';
+import getGetLgn from "@hook/useGetLgn";
 SwiperCore.use([Navigation]);
 const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesToShow, id, isShow, params }) => {
+	const lgn = getGetLgn().slice(1, 3, 1);
 	const { t } = useTranslation();
 	const dataAllProducts = DataProductSolution();
 	const dataGateWay = dataAllProducts.dataGateWay.edges;
@@ -23,7 +25,26 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 	const dataSmartCurtain = dataAllProducts.dataSmartCurtain.edges;
 	const dataSmartMeasurement = dataAllProducts.dataSmartMeasurement.edges;
 	const dataZigbeeKit = dataAllProducts.dataZigbeeKit.edges;
-	const [post, setPost] = useState(dataLED);
+	const [post, setPost] = useState([]);
+	function changePostsWithLgn(lgnCurrent, arrPost) {
+		let arrPosts = [];
+		arrPost.forEach((item) => {
+			if (item.node.frontmatter.lgn === lgnCurrent) {
+				arrPosts.push(item);
+			}
+		})
+		setPost(arrPosts);
+		return null
+	}
+	useEffect(() => {
+		changePostsWithLgn(lgn,dataLED);
+		if (params) {
+			clickProduct(parseInt(params));
+		}
+		return () =>{
+			changePostsWithLgn(lgn,[]);
+		}
+	}, [params,lgn])
 	const [arrProduct] = useState([
 		{ title: "LED", id: 0, isActive: true },
 		{ title: "navProduct.Switches", id: 1, isActive: false },
@@ -35,13 +56,6 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		{ title: "navProduct.Zigbee_KIT", id: 7, isActive: false },
 		{ title: "navProduct.Door_motor_gate", id: 8, isActive: false },
 	]);
-
-	useEffect(() => {
-		if(params) {
-			clickProduct(parseInt(params));
-		}
-	}, [params]);
-
 	const settings = {
 		useTransform: false,
 		className: "slide-vertical",
@@ -60,7 +74,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 					slidesToShow: 4,
 					slidesToScroll: 4,
 					infinite: true,
-					dots:false
+					dots: false
 				}
 			},
 			{
@@ -68,7 +82,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 3,
-					dots:false
+					dots: false
 				}
 			},
 
@@ -77,7 +91,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					dots:false
+					dots: false
 				}
 			}
 		],
@@ -86,16 +100,17 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		swipeToSlide: true,
 	};
 	const clickProduct = (id) => {
+		console.log("dataSwitch",dataSwitch);
 		arrProduct.forEach((prod) => (prod.isActive = id === prod.id ? true : false));
-		if (id === 0) { setPost(dataLED); };
-		if (id === 1) { setPost(dataSwitch); };
-		if (id === 2) { setPost(dataSocket); };
-		if (id === 3) { setPost(dataSensor); };
-		if (id === 4) { setPost(dataAirConditioningSystem); };
-		if (id === 5) { setPost(dataSmartCurtain); };
-		if (id === 6) { setPost(dataSmartMeasurement); };
-		if (id === 7) { setPost(dataZigbeeKit); };
-		if (id === 8) { setPost(dataGateWay); };
+		if (id === 0) { changePostsWithLgn(lgn,dataLED); };
+		if (id === 1) { changePostsWithLgn(lgn,dataSwitch); };
+		if (id === 2) { changePostsWithLgn(lgn,dataSocket); };
+		if (id === 3) { changePostsWithLgn(lgn,dataSensor); };
+		if (id === 4) { changePostsWithLgn(lgn,dataAirConditioningSystem); };
+		if (id === 5) { changePostsWithLgn(lgn,dataSmartCurtain); };
+		if (id === 6) { changePostsWithLgn(lgn,dataSmartMeasurement); };
+		if (id === 7) { changePostsWithLgn(lgn,dataZigbeeKit); };
+		if (id === 8) { changePostsWithLgn(lgn,dataGateWay); };
 	}
 	return (
 		<div className="slide-sols txt-blue ">
@@ -120,7 +135,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 							return (
 								<CardSlideChild
 									key={node.frontmatter.id}
-									imgUrl={node.frontmatter.featuredImage.publicURL}
+									imgUrl={node.frontmatter.featuredImage ? node.frontmatter.featuredImage.publicURL : ""}
 									title={node.frontmatter.title}
 									path={node.frontmatter.slug}
 								/>

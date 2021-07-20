@@ -9,7 +9,7 @@ import CardHeader from "@components/card/card-title-header";
 import useGetLgn from "@hook/useGetLgn";
 const SolutionSuggestion = ({ data }) => {
   const { t } = useTranslation();
-  const Lgn =useGetLgn();
+  const Lgn = useGetLgn();
   const settings = {
     useTransform: false,
     className: "slide-vertical",
@@ -52,36 +52,37 @@ const SolutionSuggestion = ({ data }) => {
   return (
     <>
       <div className="slide-sols txt-blue ">
-        <CardHeader title={t(`Solution_Suggestions`)} id={1}/>
+        <CardHeader title={t(`Solution_Suggestions`)} id={1} />
         <div className="slide-body">
           <Slider {...settings}>
             {
               data.map(item => {
                 return (
-                  <div className="card-sol" key={item.id}>
-                    <div className="card-sol-wrap" >
-                      <div className="card-sol-header">
-                        <Link to={`${Lgn}${item.path}`} className="card-link">
+                  <Link key={item} to={`${Lgn}${item.path}`} className="card-link">
+                    <div className="card-sol" key={item.id}>
+                      <div className="card-sol-wrap" >
+                        <div className="card-sol-header">
+
                           <img src={item.img} alt="" />
-                        </Link>
-                      </div>
-                      <div className="card-sol-perm d-flex -al-center">
-                        <div className="sol-perm-item">
-                          <img src={imgPer} alt="" />
                         </div>
-                        <div className="sol-perm-item">
-                          <img src={imgPer} alt="" />
-                        </div> <div className="sol-perm-item">
-                          <img src={imgPer} alt="" />
-                        </div> <div className="sol-perm-item">
-                          <img src={imgPer} alt="" />
+                        <div className="card-sol-perm d-flex -al-center">
+                          <div className="sol-perm-item">
+                            <img src={imgPer} alt="" />
+                          </div>
+                          <div className="sol-perm-item">
+                            <img src={imgPer} alt="" />
+                          </div> <div className="sol-perm-item">
+                            <img src={imgPer} alt="" />
+                          </div> <div className="sol-perm-item">
+                            <img src={imgPer} alt="" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="card-sol-des">
-                        <span className="fs-16 txt-blue">{t(`${item.title}`)}</span>
+                        <div className="card-sol-des">
+                          <span className="fs-16 txt-blue">{t(`${item.title}`)}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 )
               })
             }

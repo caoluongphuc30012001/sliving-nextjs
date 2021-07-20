@@ -21,14 +21,12 @@ const SolutionPage = () => {
         <div className="section-first">
           <SectionContent
             imgUrl={imgFirst}
-            title={"Tìm kiếm vị trí bãi đỗ xe một cách dễ dàng"}
-            subDescription={
-              "Khi đến bãi xe, người dùng dễ dàng đến được vị trí chỗ trống thông qua:"
-            }
+            title={t(`smart-parking.section_1.title`)}
+            subDescription={t(`smart-parking.section_1.subDescription`)}
             description={
               <ul>
-                <li>Ứng dụng hướng dẫn đường đi nhanh nhất</li>
-                <li>Bảng đèn led chỉ hướng trong các tầng hầm</li>
+                <li>{t(`smart-parking.section_1.description_1`)}</li>
+                <li>{t(`smart-parking.section_1.description_2`)}</li>
               </ul>
             }
             url={"smart-parking-1-learn-more"}
@@ -37,15 +35,13 @@ const SolutionPage = () => {
         <div className="section-second">
           <SectionContent
             imgUrl={imgSecond}
-            title={"Đặt trước chỗ đỗ xe nhanh chóng"}
-            subDescription={
-              "Hệ thống hoàn toàn tự động, sử dụng công nghệ cảm biến, cập nhật chính xác các thông tin cần thiết để đặt chỗ như: "
-            }
+            title={t(`smart-parking.section_2.title`)}
+            subDescription={t(`smart-parking.section_2.subDescription`)}
             description={
               <ul>
-                <li>Số lượng, vị trí chỗ trống trong từng khu vực, tầng hầm</li>
-                <li>Thời gian hoạt động của bãi xe</li>
-                <li>Phí gửi xe tương ứng theo thời gian thực</li>
+                <li>{t(`smart-parking.section_2.description_1`)}</li>
+                <li>{t(`smart-parking.section_2.description_2`)}</li>
+                <li>{t(`smart-parking.section_2.description_3`)}</li>
               </ul>
             }
             url={"smart-parking-2-learn-more"}
@@ -54,14 +50,12 @@ const SolutionPage = () => {
         <div className="section-first">
           <SectionContent
             imgUrl={imgSecond}
-            title={"Đặt trước chỗ đỗ xe nhanh chóng"}
-            subDescription={
-              "Sau khi gửi xe, người dùng hoàn toàn yên tâm làm việc khi ứng dụng sẽ cập nhật các thông tin:"
-            }
+            title={t(`smart-parking.section_2.title`)}
+            subDescription={t(`smart-parking.section_2.subDescription`)}
             description={
               <ul>
-                <li>Tình trạng phiên đỗ xe</li>
-                <li>Thông báo khi sắp hết thời gian đăng kí để tránh mất thêm chi phí</li>
+                <li>{t(`smart-parking.section_3.description_1`)}</li>
+                <li>{t(`smart-parking.section_3.description_2`)}</li>
               </ul>
             }
             url={"smart-parking-2-learn-more"}

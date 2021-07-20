@@ -95,9 +95,9 @@
 
 .navbar-header {
     background-color: #f2f2f2;
-    height: 60px;
+    height: fit-content;
     .navbar-header-wrap {
-        max-width: 1170px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
         padding-left: 15px;
@@ -107,7 +107,10 @@
         justify-content: space-between;
 
         .product-name {
+            max-width: 250px;
+           span{
             padding: 18px 0;
+           }
         }
 
         .nav-tabs {
@@ -127,7 +130,7 @@
     }
 
     .nav-item {
-        width: 180px;
+        width: 160px;
     }
 }
 
@@ -141,7 +144,7 @@
             position: absolute;
             z-index: 2;
             top: 68%;
-            left: 9.5%;
+            left: 9.9%;
             margin-top: 0;
             margin-bottom: 0;
         }
@@ -198,10 +201,16 @@
         }
 
         .swiper-prod {
+            .prod-slide__imgs{
+                max-width: 1440px;
+                max-height: 560px;
+                width: 100%;
+                height: 100%;
+            }
             .prod-slide__img {
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+                object-fit: cover;
             }
             .swiper-pagination {
                 right: 30px;

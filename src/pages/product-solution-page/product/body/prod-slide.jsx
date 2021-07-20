@@ -10,7 +10,7 @@ SwiperCore.use([Pagination]);
 const ProdSlide = ({ slide }) => {
     return (
         <div className="prod-slide">
-            <div className="prod-slide-wrap">
+            {slide && slide.length >= 2 && (<div className="prod-slide-wrap">
                 <Swiper spaceBetween={30} pagination={{
                     "clickable": true
                 }} loop={true} direction={'vertical'} className="swiper-prod" >
@@ -19,7 +19,7 @@ const ProdSlide = ({ slide }) => {
                             slide.map((item, index) => {
                                 return (
                                     <SwiperSlide key={index}>
-                                        <img className="prod-slide__img" src={item} alt="" />
+                                       <div className="prod-slide-imgs"> <img className="prod-slide__img" src={item} alt="" /></div>
                                     </SwiperSlide>
                                 )
                             })
@@ -109,7 +109,8 @@ const ProdSlide = ({ slide }) => {
                         )
                     }
                 </Swiper>
-            </div>
+            </div>)}
+            {slide && slide.length < 2 && (<div className="prod-detail-img"><img src={slide[0]} alt="" /></div>)}
         </div>
     );
 }

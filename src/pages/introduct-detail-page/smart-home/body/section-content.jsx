@@ -18,13 +18,7 @@ const SectionContent = ({ imgUrl, title, subDescription, description, id, url })
                     <div className="content-wrap__right" xs={12}>
                         <h4 className="txt-blue fw-bold">{title}</h4>
                         <p>{subDescription ? subDescription : 'We are proud to provide the most comprehensive smart home solution for customers'}</p>
-                        {description ? description : <ul>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                        </ul>}
+                        {description }
                         <div className="btn-research">
                             <Link to={id === 1 ? `${Lgn}introduct-detail-page/smart-lighting` : Lgn + url}>
                                 <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>

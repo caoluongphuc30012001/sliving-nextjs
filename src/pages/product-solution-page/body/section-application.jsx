@@ -14,6 +14,7 @@ const SectionApplication = () => {
             border={"none"}
             padding={'4px 7px 4px 13px'}
             fontWeight={'700'}
+            url={"introduction-technology-page/"}
         />
         <div className="solution-header-img">
             <img class = "img-responsive" src={headerSolImg} alt="sliving" />

@@ -1,7 +1,6 @@
 .news-page {
   padding-top: 54px;
   padding-bottom: 50px;
-
   .news-page-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,8 +28,7 @@
 .news-page-body-in-right {
   .card-horizonal {
     &:hover {
-      box-shadow: 0px 8px 8px rgb(38 50 56 / 12%),
-        0px 16px 24px rgb(38 50 56 / 8%);
+      box-shadow: 0px 8px 8px rgb(38 50 56 / 12%), 0px 16px 24px rgb(38 50 56 / 8%);
       border: none;
       .horizonal-wrap__desc-text {
         cursor: pointer;
@@ -69,8 +67,7 @@
   .slick-current {
     .prod-line-wrap {
       background: #f9f9f9;
-      box-shadow: 0px 8px 8px rgb(38 50 56 / 12%),
-        0px 16px 24px rgb(38 50 56 / 8%);
+      box-shadow: 0px 8px 8px rgb(38 50 56 / 12%), 0px 16px 24px rgb(38 50 56 / 8%);
       border-radius: 10px;
     }
   }
@@ -168,167 +165,138 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .news-page-body {
-    flex-direction: column;
+@media screen and (max-width: 1024px) {
+  .news-page {
+    .news-page-left {
+      max-width: 560px;
+      align-self: flex-start;
+    }
+    .news-page-right {
+      align-self: flex-start;
+    }
+    .product-line {
+      .card-prod-line {
+        padding: 0px 15px 30px;
+        .prod-line-wrap {
+          margin: 0;
+        }
+      }
+    }
+    .post-news {
+      .card-prod-line {
+        padding: 0px 14px 0;
+        .prod-line-wrap {
+          margin: 0;
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .news-page {
-    padding-top: 54px;
-    padding-bottom: 50px;
-
     .news-page-wrap {
       display: block;
     }
+    .news-page-left {
+      max-width: 100%;
+      .slick-dots {
+        li {
+          width: 20px !important;
+        }
+      }
+    }
+    .news-page-right {
+      max-width: 100%;
+    }
+    .post-news {
+      margin-top: 54px;
+      .card-prod-line {
+        .prod-line-wrap {
+          .prod-line-wrap__header {
+            border: 1px solid #adadad;
+          }
+        }
+      }
+    }
   }
-
-  .slide-prod-line {
-    .slick-dots li.slick-active button:before {
-      opacity: 0.75;
-      color: #f47403;
-    }
-
-    .slick-dots li button:before {
-      font-size: 18px;
-    }
-
-    .slick-dots {
-      display: flex !important;
-      margin-left: 156px;
-      li {
-        button {
-          &:hover {
-            color: #f47403;
-
-            &::before {
-              color: #f47403;
+}
+@media screen and (max-width: 576px) {
+  .news-page {
+    .product-line {
+      .card-prod-line {
+        .prod-line-wrap {
+          .prod-line-wrap__header {
+            height: 100%;
+            max-height: 285px;
+            img {
+              height: 100%;
+              max-height: 285px;
+            }
+          }
+          .prod-line-wrap__body {
+            padding: 15px 35px 15px 35px;
+          }
+        }
+        .btn-research {
+          .btn-research-wrap {
+            padding: 6px 12px;
+            height: fit-content;
+            span {
+              font-size: 12px;
+              line-height: 16px;
+            }
+            img {
+              width: 25px;
+              height: 25px;
             }
           }
         }
       }
     }
-
-    .slick-current {
-      .prod-line-wrap {
-        background: #f9f9f9;
-        box-shadow: 0px 8px 8px rgb(38 50 56 / 12%),
-          0px 16px 24px rgb(38 50 56 / 8%);
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .posts-new {
-    .slick-dots {
-      position: unset;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) and(min-width: 376px) {
-  .news-page {
-    padding-top: 170px;
-    padding-bottom: 50px;
-
-    .news-page-wrap {
-      display: block;
-    }
-  }
-
-  .slide-prod-line {
-    .slick-dots li.slick-active button:before {
-      opacity: 0.75;
-      color: #f47403;
-    }
-
-    .slick-dots li button:before {
-      font-size: 18px;
-    }
-
-    .slick-dots {
-      display: flex !important;
-      margin-left: 325px;
-      li {
-        button {
-          &:hover {
-            color: #f47403;
-
-            &::before {
-              color: #f47403;
+    .post-news {
+      .card-prod-line {
+        .prod-line-wrap {
+          .prod-line-wrap__header {
+            max-height: 175px;
+            height: 100%;
+            img {
+              max-height: 175px;
+              height: 100%;
             }
           }
         }
       }
     }
-
-    .slick-current {
-      .prod-line-wrap {
-        background: #f9f9f9;
-        box-shadow: 0px 8px 8px rgb(38 50 56 / 12%),
-          0px 16px 24px rgb(38 50 56 / 8%);
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .posts-new {
-    .slick-dots {
-      position: unset;
-    }
   }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 320px) {
   .news-page {
-    padding-top: 170px;
-    padding-bottom: 50px;
-
-    .news-page-wrap {
-      display: block;
-    }
-  }
-
-  .slide-prod-line {
-    .slick-dots li.slick-active button:before {
-      opacity: 0.75;
-      color: #f47403;
-    }
-
-    .slick-dots li button:before {
-      font-size: 18px;
-    }
-
-    .slick-dots {
-      display: flex !important;
-      margin-left: 325px;
-      li {
-        button {
-          &:hover {
-            color: #f47403;
-
-            &::before {
-              color: #f47403;
+    .product-line {
+      .card-prod-line {
+        .prod-line-wrap {
+          .prod-line-wrap__header {
+            img {
+              height: 100%;
+              max-height: 175px;
+            }
+          }
+          .prod-line-wrap__body {
+            padding: 15px 20px;
+            .line-wrap__description{
+              margin-top: 18px;
+              margin-bottom: 18px;
             }
           }
         }
+        .btn-research {
+          .btn-research-wrap {
+            margin-top: 18px;
+            margin-bottom: 18px;
+          }
+        }
       }
-    }
-
-    .slick-current {
-      .prod-line-wrap {
-        background: #f9f9f9;
-        box-shadow: 0px 8px 8px rgb(38 50 56 / 12%),
-          0px 16px 24px rgb(38 50 56 / 8%);
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .posts-new {
-    .slick-dots {
-      position: unset;
     }
   }
 }

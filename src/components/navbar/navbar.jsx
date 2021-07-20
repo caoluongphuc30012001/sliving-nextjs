@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo } from "react";
+import React, { useContext, useEffect } from "react";
 import { Navbar, Image, Nav, InputGroup, FormControl } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 import { Link } from '@wapps/gatsby-plugin-i18next';
@@ -19,7 +19,7 @@ const NavBar = () => {
     const { t } = useTranslation();
     menus.forEach(element => {
         element.isActive = pathName.indexOf(element.path) > -1 || pathName.indexOf("introduct-detail-page") > -1 && element.id === "0" ? true : false;
-        if ( element.id !== "1" && element.arrMenu) {
+        if (element.id !== "1" && element.arrMenu) {
             element.arrMenu.map((nav) => {
                 nav.isActive = pathName.indexOf(nav.path) > -1 ? true : false;
             })
@@ -99,7 +99,7 @@ const NavBar = () => {
                                                 <div className="nav-child">
                                                     <div className="nav-child-wrap">
                                                         {nav.arrMenu && nav.arrMenu.map((menu, indexMenu) => {
-                                                            return <div key={indexMenu} className={`child-wrap-item ${menu.isActive ? 'is-acitve-subMenu' : ''}`}><Link to={menu.path ? menu.path : '/'}><span className="child-wrap-item__title" onClick={() => HandelActiveSubMenu(nav.id, menu.id)}>{t(`${menu.title}`)}</span></Link></div>
+                                                            return <div key={indexMenu} className={`child-wrap-item ${menu.isActive ? 'is-acitve-subMenu' : ''}`}><Link to={menu.path ? menu.path : '/'} ><span className="child-wrap-item__title" onClick={() => HandelActiveSubMenu(nav.id, menu.id)}>{t(`${menu.title}`)}</span></Link></div>
                                                         })}
                                                     </div>
                                                 </div>

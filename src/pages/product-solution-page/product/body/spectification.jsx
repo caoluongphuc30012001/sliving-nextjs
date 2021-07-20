@@ -5,7 +5,7 @@ const Specitification = () => {
     return (
         <div className="spectifi">
             <div className="spectifi-wrap">
-                <CardHeader title={"Spectifications"} />
+                <CardHeader title={"Specifications"} />
                 <div className="spectifi-wrap-body container-wrap">
                     <Table bordered={false} hover size="sm" className="spec-table">
                         <thead>
