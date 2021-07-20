@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState,useEffect}from 'react';
 import SectionSlides from "./body/section-Slides";
 import Layout from "@components/layout.jsx";
 import Sectionorizontal from "@components/section/section-horizontal/section-horizontal";
