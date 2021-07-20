@@ -39,6 +39,7 @@
   "Solution_Suggestions": "Solution Suggestions",
   "Sliving_IOT_Products": "Sliving IOT's products",
   "navProduct": {
+    "led": "LED",
     "Switches": "Switches",
     "Sockets": "Sockets",
     "Sensors": "Sensors",
@@ -185,6 +186,7 @@
   "collect-energy": "SLiving's energy-saving solution",
   "Smart-Security-system": "Products in the Smart Security system",
   "Smart-parking-product": "Products in the Smart Parking system",
+  "Smart-energy-product": "Products in the Energy-saving solution",
   "Energy-saving-product": "Energy-saving product",
   "Parking-products": "Parking products",
   "Smart_security_product": "Smart security product",
@@ -235,7 +237,7 @@
       "subDescription": "Electricity and water parameters are updated quickly and easily through measuring devices connected to the phone application. Thereby helping you to monitor and detect unexpected leaks early."
     }
   },
-  "footer-description":"Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing how companies engage with their clients & their team.",
+  "footer-description": "Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing how companies engage with their clients & their team.",
   "Search-parking": "Search parking location easily",
   "vacant-spot": "When arriving at the parking lot, users can easily find the vacant slot by using:",
   "fastest-route": "A navigation app that shows the fastest route",
@@ -251,5 +253,80 @@
   "Ultrasonic-sensors": "Ultrasonic sensors",
   "Power-Socket-V3": "Power Socket V3",
   "Light-Sensor": "Light Sensor",
-  "Rectangular-Socket": "Rectangular Socket"
+  "Rectangular-Socket": "Rectangular Socket",
+  "sub-who-are-we": {
+    "title": "Company development areas:",
+    "description_1": "Building interface design for mobile applications (Mobile App), websites (website) for monitoring, controlling and introducing products.",
+    "description_2": "Product's Hardware Design.",
+    "description_3": "Producing smart technology equipment",
+    "description_4": "Build computer programs such as Firmware, Cloud Server",
+    "description_5": "AI (Artificial Intelligence)",
+    "sub-description": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, comfortable and convenient life..."
+  },
+  "name_of_construction_works": "NAME OF CONSTRUCTION WORKS",
+  "construction": {
+    "villa": "Villa",
+    "cinema": "Cinema",
+    "hospital": "Hospital",
+    "Office": "Office",
+    "restaurant": "Restaurant",
+    "school": "School",
+    "store": "Store",
+    "townhouse": "Townhouse",
+    "factory": "Factory",
+    "apartment": "Apartment"
+  },
+  "smart-parking": {
+    "section_1": {
+      "title": "Search parking location easily",
+      "subDescription": "When arriving at the parking lot, users can easily reach the vacant position through:",
+      "description_1": "The fastest navigation app",
+      "description_2": "Led panel indicating direction in basements"
+    },
+    "section_2": {
+      "title": "Reserve your parking space quickly",
+      "subDescription": "The system is fully automatic, using sensor technology, accurately updates the necessary information for booking such as:",
+      "description_1": "Number and position of vacancies in each area, basement",
+      "description_2": "Hours of operation of the parking lot",
+      "description_3": "Corresponding parking fees in real time"
+    },
+    "section_3": {
+      "title": "Get notified about your parking session",
+      "subDescription": "After sending the car, users are completely assured to work when the application will update the information:",
+      "description_1": "Parking session status",
+      "description_2": "Notify when the registration period is about to end to avoid additional costs"
+    }
+  },
+  "smart-home": {
+    "section_1": {
+      "subDescription": "The solution brings lighting effects that are suitable for the environment, creating the best atmosphere and mood for users. All controlled remotely, anytime, anywhere with ease."
+    },
+    "section_2": {
+      "subDescription": "The solution uses devices to connect the air conditioner to the phone application. Users can monitor and control when not at home"
+    },
+    "section_3": {
+      "subDescription": "The solution uses devices to connect the switch to the phone app. Users can monitor and control when not at home.",
+      "description_1": "Smart Switch",
+      "description_2": "Touch 1 nút",
+      "description_3": "Smart Switch Battery"
+    },
+    "section_4": {
+      "subDescription": "We are proud to provide the most comprehensive smart home solution for customers.",
+      "description_1": "Pir",
+      "description_2": "Ultrasonic sensors",
+      "description_3": "Light Sensor"
+    },
+    "section_5": {
+      "subDescription": "We are proud to provide the most comprehensive smart home solution for customers.",
+      "description_1": "Pir",
+      "description_2": "Ultrasonic sensors",
+      "description_3": "Light Sensor"
+    },
+    "section_6": {
+      "subDescription": "We are proud to provide the most comprehensive smart home solution for customers.",
+      "description_1": "Pir",
+      "description_2": "Ultrasonic sensors",
+      "description_3": "Light Sensor"
+    }
+  }
 }

@@ -25,6 +25,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -65,6 +66,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -105,6 +107,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -145,6 +148,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -185,6 +189,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -225,6 +230,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -265,6 +271,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -305,6 +312,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -345,6 +353,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -385,6 +394,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }
@@ -425,6 +435,7 @@ const DataProductSolution = () => {
             }
             alt
             slug
+            lgn
             property_1 {
               publicURL
             }

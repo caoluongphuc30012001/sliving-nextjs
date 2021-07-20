@@ -21,12 +21,12 @@ const SolutionPage = () => {
         <div className="section-first">
           <SectionContent
             imgUrl={imgFirst}
-            title={t(`Search-parking`)}
-            subDescription={t(`vacant-spot`)}
+            title={t(`smart-parking.section_1.title`)}
+            subDescription={t(`smart-parking.section_1.subDescription`)}
             description={
               <ul>
-                <li>{t(`fastest-route`)}</li>
-                <li>{t(`direction-the-basements`)}</li>
+                <li>{t(`smart-parking.section_1.description_1`)}</li>
+                <li>{t(`smart-parking.section_1.description_2`)}</li>
               </ul>
             }
             url={"smart-parking-1-learn-more"}
@@ -35,13 +35,13 @@ const SolutionPage = () => {
         <div className="section-second">
           <SectionContent
             imgUrl={imgSecond}
-            title={t(`Reserve-parking`)}
-            subDescription={t(`System-automatic`)}
+            title={t(`smart-parking.section_2.title`)}
+            subDescription={t(`smart-parking.section_2.subDescription`)}
             description={
               <ul>
-                <li>{t(`position-vacancies`)}</li>
-                <li>{t(`Operation-hours`)}</li>
-                <li>{t(`Corresponding-parking-fees`)}</li>
+                <li>{t(`smart-parking.section_2.description_1`)}</li>
+                <li>{t(`smart-parking.section_2.description_2`)}</li>
+                <li>{t(`smart-parking.section_2.description_3`)}</li>
               </ul>
             }
             url={"smart-parking-2-learn-more"}
@@ -50,12 +50,12 @@ const SolutionPage = () => {
         <div className="section-first">
           <SectionContent
             imgUrl={imgSecond}
-            title={t(`Reserve-parking`)}
-            subDescription={t(`After-parking`)}
+            title={t(`smart-parking.section_2.title`)}
+            subDescription={t(`smart-parking.section_2.subDescription`)}
             description={
               <ul>
-                <li>{t(`Parking-status`)}</li>
-                <li>{t(`Notify-the-users`)}</li>
+                <li>{t(`smart-parking.section_3.description_1`)}</li>
+                <li>{t(`smart-parking.section_3.description_2`)}</li>
               </ul>
             }
             url={"smart-parking-2-learn-more"}

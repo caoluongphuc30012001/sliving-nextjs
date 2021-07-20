@@ -39,6 +39,7 @@
   "Solution_Suggestions": "Gợi ý giải pháp giành cho bạn",
   "Sliving_IOT_Products": "Sản phẩm Sliving IOT",
   "navProduct": {
+    "led": "LED",
     "Switches": "Công tắc",
     "Sockets": "Ổ cắm",
     "Sensors": "Cảm biến",
@@ -184,7 +185,8 @@
   "Energy-saving": "Tiết kiệm năng lượng",
   "collect-energy": "Giải pháp tiết kiệm năng lượng của SLiving",
   "Smart-Security-system": "Sản phẩm trong hệ thống An ninh thông minh",
-  "Smart-parking-product": "Sản phẩm  trong hệ thống Bãi xe thông minh ",
+  "Smart-parking-product": "Sản phẩm trong hệ thống Bãi xe thông minh ",
+  "Smart-energy-product": "Sản phẩm trong giải pháp Tiết kiệm năng lượng",
   "Energy-saving-product": "Sản phẩm tiết kiệm năng lượng",
   "Parking-products": "Sản phẩm đậu xe",
   "Smart_security_product": "Sản phẩm an ninh thông minh",

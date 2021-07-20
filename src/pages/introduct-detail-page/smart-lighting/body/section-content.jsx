@@ -4,7 +4,7 @@ import iconArrowRightF4 from "@images/icon/icon-arrow-right-F47403.svg";
 import { useTranslation } from 'react-i18next';
 import { Link } from 'gatsby';
 import useGetLgn from "@hook/useGetLgn";
-const SectionContent = ({ imgUrl, title, description, url }) => {
+const SectionContent = ({ imgUrl, title, description, subDescription, url }) => {
     const { t } = useTranslation();
     const Lgn = useGetLgn();
     return (
@@ -14,16 +14,9 @@ const SectionContent = ({ imgUrl, title, description, url }) => {
                     <img src={imgUrl} alt="" />
                 </div>
                 <div className="content-wrap__right" xs={12}>
-                    <h4 className="txt-blue fw-bold">This is solution's  long content</h4>
-                    <p>We are proud to provide the most comprehensive smart home solution for customers
-                        <ul>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                            <li> Smart lighting</li>
-                        </ul>
-                    </p>
+                    <h4 className="txt-blue fw-bold">{title}</h4>
+                    <p>{subDescription}</p>
+                    {description}
                     <div className="btn-research">
                         <Link to={`${Lgn}introduct-detail-page/${url}`}>
                             <button className="btn-research-wrap d-flex al-center" id='btn-research-wrap'>

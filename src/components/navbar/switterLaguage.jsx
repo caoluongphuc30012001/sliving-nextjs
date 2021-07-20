@@ -15,21 +15,21 @@ const LanguageSwitcher = ({ changeLng }) => {
     useEffect(() => {
         if (language === "vn") {
             setIsChange(true)
-            return null;
-        }
-        if (language !== "vn") {
+        }else{
             setIsChange(false)
-            return null;
         }
         if (isBrowser) {
             const pathPublic = window.location.href;
             if (typeof pathPublic === "string") {
                 if (pathPublic.indexOf('/vn') > -1) {
                     i18n.changeLanguage("vn");
+                    setIsChange(true);
                 }
                 if (pathPublic.indexOf('/en') > -1) {
-                    i18n.changeLanguage("en")
+                    i18n.changeLanguage("en");
+                    setIsChange(false);
                 }
+                
             }
         }
     }, [language, isChange, i18n])

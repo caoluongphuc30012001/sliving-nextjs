@@ -56,36 +56,36 @@ export const navData = {
                     id: '0',
                     title: 'Technical_solutions',
                     isActive: false,
-                    path: "/", isHover: false
+                    path: "/support-page/?supportId=1", isHover: false
                 },
                 {
                     id: '1',
                     title: 'Construction_Manual',
                     isActive: false,
-                    path: "/", isHover: false
+                    path: "/support-page/?supportId=2", isHover: false
                 }, {
                     id: '2',
                     title: 'Agricultural_Materials',
                     isActive: false,
-                    path: "/", isHover: false
+                    path: "/support-page/?supportId=3", isHover: false
                 },
                 {
                     id: '3',
                     title: 'Product_Identification',
                     isActive: false,
-                    path: "/", isHover: false
+                    path: "/support-page/?supportId=4", isHover: false
                 },
                 {
                     id: '4',
                     title: 'Product_Warranty',
                     isActive: false,
-                    path: "/", isHover: false
+                    path: "/support-page/?supportId=5", isHover: false
                 },
                 {
                     id: '5',
                     title: 'Documents_Download',
                     isActive: false,
-                    path: "/", isHover: false
+                    path: "/support-page/?supportId=6", isHover: false
                 },
             ]
         },

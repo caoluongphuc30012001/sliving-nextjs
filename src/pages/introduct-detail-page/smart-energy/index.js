@@ -25,7 +25,7 @@ const IntroductDetail = () => {
           <SectionContent
             imgUrl={imgFirst}
             title={t(`smart_energy.section_1.title`)}
-            url={"/introduct-detail-page/smart-energy-1-learn-more"}
+            url={"introduct-detail-page/smart-energy-1-learn-more"}
             description={
               <>
                 <p>{t(`smart_energy.section_1.subDescription`)}</p>
@@ -42,7 +42,7 @@ const IntroductDetail = () => {
           <SectionContent
             imgUrl={imgSecond}
             title={t(`smart_energy.section_2.title`)}
-            url={"/introduct-detail-page/smart-energy-2-learn-more"}
+            url={"introduct-detail-page/smart-energy-2-learn-more"}
             description={
               <>
                 <p>{t(`smart_energy.section_2.subDescription`)}</p>

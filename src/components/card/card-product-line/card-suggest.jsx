@@ -7,7 +7,7 @@ const CardSuggest = (props) => {
         <div className="card-suggest">
             <div className="card-suggest-wrap">
                 <div className="card-suggest-wrap__title fs-32 fw-bold">
-                    {props.title}
+                   <h3>{props.title}</h3>
                 </div>
                 <Row className="card-suggest-wrap__body" noGutters>
                     {

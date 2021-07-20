@@ -1,7 +1,7 @@
 import React from "react";
 import BannerVideo from "../../banner-video";
 import CardHeader from "./card-header";
-const CardSection = ({ title, subtitle, description, imgURL, backgroundColor, color, isButton, videoUrl, border, borderReadius, dataImg }) => {
+const CardSection = ({ title, subtitle, description, imgURL, backgroundColor, color, isButton, videoUrl, border, borderReadius, dataImg,url }) => {
     return (
         <div className="card-section card-wrap">
             {
@@ -23,6 +23,7 @@ const CardSection = ({ title, subtitle, description, imgURL, backgroundColor, co
                             isButton={isButton}
                             border={border}
                             borderReadius={borderReadius}
+                            url={url}
                         />
                         <div className="card-section-video">
                             <BannerVideo videoUrl={videoUrl} />
@@ -41,6 +42,7 @@ const CardSection = ({ title, subtitle, description, imgURL, backgroundColor, co
                             isButton={isButton}
                             border={border}
                             borderReadius={borderReadius}
+                            url={url}
                         />
                         <div className="img-des">
                             <img src={dataImg} alt="" className="img-banner" />

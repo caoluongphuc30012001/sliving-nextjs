@@ -39,7 +39,8 @@ const SectionHorizontalSlide = (props) => {
                                                 <div className="horizontal-slide__group">
                                                     <div className="horizontal__group-wrap">
                                                         <div className="horizontal-slide__title fs-48 fw-bold swiper-no-swiping">
-                                                            <span>  {node.frontmatter.title}</span>
+                                                            {/* <span>  {node.frontmatter.title}</span> */}
+                                                            <span>{t(`name_of_construction_works`)}</span>
                                                         </div>
                                                         <div className="horizontal-slide__des swiper-no-swiping" >
                                                             <span className="fw-bold fs-16">{t(`PRODUCTS_BE_USED`)}</span>

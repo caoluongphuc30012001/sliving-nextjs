@@ -5,12 +5,14 @@ import SectionArticleSecond from "./body/section-article-second.jsx";
 import SectionArticleThird from "./body/section-article-third.jsx";
 import SectionArticleFour from "./body/section-article-four.jsx";
 import SectionArticleFive from "./body/section-article-five.jsx";
-import SectionArticleBottom from "./body/section-article-bottom.jsx";
+import SectionOutstanding from "@components/section/section-outstanding";
 import "./style.scss";
 import Image1 from "@images/intro-content2/image1.png";
 import { withI18next } from '@wapps/gatsby-plugin-i18next';
 import { graphql } from 'gatsby';
+import { useTranslation } from "react-i18next";
 const IntroductionPage = () => {
+  const {t} = useTranslation();
   return (
     <Layout>
       <div className="introduction-page" id="introduction-page">
@@ -20,7 +22,9 @@ const IntroductionPage = () => {
         <SectionArticleThird />
         <SectionArticleFour />
         <SectionArticleFive />
-        <SectionArticleBottom />
+        <div className="container-wrap section-outstanding">
+           <SectionOutstanding  title={t(`Outstanding_Project`)} />
+        </div>
       </div>
     </Layout>
   );

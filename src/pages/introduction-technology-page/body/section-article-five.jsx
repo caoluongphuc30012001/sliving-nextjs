@@ -12,7 +12,7 @@ const SectionArticleThird = () => {
     return (
         <div className="section-introduction__article">
             <div className="introduction-content2">
-                <Row noGutters className="article-wrap-container">
+                <Row noGutters className="article-wrap-container article-wrapper-energy">
                     <Col xs={5} className="article-wrap-left-third">
                         <div>
                             <div className="article-header-third fs-48 fw-bold txt-blue">

@@ -32,9 +32,8 @@
 
     .dropdown-item:hover {
         color: #fff;
-        background-color: #f47403;
-        border-color: #f47403;
-        padding: none;
+        background-color: #1a7dd8;
+        border-color: #1a7dd8;
     }
 
     .dropdown-item.focus,
@@ -60,27 +59,31 @@
         margin-top: 60px;
     }
 }
-.form-tech-mobile{
-    width: 88% !important;
-}
 .technical-table-mobile {
+    padding: 0 !important;
     .card-header {
         width: fit-content;
         background: #67aeef;
-        padding: 10px 15px;
+        padding: 9px;
         border-radius: 4px;
         border: unset;
         position: absolute;
         z-index: 2;
-        top: 124px;
+        top: 99px;
         right: 0;
         .icon-sort-tech {
             width: fit-content;
         }
     }
-    .collapse {
-        border: 1px solid rgb(204, 204, 204);
+    .card-body {
+        padding: 0 !important;
+        border: 1px solid #cccccc;
         border-radius: 4px;
+    }
+    .dropdown {
+        button {
+            padding: 12px 8px !important;
+        }
     }
 }
 .icon-sort-tech {
@@ -109,6 +112,9 @@
     .dropdown-item {
         padding: 0.5rem 1.5rem !important;
         border-radius: 4px;
+    }
+    .card-body{
+        padding: 0.5rem;
     }
 }
 
@@ -164,7 +170,6 @@
         color: #fff;
         background-color: #f47403;
         border-color: #f47403;
-        padding: none;
     }
 
     .dropdown-item.focus,
@@ -279,7 +284,6 @@
         color: #fff;
         background-color: #f47403;
         border-color: #f47403;
-        padding: none;
     }
 
     .dropdown-toggle::after {
@@ -356,22 +360,33 @@
                 box-shadow: unset !important;
             }
         }
-
-        .btn-search {
+        .btn-research {
             position: absolute;
-            right: 19px;
+            right: 30px;
+        }
+        .btn:focus, .btn.focus{
+            box-shadow: unset;
+        }
+        .btn-search-mobile{
+            right: 55px !important;
+        }
+        .btn-search {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: none;
-
+            background-color: unset;
             img {
                 object-fit: cover;
             }
         }
+        .btn-replace {
+            margin-left: 8px;
+        }
     }
 }
-
+.form-tech-mobile {
+    height: 48px !important;
+}
 //=================== image slider ===========================//
 
 .container-first-slider {
@@ -622,5 +637,16 @@
     }
     .first-slider-wrap__right {
         padding: 0 15px 15px 15px;
+    }
+    .organize-dropdown{
+        height: fit-content;
+        .pagination-sort{
+            margin-bottom: 0 !important;
+        }
+    }
+    .title-second{
+        margin-left: 0;
+        margin-top: 24px;
+        text-align: center;
     }
 }
