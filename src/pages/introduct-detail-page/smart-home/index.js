@@ -46,12 +46,15 @@ const IntroductDetail = () => {
             title={t(`Smart-switch`)}
             url={"product-solution-page"}
             id={2}
-            subDescription={t(`smart-home.section_3.subDescription`)}
+            subDescription={t(`facial-recognition`)}
             description={
               <ul>
-                <li> {t(`smart-home.section_3.description_1`)}</li>
-                <li> {t(`smart-home.section_3.description_2`)}</li>
-                <li> {t(`smart-home.section_3.description_3`)}</li>
+                <li>
+                {t(`Face-ID`)}
+                </li>
+                <li> {t(`Identify-strangers`)}</li>
+                <li> {t(`recognition-camera`)}</li>
+                <li> {t(`Control-elevators`)}</li>
               </ul>
             }
           />
@@ -64,9 +67,11 @@ const IntroductDetail = () => {
             subDescription={t(`smart-home.section-4.subDescription`)}
             description={
               <ul>
-                <li> {t(`smart-home.section_4.description_1`)}</li>
-                <li> {t(`smart-home.section_4.description_2`)}</li>
-                <li> {t(`smart-home.section_4.description_3`)}</li>
+                <li> {t(`Power-Socket-V3`)}</li>
+                <li> Pir</li>
+                <li> {t(`Ultrasonic-sensors`)}</li>
+                <li> {t(`Light-Sensor`)}</li>
+                <li> {t(`Rectangular-Socket`)}</li>
               </ul>
             }
           />
