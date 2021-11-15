@@ -113,7 +113,7 @@
         padding: 0.5rem 1.5rem !important;
         border-radius: 4px;
     }
-    .card-body{
+    .card-body {
         padding: 0.5rem;
     }
 }
@@ -343,7 +343,7 @@
         input {
             height: 56px;
             position: relative;
-            width: 670px!important;
+            width: 670px !important;
             box-sizing: border-box;
             padding: 10px 29px;
             max-width: 670px;
@@ -364,10 +364,11 @@
             position: absolute;
             right: 30px;
         }
-        .btn:focus, .btn.focus{
+        .btn:focus,
+        .btn.focus {
             box-shadow: unset;
         }
-        .btn-search-mobile{
+        .btn-search-mobile {
             right: 55px !important;
         }
         .btn-search {
@@ -505,6 +506,31 @@
     }
 }
 
+.page-wrap {
+    .support-pages {
+        .row {
+            .support-page-right {
+                .right-container {
+                    .slick-slider {
+                        .slick-list {
+                            .slick-track {
+                                .slick-slide {
+                                    height: 233px;
+                                    .container-first-slider {
+                                        .row {
+                                            height: 204px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .is-active-item {
     background-color: #f47403 !important;
     color: #ffffff !important;
@@ -638,15 +664,39 @@
     .first-slider-wrap__right {
         padding: 0 15px 15px 15px;
     }
-    .organize-dropdown{
+    .organize-dropdown {
         height: fit-content;
-        .pagination-sort{
+        .pagination-sort {
             margin-bottom: 0 !important;
         }
     }
-    .title-second{
+    .title-second {
         margin-left: 0;
         margin-top: 24px;
         text-align: center;
+    }
+    .page-wrap {
+        .support-pages {
+            .row {
+                .support-page-right {
+                    .right-container {
+                        .slick-slider {
+                            .slick-list {
+                                .slick-track {
+                                    .slick-slide {
+                                        height: unset;
+                                        .container-first-slider {
+                                            .row {
+                                                height: unset;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
