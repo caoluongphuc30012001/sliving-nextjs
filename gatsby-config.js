@@ -93,6 +93,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: process.env.AWS_S3_BUCKET,
+      },
+    },
   ],
 };
 

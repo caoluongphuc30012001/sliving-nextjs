@@ -2,7 +2,7 @@
 # variables:
 #   GIT_SUBMODULE_STRATEGY: recursive
 
-image: node:latest
+image: node:14
 
 stages:
   - test
@@ -27,6 +27,8 @@ test:
   script:
     - npm install
     - ./node_modules/.bin/gatsby build --prefix-paths
+  only:
+    - merge_requests
   tags:
     - runner-191
 
@@ -42,11 +44,13 @@ pages:
     - git submodule update --init --recursive
   script:
     - npm install
-    - ./node_modules/.bin/gatsby build --prefix-paths
-    - cp -rf src/images public/images
-    - ls public/
+    # - ./node_modules/.bin/gatsby build --prefix-paths
+    # - cp -rf src/images public/images
+    # - ls public/
     # Chưa xử lý phần xóa các file cũ của folder /var/www/html/docs.sliving/. Hiện tại chỉ ghi đè các file cùng tên
-    - scp -i ~/.ssh/id_rsa -P 22006 -r public/* sst-ci@sst-ci.vm.sunshinetech.ai:/var/www/html/docs.sliving/
+    # - scp -i ~/.ssh/id_rsa -P 22006 -r public/* sst-ci@sst-ci.vm.sunshinetech.ai:/var/www/html/docs.sliving/
+    - npm run build
+    - npm run deploy
   only:
     - master
   tags:
