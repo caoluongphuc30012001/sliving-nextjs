@@ -6,7 +6,7 @@ image: node:14
 
 stages:
   - test
-  - build
+  - build-and-deploy
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ee/ci/yaml/README.html#cache
@@ -38,8 +38,8 @@ test:
   tags:
     - runner-191
 
-pages:
-  stage: build
+build-and-deploy:
+  stage: build-and-deploy
   before_script:
     # Create ssh-key and pull submodule
     - mkdir -p ~/.ssh
