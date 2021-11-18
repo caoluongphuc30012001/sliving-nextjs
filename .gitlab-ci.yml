@@ -25,13 +25,11 @@ test:
     - chmod 600 ~/.ssh/id_rsa
     - git submodule update --init --recursive
   script:
-    - export AWS_S3_PREFIX=$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
-    - echo $AWS_S3_BUCKET_REVIEW
+    # - export AWS_S3_PREFIX=$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+    - export AWS_S3_BUCKET=$AWS_S3_BUCKET_REVIEW
     - echo $AWS_S3_PREFIX
-    - rm gatsby-config.js
-    - mv gatsby-config-review.js gatsby-config.js
     - npm install
-    - npm run build-review
+    - npm run build
     - npm run deploy
   only:
     - merge_requests
