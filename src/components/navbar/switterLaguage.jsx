@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import { Language } from '@wapps/gatsby-plugin-i18next';
 import { useTranslation } from 'react-i18next';
+
+import iconLanguage from "../../images/new-home-page/header/icon-language.png"
+
 const isBrowser = typeof window !== "undefined";
 const LanguageSwitcher = ({ changeLng }) => {
     const valueFlag = ({ vn: "vn", en: "en" });
@@ -35,7 +38,8 @@ const LanguageSwitcher = ({ changeLng }) => {
     }, [language, isChange, i18n])
     return <Dropdown className="dropdown-language">
         <Dropdown.Toggle className="drop-toggle dropdown-toggle" variant="#ffffff" id="dropdown-basic">
-            <span>  {isChange ? 'Việt Nam' : 'English'}</span>
+            <span>{isChange ? 'VI' : 'EN'}</span>
+            <img src={iconLanguage} alt="" /> 
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-customize" id="dropdown-customize">
             <Dropdown.Item onClick={() => { changeFlag(valueFlag.vn); changeLng(valueFlag.vn); }}>Việt Nam</Dropdown.Item>

@@ -1,5 +1,6 @@
 import React from 'react';
 import HomePage from "./home-page/index";
+import HomePageNew from "./home-page-new/index";
 import "../fonts/Montserrat/Montserrat-ExtraLight.ttf";
 import "../style/base/_typography.scss";
 import "../i18n/i18n";
@@ -19,7 +20,8 @@ const IndexPage = (props) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet" />
       </Head>
-      <HomePage props={props}/>
+      {/* <HomePage props={props}/> */}
+      <HomePageNew />
     </>
   );
 };
