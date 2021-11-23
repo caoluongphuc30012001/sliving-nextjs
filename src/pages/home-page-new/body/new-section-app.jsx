@@ -16,21 +16,60 @@ SwiperCore.use([Pagination, Navigation]);
 export default function NewSectionApp() {
   const [swiperRef, setSwiperRef] = useState(null);
 
+  const listItemSlider = [
+    {
+      id: 1,
+      img: imgCinema,
+      name: "Cinema",
+    },
+    {
+      id: 2,
+      img: imgStore,
+      name: "Store",
+    },
+    {
+      id: 3,
+      img: imgHome,
+      name: "Home",
+    },
+    {
+      id: 4,
+      img: imgOffice,
+      name: "Office",
+    },
+    {
+      id: 5,
+      img: imgSchool,
+      name: "School",
+    },
+    {
+      id: 6,
+      img: imgSchool,
+      name: "School",
+    },
+    {
+      id: 7,
+      img: imgSchool,
+      name: "School",
+    },
+  ];
+
   return (
     <section>
       <div className="home-page-app">
         <div className="container-wrap">
           <Row>
             <Col xl={6} lg={6} md={6} className="app-title">
-              <h3>Những loại công trình ứng dụng giải pháp Sliving</h3>
+              <h3>Project types that use Sliving solutions.</h3>
               <img src={imgLine} alt="" />
             </Col>
             <Col xl={6} lg={6} md={6} className="app-desc">
               <p>
-                Xu hướng áp dụng công nghệ trong quản lý bất động sản cũng được
-                xem là một trong những giải pháp nâng cao khả năng vận hành của
-                dự án. Yếu tố này cũng góp phần làm nên khác biệt cho tiêu chuẩn
-                về dịch vụ quản lý bất động sản chuyên nghiệp,...
+                The trend towards the application of technology in property
+                management is also seen as one way to improve the operational
+                capacity of the project. This factor also helps make a
+                difference in the standard of professional property management
+                services,...
               </p>
             </Col>
           </Row>
@@ -48,96 +87,19 @@ export default function NewSectionApp() {
             navigation={true}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgCinema} alt="" />
+            {listItemSlider.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="slider-item">
+                  <div className="slider-item-icon">
+                    <span>01</span>
+                    <img src={item.img} alt="" />
+                  </div>
+                  <div className="slider-item-title">
+                    <p>{item.name}</p>
+                  </div>
                 </div>
-                <div className="slider-item-title">
-                  <p>Rạp chiếu phim</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgStore} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Cửa hàng</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgHome} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Nhà phố</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgOffice} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Văn phòng</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgSchool} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Trường học</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgSchool} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Rạp chiếu phim</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgSchool} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Rạp chiếu phim</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgSchool} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Rạp chiếu phim</p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slider-item-1">
-                <div className="slider-item-icon">
-                  <img src={imgSchool} alt="" />
-                </div>
-                <div className="slider-item-title">
-                  <p>Rạp chiếu phim</p>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </Col>
       </div>

@@ -16,8 +16,7 @@ export default function FooterNew() {
             <div className="footer-contact">
               <div className="contact-title">
                 <p>
-                  Giữ liên lạc với chúng tôi để cập nhật những thông tin mới
-                  nhất về sản phẩm.
+                  Please keep in touch to get the latest updates.
                 </p>
               </div>
               <div className="contact-form">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 
 import imgLine from "@images/new-home-page/app-img/line.png";
@@ -7,14 +7,22 @@ import imgCity from "@images/new-home-page/solution/img-city.png";
 import imgChip from "@images/new-home-page/solution/img-chip.png";
 import arrowSolution from "@images/new-home-page/solution/arrow-right.png";
 
+import AOS from 'aos';
+
 export default function NewSectionSolution() {
+  useEffect(() => {
+    AOS.init({
+      duration : 2000
+    });
+  }, []);
+
   return (
     <section>
       <div className="home-page-solution">
         <div className="container-wrap">
           <Row>
             <div className="solution-content">
-              <h3>Giải pháp dành cho bạn</h3>
+              <h3>Solution for your needs</h3>
               <img src={imgLine} alt="" />
             </div>
           </Row>
@@ -65,7 +73,7 @@ export default function NewSectionSolution() {
               <Col xl={6} lg={6} md={6} className="solution-right">
                 <div className="solution-item-1">
                   <img src={imgCity} alt="" />
-                  <div className="item-hover-1">
+                  <div className="item-hover-1" data-aos="fade-right">
                     <div className="item-hover-top">
                       <span>UI/UX & Dev</span>
                     </div>

@@ -16,7 +16,7 @@ export default function NewSectionCarousel() {
         <div className="container-wrap">
           <Row>
             <div className="carousel-header">
-              <h3>Những dự án nổi vật sử dụng sản phẩm Sliving</h3>
+              <h3>Successful projects using Sliving products</h3>
               <img src={imgLine} alt="" />
             </div>
           </Row>

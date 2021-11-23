@@ -7,9 +7,10 @@ import NewSectionVideo from "./body/new-section-video";
 import NewSectionHeader from "./body/new-section-header";
 import NewSectionApp from "./body/new-section-app";
 import NewSectionImg360 from "./body/new-section-img360";
-import NewSectionBanner from "./body/new-section-banner";
+// import NewSectionBanner from "./body/new-section-banner";
 import NewSectionSolution from "./body/new-section-solution";
 import NewSectionCarousel from "./body/new-section-carousel";
+import NewSectionProduct from './body/new-section-product';
 
 export default function HomePageNew() {
   return (
@@ -19,11 +20,11 @@ export default function HomePageNew() {
           <NewSectionHeader />
           <NewSectionApp />
           <NewSectionImg360 />
-          <SectionSlides />
-          <NewSectionBanner />
+          <NewSectionProduct />
+          {/* <NewSectionBanner /> */}
+          <NewSectionCarousel />
           <NewSectionSolution />
           <NewSectionVideo />
-          <NewSectionCarousel />
         </div>
       </PortfolioProvider>
     </LayoutNew>

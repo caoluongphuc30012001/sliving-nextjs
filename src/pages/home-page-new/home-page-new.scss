@@ -11,7 +11,7 @@
       .header-left {
         padding: 0;
         &-title {
-          padding-top: 308px;
+          padding-top: 395px;
           h1 {
             color: #e8f2fb;
             text-shadow: 0px 6px 8px rgba(24, 39, 75, 0.12), 0px 8px 16px rgba(24, 39, 75, 0.08);
@@ -98,7 +98,7 @@
       }
     }
     .app-slider {
-      padding: 0 !important;
+      padding: 0 0 0 135px;
       margin-top: 95px;
       .swiper-container {
         .swiper-pagination-fraction {
@@ -106,23 +106,33 @@
         }
         .swiper-button-prev {
           top: 83% !important;
-          left: 9%;
+          left: 0%;
         }
         .swiper-button-next {
           top: 83% !important;
-          right: 84% !important;
+          right: 93% !important;
         }
         .swiper-wrapper {
-          margin-left: -360px !important;
+          margin-left: -445px !important;
           height: 500px;
           .swiper-slide {
             position: relative;
+            cursor: pointer;
             width: 255px !important;
             height: 350px;
             background: #d1e5f7;
             border-radius: 8px;
-            .slider-item-1 {
+            .slider-item {
               .slider-item-icon {
+                span {
+                  position: absolute;
+                  top: 5%;
+                  left: 6%;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 16px;
+                  color: #a3cbef;
+                }
                 img {
                   position: absolute;
                   top: 40%;
@@ -140,12 +150,146 @@
                   line-height: 131.25%;
                   text-align: center;
                   position: absolute;
-                  top: 60%;
+                  top: 80%;
                   left: 50%;
                   transform: translate(-50%, -50%);
                 }
               }
             }
+          }
+          .swiper-slide:hover {
+            background-color: #76787a;
+            .slider-item {
+              .slider-item-icon {
+                span {
+                  color: white;
+                }
+              }
+              .slider-item-title {
+                p {
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-page-product {
+    margin-top: 5%;
+    .container-wrap {
+      .product-header {
+        h3 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 47px;
+          line-height: 131.25%;
+          color: #0a3256;
+        }
+      }
+      .product-list-header {
+        margin-top: 3%;
+        .row {
+          .list-header-item {
+            padding: 0;
+            ul {
+              display: flex;
+              justify-content: space-between;
+              padding: 0;
+              li {
+                list-style-type: none;
+                a {
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 131.25%;
+                  color: #76787a;
+                }
+              }
+            }
+          }
+        }
+      }
+      .product-list-item {
+        .row {
+          justify-content: space-between;
+          .product-item {
+            cursor: pointer;
+            margin-top: 40px;
+            max-width: 373px;
+            max-height: 479px;
+            background: #f9fafb;
+            border: 1px solid #f2f3f5;
+            box-sizing: border-box;
+            box-shadow: 0px 2px 4px -2px rgba(24, 39, 75, 0.12), 0px 4px 4px -2px rgba(24, 39, 75, 0.08);
+            border-radius: 8px;
+            padding: 0;
+            .product-item-img {
+              img {
+              }
+            }
+            .product-item-info {
+              padding: 40px 16px 32px 16px;
+              .product-item-title {
+                span {
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 12px;
+                  line-height: 131.25%;
+                  color: #76787a;
+                }
+              }
+              .product-item-name {
+                span {
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 21px;
+                  line-height: 131.25%;
+                  color: #104b82;
+                }
+              }
+              .product-item-desc {
+                margin-top: 2%;
+                p {
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 131.25%;
+                  color: #76787a;
+                }
+              }
+            }
+          }
+          .product-item:hover {
+            background: #f9fafb;
+            box-shadow: 0px 100px 114px rgba(0, 0, 0, 0.07), 0px 43.0607px 47.6265px rgba(0, 0, 0, 0.0341265),
+              0px 20.8001px 25.4634px rgba(0, 0, 0, 0.0313646), 0px 9.15518px 14.2746px rgba(0, 0, 0, 0.0327254),
+              0px 3.02975px 7.58112px rgba(0, 0, 0, 0.0329046), 0px 0.338508px 3.15467px rgba(0, 0, 0, 0.0267921);
+            border-radius: 8px;
+          }
+        }
+      }
+      .product-button {
+        margin-top: 5%;
+        padding-bottom: 12%;
+        width: 100%;
+        text-align: center;
+        button {
+          position: relative;
+          width: 72px;
+          height: 72px;
+          background: #fe8258;
+          box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+          border-radius: 64px;
+          outline: none;
+          border: none;
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
       }
@@ -216,8 +360,7 @@
   }
 
   .home-page-solution {
-    padding-top: 5%;
-    background: #dcebf9;
+    padding-top: 7%;
     height: 1150px;
     .container-wrap {
       .solution-content {
@@ -230,7 +373,7 @@
         }
       }
       .solution-img {
-        margin-top: 4%;
+        margin-top: 5%;
         display: flex;
         .solution-left {
           padding: 0 15px 0 0;
@@ -489,7 +632,8 @@
     background-image: url("../../images/new-home-page/video-bg.png");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    padding-top: 7%;
+    padding-top: 10%;
+    min-height: 1180px;
     .body-video {
       margin-top: unset;
       .video-header {
@@ -502,24 +646,25 @@
         }
       }
       .card-video {
-        margin-top: 5%;
+        margin-top: 6%;
       }
     }
   }
 
   .new-page-carousel {
+    margin-top: 12%;
     .container-wrap {
       .row {
         .carousel-header {
           width: 100%;
           text-align: center;
+          padding: 0 180px;
           h3 {
             font-weight: bold;
             font-size: 47px;
             line-height: 131.25%;
             text-align: center;
             color: #0a3256;
-            max-width: 650px;
           }
           img {
             text-align: center;
@@ -532,7 +677,7 @@
         width: 240px;
         height: 320px;
       }
-      
+
       .swiper-slide {
         display: flex;
         align-items: center;
@@ -542,47 +687,46 @@
         font-weight: bold;
         color: #fff;
       }
-      
+
       .swiper-slide:nth-child(1n) {
         background-color: rgb(206, 17, 17);
       }
-      
+
       .swiper-slide:nth-child(2n) {
         background-color: rgb(0, 140, 255);
       }
-      
+
       .swiper-slide:nth-child(3n) {
         background-color: rgb(10, 184, 111);
       }
-      
+
       .swiper-slide:nth-child(4n) {
         background-color: rgb(211, 122, 7);
       }
-      
+
       .swiper-slide:nth-child(5n) {
         background-color: rgb(118, 163, 12);
       }
-      
+
       .swiper-slide:nth-child(6n) {
         background-color: rgb(180, 10, 47);
       }
-      
+
       .swiper-slide:nth-child(7n) {
         background-color: rgb(35, 99, 19);
       }
-      
+
       .swiper-slide:nth-child(8n) {
         background-color: rgb(0, 68, 255);
       }
-      
+
       .swiper-slide:nth-child(9n) {
         background-color: rgb(218, 12, 218);
       }
-      
+
       .swiper-slide:nth-child(10n) {
         background-color: rgb(54, 94, 77);
       }
-      
     }
   }
 }

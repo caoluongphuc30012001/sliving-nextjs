@@ -14,7 +14,7 @@ export default function NewSectionHeader() {
           <Row>
             <Col xl={6} lg={6} md={6} className="header-left">
               <div className="header-left-title">
-                <h1>Kỷ nguyên cuộc sống thông minh</h1>
+                <h1>The era of intelligent life.</h1>
               </div>
               <div className="header-left-desc">
                 <p>
