@@ -24,7 +24,7 @@ const TechnicalSol = () => {
   const dataProductIdentification = data.dataProductIdentification.edges;
   const dataProductWarranty = data.dataProductWarranty.edges;
   const dataDocumentsDownload = data.dataDocumentsDownload.edges;
-  console.log("dataDocumentsDownload",dataDocumentsDownload);
+  console.log("dataDocumentsDownload", dataDocumentsDownload);
   const [post, setPost] = useState(dataTechnicalAnswer);
   const [id, setId] = useState();
   const [titleSolution, setTitle] = useState("Technical_solutions");
@@ -323,7 +323,7 @@ const TechnicalSol = () => {
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
-                                  <Link href={`${Lgn}${node.frontmatter.slug}`} >
+                                  <Link to={`${Lgn}${node.frontmatter.slug}`} >
                                     <div className="download__container">
                                       <img src={DownLoadIcons} alt="icon download" />
                                     </div>

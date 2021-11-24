@@ -98,7 +98,6 @@
       }
     }
     .app-slider {
-      padding: 0 0 0 135px;
       margin-top: 95px;
       .swiper-container {
         .swiper-pagination-fraction {
@@ -158,9 +157,14 @@
             }
           }
           .swiper-slide:hover {
-            background-color: #76787a;
+            //background-color: #76787a;
+            background-image: url("../../images/new-home-page/app-img/solution-house.svg");
+            transition: background-image 0.3s ease-out;
             .slider-item {
               .slider-item-icon {
+                svg {
+                  stroke: #ffffff;
+                }
                 span {
                   color: white;
                 }
@@ -652,13 +656,15 @@
   }
 
   .new-page-carousel {
-    margin-top: 12%;
+    padding: 88px 0;
+    background: linear-gradient(180deg, rgba(232, 242, 251, 1) 50%, rgba(255, 242, 238, 1) 100%);
     .container-wrap {
       .row {
         .carousel-header {
           width: 100%;
           text-align: center;
           padding: 0 180px;
+          margin-bottom: 52px;
           h3 {
             font-weight: bold;
             font-size: 47px;
@@ -672,7 +678,91 @@
         }
       }
     }
+    h4 {
+      margin-top: 32px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 131.25%;
+      text-align: center;
+      color: #0a3256;
+    }
+
     .list-carousel {
+      height: 658px;
+      .css-doq0dk {
+        > div {
+          opacity: 0.7 !important;
+          &:nth-child(1) {
+            > div {
+              transform: translateY(0) translateX(0) scale(3);
+            }
+            left: 10% !important;
+            max-width: 174px !important;
+            max-height: 461px !important;
+            box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+            img {
+              max-width: 174px !important;
+              max-height: 461px !important;
+            }
+          }
+          &:nth-child(3) {
+            box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+            opacity: 1 !important;
+            min-width: 678px !important;
+            min-height: 658px !important;
+            img {
+              min-width: 678px !important;
+              min-height: 658px !important;
+            }
+          }
+          &:nth-child(2) {
+            box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+            > div {
+              transform: translateY(0) translateX(0) scale(1.5);
+            }
+            max-width: 207px;
+            max-height: 550px;
+            img {
+              max-width: 207px;
+              max-height: 550px;
+            }
+          }
+          &:nth-child(4) {
+            box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+            > div {
+              transform: translateY(0) translateX(0) scale(1.5);
+            }
+            max-width: 207px;
+            max-height: 550px;
+            img {
+              max-width: 207px;
+              max-height: 550px;
+            }
+          }
+
+          &:nth-child(5) {
+            > div {
+              transform: translateY(0) translateX(0) scale(3);
+            }
+            left: 92% !important;
+            max-width: 174px !important;
+            max-height: 461px !important;
+            img {
+              max-width: 174px !important;
+              max-height: 461px !important;
+            }
+          }
+        }
+      }
+
+      img {
+        border-radius: 16px;
+      }
+      .slick-active {
+        width: 207px;
+        height: 550px;
+      }
       .swiper {
         width: 240px;
         height: 320px;

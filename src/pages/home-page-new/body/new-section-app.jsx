@@ -91,7 +91,6 @@ export default function NewSectionApp() {
               <SwiperSlide key={index}>
                 <div className="slider-item">
                   <div className="slider-item-icon">
-                    <span>01</span>
                     <img src={item.img} alt="" />
                   </div>
                   <div className="slider-item-title">
