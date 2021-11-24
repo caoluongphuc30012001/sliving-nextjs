@@ -21,11 +21,6 @@
     font-size: 20px;
 }
 
-.fs-21 {
-    font-size: 21px;
-    line-height: 131.25%;
-}
-
 .fs-24 {
     font-size: 24px;
 }
@@ -105,14 +100,8 @@
 .container-wrap {
     margin-left: 135px;
     margin-right: 135px;
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.container-v2 {
-    max-width: 1440px;
-    width: 100%;
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -135,8 +124,7 @@
 }
 
 @media (max-width: 1024px) {
-    .container-wrap,
-    .leaflet-container {
+    .container-wrap , .leaflet-container{
         max-width: 970px;
     }
     .fs-64 {
@@ -153,8 +141,7 @@
     }
 }
 @media (max-width: 768px) {
-    .container-wrap,
-    .leaflet-container {
+    .container-wrap, .leaflet-container {
         max-width: 700px;
         padding-right: 20px;
         padding-left: 20px;
@@ -167,8 +154,7 @@
     }
 }
 @media (max-width: 576px) {
-    .container-wrap,
-    .leaflet-container {
+    .container-wrap ,.leaflet-container {
         max-width: 500px;
     }
     .fs-32 {
