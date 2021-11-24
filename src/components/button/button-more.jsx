@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
 import { Link } from "gatsby";
-import imgArrow from "@images/icon/icon-arrow white.svg";
+import imgArrow from "@images/icon/icon-arrow-white.svg";
 import useGetLgn from "@hook/useGetLgn";
 const Div = styled.div`
 background-color:  ${props => props.backgroundColor};
@@ -18,7 +18,7 @@ const ButtonMore = ({ url, backgroundColor, color, border, boxShadow, title, bor
     const Lgn = useGetLgn();
     const { t } = useTranslation();
     return (
-        <Link to={Lgn+url}>
+        <Link to={Lgn + url}>
             <Div className="btn-more b-shadow" padding={padding} backgroundColor={backgroundColor} border={border} borderReadius={borderReadius}>
                 <Span color={color} fontWeight={fontWeight}>{titleBtn ? t(`${titleBtn}`) : t(`More_Information`)}
                 </Span>

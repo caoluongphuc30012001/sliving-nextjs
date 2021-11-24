@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Navbar, Image, Nav, Dropdown, Row, Col, InputGroup, FormControl } from "react-bootstrap";
 const DropdownButton = () => {
     return (
-        <Dropdown className="dropdown-language">
+        <Dropdown className="dropdown-language dropdown-language-v2">
             <Dropdown.Toggle className="drop-toggle d-flex dropdown-toggle" variant="#ffffff" id="dropdown-basic">
                 {isChange ? 'Việt Nam' : 'English'}
             </Dropdown.Toggle>
