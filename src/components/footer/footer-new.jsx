@@ -10,36 +10,10 @@ import arrowRight from "../../images/new-home-page/footer/arrow-right.png"
 export default function FooterNew() {
   return (
     <>
-      <div className="footer-new">
-        <Row>
-          <div className="footer-map">
-            <div className="footer-contact">
-              <div className="contact-title">
-                <p>
-                  Please keep in touch to get the latest updates.
-                </p>
-              </div>
-              <div className="contact-form">
-                <div className="contact-form-group">
-                  <input type="text" placeholder="Email address" />
-                </div>
-                <button type="button">
-                  <img src={arrowRight} alt="" />
-                </button>
-              </div>
-              <div className="contact-desc">
-                <p>
-                  Our goal is to translate the positive effects from
-                  revolutionizing how companies engage with their clients &
-                  their team.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Row>
-        <div className="footer-info-address container-wrap">
+      <footer className="footer-new container-v2">
+        <div className="footer-info-address ">
           <Row>
-            <Col xl={7} lg={7} md={7} className="footer-left">
+            <Col lg={7} md={12} sm={12} xs={12} className="footer-left">
               <div className="footer-icon">
                 <img src={logo} alt="" />
               </div>
@@ -55,7 +29,7 @@ export default function FooterNew() {
                 </div>
               </div>
             </Col>
-            <Col xl={5} lg={5} md={5} className="footer-right">
+            <Col lg={5} md={12} sm={12} xs={12} className="footer-right">
               <div className="footer-list-item">
                 <img src={iconInsta} alt="" />
                 <img src={iconGg} alt="" />
@@ -65,7 +39,7 @@ export default function FooterNew() {
             </Col>
           </Row>
         </div>
-      </div>
+      </footer>
     </>
   );
 }

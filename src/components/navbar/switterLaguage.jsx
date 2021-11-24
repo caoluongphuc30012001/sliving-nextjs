@@ -18,7 +18,7 @@ const LanguageSwitcher = ({ changeLng }) => {
     useEffect(() => {
         if (language === "vn") {
             setIsChange(true)
-        }else{
+        } else {
             setIsChange(false)
         }
         if (isBrowser) {
@@ -32,14 +32,14 @@ const LanguageSwitcher = ({ changeLng }) => {
                     i18n.changeLanguage("en");
                     setIsChange(false);
                 }
-                
+
             }
         }
     }, [language, isChange, i18n])
-    return <Dropdown className="dropdown-language">
+    return <Dropdown className="dropdown-language dropdown-language-v2">
         <Dropdown.Toggle className="drop-toggle dropdown-toggle" variant="#ffffff" id="dropdown-basic">
             <span>{isChange ? 'VI' : 'EN'}</span>
-            <img src={iconLanguage} alt="" /> 
+            <img src={iconLanguage} alt="" />
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-customize" id="dropdown-customize">
             <Dropdown.Item onClick={() => { changeFlag(valueFlag.vn); changeLng(valueFlag.vn); }}>Việt Nam</Dropdown.Item>

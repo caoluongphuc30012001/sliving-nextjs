@@ -3,15 +3,13 @@ import { PortfolioProvider } from "./../context/context";
 import { navData, addressData, aboutData } from "./../mock/data";
 import "../i18n/i18n";
 import "./style.scss";
-import Footer from "./footer/footer";
 import ButtonRounded from "@components/button/button-card-rounded";
 import { withTranslation } from 'react-i18next';
-import NavbarNew from "./navbar-new/navbar-new";
+import NavbarV2 from "./navbar-new/narbar-v2";
 import FooterNew from './footer/footer-new';
-import NavBar from './navbar/navbar';
 const isBrowser = typeof window !== "undefined";
 
-function LayoutNew({children}) {
+function LayoutNew({ children }) {
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [arrNav, setNavData] = useState({});
@@ -42,14 +40,14 @@ function LayoutNew({children}) {
         <PortfolioProvider value={{ arrNav, infoCompany }}>
             {/* {isMobile && <NavBarMobile />} */}
             <div className="page">
-                {isDesktop && <NavbarNew />}
+                {isDesktop && <NavbarV2 />}
                 {/* {isDesktop && <NavBar/>} */}
-                <article>
+                <main>
                     <div className="page-wrap-new" id="page-main">
                         {children}
                     </div>
-                </article>
-                <FooterNew/>
+                </main>
+                <FooterNew />
                 <ButtonRounded />
             </div>
         </PortfolioProvider>
