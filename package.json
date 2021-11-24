@@ -23,7 +23,6 @@
     "@mdx-js/react": "^1.6.22",
     "@react-google-maps/api": "^2.2.0",
     "@wapps/gatsby-plugin-i18next": "^1.1.6",
-    "aos": "^3.0.0-beta.6",
     "babel-plugin-styled-components": "^1.12.0",
     "babylonjs": "^4.2.0",
     "babylonjs-hook": "0.1.0-beta.0",

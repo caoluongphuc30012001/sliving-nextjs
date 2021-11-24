@@ -1,8 +1,8 @@
-import { Link } from "gatsby";
+ import { Link } from "gatsby";
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import iconArrowRightF4 from "@images/icon/icon-arrow-orange.svg";
-import iconArrowRight from "@images/icon/icon-arrow-white.svg";
+import iconArrowRight from "@images/icon/icon-arrow white.svg";
 import useGetLgn from "@hook/useGetLgn";
 const CardProductLine = ({ title, subtitle, slug, description, imgUrl, isBtn, url }) => {
     const { t } = useTranslation();
