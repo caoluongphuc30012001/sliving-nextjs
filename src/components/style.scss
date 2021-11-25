@@ -66,6 +66,10 @@
   transition-timing-function: ease;
 
   .nav-header {
+    height: 80px;
+    .navbar-collapse {
+      justify-content: flex-end;
+    }
     .logo {
       img {
         width: 100%;

@@ -23,6 +23,8 @@ import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 import iconArrowRight from "@images/icon/icon-arrow white.svg";
 
+import useWindowSize from "../../hook/useWindowSize";
+
 import "./style.scss";
 
 import AOS from "aos";
@@ -30,8 +32,6 @@ import AOS from "aos";
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 import SectionMap from "@components/map";
-
-const isBrowser = typeof window !== "undefined";
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -42,23 +42,7 @@ const IndexPage = () => {
     });
   }, []);
 
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (isBrowser) {
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 836) {
-          setIsMobile(false);
-        } else {
-          setIsMobile(true);
-        }
-      });
-      if (window.innerWidth > 836) {
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-      }
-    }
-  }, []);
+  const { isMobile } = useWindowSize();
   const [arrHeader] = useState([
     {
       id: "0",
@@ -359,7 +343,7 @@ const IndexPage = () => {
 export default withI18next()(IndexPage);
 
 export const query = graphql`
-  query ($lng: String!) {
+  query($lng: String!) {
     locales: allLocale(
       filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
     ) {

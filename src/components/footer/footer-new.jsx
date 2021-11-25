@@ -1,11 +1,10 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import logo from "../../images/new-home-page/footer/logo.png";
-import iconSwitter from "../../images/new-home-page/footer/icon-switter.png";
-import iconFb from "../../images/new-home-page/footer/icon-fb.png";
-import iconGg from "../../images/new-home-page/footer/icon-gg.png";
-import iconInsta from "../../images/new-home-page/footer/icon-insta.png";
-import arrowRight from "../../images/new-home-page/footer/arrow-right.png"
+import logo from "@images/new-home-page/footer/logo.png";
+import iconSwitter from "@images/new-home-page/footer/icon-switter.png";
+import iconFb from "@images/new-home-page/footer/icon-fb.png";
+import iconGg from "@images/new-home-page/footer/icon-gg.png";
+import iconInsta from "@images/new-home-page/footer/icon-insta.png";
 
 export default function FooterNew() {
   return (

@@ -13,7 +13,10 @@ const LanguageSwitcher = ({ changeLng }) => {
         i18n.changeLanguage(lgn)
         setIsChange(lgn === "vn" ? true : false);
     };
-    const [language] = useState(localStorage.getItem("i18nextLng"));
+    const [language, setLanguage] = useState();
+    useEffect(() => {
+        setLanguage(localStorage.getItem("i18nextLng"));
+    }, [])
     const [isChange, setIsChange] = useState(false);
     useEffect(() => {
         if (language === "vn") {

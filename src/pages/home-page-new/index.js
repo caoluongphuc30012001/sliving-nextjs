@@ -10,7 +10,7 @@ import NewSectionImg360 from "./body/new-section-img360";
 // import NewSectionBanner from "./body/new-section-banner";
 import NewSectionSolution from "./body/new-section-solution";
 import NewSectionCarousel from "./body/new-section-carousel";
-import NewSectionProduct from './body/new-section-product';
+import NewSectionProduct from "./body/new-section-product";
 
 export default function HomePageNew() {
   return (

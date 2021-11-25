@@ -4,7 +4,8 @@ import { Row } from "react-bootstrap";
 import imgLine from "@images/new-home-page/app-img/line.png";
 import imgTest from "@images/main-page-v2/element-left.svg";
 
-import Carousel from 'react-spring-3d-carousel';
+
+const isBrowser = typeof window !== "undefined";
 
 export default function NewSectionCarousel() {
 
@@ -42,7 +43,14 @@ export default function NewSectionCarousel() {
     return { ...slide, onClick: () => handleChangeSlide(index) };
   });
 
-  const carousels = useMemo(() => <Carousel slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />, [goToSlide])
+  const buildCarousel = useMemo(() => {
+    if (isBrowser) {
+      const Carousel = require('react-spring-3d-carousel');
+      return (<Carousel slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />);
+    }
+    return <div></div>
+
+  }, [isBrowser, goToSlide])
 
   return (
     <section>
@@ -56,7 +64,7 @@ export default function NewSectionCarousel() {
           </Row>
         </div>
         <div className="list-carousel" >
-          {carousels}
+          {buildCarousel}
         </div>
         <h4 className="fs-21 carousel-title-project">Tên dự án - Sử dụng giải pháp của Sliving</h4>
       </div>

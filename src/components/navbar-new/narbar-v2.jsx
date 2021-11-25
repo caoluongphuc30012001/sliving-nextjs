@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
-import { Link } from "@wapps/gatsby-plugin-i18next";
+import { Link } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLaguage";
 
@@ -9,14 +8,13 @@ import LanguageSwitcher from "@components/navbar/switterLaguage";
 export default function NavbarNew() {
 
     const arrMenu = [
-        { id: "0", title: "Smart Home", isActive: true },
-        { id: "1", title: "Smart Building", isActive: false },
-        { id: "2", title: "Fintech IoT", isActive: false },
-        { id: "3", title: "Lighting", isActive: false },
-        { id: "4", title: "About Us", isActive: false },
+        { id: "0", title: "Smart Home", isActive: true, path: "#" },
+        { id: "1", title: "Smart Building", isActive: false, path: "#" },
+        { id: "2", title: "Fintech IoT", isActive: false, path: "#" },
+        { id: "3", title: "Lighting", isActive: false, path: "#" },
+        { id: "4", title: "About Us", isActive: false, path: "#" },
     ];
 
-    const { t } = useTranslation();
 
     return (
         <>
@@ -47,7 +45,7 @@ export default function NavbarNew() {
                                                         }`}
                                                     id="item-menu"
                                                 >
-                                                    {t(`${nav.title}`)}
+                                                    {nav.title}
                                                 </Link>
 
                                             );
