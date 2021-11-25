@@ -14,6 +14,12 @@ exports.onPostBuild = () => {
 exports.createPages = async function ({ page, actions, graphql }) {
   const { createPage } = actions;
 
+  const smartHomeComponent = require.resolve("./src/pages/home-page-new/index");
+  createPage({
+    path: `/smart-home`,
+    component: smartHomeComponent,
+  });
+
   const productPage = await graphql(
     `
       ${QueryProductPage()}

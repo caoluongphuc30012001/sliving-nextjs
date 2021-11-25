@@ -16,10 +16,10 @@
     "deploy": "gatsby-plugin-s3 deploy"
   },
   "dependencies": {
-    "3d-react-carousal": "^4.0.2",
     "@babylonjs/core": "^4.2.0",
     "@babylonjs/loaders": "^4.2.0",
     "@ccalamos/gatsby-source-googlemaps-static": "^3.1.1",
+    "@loadable/component": "^5.15.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@react-google-maps/api": "^2.2.0",
@@ -73,8 +73,6 @@
     "react-select": "^4.3.1",
     "react-slick": "^0.28.1",
     "react-spring-3d-carousel": "^1.2.1",
-    "react-svg-loader": "^3.0.3",
-    "react-timeago": "^5.2.0",
     "reactstrap": "^8.9.0",
     "sass": "^1.32.12",
     "slick-carousel": "^1.8.1",

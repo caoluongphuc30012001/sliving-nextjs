@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import LayoutNew from "@components/layout-new";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from "gatsby";
 import { Row, Col } from "react-bootstrap";
 
 import ImageHp from "@images/main-page-v2/header-hp.svg";
@@ -340,14 +338,4 @@ const IndexPage = () => {
   );
 };
 
-export default withI18next()(IndexPage);
-
-export const query = graphql`
-  query($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default IndexPage;
