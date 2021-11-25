@@ -19,11 +19,6 @@ const ArticleInfo = () => {
                         <img src={arrowRight} alt="" />
                     </button>
                 </div>
-                <div className="contact-desc">
-                    <p>Our goal is to translate the positive effects
-                        from revolutionizing how companies engage with their clients & their team.
-                    </p>
-                </div>
             </div>
         </article>
     )

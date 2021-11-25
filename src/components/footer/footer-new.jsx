@@ -1,18 +1,23 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import logo from "@images/new-home-page/footer/logo.png";
-import iconSwitter from "@images/new-home-page/footer/icon-switter.png";
 import iconFb from "@images/new-home-page/footer/icon-fb.png";
-import iconGg from "@images/new-home-page/footer/icon-gg.png";
-import iconInsta from "@images/new-home-page/footer/icon-insta.png";
-
+import iconIns from "@images/new-home-page/footer/icon-insta.png";
+import SectionMap from "@components/map";
+import { Link } from "gatsby";
 export default function FooterNew() {
+  const BuildSectionMap = () => {
+    return <SectionMap />;
+  };
   return (
     <>
-      <footer className="footer-new container-v2">
-        <div className="footer-info-address ">
+      <footer className="footer-new">
+        <Row noGutters>
+          <Col xs={12}><BuildSectionMap /></Col>
+        </Row>
+        <div className="footer-info-address container-v2">
           <Row>
-            <Col lg={7} md={12} sm={12} xs={12} className="footer-left">
+            <Col lg={8} md={12} sm={12} xs={12} className="footer-left">
               <div className="footer-icon">
                 <img src={logo} alt="" />
               </div>
@@ -28,12 +33,10 @@ export default function FooterNew() {
                 </div>
               </div>
             </Col>
-            <Col lg={5} md={12} sm={12} xs={12} className="footer-right">
+            <Col lg={4} md={12} sm={12} xs={12} className="footer-right">
               <div className="footer-list-item">
-                <img src={iconInsta} alt="" />
-                <img src={iconGg} alt="" />
-                <img src={iconSwitter} alt="" />
-                <img src={iconFb} alt="" />
+                <Link to="https://www.facebook.com/UnicloudCareers"><img src={iconIns} alt="" /></Link>
+                <Link to="https://www.facebook.com/UnicloudCareers"><img src={iconFb} alt="facebook unicloud" /></Link>
               </div>
             </Col>
           </Row>

@@ -29,7 +29,6 @@ import AOS from "aos";
 
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
-import SectionMap from "@components/map";
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -167,10 +166,14 @@ const IndexPage = () => {
             : "bullet-active-section-v2",
           clickable: true,
         }}
-        navigation={{
-          nextEl: ".btn-next",
-          prevEl: ".btn-prev",
-        }}
+        navigation={
+          isButton
+            ? {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+              }
+            : isButton
+        }
         className="mySwiper"
       >
         {array &&
@@ -317,10 +320,6 @@ const IndexPage = () => {
     return <SectionBannerV2 />;
   };
 
-  const BuildSectionMap = () => {
-    return <SectionMap />;
-  };
-
   return (
     <LayoutNew>
       <header className="header-main-page container-v2">
@@ -332,7 +331,6 @@ const IndexPage = () => {
         <BuildSectionThreeElement />
         <BuildSectionFourElement />
         <BuildSectionBannerReason />
-        <BuildSectionMap />
       </main>
     </LayoutNew>
   );
