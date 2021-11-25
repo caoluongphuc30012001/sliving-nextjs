@@ -30,8 +30,23 @@ const NavBar = () => {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 0) {
                     if (document.getElementById("menu-topbar")) {
-                        document.getElementById("menu-topbar").style.transform = "translate(0px,-62px)";
-                        document.getElementById("header-nav").style.transform = "translate(0px,-62px)";
+                        document.getElementById("menu-topbar").style.transform = "translate(0px,-72px)";
+                        document.getElementById("header-nav").style.transform = "translate(0px,-72px)";
+                    }
+                } else {
+                    if (document.getElementById("menu-topbar")) {
+                        document.getElementById("menu-topbar").style.transform = "translate(0px,0px)";
+                        document.getElementById("header-nav").style.transform = "translate(0px,0px)";
+                    }
+                }
+            }, true)
+        }
+        return () => {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 0) {
+                    if (document.getElementById("menu-topbar")) {
+                        document.getElementById("menu-topbar").style.transform = "translate(0px,-72px)";
+                        document.getElementById("header-nav").style.transform = "translate(0px,-72px)";
                     }
                 } else {
                     if (document.getElementById("menu-topbar")) {
