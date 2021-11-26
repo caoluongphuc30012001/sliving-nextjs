@@ -19,7 +19,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/gatsby-config.js`,
       },
@@ -44,7 +44,6 @@ module.exports = {
         name: "videos",
         path: `${__dirname}/src/videos/`,
       },
-
     },
 
     `gatsby-transformer-remark`,
@@ -54,7 +53,6 @@ module.exports = {
         name: "pages",
         path: `${__dirname}/src/pages/`,
       },
-
     },
     {
       resolve: `gatsby-remark-images`,
@@ -83,10 +81,10 @@ module.exports = {
       },
     },
     {
-      resolve: '@wapps/gatsby-plugin-i18next',
+      resolve: "@wapps/gatsby-plugin-i18next",
       options: {
-        availableLngs: ['vn', 'en'],
-        fallbackLng: 'vn',
+        availableLngs: ["vn", "en"],
+        fallbackLng: "vn",
         lng: "vn",
         i18nextOptions: {
           debug: false,
@@ -101,4 +99,3 @@ module.exports = {
     },
   ],
 };
-

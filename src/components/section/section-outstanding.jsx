@@ -1,9 +1,8 @@
-import React, { useEffect} from 'react';
+import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import Image6 from "@images/intro-content2/image6.png";
-const isBrowser = typeof window !== "undefined";
-const SectionOutstanding = ({  }) => {
+const SectionOutstanding = () => {
     const { t } = useTranslation();
     return (
         <article>

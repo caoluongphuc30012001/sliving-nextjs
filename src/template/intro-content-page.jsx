@@ -14,6 +14,7 @@ const IntroContentPageTemplate = ({ pageContext }) => {
     setPosts(pageContext.data.filter(item => {
       return item.node.frontmatter.slug !== pageContext.node.frontmatter.slug;
     }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

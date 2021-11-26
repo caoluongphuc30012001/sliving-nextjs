@@ -7,7 +7,6 @@ import SectionContent from "./body/section-content";
 import SectionIntroductLast from "./body/section-last";
 import imgFirst from "@images/introduction-page/smart-energy/banner-first.svg";
 import imgSecond from "@images/introduction-page/smart-energy/banner-second.svg";
-import imgThird from "@images/introduction-page/smart-energy/banner-third.svg";
 import "./style.scss";
 import SectionSlidesProduct from "./body/section-slide-first";
 import IntroductSlides from "./body/section-introduct-slide";
