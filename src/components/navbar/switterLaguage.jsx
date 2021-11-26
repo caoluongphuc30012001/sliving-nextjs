@@ -52,6 +52,5 @@ const LanguageSwitcher = ({ changeLng }) => {
 }
 
 export default function LanguageSwitchers(props) {
-    console.log("props", props);
-    <Language>{lngProps => <LanguageSwitcher {...props} {...lngProps} />}</Language>
+    return <Language>{lngProps => <LanguageSwitcher {...props} {...lngProps} />}</Language>
 };

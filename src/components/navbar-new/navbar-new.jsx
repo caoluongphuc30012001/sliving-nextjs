@@ -8,7 +8,6 @@ import { useLocation } from "@reach/router";
 
 import LanguageSwitcher from "../navbar/switterLaguage";
 
-const isBrowser = typeof window !== "undefined";
 
 export default function NavbarNew() {
   const location = useLocation();
@@ -99,8 +98,8 @@ export default function NavbarNew() {
                                           <div
                                             key={indexMenu}
                                             className={`child-wrap-item ${menu.isActive
-                                                ? "is-acitve-subMenu"
-                                                : ""
+                                              ? "is-acitve-subMenu"
+                                              : ""
                                               }`}
                                           >
                                             <Link
