@@ -1,32 +1,37 @@
-import React from 'react';
-import HomePage from "./home-page/index";
+import React from "react";
 import "../fonts/Montserrat/Montserrat-ExtraLight.ttf";
 import "../style/base/_typography.scss";
 import "../i18n/i18n";
 import "../style/main.scss";
-import slivingicon from "../images/logo/logo-small.svg";
-import { Head } from '@wapps/gatsby-plugin-i18next';
-import { withI18next } from '@wapps/gatsby-plugin-i18next';
-import { graphql } from 'gatsby';
+import favicon from "../images/logo/logo-small.svg";
+import { Head } from "@wapps/gatsby-plugin-i18next";
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import HomePageV2 from "./main-page-v2/index";
+import { graphql } from "gatsby";
 const IndexPage = (props) => {
   return (
     <>
       <Head hreflang>
         <meta charSet="utf-8" />
         <title>Sliving</title>
-        <meta name="description" content={'Sliving'} />
-        <link rel="shortcut icon" type="image/svg" href={slivingicon} />
+        <meta name="description" content={"Sliving"} />
+        <link rel="shortcut icon" type="image/svg" href={favicon} />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <HomePage props={props}/>
+      <HomePageV2 />
     </>
   );
 };
 export default withI18next()(IndexPage);
 export const query = graphql`
   query($lng: String!) {
-    locales: allLocale(filter: { lng: { eq: $lng }, ns: { eq: "translations" } }) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
       ...LocaleFragment
     }
   }

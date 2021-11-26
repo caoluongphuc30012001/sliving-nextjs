@@ -13,7 +13,7 @@ import DownLoadIcons from "@images/icon/download.png";
 import useGetLgn from "@hook/useGetLgn";
 import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
-import { createHistory, useLocation } from "@reach/router";
+import { useLocation } from "@reach/router";
 const TechnicalSol = () => {
   const Lgn = useGetLgn();
   const { t } = useTranslation();
@@ -24,7 +24,7 @@ const TechnicalSol = () => {
   const dataProductIdentification = data.dataProductIdentification.edges;
   const dataProductWarranty = data.dataProductWarranty.edges;
   const dataDocumentsDownload = data.dataDocumentsDownload.edges;
-  console.log("dataDocumentsDownload",dataDocumentsDownload);
+  console.log("dataDocumentsDownload", dataDocumentsDownload);
   const [post, setPost] = useState(dataTechnicalAnswer);
   const [id, setId] = useState();
   const [titleSolution, setTitle] = useState("Technical_solutions");
@@ -149,7 +149,7 @@ const TechnicalSol = () => {
     setId(id);
     location.search = `?support=${id}`;
     if (typeof widnow !== undefined) {
-      window.history.pushState(null, null, "?" + `?support=${id}`)
+      window.history.pushState(null, null, `?support=${id}`);
     }
     return null;
   }
@@ -158,13 +158,14 @@ const TechnicalSol = () => {
   useEffect(() => {
     setSearchParam(window.location.search);
     CheckSupport();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParam])
   function CheckSupport() {
     const params = new URLSearchParams(searchParam.substring(1));
     const getSupport = params.get("supportId");
     if (getSupport) {
       let supportTitle = "";
-      arrDrop.map((itemConst) => {
+      arrDrop.forEach((itemConst) => {
         itemConst.isActive = parseInt(getSupport) === itemConst.id ? true : false;
         if (itemConst.isActive === true) {
           supportTitle = itemConst.title
@@ -323,7 +324,7 @@ const TechnicalSol = () => {
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
-                                  <Link href={`${Lgn}${node.frontmatter.slug}`} >
+                                  <Link to={`${Lgn}${node.frontmatter.slug}`} >
                                     <div className="download__container">
                                       <img src={DownLoadIcons} alt="icon download" />
                                     </div>

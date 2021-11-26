@@ -6,7 +6,7 @@ const NextArrow = (props) => {
         <div role="button" tabIndex={0}
             className={className}
             style={{ ...style, display: "block", }}
-            onClick={onClick} onKeyDown={onClick}>
+            onClick={onClick} onKeyPress={onClick}>
             <img src={arrowNext} alt="" />
         </div>
     );
