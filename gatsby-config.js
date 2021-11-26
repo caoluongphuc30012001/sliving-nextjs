@@ -5,6 +5,8 @@ module.exports = {
   },
   pathPrefix: `/`,
   plugins: [
+    `gatsby-transformer-sharp`,
+    "gatsby-plugin-sharp",
     `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
@@ -16,7 +18,6 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -47,7 +48,6 @@ module.exports = {
     },
 
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
