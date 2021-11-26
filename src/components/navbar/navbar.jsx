@@ -3,10 +3,7 @@ import { Navbar, Image, Nav, InputGroup, FormControl } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 import { Link } from '@wapps/gatsby-plugin-i18next';
 import logo from "@images/logo/logo-v2.svg";
-import PortfolioContext from "../../context/context";
-// import imgIn from "@images/icon/social/v2-linkedin.svg";
-// import imgFace from "@images/icon/social/v2-facebook.svg";
-// import imgtwit from "@images/icon/social/v2-twitter.svg";
+import PortfolioContext from "@context/context";
 import imgSearch from "@images/icon/icon-search.svg";
 import LanguageSwitcher from "./switterLaguage";
 import { useLocation } from "@reach/router";
@@ -18,9 +15,9 @@ const NavBar = () => {
     const { menus } = arrNav;
     const { t } = useTranslation();
     menus.forEach(element => {
-        element.isActive = pathName.indexOf(element.path) > -1 || pathName.indexOf("introduct-detail-page") > -1 && element.id === "0" ? true : false;
+        element.isActive = (pathName.indexOf(element.path) > -1 || pathName.indexOf("introduct-detail-page") > -1) && element.id === "0" ? true : false;
         if (element.id !== "1" && element.arrMenu) {
-            element.arrMenu.map((nav) => {
+            element.arrMenu.forEach((nav) => {
                 nav.isActive = pathName.indexOf(nav.path) > -1 ? true : false;
             })
         }
@@ -42,7 +39,7 @@ const NavBar = () => {
             }, true)
         }
         return () => {
-            window.removeEventListener("scroll", () => {
+            window.addEventListener("scroll", () => {
                 if (window.scrollY > 0) {
                     if (document.getElementById("menu-topbar")) {
                         document.getElementById("menu-topbar").style.transform = "translate(0px,-72px)";
@@ -58,14 +55,14 @@ const NavBar = () => {
         }
     }, [menus]);
     const activePage = (id) => {
-        return menus && (menus.map((itemMenu) => (
+        return menus && (menus.forEach((itemMenu) => (
             itemMenu.isActive = itemMenu.id === id ? true : false
         )))
     }
     const HandelActiveSubMenu = (menuId, SubMenuId) => {
-        menus.map((menu) => {
+        menus.forEach((menu) => {
             if (menuId === menu.id) {
-                menu.arrMenu.map((item) => {
+                menu.arrMenu.forEach((item) => {
                     item.isActive = SubMenuId === item.id ? true : false;
                 })
             }
@@ -107,14 +104,14 @@ const NavBar = () => {
                             <Nav className=" nav-desktop" >
                                 {menus && menus.map((nav) => {
                                     return <div className={`fs-16 link-menu ${nav.arrNav ? 'mega-menu' : ''} `} id={`nav-id-${nav.id}`} key={nav.id} onClick={() => activePage(nav.id)} role="button"
-                                        tabIndex={0} onKeyDown={() => activePage(nav.id)}>
+                                        tabIndex={0} onKeyPress={() => activePage(nav.id)}>
                                         {nav && (<>
                                             <Link to={nav.path} className={`item-menu link  ${nav.isActive ? 'is-active' : ''}`} id="item-menu" > {t(`${nav.title}`)}</Link>
                                             <div className="nav-childs">
                                                 <div className="nav-child">
                                                     <div className="nav-child-wrap">
                                                         {nav.arrMenu && nav.arrMenu.map((menu, indexMenu) => {
-                                                            return <div key={indexMenu} className={`child-wrap-item ${menu.isActive ? 'is-acitve-subMenu' : ''}`}><Link to={menu.path ? menu.path : '/'} ><span className="child-wrap-item__title" onClick={() => HandelActiveSubMenu(nav.id, menu.id)}>{t(`${menu.title}`)}</span></Link></div>
+                                                            return <div key={indexMenu} className={`child-wrap-item ${menu.isActive ? 'is-acitve-subMenu' : ''}`}><Link to={menu.path ? menu.path : '/'} ><span className="child-wrap-item__title" onClick={() => HandelActiveSubMenu(nav.id, menu.id)} onKeyPress={() => HandelActiveSubMenu(nav.id, menu.id)} tabIndex={0} role="button" >{t(`${menu.title}`)}</span></Link></div>
                                                         })}
                                                     </div>
                                                 </div>

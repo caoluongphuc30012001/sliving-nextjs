@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import CardTitleHeader from "@components/card/card-title-header";
 import Slider from "react-slick";
 import Modal from "react-modal";
 import { Image, Spinner } from "react-bootstrap";
@@ -31,7 +30,7 @@ const NewSectionVideo = () => {
         className={className}
         style={{ ...style, display: "block" }}
         onClick={onClick}
-        onKeyDown={onClick}
+        onKeyPress={onClick}
       >
         <img src={arrow} alt="" />
       </div>

@@ -5,6 +5,8 @@ module.exports = {
   },
   pathPrefix: `/`,
   plugins: [
+    `gatsby-transformer-sharp`,
+    "gatsby-plugin-sharp",
     `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
@@ -16,9 +18,8 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/gatsby-config.js`,
       },
@@ -43,18 +44,15 @@ module.exports = {
         name: "videos",
         path: `${__dirname}/src/videos/`,
       },
-
     },
 
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
         path: `${__dirname}/src/pages/`,
       },
-
     },
     {
       resolve: `gatsby-remark-images`,
@@ -83,10 +81,10 @@ module.exports = {
       },
     },
     {
-      resolve: '@wapps/gatsby-plugin-i18next',
+      resolve: "@wapps/gatsby-plugin-i18next",
       options: {
-        availableLngs: ['vn', 'en'],
-        fallbackLng: 'vn',
+        availableLngs: ["vn", "en"],
+        fallbackLng: "vn",
         lng: "vn",
         i18nextOptions: {
           debug: false,
@@ -101,4 +99,3 @@ module.exports = {
     },
   ],
 };
-

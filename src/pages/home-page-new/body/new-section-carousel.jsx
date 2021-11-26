@@ -3,7 +3,6 @@ import { Row } from "react-bootstrap";
 
 import imgLine from "@images/new-home-page/app-img/line.png";
 import imgTest from "@images/main-page-v2/element-left.svg";
-
 import loadable from "@loadable/component";
 const Carousel = loadable(() => import("react-spring-3d-carousel"));
 const isBrowser = typeof window !== "undefined";
@@ -18,7 +17,6 @@ export default function NewSectionCarousel() {
     document.querySelectorAll(".css-1fzpoyk div")[2].style.transform = "unset";
     document.querySelectorAll(".css-1fzpoyk div")[3].style.transform = "unset";
     document.querySelectorAll(".css-1fzpoyk div")[4].style.transform = "unset";
-
     setTimeout(() => {
       document.querySelectorAll(".css-1fzpoyk div")[0].removeAttribute("style")
       document.querySelectorAll(".css-1fzpoyk div")[1].removeAttribute("style")
@@ -26,14 +24,12 @@ export default function NewSectionCarousel() {
       document.querySelectorAll(".css-1fzpoyk div")[3].removeAttribute("style")
       document.querySelectorAll(".css-1fzpoyk div")[4].removeAttribute("style")
     }, 300);
-
   }
   const refId1 = useRef(null);
   const refId2 = useRef(null);
   const refId3 = useRef(null);
   const refId4 = useRef(null);
   const refId5 = useRef(null);
-
   const arrImg = [
     { key: 0, content: <div ref={refId1}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
     { key: 1, content: <div ref={refId2}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
@@ -46,14 +42,12 @@ export default function NewSectionCarousel() {
 
   const BuildCarousel = useMemo(() => {
     if (isBrowser) {
-
       return (<Carousel slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />);
     } else {
       return null;
     }
-
-
-  }, [isBrowser, goToSlide])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isBrowser, goToSlide, arrImg])
 
   return (
     <section>

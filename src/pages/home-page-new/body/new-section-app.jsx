@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,8 +14,6 @@ import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 export default function NewSectionApp() {
-  const [swiperRef, setSwiperRef] = useState(null);
-
   const listItemSlider = [
     {
       id: 1,
@@ -77,7 +75,6 @@ export default function NewSectionApp() {
 
         <Col className="app-slider">
           <Swiper
-            onSwiper={setSwiperRef}
             slidesPerView={3}
             centeredSlides={true}
             spaceBetween={30}

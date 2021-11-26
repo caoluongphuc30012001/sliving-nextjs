@@ -13,7 +13,7 @@ import DownLoadIcons from "@images/icon/download.png";
 import useGetLgn from "@hook/useGetLgn";
 import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
-import { createHistory, useLocation } from "@reach/router";
+import { useLocation } from "@reach/router";
 const TechnicalSol = () => {
   const Lgn = useGetLgn();
   const { t } = useTranslation();
@@ -149,7 +149,7 @@ const TechnicalSol = () => {
     setId(id);
     location.search = `?support=${id}`;
     if (typeof widnow !== undefined) {
-      window.history.pushState(null, null, "?" + `?support=${id}`)
+      window.history.pushState(null, null, `?support=${id}`);
     }
     return null;
   }
@@ -158,13 +158,14 @@ const TechnicalSol = () => {
   useEffect(() => {
     setSearchParam(window.location.search);
     CheckSupport();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParam])
   function CheckSupport() {
     const params = new URLSearchParams(searchParam.substring(1));
     const getSupport = params.get("supportId");
     if (getSupport) {
       let supportTitle = "";
-      arrDrop.map((itemConst) => {
+      arrDrop.forEach((itemConst) => {
         itemConst.isActive = parseInt(getSupport) === itemConst.id ? true : false;
         if (itemConst.isActive === true) {
           supportTitle = itemConst.title

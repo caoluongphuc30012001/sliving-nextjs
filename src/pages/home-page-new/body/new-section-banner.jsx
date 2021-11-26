@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 import imgStar from "@images/new-home-page/banner/icon-star.png";
 import imgArrow from "@images/new-home-page/banner/arrow-button.png";

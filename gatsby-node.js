@@ -405,6 +405,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@pages": path.resolve(__dirname, "./src/pages"),
         "@hook": path.resolve(__dirname, "./src/hook"),
         "@mock": path.resolve(__dirname, "./src/mock"),
+        "@context": path.resolve(__dirname, "./src/context"),
       },
     },
   });

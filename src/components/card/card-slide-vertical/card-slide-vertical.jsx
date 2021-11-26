@@ -37,14 +37,15 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		return null
 	}
 	useEffect(() => {
-		changePostsWithLgn(lgn,dataLED);
+		changePostsWithLgn(lgn, dataLED);
 		if (params) {
 			clickProduct(parseInt(params));
 		}
-		return () =>{
-			changePostsWithLgn(lgn,[]);
+		return () => {
+			changePostsWithLgn(lgn, []);
 		}
-	}, [params,lgn])
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [params, lgn])
 	const [arrProduct] = useState([
 		{ title: "LED", id: 0, isActive: true },
 		{ title: "navProduct.Switches", id: 1, isActive: false },
@@ -100,17 +101,17 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		swipeToSlide: true,
 	};
 	const clickProduct = (id) => {
-		console.log("dataSwitch",dataSwitch);
+		console.log("dataSwitch", dataSwitch);
 		arrProduct.forEach((prod) => (prod.isActive = id === prod.id ? true : false));
-		if (id === 0) { changePostsWithLgn(lgn,dataLED); };
-		if (id === 1) { changePostsWithLgn(lgn,dataSwitch); };
-		if (id === 2) { changePostsWithLgn(lgn,dataSocket); };
-		if (id === 3) { changePostsWithLgn(lgn,dataSensor); };
-		if (id === 4) { changePostsWithLgn(lgn,dataAirConditioningSystem); };
-		if (id === 5) { changePostsWithLgn(lgn,dataSmartCurtain); };
-		if (id === 6) { changePostsWithLgn(lgn,dataSmartMeasurement); };
-		if (id === 7) { changePostsWithLgn(lgn,dataZigbeeKit); };
-		if (id === 8) { changePostsWithLgn(lgn,dataGateWay); };
+		if (id === 0) { changePostsWithLgn(lgn, dataLED); };
+		if (id === 1) { changePostsWithLgn(lgn, dataSwitch); };
+		if (id === 2) { changePostsWithLgn(lgn, dataSocket); };
+		if (id === 3) { changePostsWithLgn(lgn, dataSensor); };
+		if (id === 4) { changePostsWithLgn(lgn, dataAirConditioningSystem); };
+		if (id === 5) { changePostsWithLgn(lgn, dataSmartCurtain); };
+		if (id === 6) { changePostsWithLgn(lgn, dataSmartMeasurement); };
+		if (id === 7) { changePostsWithLgn(lgn, dataZigbeeKit); };
+		if (id === 8) { changePostsWithLgn(lgn, dataGateWay); };
 	}
 	return (
 		<div className="slide-sols txt-blue ">
@@ -122,6 +123,7 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 							<div
 								key={index}
 								onClick={() => clickProduct(prod.id)}
+								onKeyPress={() => clickProduct(prod.id)}
 								className={`nav-prod ${prod.isActive ? 'is-active-slide' : ''}`}
 								role="button"
 								tabIndex="0">{t(`${prod.title}`)}</div>)

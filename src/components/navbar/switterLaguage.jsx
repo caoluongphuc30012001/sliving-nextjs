@@ -51,6 +51,6 @@ const LanguageSwitcher = ({ changeLng }) => {
     </Dropdown>
 }
 
-export default props => (
-    <Language>{lngProps => <LanguageSwitcher {...props} {...lngProps} />}</Language>
-);
+export default function LanguageSwitchers(props) {
+    return <Language>{lngProps => <LanguageSwitcher {...props} {...lngProps} />}</Language>
+};

@@ -8,7 +8,6 @@ import { useLocation } from "@reach/router";
 
 import LanguageSwitcher from "../navbar/switterLaguage";
 
-const isBrowser = typeof window !== "undefined";
 
 export default function NavbarNew() {
   const location = useLocation();
@@ -19,7 +18,7 @@ export default function NavbarNew() {
   menus.forEach((element) => {
     element.isActive =
       pathName.indexOf(element.path) > -1 ||
-      (pathName.indexOf("introduct-detail-page") > -1 && element.id === "0")
+        (pathName.indexOf("introduct-detail-page") > -1 && element.id === "0")
         ? true
         : false;
     if (element.id !== "1" && element.arrMenu) {
@@ -71,23 +70,21 @@ export default function NavbarNew() {
                     menus.map((nav) => {
                       return (
                         <div
-                          className={`fs-16 link-menu ${
-                            nav.arrNav ? "mega-menu" : ""
-                          } `}
+                          className={`fs-16 link-menu ${nav.arrNav ? "mega-menu" : ""
+                            } `}
                           id={`nav-id-${nav.id}`}
                           key={nav.id}
                           onClick={() => activePage(nav.id)}
                           role="button"
                           tabIndex={0}
-                          onKeyDown={() => activePage(nav.id)}
+                          onKeyPress={() => activePage(nav.id)}
                         >
                           {nav && (
                             <>
                               <Link
                                 to={nav.path}
-                                className={`item-menu link  ${
-                                  nav.isActive ? "is-active" : ""
-                                }`}
+                                className={`item-menu link  ${nav.isActive ? "is-active" : ""
+                                  }`}
                                 id="item-menu"
                               >
                                 {t(`${nav.title}`)}
@@ -100,11 +97,10 @@ export default function NavbarNew() {
                                         return (
                                           <div
                                             key={indexMenu}
-                                            className={`child-wrap-item ${
-                                              menu.isActive
-                                                ? "is-acitve-subMenu"
-                                                : ""
-                                            }`}
+                                            className={`child-wrap-item ${menu.isActive
+                                              ? "is-acitve-subMenu"
+                                              : ""
+                                              }`}
                                           >
                                             <Link
                                               to={menu.path ? menu.path : "/"}

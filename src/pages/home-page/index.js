@@ -1,4 +1,4 @@
-import React ,{useState,useEffect}from 'react';
+import React, { useState, useEffect } from "react";
 import SectionSlides from "./body/section-Slides";
 import Layout from "@components/layout.jsx";
 import Sectionorizontal from "@components/section/section-horizontal/section-horizontal";
@@ -6,7 +6,7 @@ import imgIot from "@images/home-page/info/iot.svg";
 import "./home-page.scss";
 import SectionHeader from "./body/section-header";
 import SectionBannerSuport from "./body/section-banner-support";
-import SectionConstruction from './body/section-construction';
+import SectionConstruction from "./body/section-construction";
 import SectionIntroduce from "./body/section-introduce";
 import SectionBannerReason from "./body/section-banner-reason";
 import SectionProject from "./body/section-project";
@@ -22,6 +22,7 @@ const HomePage = (props) => {
   useEffect(() => {
     setLocation(props.props.location);
     setPageContext(props.props.pageContext);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Layout>
