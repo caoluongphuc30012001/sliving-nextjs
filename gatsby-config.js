@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: "Sliving",
   },
-  pathPrefix: `/${process.env.AWS_S3_PREFIX ? process.env.AWS_S3_PREFIX : ""}`,
+  pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
@@ -95,6 +95,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
+        bucketPrefix: `${process.env.AWS_S3_PREFIX}`,
       },
     },
   ],
