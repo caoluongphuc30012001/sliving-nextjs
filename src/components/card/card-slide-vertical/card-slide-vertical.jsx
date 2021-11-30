@@ -101,7 +101,6 @@ const SlidePermission = ({ title, isMenu, rows, infinite, dots, isArrow, slidesT
 		swipeToSlide: true,
 	};
 	const clickProduct = (id) => {
-		console.log("dataSwitch", dataSwitch);
 		arrProduct.forEach((prod) => (prod.isActive = id === prod.id ? true : false));
 		if (id === 0) { changePostsWithLgn(lgn, dataLED); };
 		if (id === 1) { changePostsWithLgn(lgn, dataSwitch); };

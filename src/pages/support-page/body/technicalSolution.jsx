@@ -24,7 +24,6 @@ const TechnicalSol = () => {
   const dataProductIdentification = data.dataProductIdentification.edges;
   const dataProductWarranty = data.dataProductWarranty.edges;
   const dataDocumentsDownload = data.dataDocumentsDownload.edges;
-  console.log("dataDocumentsDownload", dataDocumentsDownload);
   const [post, setPost] = useState(dataTechnicalAnswer);
   const [id, setId] = useState();
   const [titleSolution, setTitle] = useState("Technical_solutions");
