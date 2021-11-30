@@ -25,9 +25,9 @@ const SectionHorizontalSlide = (props) => {
                     <Swiper spaceBetween={30} pagination={{
                         "clickable": true
                     }} loop={true} className="section-swiper">
-                        {post && post.map(({ node }) => {
+                        {post && post.map(({ node, index }) => {
                             return (
-                                <SwiperSlide key={node.frontmatter.id}>
+                                <SwiperSlide key={index}>
                                     <div className="horizontal-slide-wrap">
                                         <div className="horizontal-slide__left">
                                             <img

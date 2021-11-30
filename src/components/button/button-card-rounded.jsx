@@ -35,7 +35,7 @@ const ButtonRounded = () => {
                 className="btn-rounded"
                 onClick={() => srollTop(true)}
                 style={{ display: isScroll }}
-                onKeyDown={() => srollTop(true)}>
+                onKeyPress={() => srollTop(true)}>
                 <img src={iconRounded} alt="icon arrow top" />
             </div>
             )}

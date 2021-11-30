@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from "react-slick";
-import vector from "@images/solution-page/body/Vector.svg";
 import rectangle1 from "@images/solution-page/body/Rectangle225.svg";
 import rectangle2 from "@images/solution-page/body/Rectangle225-1.svg";
 import rectangle3 from "@images/solution-page/body/Rectangle225-2.svg";

@@ -8,7 +8,7 @@ const PrevArrow = (props) => {
             className={className}
             style={{ ...style, display: "block" }}
             onClick={onClick}
-            onKeyDown={onClick}>
+            onKeyPress={onClick}>
             <img src={arrowPrev} alt="" />
         </div>
     );

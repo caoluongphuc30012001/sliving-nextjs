@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Row, Col } from "react-bootstrap";
+import { Image, Row } from "react-bootstrap";
 import Logo from "@images/logo/LOGO.png";
 import arrowRight from "@images/icon/arrow_right_alt.svg";
 import { Link } from "gatsby";

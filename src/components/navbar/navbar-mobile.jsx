@@ -29,15 +29,15 @@ const NavBarMobile = () => {
     const [isToggle, setIsToggle] = useState(false);
     const HandleToggle = (idMenu) => {
         setIsToggle(false);
-        menus.map((menu) => {
+        menus.forEach((menu) => {
             menu.isToggle = idMenu === menu.id ? true : false;
         })
     }
     const HandelSubMenu = (menuId, subMemuId) => {
         setIsToggle(false);
-        menus.map((map) => {
+        menus.forEach((map) => {
             if (menuId === map.id) {
-                map.arrMenu.map((item) => {
+                map.arrMenu.forEach((item) => {
                     item.isActive = subMemuId === item.id ? true : false;
                 })
             }
@@ -45,7 +45,7 @@ const NavBarMobile = () => {
     }
     useEffect(() => {
         setIsToggle(true);
-        
+
     }, [isToggle])
     return (
         <>
@@ -63,11 +63,11 @@ const NavBarMobile = () => {
                                     <Link to={map.path} key={index} className="pd-7-1 nav-link" >
                                         {map && (<span className={`item-menu isCount ${map.id === '0' ? 'is-active-mobile' : ''}`}> {t(`${map.title}`)}</span>)}
                                     </Link>
-                                    {map.arrMenu && (<div className="icon-subMenu"><img className={`icon-dropdown-submenu ${map.isToggle ? 'is-toggle-icon' : ''}`} src={iconDropDown} alt="icon dropdown sliving" onClick={() => HandleToggle(map.id)} /></div>)}
+                                    {map.arrMenu && (<div className="icon-subMenu" onClick={() => HandleToggle(map.id)} onKeyPress={() => HandleToggle(map.id)} role="button" tabIndex={0}><img className={`icon-dropdown-submenu ${map.isToggle ? 'is-toggle-icon' : ''}`} src={iconDropDown} alt="icon dropdown sliving" /></div>)}
                                 </div>
                                 <div className="slidebar-moblie-child">
                                     {map.isToggle && map.arrMenu && map.arrMenu.map((child) => {
-                                        return <Link key={child} to={child.path} className={`mobile-child-link ${child.isActive ? 'is-active-subMenu' : ''}`} onClick={()=>HandelSubMenu(map.id, child.id)}>{t(`${child.title}`)}</Link>
+                                        return <Link key={child} to={child.path} className={`mobile-child-link ${child.isActive ? 'is-active-subMenu' : ''}`} onClick={() => HandelSubMenu(map.id, child.id)}>{t(`${child.title}`)}</Link>
                                     })}
                                 </div>
                             </>
