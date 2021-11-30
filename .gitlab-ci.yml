@@ -26,8 +26,10 @@ test:
   stage: test
   variables:
     AWS_S3_PREFIX: $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+    AWS_S3_BUCKET: $AWS_S3_BUCKET/$AWS_S3_PREFIX
   script:
     - echo "$AWS_S3_PREFIX"
+    - echo "$AWS_S3_BUCKET"
     - echo "$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
     - npm install
     - npm run build --prefix-paths
