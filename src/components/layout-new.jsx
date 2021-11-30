@@ -24,9 +24,7 @@ function LayoutNew({ children }) {
             <div className="page">
                 <NavbarV2 />
                 <main>
-                    <div className="page-wrap-new" id="page-main">
-                        {children}
-                    </div>
+                    {children}
                 </main>
                 <FooterNew />
                 <ButtonRounded />
