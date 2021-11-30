@@ -1,0 +1,207 @@
+.product-header-page {
+    margin-top: 128px;
+    .header-page-wrap {
+        column-gap: 56px;
+        flex-wrap: nowrap !important;
+    }
+}
+.slick-thumb {
+    position: relative !important;
+    li {
+        width: 170px !important;
+        height: 160px;
+    }
+}
+.thumb-center {
+    max-width: 570px;
+    width: 100%;
+    max-height: 540px;
+    height: 100%;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 24px 56px 54px;
+}
+.thumb-bottom {
+    width: 170px !important;
+    height: 160px;
+    border-radius: 8px;
+}
+.is-active-thumb {
+    border: 1px solid #feb49b;
+}
+.thumb-wrap {
+    margin-bottom: 46px;
+    .slick-arrow {
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            padding: 8px;
+            background: #f9fafb;
+            box-shadow: 0px 6px 8px -6px rgb(24 39 75 / 12%), 0px 8px 16px -6px rgb(24 39 75 / 8%);
+        }
+    }
+}
+.section-product-info {
+    h6 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 131.25%;
+        color: #fe8258;
+    }
+    h2 {
+        font-weight: 800;
+        font-size: 62px;
+        line-height: 131.25%;
+        letter-spacing: 1px;
+        color: #0a3256;
+    }
+    p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 131.25%;
+        color: #76787a;
+    }
+    .product-star {
+        margin-top: 24px;
+        margin-bottom: 26px;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+    .group-color {
+        margin-top: 64px;
+        margin-bottom: 24px;
+    }
+    .group-item-color {
+        .row {
+            column-gap: 16px;
+        }
+
+        .item-color {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .item-color:nth-child(1) {
+            border: 1px solid #e6e6e6;
+            background: #ffffff;
+        }
+        .item-color:nth-child(2) {
+            background: conic-gradient(
+                    from 180deg at 50% 50%,
+                    #000000 0deg,
+                    rgba(255, 255, 255, 0.72) 16.88deg,
+                    #000000 88.12deg,
+                    rgba(255, 255, 255, 0.72) 151.87deg,
+                    #000000 225deg,
+                    rgba(255, 255, 255, 0.72) 288.75deg,
+                    #000000 360deg
+                ),
+                conic-gradient(
+                    from 180deg at 50% 50%,
+                    #000000 0deg,
+                    #ffffff 30deg,
+                    #000000 95.62deg,
+                    #ffffff 168.75deg,
+                    #000000 228.75deg,
+                    #ffffff 285deg,
+                    #000000 360deg
+                ),
+                radial-gradient(
+                    79.79% 80.25% at 10.11% 28.24%,
+                    #7e6a7e 8.33%,
+                    #d5d5d5 37.5%,
+                    #75888a 63.45%,
+                    #896753 100%
+                );
+            background-blend-mode: screen, difference, normal;
+        }
+        .item-color:nth-child(3) {
+            background: conic-gradient(
+                    from 180deg at 50% 50%,
+                    #000000 0deg,
+                    rgba(255, 255, 255, 0.72) 16.88deg,
+                    #000000 88.12deg,
+                    rgba(255, 255, 255, 0.72) 151.87deg,
+                    #000000 225deg,
+                    rgba(255, 255, 255, 0.72) 288.75deg,
+                    #000000 360deg
+                ),
+                conic-gradient(
+                    from 180deg at 50% 50%,
+                    #000000 0deg,
+                    #ffffff 30deg,
+                    #000000 95.62deg,
+                    #ffffff 168.75deg,
+                    #000000 228.75deg,
+                    #ffffff 285deg,
+                    #000000 360deg
+                ),
+                radial-gradient(91.63% 87.33% at 3.33% 3.11%, #4a2b33 7.61%, #4299ff 47.4%, #000000 100%);
+            background-blend-mode: screen, difference, normal;
+        }
+    }
+    .color-title {
+        display: flex;
+        align-items: center;
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 131.25%;
+            color: #616161;
+        }
+    }
+    hr {
+        margin: 32px 0;
+    }
+    .btn-shopping {
+        width: fit-content !important;
+        padding: 12px !important;
+        h4 {
+            font-size: 16px;
+        }
+    }
+}
+
+.group-option {
+    .version {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        margin-bottom: 8px;
+        span {
+            font-size: 16px;
+            line-height: 131.25%;
+            color: #76787a;
+            &:nth-child(1) {
+                font-weight: 500;
+            }
+            &:nth-child(2) {
+                font-weight: bold;
+            }
+        }
+    }
+}
+.btn-version {
+    background: #ffffff;
+    border: 0.5px solid #76787a;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+.is-version-active {
+    background: #e8f2fb;
+    border: 0.5px solid #1564ad !important;
+}
+.group-btn-version {
+    column-gap: 8px;
+}
+.group-shopping {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 16px;
+}

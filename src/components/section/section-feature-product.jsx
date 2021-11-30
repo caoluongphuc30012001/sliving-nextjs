@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import elementImg from "@images/product-v2/element-3.png";
 import Slider from "react-slick";
 import CardProductV2 from '../card/card-product-v2';
 import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
@@ -51,6 +50,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
             const filter = arrFilterName[index];
             filterProduct(filter);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const settings = {
         dots: false,
