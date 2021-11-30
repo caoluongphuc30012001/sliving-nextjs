@@ -17,7 +17,7 @@ cache:
 test:
   stage: test
   variables:
-    - AWS_S3_PREFIX=$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+    AWS_S3_PREFIX: $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
   before_script:
     # Create ssh-key and pull submodule
     - mkdir -p ~/.ssh
