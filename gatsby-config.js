@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: "Sliving",
   },
-  pathPrefix: `/`,
+  pathPrefix: `/${process.env.AWS_S3_PREFIX ? process.env.AWS_S3_PREFIX : ""}`,
   plugins: [
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",

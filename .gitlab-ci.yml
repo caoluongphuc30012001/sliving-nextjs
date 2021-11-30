@@ -16,6 +16,8 @@ cache:
 
 test:
   stage: test
+  variables:
+    - AWS_S3_PREFIX=$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
   before_script:
     # Create ssh-key and pull submodule
     - mkdir -p ~/.ssh
@@ -25,11 +27,8 @@ test:
     - chmod 600 ~/.ssh/id_rsa
     - git submodule update --init --recursive
   script:
-    # - export AWS_S3_PREFIX=$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
-    - export AWS_S3_BUCKET=$AWS_S3_BUCKET_REVIEW
-    - echo $AWS_S3_PREFIX
     - npm install
-    - npm run build
+    - npm run build --prefix-paths
     - npm run deploy
   only:
     - merge_requests
