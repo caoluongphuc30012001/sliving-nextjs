@@ -7,10 +7,6 @@
 @import "~leaflet/dist/leaflet.css";
 @import "./style.scss";
 @import "swiper/css/bundle";
-
-// swiper core styles
-@import "swiper/css";
-
-// modules styles
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
+@import "~swiper/swiper-bundle.css";
+@import "~swiper/swiper.min.css";
+@import "~swiper/components/pagination/pagination.min.css";
