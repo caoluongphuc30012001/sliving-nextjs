@@ -3448,9 +3448,12 @@ a.btn-link-a {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     cursor: pointer;
+    width: fit-content;
     height: 313px;
+    margin: auto;
     overflow: hidden;
     img {
+      width: 170px !important;
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
     }
@@ -3600,4 +3603,9 @@ a.btn-link-a {
     border-radius: 50%;
     background-color: #fe8258;
   }
+}
+
+.carousel-product-filter {
+  margin-top: 80px;
+  margin-bottom: 98px;
 }

@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import CardProductV2 from '../card/card-product-v2';
 import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
-import lineImg from "@images/new-home-page/app-img/line.png"
+import lineImg from "@images/new-home-page/app-img/line.png";
+import { Link } from "gatsby";
 import "../style.scss";
 const SectionFeatureProduct = ({ dataProductHot }) => {
     const NextArrow = (props) => {
@@ -68,7 +69,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
             <h2 className="prod-title-v2">Featured Product</h2>
             <div className="prod-line"><img src={lineImg} alt="" /></div>
             <Slider {...settings}>
-                {arrProductHot && arrProductHot.map((prod, index) => <div key={index}><CardProductV2 props={prod.node.frontmatter} isButton={true} /></div>)}
+                {arrProductHot && arrProductHot.map((prod, index) => <div key={index}><Link to={`/products/${prod?.node?.frontmatter?.slug}`}><CardProductV2 props={prod.node.frontmatter} isButton={true} /></Link></div>)}
             </Slider>
         </section>
     );

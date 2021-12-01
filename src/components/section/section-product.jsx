@@ -4,6 +4,7 @@ import imgLine from "@images/new-home-page/app-img/line.png";
 import { Col, Row } from "react-bootstrap";
 import "../style.scss";
 import ButtonLearn from '../button/button-learn';
+import { Link } from "gatsby";
 
 const SlideProduct = ({ data }) => {
     const getData = data;
@@ -60,7 +61,7 @@ const SlideProduct = ({ data }) => {
                 <Row noGutters>
                     {post && (post.map((product, index) => (
                         <Col xl={3} lg={3} md={3} className="product-item" key={index}>
-                            <CardProductV2 props={product.node.frontmatter} />
+                            <Link to={`/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
                         </Col>
                     )))}
                 </Row>

@@ -4,8 +4,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 const DataProductSolution = () => {
   const data = useStaticQuery(graphql`
   query {
-    dataProducts: allMarkdownRemark (
-      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products)/"}}
+    dataLED: allMarkdownRemark (
+      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"}}
       sort: {fields: frontmatter___id}) {
       edges {
         node {
@@ -20,7 +20,42 @@ const DataProductSolution = () => {
             featuredImage {
               publicURL
             }
-            featuredVideo {
+            alt
+            slug
+            lgn
+            property_1 {
+              publicURL
+            }
+            property_2 {
+              publicURL
+            }
+            property_3 {
+              publicURL
+            }
+            property_4 {
+              publicURL
+            }
+            property_5 {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+    dataProducts: allMarkdownRemark (
+      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products)/"}}
+      sort: {fields: frontmatter___id}) {
+      edges {
+        node {
+          html
+          frontmatter {
+            id
+            date
+            title
+            subtitle
+            description
+            type
+            featuredImage {
               publicURL
             }
             alt
@@ -61,9 +96,6 @@ const DataProductSolution = () => {
             featuredImage {
               publicURL
             }
-            featuredVideo {
-              publicURL
-            }
             alt
             slug
             lgn
@@ -102,9 +134,6 @@ const DataProductSolution = () => {
             featuredImage {
               publicURL
             }
-            featuredVideo {
-              publicURL
-            }
             alt
             slug
             lgn
@@ -127,47 +156,7 @@ const DataProductSolution = () => {
         }
       }
     }
-    dataLED: allMarkdownRemark (
-      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"}}
-      sort: {fields: frontmatter___id}) {
-      edges {
-        node {
-          html
-          frontmatter {
-            id
-            date
-            title
-            subtitle
-            description
-            type
-            featuredImage {
-              publicURL
-            }
-            featuredVideo {
-              publicURL
-            }
-            alt
-            slug
-            lgn
-            property_1 {
-              publicURL
-            }
-            property_2 {
-              publicURL
-            }
-            property_3 {
-              publicURL
-            }
-            property_4 {
-              publicURL
-            }
-            property_5 {
-              publicURL
-            }
-          }
-        }
-      }
-    }
+   
     dataSensor: allMarkdownRemark (
       filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/sensor)/"}}
       sort: {fields: frontmatter___id}) {
@@ -182,9 +171,6 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              publicURL
-            }
-            featuredVideo {
               publicURL
             }
             alt
@@ -225,9 +211,6 @@ const DataProductSolution = () => {
             featuredImage {
               publicURL
             }
-            featuredVideo {
-              publicURL
-            }
             alt
             slug
             lgn
@@ -264,9 +247,6 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              publicURL
-            }
-            featuredVideo {
               publicURL
             }
             alt
@@ -307,9 +287,6 @@ const DataProductSolution = () => {
             featuredImage {
               publicURL
             }
-            featuredVideo {
-              publicURL
-            }
             alt
             slug
             lgn
@@ -346,9 +323,6 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              publicURL
-            }
-            featuredVideo {
               publicURL
             }
             alt
@@ -389,9 +363,6 @@ const DataProductSolution = () => {
             featuredImage {
               publicURL
             }
-            featuredVideo {
-              publicURL
-            }
             alt
             slug
             lgn
@@ -428,9 +399,6 @@ const DataProductSolution = () => {
             description
             type
             featuredImage {
-              publicURL
-            }
-            featuredVideo {
               publicURL
             }
             alt

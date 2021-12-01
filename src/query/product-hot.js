@@ -1,10 +1,48 @@
 import { graphql, useStaticQuery } from 'gatsby'
-
 const DataProductNew = () => {
   const data = useStaticQuery(graphql`
   query {
+    productLed:  allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"},frontmatter: {lgn: {eq: "vn"}}}
+      sort: {fields: frontmatter___date}
+      limit: 8
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            id
+            date
+            title
+            subtitle
+            description
+            featuredImage {
+              publicURL
+            }
+            alt
+            slug
+            lgn
+            property_1 {
+              publicURL
+            }
+            property_2 {
+              publicURL
+            }
+            property_3 {
+              publicURL
+            }
+            property_4 {
+              publicURL
+            }
+            property_5 {
+              publicURL
+            }
+          }
+        }
+      }
+    }
     productZigbee: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/zigbee-kit)/"}}
+        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/zigbee-kit)/"},frontmatter: {lgn: {eq: "vn"}}}
         sort: {fields: frontmatter___date}
         limit: 8
       ) {
@@ -17,11 +55,7 @@ const DataProductNew = () => {
               title
               subtitle
               description
-              type
               featuredImage {
-                publicURL
-              }
-              featuredVideo {
                 publicURL
               }
               alt
@@ -46,51 +80,9 @@ const DataProductNew = () => {
           }
         }
       }
-      productLed:  allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"}}
-        sort: {fields: frontmatter___date}
-        limit: 8
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              id
-              date
-              title
-              subtitle
-              description
-              type
-              featuredImage {
-                publicURL
-              }
-              featuredVideo {
-                publicURL
-              }
-              alt
-              slug
-              lgn
-              property_1 {
-                publicURL
-              }
-              property_2 {
-                publicURL
-              }
-              property_3 {
-                publicURL
-              }
-              property_4 {
-                publicURL
-              }
-              property_5 {
-                publicURL
-              }
-            }
-          }
-        }
-      }
+      
       productGateWay: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/gateway)/"}}
+        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/gateway)/"},frontmatter: {lgn: {eq: "vn"}}}
         sort: {fields: frontmatter___date}
         limit: 8
       ) {
@@ -103,11 +95,7 @@ const DataProductNew = () => {
               title
               subtitle
               description
-              type
               featuredImage {
-                publicURL
-              }
-              featuredVideo {
                 publicURL
               }
               alt
@@ -134,7 +122,7 @@ const DataProductNew = () => {
       }
       
   productAir: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/air-conditioning-system)/"}}
+    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/air-conditioning-system)/"},frontmatter: {lgn: {eq: "vn"}}}
     sort: {fields: frontmatter___date}
     limit: 8
   ) {
@@ -147,7 +135,6 @@ const DataProductNew = () => {
           title
           subtitle
           description
-          type
           featuredImage {
             publicURL
           }
@@ -177,7 +164,7 @@ const DataProductNew = () => {
     }
   }
   productSensor: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/sensor)/"}}
+    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/sensor)/"},frontmatter: {lgn: {eq: "vn"}}}
     sort: {fields: frontmatter___date}
     limit: 8
   ) {
@@ -190,7 +177,6 @@ const DataProductNew = () => {
           title
           subtitle
           description
-          type
           featuredImage {
             publicURL
           }
@@ -220,7 +206,7 @@ const DataProductNew = () => {
     }
   }
   productSmartCurtain: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-curtain)/"}}
+    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-curtain)/"},frontmatter: {lgn: {eq: "vn"}}}
     sort: {fields: frontmatter___date}
     limit: 8
   ) {
@@ -233,7 +219,6 @@ const DataProductNew = () => {
           title
           subtitle
           description
-          type
           featuredImage {
             publicURL
           }
@@ -263,7 +248,7 @@ const DataProductNew = () => {
     }
   }
   productSmartMeter: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-meter)/"}}
+    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-meter)/"},frontmatter: {lgn: {eq: "vn"}}}
     sort: {fields: frontmatter___date}
     limit: 8
   ) {
@@ -276,7 +261,6 @@ const DataProductNew = () => {
           title
           subtitle
           description
-          type
           featuredImage {
             publicURL
           }
@@ -306,7 +290,7 @@ const DataProductNew = () => {
     }
   }
   productSocket: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/socket)/"}}
+    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/socket)/"},frontmatter: {lgn: {eq: "vn"}}}
     sort: {fields: frontmatter___date}
     limit: 8
   ) {
@@ -319,7 +303,6 @@ const DataProductNew = () => {
           title
           subtitle
           description
-          type
           featuredImage {
             publicURL
           }
@@ -349,7 +332,7 @@ const DataProductNew = () => {
     }
   }
   productSwitch: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/switch)/"}}
+    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/switch)/"},frontmatter: {lgn: {eq: "vn"}}}
     sort: {fields: frontmatter___date}
     limit: 8
   ) {
@@ -362,7 +345,6 @@ const DataProductNew = () => {
           title
           subtitle
           description
-          type
           featuredImage {
             publicURL
           }

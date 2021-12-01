@@ -26,9 +26,12 @@
     height: 160px;
     border-radius: 8px;
 }
-.is-active-thumb {
-    border: 1px solid #feb49b;
+.slick-current {
+    .thumb-bottom {
+        border: 1px solid #feb49b;
+    }
 }
+
 .thumb-wrap {
     margin-bottom: 46px;
     .slick-arrow {
@@ -52,7 +55,7 @@
     }
     h2 {
         font-weight: 800;
-        font-size: 62px;
+        font-size: 45px;
         line-height: 131.25%;
         letter-spacing: 1px;
         color: #0a3256;

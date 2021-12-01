@@ -50,9 +50,11 @@ export default class CenterMode extends Component {
                 { id: 3, src: img3, isActive: false },
             ],
         };
+
         this.listRef = React.createRef();
         this.handleActive = this.handleActive.bind(this);
     }
+
     handleActive = (id) => {
         this.setState(state => {
             const arrImg = state.arrImg.map(element => {
@@ -77,12 +79,24 @@ export default class CenterMode extends Component {
     }
 
     render() {
-        const { arrImg } = this.state;
+        const dataProduct = this.props.dataProduct;
+        console.log("dataProduct", dataProduct);
+        const arrProduct = [
+            { id: 0, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_1?.publicURL },
+            { id: 1, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_2?.publicURL },
+            { id: 2, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_3?.publicURL },
+            { id: 3, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_4?.publicURL },
+            { id: 4, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_5?.publicURL },
+
+        ]
+        console.log("dataProduct", arrProduct);
         const settings = {
             dots: false,
-            infinite: false,
+            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
+            swipeToSlide: true,
+            focusOnSelect: true,
             nextArrow: <NextArrow />,
             prevArrow: <PrevArrow />,
             afterChange: (value) => this.handleActive(value)
@@ -93,9 +107,9 @@ export default class CenterMode extends Component {
                     asNavFor={this.state.nav2}
                     ref={slider => (this.slider1 = slider)} dotsClass={"slick-dots slick-thumb"}
                 >
-                    {arrImg.map((element, index) => {
+                    {arrProduct && arrProduct.map((element, index) => {
                         return (<div className="thumb-center" key={index}>
-                            <img src={element.src} alt="" width={458} height={461} />
+                            <img src={element.thumbImg} alt="" width={458} height={461} />
                         </div>)
                     })}
                 </Slider>
@@ -104,10 +118,10 @@ export default class CenterMode extends Component {
                     ref={slider => (this.slider2 = slider)}
                     {...settings}
                 >
-                    {arrImg.map((element, index) => {
+                    {arrProduct.map((element, index) => {
                         return (
-                            <div key={index} className={element?.isActive ? "thumb-bottom is-active-thumb" : "thumb-bottom"}>
-                                <img src={element?.src} alt="" width={170} height={160} />
+                            <div key={index} className="thumb-bottom">
+                                <img src={element.thumbImg} alt="" width={170} height={160} />
                             </div>
                         )
                     })}

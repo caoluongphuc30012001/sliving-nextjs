@@ -5,6 +5,7 @@ const QueryProductPage = () => {
     ) {
       edges {
         node {
+          html
           frontmatter {
             id
             date

@@ -3,22 +3,24 @@ import CenterMode from "./thumb";
 import { Row, Col } from "react-bootstrap";
 import LayoutV2 from "@components/layout-new";
 import star from "@images/product-v2/star.png";
-import ButtonShop from '../../components/button/button-shop';
+import ButtonShop from '@components/button/button-shop';
 import iconHeart from "@images/icon/icon-heart.svg";
+import SectionFeatureProduct from '@components/section/section-feature-product';
+import DataProductNew from '@query/product-hot';
 
-const IndexPage = () => {
-
+const IndexPage = ({ pageContext }) => {
+    const { data } = pageContext;
     const BuildThumb = () => {
-        return (<CenterMode />)
+        return (<CenterMode dataProduct={data} />)
     }
-
+    const dataProductFeature = DataProductNew();
 
     const BuildProductInfo = () => {
 
         return (
             <section className="section-product-info">
-                <h6>Smart Control</h6>
-                <h2>Thermostat</h2>
+                <h6>{data.frontmatter.type || "Smart Control"}</h6>
+                <h2>{data.frontmatter.title || "Thermostat"}</h2>
                 <div className="product-star"><img src={star} alt="" /> <span>15 reviews</span></div>
                 <p>I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. </p>
                 <Row noGutters className="group-color">
@@ -81,6 +83,8 @@ const IndexPage = () => {
     return (
         <LayoutV2>
             <BuildHeader />
+            <section className="container-v2"> <div dangerouslySetInnerHTML={{ __html: data.html }} /></section>
+            <SectionFeatureProduct dataProductHot={dataProductFeature} />
         </LayoutV2>
     );
 }

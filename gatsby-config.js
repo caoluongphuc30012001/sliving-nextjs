@@ -45,8 +45,6 @@ module.exports = {
         path: `${__dirname}/src/videos/`,
       },
     },
-
-    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -54,12 +52,7 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 1200,
-      },
-    },
+
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -95,6 +88,29 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              staticFolderName: 'public/static',
+              include: ['featured'],
+              exclude: ['featured.skip'],
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024,
+              withWebp: true,
+              quality: 50
+            },
+          },
+        ],
       },
     },
   ],
