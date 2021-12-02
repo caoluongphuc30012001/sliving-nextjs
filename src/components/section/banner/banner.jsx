@@ -38,9 +38,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 id="btn-research-wrap"
               >
                 <span className="fs-18 fw-bold">CONTACT US</span>
-                {/* <div className="icon-arrow"> */}
                 <img src={imgArrowRight} alt="icon arrow right" />
-                {/* </div> */}
               </button>
             )}
           </Row>
