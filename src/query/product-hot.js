@@ -2,377 +2,238 @@ import { graphql, useStaticQuery } from 'gatsby'
 const DataProductNew = () => {
   const data = useStaticQuery(graphql`
   query {
-    productLed:  allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"},frontmatter: {lgn: {eq: "vn"}}}
+    productLed: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/led/)/"}, frontmatter: {}}
       sort: {fields: frontmatter___date}
       limit: 8
     ) {
       edges {
         node {
-          html
           frontmatter {
             id
-            date
             title
             subtitle
-            description
-            featuredImage {
-              publicURL
-            }
-            alt
             slug
             lgn
-            property_1 {
-              publicURL
-            }
-            property_2 {
-              publicURL
-            }
-            property_3 {
-              publicURL
-            }
-            property_4 {
-              publicURL
-            }
-            property_5 {
-              publicURL
+            type
+            version
+            button
+            date
+            description
+            imgThumbs {
+              imgProduct {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_2 {
+                publicURL
+              }
+              imgThumb_3 {
+                publicURL
+              }
+              imgThumb_4 {
+                publicURL
+              }
+              imgThumb_5 {
+                publicURL
+              }
             }
           }
+          html
+        }
+      }
+    }
+    productSocket: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/socket/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 8
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgThumbs {
+              imgProduct {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_2 {
+                publicURL
+              }
+              imgThumb_3 {
+                publicURL
+              }
+              imgThumb_4 {
+                publicURL
+              }
+              imgThumb_5 {
+                publicURL
+              }
+            }
+          }
+          html
+        }
+      }
+    }
+    productSwitch: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/switch/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 8
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgThumbs {
+              imgProduct {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_2 {
+                publicURL
+              }
+              imgThumb_3 {
+                publicURL
+              }
+              imgThumb_4 {
+                publicURL
+              }
+              imgThumb_5 {
+                publicURL
+              }
+            }
+          }
+          html
         }
       }
     }
     productZigbee: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/zigbee-kit)/"},frontmatter: {lgn: {eq: "vn"}}}
-        sort: {fields: frontmatter___date}
-        limit: 8
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              id
-              date
-              title
-              subtitle
-              description
-              featuredImage {
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 8
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgThumbs {
+              imgProduct {
                 publicURL
               }
-              alt
-              slug
-              lgn
-              property_1 {
+              imgThumb_1 {
                 publicURL
               }
-              property_2 {
+              imgThumb_1 {
                 publicURL
               }
-              property_3 {
+              imgThumb_2 {
                 publicURL
               }
-              property_4 {
+              imgThumb_3 {
                 publicURL
               }
-              property_5 {
+              imgThumb_4 {
                 publicURL
               }
-            }
-          }
-        }
-      }
-      
-      productGateWay: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/gateway)/"},frontmatter: {lgn: {eq: "vn"}}}
-        sort: {fields: frontmatter___date}
-        limit: 8
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              id
-              date
-              title
-              subtitle
-              description
-              featuredImage {
-                publicURL
-              }
-              alt
-              slug
-              lgn
-              property_1 {
-                publicURL
-              }
-              property_2 {
-                publicURL
-              }
-              property_3 {
-                publicURL
-              }
-              property_4 {
-                publicURL
-              }
-              property_5 {
+              imgThumb_5 {
                 publicURL
               }
             }
           }
+          html
         }
       }
-      
-  productAir: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/air-conditioning-system)/"},frontmatter: {lgn: {eq: "vn"}}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          featuredImage {
-            publicURL
+    }
+    productSensor: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/sensor/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 8
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgThumbs {
+              imgProduct {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_2 {
+                publicURL
+              }
+              imgThumb_3 {
+                publicURL
+              }
+              imgThumb_4 {
+                publicURL
+              }
+              imgThumb_5 {
+                publicURL
+              }
+            }
           }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
+          html
         }
       }
     }
   }
-  productSensor: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/sensor)/"},frontmatter: {lgn: {eq: "vn"}}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSmartCurtain: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-curtain)/"},frontmatter: {lgn: {eq: "vn"}}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSmartMeter: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-meter)/"},frontmatter: {lgn: {eq: "vn"}}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSocket: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/socket)/"},frontmatter: {lgn: {eq: "vn"}}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSwitch: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/switch)/"},frontmatter: {lgn: {eq: "vn"}}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-}}    `);
+`);
 
   return (
     data

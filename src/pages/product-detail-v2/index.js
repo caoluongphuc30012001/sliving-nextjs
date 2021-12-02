@@ -22,8 +22,8 @@ const IndexPage = ({ pageContext }) => {
                 <h6>{data.frontmatter.type || "Smart Control"}</h6>
                 <h2>{data.frontmatter.title || "Thermostat"}</h2>
                 <div className="product-star"><img src={star} alt="" /> <span>15 reviews</span></div>
-                <p>I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. </p>
-                <Row noGutters className="group-color">
+                <p>{data.frontmatter.description || "I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. "}</p>
+                {/* <Row noGutters className="group-color">
                     <Col xs={1} className="color-title"><span >Color</span></Col>
                     <Col xs={4} className="group-item-color">
                         <Row noGutters>
@@ -32,7 +32,7 @@ const IndexPage = ({ pageContext }) => {
                             <div className="item-color"></div>
                         </Row>
                     </Col>
-                </Row>
+                </Row> */}
                 <Row noGutters className="group-option">
                     <Col xs={12} md={6}>
                         <Row noGutters className="version">
@@ -40,7 +40,7 @@ const IndexPage = ({ pageContext }) => {
                             <span> With neutral</span>
                         </Row>
                         <Row noGutters className="group-btn-version">
-                            <button className="btn-version is-version-active">
+                            <button className="btn-version is-disable-btn">
                                 With neutral
                             </button>
                             <button className="btn-version">
@@ -54,7 +54,7 @@ const IndexPage = ({ pageContext }) => {
                             <span> 1 button</span>
                         </Row>
                         <Row noGutters className="group-btn-version">
-                            <button className="btn-version is-version-active">
+                            <button className="btn-version is-disable-btn">
                                 1 button
                             </button>
                             <button className="btn-version">
@@ -83,7 +83,7 @@ const IndexPage = ({ pageContext }) => {
     return (
         <LayoutV2>
             <BuildHeader />
-            <section className="container-v2"> <div dangerouslySetInnerHTML={{ __html: data.html }} /></section>
+            <section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: data.html }} /></section>
             <SectionFeatureProduct dataProductHot={dataProductFeature} />
         </LayoutV2>
     );

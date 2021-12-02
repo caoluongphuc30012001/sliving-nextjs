@@ -24,11 +24,19 @@ module.exports = {
         path: `${__dirname}/gatsby-config.js`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/contents/`,
+        name: `contents`,
+        path: `${__dirname}/contents/contents/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "contents/images",
+        path: `${__dirname}/contents/images/`,
       },
     },
     {

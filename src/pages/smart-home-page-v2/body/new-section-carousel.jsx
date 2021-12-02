@@ -2,6 +2,11 @@ import React, { useRef, useState, useMemo } from "react";
 import { Row } from "react-bootstrap";
 
 import imgLine from "@images/new-home-page/app-img/line.png";
+import img1 from "@images/new-home-page/carousel/diamond-river.jpg";
+import img2 from "@images/new-home-page/carousel/continental.jpg";
+import img3 from "@images/new-home-page/carousel/horizon.jpg";
+import img4 from "@images/new-home-page/carousel/citysg-dai-dien-sshomes.jpg";
+
 import imgTest from "@images/main-page-v2/element-left.svg";
 import loadable from "@loadable/component";
 const Carousel = loadable(() => import("react-spring-3d-carousel"));
@@ -31,10 +36,10 @@ export default function NewSectionCarousel() {
   const refId4 = useRef(null);
   const refId5 = useRef(null);
   const arrImg = [
-    { key: 0, content: <div ref={refId1}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 1, content: <div ref={refId2}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 2, content: <div ref={refId3}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 3, content: <div ref={refId4}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
+    { key: 0, content: <div ref={refId1}><img src={img1} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
+    { key: 1, content: <div ref={refId2}><img src={img2} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
+    { key: 2, content: <div ref={refId3}><img src={img3} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
+    { key: 3, content: <div ref={refId4}><img src={img4} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
     { key: 4, content: <div ref={refId5}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
   ].map((slide, index) => {
     return { ...slide, onClick: () => handleChangeSlide(index) };
@@ -63,7 +68,7 @@ export default function NewSectionCarousel() {
         <div className="list-carousel" >
           {BuildCarousel}
         </div>
-        <h4 className="fs-21 carousel-title-project">Tên dự án - Sử dụng giải pháp của Sliving</h4>
+        <h4 className="fs-21 carousel-title-project">SUNSHINE CITY SÀI GÒN</h4>
       </div>
     </section>
   );

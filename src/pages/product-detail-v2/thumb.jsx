@@ -6,6 +6,12 @@ import img2 from "@images/product/prod-spec.svg";
 import img3 from "@images/product/prod.svg";
 import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
+import slide2 from "@images/product-v2/8ch-4.png";
+import slide3 from "@images/product-v2/8ch-5.png";
+import slide4 from "@images/product-v2/8ch-6.png";
+import slide5 from "@images/product-v2/8ch-7.png";
+import slide6 from "@images/product-v2/8ch-8.png";
+
 const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -82,11 +88,11 @@ export default class CenterMode extends Component {
         const dataProduct = this.props.dataProduct;
         console.log("dataProduct", dataProduct);
         const arrProduct = [
-            { id: 0, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_1?.publicURL },
-            { id: 1, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_2?.publicURL },
-            { id: 2, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_3?.publicURL },
-            { id: 3, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_4?.publicURL },
-            { id: 4, buttons: 3, version: [], color: [], thumbImg: dataProduct?.frontmatter?.property_5?.publicURL },
+            { id: 0, buttons: 3, version: [], color: [], thumbImg: slide6 },
+            { id: 1, buttons: 3, version: [], color: [], thumbImg: slide2 },
+            { id: 2, buttons: 3, version: [], color: [], thumbImg: slide3 },
+            { id: 3, buttons: 3, version: [], color: [], thumbImg: slide4 },
+            { id: 4, buttons: 3, version: [], color: [], thumbImg: slide5 },
 
         ]
         console.log("dataProduct", arrProduct);
@@ -121,7 +127,7 @@ export default class CenterMode extends Component {
                     {arrProduct.map((element, index) => {
                         return (
                             <div key={index} className="thumb-bottom">
-                                <img src={element.thumbImg} alt="" width={170} height={160} />
+                                <img src={element.thumbImg} alt="" width={160} height={160} />
                             </div>
                         )
                     })}

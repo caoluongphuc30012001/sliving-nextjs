@@ -8,27 +8,28 @@ import { Link } from "gatsby";
 
 const SlideProduct = ({ data }) => {
     const getData = data;
+    console.log("getData", getData);
     const [post, setPost] = useState([]);
 
     const [arrProduct] = useState([
         { title: "LED", id: 0, isActive: true, filterName: "productLed" },
         { title: "Công tắc", id: 1, isActive: false, filterName: "productSwitch" },
-        { title: "Ổ cắm", id: 2, isActive: false, filterName: "productGateWay" },
+        { title: "Ổ cắm", id: 2, isActive: false, filterName: "productSocket" },
         { title: "Cảm biến", id: 3, isActive: false, filterName: "productSensor" },
+        { title: "Zigbee Kit", id: 7, isActive: false, filterName: "productZigbee" },
         { title: "Hệ thống điều hòa", id: 4, isActive: false, filterName: "productAir" },
         { title: "Đo lường thông minh", id: 5, isActive: false, filterName: "productSmartCurtain" },
         { title: "Động cơ cửa - cổng", id: 6, isActive: false, filterName: "productSmartMeter" },
-        { title: "Zigbee Kit", id: 7, isActive: false, filterName: "productZigbee" },
     ]);
     const handleSelect = (filter) => {
         arrProduct.forEach((prod) => (prod.isActive = filter.id === prod.id ? true : false));
         filterProduct(filter.filterName);
     }
     const filterProduct = (filter) => {
-        if (getData[filter].edges.length > 0) {
-
+        if (getData[filter]?.edges.length > 0) {
             const arrNew = getData[filter].edges;
-            setPost(arrNew);
+            const arrFilter = arrNew.filter(element => element.node.frontmatter.lgn === "en");
+            setPost(arrFilter);
         }
     }
     useEffect(() => {
@@ -59,17 +60,16 @@ const SlideProduct = ({ data }) => {
             </div>
             <div className="product-list-item carousel-product">
                 <Row noGutters>
-                    {post && (post.map((product, index) => (
-                        <Col xl={3} lg={3} md={3} className="product-item" key={index}>
-                            <Link to={`/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
-                        </Col>
-                    )))}
+                    {post && (post.map((product, index) => <Col xl={3} lg={3} md={3} className="product-item" key={index}>
+                        <Link to={`/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
+                    </Col>))
+                    }
                 </Row>
                 <Row className="just-cont-center">
                     <ButtonLearn />
                 </Row>
             </div>
-        </section>
+        </section >
     );
 }
 

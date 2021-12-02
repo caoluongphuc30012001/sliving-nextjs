@@ -1,42 +1,47 @@
 const QueryProductPage = () => {
-  const query = ` query {
-    ProductPage:allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "contents/product-solution/products/"}}
+  const query = ` query Product {
+    ProductPage: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/)/"}}
+      sort: {fields: frontmatter___date}
     ) {
       edges {
         node {
-          html
           frontmatter {
             id
-            date
             title
             subtitle
-            description
-            type
-            featuredImage {
-              publicURL
-            }
-            featuredVideo {
-              publicURL
-            }
-            alt
             slug
-            property_1 {
-              publicURL
-            }
-            property_2 {
-              publicURL
-            }
-            property_3 {
-              publicURL
-            }
-            property_4 {
-              publicURL
-            }
-            property_5 {
-              publicURL
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgThumbs {
+              imgProduct {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_1 {
+                publicURL
+              }
+              imgThumb_2 {
+                publicURL
+              }
+              imgThumb_3 {
+                publicURL
+              }
+              imgThumb_4 {
+                publicURL
+              }
+              imgThumb_5 {
+                publicURL
+              }
             }
           }
+          html
         }
       }
     }

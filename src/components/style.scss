@@ -3453,7 +3453,6 @@ a.btn-link-a {
     margin: auto;
     overflow: hidden;
     img {
-      width: 170px !important;
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
     }
@@ -3532,6 +3531,9 @@ a.btn-link-a {
   }
 }
 .slide-prod-v2 {
+  a {
+    text-decoration: none;
+  }
   .slick-slide {
     margin: 0 16px;
     max-width: 370px;
@@ -3608,4 +3610,7 @@ a.btn-link-a {
 .carousel-product-filter {
   margin-top: 80px;
   margin-bottom: 98px;
+  a {
+    text-decoration: none;
+  }
 }

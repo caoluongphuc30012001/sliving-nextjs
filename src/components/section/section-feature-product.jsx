@@ -40,7 +40,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     }
     const [arrProductHot, setArrProductHot] = useState([]);
     const filterProduct = (filter) => {
-        if (dataProductHot[filter].edges.length > 0) {
+        if (dataProductHot[filter]?.edges.length > 0) {
             const arrNew = dataProductHot[filter].edges;
             setArrProductHot(arrOld => arrOld.concat(arrNew));
         }

@@ -171,6 +171,7 @@
 }
 
 .group-option {
+    margin-top: 25%;
     .version {
         display: flex;
         align-items: center;
@@ -207,4 +208,27 @@
     align-items: center;
     justify-content: flex-start;
     column-gap: 16px;
+}
+.thumb-center,
+.thumb-bottom {
+    img {
+        object-fit: cover;
+        margin: auto;
+    }
+}
+
+.product-info-v2 {
+    table {
+        margin: auto;
+    }
+    table,
+    th,
+    td,
+    tr {
+        border: 1px solid #e1e3e6;
+        padding: 8px;
+    }
+    td {
+        width: 485px;
+    }
 }
