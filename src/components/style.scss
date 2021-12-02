@@ -3291,6 +3291,35 @@ a.btn-link-a {
       }
     }
   }
+  .btn-research-wrap {
+    border: 1px solid #fe8258;
+    box-sizing: border-box;
+    border-radius: 30px;
+    position: relative;
+    width: fit-content;
+    height: 48px;
+    padding: 12px 6px 12px 13px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+    background-color: #fe8258;
+
+    span {
+      font-weight: bold;
+      color: white;
+      margin-right: 10px;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      background-color: "white";
+      border-radius: 50%;
+    }
+  }
 }
 .center-row {
   align-items: center;
