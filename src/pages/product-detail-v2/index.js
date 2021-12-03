@@ -13,7 +13,7 @@ const IndexPage = ({ pageContext }) => {
 
     const dataProductFeature = DataProductNew();
     const handelFilter = () => {
-        if (data.frontmatter.type.indexOf("Switch Mechanical") > -1) {
+        if (data && data.frontmatter.type.indexOf("Switch Mechanical") > -1) {
             return true;
         }
         return false;
