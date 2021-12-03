@@ -20,6 +20,7 @@ const DataProductSolution = () => {
             button
             date
             description
+            typeSupport
             imgThumbs {
               imgProduct {
                 publicURL

@@ -16,6 +16,7 @@ const QueryProductPage = () => {
             version
             button
             date
+            typeSupport
             description
             imgThumbs {
               imgProduct {

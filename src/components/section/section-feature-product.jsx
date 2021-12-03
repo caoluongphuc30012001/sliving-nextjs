@@ -42,7 +42,8 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     const filterProduct = (filter) => {
         if (dataProductHot[filter]?.edges.length > 0) {
             const arrNew = dataProductHot[filter].edges;
-            setArrProductHot(arrOld => arrOld.concat(arrNew));
+            const arrFilter = arrNew.filter((element) => element.node.frontmatter.lgn === "en");
+            setArrProductHot(arrOld => arrOld.concat(arrFilter));
         }
     }
     const arrFilterName = ["productAir", "productGateWay", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productSwitch", "productZigbee"];

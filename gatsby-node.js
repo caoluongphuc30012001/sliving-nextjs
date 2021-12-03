@@ -10,8 +10,26 @@ exports.onPostBuild = () => {
   );
 };
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+  type MarkdownRemark implements Node {
+    frontmatter: Frontmatter
+  }
+  type Frontmatter {
+    imgProduct: File
+    imgThumb_1: File
+    imgThumb_2: File
+    imgThumb_3: File
+    imgThumb_4: File
+    imgThumb_5: File
+  }
+  `
+  createTypes(typeDefs)
+}
 
-exports.createPages = async function ({ page, actions, graphql }) {
+
+exports.createPages = async function ({ actions, graphql }) {
   const { createPage } = actions;
   const productPage = await graphql(`${QueryProductPage()}`);
   const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
@@ -34,6 +52,7 @@ exports.createPages = async function ({ page, actions, graphql }) {
     },
   });
 
+
   productPage.data.ProductPage.edges.forEach((product) => {
     createPage({
       path: `/products/${product.node.frontmatter.slug}`,
@@ -42,6 +61,7 @@ exports.createPages = async function ({ page, actions, graphql }) {
         data: product.node
       },
     });
+
   })
 
 
