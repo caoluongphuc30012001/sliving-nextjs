@@ -8,7 +8,7 @@ import SwiperCore, {
 } from 'swiper';
 import { Col, Row } from 'react-bootstrap';
 import "./style.scss";
-import "../home-page-new/home-page-new.scss"
+import "../smart-home-page-v2/style.scss"
 import ThreeElementVertical from './three-element-vertical';
 import SectionFeatureProduct from '@components/section/section-feature-product';
 import imgProd from "@images/product-v2/touch.png";

@@ -1,8 +1,11 @@
-const QueryProductPage = () => {
-  const query = ` query Product {
+import { graphql, useStaticQuery } from 'gatsby'
+
+
+const DataProductSolution = () => {
+  const data = useStaticQuery(graphql`
+  {
     ProductPage: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/(contents/product-v2/)/"}}
-      sort: {fields: frontmatter___date}
     ) {
       edges {
         node {
@@ -16,8 +19,8 @@ const QueryProductPage = () => {
             version
             button
             date
-            typeSupport
             description
+            typeSupport
             imgThumbs {
               imgProduct {
                 publicURL
@@ -42,13 +45,14 @@ const QueryProductPage = () => {
               }
             }
           }
-          html
         }
       }
     }
-  }`;
+  }
+  `);
+  return (
+    data
+  )
+}
 
-  return (query);
-};
-
-module.exports.QueryProductPage = QueryProductPage;
+export default DataProductSolution
