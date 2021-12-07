@@ -4,7 +4,6 @@ import { Row, Col } from "react-bootstrap";
 import LayoutV2 from "@components/layout-new";
 import star from "@images/product-v2/star.png";
 import ButtonShop from '@components/button/button-shop';
-import iconHeart from "@images/icon/icon-heart.svg";
 import SectionFeatureProduct from '@components/section/section-feature-product';
 import DataProductNew from '@query/product-hot';
 import IconHeart from "@components/svg/heart";
@@ -34,7 +33,8 @@ const IndexPage = ({ pageContext }) => {
         } else {
             setDataThumbs(data.frontmatter.imgSrcThumbs);
         }
-    }, [data])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data, isFilter])
 
     const getDataMechanical = (dataSwitch) => {
         var dataNew = [];

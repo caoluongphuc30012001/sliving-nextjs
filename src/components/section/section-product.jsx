@@ -50,7 +50,7 @@ const SlideProduct = ({ data }) => {
                         <Col xl={12} lg={12} md={12} className="product-filter-item">
                             <ul>
                                 {arrProduct && arrProduct.map((item, index) => {
-                                    return (<li key={index} className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => { handleSelect(item) }} onKeyPress={() => { handleSelect(item) }} tabIndex={0}>
+                                    return (<li key={index} className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => { handleSelect(item) }} onKeyDown={() => { handleSelect(item) }} role="button" tabIndex={0}>
                                         {item.title}
                                     </li>)
                                 })}
@@ -71,6 +71,7 @@ const SlideProduct = ({ data }) => {
                 </div>
             </section >
         )
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [post])
 
     return (
