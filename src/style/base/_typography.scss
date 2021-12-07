@@ -1,19 +1,17 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat'),
-        url('../../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-family: "SvnGilroy";
+    src: local("SvnGilroy"), url("../../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat'),
-        url('../../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-family: "SvnGilroy";
+    src: local("SvnGilroy"), url("../../fonts/svn-gilroy/SVN-Gilroy-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
 
 * {
-    font-family: 'Montserrat';
+    font-family: "SvnGilroy";
 }

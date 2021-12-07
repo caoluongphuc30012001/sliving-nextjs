@@ -6,7 +6,8 @@ import img2 from "@images/product/prod-spec.svg";
 import img3 from "@images/product/prod.svg";
 import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
-
+import "@fancyapps/ui/dist/fancybox.esm.js";
+import "@fancyapps/ui/dist/fancybox.css";
 const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -50,17 +51,10 @@ export default class CenterMode extends Component {
                 { id: 2, src: img3, isActive: false },
                 { id: 3, src: img3, isActive: false },
             ],
-            arrThumbs: [
-                { id: 0, buttons: 0, version: 0, color: 0, thumbImg: img1 },
-                { id: 1, buttons: 0, version: 0, color: 0, thumbImg: img1 },
-                { id: 2, buttons: 0, version: 0, color: 0, thumbImg: img1 },
-                { id: 3, buttons: 0, version: 0, color: 0, thumbImg: img1 },
-                { id: 4, buttons: 0, version: 0, color: 0, thumbImg: img1 },
-
-            ]
+            arrThumbs: []
         };
-        this.listRef = React.createRef();
-        this.checkUndefined = this.checkUndefined.bind(this);
+        this.listRef1 = React.createRef();
+        this.listRef2 = React.createRef();
         this.getData = this.getData.bind(this);
     }
     componentDidMount() {
@@ -72,60 +66,12 @@ export default class CenterMode extends Component {
     }
 
     getData = () => {
-        const dataProduct = this.props?.dataProduct;
-        if (dataProduct !== undefined) {
+        const dataProduct = this.props?.dataProduct || [];
+        if (dataProduct) {
             this.setState(state => {
-                const arrThumbs = state.arrThumbs.map((element, index) => {
-                    switch (element.id) {
-                        case 0:
-                            if (this.checkUndefined(dataProduct.frontmatter, "imgThumb_1") === true) {
-                                element.thumbImg = dataProduct.frontmatter.imgThumbs.imgThumb_1.publicURL;
-                            }
-                            break;
-                        case 1:
-                            if (this.checkUndefined(dataProduct.frontmatter, "imgThumb_2") === true) {
-                                element.thumbImg = dataProduct.frontmatter.imgThumbs.imgThumb_2.publicURL;
-                            }
-
-                            break;
-                        case 2:
-                            if (this.checkUndefined(dataProduct.frontmatter, "imgThumb_3") === true) {
-                                element.thumbImg = dataProduct.frontmatter.imgThumbs.imgThumb_3.publicURL;
-                            } else {
-                                state.arrThumbs.slice(index, 1);
-                            }
-                            break;
-                        case 3:
-                            if (this.checkUndefined(dataProduct.frontmatter, "imgThumb_4") === true) {
-                                element.thumbImg = dataProduct.frontmatter.imgThumbs.imgThumb_4.publicURL;
-                            } else {
-                                state.arrThumbs.slice(index, 1);
-                            }
-                            break;
-                        case 4:
-                            if (this.checkUndefined(dataProduct.frontmatter, "imgThumb_5") === true) {
-                                element.thumbImg = dataProduct.frontmatter.imgThumbs.imgThumb_5.publicURL;
-                            } else {
-                                state.arrThumbs.slice(index, 1);
-                            }
-                            break;
-
-                        default:
-                            break;
-                    }
-                    return element;
-                });
-                return {
-                    arrThumbs,
-                };
+                state.arrThumbs = dataProduct;
             })
         }
-    }
-
-    checkUndefined = (objCheck, filterName) => {
-        if (objCheck.imgThumbs[filterName])
-            return true;
-        return false
     }
 
     render() {
@@ -140,14 +86,15 @@ export default class CenterMode extends Component {
             prevArrow: <PrevArrow />,
         };
         return (
+
             <div className="thumb-wrap" >
                 <Slider
                     asNavFor={this.state.nav2}
                     ref={slider => (this.slider1 = slider)} dotsClass={"slick-dots slick-thumb"}
                 >
-                    {this.state.arrThumbs && this.state.arrThumbs.map((element, index) => {
-                        return (<div className="thumb-center" key={index}>
-                            <img src={element.thumbImg} alt="" width={458} height={461} />
+                    {this.state.arrThumbs && this.state.arrThumbs?.map((element, index) => {
+                        return (<div className="thumb-center" data-fancybox="gallery" data-src={element.publicURL} key={index}>
+                            <img src={element.publicURL} alt="" width={458} height={461} />
                         </div>)
                     })}
                 </Slider>
@@ -159,7 +106,7 @@ export default class CenterMode extends Component {
                     {this.state.arrThumbs.map((element, index) => {
                         return (
                             <div key={index} className="thumb-bottom">
-                                <img src={element.thumbImg} alt="" width={160} height={160} />
+                                <img src={element.publicURL} alt="" width={160} height={160} />
                             </div>
                         )
                     })}

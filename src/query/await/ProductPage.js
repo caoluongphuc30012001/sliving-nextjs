@@ -18,26 +18,61 @@ const QueryProductPage = () => {
             date
             typeSupport
             description
-            imgThumbs {
-              imgProduct {
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
+            }
+            mechanical_1 {
+              imgSrcProduct {
                 publicURL
               }
-              imgThumb_1 {
+              withNeutral {
                 publicURL
               }
-              imgThumb_1 {
+              nonNeutral {
                 publicURL
               }
-              imgThumb_2 {
+            }
+            mechanical_2 {
+              imgSrcProduct {
                 publicURL
               }
-              imgThumb_3 {
+              withNeutral {
                 publicURL
               }
-              imgThumb_4 {
+              nonNeutral {
                 publicURL
               }
-              imgThumb_5 {
+            }
+            mechanical_3 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+              nonNeutral {
+                publicURL
+              }
+            }
+            mechanical_4 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+            }
+            mechanical_6 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+              nonNeutral {
                 publicURL
               }
             }

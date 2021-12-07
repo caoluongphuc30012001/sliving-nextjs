@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 
 
 const DataProductSolution = () => {
-  const data = useStaticQuery(graphql`
+  const query = useStaticQuery(graphql`
   {
     ProductPage: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/(contents/product-v2/)/"}}
@@ -21,28 +21,11 @@ const DataProductSolution = () => {
             date
             description
             typeSupport
-            imgThumbs {
-              imgProduct {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_2 {
-                publicURL
-              }
-              imgThumb_3 {
-                publicURL
-              }
-              imgThumb_4 {
-                publicURL
-              }
-              imgThumb_5 {
-                publicURL
-              }
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
         }
@@ -51,7 +34,7 @@ const DataProductSolution = () => {
   }
   `);
   return (
-    data
+    query
   )
 }
 

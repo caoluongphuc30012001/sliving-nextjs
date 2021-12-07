@@ -20,10 +20,16 @@ const ButtonRounded = () => {
                 } else {
                     setIsScroll(false);
                 }
-            }, true)
+            }, false)
         }
         return () => {
-            setIsScroll(true);
+            window.removeEventListener("scroll", () => {
+                if (window.scrollY > 500) {
+                    setIsScroll(true);
+                } else {
+                    setIsScroll(false);
+                }
+            }, false)
         }
 
     }, [])
