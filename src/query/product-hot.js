@@ -5,7 +5,7 @@ const DataProductNew = () => {
     productLed: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/(contents/product-v2/led/)/"}, frontmatter: {}}
       sort: {fields: frontmatter___date}
-      limit: 8
+      limit: 16
     ) {
       edges {
         node {
@@ -20,28 +20,11 @@ const DataProductNew = () => {
             button
             date
             description
-            imgThumbs {
-              imgProduct {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_2 {
-                publicURL
-              }
-              imgThumb_3 {
-                publicURL
-              }
-              imgThumb_4 {
-                publicURL
-              }
-              imgThumb_5 {
-                publicURL
-              }
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
           html
@@ -51,7 +34,7 @@ const DataProductNew = () => {
     productSocket: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/(contents/product-v2/socket/)/"}, frontmatter: {}}
       sort: {fields: frontmatter___date}
-      limit: 8
+      limit: 16
     ) {
       edges {
         node {
@@ -66,28 +49,11 @@ const DataProductNew = () => {
             button
             date
             description
-            imgThumbs {
-              imgProduct {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_2 {
-                publicURL
-              }
-              imgThumb_3 {
-                publicURL
-              }
-              imgThumb_4 {
-                publicURL
-              }
-              imgThumb_5 {
-                publicURL
-              }
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
           html
@@ -95,55 +61,87 @@ const DataProductNew = () => {
       }
     }
     productSwitch: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/switch/)/"}, frontmatter: {}}
-      sort: {fields: frontmatter___date}
-      limit: 8
-    ) {
-      edges {
-        node {
-          frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            imgThumbs {
-              imgProduct {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_2 {
-                publicURL
-              }
-              imgThumb_3 {
-                publicURL
-              }
-              imgThumb_4 {
-                publicURL
-              }
-              imgThumb_5 {
-                publicURL
-              }
+    filter: {fileAbsolutePath: {regex: "/(contents/product-v2/switch/)/"}, frontmatter: {}}
+    sort: {fields: frontmatter___date}
+    limit: 16
+  ) {
+    edges {
+      node {
+        frontmatter {
+          id
+          title
+          subtitle
+          slug
+          lgn
+          type
+          version
+          button
+          date
+          description
+          imgSrcProduct{
+            publicURL
+          }
+          mechanical_1 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
             }
           }
-          html
+          mechanical_2 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
+          mechanical_3 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
+          mechanical_4 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+          }
+          mechanical_6 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
         }
+        html
       }
     }
+  }
     productZigbee: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}, frontmatter: {}}
       sort: {fields: frontmatter___date}
-      limit: 8
+      limit: 16
     ) {
       edges {
         node {
@@ -158,28 +156,11 @@ const DataProductNew = () => {
             button
             date
             description
-            imgThumbs {
-              imgProduct {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_2 {
-                publicURL
-              }
-              imgThumb_3 {
-                publicURL
-              }
-              imgThumb_4 {
-                publicURL
-              }
-              imgThumb_5 {
-                publicURL
-              }
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
           html
@@ -189,7 +170,7 @@ const DataProductNew = () => {
     productSensor: allMarkdownRemark(
       filter: {fileAbsolutePath: {regex: "/(contents/product-v2/sensor/)/"}, frontmatter: {}}
       sort: {fields: frontmatter___date}
-      limit: 8
+      limit: 16
     ) {
       edges {
         node {
@@ -204,36 +185,21 @@ const DataProductNew = () => {
             button
             date
             description
-            imgThumbs {
-              imgProduct {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_1 {
-                publicURL
-              }
-              imgThumb_2 {
-                publicURL
-              }
-              imgThumb_3 {
-                publicURL
-              }
-              imgThumb_4 {
-                publicURL
-              }
-              imgThumb_5 {
-                publicURL
-              }
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
           html
         }
       }
     }
+    
   }
 `);
+
 
   return (
     data

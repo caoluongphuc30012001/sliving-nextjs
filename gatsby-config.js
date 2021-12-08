@@ -1,14 +1,18 @@
 module.exports = {
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    DEV_WEBPACK_CACHE: true
+  },
   siteMetadata: {
     title: "Sliving",
   },
   pathPrefix: `/`,
   plugins: [
-    `gatsby-transformer-sharp`,
-    "gatsby-plugin-sharp",
+
     `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
+    `gatsby-transformer-sharp`,
+    "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -24,7 +28,6 @@ module.exports = {
         path: `${__dirname}/gatsby-config.js`,
       },
     },
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,14 +38,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "contents/images",
         path: `${__dirname}/contents/images/`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
         path: `${__dirname}/src/images/`,
       },
     },
@@ -115,7 +116,7 @@ module.exports = {
             options: {
               maxWidth: 1024,
               withWebp: true,
-              quality: 50
+              quality: 50,
             },
           },
         ],

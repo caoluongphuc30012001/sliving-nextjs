@@ -17,52 +17,61 @@ exports.createSchemaCustomization = ({ actions }) => {
     frontmatter: Frontmatter
   }
   type Frontmatter {
-    imgProduct: File
-    imgThumb_1: File
-    imgThumb_2: File
-    imgThumb_3: File
-    imgThumb_4: File
-    imgThumb_5: File
+    withNeutral: File
+    nonNeutral: File
   }
   `
   createTypes(typeDefs)
 }
 
-
 exports.createPages = async function ({ actions, graphql }) {
+
+
+  await graphql(
+    `{
+    allFile(filter: {absolutePath: {regex: "/(images/)/"}}) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
+  }
+`);
+
   const { createPage } = actions;
   const productPage = await graphql(`${QueryProductPage()}`);
   const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
   const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
   const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
 
-  createPage({
-    path: `/smart-home/`,
-    component: smartHomeComponent,
-    context: {
-      data: productPage.data.ProductPage
-    },
-  });
-
-  createPage({
-    path: `/products/`,
-    component: productComponent,
-    context: {
-      data: productPage.data.ProductPage
-    },
-  });
-
-
-  productPage.data.ProductPage.edges.forEach((product) => {
+  if (productPage) {
     createPage({
-      path: `/products/${product.node.frontmatter.slug}`,
-      component: productDetailComponent,
+      path: `/smart-home/`,
+      component: smartHomeComponent,
       context: {
-        data: product.node
+        data: productPage.data.ProductPage
       },
     });
 
-  })
+    createPage({
+      path: `/products/`,
+      component: productComponent,
+      context: {
+        data: productPage.data.ProductPage
+      },
+    });
+    productPage.data.ProductPage.edges.forEach((product) => {
+      createPage({
+        path: `/products/${product.node.frontmatter.slug}`,
+        component: productDetailComponent,
+        context: {
+          data: product.node
+        },
+      });
+
+    })
+  }
 
 
 };
