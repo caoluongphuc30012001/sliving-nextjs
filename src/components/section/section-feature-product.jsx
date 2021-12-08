@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import elementImg from "@images/product-v2/element-3.png";
 import Slider from "react-slick";
 import CardProductV2 from '../card/card-product-v2';
 import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
-import lineImg from "@images/new-home-page/app-img/line.png"
+import lineImg from "@images/new-home-page/app-img/line.png";
+import { Link } from "gatsby";
 import "../style.scss";
 const SectionFeatureProduct = ({ dataProductHot }) => {
     const NextArrow = (props) => {
@@ -40,9 +40,10 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     }
     const [arrProductHot, setArrProductHot] = useState([]);
     const filterProduct = (filter) => {
-        if (dataProductHot[filter].edges.length > 0) {
+        if (dataProductHot[filter]?.edges.length > 0) {
             const arrNew = dataProductHot[filter].edges;
-            setArrProductHot(arrOld => arrOld.concat(arrNew));
+            const arrFilter = arrNew.filter((element) => element.node.frontmatter.lgn === "en");
+            setArrProductHot(arrOld => arrOld.concat(arrFilter));
         }
     }
     const arrFilterName = ["productAir", "productGateWay", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productSwitch", "productZigbee"];
@@ -51,6 +52,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
             const filter = arrFilterName[index];
             filterProduct(filter);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const settings = {
         dots: false,
@@ -68,7 +70,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
             <h2 className="prod-title-v2">Featured Product</h2>
             <div className="prod-line"><img src={lineImg} alt="" /></div>
             <Slider {...settings}>
-                {arrProductHot && arrProductHot.map((prod, index) => <div key={index}><CardProductV2 props={prod.node.frontmatter} isButton={true} /></div>)}
+                {arrProductHot && arrProductHot.map((prod, index) => <div key={index}><Link to={`/products/${prod?.node?.frontmatter?.slug}`}><CardProductV2 props={prod.node.frontmatter} isButton={true} /></Link></div>)}
             </Slider>
         </section>
     );

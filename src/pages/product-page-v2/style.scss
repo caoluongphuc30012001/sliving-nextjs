@@ -4,6 +4,11 @@
     .prod-header-v2 {
         background: #f5f5f5;
     }
+    .product-v2-img {
+        img {
+            object-fit: contain !important;
+        }
+    }
 
     .header-left {
         max-width: 567px;

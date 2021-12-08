@@ -183,6 +183,7 @@
     background-color: #ffffff;
     position: fixed;
     top: 0;
+    box-shadow: 1px 3px 6px #f1f3f4;
   }
 }
 
@@ -3452,6 +3453,7 @@ a.btn-link-a {
     font-size: 21px;
     line-height: 27.56px;
     font-weight: 700;
+    margin: 0;
   }
 }
 
@@ -3477,9 +3479,13 @@ a.btn-link-a {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     cursor: pointer;
+    width: 100%;
     height: 313px;
+    margin: auto;
     overflow: hidden;
     img {
+      width: 100%;
+      height: 100%;
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
     }
@@ -3506,6 +3512,7 @@ a.btn-link-a {
       line-height: 131.25%;
       color: #104b82;
       letter-spacing: -0.05rem;
+      text-transform: capitalize;
     }
     p {
       font-style: normal;
@@ -3558,6 +3565,9 @@ a.btn-link-a {
   }
 }
 .slide-prod-v2 {
+  a {
+    text-decoration: none;
+  }
   .slick-slide {
     margin: 0 16px;
     max-width: 370px;
@@ -3610,10 +3620,6 @@ a.btn-link-a {
     }
     .product-v2-img {
       height: 183px;
-      img {
-        width: 270px;
-        height: 183px;
-      }
     }
   }
 }
@@ -3628,5 +3634,73 @@ a.btn-link-a {
     height: 24px;
     border-radius: 50%;
     background-color: #fe8258;
+  }
+}
+
+.carousel-product-filter {
+  margin-top: 80px;
+  margin-bottom: 98px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.heart-animation {
+  cursor: pointer;
+  fill: transparent;
+  svg {
+    overflow: visible;
+  }
+  path {
+    transform-origin: center;
+  }
+  &:hover {
+    path {
+      animation: stroke-animation 2s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: var(--pink);
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    fill: var(--pink);
+  }
+}
+
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: var(--pink-light);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
   }
 }

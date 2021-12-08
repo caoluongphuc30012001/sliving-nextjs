@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import imgRemote from "@images/product/prod-about.svg";
 import LayoutV2 from "@components/layout-new.jsx";
@@ -8,7 +8,7 @@ import SwiperCore, {
 } from 'swiper';
 import { Col, Row } from 'react-bootstrap';
 import "./style.scss";
-import "../home-page-new/home-page-new.scss"
+import "../smart-home-page-v2/style.scss"
 import ThreeElementVertical from './three-element-vertical';
 import SectionFeatureProduct from '@components/section/section-feature-product';
 import imgProd from "@images/product-v2/touch.png";
@@ -123,13 +123,17 @@ const IndexPage = () => {
         )
     }
 
+    const buildSlideProduct = useMemo(() => {
+        return (<SlideProduct data={data} />)
+    }, [data])
+
     return (
         <LayoutV2>
             <div className="page-product-v2">
                 <BuildHeader />
                 <ThreeElementVertical />
                 <SectionFeatureProduct dataProductHot={data} />
-                <SlideProduct data={data} />
+                {buildSlideProduct}
                 <BuildBanner />
                 <BuildBannerRevolution />
             </div>

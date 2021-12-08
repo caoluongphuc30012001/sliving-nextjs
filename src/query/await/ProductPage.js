@@ -1,41 +1,83 @@
 const QueryProductPage = () => {
-  const query = ` query {
-    ProductPage:allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "contents/product-solution/products/"}}
+  const query = ` query Product {
+    ProductPage: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/)/"}}
+      sort: {fields: frontmatter___date}
     ) {
       edges {
         node {
           frontmatter {
             id
-            date
             title
             subtitle
-            description
-            type
-            featuredImage {
-              publicURL
-            }
-            featuredVideo {
-              publicURL
-            }
-            alt
             slug
-            property_1 {
+            lgn
+            type
+            version
+            button
+            date
+            typeSupport
+            description
+            imgSrcThumbs {
               publicURL
             }
-            property_2 {
+            imgSrcProduct {
               publicURL
             }
-            property_3 {
-              publicURL
+            mechanical_1 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+              nonNeutral {
+                publicURL
+              }
             }
-            property_4 {
-              publicURL
+            mechanical_2 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+              nonNeutral {
+                publicURL
+              }
             }
-            property_5 {
-              publicURL
+            mechanical_3 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+              nonNeutral {
+                publicURL
+              }
+            }
+            mechanical_4 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+            }
+            mechanical_6 {
+              imgSrcProduct {
+                publicURL
+              }
+              withNeutral {
+                publicURL
+              }
+              nonNeutral {
+                publicURL
+              }
             }
           }
+          html
         }
       }
     }

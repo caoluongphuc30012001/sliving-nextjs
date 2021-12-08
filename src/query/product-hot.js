@@ -1,396 +1,205 @@
 import { graphql, useStaticQuery } from 'gatsby'
-
 const DataProductNew = () => {
   const data = useStaticQuery(graphql`
   query {
+    productLed: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/led/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 16
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
+            }
+          }
+          html
+        }
+      }
+    }
+    productSocket: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/socket/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 16
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
+            }
+          }
+          html
+        }
+      }
+    }
+    productSwitch: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(contents/product-v2/switch/)/"}, frontmatter: {}}
+    sort: {fields: frontmatter___date}
+    limit: 16
+  ) {
+    edges {
+      node {
+        frontmatter {
+          id
+          title
+          subtitle
+          slug
+          lgn
+          type
+          version
+          button
+          date
+          description
+          imgSrcProduct{
+            publicURL
+          }
+          mechanical_1 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
+          mechanical_2 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
+          mechanical_3 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
+          mechanical_4 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+          }
+          mechanical_6 {
+            imgSrcProduct {
+              publicURL
+            }
+            withNeutral {
+              publicURL
+            }
+            nonNeutral {
+              publicURL
+            }
+          }
+        }
+        html
+      }
+    }
+  }
     productZigbee: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/zigbee-kit)/"}}
-        sort: {fields: frontmatter___date}
-        limit: 8
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              id
-              date
-              title
-              subtitle
-              description
-              type
-              featuredImage {
-                publicURL
-              }
-              featuredVideo {
-                publicURL
-              }
-              alt
-              slug
-              lgn
-              property_1 {
-                publicURL
-              }
-              property_2 {
-                publicURL
-              }
-              property_3 {
-                publicURL
-              }
-              property_4 {
-                publicURL
-              }
-              property_5 {
-                publicURL
-              }
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 16
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
+          html
         }
       }
-      productLed:  allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/led)/"}}
-        sort: {fields: frontmatter___date}
-        limit: 8
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              id
-              date
-              title
-              subtitle
-              description
-              type
-              featuredImage {
-                publicURL
-              }
-              featuredVideo {
-                publicURL
-              }
-              alt
-              slug
-              lgn
-              property_1 {
-                publicURL
-              }
-              property_2 {
-                publicURL
-              }
-              property_3 {
-                publicURL
-              }
-              property_4 {
-                publicURL
-              }
-              property_5 {
-                publicURL
-              }
+    }
+    productSensor: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/sensor/)/"}, frontmatter: {}}
+      sort: {fields: frontmatter___date}
+      limit: 16
+    ) {
+      edges {
+        node {
+          frontmatter {
+            id
+            title
+            subtitle
+            slug
+            lgn
+            type
+            version
+            button
+            date
+            description
+            imgSrcThumbs {
+              publicURL
+            }
+            imgSrcProduct {
+              publicURL
             }
           }
-        }
-      }
-      productGateWay: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/gateway)/"}}
-        sort: {fields: frontmatter___date}
-        limit: 8
-      ) {
-        edges {
-          node {
-            html
-            frontmatter {
-              id
-              date
-              title
-              subtitle
-              description
-              type
-              featuredImage {
-                publicURL
-              }
-              featuredVideo {
-                publicURL
-              }
-              alt
-              slug
-              lgn
-              property_1 {
-                publicURL
-              }
-              property_2 {
-                publicURL
-              }
-              property_3 {
-                publicURL
-              }
-              property_4 {
-                publicURL
-              }
-              property_5 {
-                publicURL
-              }
-            }
-          }
-        }
-      }
-      
-  productAir: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/air-conditioning-system)/"}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          type
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
+          html
         }
       }
     }
+    
   }
-  productSensor: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/sensor)/"}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          type
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSmartCurtain: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-curtain)/"}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          type
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSmartMeter: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/smart-meter)/"}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          type
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSocket: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/socket)/"}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          type
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-  productSwitch: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(contents/product-solution/products/switch)/"}}
-    sort: {fields: frontmatter___date}
-    limit: 8
-  ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          id
-          date
-          title
-          subtitle
-          description
-          type
-          featuredImage {
-            publicURL
-          }
-          featuredVideo {
-            publicURL
-          }
-          alt
-          slug
-          lgn
-          property_1 {
-            publicURL
-          }
-          property_2 {
-            publicURL
-          }
-          property_3 {
-            publicURL
-          }
-          property_4 {
-            publicURL
-          }
-          property_5 {
-            publicURL
-          }
-        }
-      }
-    }
-}}    `);
+`);
+
 
   return (
     data

@@ -169,9 +169,9 @@ const IndexPage = () => {
         navigation={
           isButton
             ? {
-                nextEl: ".btn-next",
-                prevEl: ".btn-prev",
-              }
+              nextEl: ".btn-next",
+              prevEl: ".btn-prev",
+            }
             : isButton
         }
         className="mySwiper"
@@ -206,7 +206,7 @@ const IndexPage = () => {
   const BuildSectionTwoElement = () => {
     const objTech = {
       title: "Our News On High Technologies",
-      subTitle: "Virtual Tour on Iphone and Ipad",
+      subtitle: "Virtual Tour on Iphone and Ipad",
       description:
         "Virtual Tours go Mobile! Our web Design's protfolio of 360 degree panoramas are now available to view and enjoy via the Iphone and Ipads. Our tour are now reviewable on any device without the need for an app.",
     };
