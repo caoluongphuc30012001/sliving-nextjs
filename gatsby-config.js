@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: "Sliving",
   },
-  pathPrefix: `/`,
+  pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [
 
     `gatsby-plugin-sass`,
@@ -97,6 +97,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
+        bucketPrefix: `${process.env.AWS_S3_PREFIX}`,
       },
     },
     {

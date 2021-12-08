@@ -14,22 +14,25 @@ cache:
   paths:
     - node_modules/
 
+before_script:
+  # Create ssh-key and pull submodule
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - git submodule update --init --recursive
+
 test:
   stage: test
-  before_script:
-    # Create ssh-key and pull submodule
-    - mkdir -p ~/.ssh
-    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - echo "$SSH_DEPLOY_KEY"
-    - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
-    - chmod 600 ~/.ssh/id_rsa
-    - git submodule update --init --recursive
+  variables:
+    AWS_S3_PREFIX: $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
   script:
-    # - export AWS_S3_PREFIX=$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
     - export AWS_S3_BUCKET=$AWS_S3_BUCKET_REVIEW
-    - echo $AWS_S3_PREFIX
+    - echo "$AWS_S3_PREFIX"
+    - echo "$AWS_S3_BUCKET"
+    - echo "$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
     - npm install
-    - npm run build
+    - npm run build --prefix-paths
     - npm run deploy
   only:
     - merge_requests
@@ -38,14 +41,6 @@ test:
 
 build-and-deploy:
   stage: build-and-deploy
-  before_script:
-    # Create ssh-key and pull submodule
-    - mkdir -p ~/.ssh
-    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - echo "$SSH_DEPLOY_KEY"
-    - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
-    - chmod 600 ~/.ssh/id_rsa
-    - git submodule update --init --recursive
   script:
     - npm install
     # - ./node_modules/.bin/gatsby build --prefix-paths
