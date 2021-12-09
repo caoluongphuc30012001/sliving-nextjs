@@ -98,6 +98,7 @@ module.exports = {
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
         bucketPrefix: `${process.env.AWS_S3_PREFIX}`,
+        removeNonexistentObjects: process.env.AWS_S3_PREFIX ? false : true,
       },
     },
     {
