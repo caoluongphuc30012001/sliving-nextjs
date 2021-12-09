@@ -4,11 +4,15 @@ import { navData, addressData, aboutData } from "./../mock/data";
 import ButtonRounded from "@components/button/button-card-rounded";
 import { withTranslation } from "react-i18next";
 import NavbarV2 from "./navbar-new/narbar-v2";
+import NavbarSmartHome from "./navbar-new/navbar-smarthome";
 import FooterNew from "./footer/footer-new";
 //import useWindowSize from '../hook/useWindowSize';
 
 import "../i18n/i18n";
 import "./style.scss";
+
+const isBrowser = typeof window !== "undefined";
+
 function LayoutNew({ children }) {
   // const { isMobile } = useWindowSize();
   const [arrNav, setNavData] = useState({});
@@ -21,7 +25,13 @@ function LayoutNew({ children }) {
     <PortfolioProvider value={{ arrNav, infoCompany }}>
       {/* {isMobile && <NavBarMobile />} */}
       <div className="page">
-        <NavbarV2 />
+        {isBrowser &&
+        (window.location.pathname === "/en/" ||
+          window.location.pathname === "/vn/") ? (
+          <NavbarV2 />
+        ) : (
+          <NavbarSmartHome />
+        )}
         <main>{children}</main>
         <FooterNew />
         <ButtonRounded />
