@@ -18,9 +18,11 @@ import ButtonLearn from '@components/button/button-learn';
 import line from "@images/product-v2/line-blue.png";
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
+import { graphql } from "gatsby";
+
 SwiperCore.use([Navigation, Pagination,]);
-const IndexPage = () => {
-    const data = DataProductNew();
+const IndexPage = ({ data }) => {
+    const dataProducts = DataProductNew();
     const [arrImg] = useState([
         { id: 0, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
         { id: 1, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
@@ -124,17 +126,19 @@ const IndexPage = () => {
     }
 
     const buildSlideProduct = useMemo(() => {
-        return (<SlideProduct data={data} />)
-    }, [data])
+        return (<SlideProduct data={dataProducts} />)
+    }, [dataProducts]);
 
+    const dataProdHot = data?.allMarkdownRemark?.edges || [];
+    console.log("dataProdHot", dataProdHot);
     return (
         <LayoutV2>
             <div className="page-product-v2">
                 <BuildHeader />
-                <ThreeElementVertical />
-                <SectionFeatureProduct dataProductHot={data} />
-                {buildSlideProduct}
+                <ThreeElementVertical dataProdHot={dataProdHot} />
+                <SectionFeatureProduct dataProductHot={dataProducts} />
                 <BuildBanner />
+                {buildSlideProduct}
                 <BuildBannerRevolution />
             </div>
         </LayoutV2>
@@ -142,3 +146,25 @@ const IndexPage = () => {
 }
 
 export default IndexPage;
+export const pageQuery = graphql`
+{
+    allMarkdownRemark(
+      filter: {frontmatter: {type: {regex: "/Sensor/"}, lgn: {regex: "/en/"}}}
+      limit: 3
+    ) {
+      edges {
+        node {
+          frontmatter {
+            lgn
+            title
+            subtitle
+            slug
+            imgSrcProduct {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+  }
+`;
