@@ -61,9 +61,8 @@ const ContactForm = () => {
             <option value="" disabled selected hidden>
               --None--
             </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">Distributors</option>
+            <option value="2">Intergration & Customizing Solutions</option>
             </Form.Control>
             {validateFeedback("Types of Customer")}
           </Form.Group>
@@ -79,9 +78,11 @@ const ContactForm = () => {
             <option value="" disabled selected hidden>
               --None--
             </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">Viet Nam</option>
+            <option value="2">Iceland</option>
+            <option value="3">Ukraine</option>
+            <option value="4">Thailand</option>
+            <option value="5">Saint Kitts and Nevis</option>
             </Form.Control>
             {validateFeedback("Country")}
           </Form.Group>
