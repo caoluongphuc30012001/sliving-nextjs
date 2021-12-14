@@ -22,9 +22,23 @@ const DataProductNew = () => {
             description
             imgSrcThumbs {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           html
@@ -51,9 +65,23 @@ const DataProductNew = () => {
             description
             imgSrcThumbs {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           html
@@ -80,57 +108,162 @@ const DataProductNew = () => {
           description
           imgSrcProduct{
             publicURL
+            childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
           }
           mechanical_1 {
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             withNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             nonNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           mechanical_2 {
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             withNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             nonNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           mechanical_3 {
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             withNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             nonNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           mechanical_4 {
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             withNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           mechanical_6 {
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             withNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             nonNeutral {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
         }
@@ -158,9 +291,23 @@ const DataProductNew = () => {
             description
             imgSrcThumbs {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           html
@@ -187,9 +334,23 @@ const DataProductNew = () => {
             description
             imgSrcThumbs {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
           html

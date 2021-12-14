@@ -36,6 +36,9 @@ test:
     - npm run deploy
   only:
     - merge_requests
+  except:
+    - develop
+    - master
   tags:
     - runner-191
 
