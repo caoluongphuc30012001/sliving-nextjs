@@ -39,7 +39,7 @@ const ContactForm = () => {
           Please fill out the fields below and someone will be in touch with you
           very soon.
         </p>
-        <label for="customerName">Your Name</label>
+        <label htmlFor="customerName">Your Name</label>
           <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="Nguyen Van A"
@@ -49,7 +49,7 @@ const ContactForm = () => {
             />
             {validateFeedback("Your Name")}
           </Form.Group>
-        <label for="type">Types of Customer</label>
+        <label htmlFor="type">Types of Customer</label>
           <Form.Group style={{width:'100%'}}>
             <Form.Control
               name="type"
@@ -66,7 +66,7 @@ const ContactForm = () => {
             </Form.Control>
             {validateFeedback("Types of Customer")}
           </Form.Group>
-        <label for="country">Country</label>
+        <label htmlFor="country">Country</label>
           <Form.Group style={{width:'100%'}}>
             <Form.Control
               name="country"
@@ -86,7 +86,7 @@ const ContactForm = () => {
             </Form.Control>
             {validateFeedback("Country")}
           </Form.Group>
-        <label for="email">Email Address</label>
+        <label htmlFor="email">Email Address</label>
         <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="youremail@gmail.com"
@@ -97,7 +97,7 @@ const ContactForm = () => {
             />
             {validateFeedback("Email")}
           </Form.Group>
-        <label for="phoneNumber">Phone Number</label>
+        <label htmlFor="phoneNumber">Phone Number</label>
           <Form.Group style={{ width: "100%" }} className="phoneNumber">
             <span class="numberPrefix">+84</span>
             <Form.Control
@@ -111,7 +111,7 @@ const ContactForm = () => {
             />
             {validateFeedback("Phone Number")}
           </Form.Group>
-        <label for="companyName">Company Name</label>
+        <label htmlFor="companyName">Company Name</label>
         <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="ABC Company"
@@ -123,7 +123,7 @@ const ContactForm = () => {
             />
             {validateFeedback("Company Name")}
           </Form.Group>
-        <label for="jobTitle">Job Title</label>
+        <label htmlFor="jobTitle">Job Title</label>
                 <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="Project Manager"
@@ -132,7 +132,7 @@ const ContactForm = () => {
               type="text"
             />
           </Form.Group>
-        <label for="website">Website</label>
+        <label htmlFor="website">Website</label>
                 <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="http://"
