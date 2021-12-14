@@ -11,7 +11,9 @@ const CardProductV2 = ({ props, isButton, background }) => {
 
     return (
         <div className="card-product-v2" >
-            <div className="product-v2-img"> <Img fluid={props?.imgSrcProduct?.childImageSharp?.fluid} alt="" width={370} height={313} /> </div>
+            <div className="product-v2-img">
+                <Img fluid={props?.imgSrcProduct?.childImageSharp?.fluid} alt="" />
+            </div>
             <BodyTag className="product-v2-detail" background={background}>
                 <h6>{props?.type}</h6>
                 <h2 style={{ cursor: "pointer" }}>{props?.title}</h2>

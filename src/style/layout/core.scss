@@ -188,3 +188,8 @@
 .gatsby-image-wrapper {
     height: 100%;
 }
+
+img {
+    max-width: 100% !important;
+    //  height: auto !important;
+}
