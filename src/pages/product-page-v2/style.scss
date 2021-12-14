@@ -11,7 +11,7 @@
     }
 
     .header-left {
-        max-width: 567px;
+        max-width: 418px;
         width: 100%;
         margin: auto;
         text-align: left;
@@ -52,6 +52,7 @@
             img {
                 object-fit: cover;
                 border-radius: 10px;
+                background-color: #e1e3e6;
             }
         }
     }
@@ -101,6 +102,12 @@
                 top: -70px;
             }
         }
+    }
+    .btn-carousel {
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        padding: 8px;
     }
 }
 .swiper-pagination-bullet-active {

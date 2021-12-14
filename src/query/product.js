@@ -23,9 +23,23 @@ const DataProductSolution = () => {
             typeSupport
             imgSrcThumbs {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
             imgSrcProduct {
               publicURL
+              childImageSharp {
+            fluid {
+              src
+              srcSet
+              aspectRatio
+            }
+          }
             }
           }
         }

@@ -6,8 +6,10 @@ import img2 from "@images/product/prod-spec.svg";
 import img3 from "@images/product/prod.svg";
 import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
-import "@fancyapps/ui/dist/fancybox.esm.js";
 import "@fancyapps/ui/dist/fancybox.css";
+import Fancybox from "../../hook/fancybox";
+import Img from "gatsby-image";
+
 const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -88,16 +90,23 @@ export default class CenterMode extends Component {
         return (
 
             <div className="thumb-wrap" >
-                <Slider
-                    asNavFor={this.state.nav2}
-                    ref={slider => (this.slider1 = slider)} dotsClass={"slick-dots slick-thumb"}
-                >
-                    {this.state.arrThumbs && this.state.arrThumbs?.map((element, index) => {
-                        return (<div className="thumb-center" data-fancybox="gallery" data-src={element.publicURL} key={index}>
-                            <img src={element.publicURL} alt="" width={458} height={461} />
-                        </div>)
-                    })}
-                </Slider>
+                <Fancybox options={{ infinite: false }}>
+                    <Slider
+                        asNavFor={this.state.nav2}
+                        infinite={false}
+                        ref={slider => (this.slider1 = slider)} dotsClass={"slick-dots slick-thumb"}
+                    >
+
+                        {this.state.arrThumbs && this.state.arrThumbs?.map((element, index) => {
+                            return (<div className="thumb-center" data-fancybox="gallery" data-src={element.publicURL} key={index}>
+                                <Img fluid={element.childImageSharp.fluid} alt="" width={458} height={461} />
+                            </div>
+
+                            )
+                        })}
+                    </Slider>
+                </Fancybox>
+
                 <Slider
                     asNavFor={this.state.nav1}
                     ref={slider => (this.slider2 = slider)}
@@ -106,7 +115,7 @@ export default class CenterMode extends Component {
                     {this.state.arrThumbs.map((element, index) => {
                         return (
                             <div key={index} className="thumb-bottom">
-                                <img src={element.publicURL} alt="" width={160} height={160} />
+                                <Img fluid={element.childImageSharp.fluid} alt="" width={160} height={160} />
                             </div>
                         )
                     })}
