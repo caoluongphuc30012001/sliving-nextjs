@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { Language } from '@wapps/gatsby-plugin-i18next';
 import { useTranslation } from 'react-i18next';
 import iconLanguage from "@images/new-home-page/header/icon-language.png"
 const LanguageSwitcher = ({ changeLng }) => {
     const { i18n } = useTranslation();
-    function changeFlag() {
+    function changeLanguage() {
         if (i18n.language === "en") {
             changeLng("vn");
             i18n.changeLanguage("vn");
@@ -17,7 +17,7 @@ const LanguageSwitcher = ({ changeLng }) => {
     };
 
     return <Dropdown className="dropdown-language dropdown-language-v2">
-        <Dropdown.Toggle className="drop-toggle dropdown-toggle" variant="#ffffff" id="dropdown-basic" onClick={() => changeFlag()} onKeyPress={() => changeFlag()} tabIndex={0} role={"button"}>
+        <Dropdown.Toggle className="drop-toggle dropdown-toggle" variant="#ffffff" id="dropdown-basic" onClick={() => changeLanguage()} onKeyPress={() => changeLanguage()} tabIndex={0} role={"button"}>
             <span style={{ textTransform: "uppercase" }}>{i18n.language === "vi" ? "VN" : i18n.language}</span>
             <img src={iconLanguage} alt="" />
         </Dropdown.Toggle>
