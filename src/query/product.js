@@ -20,18 +20,36 @@ const DataProductSolution = () => {
             button
             date
             description
+            details
             typeSupport
             imgSrcThumbs {
               publicURL
+              childImageSharp {
+                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
+                src
+                srcSet
+                aspectRatio
+                sizes
+              }
+              }
             }
             imgSrcProduct {
               publicURL
+              childImageSharp {
+                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
+                src
+                srcSet
+                aspectRatio
+                sizes
+              }
+              }
             }
           }
         }
       }
     }
   }
+  
   `);
   return (
     query

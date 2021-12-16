@@ -181,3 +181,15 @@
         font-size: 20px;
     }
 }
+
+.has-image[data-image-fit="contain"] .fancybox__image {
+    width: 500px !important;
+}
+.gatsby-image-wrapper {
+    height: 100%;
+}
+
+img {
+    max-width: 100% !important;
+    //  height: auto !important;
+}

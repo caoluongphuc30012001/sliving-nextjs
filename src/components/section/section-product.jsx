@@ -16,9 +16,11 @@ const SlideProduct = ({ data }) => {
         { title: "Socket", id: 2, isActive: false, filterName: "productSocket" },
         { title: "Sensor", id: 3, isActive: false, filterName: "productSensor" },
         { title: "Zigbee Kit", id: 7, isActive: false, filterName: "productZigbee" },
-        { title: "Air system", id: 4, isActive: false, filterName: "productAir" },
+        { title: "Smart Button", id: 4, isActive: false, filterName: "productSmartButton" },
         { title: "Smart Curtain", id: 5, isActive: false, filterName: "productSmartCurtain" },
         { title: "Smart Meter", id: 6, isActive: false, filterName: "productSmartMeter" },
+        { title: "Motor", id: 8, isActive: false, filterName: "productMotor" },
+
     ]);
     const handleSelect = (filter) => {
         arrProduct.forEach((prod) => (prod.isActive = filter.id === prod.id ? true : false));
@@ -48,10 +50,10 @@ const SlideProduct = ({ data }) => {
                     </Row>
                     <Row>
                         <Col xl={12} lg={12} md={12} className="product-filter-item">
-                            <ul>
+                            <ul >
                                 {arrProduct && arrProduct.map((item, index) => {
-                                    return (<li key={index} className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => { handleSelect(item) }} onKeyDown={() => { handleSelect(item) }} role="button" tabIndex={0}>
-                                        {item.title}
+                                    return (<li role="button" key={index} className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => handleSelect(item)} onKeyPress={() => handleSelect(item)} tabIndex={0}>
+                                        <span>{item.title}</span>
                                     </li>)
                                 })}
                             </ul>
