@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Video1 from "@videos/home-page/slide-1.webp";
-import Layout from "@components/layout";
+import LayoutV2 from "@components/layout-new";
 import CardHorizonal from '@components/card/card-horizontal/card-horizontal';
 const SupportDetail = ({ data, node }) => {
     const [content, setContent] = useState();
@@ -17,7 +17,7 @@ const SupportDetail = ({ data, node }) => {
         <>
             {
                 data && (
-                    <Layout>
+                    <LayoutV2>
                         <div className="news-page-body container-wrap">
                             <div className="news-page-body-in-left">
                                 {
@@ -53,7 +53,7 @@ const SupportDetail = ({ data, node }) => {
                                 }
                             </div>
                         </div>
-                    </Layout>
+                    </LayoutV2>
                 )
             }
         </>

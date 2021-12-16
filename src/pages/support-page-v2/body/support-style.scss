@@ -1,3 +1,11 @@
+.banner{
+    width: 100%;
+    height: 418px;
+    background-image: url('../../../images/support-page-v2-img/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .support-pages {
     padding-top: 54px;
     padding-bottom: 72px;
@@ -15,7 +23,12 @@
         }
     }
 }
-
+.bot-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
 .technical-dropdown {
     width: 370px;
     height: 304px;
@@ -394,17 +407,25 @@
     width: 100%;
     height: 100% !important;
     margin-top: 25px;
-    background: #f9f9f9;
-    border: 1px solid #adadad;
+    background: #FFFFFF;
+    border: 1px solid #E1E3E6;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 16px;
     max-width: 670px;
 
     .first-slider-wrap {
-        padding: 28px 23px;
+        padding: 16px 24px 16px 16px;
         // .first-slider-wrap__left {
         //     margin-right: 24px;
         // }
+        .image-example {
+            width: 100%;
+            height: 100%;
+            max-width: 211px;
+            max-height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
     }
 
     @media only screen and (max-width: 480px) {
@@ -426,18 +447,12 @@
     }
 }
 
+
+
 .support-slider {
     .image-container {
         // width: 670px;
         // height: 206px;
-    }
-
-    .image-example {
-        width: 100%;
-        height: 100%;
-        max-width: 211px;
-        max-height: 120px;
-        object-fit: cover;
     }
 
     .text-description {
@@ -449,6 +464,9 @@
     .container-below-image {
         margin-top: 8px;
         font-size: 12px;
+        span:first-child{
+            color: #AAAEB3;
+        }
     }
 
     @media only screen and (max-width: 480px) {
@@ -551,7 +569,9 @@
     .text-title {
         text-transform: capitalize;
         color: #104B82;
-
+        font-style: normal;
+        font-weight: 500;
+        line-height: 131.25%;
         &:hover {
             color: #f47403;
         }
