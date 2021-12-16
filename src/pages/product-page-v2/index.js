@@ -19,6 +19,8 @@ import line from "@images/product-v2/line-blue.png";
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 import { graphql } from "gatsby";
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+
 
 SwiperCore.use([Navigation, Pagination,]);
 const IndexPage = ({ data }) => {
@@ -144,11 +146,11 @@ const IndexPage = ({ data }) => {
     );
 }
 
-export default IndexPage;
+export default withI18next()(IndexPage);
 export const pageQuery = graphql`
-{
+query($lng: String!) {
     allMarkdownRemark(
-      filter: {frontmatter: {type: {regex: "/Sensor/"}, lgn: {regex: "/en/"}}}
+      filter: {frontmatter: {type: {regex: "/Sensor/"}, lgn: {eq: $lng}}}
       limit: 3
     ) {
       edges {
@@ -165,5 +167,11 @@ export const pageQuery = graphql`
         }
       }
     }
+    locales: allLocale(
+        filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+      ) {
+        ...LocaleFragment
+      }
+      
   }
 `;

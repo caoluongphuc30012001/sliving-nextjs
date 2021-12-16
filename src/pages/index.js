@@ -8,6 +8,7 @@ import { Head } from "@wapps/gatsby-plugin-i18next";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import HomePageV2 from "./main-page-v2/index";
 import { graphql } from "gatsby";
+
 const IndexPage = () => {
   return (
     <>

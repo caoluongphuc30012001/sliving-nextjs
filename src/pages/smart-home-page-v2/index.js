@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutNew from "@components/layout-new";
+import LayoutV2 from "@components/layout-new";
 import NewSectionVideo from "./body/new-section-video";
 import NewSectionHeader from "./body/new-section-header";
 import NewSectionApp from "./body/new-section-app";
@@ -9,9 +9,9 @@ import NewSectionCarousel from "./body/new-section-carousel";
 import NewSectionProduct from "./body/new-section-product";
 import "./style.scss";
 
-export default function HomePageNew() {
+export default function Index({ pageContext }) {
   return (
-    <LayoutNew>
+    <LayoutV2 pageContext={pageContext} >
       <div className="smart-home-page-v2">
         <NewSectionHeader />
         <NewSectionApp />
@@ -21,6 +21,6 @@ export default function HomePageNew() {
         <NewSectionSolution />
         <NewSectionVideo />
       </div>
-    </LayoutNew>
+    </LayoutV2>
   );
 }
