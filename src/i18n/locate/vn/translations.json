@@ -5,7 +5,11 @@
       "PRODUCT": "Sản phẩm",
       "SOLUTION": "Giải pháp",
       "COOPERATION": "Hợp Tác",
-      "SUPPORT": "Hỗ trợ kỹ thuật",
+      "SUPPORT": {
+        "SUPPORT": "Hỗ trợ kĩ thuật",
+        "USER_MANUALS":"Hướng dẫn sử dụng",
+        "PRODUCT_VIDEOS":"Video sản phẩm"
+      },
       "ABOUTUS": "Giới thiệu",
       "CONTACTUS": "Liên hệ",
       "PROJECT": "Dự án",
