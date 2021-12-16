@@ -3475,6 +3475,7 @@ a.btn-link-a {
     padding: 24px 16px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+    background: #f9fafb;
     h6 {
       font-style: normal;
       font-weight: 500;
@@ -3539,6 +3540,11 @@ a.btn-link-a {
     width: fit-content;
     margin: auto;
     margin-bottom: 48px;
+  }
+  .product-v2-img {
+    img {
+      object-fit: contain !important;
+    }
   }
 }
 .slide-prod-v2 {

@@ -130,7 +130,6 @@ const IndexPage = ({ data }) => {
     }, [dataProducts]);
 
     const dataProdHot = data?.allMarkdownRemark?.edges || [];
-    console.log("dataProdHot", dataProdHot);
     return (
         <LayoutV2>
             <div className="page-product-v2">
