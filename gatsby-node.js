@@ -19,6 +19,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   type Frontmatter {
     withNeutral: File
     nonNeutral: File
+    details: [String]
   }
   `
   createTypes(typeDefs)
