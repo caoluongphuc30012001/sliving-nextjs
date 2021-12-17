@@ -203,18 +203,103 @@ span.swiper-pagination-bullet {
     .four-el-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        img {
+            max-width: unset !important;
+        }
+        .group-hover-info {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+            h2 {
+                font-size: 3.2rem;
+                color: #fe8258;
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                left: 12%;
+                font-weight: bold;
+            }
+        }
+        .el-wrap-left {
+            clip-path: polygon(0 0, 89% 0, 100% 100%, 0 100%);
+            position: relative;
+            width: 100%;
+            height: 100%;
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                background-color: #1a7dd866;
+            }
+            &:hover {
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    animation: slide-in 300ms;
+                }
+                .group-hover-info {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s ease-in-out;
+                }
+            }
+        }
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+
         .el-wrap-right {
             display: grid;
             grid-template-rows: 1fr 1fr 1fr;
             row-gap: 31px;
             position: relative;
+            img {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+            }
             .el-wrap-right-1 {
-                position: relative;
                 left: -68px;
             }
             .el-wrap-right-2 {
-                position: relative;
                 left: -33px;
+            }
+            .el-wrap-right-1,
+            .el-wrap-right-2,
+            .el-wrap-right-3 {
+                width: fit-content;
+                height: fit-content;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: #1a7dd866;
+                    z-index: 2;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        height: 100%;
+                        animation: slide-out 300ms;
+                    }
+                    .group-hover-info {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: opacity 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+        @keyframes slide-out {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0%);
             }
         }
     }
@@ -297,6 +382,18 @@ span.swiper-pagination-bullet {
         .four-el-wrap {
             grid-template-columns: 1fr;
             row-gap: 0;
+            .el-wrap-right,
+            .el-wrap-left {
+                img {
+                    clip-path: unset;
+                }
+            }
+            .el-wrap-left {
+                img {
+                    width: 595px;
+                    height: 196px;
+                }
+            }
             .el-wrap-right {
                 row-gap: 0px;
                 .el-wrap-right-1,
