@@ -3,9 +3,8 @@ import { PortfolioProvider } from "./../context/context";
 import { navData, addressData, aboutData } from "./../mock/data";
 import ButtonRounded from "@components/button/button-card-rounded";
 import { withTranslation } from "react-i18next";
-import NavbarV2 from "./navbar-new/narbar-v2";
+import NavbarLighting from "./navbar-new/navbar-lighting";
 import NavbarSmartHome from "./navbar-new/navbar-smarthome";
-import NavbarLighting from "./navbar-new/navbar-lighting"
 import FooterNew from "./footer/footer-new";
 //import useWindowSize from '../hook/useWindowSize';
 
@@ -29,11 +28,9 @@ function LayoutNew({ children }) {
         {isBrowser &&
         (window.location.pathname === "/en/" ||
           window.location.pathname === "/vn/") ? (
-          <NavbarV2 />
+          <NavbarLighting />
         ) : (
-            (window.location.pathname === "/en/smart-home/" ||
-            window.location.pathname === "/vn/smart-home/") ? <NavbarSmartHome></NavbarSmartHome>:<NavbarLighting></NavbarLighting>
-          
+          <NavbarSmartHome />
         )}
         <main>{children}</main>
         <FooterNew />

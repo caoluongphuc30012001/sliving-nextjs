@@ -134,9 +134,6 @@ const IndexPage = ({ pageContext }) => {
 
     }
 
-    const filterButtonByVersion = () => {
-    }
-
     const [versionActive, setVersionActive] = useState(0);
     const handleActiveNeutral = (versionId) => {
         if (versionId === 0) {

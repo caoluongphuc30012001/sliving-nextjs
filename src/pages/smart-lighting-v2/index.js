@@ -6,8 +6,9 @@ import "./style.scss"
 import LightingProduct from "./body/lighting-product";
 import SectionBannerV2 from "../../components/section/banner/banner";
 import IntroMain from "./body/light-intro";
-
-const LightingPage=()=>{
+import { graphql } from "gatsby";
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+const LightingPage=()=>{ 
     return <LayoutNew>
         <div id='smartLighting'>
         <LightingHeader />
@@ -20,4 +21,13 @@ const LightingPage=()=>{
         </div>
     </LayoutNew>
 }
-export default LightingPage;
+export default withI18next()(LightingPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
+      ...LocaleFragment
+    }
+  }
+`;

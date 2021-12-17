@@ -5,7 +5,6 @@ import brightness from "@images/lighting-page/Frame37933.svg"
 import home from "@images/lighting-page/Frame37821.svg"
 import indicator from "@images/lighting-page/Frame37925.svg"
 import leave from "@images/lighting-page/Frame37930.svg"
-import ButtonShop from "../../../components/button/button-shop";
 import shadow from "@images/lighting-page/image119.svg"
 
 const LightingHeader=()=>{
@@ -15,10 +14,6 @@ const LightingHeader=()=>{
             <div className="headerContent">
                 <h1>The technology of light gives your<span> colour. <img src={vector} alt="vector" /></span></h1>
                 <p>Complex project management experience. When selecting an offshore software development company, ensure that they have</p>
-                {/* <div>
-                    <ButtonShop content='Shop now' />
-                    <button type="button" class="btn btn-outline-warning">Learn more</button>
-                </div> */}
             </div>
             <div className="headerImage">
                 <div>

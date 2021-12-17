@@ -199,7 +199,7 @@
       // font-weight: bold;
       letter-spacing: 0.2px;
     }
-
+   
     .nav-child {
       opacity: 1;
       visibility: unset;
@@ -3321,6 +3321,9 @@ a.btn-link-a {
       border-radius: 50%;
     }
   }
+}
+#item-menu:hover{
+  cursor: pointer;
 }
 .mx-18{
   margin-left: -18px;
