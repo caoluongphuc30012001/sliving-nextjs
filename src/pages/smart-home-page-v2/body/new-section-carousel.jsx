@@ -16,34 +16,31 @@ export default function NewSectionCarousel() {
 
   const [goToSlide, setGoToSlide] = useState(0);
   const handleChangeSlide = (index) => {
+    setTitle(arrImg[index].title)
     setGoToSlide(index);
-    document.querySelectorAll(".css-1fzpoyk div")[0].style.transform = "unset";
-    document.querySelectorAll(".css-1fzpoyk div")[1].style.transform = "unset";
-    document.querySelectorAll(".css-1fzpoyk div")[2].style.transform = "unset";
-    document.querySelectorAll(".css-1fzpoyk div")[3].style.transform = "unset";
-    document.querySelectorAll(".css-1fzpoyk div")[4].style.transform = "unset";
-    setTimeout(() => {
-      document.querySelectorAll(".css-1fzpoyk div")[0].removeAttribute("style")
-      document.querySelectorAll(".css-1fzpoyk div")[1].removeAttribute("style")
-      document.querySelectorAll(".css-1fzpoyk div")[2].removeAttribute("style")
-      document.querySelectorAll(".css-1fzpoyk div")[3].removeAttribute("style")
-      document.querySelectorAll(".css-1fzpoyk div")[4].removeAttribute("style")
-    }, 300);
+    // document.querySelectorAll(".css-1fzpoyk div")[0].style.transform = "unset";
+    // document.querySelectorAll(".css-1fzpoyk div")[1].style.transform = "unset";
+    // document.querySelectorAll(".css-1fzpoyk div")[2].style.transform = "unset";
+    // document.querySelectorAll(".css-1fzpoyk div")[3].style.transform = "unset";
+    // document.querySelectorAll(".css-1fzpoyk div")[4].style.transform = "unset";
+    // setTimeout(() => {
+    //   document.querySelectorAll(".css-1fzpoyk div")[0].removeAttribute("style")
+    //   document.querySelectorAll(".css-1fzpoyk div")[1].removeAttribute("style")
+    //   document.querySelectorAll(".css-1fzpoyk div")[2].removeAttribute("style")
+    //   document.querySelectorAll(".css-1fzpoyk div")[3].removeAttribute("style")
+    //   document.querySelectorAll(".css-1fzpoyk div")[4].removeAttribute("style")
+    // }, 300);
   }
-  const refId1 = useRef(null);
-  const refId2 = useRef(null);
-  const refId3 = useRef(null);
-  const refId4 = useRef(null);
-  const refId5 = useRef(null);
   const arrImg = [
-    { key: 0, content: <div ref={refId1}><img src={img1} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 1, content: <div ref={refId2}><img src={img2} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 2, content: <div ref={refId3}><img src={img3} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 3, content: <div ref={refId4}><img src={img4} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
-    { key: 4, content: <div ref={refId5}><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div> },
+    { key: 0, content: <div ><img src={img1} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div>, title: "SUNSHINE CITY SÀI GÒN" },
+    { key: 1, content: <div ><img src={img2} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div>, title: "SUNSHINE CITY Quận 9" },
+    { key: 2, content: <div><img src={img3} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div>, title: "SUNSHINE CITY SÀI GÒN" },
+    { key: 3, content: <div ><img src={img4} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div>, title: "SUNSHINE CITY SÀI GÒN" },
+    { key: 4, content: <div ><img src={imgTest} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div>, title: "SUNSHINE CITY SÀI GÒN" },
   ].map((slide, index) => {
     return { ...slide, onClick: () => handleChangeSlide(index) };
   });
+  const [title, setTitle] = useState(arrImg[0].title);
 
   const BuildCarousel = useMemo(() => {
     if (isBrowser) {
@@ -55,7 +52,7 @@ export default function NewSectionCarousel() {
   }, [isBrowser, goToSlide, arrImg])
 
   return (
-    <section>
+    <section className="carousel-gallery">
       <div className="new-page-carousel container-v2">
         <div className="container-wrap">
           <Row>
@@ -68,7 +65,7 @@ export default function NewSectionCarousel() {
         <div className="list-carousel" >
           {BuildCarousel}
         </div>
-        <h4 className="fs-21 carousel-title-project">SUNSHINE CITY SÀI GÒN</h4>
+        <h4 className="fs-21 carousel-title-project">{title}</h4>
       </div>
     </section>
   );
