@@ -87,7 +87,6 @@ module.exports = {
       options: {
         availableLngs: ["vn", "en"],
         fallbackLng: "vn",
-        lng: "vn",
         i18nextOptions: {
           debug: false,
         },

@@ -7,6 +7,8 @@ import ButtonShop from '@components/button/button-shop';
 import SectionFeatureProduct from '@components/section/section-feature-product';
 import DataProductNew from '@query/product-hot';
 import IconHeart from "@components/svg/heart";
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import { graphql } from 'gatsby';
 const IndexPage = ({ pageContext }) => {
     const { data } = pageContext;
     const [dataThumbs, setDataThumbs] = useState();
@@ -229,4 +231,13 @@ const IndexPage = ({ pageContext }) => {
     );
 }
 
-export default IndexPage;
+export default withI18next()(IndexPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
+      ...LocaleFragment
+    }
+  }
+`;
