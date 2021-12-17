@@ -5,11 +5,11 @@ import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLaguage";
 
 import { useTranslation } from "react-i18next";
-import iconBook from "../../images/new-home-page/solution/icon-book.svg";
-import iconComment from "../../images/new-home-page/solution/icon-comment.svg";
-import iconVideo from "../../images/new-home-page/solution/icon-video.svg";
+import iconBook from "@images/new-home-page/solution/icon-book.svg";
+import iconComment from "@images/new-home-page/solution/icon-comment.svg";
+import iconVideo from "@images/new-home-page/solution/icon-video.svg";
 
-export default function NavbarSmartHome() {
+export default function NavbarSmartHomeDesktop() {
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
   const { t } = useTranslation();
@@ -49,11 +49,11 @@ export default function NavbarSmartHome() {
       id: "4",
       title: t(`HEADER.HOMEPAGE.CONTACTUS`),
       isActive: false,
-      path: "#",
+      path: "/contact-page-v2",
     },
   ];
   const arrMenuSolution = [
-    { id: 0, title: "Smarthome" },
+    { id: 0, title: "Smart Home" },
     { id: 1, title: "Smart Parking" },
     { id: 2, title: "Smart Security" },
     { id: 3, title: "Energy Saving" },
@@ -82,9 +82,10 @@ export default function NavbarSmartHome() {
               expand="lg"
               id="nav-bar"
             >
-              <Link to="/" className="logo nav-logo nav-brand">
+              <Navbar.Brand href="/">
                 <Image className="img-obj-cover" src={logo} alt="sliving" />
-              </Link>
+              </Navbar.Brand>
+
               <Navbar.Collapse
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2"
