@@ -8,8 +8,9 @@ import NewSectionSolution from "./body/new-section-solution";
 import NewSectionCarousel from "./body/new-section-carousel";
 import NewSectionProduct from "./body/new-section-product";
 import "./style.scss";
-
-export default function HomePageNew() {
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import { graphql } from "gatsby";
+const HomePageNew=()=> {
   return (
     <LayoutNew>
       <div className="smart-home-page-v2">
@@ -24,3 +25,13 @@ export default function HomePageNew() {
     </LayoutNew>
   );
 }
+export default withI18next()(HomePageNew);
+export const query = graphql`
+  query ($lng: String!) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
+      ...LocaleFragment
+    }
+  }
+`;
