@@ -119,9 +119,14 @@
             cursor: pointer;
             width: 255px !important;
             height: 350px;
-            background: #d1e5f7;
+            background: #eefbfb;
             border-radius: 8px;
+            box-shadow: 0px 2px 4px -2px rgba(24, 39, 75, 0.12), 0px 4px 4px -2px rgba(24, 39, 75, 0.08);
             .slider-item {
+              position: relative;
+              z-index: 3;
+              width: 100%;
+              height: 100%;
               .slider-item-icon {
                 span {
                   position: absolute;
@@ -132,9 +137,9 @@
                   font-size: 16px;
                   color: #a3cbef;
                 }
-                img {
+                svg {
                   position: absolute;
-                  top: 40%;
+                  top: 50%;
                   left: 50%;
                   transform: translate(-50%, -50%);
                 }
@@ -156,14 +161,100 @@
               }
             }
           }
+          .swiper-slide {
+            position: relative;
+
+            // for loop
+            @for $i from 1 through 5 {
+              &:nth-child(#{$i}) {
+                &:hover {
+                  &::before {
+                    width: 100%;
+                    height: 100%;
+                    animation: faded-down 500ms;
+                  }
+                }
+              }
+            }
+
+            &:nth-child(1) {
+              &::before {
+                content: "";
+                background-image: url("../../images/new-home-page/app-img/cinema.jpg");
+                transition: background-image 0.2s ease-in-out;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+                border-radius: 8px;
+              }
+            }
+            &:nth-child(2) {
+              &::before {
+                content: "";
+                background-image: url("../../images/new-home-page/app-img/store.jpg");
+                transition: background-image 0.2s ease-in-out;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+                border-radius: 8px;
+              }
+            }
+            &:nth-child(3) {
+              &::before {
+                content: "";
+                background-image: url("../../images/new-home-page/app-img/house.jpg");
+                transition: background-image 0.2s ease-in-out;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+                border-radius: 8px;
+              }
+            }
+            &:nth-child(4) {
+              &::before {
+                content: "";
+                background-image: url("../../images/new-home-page/app-img/office.jpg");
+                transition: background-image 0.2s ease-in-out;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+                border-radius: 8px;
+              }
+            }
+            &:nth-child(5) {
+              &::before {
+                content: "";
+                background-image: url("../../images/new-home-page/app-img/school.jpg");
+                transition: background-image 0.2s ease-in-out;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                z-index: 1;
+                border-radius: 8px;
+              }
+            }
+
+            @keyframes faded-down {
+              from {
+                transform: translateY(-100%);
+              }
+              to {
+                transform: translateY(0%);
+              }
+            }
+          }
           .swiper-slide:hover {
-            //background-color: #76787a;
-            background-image: url("../../images/new-home-page/app-img/solution-house.svg");
-            transition: background-image 0.3s ease-out;
             .slider-item {
               .slider-item-icon {
                 svg {
                   stroke: #ffffff;
+                  path {
+                    fill: #ffffff;
+                  }
                 }
                 span {
                   color: white;
