@@ -6,7 +6,7 @@ import url3 from "@images/lighting-page/phone.svg";
 const IntroMain = () => {
 
   return (
-    <section>
+    <section className="position-relative">
       <div className="lightingBackground"></div>
       <div className="lightingIntro container">
       <Introduction

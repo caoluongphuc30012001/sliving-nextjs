@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import vector from "@images/lighting-page/Vector.svg"
 import iphone from "@images/lighting-page/image118.svg"
 import brightness from "@images/lighting-page/Frame37933.svg"
@@ -15,10 +15,10 @@ const LightingHeader=()=>{
             <div className="headerContent">
                 <h1>The technology of light gives your<span> colour. <img src={vector} alt="vector" /></span></h1>
                 <p>Complex project management experience. When selecting an offshore software development company, ensure that they have</p>
-                <div>
+                {/* <div>
                     <ButtonShop content='Shop now' />
                     <button type="button" class="btn btn-outline-warning">Learn more</button>
-                </div>
+                </div> */}
             </div>
             <div className="headerImage">
                 <div>
