@@ -10,29 +10,19 @@ import "./style.scss";
 const isBrowser = typeof window !== "undefined";
 
 function LayoutNew({ children }) {
-  // const { isMobile } = useWindowSize();
-  const [arrNav, setNavData] = useState({});
-  const [infoCompany, setInfoCompany] = useState({});
-  useEffect(() => {
-    setNavData({ ...navData });
-    setInfoCompany({ ...addressData, ...aboutData });
-  }, []);
   return (
-    <PortfolioProvider value={{ arrNav, infoCompany }}>
-      {/* {isMobile && <NavBarMobile />} */}
-      <div className="page">
-        {isBrowser &&
-          (window.location.pathname === "/en/" ||
-            window.location.pathname === "/vn/") ? (
-          <NavbarV2 />
-        ) : (
-          <NavbarSmartHome />
-        )}
-        <main>{children}</main>
-        <FooterNew />
-        <ButtonRounded />
-      </div>
-    </PortfolioProvider>
+    <div className="page">
+      {isBrowser &&
+        (window.location.pathname === "/en/" ||
+          window.location.pathname === "/vn/") ? (
+        <NavbarV2 />
+      ) : (
+        <NavbarSmartHome />
+      )}
+      <main>{children}</main>
+      <FooterNew />
+      <ButtonRounded />
+    </div>
   );
 }
 export default withTranslation()(LayoutNew);
