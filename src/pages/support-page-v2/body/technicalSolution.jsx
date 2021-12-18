@@ -108,20 +108,31 @@ const TechnicalSol = ({data}) => {
   const [titleSuport, SetTitleSuport] = useState("Technical_solutions");
   const [isMobile, SetIsMobile] = useState(false);
 
-  const [page,setPage] = useState({
-    posts: post,
-    loading: false,
-    currentPage: 1,
-    postsPerPage: 6
-  });
-  const indexofLastPost = page.currentPage * page.postsPerPage;
-  const indexOfFirstPost = indexofLastPost - page.postsPerPage;
-  const currentPosts = post?.slice(indexOfFirstPost,indexofLastPost);
+  const [currentPage,setCurrentPage] = useState(1);
+  const postsPerPage = 6;
+  const indexofLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexofLastPost - postsPerPage;
+  const currentPosts = post.slice(indexOfFirstPost,indexofLastPost);
+  const totalPage = Math.round(post.length / postsPerPage);
+  const delta = 2;
   const pageNumbers = [];
-  const paginate = pageNum => setPage({currentPage : pageNum});
-  for(let i =1; i <= Math.ceil(post.length / page.postsPerPage); i++){
-    pageNumbers.push(i);
+  const paginate = (pageNum) => setCurrentPage(pageNum);
+  const paginatePrev = () => {
+    if(currentPage > 1){
+      setCurrentPage(currentPage -4)
+    }
   }
+  const paginateNext = () => {
+    if(currentPage < 29){
+      setCurrentPage(currentPage +4)
+    }
+  }
+  for(let i = currentPage -delta; i <= currentPage +delta; i++){
+    if(i >= 1 && i <= totalPage ){
+      pageNumbers.push(i);
+    }
+  }
+
   const CheckWidthDropdown = () => {
     if (document.getElementById("dropdowm-toggle") && document.getElementById("dropdown-item")) {
       const dropdowns = document.getElementById("dropdowm-toggle");
@@ -299,7 +310,7 @@ const TechnicalSol = ({data}) => {
                   </Accordion>)}
                 </div>
                 <div>
-                  {currentPosts.map(({ node }) => {
+                  {currentPosts?.map(({ node }) => {
                     return (
                       <div className="container-first-slider" key={node.frontmatter.id}>
                       <Row noGutters>
@@ -341,11 +352,17 @@ const TechnicalSol = ({data}) => {
                 <div className="mt-5">
                   <nav>
                     <ul className="pagination justify-content-center">
+                      <li>
+                        <a onClick={() => paginatePrev()}>Prev</a>
+                      </li>
                       {pageNumbers.map(num => (
                         <li className="page-item" key={num}>
-                        <a className="page-link">{num}</a>
+                        <a className="page-link" onClick={() => paginate(num)}>{num}</a>
                       </li>
                       ))}
+                      <li>
+                        <a onClick={() => paginateNext()}>Next</a>
+                      </li>
                     </ul>
                   </nav>
                 </div>
