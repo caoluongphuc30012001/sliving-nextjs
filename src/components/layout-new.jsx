@@ -31,8 +31,8 @@ function LayoutNew({ children }) {
           window.location.pathname === "/vn/") ? (
           <NavbarV2 />
         ) : (
-            (window.location.pathname === "/en/smart-home/" ||
-            window.location.pathname === "/vn/smart-home/") ? <NavbarSmartHome></NavbarSmartHome>:<NavbarLighting></NavbarLighting>
+            (document.location.pathname === "/en/smart-home/" ||
+            document.location.pathname === "/vn/smart-home/") ? <NavbarSmartHome></NavbarSmartHome>:<NavbarLighting></NavbarLighting>
           
         )}
         <main>{children}</main>
