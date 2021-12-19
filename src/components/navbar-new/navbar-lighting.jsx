@@ -9,7 +9,7 @@ export default function NavbarSmartHome() {
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
   const { t } = useTranslation();
-  const [data, setData] = useState([]);
+  const [, setData] = useState([]);
   const cutArray = (array) => {
     if (array.length > 8) return array.slice(0, 8);
     return [];
@@ -20,7 +20,7 @@ export default function NavbarSmartHome() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, []);
+  }, [i18n.language,dataProductMenu]);
   const arrMenu = [
     { id: "0", title: "Lighting", isActive: true, path: "/en/smart-lighting-v2/" },
     {

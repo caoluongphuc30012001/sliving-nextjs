@@ -9,13 +9,13 @@ const LightingProduct=()=>{
     return <section className="lightingProduct container">
         <TitleSection content={'Smart lighting solutions for your life.'} color={'bold'} direction={'center'}/>
         <div className="row">
-            <div class="col-sm-4">
+            <div className="col-sm-4">
                 <ItemProduct props={dataProducts.productLed.edges[0].node.frontmatter}/>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
                 <ItemProduct props={dataProducts.productLed.edges[1].node.frontmatter}/>
             </div>
-            <div class="col-sm-4">
+            <div className="col-sm-4">
                 <ItemProduct props={dataProducts.productLed.edges[2].node.frontmatter}/>
             </div>
         </div>
