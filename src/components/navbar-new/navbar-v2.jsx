@@ -10,7 +10,7 @@ export default function NavbarNew() {
     { id: "1", title: "Smart Building", isActive: false, path: "#" },
     { id: "2", title: "Fintech IoT", isActive: false, path: "#" },
     { id: "3", title: "Lighting", isActive: false, path: "#" },
-    { id: "4", title: "About Us", isActive: false, path: "#" },
+    { id: "4", title: "About Us", isActive: false, path: "/contact-page-v2" },
   ];
 
   return (
