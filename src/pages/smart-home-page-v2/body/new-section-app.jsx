@@ -2,11 +2,11 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import imgCinema from "@images/new-home-page/app-img/img-cinema.png";
-import imgStore from "@images/new-home-page/app-img/img-store.png";
-import imgHome from "@images/new-home-page/app-img/img-home.png";
-import imgOffice from "@images/new-home-page/app-img/img-office.png";
-import imgSchool from "@images/new-home-page/app-img/img-school.png";
+import imgCinema from "@components/svg/cinema";
+import imgStore from "@components/svg/store";
+import imgHome from "@components/svg/house";
+import imgOffice from "@components/svg/office";
+import imgSchool from "@components/svg/school";
 import imgLine from "@images/new-home-page/app-img/line.png";
 
 import SwiperCore, { Pagination, Navigation } from "swiper";
@@ -88,7 +88,7 @@ export default function NewSectionApp() {
               <SwiperSlide key={index}>
                 <div className="slider-item">
                   <div className="slider-item-icon">
-                    <img src={item.img} alt="" />
+                    <item.img />
                   </div>
                   <div className="slider-item-title">
                     <p>{item.name}</p>

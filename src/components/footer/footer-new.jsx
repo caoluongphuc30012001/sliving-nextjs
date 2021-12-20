@@ -34,8 +34,12 @@ export default function FooterNew({ isMainPage }) {
             </Col>
             <Col lg={4} md={12} sm={12} xs={12} className="footer-right">
               <div className="footer-list-item">
-                <a href="https://www.facebook.com/UnicloudCareers"><img src={iconIns} alt="" /></a>
-                <a href="https://www.facebook.com/UnicloudCareers"><img src={iconFb} alt="facebook unicloud" /></a>
+                <a href="https://www.facebook.com/UnicloudCareers" target='_blank'
+                  rel="noreferrer"
+                  aria-label='Github'><img src={iconIns} alt="" /></a>
+                <a href="https://www.facebook.com/UnicloudCareers" target='_blank'
+                  rel="noreferrer"
+                  aria-label='Github'><img src={iconFb} alt="facebook unicloud" /></a>
               </div>
             </Col>
           </Row>

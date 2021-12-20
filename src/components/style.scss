@@ -3806,7 +3806,7 @@ a.btn-link-a {
       }
       .item-menu-child:hover {
         background: #fff2ee;
-      }    
+      }
 
       a#item-menu::before {
         content: "";
@@ -3819,7 +3819,10 @@ a.btn-link-a {
       // Product hover
       .nav-hover-product {
         position: absolute;
-        top: 90%;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        top: 100%;
         left: -15%;
         max-width: fit-content;
         max-height: fit-content;
@@ -3827,7 +3830,7 @@ a.btn-link-a {
         box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12), 0px 8px 16px -6px rgba(24, 39, 75, 0.08);
         border-radius: 0px 0px 8px 8px;
         padding-left: 25px;
-        display: none;
+
         .product-mt {
           margin-top: 5%;
           padding-left: 0;
@@ -3878,7 +3881,7 @@ a.btn-link-a {
             }
           }
         }
-       
+
         .product-mt:first-child::before {
           content: "";
           bottom: -8%;
@@ -4029,11 +4032,14 @@ a.btn-link-a {
     
 
       .item-menu-child:nth-child(2):hover ~ .nav-hover-product {
-        display: block;
+        visibility: visible;
+        height: 100%;
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
       }
-      .nav-hover-product:hover {
-        display: block;
-      }
+      // .nav-hover-product:hover {
+      //   display: block;
+      // }
       .item-menu-child:nth-child(3):hover ~ .nav-hover-solution {
         display: block;
       }
@@ -4050,7 +4056,7 @@ a.btn-link-a {
   }
 }
 
-@media (max-width: 1318px)  {
+@media (max-width: 1318px) {
   .menu {
     .menu-wrap {
       .nav-header-child {
@@ -4066,7 +4072,7 @@ a.btn-link-a {
   }
 }
 
-@media (max-width: 1277px)  {
+@media (max-width: 1277px) {
   .menu {
     .menu-wrap {
       .nav-header-child {
@@ -4082,7 +4088,7 @@ a.btn-link-a {
   }
 }
 
-@media (max-width: 1277px)  {
+@media (max-width: 1277px) {
   .menu {
     .menu-wrap {
       .nav-header-child {
@@ -4097,8 +4103,6 @@ a.btn-link-a {
     }
   }
 }
-  
-/* Menu child - End */
 
 /*------------- slide bar mobile ---------------*/
 

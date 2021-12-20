@@ -41,6 +41,7 @@ const SectionMap = () => {
                         scrollWheelZoom={false}
                         style={{ width: 1440, height: 660 }}
                         whenCreated={setMap}
+                        preferCanvas={true}
                     >
                         <TileLayer
                             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
