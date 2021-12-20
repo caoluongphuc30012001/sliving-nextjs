@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import { useTranslation } from "react-i18next";
+
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-
-import { useTranslation } from "react-i18next";
 import iconBook from "@images/new-home-page/solution/icon-book.svg";
 import iconComment from "@images/new-home-page/solution/icon-comment.svg";
 import iconVideo from "@images/new-home-page/solution/icon-video.svg";
@@ -24,8 +24,7 @@ export default function NavbarSmartHomeDesktop() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-    
-  }, [i18n,dataProductMenu]);
+  }, [i18n, dataProductMenu]);
   const arrMenu = [
     {
       id: "1",
@@ -140,9 +139,11 @@ export default function NavbarSmartHomeDesktop() {
                                 <ul className="product-item">
                                   {item.nodes.map((product, index) => (
                                     <li key={index}>
-                                      <a href={`${product.frontmatter.slug}`}>
+                                      <Link
+                                        to={`/smart-home/products/${product.frontmatter.slug}`}
+                                      >
                                         {product.frontmatter.title}
-                                      </a>
+                                      </Link>
                                     </li>
                                   ))}
                                 </ul>
