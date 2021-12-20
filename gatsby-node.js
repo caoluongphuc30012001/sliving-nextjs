@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { QueryProductPage } = require("./src/query/await/ProductPage");
-
+const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -122,6 +122,14 @@ exports.createPages = async function ({ actions, graphql }) {
           component: productComponent,
           context: {
             data: productPage.data.ProductPage
+          },
+        });
+        createPage({
+          path: `/smart-home/contact`,
+          component: contactComponent,
+          context: {
+            data: productPage.data.ProductPage,
+            isNavbarContact:{isSmartHome:true}
           },
         });
         productPage.data.ProductPage.edges.forEach((product) => {

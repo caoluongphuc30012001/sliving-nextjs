@@ -5,7 +5,7 @@ p {
   padding: 0;
 }
 
-#introduct-main-smarthome {
+#introduct-main-parking {
   margin-top: 80px;
   margin-bottom: 56px;
   .card-solution{
@@ -27,13 +27,12 @@ p {
   }
   .introSection{
     position: relative;
-    margin-bottom: 50px;
   }
   .banner-wrap-v2 {
     background-image: url("@images/solution/smart-home/section.svg");
   }
   .margin-bottom {
-    margin-bottom: 150px;
+    margin-bottom: 200px;
   }
   .bottomImage{
     img{
@@ -43,16 +42,16 @@ p {
     .contentImage {
       position: absolute;
       top: 50%;
-      left: 20%;
+      left: 30%;
       transform: translateX(-50%);
-      text-align: left;
+      text-align: center;
       color: white;
-      max-width: 770px;
+      max-width:970px ;
       h1 {
         font-weight: bold;
         position: relative;
         font-size: 82px;
-        width: 770px;
+        width: 970px;
      
         text-shadow: -2px -2px rgb(52, 24, 177);
         img {
@@ -66,7 +65,7 @@ p {
       }
       p{
         margin-top: 5vh;
-        width: 770px;
+        width: 970px;
         font-size: 21px;
        }
     }
@@ -74,7 +73,6 @@ p {
   .container{
     max-width: 1440px;
   }
-
    
  
   .container-v2 {
