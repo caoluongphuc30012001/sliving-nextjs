@@ -9,8 +9,7 @@ import "./style.scss";
 
 const isBrowser = typeof window !== "undefined";
 
-function LayoutNew({ children, pageContext, isMainPage }) {
-
+function LayoutNew({ children }) {
   return (
     <div className="page">
       {isBrowser &&
@@ -21,7 +20,7 @@ function LayoutNew({ children, pageContext, isMainPage }) {
         <NavbarSmartHome />
       )}
       <main>{children}</main>
-      <FooterNew isMainPage={isMainPage} />
+      <FooterNew />
       <ButtonRounded />
     </div>
   );
