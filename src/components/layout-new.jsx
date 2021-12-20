@@ -6,12 +6,13 @@ import FooterNew from "./footer/footer-new";
 import "../i18n/i18n";
 import "./style.scss";
 
-function LayoutNew({ children, pageContext }) {
+function LayoutNew({ children, pageContext, isMainPage }) {
+
   return (
     <div className="page">
       {pageContext?.isSmartHome ? <NavbarSmartHome /> : <NavbarV2 />}
       <main>{children}</main>
-      <FooterNew />
+      <FooterNew isMainPage={isMainPage} />
       <ButtonRounded />
     </div>
   );
