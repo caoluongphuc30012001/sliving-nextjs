@@ -5,12 +5,13 @@ import BottomImage from "./body/contact-footer-img";
 import ContactForm from "./body/contact-form";
 import ContactSupport from "./body/contact-support";
 import RequestSupport from "./body/contact-request-support";
-
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import { graphql } from 'gatsby';
 import "./style.scss";
 
-const ContactUs = () => {
+const ContactUs = (props) => {
   return (
-    <LayoutNew>
+    <LayoutNew pageContext={props.pageContext.isNavbarContact}>
       <RequestSupport />
       <ContactSupport />
       <HeaderImage />
@@ -19,4 +20,13 @@ const ContactUs = () => {
     </LayoutNew>
   );
 };
-export default ContactUs;
+export default withI18next()(ContactUs);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
+      ...LocaleFragment
+    }
+  }
+`;

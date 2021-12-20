@@ -5,7 +5,11 @@
       "PRODUCT": "Products",
       "SOLUTION": "Solutions",
       "COOPERATION": "Cooperation",
-      "SUPPORT": "Support",
+      "SUPPORT": {
+        "SUPPORT": "Support",
+        "USER_MANUALS":"User Manuals",
+        "PRODUCT_VIDEOS":"Product Videos"
+      },
       "ABOUTUS": "About Us",
       "CONTACTUS": "Contact Us",
       "PROJECT": "Project",

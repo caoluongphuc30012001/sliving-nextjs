@@ -6,7 +6,7 @@ import "../style.scss";
 import ButtonLearn from '../button/button-learn';
 import { Link } from "gatsby";
 
-const SlideProduct = ({ data }) => {
+const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const getData = data;
     const [post, setPost] = useState([]);
 
@@ -41,25 +41,25 @@ const SlideProduct = ({ data }) => {
     const buildSlideProduct = useMemo(() => {
         return (
             <section className="container-wrap carousel-product-filter">
-                <div className="product-filter-header">
-                    <Row>
+                {noNavbar&&noTitle?'':<div className="product-filter-header">
+                    {noTitle?'':<Row>
                         <div className="product-header">
                             <h3>Sliving products</h3>
                             <img src={imgLine} alt="" />
                         </div>
-                    </Row>
-                    <Row>
+                    </Row>}
+                    {noNavbar?'':<Row>
                         <Col xl={12} lg={12} md={12} className="product-filter-item">
                             <ul >
                                 {arrProduct && arrProduct.map((item, index) => {
-                                    return (<li role="button" key={index} className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => handleSelect(item)} onKeyPress={() => handleSelect(item)} tabIndex={0}>
+                                    return (<div key={index} role="button" className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => handleSelect(item)} onKeyPress={() => handleSelect(item)} tabIndex={0}>
                                         <span>{item.title}</span>
-                                    </li>)
+                                    </div>)
                                 })}
                             </ul>
                         </Col>
-                    </Row>
-                </div>
+                    </Row>}
+                </div>}
                 <div className="product-list-item carousel-product">
                     <Row noGutters>
                         {post && (post.map((product, index) => <Col xl={3} lg={3} md={3} className="product-item" key={index}>

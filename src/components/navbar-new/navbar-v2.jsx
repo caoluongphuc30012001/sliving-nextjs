@@ -2,14 +2,15 @@ import React from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
 import { Link } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLaguage";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 
 export default function NavbarNew() {
   const arrMenu = [
-    { title: "Smart Home", isActive: true, path: "/smart-home" },
-    { title: "Fintech IoT", isActive: false, path: "#" },
-    { title: "Lighting", isActive: false, path: "#" },
-    { title: "About Us", isActive: false, path: "#" },
+    { id: "0", title: "Smart Home", isActive: true, path: "/smart-home" },
+    { id: "1", title: "Smart Building", isActive: false, path: "#" },
+    { id: "2", title: "Fintech IoT", isActive: false, path: "#" },
+    { id: "3", title: "Lighting", isActive: false, path: "/smart-lighting-v2" },
+    { id: "4", title: "About Us", isActive: false, path: "/contact-page-v2" },
   ];
 
   return (
@@ -24,7 +25,13 @@ export default function NavbarNew() {
               id="nav-bar"
             >
               <Link to="/" className="logo nav-logo nav-brand">
-                <Image className="img-obj-cover" src={logo} alt="sliving" />
+                <Image
+                  className="img-obj-cover"
+                  src={logo}
+                  width={202}
+                  height={44}
+                  alt="sliving"
+                />
               </Link>
               <Navbar.Collapse
                 id="responsive-navbar-nav"

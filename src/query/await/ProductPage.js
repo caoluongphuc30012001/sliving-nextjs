@@ -159,6 +159,16 @@ const QueryProductPage = () => {
                   }
                 }
               }
+              nonNeutral {
+                publicURL
+                childImageSharp {
+                  fluid {
+                    src
+                    srcSet
+                    aspectRatio
+                  }
+                }
+              }
             }
             mechanical_6 {
               imgSrcProduct {
@@ -171,6 +181,9 @@ const QueryProductPage = () => {
                   }
                 }
               }
+              isHidden
+              isWifi
+              isZigbee
               withNeutral {
                 publicURL
                 childImageSharp {

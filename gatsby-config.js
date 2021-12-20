@@ -87,7 +87,6 @@ module.exports = {
       options: {
         availableLngs: ["vn", "en"],
         fallbackLng: "vn",
-        lng: "vn",
         i18nextOptions: {
           debug: false,
         },
@@ -124,5 +123,11 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `https://data.sliving.vn/graphql`,
+      },
+    }
   ],
 };

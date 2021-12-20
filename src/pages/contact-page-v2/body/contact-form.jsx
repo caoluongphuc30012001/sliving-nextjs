@@ -99,7 +99,7 @@ const ContactForm = () => {
           </Form.Group>
         <label htmlFor="phoneNumber">Phone Number</label>
           <Form.Group style={{ width: "100%" }} className="phoneNumber">
-            <span class="numberPrefix">+84</span>
+            <span className="numberPrefix">+84</span>
             <Form.Control
               name="Phone number"
               id="phoneNumber"
@@ -141,7 +141,7 @@ const ContactForm = () => {
               type="url"
             />
           </Form.Group>
-        <button type="submit" class="btn btn-lg btn-block">
+        <button type="submit" className="btn btn-lg btn-block">
           Submit
         </button>
       </Form>
