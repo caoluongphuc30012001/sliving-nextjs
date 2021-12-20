@@ -140,7 +140,7 @@ exports.createPages = async function ({ actions, graphql }) {
         });
 
         createPage({
-          path: `/products/`,
+          path: `/smart-home/products/`,
           component: productComponent,
           context: {
             data: productPage.data.ProductPage
@@ -156,7 +156,7 @@ exports.createPages = async function ({ actions, graphql }) {
         });
         productPage.data.ProductPage.edges.forEach((product) => {
           createPage({
-            path: `/products/${product.node.frontmatter.slug}`,
+            path: `/smart-home/products/${product.node.frontmatter.slug}`,
             component: productDetailComponent,
             context: {
               data: product.node
