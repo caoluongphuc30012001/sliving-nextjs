@@ -7,7 +7,7 @@ import img2 from "@images/new-home-page/carousel/continental.jpg";
 import img3 from "@images/new-home-page/carousel/horizon.jpg";
 import img4 from "@images/new-home-page/carousel/citysg-dai-dien-sshomes.jpg";
 
-import imgTest from "@images/main-page-v2/element-left.svg";
+import imgTest from "@images/main-page-v2/element-left.png";
 import loadable from "@loadable/component";
 const Carousel = loadable(() => import("react-spring-3d-carousel"));
 const isBrowser = typeof window !== "undefined";
