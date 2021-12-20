@@ -66,7 +66,6 @@ export default function NavbarSmartHome() {
                           }`}
                           id="item-menu"
                           onMouseDown={()=>{
-                              console.log(document.location)
                             if(nav.title==='Products'){
                                 if(document.location.pathname!==nav.path) navigate(`${nav.path}`)
                                 return setTimeout(() => {

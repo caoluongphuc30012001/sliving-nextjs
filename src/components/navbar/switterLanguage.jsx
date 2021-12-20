@@ -1,11 +1,9 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { Dropdown } from "react-bootstrap";
 import { Language } from '@wapps/gatsby-plugin-i18next';
 import { useTranslation } from 'react-i18next';
 import iconLanguage from "@images/new-home-page/header/icon-language.png";
-import { useLocation } from "@reach/router";
 const LanguageSwitcher = ({ changeLng }) => {
-    const location = useLocation();
     const { i18n } = useTranslation();
     function changeLanguage() {
         if (i18n.language === "en") {

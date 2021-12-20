@@ -9,7 +9,7 @@ import IntroMain from "./body/light-intro";
 import { graphql } from "gatsby";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 const LightingPage=()=>{ 
-    return <LayoutNew isMainPage>
+    return <LayoutNew isMainPage pageContext={{isSmartLighting:true}}>
         <div id='smartLighting'>
         <LightingHeader />
         <LightingProduct />
