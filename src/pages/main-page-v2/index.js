@@ -4,7 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
-import ImageHp from "@images/main-page-v2/header-hp.png";
+import ImageHp_1 from "@images/main-page-v2/iot.jpg";
+import ImageHp_2 from "@images/main-page-v2/ai.png";
+
+import ImageHp_3 from "@images/main-page-v2/artboard-2.png";
+import ImageHp_4 from "@images/main-page-v2/artboard.png";
+
+
 import sectionLeft from "@images/main-page-v2/element-left.png";
 
 import sectionFour1Full from "@images/main-page-v2/banner-left-full.svg";
@@ -39,7 +45,7 @@ const IndexPage = () => {
     {
       id: "0",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_1,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -48,7 +54,7 @@ const IndexPage = () => {
     {
       id: "1",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_2,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -57,7 +63,7 @@ const IndexPage = () => {
     {
       id: "2",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_3,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -66,7 +72,7 @@ const IndexPage = () => {
     {
       id: "3",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_4,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -127,7 +133,7 @@ const IndexPage = () => {
       <div className="header-banner-v2">
         <img src={carousel.src} alt="sliving alt" loading="lazy" />
         <div className="banner-v2-wrap">
-          {carousel.title && <BuildText carousel={carousel} />}
+          {/* {carousel.title && <BuildText carousel={carousel} />} */}
           {isButton && <ButtonCustom content={"Button"} />}
         </div>
       </div>
@@ -195,7 +201,7 @@ const IndexPage = () => {
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={true} array={arrHeader} />;
+    return <BuildCarousel isButton={false} array={arrHeader} />;
   };
 
   const BuildSectionTwoElement = () => {

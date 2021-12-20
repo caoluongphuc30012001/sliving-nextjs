@@ -221,6 +221,7 @@ span.swiper-pagination-bullet {
             }
         }
         .el-wrap-left {
+            cursor: pointer;
             clip-path: polygon(0 0, 89% 0, 100% 100%, 0 100%);
             position: relative;
             width: 100%;
@@ -270,15 +271,16 @@ span.swiper-pagination-bullet {
             .el-wrap-right-1,
             .el-wrap-right-2,
             .el-wrap-right-3 {
+                cursor: pointer;
                 width: fit-content;
                 height: fit-content;
                 position: relative;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
                 &::before {
                     content: "";
                     position: absolute;
                     background-color: #1a7dd866;
                     z-index: 2;
-                    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
                 }
                 &:hover {
                     &::before {
@@ -296,7 +298,7 @@ span.swiper-pagination-bullet {
         }
         @keyframes slide-out {
             from {
-                transform: translateX(100%);
+                transform: translateX(20%);
             }
             to {
                 transform: translateX(0%);
