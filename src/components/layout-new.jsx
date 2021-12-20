@@ -45,11 +45,6 @@ function LayoutNew({ children }) {
     <PortfolioProvider value={{ arrNav, infoCompany }}>
       {/* {isMobile && <NavBarMobile />} */}
       <div className="page">
-        {/* {isBrowser &&
-        (window.location.pathname === "/en/" ||
-          window.location.pathname === "/vn/") ? (
-          <NavbarV2 />
-        ) : selectItemNav()} */}
         {selectItemNav()}
         <main>{children}</main>
         <FooterNew />
