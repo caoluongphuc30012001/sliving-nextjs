@@ -26,7 +26,6 @@ export default function NavbarSmartHomeDesktop() {
     }
   }, []);
   const arrMenu = [
-    { id: "0", title: "Smart Home", isActive: true, path: "/smart-home" },
     {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
@@ -83,7 +82,13 @@ export default function NavbarSmartHomeDesktop() {
               id="nav-bar"
             >
               <Navbar.Brand href="/">
-                <Image className="img-obj-cover" src={logo} alt="sliving" />
+                <Image
+                  className="img-obj-cover"
+                  src={logo}
+                  alt="sliving"
+                  width={202}
+                  height={44}
+                />
               </Navbar.Brand>
 
               <Navbar.Collapse
@@ -91,14 +96,22 @@ export default function NavbarSmartHomeDesktop() {
                 className="animation-nav animation-nav-v2"
               >
                 <Nav className="nav-desktop">
+                  <Link
+                    to="/smart-home"
+                    className="item-menu item-menu-child link fs-16 1"
+                    id="item-menu"
+                  >
+                    Smart Home
+                  </Link>
                   {arrMenu &&
                     arrMenu.map((nav, index) => {
                       return (
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
-                            }`}
+                          className={`item-menu item-menu-child link fs-16  ${
+                            nav.isActive ? "is-active" : ""
+                          }`}
                           id="item-menu"
                         >
                           {nav.title}

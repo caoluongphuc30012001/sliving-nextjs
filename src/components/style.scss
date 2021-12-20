@@ -3780,6 +3780,7 @@ a.btn-link-a {
   }
 }
 
+
 .nav-header-child {
   position: relative;
   justify-content: space-between;
@@ -3807,13 +3808,21 @@ a.btn-link-a {
         background: #fff2ee;
       }    
 
+      a#item-menu::before {
+        content: "";
+        top: 6%;
+        left: -1%;
+        position: absolute;
+        border: 1px solid #e1e3e6;
+        height: 87%;
+      }
       // Product hover
       .nav-hover-product {
         position: absolute;
         top: 90%;
         left: -15%;
         max-width: fit-content;
-        max-height: 606px;
+        max-height: fit-content;
         background: #ffffff;
         box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12), 0px 8px 16px -6px rgba(24, 39, 75, 0.08);
         border-radius: 0px 0px 8px 8px;
@@ -4007,7 +4016,7 @@ a.btn-link-a {
         line-height: 16px;
       }
       .item-menu-child:nth-child(1){
-        font-size:20px ;
+        font-size:23px ;
         ::before{
           content: '';
           top: 20%;

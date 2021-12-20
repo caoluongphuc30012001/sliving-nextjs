@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col, NavDropdown } from "react-bootstrap";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLaguage";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 import { slide as Menu } from "react-burger-menu";
 import { useTranslation } from "react-i18next";
 
@@ -49,7 +49,7 @@ export default function NavbarSmartHomeMobile() {
           expand="lg"
         >
           <Navbar.Brand href="/" className="logo">
-            <Image src={logo} />
+            <Image src={logo} width={202} height={44} />
           </Navbar.Brand>
         </Navbar>
         <Menu

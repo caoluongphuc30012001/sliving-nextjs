@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonRounded from "@components/button/button-card-rounded";
 import { withTranslation } from "react-i18next";
-import NavbarV2 from "./navbar-new/narbar-v2";
+import NavbarNew from "./navbar-new/navbar-v2";
 import NavbarSmartHome from "./navbar-new/smarthome/navbar-smarthome";
 import FooterNew from "./footer/footer-new";
 import "../i18n/i18n";
@@ -15,7 +15,7 @@ function LayoutNew({ children }) {
       {isBrowser &&
       (window.location.pathname === "/en/" ||
         window.location.pathname === "/vn/") ? (
-        <NavbarV2 />
+        <NavbarNew />
       ) : (
         <NavbarSmartHome />
       )}
