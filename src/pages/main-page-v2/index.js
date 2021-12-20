@@ -22,7 +22,7 @@ import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 import iconArrowRight from "@images/icon/icon-arrow white.svg";
 
-import useWindowSize from "../../hook/useWindowSize";
+import useWindowSize from "@hook/useWindowSize";
 
 import "./style.scss";
 
