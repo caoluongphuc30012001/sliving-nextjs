@@ -182,7 +182,7 @@ const TechnicalSol = ({ data }) => {
     return (
         <div>
             <div class="banner" >
-                <img src={Banner} />
+                <img src={Banner} alt="banner" />
             </div>
             <div className="support-pages big-container fluid container-wrap">
                 <Row noGutters>
@@ -231,7 +231,7 @@ const TechnicalSol = ({ data }) => {
                                         <div className="search-wrapper-supportpage search-wrapper-mobile">
                                             <Form.Control className="form-control form-control container-wrap-page form-tech-mobile" type="text" placeholder={t(`Search`)} />
                                             <button type="button" className={`btn btn-search btn-research fs-12 ${isMobile ? 'btn-search-mobile' : null}`} aria-label="search icon"><img src={Searchicon} alt="" /></button>
-                                            {isMobile && (<button type="button" className="btn btn-search btn-replace" aria-label="search icon"><img src={Searchicon} alt="" /></button>)}
+                                            {isMobile && (<button type="button" className="btn btn-search btn-replace" aria-label="search icon"><img src={Searchicon} alt="icon search" /></button>)}
                                         </div>
                                     </Form.Group>
                                 </Form>
@@ -248,7 +248,7 @@ const TechnicalSol = ({ data }) => {
                                                     <Col className="col-in-containerOutside">
                                                         <Dropdown id="dropdowm-toggle">
                                                             <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
-                                                                {t(`Current_Construction`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                                                                {t(`Current_Construction`)} <img className="font-weight-bold" src={DropArrow} alt="products" />
                                                             </Dropdown.Toggle>
                                                             <Dropdown.Menu>
                                                                 {arrConstruction && arrConstruction.map((product, index) => {
@@ -260,7 +260,7 @@ const TechnicalSol = ({ data }) => {
                                                     <Col className="col-in-containerOutside">
                                                         <Dropdown id="dropdowm-toggle">
                                                             <Dropdown.Toggle className="table-dropdown-first" id="dropdown-table">
-                                                                {t(`Product_Groups`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                                                                {t(`Product_Groups`)} <img className="font-weight-bold" src={DropArrow} alt="products" />
                                                             </Dropdown.Toggle>
                                                             <Dropdown.Menu>
                                                                 {arrGroupProduct && arrGroupProduct.map((product, index) => {
@@ -272,7 +272,7 @@ const TechnicalSol = ({ data }) => {
                                                     <Col className="col-in-containerOutside">
                                                         <Dropdown id="dropdowm-toggle">
                                                             <Dropdown.Toggle id=" dropdown-table">
-                                                                {t(`Product_Features`)} <img className="font-weight-bold" src={DropArrow} alt="" />
+                                                                {t(`Product_Features`)} <img className="font-weight-bold" src={DropArrow} alt="products" />
                                                             </Dropdown.Toggle>
                                                             <Dropdown.Menu>
                                                             </Dropdown.Menu>
@@ -365,7 +365,7 @@ const TechnicalSol = ({ data }) => {
             </div >
 
             <div class="bot-banner" >
-                <img class="bot-banner-img" src={BotBanner} />
+                <img class="bot-banner-img" alt="bottom banner" src={BotBanner} />
             </div>
         </div>
     );

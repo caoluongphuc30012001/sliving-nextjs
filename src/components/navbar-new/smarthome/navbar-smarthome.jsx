@@ -3,7 +3,7 @@ import NavbarSmartHomeMobile from "./navbar-mobile";
 import NavbarSmartHomeDesktop from "./navbar-desktop";
 const isBrowser = typeof window !== "undefined";
 export default function NavbarSmartHome() {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     if (isBrowser) {

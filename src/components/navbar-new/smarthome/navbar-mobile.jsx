@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Image, Nav, Row, Col, NavDropdown } from "react-bootstrap";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Navbar, Image, Nav, NavDropdown } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 import { slide as Menu } from "react-burger-menu";
@@ -21,7 +21,7 @@ export default function NavbarSmartHomeMobile() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, []);
+  }, [i18n,dataProductMenu]);
 
   const arrMenuSolution = [
     { id: 0, title: "Smart Home" },
