@@ -14,23 +14,31 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
         <div className="banner-wrap container-wrap">
           <Row className="center-row">
             <div className="banner-icon">
-              <img src={imgStar} alt="" />
+              <img src={imgStar} alt="banner" />
             </div>
           </Row>
           <Row className="center-row">
             <div className="banner-title">
-              <h3>{title}</h3>
+              <h3>
+                {title ? title : "The reason you should go with Sliving."}
+              </h3>
             </div>
           </Row>
           <Row className="row-banner-desc center-row">
             <div className="banner-desc">
-              <p>{desc}</p>
+              <p>
+                {desc
+                  ? desc
+                  : `You are in need of an environment full of smart gadgets, there
+                are several factors to consider. It will be used for your home,
+                your office, or maybe even everywhere you want to...`}
+              </p>
             </div>
           </Row>
           <Row className="row-banner-button center-row">
             {!btnContact ? (
               <button className="banner-btn-v2">
-                <img src={imgArrow} alt="" />
+                <img src={imgArrow} alt="arrow" />
               </button>
             ) : (
               <button
@@ -38,7 +46,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 id="btn-research-wrap"
               >
                 <span className="fs-18 fw-bold">CONTACT US</span>
-                <img src={imgArrowRight} alt="icon arrow right" />
+                <img src={imgArrowRight} alt="arrow right" />
               </button>
             )}
           </Row>

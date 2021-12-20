@@ -115,19 +115,6 @@ const IndexPage = () => {
     },
   ]);
 
-  const BuildText = ({ carousel }) => {
-    return (
-      <article className="banner-text-v2">
-        <h1>
-          {carousel.title}
-          <br />
-          <span style={{ fontWeight: "bold" }}>{carousel.titleBold}</span>
-        </h1>
-        <p className="banner-text-description-v2">{carousel.description}</p>
-      </article>
-    );
-  };
-
   const BuildImageCarousel = ({ carousel, isButton }) => {
     return (
       <div className="header-banner-v2">

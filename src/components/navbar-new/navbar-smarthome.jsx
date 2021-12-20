@@ -5,11 +5,11 @@ import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
 import { useTranslation } from "react-i18next";
-import iconBook from "@images/new-home-page/solution/icon-book.svg";
-import iconComment from "@images/new-home-page/solution/icon-comment.svg";
-import iconVideo from "@images/new-home-page/solution/icon-video.svg";
+import iconBook from "../../images/new-home-page/solution/icon-book.svg";
+import iconComment from "../../images/new-home-page/solution/icon-comment.svg";
+import iconVideo from "../../images/new-home-page/solution/icon-video.svg";
 
-export default function NavbarSmartHomeDesktop() {
+export default function NavbarSmartHome() {
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
   const { t } = useTranslation();
@@ -24,9 +24,9 @@ export default function NavbarSmartHomeDesktop() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-    
-  }, [i18n,dataProductMenu]);
+  }, []);
   const arrMenu = [
+    { id: "0", title: "Smart Home", isActive: true, path: "/smart-home" },
     {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
@@ -49,13 +49,13 @@ export default function NavbarSmartHomeDesktop() {
       id: "4",
       title: t(`HEADER.HOMEPAGE.CONTACTUS`),
       isActive: false,
-      path: "/smart-home/contact",
+      path: "#",
     },
   ];
   const arrMenuSolution = [
-    { id: 0, title: "Smart Home", path: "/solution/smart-home" },
-    { id: 1, title: "Smart Parking", path: "/solution/parking" },
-    { id: 2, title: "Smart Security", path: "/solution/security" },
+    { id: 0, title: "Smarthome" },
+    { id: 1, title: "Smart Parking" },
+    { id: 2, title: "Smart Security" },
     { id: 3, title: "Energy Saving" },
   ];
   const arrMenuSupport = [
@@ -82,28 +82,14 @@ export default function NavbarSmartHomeDesktop() {
               expand="lg"
               id="nav-bar"
             >
-              <Navbar.Brand href="/">
-                <Image
-                  className="img-obj-cover"
-                  src={logo}
-                  alt="sliving"
-                  width={202}
-                  height={44}
-                />
-              </Navbar.Brand>
-
+              <Link to="/" className="logo nav-logo nav-brand">
+                <Image className="img-obj-cover" src={logo} alt="sliving" />
+              </Link>
               <Navbar.Collapse
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2"
               >
                 <Nav className="nav-desktop">
-                  <Link
-                    to="/smart-home"
-                    className="item-menu item-menu-child link fs-16 1"
-                    id="item-menu"
-                  >
-                    Smart Home
-                  </Link>
                   {arrMenu &&
                     arrMenu.map((nav, index) => {
                       return (
@@ -168,9 +154,7 @@ export default function NavbarSmartHomeDesktop() {
                             <div className="hover-solution">
                               <div className="solution-list-item">
                                 <div className="solution-name">
-                                  <Link to={item.path}>
-                                    <span>{item.title}</span>
-                                  </Link>
+                                  <span>{item.title}</span>
                                 </div>
                                 <ul className="solution-item">
                                   {/* {item.products.map((product, index) => (
