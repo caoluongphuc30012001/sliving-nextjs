@@ -19,6 +19,7 @@ const IndexPage = ({ pageContext }) => {
         return false;
     }
     const isFilter = handelFilter();
+    console.log("a", isFilter);
 
     const [mechanical_1, setMechanical_1] = useState();
     const [mechanical_2, setMechanical_2] = useState();
@@ -133,7 +134,7 @@ const IndexPage = ({ pageContext }) => {
         }
 
     }
-
+    
     const [versionActive, setVersionActive] = useState(0);
     const handleActiveNeutral = (versionId) => {
         if (versionId === 0) {
@@ -161,14 +162,14 @@ const IndexPage = ({ pageContext }) => {
                                 </Row>
                                 <Row noGutters className="group-btn-version">
                                     <button className={`btn-version ${versionActive === 0 ? 'is-active-btn' : null}`} onClick={() => handleActiveNeutral(0)} disabled={mechanicalActive?.withNeutral ? false : true}>
-                                        With neutral
+                                        {!data?.frontmatter?.mechanical_6 || !data?.frontmatter?.mechanical_4 ? 'With neutral' : 'Zigbee'}
                                     </button>
                                     <button className={`btn-version ${versionActive === 1 ? 'is-active-btn' : null}`} onClick={() => handleActiveNeutral(1)} disabled={mechanicalActive?.nonNeutral ? false : true}>
-                                        Non-neutral
+                                        {!data?.frontmatter?.mechanical_6 || !data?.frontmatter?.mechanical_4 ? 'Non-neutral' : 'Wifi'}
                                     </button>
                                 </Row>
                             </Col>
-                            <Col xs={12} md={6}>
+                            {!data?.frontmatter?.mechanical_6 && (<Col xs={12} md={6}>
                                 <Row noGutters className="version">
                                     <span>Button:</span>
                                 </Row>
@@ -185,11 +186,11 @@ const IndexPage = ({ pageContext }) => {
                                     {data?.frontmatter?.mechanical_4 && (<button className={`btn-version ${buttonActive === 4 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(4)} disabled={((versionActive === 0 && mechanical_4?.withNeutral) || (versionActive === 1 && mechanical_4?.nonNeutral)) ? false : true}>
                                         {4} button
                                     </button>)}
-                                    {data?.frontmatter?.mechanical_6 && (<button className={`btn-version ${buttonActive === 6 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(6)} disabled={((versionActive === 0 && mechanical_6?.withNeutral) || (versionActive === 1 && mechanical_6?.nonNeutral)) ? false : true}>
+                                    {/* {data?.frontmatter?.mechanical_6 && (<button className={`btn-version ${buttonActive === 6 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(6)} disabled={((versionActive === 0 && mechanical_6?.withNeutral) || (versionActive === 1 && mechanical_6?.nonNeutral)) ? false : true}>
                                         {6} button
-                                    </button>)}
+                                    </button>)} */}
                                 </Row>
-                            </Col>
+                            </Col>)}
 
                         </Row>)}
                     </article>

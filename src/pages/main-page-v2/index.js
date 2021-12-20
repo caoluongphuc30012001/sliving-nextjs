@@ -321,9 +321,8 @@ const IndexPage = () => {
   };
 
   return (
-    <LayoutNew>
+    <LayoutNew isMainPage={true}>
       <header className="header-main-page container-v2">
-        {" "}
         <BuildHeader />
       </header>
       <main id="main_page" className="container-v2">

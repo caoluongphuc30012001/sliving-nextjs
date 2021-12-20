@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { PortfolioProvider } from "./../context/context";
-import { navData, addressData, aboutData } from "./../mock/data";
+import React from "react";
 import ButtonRounded from "@components/button/button-card-rounded";
 import { withTranslation } from "react-i18next";
-import NavbarV2 from "./navbar-new/narbar-v2";
+import NavbarV2 from "./navbar-new/navbar-v2";
 import NavbarSmartHome from "./navbar-new/navbar-smarthome";
 import NavbarLighting from "./navbar-new/navbar-lighting"
 import FooterNew from "./footer/footer-new";
-//import useWindowSize from '../hook/useWindowSize';
-
 import "../i18n/i18n";
 import "./style.scss";
 
@@ -53,5 +49,4 @@ function LayoutNew({ children }) {
     </PortfolioProvider>
   );
 }
-
 export default withTranslation()(LayoutNew);
