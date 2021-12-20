@@ -4,31 +4,32 @@ import Slider from "react-slick";
 import { Form, Dropdown, Image } from "react-bootstrap";
 import Searchicon from "@images/icon/searchicon.svg";
 import DropArrow from "@images/icon/dropdownArrow.svg";
-import BotBanner from '@images/support-page-v2-img/banner1.png'
+import BotBanner from '@images/support-page-v2-img/banner1.jpg'
 import ImageExample from '../../../../contents/images/support-page/technical-solution/apartment/apartment-1.png';
 import FormPagination from '@components/pagination/form-pagination';
 import { Link } from "gatsby";
 import { useTranslation } from 'react-i18next';
 import { Row, Col, Accordion, Card } from 'react-bootstrap';
 import DownLoadIcons from "@images/icon/download.png";
+import PrevIcon from "@images/icon/icon-prev.svg";
+import NextIcon from "@images/icon/icon-next.svg";
 import useGetLgn from "@hook/useGetLgn";
 import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
 import { useLocation } from "@reach/router";
 import {graphql} from "gatsby";
-import Pagination from "react-bootstrap/Pagination";
 const TechnicalSol = ({data}) => {
     console.log("data",data);
   const Lgn = useGetLgn();
   const { t } = useTranslation();
  
   const dataTechnicalAnswer = data?.dataTechnicalAnswer?.edges || [];
-  const dataConstructionInstruction = data?.dataConstructionInstruction?.edges|| [];
-  const dataAgriculturalMaterialNorm = data?.dataAgriculturalMaterialNorm?.edges|| [];
-  const dataProductIdentification = data?.dataProductIdentification?.edges|| [];
-  const dataProductWarranty = data?.dataProductWarranty?.edges|| [];
-  const dataDocumentsDownload = data?.dataDocumentsDownload?.edges|| [];
-  console.log("dataDocumentsDownload", dataDocumentsDownload);
+  const dataConstructionInstruction = data?.dataTechnicalAnswer?.edges ? data?.dataTechnicalAnswer?.edges?.filter(item => item?.node?.frontmatter?.slug?.includes('construction-manual')) : [];
+  const dataAgriculturalMaterialNorm = data?.dataTechnicalAnswer?.edges ? data?.dataTechnicalAnswer?.edges?.filter(item => item?.node?.frontmatter?.slug?.includes('agricultural-material-quota')) : [];
+  const dataProductIdentification = data?.dataTechnicalAnswer?.edges ? data?.dataTechnicalAnswer?.edges?.filter(item => item?.node?.frontmatter?.slug?.includes('product-identification')) : [];
+  const dataProductWarranty = data?.dataTechnicalAnswer?.edges ? data?.dataTechnicalAnswer?.edges?.filter(item => item?.node?.frontmatter?.slug?.includes('product-warranty')) : [];
+  const dataDocumentsDownload = data?.dataTechnicalAnswer?.edges ? data?.dataTechnicalAnswer?.edges?.filter(item => item?.node?.frontmatter?.slug === null) : [];
+  console.log("dataConstructionInstruction", dataConstructionInstruction);
   const [post, setPost] = useState(dataTechnicalAnswer);
   const [id, setId] = useState();
   const [titleSolution, setTitle] = useState("Technical_solutions");
@@ -61,10 +62,10 @@ const TechnicalSol = ({data}) => {
     dots: true,
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
-    slidesToShow: post.length > 6 ? 6 : 3,
-    slidesToScroll: post.length > 6 ? 6 : 3,
+    slidesToShow: post?.length > 6 ? 6 : 3,
+    slidesToScroll: post?.length > 6 ? 6 : 3,
     vertical: true,
-    row: post.length > 6 ? 6 : 3,
+    row: post?.length > 6 ? 6 : 3,
     responsive: [
       {
         breakpoint: 1024,
@@ -112,23 +113,25 @@ const TechnicalSol = ({data}) => {
   const postsPerPage = 6;
   const indexofLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexofLastPost - postsPerPage;
-  const currentPosts = post.slice(indexOfFirstPost,indexofLastPost);
-  const totalPage = Math.round(post.length / postsPerPage);
-  const delta = 2;
+  const currentPosts = post?.slice(indexOfFirstPost,indexofLastPost);
+  const totalPage = Math.round(post?.length / postsPerPage);
+  const delta = 4;
   const pageNumbers = [];
   const paginate = (pageNum) => setCurrentPage(pageNum);
   const paginatePrev = () => {
-    if(currentPage > 1){
-      setCurrentPage(currentPage -4)
+    if(!pageNumbers.includes(1)){
+      setCurrentPage(currentPage -5)
     }
   }
   const paginateNext = () => {
-    if(currentPage < 29){
-      setCurrentPage(currentPage +4)
+    if(currentPage +5 <= totalPage){
+      setCurrentPage(currentPage +5)
+    }else if(currentPage +5 > totalPage){
+      setCurrentPage(totalPage);
     }
   }
-  for(let i = currentPage -delta; i <= currentPage +delta; i++){
-    if(i >= 1 && i <= totalPage ){
+  for(let i = currentPage-delta; i <= currentPage+delta; i++){
+    if(i >= 1 && i <= totalPage && pageNumbers.length < 5 ){
       pageNumbers.push(i);
     }
   }
@@ -177,8 +180,9 @@ const TechnicalSol = ({data}) => {
     setTitle(title);
     getDataPost(id);
     setId(id);
+    setCurrentPage(1);
     location.search = `?support=${id}`;
-    if (typeof widnow !== undefined) {
+    if (typeof window !== undefined) {
       window.history.pushState(null, null, `?support=${id}`);
     }
     return null;
@@ -250,7 +254,7 @@ const TechnicalSol = ({data}) => {
               <div className="right-container">
                 <h4 className="title-second fs-32 fw-bold">{t(`${titleSolution}`)}</h4>
                 <div className="organize-dropdown container-wrap-page">
-                  <FormPagination count={post.length} variable={t(`posts`)} />
+                  <FormPagination currentPosts={currentPosts} indexOfFirstPost={indexOfFirstPost} count={post?.length} variable={t(`posts`)} />
                 </div>
                 <Form className="container-belowDrop">
                   <Form.Group controlId="searchBar">
@@ -309,8 +313,37 @@ const TechnicalSol = ({data}) => {
                     </Accordion.Collapse>
                   </Accordion>)}
                 </div>
-                <div>
-                  {currentPosts?.map(({ node }) => {
+                <div className="support-slider">
+                  {id === 6 ? (currentPosts?.map(({ node }) => {
+                        return (
+                          <div className="container-first-slider" key={node.frontmatter.id}>
+                            <Row noGutters>
+                              <Col sm={3} xs={12}>
+                                <div className="image-container first-slider-wrap">
+                                  <div className="first-slider-wrap__left">
+                                    <Link to={`${Lgn}${node.frontmatter.slug}`} >
+                                      <div className="download__container">
+                                        <img src={DownLoadIcons} alt="icon download" />
+                                      </div>
+                                    </Link>
+                                    <div className="container-below-image">
+                                      <div className="row">
+                                        <span className="fs-12 fw-bold mt-2">Công trình: </span><span className="fs-12 mt-2 ml-1">Căn hộ</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </Col>
+                              <Col >
+                                <div className="first-slider-wrap__right">
+                                  <div className="text-title fs-16">{node.frontmatter.title}</div>
+                                  <div className="text-date fs-12">{node.frontmatter.date}</div>
+                                  <div className="text-description fs-14">{node.frontmatter.description}</div>
+                                </div>
+                              </Col>
+                            </Row>
+                          </div>)})) : 
+                  (currentPosts?.map(({ node }) => {
                     return (
                       <div className="container-first-slider" key={node.frontmatter.id}>
                       <Row noGutters>
@@ -348,24 +381,28 @@ const TechnicalSol = ({data}) => {
                       </Row>
                     </div> 
                     )
-                  })}
-                <div className="mt-5">
+                  }))}
+                {post?.length && (<div className="pagination-container">
                   <nav>
-                    <ul className="pagination justify-content-center">
+                    <ul className="pagination">
                       <li>
-                        <a onClick={() => paginatePrev()}>Prev</a>
+                        <a onClick={() => paginatePrev()}><Image src={PrevIcon} className="pagination-btn-prev"/></a>
                       </li>
                       {pageNumbers.map(num => (
-                        <li className="page-item" key={num}>
-                        <a className="page-link" onClick={() => paginate(num)}>{num}</a>
+                      <li className="page-item" key={num}>
+                        <a 
+                          className={num === currentPage ? 'page-link active' : 'page-link'} 
+                          onClick={() => paginate(num)}
+                          style={{cursor:'pointer'}}
+                          >{num}</a>
                       </li>
                       ))}
                       <li>
-                        <a onClick={() => paginateNext()}>Next</a>
+                        <a onClick={() => paginateNext()}><Image src={NextIcon} className="pagination-btn-next"/></a>
                       </li>
                     </ul>
                   </nav>
-                </div>
+                </div>)}
                 </div>
                 {/* <Slider className="support-slider" {...settings} >
                   {
@@ -444,7 +481,7 @@ const TechnicalSol = ({data}) => {
                     )
                   }
                 </Slider> */}
-                {post.length <= 0 && (<div className="no_result"><span >{t(`no_result`)}</span></div>)}
+                {post?.length <= 0 && (<div className="no_result"><span >{t(`no_result`)}</span></div>)}
               </div>
             </div>
           </Col>
