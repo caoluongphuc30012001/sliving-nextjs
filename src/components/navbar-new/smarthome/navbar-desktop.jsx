@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLaguage";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 
 import { useTranslation } from "react-i18next";
 import iconBook from "@images/new-home-page/solution/icon-book.svg";
@@ -97,9 +97,8 @@ export default function NavbarSmartHomeDesktop() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
+                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
+                            }`}
                           id="item-menu"
                         >
                           {nav.title}

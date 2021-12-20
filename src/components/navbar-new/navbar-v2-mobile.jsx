@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
 import { Link } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLaguage";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 import DataProductMenu from "../../query/product-menu";
 // import DataSolutionMenu from "../../query/solution-menu";
 
@@ -112,9 +112,8 @@ export default function NavbarChild() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
+                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
+                            }`}
                           id="item-menu"
                         >
                           {nav.title}

@@ -220,28 +220,6 @@ const DataProductNew = () => {
                 }
               }
             }
-            mechanical_4 {
-              imgSrcProduct {
-                publicURL
-                childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
-                }
-              }
-              withNeutral {
-                publicURL
-                childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
-                }
-              }
-            }
             mechanical_6 {
               imgSrcProduct {
                 publicURL
@@ -418,7 +396,7 @@ const DataProductNew = () => {
       }
     }
     productSmartCurtain: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/motor/)/"}, frontmatter: {type: {regex: "/(Motor Curtain)/"}}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/motor/)/"}, frontmatter: {type: {regex: "/(Smart Curtain)/"}}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
