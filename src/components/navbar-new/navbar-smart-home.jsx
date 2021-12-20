@@ -84,7 +84,7 @@ export default function NavbarSmartHome() {
               id="nav-bar"
             >
               <Link to="/" className="logo nav-logo nav-brand">
-                <Image className="img-obj-cover" src={logo} alt="sliving" />
+                <Image className="img-obj-cover" src={logo} alt="sliving" width={202} height={44} />
               </Link>
               <Navbar.Collapse
                 id="responsive-navbar-nav"

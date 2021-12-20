@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LayoutNew from "@components/layout-new";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
 import ImageHp_1 from "@images/main-page-v2/iot.jpg";
@@ -31,7 +31,7 @@ import AOS from "aos";
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const IndexPage = () => {
   useEffect(() => {
@@ -167,6 +167,10 @@ const IndexPage = () => {
             : "bullet-active-section-v2",
           clickable: true,
         }}
+        autoplay={!isButton ? {
+          "delay": 2500,
+          "disableOnInteraction": false
+        } : isButton}
         navigation={
           isButton
             ? {
@@ -310,7 +314,7 @@ const IndexPage = () => {
             >
               <img src={sectionFour3Full} alt="" />
               <div className="group-hover-info">
-                <h2>Fintech Iot</h2>
+                <h2>Fintech IoT</h2>
               </div>
             </div>
             <div

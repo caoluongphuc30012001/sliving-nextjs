@@ -3,7 +3,6 @@ import CardProductV2 from '../card/card-product-v2';
 import imgLine from "@images/new-home-page/app-img/line.png";
 import { Col, Row } from "react-bootstrap";
 import "../style.scss";
-import ButtonLearn from '../button/button-learn';
 import Link from "@components/gatsby-link";
 
 const SlideProduct = ({ data }) => {
@@ -63,12 +62,9 @@ const SlideProduct = ({ data }) => {
                 <div className="product-list-item carousel-product">
                     <Row noGutters>
                         {post && (post.map((product, index) => <Col xl={3} lg={3} md={3} className="product-item" key={index}>
-                            <Link to={`/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
+                            <Link to={`/smart-home/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
                         </Col>))
                         }
-                    </Row>
-                    <Row className="just-cont-center">
-                        <ButtonLearn />
                     </Row>
                 </div>
             </section >
