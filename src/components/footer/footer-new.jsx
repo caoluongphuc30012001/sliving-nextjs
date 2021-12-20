@@ -4,16 +4,15 @@ import logo from "@images/new-home-page/footer/logo.png";
 import iconFb from "@images/new-home-page/footer/icon-fb.png";
 import iconIns from "@images/new-home-page/footer/icon-insta.png";
 import SectionMap from "@components/map";
-import { Link } from "gatsby";
-export default function FooterNew() {
+export default function FooterNew({ isMainPage }) {
   const BuildSectionMap = () => {
-    return <SectionMap />;
+    return <SectionMap />
   };
   return (
     <>
       <footer className="footer-new">
         <Row noGutters>
-          <Col xs={12}><BuildSectionMap /></Col>
+          {isMainPage && (<Col xs={12}><BuildSectionMap /></Col>)}
         </Row>
         <div className="footer-info-address container-v2">
           <Row>
@@ -35,8 +34,12 @@ export default function FooterNew() {
             </Col>
             <Col lg={4} md={12} sm={12} xs={12} className="footer-right">
               <div className="footer-list-item">
-                <Link to="https://www.facebook.com/UnicloudCareers"><img src={iconIns} alt="" /></Link>
-                <Link to="https://www.facebook.com/UnicloudCareers"><img src={iconFb} alt="facebook unicloud" /></Link>
+                <a href="https://www.facebook.com/UnicloudCareers" target='_blank'
+                  rel="noreferrer"
+                  aria-label='Github'><img src={iconIns} alt="" /></a>
+                <a href="https://www.facebook.com/UnicloudCareers" target='_blank'
+                  rel="noreferrer"
+                  aria-label='Github'><img src={iconFb} alt="facebook unicloud" /></a>
               </div>
             </Col>
           </Row>

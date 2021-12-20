@@ -52,7 +52,7 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
                         <Col xl={12} lg={12} md={12} className="product-filter-item">
                             <ul >
                                 {arrProduct && arrProduct.map((item, index) => {
-                                    return (<div role="button" key={index} className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => handleSelect(item)} onKeyPress={() => handleSelect(item)} tabIndex={0}>
+                                    return (<div key={index} role="button" className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => handleSelect(item)} onKeyPress={() => handleSelect(item)} tabIndex={0}>
                                         <span>{item.title}</span>
                                     </div>)
                                 })}

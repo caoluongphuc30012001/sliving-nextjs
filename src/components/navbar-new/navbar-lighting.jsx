@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
 import { Link, graphql, useStaticQuery, navigate } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLaguage";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 import { useTranslation } from "react-i18next";
 
 export default function NavbarSmartHome() {
