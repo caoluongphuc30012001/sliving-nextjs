@@ -4,7 +4,7 @@ import imgLine from "@images/new-home-page/app-img/line.png";
 import { Col, Row } from "react-bootstrap";
 import "../style.scss";
 import ButtonLearn from '../button/button-learn';
-import { Link } from "gatsby";
+import Link from "@components/gatsby-link";
 
 const SlideProduct = ({ data }) => {
     const getData = data;

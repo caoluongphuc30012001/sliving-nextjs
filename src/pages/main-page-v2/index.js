@@ -130,7 +130,7 @@ const IndexPage = () => {
   const BuildImageCarousel = ({ carousel, isButton }) => {
     return (
       <div className="header-banner-v2">
-        <img src={carousel.src} alt="sliving alt" loading="lazy" />
+        <img src={carousel.src} alt="sliving alt" loading="lazy" width={1440} height={799} />
         <div className="banner-v2-wrap">
           {carousel.title && <BuildText carousel={carousel} />}
           {isButton && <ButtonCustom content={"Button"} />}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
-import { Link } from "gatsby";
+import Link from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
