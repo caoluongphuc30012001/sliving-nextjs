@@ -9,9 +9,9 @@ import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from 'gatsby';
 import "./style.scss";
 
-const ContactUs = () => {
+const ContactUs = (props) => {
   return (
-    <LayoutNew>
+    <LayoutNew pageContext={props.pageContext.isNavbarContact}>
       <RequestSupport />
       <ContactSupport />
       <HeaderImage />

@@ -18,7 +18,7 @@ const LanguageSwitcher = ({ changeLng }) => {
         if (i18n.language === "vi") {
             changeLng("vn");
         }
-    }, [])
+    }, [i18n,changeLng])
 
     return (
         <>

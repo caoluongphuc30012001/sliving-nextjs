@@ -24,7 +24,8 @@ export default function NavbarSmartHomeDesktop() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, []);
+    
+  }, [i18n,dataProductMenu]);
   const arrMenu = [
     {
       id: "1",

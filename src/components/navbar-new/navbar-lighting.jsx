@@ -5,7 +5,7 @@ import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 import { useTranslation } from "react-i18next";
 
-export default function NavbarSmartHome() {
+export default function NavbarLighting() {
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
   const { t } = useTranslation();
@@ -33,10 +33,9 @@ export default function NavbarSmartHome() {
       id: "2",
       title: t(`HEADER.HOMEPAGE.CONTACTUS`),
       isActive: false,
-      path: "/en/contact-page-v2/",
+      path: "/smart-lighting/contact",
     },
   ];
-  console.log("in navbar", window.location);
   return (
     <>
       <nav className="top-navbar-new">
@@ -73,7 +72,7 @@ export default function NavbarSmartHome() {
                                     errorElements.scrollIntoView({ block: 'center', behavior: 'smooth' });
                                 }, 100);
                             }
-                            navigate(`${nav.path}`)
+                            navigate(`${nav.path}`,{state: {isSmartLighting:true}})
                             // if(document.location.path==='/en/smart-lighting-v2/')
                           }}
                         >
