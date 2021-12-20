@@ -108,7 +108,7 @@ const NewSectionVideo = () => {
                 <source src={Video2} type="video/webp" />
                 <source src={VideoWebm2} type="video/webm" />
               </video>
-            </div>{" "}
+            </div>
             <div className="modal-video-wrap">
               <video
                 muted
@@ -120,7 +120,7 @@ const NewSectionVideo = () => {
                 <source src={Video3} type="video/webp" />
                 <source src={VideoWebm3} type="video/webm" />
               </video>
-            </div>{" "}
+            </div>
             <div className="modal-video-wrap">
               <video
                 muted

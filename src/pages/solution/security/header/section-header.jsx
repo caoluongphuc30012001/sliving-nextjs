@@ -6,7 +6,7 @@ const BottomImage = () => {
   return (
     <section className="bottomImage mb-5">
       <div>
-        <img src={header} alt="Bottom Image" />
+        <img src={header} alt="Bottom" />
         <div className="contentImage">
           <h1>
             Smart security.

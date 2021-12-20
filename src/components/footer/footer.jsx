@@ -70,12 +70,11 @@ const Footer = () => {
         <Row className="logo-wrap">
           <div className="logo-wrap-left">
             <Link to={`${Lgn}`}>
-              {" "}
               <Image
                 src={Logo}
                 className="img-obj-cover"
                 alt="sliving sunshine tech"
-              />{" "}
+              />
             </Link>
           </div>
           <div className="logo-wrap-right">

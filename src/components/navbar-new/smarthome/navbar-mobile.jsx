@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, NavDropdown } from "react-bootstrap";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { slide as Menu } from "react-burger-menu";
 import { useTranslation } from "react-i18next";
 

@@ -14,7 +14,7 @@ import imgFive from "@images/solution/smart-home/imgFive.svg";
 import imgSix from "@images/solution/smart-home/imgSix.svg";
 import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
-import CardSolution from "@components/card/card-solution/card-solution";
+
 const SmarthomeSolution = () => {
   const data = DataProductNew();
   return (

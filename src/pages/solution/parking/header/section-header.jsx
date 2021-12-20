@@ -1,4 +1,5 @@
 import React from "react";
+
 import header from "@images/solution/parking/header/header.png";
 import underLine from "@images/contact-page-v2/Rectangle1256.png";
 
@@ -6,7 +7,7 @@ const BottomImage = () => {
   return (
     <section className="bottomImage mb-5">
       <div>
-        <img src={header} alt="Bottom Image" />
+        <img src={header} alt="Bottom" />
         <div className="contentImage">
           <h1>
             Convenient residential parking solution

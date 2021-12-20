@@ -10,7 +10,6 @@ import ImageHp_2 from "@images/main-page-v2/ai.png";
 import ImageHp_3 from "@images/main-page-v2/artboard-2.png";
 import ImageHp_4 from "@images/main-page-v2/artboard.png";
 
-
 import sectionLeft from "@images/main-page-v2/element-left.png";
 
 import sectionFour1Full from "@images/main-page-v2/banner-left-full.svg";
@@ -118,7 +117,13 @@ const IndexPage = () => {
   const BuildImageCarousel = ({ carousel, isButton }) => {
     return (
       <div className="header-banner-v2">
-        <img src={carousel.src} alt="sliving alt" loading="lazy" width={1440} height={799} />
+        <img
+          src={carousel.src}
+          alt="sliving alt"
+          loading="lazy"
+          width={1440}
+          height={799}
+        />
         <div className="banner-v2-wrap">
           {/* {carousel.title && <BuildText carousel={carousel} />} */}
           {isButton && <ButtonCustom content={"Button"} />}
@@ -154,16 +159,20 @@ const IndexPage = () => {
             : "bullet-active-section-v2",
           clickable: true,
         }}
-        autoplay={!isButton ? {
-          "delay": 2500,
-          "disableOnInteraction": false
-        } : isButton}
+        autoplay={
+          !isButton
+            ? {
+                delay: 2500,
+                disableOnInteraction: false,
+              }
+            : isButton
+        }
         navigation={
           isButton
             ? {
-              nextEl: ".btn-next",
-              prevEl: ".btn-prev",
-            }
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+              }
             : isButton
         }
         className="mySwiper"
@@ -224,7 +233,7 @@ const IndexPage = () => {
   const BuildLearnMore = () => {
     return (
       <div className="learn-more">
-        <span>Learn more</span>{" "}
+        <span>Learn more</span>
         <div className="btn-circle">
           <img src={iconArrowRight} alt="" />
         </div>
@@ -321,9 +330,12 @@ const IndexPage = () => {
   };
 
   const BuildSectionBannerReason = () => {
-    return <SectionBannerV2 
-    title='The reason you should go with Sliving.'
-    desc='You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...' />
+    return (
+      <SectionBannerV2
+        title="The reason you should go with Sliving."
+        desc="You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to..."
+      />
+    );
   };
 
   return (
