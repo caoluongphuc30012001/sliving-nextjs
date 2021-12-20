@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutNew from "@components/layout-new";
+import LayoutV2 from "@components/layout-new";
 import NewSectionVideo from "./body/new-section-video";
 import NewSectionHeader from "./body/new-section-header";
 import NewSectionApp from "./body/new-section-app";
@@ -10,9 +10,9 @@ import NewSectionProduct from "./body/new-section-product";
 import "./style.scss";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from "gatsby";
-const HomePageNew=()=> {
+const HomePageNew = ({ pageContext }) => {
   return (
-    <LayoutNew>
+    <LayoutV2 pageContext={pageContext} >
       <div className="smart-home-page-v2">
         <NewSectionHeader />
         <NewSectionApp />
@@ -22,7 +22,7 @@ const HomePageNew=()=> {
         <NewSectionSolution />
         <NewSectionVideo />
       </div>
-    </LayoutNew>
+    </LayoutV2>
   );
 }
 export default withI18next()(HomePageNew);
