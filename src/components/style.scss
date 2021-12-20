@@ -3835,7 +3835,7 @@ a.btn-link-a {
       }
       .item-menu-child:hover {
         background: #fff2ee;
-      }    
+      }   
 
       a#item-menu::before {
         content: "";
@@ -4231,3 +4231,35 @@ a.btn-link-a {
 
 
 
+/*--------------Card solution--------------------*/
+#card-solution{
+  .prod-line-wrap{
+    text-align: center;
+    .prod-line-wrap__header{
+    img{
+      width: 350px;
+      height: 350px;
+      border-radius: 20px;
+      }
+    }
+    .prod-line-wrap__body {
+      width: inherit;
+      padding: 17px 50px 35px 50px;
+
+      .line-wrap__title {
+        font-size: 28px;
+        margin-top: 4px;
+        letter-spacing: -0.5px;
+        max-width: 345px;
+      }
+
+      .line-wrap__description {
+        color: #adadad;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        max-width: 345px;
+      }
+    }
+   
+  }
+}

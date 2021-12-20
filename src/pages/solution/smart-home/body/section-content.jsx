@@ -1,10 +1,6 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import useGetLgn from "@hook/useGetLgn";
 import imgLine from "@images/solution/smart-home/body/line.svg";
 const SectionContent = ({ imgUrl, title, subDescription, description }) => {
-  const { t } = useTranslation();
-  const Lgn = useGetLgn();
   return (
     <article
       className="introduct-section-content container-wrap"

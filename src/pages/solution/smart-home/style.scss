@@ -5,98 +5,81 @@ p {
   padding: 0;
 }
 
-.introduct-main {
+#introduct-main-smarthome {
   margin-top: 80px;
   margin-bottom: 56px;
-  .background-image {
-    margin: auto;
+  .card-solution{
+    display: flex;
     max-width: 1440px;
+    justify-content: space-around;
+  }
+  .background-image {
+    
+    width: 100%;
+    height: calc(100% - 55px);
+    position: absolute;
+    top: 100px;
     background-image: url("@images/solution/smart-home/background.svg");
   }
   .introduct-header-img {
     width: 100%;
     height: 100%;
   }
+  .introSection{
+    position: relative;
+    margin-bottom: 50px;
+  }
   .banner-wrap-v2 {
     background-image: url("@images/solution/smart-home/section.svg");
   }
-
   .margin-bottom {
     margin-bottom: 150px;
   }
-  .introduct-header {
-    max-width: 1440px;
-    max-height: 649px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    .introduct-header-img {
-      max-width: 1440px;
-      max-height: 649px;
-      width: 100%;
-      height: 100%;
+  .bottomImage{
+    img{
+      max-height: 900px;
+      width: 1440px;
     }
-    .introduct-section-header {
-      height: 333px;
-      max-width: 772px;
-      max-height: 333px;
-
-      margin-bottom: -10%;
-
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      background-color: transparent;
-      color: #ffffff;
-      .section-header__title {
+    .contentImage {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translateX(-50%);
+      text-align: left;
+      color: white;
+      max-width: 770px;
+      h1 {
+        font-weight: bold;
         position: relative;
-
-        margin-top: 21px;
-        margin-bottom: 12px;
-        text-align: left;
-        height: 120px;
+        font-size: 82px;
+        width: 770px;
+     
+        text-shadow: -2px -2px rgb(52, 24, 177);
         img {
           position: absolute;
-          width: 770px;
+          top:80%;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
           height: 53px;
-          bottom: -17%;
-        }
-        h3 {
-          position: absolute;
-          font-weight: bold;
-          line-height: 56px;
-          letter-spacing: -1px;
-          color: #f9f9f9;
-          text-shadow: -2px -2px rgb(52, 24, 177);
-          z-index: 1;
         }
       }
-
-      .section-header__description {
-        text-align: left;
-        max-width: 100%;
-        max-height: 192px;
-        margin-top: 5%;
-        width: 100%;
-        height: 100%;
-        top: 222px;
-
-        p {
-          font-size: 16px;
-          line-height: 24px;
-          color: #ffffff;
-        }
-      }
-
-      .section-header__title,
-      .section-header__description {
-        margin-left: 67px;
-        margin-right: 96px;
-      }
+      p{
+        margin-top: 5vh;
+        width: 770px;
+        font-size: 21px;
+       }
     }
   }
+  .container{
+    max-width: 1440px;
+  }
+  .item-menu{
+    background:red;
+  }
+   
+ 
   .container-v2 {
-    margin-top: 300px;
     .card-product-v2 {
       .product-v2-detail {
         img {
