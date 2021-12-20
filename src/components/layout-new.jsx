@@ -23,28 +23,34 @@ function LayoutNew({ children }) {
     setInfoCompany({ ...addressData, ...aboutData });
   }, []);
   const selectItemNav=()=>{
-    switch (window.location.pathname){
-      case "/en/smart-home/":
-      case "/vn/smart-home/":
-        return <NavbarSmartHome></NavbarSmartHome>;
-      case "/en/smart-lighting-v2/":
-      case "/vn/smart-lighting-v2/":
-      case "/en/contact-page-v2/":
-      case "/vn/contact-page-v2/":
-        return <NavbarLighting></NavbarLighting>;
-      default:
-        return <NavbarSmartHome></NavbarSmartHome>
+    if(isBrowser){
+      switch (window.location.pathname){
+        case "/en/":
+        case "/vn/":
+          return <NavbarV2 />
+        case "/en/smart-home/":
+        case "/vn/smart-home/":
+          return <NavbarSmartHome></NavbarSmartHome>;
+        case "/en/smart-lighting-v2/":
+        case "/vn/smart-lighting-v2/":
+        case "/en/contact-page-v2/":
+        case "/vn/contact-page-v2/":
+          return <NavbarLighting></NavbarLighting>;
+        default:
+          return <NavbarSmartHome></NavbarSmartHome>
+      }
     }
   }
   return (
     <PortfolioProvider value={{ arrNav, infoCompany }}>
       {/* {isMobile && <NavBarMobile />} */}
       <div className="page">
-        {isBrowser &&
+        {/* {isBrowser &&
         (window.location.pathname === "/en/" ||
           window.location.pathname === "/vn/") ? (
           <NavbarV2 />
-        ) : selectItemNav()}
+        ) : selectItemNav()} */}
+        {selectItemNav()}
         <main>{children}</main>
         <FooterNew />
         <ButtonRounded />
