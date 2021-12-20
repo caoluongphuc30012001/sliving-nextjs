@@ -5,7 +5,7 @@ import { Link } from '@wapps/gatsby-plugin-i18next';
 import logo from "@images/logo/logo-v2.svg";
 import PortfolioContext from "@context/context";
 import imgSearch from "@images/icon/icon-search.svg";
-import LanguageSwitcher from "./switterLaguage";
+import LanguageSwitcher from "./switterLanguage";
 import { useLocation } from "@reach/router";
 const isBrowser = typeof window !== "undefined";
 const NavBar = () => {

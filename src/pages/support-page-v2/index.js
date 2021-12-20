@@ -1,10 +1,24 @@
 import React from 'react';
-import Layout from "@components/layout.jsx";
-const IndexPage = () => {
+import LayoutV2 from "@components/layout-new.jsx";
+import TechnicalSolution from "./body/technicalSolution";
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import { graphql } from 'gatsby'
+
+const IndexPage = ({ pageContext }) => {
+  console.log();
   return (
-    <Layout>
-      {/* <TechnicalSolution /> */}
-    </Layout>
+    <LayoutV2>
+      <TechnicalSolution data={pageContext.data.data} />
+    </LayoutV2>
   );
 };
-export default IndexPage;
+export default withI18next()(IndexPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
+      ...LocaleFragment
+    }
+  }
+`;

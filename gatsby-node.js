@@ -73,6 +73,38 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   }
 `);
+
+  const querySupportPage = await graphql(
+    `
+    {dataTechnicalAnswer:
+    allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            subtitle
+            slug
+          }
+          html
+        }
+      }
+    }
+  }
+  
+`
+  );
+
+  const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
+  createPage({
+    path: `/support/`,
+    component: pagesSupport,
+    context: {
+      data: querySupportPage
+    }
+
+  });
   const arrLng = await getLng({ graphql: graphql });
   if (arrLng.length > 0 && productPage) {
     arrLng.forEach((lng) => {
@@ -81,7 +113,8 @@ exports.createPages = async function ({ actions, graphql }) {
           path: `/smart-home/`,
           component: smartHomeComponent,
           context: {
-            data: productPage.data.ProductPage
+            data: productPage.data.ProductPage,
+            isSmartHome: true
           },
         });
         createPage({

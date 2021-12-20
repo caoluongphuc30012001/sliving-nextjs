@@ -4,24 +4,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
-import ImageHp from "@images/main-page-v2/header-hp.svg";
-import sectionLeft from "@images/main-page-v2/element-left.svg";
+import ImageHp_1 from "@images/main-page-v2/iot.jpg";
+import ImageHp_2 from "@images/main-page-v2/ai.png";
 
-import sectionFour1 from "@images/main-page-v2/banner-left.svg";
-import sectionFour2 from "@images/main-page-v2/banner-right-1.svg";
-import sectionFour3 from "@images/main-page-v2/banner-right-2.svg";
-import sectionFour4 from "@images/main-page-v2/banner-right-3.svg";
+import ImageHp_3 from "@images/main-page-v2/artboard-2.png";
+import ImageHp_4 from "@images/main-page-v2/artboard.png";
+
+
+import sectionLeft from "@images/main-page-v2/element-left.png";
 
 import sectionFour1Full from "@images/main-page-v2/banner-left-full.svg";
-import sectionFour2Full from "@images/main-page-v2/banner-right-1-full.svg";
-import sectionFour3Full from "@images/main-page-v2/banner-right-2-full.svg";
-import sectionFour4Full from "@images/main-page-v2/banner-right-3-full.svg";
+import sectionFour2Full from "@images/main-page-v2/rectangle-1.png";
+import sectionFour3Full from "@images/main-page-v2/rectangle-2.png";
+import sectionFour4Full from "@images/main-page-v2/rectangle-3.png";
 
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 import iconArrowRight from "@images/icon/icon-arrow white.svg";
 
-import useWindowSize from "../../hook/useWindowSize";
+import useWindowSize from "@hook/useWindowSize";
 
 import "./style.scss";
 
@@ -44,7 +45,7 @@ const IndexPage = () => {
     {
       id: "0",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_1,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -53,7 +54,7 @@ const IndexPage = () => {
     {
       id: "1",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_2,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -62,7 +63,7 @@ const IndexPage = () => {
     {
       id: "2",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_3,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -71,7 +72,7 @@ const IndexPage = () => {
     {
       id: "3",
       alt: "",
-      src: ImageHp,
+      src: ImageHp_4,
       description:
         "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
       title: "New Arrival",
@@ -120,7 +121,7 @@ const IndexPage = () => {
         <h1>
           {carousel.title}
           <br />
-          {carousel.titleBold}
+          <span style={{ fontWeight: "bold" }}>{carousel.titleBold}</span>
         </h1>
         <p className="banner-text-description-v2">{carousel.description}</p>
       </article>
@@ -132,7 +133,7 @@ const IndexPage = () => {
       <div className="header-banner-v2">
         <img src={carousel.src} alt="sliving alt" loading="lazy" />
         <div className="banner-v2-wrap">
-          {carousel.title && <BuildText carousel={carousel} />}
+          {/* {carousel.title && <BuildText carousel={carousel} />} */}
           {isButton && <ButtonCustom content={"Button"} />}
         </div>
       </div>
@@ -200,7 +201,7 @@ const IndexPage = () => {
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={true} array={arrHeader} />;
+    return <BuildCarousel isButton={false} array={arrHeader} />;
   };
 
   const BuildSectionTwoElement = () => {
@@ -286,7 +287,10 @@ const IndexPage = () => {
             data-aos="fade-right"
             data-aos-duration="400"
           >
-            <img src={isMobile ? sectionFour1Full : sectionFour1} alt="" />
+            <img src={sectionFour1Full} alt="" />
+            <div className="group-hover-info">
+              <h2>Smart Home</h2>
+            </div>
           </div>
           <div className="el-wrap-right">
             <div
@@ -294,21 +298,30 @@ const IndexPage = () => {
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={isMobile ? sectionFour2Full : sectionFour2} alt="" />
+              <img src={sectionFour2Full} alt="" />
+              <div className="group-hover-info">
+                <h2>Smart Lighting</h2>
+              </div>
             </div>
             <div
               className="el-wrap-right-2"
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={isMobile ? sectionFour3Full : sectionFour3} alt="" />
+              <img src={sectionFour3Full} alt="" />
+              <div className="group-hover-info">
+                <h2>Fintech Iot</h2>
+              </div>
             </div>
             <div
               className="el-wrap-right-3"
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={isMobile ? sectionFour4Full : sectionFour4} alt="" />
+              <img src={sectionFour4Full} alt="" />
+              <div className="group-hover-info">
+                <h2>Smart Parking</h2>
+              </div>
             </div>
           </div>
         </div>
@@ -323,9 +336,8 @@ const IndexPage = () => {
   };
 
   return (
-    <LayoutNew>
+    <LayoutNew isMainPage={true}>
       <header className="header-main-page container-v2">
-        {" "}
         <BuildHeader />
       </header>
       <main id="main_page" className="container-v2">
