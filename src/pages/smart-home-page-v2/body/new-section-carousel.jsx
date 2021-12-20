@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { Row } from "react-bootstrap";
 
 import imgLine from "@images/new-home-page/app-img/line.png";

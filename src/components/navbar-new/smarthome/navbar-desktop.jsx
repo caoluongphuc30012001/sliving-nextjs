@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
-import { graphql, useStaticQuery } from "gatsby";
-import Link from "@components/gatsby-link";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
@@ -25,13 +24,14 @@ export default function NavbarSmartHomeDesktop() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, []);
+    
+  }, [i18n,dataProductMenu]);
   const arrMenu = [
     {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
       isActive: false,
-      path: "/smart-home/products",
+      path: "#",
     },
     {
       id: "2",
@@ -110,8 +110,9 @@ export default function NavbarSmartHomeDesktop() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
-                            }`}
+                          className={`item-menu item-menu-child link fs-16  ${
+                            nav.isActive ? "is-active" : ""
+                          }`}
                           id="item-menu"
                         >
                           {nav.title}
