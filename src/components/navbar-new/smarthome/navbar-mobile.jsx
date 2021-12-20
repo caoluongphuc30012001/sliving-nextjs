@@ -25,9 +25,9 @@ export default function NavbarSmartHomeMobile() {
   }, [i18n, dataProductMenu]);
 
   const arrMenuSolution = [
-    { id: 0, title: "Smart Home" },
-    { id: 1, title: "Smart Parking" },
-    { id: 2, title: "Smart Security" },
+    { id: 0, title: "Smart Home", path: "/solution/smart-home" },
+    { id: 1, title: "Smart Parking", path: "/solution/parking" },
+    { id: 2, title: "Smart Security", path: "/solution/security" },
     { id: 3, title: "Energy Saving" },
   ];
   const arrMenuSupport = [
@@ -95,7 +95,9 @@ export default function NavbarSmartHomeMobile() {
                     <div className="hover-solution">
                       <div className="solution-list-item">
                         <div className="solution-name">
-                          <span>{item.title}</span>
+                          <Link to={item.path}>
+                            <span>{item.title}</span>
+                          </Link>
                         </div>
                         <ul className="solution-item"></ul>
                       </div>

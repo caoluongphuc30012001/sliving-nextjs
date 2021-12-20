@@ -27,14 +27,16 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
           <Row className="row-banner-desc center-row">
             <div className="banner-desc">
               <p>
-                {desc?desc:`You are in need of an environment full of smart gadgets, there
+                {desc
+                  ? desc
+                  : `You are in need of an environment full of smart gadgets, there
                 are several factors to consider. It will be used for your home,
                 your office, or maybe even everywhere you want to...`}
               </p>
             </div>
           </Row>
           <Row className="row-banner-button center-row">
-          {!btnContact ? (
+            {!btnContact ? (
               <button className="banner-btn-v2">
                 <img src={imgArrow} alt="arrow" />
               </button>
