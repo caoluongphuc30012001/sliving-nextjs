@@ -7,8 +7,8 @@
       "COOPERATION": "Hợp Tác",
       "SUPPORT": {
         "SUPPORT": "Hỗ trợ kĩ thuật",
-        "USER_MANUALS":"Hướng dẫn sử dụng",
-        "PRODUCT_VIDEOS":"Video sản phẩm"
+        "USER_MANUALS": "Hướng dẫn sử dụng",
+        "PRODUCT_VIDEOS": "Video sản phẩm"
       },
       "ABOUTUS": "Giới thiệu",
       "CONTACTUS": "Liên hệ",
@@ -228,19 +228,6 @@
   },
   "specialized-business": "Những lĩnh vực phát triển của công ty :",
   "Over-the-years": "Trong những năm qua, Sliving luôn không ngừng phát triển và cho ra đời các giải pháp công nghệ tiên tiến giúp mỗi người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi nhất...",
-  "smart_energy": {
-    "section_1": {
-      "title": "Thiết bị điện “sống” cùng bạn",
-      "subDescription": "Các thiết bị như đèn, máy lạnh, máy nước nóng,...hoạt động và nghỉ ngơi theo thói quen và nhu cầu người dùng:",
-      "description_1": "Thiết bị điện đồng loạt tắt khi chọn kịch bản “Ra ngoài”",
-      "description_2": "Khi bạn ngủ sâu, nhiệt độ máy lạnh tăng dần",
-      "description_3": "Đèn trong phòng điều chỉnh độ sáng phù hợp nhu cầu sử dụng,..."
-    },
-    "section_2": {
-      "title": "Chủ động giám sát năng lượng tiêu thụ",
-      "subDescription": "Thông số điện, nước cập nhật nhanh chóng và dễ dàng thông qua các thiết bị đo lường kết nối ứng dụng điện thoại.Qua đó giúp bạn theo dõi cũng như phát hiện sớm những sự cố rò rỉ bất ngờ."
-    }
-  },
   "footer-description": "Xin chào, chúng tôi là Lift Media. Mục tiêu của chúng tôi là chuyển đổi những tác động tích cực từ cách mạng hóa cách các công ty tương tác với khách hàng và nhóm của họ.",
   "Search-parking": "Tìm kiếm vị trí đỗ xe dễ dàng",
   "vacant-spot": "Khi đến bãi xe, người dùng dễ dàng đến được vị trí chỗ trống thông qua:",

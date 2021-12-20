@@ -7,8 +7,8 @@
       "COOPERATION": "Cooperation",
       "SUPPORT": {
         "SUPPORT": "Support",
-        "USER_MANUALS":"User Manuals",
-        "PRODUCT_VIDEOS":"Product Videos"
+        "USER_MANUALS": "User Manuals",
+        "PRODUCT_VIDEOS": "Product Videos"
       },
       "ABOUTUS": "About Us",
       "CONTACTUS": "Contact Us",
@@ -228,19 +228,6 @@
   },
   "specialized-business": "Specialized business areas: ",
   "Over-the-years": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, and convenient life.",
-  "smart_energy": {
-    "section_1": {
-      "title": "Electrical equipment “lives” with you",
-      "subDescription": "Equipment such as lights, air conditioners, water heaters, etc. operate and rest according to user habits and needs:",
-      "description_1": "Electrical equipment turns off simultaneously when selecting the scenario “Going out”",
-      "description_2": "When you sleep deeply, the temperature of the air conditioner increases gradually",
-      "description_3": "The lights in the room can be adjusted to suit your needs."
-    },
-    "section_2": {
-      "title": "Actively monitor energy consumption",
-      "subDescription": "Electricity and water parameters are updated quickly and easily through measuring devices connected to the phone application. Thereby helping you to monitor and detect unexpected leaks early."
-    }
-  },
   "footer-description": "Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing how companies engage with their clients & their team.",
   "Search-parking": "Search parking location easily",
   "vacant-spot": "When arriving at the parking lot, users can easily find the vacant slot by using:",
