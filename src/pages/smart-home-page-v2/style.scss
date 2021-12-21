@@ -728,7 +728,7 @@
     background-image: url("../../images/new-home-page/video-bg.png");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    padding-top: 10%;
+    padding-top: 5%;
     min-height: 1180px;
     .body-video {
       margin-top: unset;
@@ -914,6 +914,207 @@
       .swiper-slide:nth-child(10n) {
         background-color: rgb(54, 94, 77);
       }
+    }
+  }
+}
+
+.contain-info-1 {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.page-active {
+  width: 100%;
+  background-color: #eff5fa;
+  padding-bottom: 127px;
+  margin: auto;
+}
+
+.contain-info-1 li {
+  padding: 0 16px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px 400px;
+  padding-bottom: 134px;
+  margin-top: 86px;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 30px;
+}
+
+.item-detail-wrap {
+  .p1 {
+    opacity: 0.6;
+  }
+  .p2 {
+    text-align: justify;
+    padding-top: 16px;
+  }
+}
+@-webkit-keyframes item-detail {
+  from {
+    -webkit-transform: translateY(90%);
+    transform: translateY(90%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes item-detail {
+  from {
+    -webkit-transform: translateY(90%);
+    transform: translateY(90%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.item3 {
+  background-image: url("../../images/new-home-page/solution/smart-parking.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  .item-detail {
+    visibility: hidden;
+  }
+  &:hover {
+    .item-detail {
+      visibility: visible;
+    }
+  }
+}
+.btn-read-more {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  column-gap: 8px;
+}
+
+.item2 {
+  background-image: url("../../images/new-home-page/solution/smart-lighting.jpg");
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  .item-detail-2 {
+    visibility: hidden;
+  }
+  &:hover {
+    .item-detail-2 {
+      visibility: visible;
+    }
+  }
+}
+.item-detail-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+  background-color: #000000b5;
+  transition: background-color 0.5s ease-in 1s;
+}
+.item-detail,
+.item-detail-2,
+.item-detail-4,
+.item-detail-5 {
+  position: absolute;
+  bottom: -15%;
+  z-index: 2;
+  padding: 32px;
+}
+.item3,
+.item2,
+.item4,
+.item5 {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:hover {
+    .item-detail,
+    .item-detail-2,
+    .item-detail-4,
+    .item-detail-5 {
+      width: 100%;
+      z-index: 2;
+      bottom: 0;
+      // -webkit-animation: item-detail 0.5s linear;
+      // animation: item-detail 0.5s linear;
+      transition: all 0.2s linear 0s;
+    }
+  }
+  .p1 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: rgba(239, 245, 250, 1);
+    text-align: left;
+    margin: 0;
+  }
+  .p2 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(239, 245, 250, 1);
+    padding-top: 16px;
+    margin: 0;
+  }
+  .p3 {
+    text-align: left;
+    color: rgba(247, 148, 29, 1);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: unset;
+    margin: 0;
+  }
+}
+
+.item4 {
+  background-image: url("../../images/introduction-page/smart-security/slide-3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .item-detail-4 {
+    visibility: hidden;
+  }
+  &:hover {
+    .item-detail-4 {
+      visibility: visible;
+    }
+  }
+}
+
+.item5 {
+  background-image: url("../../images/intro-content2/image2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 2/4;
+  .item-detail-5 {
+    visibility: hidden;
+  }
+  &:hover {
+    .item-detail-5 {
+      visibility: visible;
     }
   }
 }

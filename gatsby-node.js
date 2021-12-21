@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { QueryProductPage } = require("./src/query/await/ProductPage");
-
+const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -140,15 +140,23 @@ exports.createPages = async function ({ actions, graphql }) {
         });
 
         createPage({
-          path: `/products/`,
+          path: `/smart-home/products/`,
           component: productComponent,
           context: {
             data: productPage.data.ProductPage
           },
         });
+        createPage({
+          path: `/smart-home/contact`,
+          component: contactComponent,
+          context: {
+            data: productPage.data.ProductPage,
+            isNavbarContact:{isSmartHome:true}
+          },
+        });
         productPage.data.ProductPage.edges.forEach((product) => {
           createPage({
-            path: `/products/${product.node.frontmatter.slug}`,
+            path: `/smart-home/products/${product.node.frontmatter.slug}`,
             component: productDetailComponent,
             context: {
               data: product.node

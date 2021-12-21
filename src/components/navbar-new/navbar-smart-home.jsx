@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import Link from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
@@ -30,7 +31,7 @@ export default function NavbarSmartHomeDesktop() {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
       isActive: false,
-      path: "#",
+      path: "/smart-home/products",
     },
     {
       id: "2",
@@ -109,9 +110,8 @@ export default function NavbarSmartHomeDesktop() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
+                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
+                            }`}
                           id="item-menu"
                         >
                           {nav.title}
