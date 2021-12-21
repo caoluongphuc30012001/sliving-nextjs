@@ -6,9 +6,6 @@ import { useTranslation } from "react-i18next";
 
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLanguage";
-
 export default function NavbarSmartHomeMobile() {
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
