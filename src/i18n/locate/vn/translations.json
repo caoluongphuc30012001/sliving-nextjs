@@ -7,8 +7,8 @@
       "COOPERATION": "Hợp Tác",
       "SUPPORT": {
         "SUPPORT": "Hỗ trợ kĩ thuật",
-        "USER_MANUALS":"Hướng dẫn sử dụng",
-        "PRODUCT_VIDEOS":"Video sản phẩm"
+        "USER_MANUALS": "Hướng dẫn sử dụng",
+        "PRODUCT_VIDEOS": "Video sản phẩm"
       },
       "ABOUTUS": "Giới thiệu",
       "CONTACTUS": "Liên hệ",
@@ -25,7 +25,7 @@
     "ADDRESS_COMPANY": "Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh"
   },
   "CONTACT_PHONE": "LIÊN LẠC",
-  "HEAD_QUARTERS": "TRỤ SỞ CHÍNH",
+  "HEAD_QUARTERS": "Trụ sở chính",
   "SHOW_ROOM": "SHOW_ROOM",
   "Help_Us_Know": "Hãy giúp chúng tôi biết, bạn là ai?",
   "Investor": "Chủ đầu tư",
@@ -51,7 +51,9 @@
     "Smart_Curtain": "Rèm thông minh",
     "Smart_Meter": "Đo lường thông minh",
     "Zigbee_KIT": "Zigbee KIT",
-    "Door_motor_gate": "Động cơ cửa - cổng"
+    "Door_motor_gate": "Động cơ cửa - cổng",
+    "Smart_Button": "Công tắc cơ thông minh",
+    "Motor": "Động cơ"
   },
   "The_Reason": "Lý do bạn nên lựa chọn Sliving",
   "Outstanding_Project": "Dự án nổi bật",
@@ -270,15 +272,16 @@
   "name_of_construction_works": "TÊN CÔNG TRÌNH ĐƯỢC THI CÔNG",
   "construction": {
     "villa": "Biệt thự",
-    "cinema": "Cinema",
+    "cinema": "Rạp phim",
     "hospital": "Bệnh viện",
-    "Office": "Office",
+    "Office": "Văn phòng",
     "restaurant": "Nhà hàng",
     "school": "Trường học",
     "store": "Cửa hàng",
     "townhouse": "Nhà phố",
     "factory": "Nhà xưởng",
-    "apartment": "Căn hộ"
+    "apartment": "Căn hộ",
+    "building": "Tòa nhà"
   },
   "smart-parking": {
     "section_1": {
@@ -334,5 +337,34 @@
       "description_2": "Ultrasonic sensors",
       "description_3": "Light Sensor"
     }
+  },
+  "smart_home_v2": {
+    "header_title": "Kỷ nguyên của cuộc sống thông minh.",
+    "header_sub_title": "Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có",
+    "sliving_products": "Sản phẩm Sliving",
+    "project_types_that_use_Sliving_solutions": "Các loại dự án sử dụng giải pháp Sliving",
+    "the_trend_towards_the_application": "Xu hướng ứng dụng công nghệ trong quản lý tài sản cũng được xem là một trong những cách để nâng cao năng lực hoạt động của dự án. Yếu tố này cũng giúp tạo nên sự khác biệt trong tiêu chuẩn dịch vụ quản lý tài sản chuyên nghiệp,...",
+    "successful_projects": "Các dự án thành công khi sử dụng các sản phẩm Sliving",
+    "solution_for_your_needs": "Giải pháp cho nhu cầu của bạn",
+    "solution_parking": "Hệ thống quản lý bãi đỗ xe thông minh",
+    "solution_lighting": "Hệ thống điều khiển ánh sáng",
+    "solution_security": "Hệ thống quản lý an ninh",
+    "solution_home": "Giải pháp nhà thông minh"
+
+
+  },
+  "read_more": "Đọc thêm",
+  "company_name": "CÔNG TY CỔ PHẦN TẬP ĐOÀN CÔNG NGHỆ UNICLOUD",
+  "branch": "Chi nhánh",
+  "address_head_quarters": "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+  "home_page_v2.product_development_strategy": "Chiến lược phát triển sản phẩm",
+  "ready_go_to_global": "Vươn tầm quốc tế",
+  "CONNECTING_ECOsystems": "Kết nối các hệ sinh thái",
+  "sub_ready_go_to_global": "Tại Unicloud, mọi sản phẩm được khai sinh để giải các bài toán local nhưng phải được thiết kế để sẵn sàng go-global. Thiết kế mở, cho phép dễ dàng tích hợp với mọi platform, hardware và hệ thống của các đối tác toàn cầu.",
+  "sub_CONNECTING_ECOsystems": "Sở hữu các hệ thống lõi và công nghệ lõi để khai thác Big Data thông qua việc chia sẻ người dùng với các nền tảng khác. Tập trung nguồn lực vào các hệ sinh thái tạo ra hàng triệu người dùng, hàng tỷ giao dịch xoay quanh Bất động sản, Banking, Tài Chính, Bảo hiểm và các dịch vụ thiết yếu hàng ngày.",
+  "sub_CUSTOMER_CENTRIC": "Lấy khách hàng làm trung tâm chuyển đổi số, khai thác tối đa tài nguyên & giữ chân khách hàng.",
+  "products_v2": {
+    "header": "Chúng tôi có mọi thứ trong tầm kiểm soát. Chúng tôi cung cấp một loạt các giải pháp điều khiển để đáp ứng nhu cầu của hầu hết mọi dự án",
+    "Featured_Product": "Sản phẩm nổi bật"
   }
 }

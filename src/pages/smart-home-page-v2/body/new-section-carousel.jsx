@@ -8,28 +8,23 @@ import img3 from "@images/new-home-page/carousel/horizon.jpg";
 import img4 from "@images/new-home-page/carousel/citysg-dai-dien-sshomes.jpg";
 
 import imgTest from "@images/main-page-v2/element-left.png";
+
 import loadable from "@loadable/component";
+
+import { useTranslation } from "react-i18next";
+
 const Carousel = loadable(() => import("react-spring-3d-carousel"));
+
 const isBrowser = typeof window !== "undefined";
 
 export default function NewSectionCarousel() {
+
+  const { t } = useTranslation();
 
   const [goToSlide, setGoToSlide] = useState(0);
   const handleChangeSlide = (index) => {
     setTitle(arrImg[index].title)
     setGoToSlide(index);
-    // document.querySelectorAll(".css-1fzpoyk div")[0].style.transform = "unset";
-    // document.querySelectorAll(".css-1fzpoyk div")[1].style.transform = "unset";
-    // document.querySelectorAll(".css-1fzpoyk div")[2].style.transform = "unset";
-    // document.querySelectorAll(".css-1fzpoyk div")[3].style.transform = "unset";
-    // document.querySelectorAll(".css-1fzpoyk div")[4].style.transform = "unset";
-    // setTimeout(() => {
-    //   document.querySelectorAll(".css-1fzpoyk div")[0].removeAttribute("style")
-    //   document.querySelectorAll(".css-1fzpoyk div")[1].removeAttribute("style")
-    //   document.querySelectorAll(".css-1fzpoyk div")[2].removeAttribute("style")
-    //   document.querySelectorAll(".css-1fzpoyk div")[3].removeAttribute("style")
-    //   document.querySelectorAll(".css-1fzpoyk div")[4].removeAttribute("style")
-    // }, 300);
   }
   const arrImg = [
     { key: 0, content: <div ><img src={img1} alt="" height="568" width="678" style={{ objectFit: 'cover' }} /></div>, title: "SUNSHINE CITY SÀI GÒN" },
@@ -57,7 +52,7 @@ export default function NewSectionCarousel() {
         <div className="container-wrap">
           <Row>
             <div className="carousel-header">
-              <h3>Successful projects using Sliving products</h3>
+              <h3>{t(`smart_home_v2.successful_projects`)}</h3>
               <img src={imgLine} alt="" />
             </div>
           </Row>

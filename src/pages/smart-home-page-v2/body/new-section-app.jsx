@@ -8,66 +8,80 @@ import imgHome from "@components/svg/house";
 import imgOffice from "@components/svg/office";
 import imgSchool from "@components/svg/school";
 import imgLine from "@images/new-home-page/app-img/line.png";
+import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
+import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import { useTranslation } from "react-i18next"
 
-SwiperCore.use([Pagination, Navigation]);
+
+
+import SwiperCore, { Pagination } from "swiper";
+SwiperCore.use([Pagination]);
 
 export default function NewSectionApp() {
+
+  const { t } = useTranslation();
+
   const listItemSlider = [
     {
       id: 1,
       img: imgCinema,
-      name: "Cinema",
+      name: "construction.cinema",
     },
     {
       id: 2,
       img: imgStore,
-      name: "Store",
+      name: "construction.building",
     },
     {
       id: 3,
       img: imgHome,
-      name: "Home",
+      name: "construction.apartment",
     },
     {
       id: 4,
       img: imgOffice,
-      name: "Office",
+      name: "construction.Office",
     },
     {
       id: 5,
       img: imgSchool,
-      name: "School",
+      name: "construction.school",
     },
     {
       id: 6,
       img: imgSchool,
-      name: "School",
+      name: "construction.villa",
     },
-    {
-      id: 7,
-      img: imgSchool,
-      name: "School",
-    },
-  ];
 
+  ];
+  const BuildNextEl = () => {
+    return (
+      <div className="btn-next btn-carousel btn-carousel-right">
+        <img src={iconNextEl} alt="icon" />
+      </div>
+    );
+  };
+
+  const BuildPrevEl = () => {
+    return (
+      <div className="btn-prev btn-carousel btn-carousel-left">
+        <img src={iconPrevEl} alt="icon" />
+      </div>
+    );
+  };
   return (
     <section>
       <div className="home-page-app">
         <div className="container-wrap">
           <Row>
             <Col xl={6} lg={6} md={6} className="app-title">
-              <h3>Project types that use Sliving solutions.</h3>
+              <h3>{t(`smart_home_v2.project_types_that_use_Sliving_solutions`)}</h3>
               <img src={imgLine} alt="" />
             </Col>
             <Col xl={6} lg={6} md={6} className="app-desc">
               <p>
-                The trend towards the application of technology in property
-                management is also seen as one way to improve the operational
-                capacity of the project. This factor also helps make a
-                difference in the standard of professional property management
-                services,...
+                {t(`smart_home_v2.the_trend_towards_the_application`)}
               </p>
             </Col>
           </Row>
@@ -75,27 +89,27 @@ export default function NewSectionApp() {
 
         <Col className="app-slider">
           <Swiper
-            slidesPerView={3}
-            centeredSlides={true}
-            spaceBetween={30}
-            pagination={{
-              type: "fraction",
+            slidesPerView={4}
+            slidesPerGroup={1}
+            spaceBetween={32}
+            navigation={{
+              nextEl: ".btn-next",
+              prevEl: ".btn-prev",
             }}
-            navigation={true}
-            className="mySwiper"
+            className="swiper-solution"
           >
-            {listItemSlider.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="slider-item">
-                  <div className="slider-item-icon">
-                    <item.img />
-                  </div>
-                  <div className="slider-item-title">
-                    <p>{item.name}</p>
-                  </div>
+            {listItemSlider.map((item, index) => <SwiperSlide key={index}>
+              <div className="slider-item">
+                <div className="slider-item-icon">
+                  <item.img />
                 </div>
-              </SwiperSlide>
-            ))}
+                <div className="slider-item-title">
+                  <p>{t(`${item.name}`)}</p>
+                </div>
+              </div>
+            </SwiperSlide>)}
+            <BuildPrevEl />
+            <BuildNextEl />
           </Swiper>
         </Col>
       </div>

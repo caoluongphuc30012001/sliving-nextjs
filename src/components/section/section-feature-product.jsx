@@ -5,8 +5,11 @@ import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
 import lineImg from "@images/new-home-page/app-img/line.png";
 import Link from "@components/gatsby-link";
+
+import { useTranslation } from 'react-i18next';
 import "../style.scss";
 const SectionFeatureProduct = ({ dataProductHot }) => {
+    const { t } = useTranslation();
     const NextArrow = (props) => {
         const { className, style, onClick } = props;
         return (
@@ -67,7 +70,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
 
     return (
         <section className="container-v2 section-prod-feature">
-            <h2 className="prod-title-v2">Featured Product</h2>
+            <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>
             <div className="prod-line"><img src={lineImg} alt="" /></div>
             <Slider {...settings}>
                 {arrProductHot && arrProductHot.map((prod, index) => <div key={index}><Link to={`/smart-home/products/${prod?.node?.frontmatter?.slug}`}><CardProductV2 props={prod.node.frontmatter} isButton={true} /></Link></div>)}

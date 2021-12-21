@@ -7,8 +7,8 @@
       "COOPERATION": "Cooperation",
       "SUPPORT": {
         "SUPPORT": "Support",
-        "USER_MANUALS":"User Manuals",
-        "PRODUCT_VIDEOS":"Product Videos"
+        "USER_MANUALS": "User Manuals",
+        "PRODUCT_VIDEOS": "Product Videos"
       },
       "ABOUTUS": "About Us",
       "CONTACTUS": "Contact Us",
@@ -25,7 +25,7 @@
     "ADDRESS_COMPANY": "Block 5, Lot I-3B-1, Street N6, Saigon Hi-Tech Park, Ward Tan Phu, Thu Duc City, Ho Chi Minh City, Vietnam, 700000"
   },
   "CONTACT_PHONE": "CONTACT_PHONE",
-  "HEAD_QUARTERS": "HEAD_QUARTERS",
+  "HEAD_QUARTERS": "HEAD QUARTERS",
   "SHOW_ROOM": "SHOW_ROOM",
   "Help_Us_Know": "Help us know you better, What your job's title?",
   "Investor": "Investor",
@@ -49,9 +49,11 @@
     "Sensors": "Sensors",
     "Air_Conditioning_System": "Air Conditioning System",
     "Smart_Curtain": "Smart Curtain",
-    "Smart_Meter": "Smart Measurement",
+    "Smart_Meter": "Smart Meter",
     "Zigbee_KIT": "Zigbee KIT",
-    "Door_motor_gate": "Door Motor Gate"
+    "Door_motor_gate": "Door Motor Gate",
+    "Smart_Button": "Smart Button",
+    "Motor": "Motor"
   },
   "The_Reason": "The Reasons Why You Should Choose Sliving",
   "Outstanding_Project": "Outstanding Project",
@@ -278,7 +280,8 @@
     "store": "Store",
     "townhouse": "Townhouse",
     "factory": "Factory",
-    "apartment": "Apartment"
+    "apartment": "Apartment",
+    "building": "Building"
   },
   "smart-parking": {
     "section_1": {
@@ -332,5 +335,33 @@
       "description_2": "Ultrasonic sensors",
       "description_3": "Light Sensor"
     }
+  },
+  "smart_home_v2": {
+    "header_title": "The era of intelligent life.",
+    "header_sub_title": "Complex project management experience. When selecting an offshore software development company, ensure that they have",
+    "sliving_products": "Sliving products",
+    "project_types_that_use_Sliving_solutions": "Project types that use Sliving solutions.",
+    "the_trend_towards_the_application": "The trend towards the application of technology in property management is also seen as one way to improve the operational capacity of the project. This factor also helps make a difference in the standard of professional property management services,...",
+    "successful_projects": "Successful projects using Sliving products",
+    "solution_for_your_needs": "Solution for your needs",
+    "solution_parking": "Smart parking management system",
+    "solution_lighting": "Light control system",
+    "solution_security": "Security management system",
+    "solution_home": "Smart home solutions"
+  },
+  "read_more": "Read more",
+  "company_name": "CÔNG TY CỔ PHẦN TẬP ĐOÀN CÔNG NGHỆ UNICLOUD",
+  "branch": "Branch",
+  "address_head_quarters": "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+  "home_page_v2.product_development_strategy": " Product Development strategy",
+  "ready_go_to_global": "Ready go to global",
+  "CONNECTING_ECOsystems": "Connecting ECOsystems",
+  "CUSTOMER_CENTRIC": "Customer centric",
+  "sub_ready_go_to_global": "At Unicloud, every product is born to solve local problems but must be designed to be go-global ready. Open design, allowing easy integration with all platforms, hardware and systems of global partners.",
+  "sub_CONNECTING_ECOsystems": "Owning core systems and core technologies to exploit Big Data through sharing users with other platforms. Focusing resources on ecosystems that create millions of users, billions of transactions around Real Estate, Banking, Finance, Insurance and daily essential services.",
+  "sub_CUSTOMER_CENTRIC": "Taking customers as the center of digital transformation, maximizing resources & retaining customers.",
+  "products_v2": {
+    "header": "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.",
+    "Featured_Product": "Featured Product"
   }
 }
