@@ -55,7 +55,7 @@ export default function NavbarSmartHomeDesktop() {
     { id: 0, title: "Smart Home", path: "/solution/smart-home" },
     { id: 1, title: "Smart Parking", path: "/solution/parking" },
     { id: 2, title: "Smart Security", path: "/solution/security" },
-    { id: 3, title: "Energy Saving" },
+    { id: 3, title: "Smart Lighting", path: "/smart-lighting-v2" },
   ];
   const arrMenuSupport = [
     { id: 0, title: "FAQ", img: iconBook },
@@ -190,7 +190,7 @@ export default function NavbarSmartHomeDesktop() {
                   </div>
 
                   {/* Hover menu Support */}
-                  <div className="nav-hover-support">
+                  {/* <div className="nav-hover-support">
                     <Row>
                       {arrMenuSupport &&
                         arrMenuSupport.map((item) => (
@@ -214,7 +214,7 @@ export default function NavbarSmartHomeDesktop() {
                           </Col>
                         ))}
                     </Row>
-                  </div>
+                  </div> */}
                 </Nav>
               </Navbar.Collapse>
               <LanguageSwitcher />
