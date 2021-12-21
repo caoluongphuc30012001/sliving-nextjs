@@ -62,6 +62,7 @@ exports.createPages = async function ({ actions, graphql }) {
   const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
   const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
   const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
+  const SupportPage = require.resolve("./src/pages/support-page-v2/index.js");
   await graphql(
     `{
     allFile(filter: {absolutePath: {regex: "/(images/)/"}}) {
@@ -73,42 +74,46 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   }
 `);
-
-  const querySupportPage = await graphql(
-    `
-    {dataTechnicalAnswer:
-    allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            subtitle
-            slug
-          }
-          html
+const querySupportPage = await graphql(
+  `
+  {dataTechnicalAnswer:
+  allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          description
+          details
+          title
+          type
+          date
+          subtitle
+          slug
         }
+        html
       }
     }
   }
-  
+}
+
 `
-  );
+);
 
-  const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
-  createPage({
-    path: `/support/`,
-    component: pagesSupport,
-    context: {
-      data: querySupportPage
-    }
+const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
+createPage({
+  path: `/support/`,
+  component: pagesSupport,
+  context: {
+    data: querySupportPage
+  }
 
-  });
+});
   const arrLng = await getLng({ graphql: graphql });
   if (arrLng.length > 0 && productPage) {
     arrLng.forEach((lng) => {
       if (lng.lng === "en") {
+       
         createPage({
           path: `/smart-home/`,
           component: smartHomeComponent,
