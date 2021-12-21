@@ -3059,7 +3059,7 @@ a.btn-link-a {
     background: #fe8258;
     box-shadow: 0px 4px 6px -4px rgba(24, 39, 75, 0.12),
       0px 8px 8px -4px rgba(24, 39, 75, 0.08);
-    border-radius: 4px;
+    border-radius: 8px;
     border: inherit;
     min-width: 66.96px;
     span {
@@ -3870,20 +3870,20 @@ a.btn-link-a {
         background: #fff2ee;
       }
 
-      a#item-menu::before {
+      a.item-menu:nth-child(1):before {
         content: "";
-        top: 6%;
+        top: 25%;
         left: -1%;
         position: absolute;
         border: 1px solid #e1e3e6;
-        height: 87%;
+        height: 55%;
       }
       // Product hover
       .nav-hover-product {
         position: absolute;
         top: 90%;
         left: -15%;
-        max-width: fit-content;
+        width: 990px;
         max-height: fit-content;
         background: #ffffff;
         box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12),
@@ -3965,7 +3965,7 @@ a.btn-link-a {
         position: absolute;
         top: 90%;
         left: 10%;
-        max-width: 960px;
+        width: 770px;
         height: 303px;
         background: #ffffff;
         box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12),

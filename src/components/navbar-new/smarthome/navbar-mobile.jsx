@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, NavDropdown } from "react-bootstrap";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import { slide as Menu } from "react-burger-menu";
 import { useTranslation } from "react-i18next";
 
+import logo from "@images/logo/logo-header.svg";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
