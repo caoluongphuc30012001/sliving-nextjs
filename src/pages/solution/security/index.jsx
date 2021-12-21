@@ -15,7 +15,9 @@ import card3 from "@images/solution/security/card3.svg";
 import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
 import CardSolution from "@components/card/card-solution/card-solution";
+import { useTranslation } from "react-i18next";
 const SmarthomeSolution = () => {
+  const { t } = useTranslation();
   const data = DataProductNew();
   return (
     <LayoutNew isMainPage pageContext={{ isSmartHome: true }}>
@@ -25,18 +27,18 @@ const SmarthomeSolution = () => {
         <div className="container-v2 card-solution">
           <CardSolution
             imgUrl={card1}
-            title="Telescopes 101"
-            description="History of modern astronomy, there is probably no one greater."
+            title={t(`solution.security.card_1.title`)}
+            description={t(`solution.security.card_1.description`)}
           />
           <CardSolution
             imgUrl={card2}
-            title="Moon Gazing"
-            description="History of modern astronomy, there is probably no one greater."
+            title={t(`solution.security.card_2.title`)}
+            description={t(`solution.security.card_2.description`)}
           />
           <CardSolution
             imgUrl={card3}
-            title="The Amazing Hubble"
-            description="History of modern astronomy, there is probably no one greater."
+            title={t(`solution.security.card_3.title`)}
+            description={t(`solution.security.card_3.description`)}
           />
         </div>
         <section className="introSection container">
@@ -45,11 +47,8 @@ const SmarthomeSolution = () => {
             <div className="margin-bottom">
               <SectionContent
                 imgUrl={imgFirst}
-                title="Smart lock"
-                subDescription="Use fingerprinting to open or close the door
-                Built-in magnetic card reader, passcode
-                There are LEDs and bright tones for the suitcases
-                Can be unlocked from a distance via the phone's Bluetooth function"
+                title={t(`solution.security.section_1.title`)}
+                subDescription={t(`solution.security.section_1.description`)}
                 description={""}
               />
             </div>
@@ -57,30 +56,24 @@ const SmarthomeSolution = () => {
             <div className="section-second margin-bottom">
               <SectionContent
                 imgUrl={imgSecond}
-                title="Smart revolving door"
-                subDescription="Zone safety management feature combined with proprietary software:
-                Integrated facial recognition and magnetic card system
-                Combine with intelligent elevator to call floors automatically
-                Open the gate automatically in case of an emergency notification"
+                title={t(`solution.security.section_2.title`)}
+                subDescription={t(`solution.security.section_2.description`)}
                 description={""}
               />
             </div>
             <div className=" margin-bottom">
               <SectionContent
                 imgUrl={imgThird}
-                title="Face recognition"
-                subDescription={`Using biometric technology to extract facial recognition features:
-                Authenticate residents, control access to areas to be monitored as well as used to call elevators, open barriers
-                Integrated into a security camera
-                Can recognize multiple faces at the same time`}
+                title={t(`solution.security.section_3.title`)}
+                subDescription={t(`solution.security.section_3.description`)}
                 description={""}
               />
             </div>
           </div>
         </section>
         <SectionBannerV2
-          title="Find other options that are perfect for you."
-          desc="We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!"
+          title={t(`solution.footer`)}
+          desc={t(`solution.subFooter`)}
           btnContact={true}
         />
       </div>

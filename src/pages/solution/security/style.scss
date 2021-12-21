@@ -36,7 +36,7 @@ p {
   }
   .bottomImage{
     img{
-      max-height: 900px;
+      height: 900px;
       width: 1440px;
     }
     .contentImage {
@@ -46,12 +46,12 @@ p {
       transform: translateX(-50%);
       text-align: left;
       color: white;
-      max-width: 770px;
+      max-width: 797px;
       h1 {
         font-weight: bold;
         position: relative;
         font-size: 82px;
-        width: 770px;
+        width: 797px;
      
         text-shadow: -2px -2px rgb(52, 24, 177);
         img {
