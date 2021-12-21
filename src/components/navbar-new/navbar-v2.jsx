@@ -49,40 +49,6 @@ export default function NavbarNew() {
                           }`}
                           id="item-menu"
                         >
-<<<<<<< HEAD
-                            <Link to="/" className="logo nav-logo nav-brand">
-                                <Image className="img-obj-cover" src={logo} alt="sliving" width={202} height={44} />
-                            </Link>
-                            <Navbar.Collapse
-                                id="responsive-navbar-nav"
-                                className="animation-nav animation-nav-v2 "
-                            >
-                                <Nav className="nav-desktop">
-                                    {arrMenu &&
-                                        arrMenu.map((nav, index) => {
-                                            return (
-                                                <Link
-                                                    key={index}
-                                                    to={nav.path}
-                                                    className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
-                                                        }`}
-                                                    id="item-menu"
-                                                >
-                                                    {nav.title}
-                                                </Link>
-
-                                            );
-                                        })}
-                                    <LanguageSwitcher />
-                                </Nav>
-                            </Navbar.Collapse>
-                        </Navbar>
-                    </div>
-                </div>
-            </nav>
-        </>
-    );
-=======
                           {nav.title}
                         </Link>
                       );
@@ -96,5 +62,4 @@ export default function NavbarNew() {
       </nav>
     </>
   );
->>>>>>> bfe3f48b28049ced5ce80e5eb6556f22749b9e33
 }
