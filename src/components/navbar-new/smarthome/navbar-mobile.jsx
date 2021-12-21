@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Image, Nav, Row, Col, NavDropdown } from "react-bootstrap";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Navbar, Image, Nav, NavDropdown } from "react-bootstrap";
+import { graphql, useStaticQuery } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 import { slide as Menu } from "react-burger-menu";
+import Link from "@components/gatsby-link";
 import { useTranslation } from "react-i18next";
 
 export default function NavbarSmartHomeMobile() {
@@ -21,12 +22,12 @@ export default function NavbarSmartHomeMobile() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, []);
+  }, [i18n,dataProductMenu]);
 
   const arrMenuSolution = [
-    { id: 0, title: "Smart Home" },
-    { id: 1, title: "Smart Parking" },
-    { id: 2, title: "Smart Security" },
+    { id: 0, title: "Smart Home", path: "/solution/smart-home" },
+    { id: 1, title: "Smart Parking", path: "/solution/parking" },
+    { id: 2, title: "Smart Security", path: "/solution/security" },
     { id: 3, title: "Energy Saving" },
   ];
   const arrMenuSupport = [
@@ -94,7 +95,9 @@ export default function NavbarSmartHomeMobile() {
                     <div className="hover-solution">
                       <div className="solution-list-item">
                         <div className="solution-name">
-                          <span>{item.title}</span>
+                          <Link to={item.path}>
+                            <span>{item.title}</span>
+                          </Link>
                         </div>
                         <ul className="solution-item"></ul>
                       </div>

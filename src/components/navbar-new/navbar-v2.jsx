@@ -1,16 +1,15 @@
 import React from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
-import { Link } from "gatsby";
+import Link from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
 export default function NavbarNew() {
   const arrMenu = [
     { id: "0", title: "Smart Home", isActive: true, path: "/smart-home" },
-    { id: "1", title: "Smart Building", isActive: false, path: "#" },
-    { id: "2", title: "Fintech IoT", isActive: false, path: "#" },
-    { id: "3", title: "Lighting", isActive: false, path: "#" },
-    { id: "4", title: "About Us", isActive: false, path: "/contact-page-v2" },
+    { id: "1", title: "Fintech IoT", isActive: false, path: "#" },
+    { id: "2", title: "Lighting", isActive: false, path: "/smart-lighting-v2" },
+    { id: "3", title: "About Us", isActive: false, path: "#" },
   ];
 
   return (
@@ -37,7 +36,8 @@ export default function NavbarNew() {
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2 "
               >
-                <Nav className="nav-desktop">
+                <Nav className="nav-desktop navbarItem">
+                  <div>
                   {arrMenu &&
                     arrMenu.map((nav, index) => {
                       return (
@@ -50,9 +50,15 @@ export default function NavbarNew() {
                           id="item-menu"
                         >
                           {nav.title}
+                          {nav.title==="About Us"?<ul className="subNav">
+                            <li><Link>Brand Story</Link></li>
+                            <li><Link>News</Link></li>
+                            <li><Link to='/contact-page-v2'>Contact us</Link></li>
+                            </ul>:""}
                         </Link>
                       );
                     })}
+                  </div>
                   <LanguageSwitcher />
                 </Nav>
               </Navbar.Collapse>

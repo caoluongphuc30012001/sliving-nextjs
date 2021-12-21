@@ -6,7 +6,7 @@ const BottomImage = () => {
   return (
     <section className="bottomImage mb-5">
       <div>
-        <img src={bottomImage} alt="Bottom Image" />
+        <img src={bottomImage} alt="Bottom" />
         <div className="contentImage">
           <h1>Revolution of intelligent illumination
             <img src={underLine} alt="underline" />

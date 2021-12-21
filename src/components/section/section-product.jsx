@@ -3,10 +3,9 @@ import CardProductV2 from '../card/card-product-v2';
 import imgLine from "@images/new-home-page/app-img/line.png";
 import { Col, Row } from "react-bootstrap";
 import "../style.scss";
-import ButtonLearn from '../button/button-learn';
-import { Link } from "gatsby";
+import Link from "@components/gatsby-link";
 
-const SlideProduct = ({ data }) => {
+const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const getData = data;
     const [post, setPost] = useState([]);
 
@@ -41,14 +40,14 @@ const SlideProduct = ({ data }) => {
     const buildSlideProduct = useMemo(() => {
         return (
             <section className="container-wrap carousel-product-filter">
-                <div className="product-filter-header">
-                    <Row>
+                {noNavbar&&noTitle?'':<div className="product-filter-header">
+                    {noTitle?'':<Row>
                         <div className="product-header">
                             <h3>Sliving products</h3>
                             <img src={imgLine} alt="" />
                         </div>
-                    </Row>
-                    <Row>
+                    </Row>}
+                    {noNavbar?'':<Row>
                         <Col xl={12} lg={12} md={12} className="product-filter-item">
                             <ul >
                                 {arrProduct && arrProduct.map((item, index) => {
@@ -58,17 +57,14 @@ const SlideProduct = ({ data }) => {
                                 })}
                             </ul>
                         </Col>
-                    </Row>
-                </div>
+                    </Row>}
+                </div>}
                 <div className="product-list-item carousel-product">
                     <Row noGutters>
                         {post && (post.map((product, index) => <Col xl={3} lg={3} md={3} className="product-item" key={index}>
-                            <Link to={`/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
+                            <Link to={`/smart-home/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
                         </Col>))
                         }
-                    </Row>
-                    <Row className="just-cont-center">
-                        <ButtonLearn />
                     </Row>
                 </div>
             </section >

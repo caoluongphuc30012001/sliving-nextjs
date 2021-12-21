@@ -7,7 +7,7 @@ import "./index.scss"
 const IndexPage = ({ pageContext }) => {
   console.log();
   return (
-    <LayoutV2 isMainPage>
+    <LayoutV2 isMainPage pageContext={{isSmartHome:true}}>
       <div className="contentPage container">
         <BannerTop />
         <ContentDetail />

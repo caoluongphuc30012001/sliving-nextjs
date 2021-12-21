@@ -6,7 +6,7 @@ import {graphql} from "gatsby"
 const IndexPage = ({pageContext}) => {
   console.log("pageContext",pageContext);
   return (
-    <LayoutV2 isMainPage>
+    <LayoutV2 isMainPage pageContext={{isSmartHome:true}}>
       <TechnicalSol data={pageContext?.data?.data} />
     </LayoutV2>
   );

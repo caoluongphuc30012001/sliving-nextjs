@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { QueryProductPage } = require("./src/query/await/ProductPage");
-
+const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -65,6 +65,10 @@ exports.createPages = async function ({ actions, graphql }) {
   const SupportPage = require.resolve("./src/pages/support-page-v2/index.js");
   const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
   const detailSupport = require.resolve("./src/pages/content-detail-v2");
+  const smartLightingComponent = require.resolve("./src/pages/smart-lighting-v2/index.js");
+  const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
+
+
   await graphql(
     `{
     allFile(filter: {absolutePath: {regex: "/(images/)/"}}) {
@@ -131,16 +135,42 @@ createPage({
             isSmartHome: true
           },
         });
+
         createPage({
-          path: `/products/`,
+          path: `/smart-lighting/`,
+          component: smartLightingComponent,
+          context: {
+            data: productPage.data.ProductPage,
+            isSmartLighting: true
+          },
+        });
+        createPage({
+          path: `/smart-lighting/contact`,
+          component: contactComponent,
+          context: {
+            data: productPage.data.ProductPage,
+            isNavbarContact:{isSmartLighting:true}
+          },
+        });
+
+        createPage({
+          path: `/smart-home/products/`,
           component: productComponent,
           context: {
             data: productPage.data.ProductPage
           },
         });
+        createPage({
+          path: `/smart-home/contact`,
+          component: contactComponent,
+          context: {
+            data: productPage.data.ProductPage,
+            isNavbarContact:{isSmartHome:true}
+          },
+        });
         productPage.data.ProductPage.edges.forEach((product) => {
           createPage({
-            path: `/products/${product.node.frontmatter.slug}`,
+            path: `/smart-home/products/${product.node.frontmatter.slug}`,
             component: productDetailComponent,
             context: {
               data: product.node
