@@ -1,14 +1,13 @@
 module.exports = {
   flags: {
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    DEV_WEBPACK_CACHE: true
+    DEV_WEBPACK_CACHE: true,
   },
   siteMetadata: {
     title: "Sliving",
   },
   pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [
-
     `gatsby-plugin-sass`,
     "gatsby-plugin-styled-components",
     `gatsby-transformer-sharp`,
@@ -96,7 +95,7 @@ module.exports = {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
-        bucketPrefix: `${process.env.AWS_S3_PREFIX}`,
+        bucketPrefix: process.env.AWS_S3_PREFIX,
         removeNonexistentObjects: process.env.AWS_S3_PREFIX ? false : true,
       },
     },
@@ -107,9 +106,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-relative-images`,
             options: {
-              staticFolderName: 'public/static',
-              include: ['featured'],
-              exclude: ['featured.skip'],
+              staticFolderName: "public/static",
+              include: ["featured"],
+              exclude: ["featured.skip"],
             },
           },
           {
@@ -128,6 +127,6 @@ module.exports = {
       options: {
         url: `https://data.sliving.vn/graphql`,
       },
-    }
+    },
   ],
 };
