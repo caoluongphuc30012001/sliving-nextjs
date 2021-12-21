@@ -63,6 +63,8 @@ exports.createPages = async function ({ actions, graphql }) {
   const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
   const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
   const SupportPage = require.resolve("./src/pages/support-page-v2/index.js");
+  const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
+  const detailSupport = require.resolve("./src/pages/content-detail-v2");
   await graphql(
     `{
     allFile(filter: {absolutePath: {regex: "/(images/)/"}}) {
@@ -100,10 +102,17 @@ const querySupportPage = await graphql(
 `
 );
 
-const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
 createPage({
   path: `/support/`,
   component: pagesSupport,
+  context: {
+    data: querySupportPage
+  }
+
+});
+createPage({
+  path: `/support/detail`,
+  component: detailSupport,
   context: {
     data: querySupportPage
   }

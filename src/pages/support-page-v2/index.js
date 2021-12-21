@@ -6,7 +6,7 @@ import {graphql} from "gatsby"
 const IndexPage = ({pageContext}) => {
   console.log("pageContext",pageContext);
   return (
-    <LayoutV2>
+    <LayoutV2 isMainPage>
       <TechnicalSol data={pageContext?.data?.data} />
     </LayoutV2>
   );

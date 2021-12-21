@@ -42,7 +42,7 @@ export default function NavbarSmartHomeDesktop() {
       id: "3",
       title: t(`HEADER.HOMEPAGE.SUPPORT.SUPPORT`),
       isActive: false,
-      path: "#",
+      path: "/support",
     },
     {
       id: "4",

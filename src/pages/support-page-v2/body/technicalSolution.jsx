@@ -17,7 +17,7 @@ import useGetLgn from "@hook/useGetLgn";
 import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
 import { useLocation } from "@reach/router";
-import {graphql} from "gatsby";
+import {graphql,navigate} from "gatsby";
 const TechnicalSol = ({data}) => {
     console.log("data",data);
   const Lgn = useGetLgn();
@@ -350,7 +350,8 @@ const TechnicalSol = ({data}) => {
                         <Col sm={5} xs={12}>
                           <div className="image-container first-slider-wrap">
                             <div className="first-slider-wrap__left">
-                              <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}>
+                              {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
+                              <Link to={`detail`}>
                                 {
                                   node.frontmatter.featuredImage ? <Image className="image-example"
                                     src={node.frontmatter.featuredImage.publicURL} alt="Image 1"
@@ -371,7 +372,8 @@ const TechnicalSol = ({data}) => {
                         </Col>
                         <Col >
                           <div className="first-slider-wrap__right">
-                            <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}>
+                            {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
+                            <Link to={`detail`}>
                               <div className="text-title fs-16">{node.frontmatter.title}</div>
                               <div className="text-date fs-12">{node.frontmatter.date}</div>
                               <div className="text-description fs-14">{node.frontmatter.description}</div>

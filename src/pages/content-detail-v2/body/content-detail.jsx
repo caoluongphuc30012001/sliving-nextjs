@@ -1,10 +1,12 @@
 import React from "react";
 import bright from "@images/content-page/placeholder.png";
 import car from "@images/content-page/image.png";
+import BotBanner from '@images/support-page-v2-img/banner1.jpg'
+
 const ContentDetail = ({ pageContext }) => {
   console.log();
   return (
-    <section className="contentDetail container">
+    <section className="contentDetail">
       <h1 className="mt-5">
         Using Banner Stands to Increase Trade Show Traffic
       </h1>
@@ -52,6 +54,10 @@ const ContentDetail = ({ pageContext }) => {
           acquiring much more sophisticated equipment and in synchronizing our
           telescopic operations.
         </p>
+      </div>
+      <div className="footerContent"><span>Share:</span><span className="icon">f</span><div>45</div></div>
+      <div class="bot-banner" >
+        <img class="bot-banner-img" src={BotBanner} alt="bottom banner"/>
       </div>
     </section>
   );
