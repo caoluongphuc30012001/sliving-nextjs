@@ -10,7 +10,6 @@ import ImageHp_2 from "@images/main-page-v2/ai.png";
 import ImageHp_3 from "@images/main-page-v2/artboard-2.png";
 import ImageHp_4 from "@images/main-page-v2/artboard.png";
 
-
 import sectionLeft from "@images/main-page-v2/element-left.png";
 
 import sectionLeft1 from "@images/main-page-v2/crm.jpg";
@@ -115,7 +114,13 @@ const IndexPage = () => {
   const BuildImageCarousel = ({ carousel, isButton }) => {
     return (
       <div className="header-banner-v2">
-        <img src={carousel.src} alt="sliving alt" loading="lazy" width={1440} height={799} />
+        <img
+          src={carousel.src}
+          alt="sliving alt"
+          loading="lazy"
+          width={1440}
+          height={799}
+        />
         <div className="banner-v2-wrap">
           {/* {carousel.title && <BuildText carousel={carousel} />} */}
           {isButton && <ButtonCustom content={"Button"} />}
@@ -221,7 +226,7 @@ const IndexPage = () => {
   const BuildLearnMore = () => {
     return (
       <div className="learn-more">
-        <span>Learn more</span>{" "}
+        <span>Learn more</span>
         <div className="btn-circle">
           <img src={iconArrowRight} alt="" />
         </div>

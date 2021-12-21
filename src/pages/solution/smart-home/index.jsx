@@ -14,8 +14,9 @@ import imgFive from "@images/solution/smart-home/imgFive.svg";
 import imgSix from "@images/solution/smart-home/imgSix.svg";
 import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
-import CardSolution from "@components/card/card-solution/card-solution";
+import { useTranslation } from "react-i18next";
 const SmarthomeSolution = () => {
+  const { t } = useTranslation();
   const data = DataProductNew();
   return (
     <LayoutNew isMainPage pageContext={{ isSmartHome: true }}>
@@ -28,10 +29,8 @@ const SmarthomeSolution = () => {
             <div className="margin-bottom">
               <SectionContent
                 imgUrl={imgFirst}
-                title="Smart lighting"
-                subDescription="On arrival at the parking lot, users can easily reach the vacancy through:
-                The fastest browser application.
-                Led sign indicating a direction in foundations"
+                title={t(`solution.smart-home.section_1.title`)}
+                subDescription={t(`solution.smart-home.section_1.description`)}
                 description={""}
               />
             </div>
@@ -39,40 +38,40 @@ const SmarthomeSolution = () => {
             <div className="section-second margin-bottom">
               <SectionContent
                 imgUrl={imgSecond}
-                title="Remote control for air conditioning"
-                subDescription="The solution uses equipment to connect the air conditioner to the telephony application. The air conditioner works with other appliances depending on the user scenario and the system is monitored and controlled remotely"
+                title={t(`solution.smart-home.section_2.title`)}
+                subDescription={t(`solution.smart-home.section_2.description`)}
                 description={""}
               />
             </div>
             <div className=" margin-bottom">
               <SectionContent
                 imgUrl={imgThird}
-                title="Smart switch"
-                subDescription="Sliving's smart switch products allow users to control devices via the app, including lights, blinds, air conditioners or embedded multi-device operating scenarios. Different designs ranging from modern touch switches to traditional mechanical switches meet every user's needs and preferences"
+                title={t(`solution.smart-home.section_3.title`)}
+                subDescription={t(`solution.smart-home.section_3.description`)}
                 description={""}
               />
             </div>
             <div className="section-second margin-bottom">
               <SectionContent
                 imgUrl={imgFour}
-                title="Sensors"
-                subDescription="The system of motion sensors, light sensors, door sensors, etc., combined with electrical equipment, creates a business case to meet the safety and comfort demands of the home"
+                title={t(`solution.smart-home.section_4.title`)}
+                subDescription={t(`solution.smart-home.section_4.description`)}
                 description={""}
               />
             </div>
             <div className=" margin-bottom">
               <SectionContent
                 imgUrl={imgFive}
-                title="Smart curtain"
-                subDescription="Help remote control the curtain by telephone. The curtain system closes and opens automatically according to the program specified by the user"
+                title={t(`solution.smart-home.section_5.title`)}
+                subDescription={t(`solution.smart-home.section_5.description`)}
                 description={""}
               />
             </div>
             <div className="section-second margin-bottom">
               <SectionContent
                 imgUrl={imgSix}
-                title="Door - gate motor"
-                subDescription="The gate - door motor is connected to the Sliving system for remote control via phone, saving users from having to go to the door to open and close, ensuring safety and reducing waiting time"
+                title={t(`solution.smart-home.section_6.title`)}
+                subDescription={t(`solution.smart-home.section_6.description`)}
                 description={""}
               />
             </div>
@@ -80,8 +79,8 @@ const SmarthomeSolution = () => {
         </section>
         <br />
         <SectionBannerV2
-          title="Find other options that are perfect for you."
-          desc="We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!"
+          title={t(`solution.footer`)}
+          desc={t(`solution.subFooter`)}
           btnContact={true}
         />
       </div>

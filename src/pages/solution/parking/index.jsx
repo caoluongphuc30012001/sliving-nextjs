@@ -15,7 +15,9 @@ import card3 from "@images/solution/parking/card3.svg";
 import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
 import CardSolution from "@components/card/card-solution/card-solution";
+import { useTranslation } from "react-i18next";
 const SmarthomeSolution = () => {
+  const { t } = useTranslation();
   const data = DataProductNew();
   return (
     <LayoutNew isMainPage pageContext={{ isSmartHome: true }}>
@@ -25,18 +27,18 @@ const SmarthomeSolution = () => {
         <div className="container-v2 card-solution">
           <CardSolution
             imgUrl={card1}
-            title="Telescopes 101"
-            description="History of modern astronomy, there is probably no one greater."
+            title={t(`solution.parking.card_1.title`)}
+            description={t(`solution.parking.card_1.description`)}
           />
           <CardSolution
             imgUrl={card2}
-            title="Moon Gazing"
-            description="History of modern astronomy, there is probably no one greater."
+            title={t(`solution.parking.card_2.title`)}
+            description={t(`solution.parking.card_2.description`)}
           />
           <CardSolution
             imgUrl={card3}
-            title="The Amazing Hubble"
-            description="History of modern astronomy, there is probably no one greater."
+            title={t(`solution.parking.card_3.title`)}
+            description={t(`solution.parking.card_3.description`)}
           />
         </div>
         <section className="introSection container">
@@ -45,8 +47,8 @@ const SmarthomeSolution = () => {
             <div className="margin-bottom">
               <SectionContent
                 imgUrl={imgFirst}
-                title="Search for parking space easily"
-                subDescription="The solution provides lighting effects adapted to the environment, creating the best ambience for the user. All remote controlled, any time, anywhere with ease"
+                title={t(`solution.parking.section_1.title`)}
+                subDescription={t(`solution.parking.section_1.description`)}
                 description={""}
               />
             </div>
@@ -54,29 +56,24 @@ const SmarthomeSolution = () => {
             <div className="section-second margin-bottom">
               <SectionContent
                 imgUrl={imgSecond}
-                title="Quickly reserve your parking space."
-                subDescription="The system is fully automatic, using sensor technology, accurately updates the necessary information for booking such as:
-                Number and position of vacancies in each area, basement
-                Parking lot hours
-                Corresponding parking fees in real-time quickly reserve your parking space"
+                title={t(`solution.parking.section_2.title`)}
+                subDescription={t(`solution.parking.section_2.description`)}
                 description={""}
               />
             </div>
             <div className=" margin-bottom">
               <SectionContent
                 imgUrl={imgThird}
-                title="Get your parking session notifications"
-                subDescription={`After sending the car, users are fully confident of operating when the application updates the information:
-                Parking lot status
-                Indicate when the enrollment period is about to end to avoid extra charges`}
+                title={t(`solution.parking.section_3.title`)}
+                subDescription={t(`solution.parking.section_3.description`)}
                 description={""}
               />
             </div>
           </div>
         </section>
         <SectionBannerV2
-          title="Find other options that are perfect for you."
-          desc="We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!"
+          title={t(`solution.footer`)}
+          desc={t(`solution.subFooter`)}
           btnContact={true}
         />
       </div>

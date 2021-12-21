@@ -4,7 +4,7 @@ import { Row } from "react-bootstrap";
 import imgLine from "@images/new-home-page/app-img/line.png";
 import arrowSolution from "@images/new-home-page/solution/arrow-right.png";
 
-import AOS from 'aos';
+import AOS from "aos";
 
 import { useTranslation } from "react-i18next";
 
@@ -13,7 +13,7 @@ export default function NewSectionSolution() {
   const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
-      duration: 2000
+      duration: 2000,
     });
   }, []);
 
@@ -30,11 +30,7 @@ export default function NewSectionSolution() {
           <div className="page-info-1">
             <div className="contain-info-1">
               <div className="grid-container">
-                <div
-                  className="item2"
-                  id="item2"
-
-                >
+                <div className="item2" id="item2">
                   <div className="item-detail-2 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Lighting</p>
@@ -54,8 +50,7 @@ export default function NewSectionSolution() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="item3">
+                <div className="item3">
                   <div className="item-detail item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Parking</p>
@@ -75,10 +70,7 @@ export default function NewSectionSolution() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="item4"
-
-                >
+                <div className="item4">
                   <div className="item-detail-4 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Security</p>
@@ -86,7 +78,6 @@ export default function NewSectionSolution() {
                       {t(`smart_home_v2.solution_security`)}
                     </p>
                     <div className="btn-read-more">
-                      {' '}
                       <a href="https://unicloud.com.vn/he-sinh-thai/he-sinh-thai-iot-smart/">
                         <p className="p3">{t(`read_more`)}</p>
                       </a>{' '}
@@ -98,10 +89,7 @@ export default function NewSectionSolution() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="item5"
-
-                >
+                <div className="item5">
                   <div className="item-detail-5 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Home</p>
@@ -125,7 +113,6 @@ export default function NewSectionSolution() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
