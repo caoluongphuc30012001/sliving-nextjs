@@ -4,7 +4,7 @@ import { Row } from "react-bootstrap";
 import imgStar from "@images/new-home-page/banner/icon-star.png";
 import imgArrow from "@images/new-home-page/banner/arrow-button.png";
 import imgArrowRight from "@images/new-home-page/banner/arrowRight.svg";
-
+import { Link } from "gatsby";
 import "../../style.scss";
 
 export default function SectionBannerV2({ url, title, desc, btnContact }) {
@@ -27,17 +27,21 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
           <Row className="row-banner-desc center-row">
             <div className="banner-desc">
               <p>
-                {desc?desc:`You are in need of an environment full of smart gadgets, there
+                {desc
+                  ? desc
+                  : `You are in need of an environment full of smart gadgets, there
                 are several factors to consider. It will be used for your home,
                 your office, or maybe even everywhere you want to...`}
               </p>
             </div>
           </Row>
           <Row className="row-banner-button center-row">
-          {!btnContact ? (
-              <button className="banner-btn-v2">
-                <img src={imgArrow} alt="arrow" />
-              </button>
+            {!btnContact ? (
+              <Link to="/reason">
+                <button className="banner-btn-v2">
+                  <img src={imgArrow} alt="arrow" />
+                </button>{" "}
+              </Link>
             ) : (
               <button
                 className="btn-research-wrap d-flex al-center"

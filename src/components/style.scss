@@ -3859,13 +3859,13 @@ a.btn-link-a {
         background: #fff2ee;
       }    
 
-      a#item-menu::before {
+      a.item-menu:nth-child(1):before {
         content: "";
-        top: 6%;
+        top: 25%;
         left: -1%;
         position: absolute;
         border: 1px solid #e1e3e6;
-        height: 87%;
+        height: 55%;
       }
       // Product hover
       .nav-hover-product {
