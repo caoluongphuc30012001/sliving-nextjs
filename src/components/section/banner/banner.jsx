@@ -4,7 +4,7 @@ import { Row } from "react-bootstrap";
 import imgStar from "@images/new-home-page/banner/icon-star.png";
 import imgArrow from "@images/new-home-page/banner/arrow-button.png";
 import imgArrowRight from "@images/new-home-page/banner/arrowRight.svg";
-import { Link } from "gatsby";
+import Link  from "@components/gatsby-link";
 import { useTranslation } from "react-i18next";
 import "../../style.scss";
 

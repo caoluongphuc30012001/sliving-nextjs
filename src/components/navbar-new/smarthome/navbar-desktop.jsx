@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { useTranslation } from "react-i18next";
 
 import logo from "@images/logo/logo-header.svg";
@@ -8,6 +8,7 @@ import LanguageSwitcher from "@components/navbar/switterLanguage";
 import iconBook from "@images/new-home-page/solution/icon-book.svg";
 import iconComment from "@images/new-home-page/solution/icon-comment.svg";
 import iconVideo from "@images/new-home-page/solution/icon-video.svg";
+import Link from '@components/gatsby-link'
 
 export default function NavbarSmartHomeDesktop() {
   const dataProductMenu = DataProductMenu();
