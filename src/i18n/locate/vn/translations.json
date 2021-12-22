@@ -25,7 +25,7 @@
     "ADDRESS_COMPANY": "Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh"
   },
   "CONTACT_PHONE": "LIÊN LẠC",
-  "HEAD_QUARTERS": "TRỤ SỞ CHÍNH",
+  "HEAD_QUARTERS": "Trụ sở chính",
   "SHOW_ROOM": "SHOW_ROOM",
   "Help_Us_Know": "Hãy giúp chúng tôi biết, bạn là ai?",
   "Investor": "Chủ đầu tư",
@@ -51,7 +51,9 @@
     "Smart_Curtain": "Rèm thông minh",
     "Smart_Meter": "Đo lường thông minh",
     "Zigbee_KIT": "Zigbee KIT",
-    "Door_motor_gate": "Động cơ cửa - cổng"
+    "Door_motor_gate": "Động cơ cửa - cổng",
+    "Smart_Button": "Công tắc cơ thông minh",
+    "Motor": "Động cơ"
   },
   "The_Reason": "Lý do bạn nên lựa chọn Sliving",
   "Outstanding_Project": "Dự án nổi bật",
@@ -257,15 +259,16 @@
   "name_of_construction_works": "TÊN CÔNG TRÌNH ĐƯỢC THI CÔNG",
   "construction": {
     "villa": "Biệt thự",
-    "cinema": "Cinema",
+    "cinema": "Rạp phim",
     "hospital": "Bệnh viện",
-    "Office": "Office",
+    "Office": "Văn phòng",
     "restaurant": "Nhà hàng",
     "school": "Trường học",
     "store": "Cửa hàng",
     "townhouse": "Nhà phố",
     "factory": "Nhà xưởng",
-    "apartment": "Căn hộ"
+    "apartment": "Căn hộ",
+    "building": "Tòa nhà"
   },
   "smart-parking": {
     "section_1": {
@@ -322,134 +325,159 @@
       "description_3": "Light Sensor"
     }
   },
-  "solution":{
-    "smart-home":{
-      "header":"Phong cách mới cho ngôi nhà của bạn.",
-      "subHeader":"Giải pháp Nhà thông minh giúp các thiết bị có thể kết nối với nhau trong một hệ thống thông minh. Người dùng sử dụng ứng dụng trên điện thoại để điều khiển từ xa hệ thống chiếu sáng, điều hòa, màn, cửa, ... Từ đó hoạt động hiệu quả hơn, tiết kiệm hơn và hiệu quả hơn. Cải thiện trải nghiệm người dùng.", 
-      "section_1":{
-        "title":"Chiếu sáng thông minh",
-        "description":"Khi đến bãi đậu xe, người dùng có thể dễ dàng tiếp cận chỗ trống thông qua ứng dụng trình duyệt nhanh nhất. Biển báo chỉ dẫn hướng đi trong nền móng "
-      },
-      "section_2":{
-        "title":"Điều khiển từ xa cho điều hòa không khí",
-        "description":"Giải pháp sử dụng thiết bị kết nối máy điều hòa không khí với ứng dụng điện thoại. Máy điều hòa không khí hoạt động với các thiết bị khác tùy thuộc vào tình huống của người dùng và hệ thống được giám sát và điều khiển từ xa"
-      },
-      "section_3":{
-        "title":"Chuyển đổi thông minh",
-        "description":"Các sản phẩm công tắc thông minh của Sliving cho phép người dùng điều khiển các thiết bị thông qua ứng dụng, bao gồm đèn, rèm, điều hòa không khí hoặc các kịch bản hoạt động đa thiết bị được nhúng. Các thiết kế khác nhau từ công tắc cảm ứng hiện đại đến công tắc cơ truyền thống đáp ứng mọi nhu cầu và sở thích của người dùng"
-      },
-      "section_4":{
-        "title":"Cảm biến",
-        "description":"Hệ thống cảm biến chuyển động, cảm biến ánh sáng, cảm biến cửa,… kết hợp với các thiết bị điện tạo nên trường hợp kinh doanh đáp ứng nhu cầu an toàn và tiện nghi cho ngôi nhà"
-      },
-      "section_5":{
-        "title":"Rèm thông minh",
-        "description":"Giúp điều khiển rèm từ xa qua điện thoại. Hệ thống rèm đóng mở tự động theo chương trình do người sử dụng chỉ định"
-      },
-      "section_6":{
-        "title":"Động cơ cửa - cổng",
-        "description":"Mô tơ cổng kết nối với hệ thống Sliving để điều khiển từ xa qua điện thoại, tiết kiệm cho người sử dụng không phải đến cửa để đóng mở, đảm bảo an toàn và giảm thời gian chờ đợi"
-      }
-    },
-    "parking":{
-      "header":"Giải pháp đỗ xe khu dân cư thuận tiện",
-      "subHeader":"Giải pháp Chiếu sáng thông minh không chỉ cung cấp nguồn sáng đơn thuần mà còn góp phần bảo vệ sức khỏe người sử dụng và tiết kiệm năng lượng. Giải pháp cung cấp các hiệu ứng ánh sáng phù hợp với môi trường, tạo ra bầu không khí và môi trường tốt nhất cho người sử dụng. Tất cả mọi thứ được kiểm soát từ xa, bất cứ lúc nào, bất cứ nơi nào có cơ sở.", 
-      "card_1":{
-        "title":"Kính thiên văn 101",
-        "description":"Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
-      },
-      "card_2":{
-        "title":"Ngắm trăng",
-        "description":"Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
-      },
-      "card_3":{
-        "title":"Viễn vọng Hubble",
-        "description":"Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
-      },
-      "section_1":{
-        "title":"Tìm kiếm chỗ đậu xe dễ dàng",
-        "description":"Giải pháp cung cấp các hiệu ứng ánh sáng thích ứng với môi trường, tạo không khí tốt nhất cho người sử dụng. Tất cả được điều khiển từ xa, mọi lúc, mọi nơi một cách dễ dàng"
-      },
-      "section_2":{
-        "title":"Đặt chỗ đậu xe nhanh chóng",
-        "description":"Hệ thống hoàn toàn tự động, sử dụng công nghệ cảm biến, cập nhật chính xác các thông tin cần thiết cho việc đặt chỗ như: Số lượng và vị trí trống theo từng khu vực, tầng hầm. Giờ bãi đậu xe. Phí đậu xe tương ứng trong thời gian thực, nhanh chóng đặt chỗ đậu xe của bạn"
-      },
-      "section_3":{
-        "title":"Nhận thông báo về phiên đỗ xe của bạn",
-        "description":"Sau khi gửi xe, người dùng hoàn toàn yên tâm thao tác khi ứng dụng cập nhật các thông tin: Tình trạng bãi xe. Cho biết thời điểm sắp kết thúc kỳ nhập học để tránh phải trả thêm phí"
-      }
-    
-    },
-    "security":{
-      "header":"Bảo mật thông minh.",
-      "subHeader":"Giải pháp an ninh sáng tạo của Sliving xây dựng hệ thống an ninh 'nhiều lớp' giúp đảm bảo không gian riêng tư và an toàn cho từng khách hàng và dễ dàng kiểm soát cho người quản lý.", 
-      "card_1":{
-        "title":"Kính thiên văn 101",
-        "description":"Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
-      },
-      "card_2":{
-        "title":"Ngắm trăng",
-        "description":"Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
-      },
-      "card_3":{
-        "title":"Viễn vọng Hubble",
-        "description":"Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
-      },
-      "section_1":{
-        "title":"Khóa thông minh",
-        "description":"Sử dụng dấu vân tay để mở hoặc đóng cửa. Tích hợp đầu đọc thẻ từ, mật mã. Có đèn LED và tông màu sáng cho vali. Có thể mở khóa từ xa thông qua chức năng Bluetooth của điện thoại"
-      },
-      "section_2":{
-        "title":"Cửa xoay thông minh",
-        "description":"Tính năng quản lý an toàn khu kết hợp với phần mềm độc quyền: Tích hợp hệ thống nhận dạng khuôn mặt và thẻ từ. Kết hợp với thang máy thông minh tự động gọi tầng, mở cổng tự động khi có thông báo khẩn cấp"
-      },
-      "section_3":{
-        "title":"Nhận dạng khuôn mặt",
-        "description":"Sử dụng công nghệ sinh trắc học để trích xuất các đặc điểm nhận dạng khuôn mặt: Xác thực cư dân, kiểm soát ra vào khu vực cần giám sát cũng như dùng để gọi thang máy, mở rào chắn. Tích hợp vào một camera an ninh. Có thể nhận ra nhiều khuôn mặt cùng một lúc"
-      }
-    
-    },
-    "lighting":{
-      "header":"Công nghệ ánh sáng mang lại sắc màu.",
-      "subHeader":"Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có", 
-      "section_1":{
-        "title":"Bảo vệ sức khỏe của bạn",
-        "description":"Hệ thống chiếu sáng của Sliving ưu tiên bảo vệ sức khỏe người dùng thông qua các tiêu chí: Chỉ số hoàn màu CRI đa dạng (CRI = 70-95): phù hợp với yêu cầu công việc ở nhiều không gian khác nhau, từ nhà ở, văn phòng đến nhà xưởng… góp phần bảo vệ mắt. Sức khỏe. Khả năng thay đổi nhiệt độ màu: thích hợp cho nhiều hoạt động, giúp tập trung làm việc, tâm trạng tốt và giấc ngủ ngon cho người dùng"
-      },
-      "section_2":{
-        "title":"Tiết kiệm năng lượng",
-        "description":"Các giải pháp chiếu sáng của Sliving đảm bảo tiết kiệm năng lượng nhờ các ưu điểm sau: Duy trì hiệu suất phát quang cao (> 100 lm / w). Tuổi thọ đèn led cao nhờ sử dụng công nghệ chip led hiện đại (SMD-COB), cho tuổi thọ trung bình 50.000 giờ chiếu sáng. Hệ thống điều khiển từ xa giúp khắc phục tình trạng quên tắt máy khi rời khỏi nơi làm việc."
-      },
-      "section_3":{
-        "title":"Điều khiển tự động",
-        "description":"Sliving's Smart Lighting giúp hệ thống chiếu sáng thông minh hơn thông qua các yếu tố: Điều khiển và kiểm soát hệ thống từ xa thông qua ứng dụng. Thiết lập một kịch bản hoạt động theo lịch trình hoạt động và công việc"
-      }
-    },
-    "footer":"Tìm các tùy chọn khác hoàn hảo cho bạn.",
-    "subFooter":"Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!"
+  "smart_home_v2": {
+    "header_title": "Kỷ nguyên của cuộc sống thông minh.",
+    "header_sub_title": "Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có",
+    "sliving_products": "Sản phẩm Sliving",
+    "project_types_that_use_Sliving_solutions": "Các loại dự án sử dụng giải pháp Sliving",
+    "the_trend_towards_the_application": "Xu hướng ứng dụng công nghệ trong quản lý tài sản cũng được xem là một trong những cách để nâng cao năng lực hoạt động của dự án. Yếu tố này cũng giúp tạo nên sự khác biệt trong tiêu chuẩn dịch vụ quản lý tài sản chuyên nghiệp,...",
+    "successful_projects": "Các dự án thành công khi sử dụng các sản phẩm Sliving",
+    "solution_for_your_needs": "Giải pháp cho nhu cầu của bạn",
+    "solution_parking": "Hệ thống quản lý bãi đỗ xe thông minh",
+    "solution_lighting": "Hệ thống điều khiển ánh sáng",
+    "solution_security": "Hệ thống quản lý an ninh",
+    "solution_home": "Giải pháp nhà thông minh"
   },
-  "reason":{
-    "header":"Lý do bạn nên lựa chọn Sliving",
-    "subHeader":"Tiên phong trong việc cung cấp các giải pháp toàn diện cho Nền tảng IoT tại Việt Nam",
-    "reason_1":{
-      "title":"Sản phẩm chất lượng quốc tế",
-      "description":"Đặt mình vào vị trí của khách hàng là chiến lược mà chúng tôi áp dụng tại Sliving để hiểu những gì khách hàng cần. Để thay đổi sự không chắc chắn của khách hàng về chất lượng sản phẩm thông minh trong nước, chúng tôi đã và đang hoàn thiện sản phẩm của mình. Điều này được chứng minh bằng nhiều chứng chỉ chất lượng quốc tế mà chúng tôi đã và sẽ nhận được trong thời gian tới, MFi là một trong số đó."
+  "read_more": "Đọc thêm",
+  "company_name": "CÔNG TY CỔ PHẦN TẬP ĐOÀN CÔNG NGHỆ UNICLOUD",
+  "branch": "Chi nhánh",
+  "address_head_quarters": "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+  "home_page_v2.product_development_strategy": "Chiến lược phát triển sản phẩm",
+  "ready_go_to_global": "Vươn tầm quốc tế",
+  "CONNECTING_ECOsystems": "Kết nối các hệ sinh thái",
+  "sub_ready_go_to_global": "Tại Unicloud, mọi sản phẩm được khai sinh để giải các bài toán local nhưng phải được thiết kế để sẵn sàng go-global. Thiết kế mở, cho phép dễ dàng tích hợp với mọi platform, hardware và hệ thống của các đối tác toàn cầu.",
+  "sub_CONNECTING_ECOsystems": "Sở hữu các hệ thống lõi và công nghệ lõi để khai thác Big Data thông qua việc chia sẻ người dùng với các nền tảng khác. Tập trung nguồn lực vào các hệ sinh thái tạo ra hàng triệu người dùng, hàng tỷ giao dịch xoay quanh Bất động sản, Banking, Tài Chính, Bảo hiểm và các dịch vụ thiết yếu hàng ngày.",
+  "sub_CUSTOMER_CENTRIC": "Lấy khách hàng làm trung tâm chuyển đổi số, khai thác tối đa tài nguyên & giữ chân khách hàng.",
+  "products_v2": {
+    "header": "Chúng tôi có mọi thứ trong tầm kiểm soát. Chúng tôi cung cấp một loạt các giải pháp điều khiển để đáp ứng nhu cầu của hầu hết mọi dự án",
+    "Featured_Product": "Sản phẩm nổi bật"
+  },
+  "solution": {
+    "smart-home": {
+      "header": "Phong cách mới cho ngôi nhà của bạn.",
+      "subHeader": "Giải pháp Nhà thông minh giúp các thiết bị có thể kết nối với nhau trong một hệ thống thông minh. Người dùng sử dụng ứng dụng trên điện thoại để điều khiển từ xa hệ thống chiếu sáng, điều hòa, màn, cửa, ... Từ đó hoạt động hiệu quả hơn, tiết kiệm hơn và hiệu quả hơn. Cải thiện trải nghiệm người dùng.",
+      "section_1": {
+        "title": "Chiếu sáng thông minh",
+        "description": "Khi đến bãi đậu xe, người dùng có thể dễ dàng tiếp cận chỗ trống thông qua ứng dụng trình duyệt nhanh nhất. Biển báo chỉ dẫn hướng đi trong nền móng "
+      },
+      "section_2": {
+        "title": "Điều khiển từ xa cho điều hòa không khí",
+        "description": "Giải pháp sử dụng thiết bị kết nối máy điều hòa không khí với ứng dụng điện thoại. Máy điều hòa không khí hoạt động với các thiết bị khác tùy thuộc vào tình huống của người dùng và hệ thống được giám sát và điều khiển từ xa"
+      },
+      "section_3": {
+        "title": "Chuyển đổi thông minh",
+        "description": "Các sản phẩm công tắc thông minh của Sliving cho phép người dùng điều khiển các thiết bị thông qua ứng dụng, bao gồm đèn, rèm, điều hòa không khí hoặc các kịch bản hoạt động đa thiết bị được nhúng. Các thiết kế khác nhau từ công tắc cảm ứng hiện đại đến công tắc cơ truyền thống đáp ứng mọi nhu cầu và sở thích của người dùng"
+      },
+      "section_4": {
+        "title": "Cảm biến",
+        "description": "Hệ thống cảm biến chuyển động, cảm biến ánh sáng, cảm biến cửa,… kết hợp với các thiết bị điện tạo nên trường hợp kinh doanh đáp ứng nhu cầu an toàn và tiện nghi cho ngôi nhà"
+      },
+      "section_5": {
+        "title": "Rèm thông minh",
+        "description": "Giúp điều khiển rèm từ xa qua điện thoại. Hệ thống rèm đóng mở tự động theo chương trình do người sử dụng chỉ định"
+      },
+      "section_6": {
+        "title": "Động cơ cửa - cổng",
+        "description": "Mô tơ cổng kết nối với hệ thống Sliving để điều khiển từ xa qua điện thoại, tiết kiệm cho người sử dụng không phải đến cửa để đóng mở, đảm bảo an toàn và giảm thời gian chờ đợi"
+      }
     },
-    "reason_2":{
-      "title":"Nhiều loại sản phẩm và giải pháp",
-      "description":"<ul> <li> Thiết kế giao diện cho các ứng dụng di động (Mobile App), giám sát các trang web để kiểm soát và giới thiệu sản phẩm. </li> <li> Thiết kế các sản phẩm phần cứng </li> <li> Sản xuất thiết bị công nghệ thông minh. </ li > <li> Xây dựng các chương trình máy tính như Phần mềm cơ sở, Máy chủ đám mây. </li> <li> AI (Trí tuệ nhân tạo). </li> </ul>"
+    "parking": {
+      "header": "Giải pháp đỗ xe khu dân cư thuận tiện",
+      "subHeader": "Giải pháp Chiếu sáng thông minh không chỉ cung cấp nguồn sáng đơn thuần mà còn góp phần bảo vệ sức khỏe người sử dụng và tiết kiệm năng lượng. Giải pháp cung cấp các hiệu ứng ánh sáng phù hợp với môi trường, tạo ra bầu không khí và môi trường tốt nhất cho người sử dụng. Tất cả mọi thứ được kiểm soát từ xa, bất cứ lúc nào, bất cứ nơi nào có cơ sở.",
+      "card_1": {
+        "title": "Kính thiên văn 101",
+        "description": "Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
+      },
+      "card_2": {
+        "title": "Ngắm trăng",
+        "description": "Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
+      },
+      "card_3": {
+        "title": "Viễn vọng Hubble",
+        "description": "Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
+      },
+      "section_1": {
+        "title": "Tìm kiếm chỗ đậu xe dễ dàng",
+        "description": "Giải pháp cung cấp các hiệu ứng ánh sáng thích ứng với môi trường, tạo không khí tốt nhất cho người sử dụng. Tất cả được điều khiển từ xa, mọi lúc, mọi nơi một cách dễ dàng"
+      },
+      "section_2": {
+        "title": "Đặt chỗ đậu xe nhanh chóng",
+        "description": "Hệ thống hoàn toàn tự động, sử dụng công nghệ cảm biến, cập nhật chính xác các thông tin cần thiết cho việc đặt chỗ như: Số lượng và vị trí trống theo từng khu vực, tầng hầm. Giờ bãi đậu xe. Phí đậu xe tương ứng trong thời gian thực, nhanh chóng đặt chỗ đậu xe của bạn"
+      },
+      "section_3": {
+        "title": "Nhận thông báo về phiên đỗ xe của bạn",
+        "description": "Sau khi gửi xe, người dùng hoàn toàn yên tâm thao tác khi ứng dụng cập nhật các thông tin: Tình trạng bãi xe. Cho biết thời điểm sắp kết thúc kỳ nhập học để tránh phải trả thêm phí"
+      }
     },
-    "reason_3":{
-      "title":"Chuỗi cung ứng mạnh mẽ",
-      "description":"Với mục tiêu dẫn đầu thị trường công nghệ thông minh, Sliving là doanh nghiệp đầu tiên được cấp phép sản xuất các thiết bị trong hệ sinh thái Smart Living. Nhà máy có diện tích gần 4500m2, tổng công suất sản xuất ước tính khoảng 270.000 thiết bị/năm. Trong đó, công suất sản xuất giai đoạn 1 của dự án là 135 nghìn sản phẩm/năm và tăng dần giai đoạn 2, đạt 100% công suất vào tháng 6 năm 2025."
+    "security": {
+      "header": "Bảo mật thông minh.",
+      "subHeader": "Giải pháp an ninh sáng tạo của Sliving xây dựng hệ thống an ninh 'nhiều lớp' giúp đảm bảo không gian riêng tư và an toàn cho từng khách hàng và dễ dàng kiểm soát cho người quản lý.",
+      "card_1": {
+        "title": "Kính thiên văn 101",
+        "description": "Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
+      },
+      "card_2": {
+        "title": "Ngắm trăng",
+        "description": "Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
+      },
+      "card_3": {
+        "title": "Viễn vọng Hubble",
+        "description": "Lịch sử thiên văn học hiện đại, có lẽ không có ai vĩ đại hơn."
+      },
+      "section_1": {
+        "title": "Khóa thông minh",
+        "description": "Sử dụng dấu vân tay để mở hoặc đóng cửa. Tích hợp đầu đọc thẻ từ, mật mã. Có đèn LED và tông màu sáng cho vali. Có thể mở khóa từ xa thông qua chức năng Bluetooth của điện thoại"
+      },
+      "section_2": {
+        "title": "Cửa xoay thông minh",
+        "description": "Tính năng quản lý an toàn khu kết hợp với phần mềm độc quyền: Tích hợp hệ thống nhận dạng khuôn mặt và thẻ từ. Kết hợp với thang máy thông minh tự động gọi tầng, mở cổng tự động khi có thông báo khẩn cấp"
+      },
+      "section_3": {
+        "title": "Nhận dạng khuôn mặt",
+        "description": "Sử dụng công nghệ sinh trắc học để trích xuất các đặc điểm nhận dạng khuôn mặt: Xác thực cư dân, kiểm soát ra vào khu vực cần giám sát cũng như dùng để gọi thang máy, mở rào chắn. Tích hợp vào một camera an ninh. Có thể nhận ra nhiều khuôn mặt cùng một lúc"
+      }
     },
-    "reason_4":{
-      "title":"Hỗ trợ kỹ thuật và hỗ trợ bảo hành",
-      "description":"Nhân viên dự án, nhân viên kỹ thuật, nhân viên kinh doanh sẵn sàng tư vấn / hỗ trợ khách hàng những giải pháp phù hợp, đáp ứng mong muốn của từng khách hàng với chi phí thấp."
+    "lighting": {
+      "header": "Công nghệ ánh sáng mang lại sắc màu.",
+      "subHeader": "Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có",
+      "section_1": {
+        "title": "Bảo vệ sức khỏe của bạn",
+        "description": "Hệ thống chiếu sáng của Sliving ưu tiên bảo vệ sức khỏe người dùng thông qua các tiêu chí: Chỉ số hoàn màu CRI đa dạng (CRI = 70-95): phù hợp với yêu cầu công việc ở nhiều không gian khác nhau, từ nhà ở, văn phòng đến nhà xưởng… góp phần bảo vệ mắt. Sức khỏe. Khả năng thay đổi nhiệt độ màu: thích hợp cho nhiều hoạt động, giúp tập trung làm việc, tâm trạng tốt và giấc ngủ ngon cho người dùng"
+      },
+      "section_2": {
+        "title": "Tiết kiệm năng lượng",
+        "description": "Các giải pháp chiếu sáng của Sliving đảm bảo tiết kiệm năng lượng nhờ các ưu điểm sau: Duy trì hiệu suất phát quang cao (> 100 lm / w). Tuổi thọ đèn led cao nhờ sử dụng công nghệ chip led hiện đại (SMD-COB), cho tuổi thọ trung bình 50.000 giờ chiếu sáng. Hệ thống điều khiển từ xa giúp khắc phục tình trạng quên tắt máy khi rời khỏi nơi làm việc."
+      },
+      "section_3": {
+        "title": "Điều khiển tự động",
+        "description": "Sliving's Smart Lighting giúp hệ thống chiếu sáng thông minh hơn thông qua các yếu tố: Điều khiển và kiểm soát hệ thống từ xa thông qua ứng dụng. Thiết lập một kịch bản hoạt động theo lịch trình hoạt động và công việc"
+      }
     },
-    "reason_5":{
-      "title":"Năng lực và kinh nghiệm đã được chứng minh",
-      "description":"<ul> <li> <b> 07 DỰ ÁN </b> sử dụng các thiết bị thông minh của SLIVING. </li> <li> Hơn <b> 300 000 THIẾT BỊ </b> đã được cài đặt. </li> <li> Thêm hơn <b> 120 nhân viên </b> đang phát triển và đổi mới liên tục để cải thiện các sản phẩm SLIVING ngày một tốt hơn mỗi ngày. </li> </ul>"
+    "footer": "Tìm các tùy chọn khác hoàn hảo cho bạn.",
+    "subFooter": "Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!"
+  },
+  "reason": {
+    "header": "Lý do bạn nên lựa chọn Sliving",
+    "subHeader": "Tiên phong trong việc cung cấp các giải pháp toàn diện cho Nền tảng IoT tại Việt Nam",
+    "reason_1": {
+      "title": "Sản phẩm chất lượng quốc tế",
+      "description": "Đặt mình vào vị trí của khách hàng là chiến lược mà chúng tôi áp dụng tại Sliving để hiểu những gì khách hàng cần. Để thay đổi sự không chắc chắn của khách hàng về chất lượng sản phẩm thông minh trong nước, chúng tôi đã và đang hoàn thiện sản phẩm của mình. Điều này được chứng minh bằng nhiều chứng chỉ chất lượng quốc tế mà chúng tôi đã và sẽ nhận được trong thời gian tới, MFi là một trong số đó."
+    },
+    "reason_2": {
+      "title": "Nhiều loại sản phẩm và giải pháp",
+      "description": "<ul> <li> Thiết kế giao diện cho các ứng dụng di động (Mobile App), giám sát các trang web để kiểm soát và giới thiệu sản phẩm. </li> <li> Thiết kế các sản phẩm phần cứng </li> <li> Sản xuất thiết bị công nghệ thông minh. </ li > <li> Xây dựng các chương trình máy tính như Phần mềm cơ sở, Máy chủ đám mây. </li> <li> AI (Trí tuệ nhân tạo). </li> </ul>"
+    },
+    "reason_3": {
+      "title": "Chuỗi cung ứng mạnh mẽ",
+      "description": "Với mục tiêu dẫn đầu thị trường công nghệ thông minh, Sliving là doanh nghiệp đầu tiên được cấp phép sản xuất các thiết bị trong hệ sinh thái Smart Living. Nhà máy có diện tích gần 4500m2, tổng công suất sản xuất ước tính khoảng 270.000 thiết bị/năm. Trong đó, công suất sản xuất giai đoạn 1 của dự án là 135 nghìn sản phẩm/năm và tăng dần giai đoạn 2, đạt 100% công suất vào tháng 6 năm 2025."
+    },
+    "reason_4": {
+      "title": "Hỗ trợ kỹ thuật và hỗ trợ bảo hành",
+      "description": "Nhân viên dự án, nhân viên kỹ thuật, nhân viên kinh doanh sẵn sàng tư vấn / hỗ trợ khách hàng những giải pháp phù hợp, đáp ứng mong muốn của từng khách hàng với chi phí thấp."
+    },
+    "reason_5": {
+      "title": "Năng lực và kinh nghiệm đã được chứng minh",
+      "description": "<ul> <li> <b> 07 DỰ ÁN </b> sử dụng các thiết bị thông minh của SLIVING. </li> <li> Hơn <b> 300 000 THIẾT BỊ </b> đã được cài đặt. </li> <li> Thêm hơn <b> 120 nhân viên </b> đang phát triển và đổi mới liên tục để cải thiện các sản phẩm SLIVING ngày một tốt hơn mỗi ngày. </li> </ul>"
     }
   }
 }

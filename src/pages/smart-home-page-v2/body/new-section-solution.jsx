@@ -6,7 +6,11 @@ import arrowSolution from "@images/new-home-page/solution/arrow-right.png";
 
 import AOS from "aos";
 
+import { useTranslation } from "react-i18next";
+
 export default function NewSectionSolution() {
+
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -19,7 +23,7 @@ export default function NewSectionSolution() {
         <div className="container-wrap">
           <Row>
             <div className="solution-content">
-              <h3>Solution for your needs</h3>
+              <h3>{t(`smart_home_v2.solution_for_your_needs`)}</h3>
               <img src={imgLine} alt="" />
             </div>
           </Row>
@@ -30,11 +34,14 @@ export default function NewSectionSolution() {
                   <div className="item-detail-2 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Lighting</p>
-                    <p className="p2">Hệ thống điều khiển ánh sáng</p>
+                    <p className="p2">
+                      {t(`smart_home_v2.solution_lighting`)}
+                    </p>
                     <div className="btn-read-more">
                       <a href="#">
-                        <p className="p3">Đọc Thêm</p>
-                      </a>
+                        {' '}
+                        <p className="p3">{t(`read_more`)}</p>{' '}
+                      </a>{' '}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"
@@ -47,10 +54,13 @@ export default function NewSectionSolution() {
                   <div className="item-detail item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Parking</p>
-                    <p className="p2">Hệ thống quản lý bãi đỗ xe thông minh</p>
+                    <p className="p2">
+                      {t(`smart_home_v2.solution_parking`)}
+                    </p>
                     <div className="btn-read-more">
                       <a href="#">
-                        <p className="p3">Đọc Thêm</p>
+                        {' '}
+                        <p className="p3">{t(`read_more`)}</p>
                       </a>
                       <img
                         src={arrowSolution}
@@ -64,11 +74,13 @@ export default function NewSectionSolution() {
                   <div className="item-detail-4 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Security</p>
-                    <p className="p2">Hệ thống quản lý an ninh</p>
+                    <p className="p2">
+                      {t(`smart_home_v2.solution_security`)}
+                    </p>
                     <div className="btn-read-more">
                       <a href="https://unicloud.com.vn/he-sinh-thai/he-sinh-thai-iot-smart/">
-                        <p className="p3">Đọc Thêm</p>
-                      </a>
+                        <p className="p3">{t(`read_more`)}</p>
+                      </a>{' '}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"
@@ -81,11 +93,13 @@ export default function NewSectionSolution() {
                   <div className="item-detail-5 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Home</p>
-                    <p className="p2">Giải pháp nhà thông minh</p>
+                    <p className="p2">
+                      {t(`smart_home_v2.solution_home`)}
+                    </p>
                     <div className="btn-read-more">
                       <a href="https://unicloud.com.vn/he-sinh-thai/he-sinh-thai-chinh-phu-dien-tu/">
-                        <p className="p3">Đọc Thêm</p>
-                      </a>
+                        <p className="p3">{t(`read_more`)}</p>
+                      </a>{' '}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"

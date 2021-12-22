@@ -82,9 +82,9 @@ span.swiper-pagination-bullet {
 .section-l-r-v2 {
     margin-top: 32px;
     .section-r-v2 {
-        padding-top: 150px;
+        padding-top: 40px;
         padding-left: 111px;
-        padding-right: 148px;
+        padding-right: 110px;
         padding-bottom: 126px;
         text-align: center;
         h3 {
@@ -110,6 +110,9 @@ span.swiper-pagination-bullet {
             line-height: 131.25%;
             color: #aaaeb3;
         }
+    }
+    img {
+        height: 480px;
     }
 }
 .bullet-section {

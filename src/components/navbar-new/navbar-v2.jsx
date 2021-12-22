@@ -44,9 +44,8 @@ export default function NavbarNew() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-v2 link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
+                          className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
+                            }`}
                           id="item-menu"
                         >
                           {nav.title}

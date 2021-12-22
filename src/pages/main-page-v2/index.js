@@ -12,6 +12,13 @@ import ImageHp_4 from "@images/main-page-v2/artboard.png";
 
 import sectionLeft from "@images/main-page-v2/element-left.png";
 
+import sectionLeft1 from "@images/main-page-v2/crm.jpg";
+
+import sectionLeft2 from "@images/main-page-v2/global.jpeg";
+
+import sectionLeft3 from "@images/main-page-v2/phat-trien-sp-2.jpg";
+
+
 import sectionFour1Full from "@images/main-page-v2/banner-left-full.svg";
 import sectionFour2Full from "@images/main-page-v2/rectangle-1.png";
 import sectionFour3Full from "@images/main-page-v2/rectangle-2.png";
@@ -30,6 +37,9 @@ import AOS from "aos";
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 
+import { useTranslation } from 'react-i18next';
+
+
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const IndexPage = () => {
@@ -39,10 +49,11 @@ const IndexPage = () => {
     });
   }, []);
 
+  const { t } = useTranslation();
+
   const { isMobile } = useWindowSize();
   const [arrHeader] = useState([
     {
-      id: "0",
       alt: "",
       src: ImageHp_1,
       description:
@@ -51,7 +62,6 @@ const IndexPage = () => {
       titleBold: " In The Future",
     },
     {
-      id: "1",
       alt: "",
       src: ImageHp_2,
       description:
@@ -60,7 +70,6 @@ const IndexPage = () => {
       titleBold: " In The Future",
     },
     {
-      id: "2",
       alt: "",
       src: ImageHp_3,
       description:
@@ -69,7 +78,6 @@ const IndexPage = () => {
       titleBold: " In The Future",
     },
     {
-      id: "3",
       alt: "",
       src: ImageHp_4,
       description:
@@ -81,37 +89,26 @@ const IndexPage = () => {
 
   const [arrSectionLeft] = useState([
     {
-      id: "0",
       alt: "",
-      src: sectionLeft,
+      src: sectionLeft1,
       description: "",
       title: "",
       titleBold: " ",
     },
     {
-      id: "1",
       alt: "",
-      src: sectionLeft,
+      src: sectionLeft2,
       description: "",
       title: "",
       titleBold: " ",
     },
     {
-      id: "2",
       alt: "",
-      src: sectionLeft,
+      src: sectionLeft3,
       description: "",
       title: "",
       titleBold: " ",
-    },
-    {
-      id: "3",
-      alt: "",
-      src: sectionLeft,
-      description: "",
-      title: "",
-      titleBold: " ",
-    },
+    }
   ]);
 
   const BuildImageCarousel = ({ carousel, isButton }) => {
@@ -148,7 +145,7 @@ const IndexPage = () => {
     );
   };
 
-  const BuildCarousel = ({ array, isButton }) => {
+  const BuildCarousel = ({ array, isButton, isAutoPlay }) => {
     return (
       <Swiper
         spaceBetween={30}
@@ -159,20 +156,16 @@ const IndexPage = () => {
             : "bullet-active-section-v2",
           clickable: true,
         }}
-        autoplay={
-          !isButton
-            ? {
-                delay: 2500,
-                disableOnInteraction: false,
-              }
-            : isButton
-        }
+        autoplay={isAutoPlay ? {
+          "delay": 2500,
+          "disableOnInteraction": false
+        } : false}
         navigation={
           isButton
             ? {
-                nextEl: ".btn-next",
-                prevEl: ".btn-prev",
-              }
+              nextEl: ".btn-next",
+              prevEl: ".btn-prev",
+            }
             : isButton
         }
         className="mySwiper"
@@ -201,12 +194,12 @@ const IndexPage = () => {
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={false} array={arrHeader} />;
+    return <BuildCarousel isButton={false} array={arrHeader} isAutoPlay={true} />;
   };
 
   const BuildSectionTwoElement = () => {
     const objTech = {
-      title: "Our News On High Technologies",
+      title: "home_page_v2.product_development_strategy",
       subtitle: "Virtual Tour on Iphone and Ipad",
       description:
         "Virtual Tours go Mobile! Our web Design's protfolio of 360 degree panoramas are now available to view and enjoy via the Iphone and Ipads. Our tour are now reviewable on any device without the need for an app.",
@@ -219,9 +212,9 @@ const IndexPage = () => {
           </Col>
           <Col xs={12} lg={6} className="section-r-v2">
             <article>
-              <h3>{objTech.subTitle}</h3>
-              <h2>{objTech.title}</h2>
-              <p>{objTech.description}</p>
+              {/* <h3>{t(`${objTech.subTitle}`)}</h3> */}
+              <h2>{t(`${objTech.title}`)}</h2>
+              <p>{t(`${objTech.description}`)}</p>
               <BuildLearnMore />
             </article>
           </Col>
@@ -244,22 +237,16 @@ const IndexPage = () => {
   const BuildSectionThreeElement = () => {
     const arrElement = [
       {
-        id: "0",
-        title: "The Amazing Hubble",
-        description:
-          "Rack mount LCD monitors can save you a lot of space and help you form a convenient and efficient desktop for your work or home study. ",
+        title: "ready_go_to_global",
+        description: "sub_ready_go_to_global",
       },
       {
-        id: "1",
-        title: "Asteroids",
-        description:
-          "Rack mount LCD monitors can save you a lot of space and help you form a convenient and efficient desktop for your work or home study. ",
+        title: "CONNECTING_ECOsystems",
+        description: "sub_CONNECTING_ECOsystems",
       },
       {
-        id: "2",
-        title: "Moon Gazing",
-        description:
-          "Shure’s Music Phone Adapter (MPA) is our favorite iPhone solution, since it lets you use the headphones you’re most comfortable with. It has an iPhone-compatible jack",
+        title: "CONNECTING_ECOsystems",
+        description: "sub_CUSTOMER_CENTRIC",
       },
     ];
     return (
@@ -268,8 +255,8 @@ const IndexPage = () => {
           {arrElement.map((element, index) => {
             return (
               <Col xs={12} xl={4} key={index} className="three-wrap-item">
-                <h2>{element.title}</h2>
-                <p>{element.description}</p>
+                <h2>{t(`${element.title}`)}</h2>
+                <p>{t(`${element.description}`)}</p>
               </Col>
             );
           })}
@@ -330,12 +317,9 @@ const IndexPage = () => {
   };
 
   const BuildSectionBannerReason = () => {
-    return (
-      <SectionBannerV2
-        title="The reason you should go with Sliving."
-        desc="You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to..."
-      />
-    );
+    return <SectionBannerV2
+      title='The reason you should go with Sliving.'
+      desc='You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...' />
   };
 
   return (

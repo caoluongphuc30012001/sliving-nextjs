@@ -5,7 +5,6 @@ import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from 'gatsby'
 
 const IndexPage = ({ pageContext }) => {
-  console.log();
   return (
     <LayoutV2>
       <TechnicalSolution data={pageContext.data.data} />

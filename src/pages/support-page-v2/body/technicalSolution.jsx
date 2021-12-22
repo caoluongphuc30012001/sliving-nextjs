@@ -16,7 +16,6 @@ import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
 import { useLocation } from "@reach/router";
 const TechnicalSol = ({ data }) => {
-    console.log("data", data);
     const Lgn = useGetLgn();
     const { t } = useTranslation();
 
