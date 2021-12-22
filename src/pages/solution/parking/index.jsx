@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutNew from "@components/layout-new";
+import LayoutSmartHome from "@components/layout-smart-home";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from "gatsby";
 import IntroductHeader from "./header/section-header";
@@ -20,7 +20,7 @@ const SmarthomeSolution = () => {
   const { t } = useTranslation();
   const data = DataProductNew();
   return (
-    <LayoutNew isMainPage pageContext={{ isSmartHome: true }}>
+    <LayoutSmartHome>
       <div className="introduct-main" id="introduct-main-parking">
         <IntroductHeader />
         <SectionFeatureProduct dataProductHot={data} />
@@ -77,7 +77,7 @@ const SmarthomeSolution = () => {
           btnContact={true}
         />
       </div>
-    </LayoutNew>
+    </LayoutSmartHome>
   );
 };
 export default withI18next()(SmarthomeSolution);
