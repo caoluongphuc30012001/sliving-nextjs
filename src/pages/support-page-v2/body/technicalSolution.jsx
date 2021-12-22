@@ -25,28 +25,28 @@ const TechnicalSol = ({ data }) => {
   const dataTechnicalAnswer = data?.dataTechnicalAnswer?.edges || [];
   const dataConstructionInstruction = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-        item?.node?.frontmatter?.slug?.includes("construction-manual")
-      )
+      item?.node?.frontmatter?.slug?.includes("construction-manual")
+    )
     : [];
   const dataAgriculturalMaterialNorm = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-        item?.node?.frontmatter?.slug?.includes("agricultural-material-quota")
-      )
+      item?.node?.frontmatter?.slug?.includes("agricultural-material-quota")
+    )
     : [];
   const dataProductIdentification = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-        item?.node?.frontmatter?.slug?.includes("product-identification")
-      )
+      item?.node?.frontmatter?.slug?.includes("product-identification")
+    )
     : [];
   const dataProductWarranty = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-        item?.node?.frontmatter?.slug?.includes("product-warranty")
-      )
+      item?.node?.frontmatter?.slug?.includes("product-warranty")
+    )
     : [];
   const dataDocumentsDownload = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter(
-        (item) => item?.node?.frontmatter?.slug === null
-      )
+      (item) => item?.node?.frontmatter?.slug === null
+    )
     : [];
 
   const [post, setPost] = useState(dataTechnicalAnswer);
@@ -265,9 +265,8 @@ const TechnicalSol = ({ data }) => {
                         return (
                           <Dropdown.Item
                             key={item}
-                            className={`${
-                              item.isActive ? "is-active-item" : ""
-                            }`}
+                            className={`${item.isActive ? "is-active-item" : ""
+                              }`}
                             onClick={() => handleClick(item.id, item.title)}
                           >
                             {t(`${item.title}`)}
@@ -296,9 +295,8 @@ const TechnicalSol = ({ data }) => {
                                 return (
                                   <Dropdown.Item
                                     key={item}
-                                    className={`${
-                                      item.isActive ? "is-active-item" : ""
-                                    }`}
+                                    className={`${item.isActive ? "is-active-item" : ""
+                                      }`}
                                     onClick={() =>
                                       handleClick(item.id, item.title)
                                     }
@@ -340,9 +338,8 @@ const TechnicalSol = ({ data }) => {
                       />
                       <button
                         type="button"
-                        className={`btn btn-search btn-research fs-12 ${
-                          isMobile ? "btn-search-mobile" : null
-                        }`}
+                        className={`btn btn-search btn-research fs-12 ${isMobile ? "btn-search-mobile" : null
+                          }`}
                         aria-label="search icon"
                       >
                         <img src={Searchicon} alt="" />
@@ -450,38 +447,102 @@ const TechnicalSol = ({ data }) => {
                 <div className="support-slider">
                   {id === 6
                     ? currentPosts?.map(({ node }) => {
-                        return (
-                          <div
-                            className="container-first-slider"
-                            key={node.frontmatter.id}
-                          >
-                            <Row noGutters>
-                              <Col sm={3} xs={12}>
-                                <div className="image-container first-slider-wrap">
-                                  <div className="first-slider-wrap__left">
-                                    <Link to={`${Lgn}${node.frontmatter.slug}`}>
-                                      <div className="download__container">
-                                        <img
-                                          src={DownLoadIcons}
-                                          alt="icon download"
-                                        />
-                                      </div>
-                                    </Link>
-                                    <div className="container-below-image">
-                                      <div className="row">
-                                        <span className="fs-12 fw-bold mt-2">
-                                          Công trình:{" "}
-                                        </span>
-                                        <span className="fs-12 mt-2 ml-1">
-                                          Căn hộ
-                                        </span>
-                                      </div>
+                      return (
+                        <div
+                          className="container-first-slider"
+                          key={node.frontmatter.id}
+                        >
+                          <Row noGutters>
+                            <Col sm={3} xs={12}>
+                              <div className="image-container first-slider-wrap">
+                                <div className="first-slider-wrap__left">
+                                  <Link to={`${Lgn}${node.frontmatter.slug}`}>
+                                    <div className="download__container">
+                                      <img
+                                        src={DownLoadIcons}
+                                        alt="icon download"
+                                      />
+                                    </div>
+                                  </Link>
+                                  <div className="container-below-image">
+                                    <div className="row">
+                                      <span className="fs-12 fw-bold mt-2">
+                                        Công trình:{" "}
+                                      </span>
+                                      <span className="fs-12 mt-2 ml-1">
+                                        Căn hộ
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
-                              </Col>
-                              <Col>
-                                <div className="first-slider-wrap__right">
+                              </div>
+                            </Col>
+                            <Col>
+                              <div className="first-slider-wrap__right">
+                                <div className="text-title fs-16">
+                                  {node.frontmatter.title}
+                                </div>
+                                <div className="text-date fs-12">
+                                  {node.frontmatter.date}
+                                </div>
+                                <div className="text-description fs-14">
+                                  {node.frontmatter.description}
+                                </div>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                      );
+                    })
+                    : currentPosts?.map(({ node }) => {
+                      return (
+                        <div
+                          className="container-first-slider"
+                          key={node.frontmatter.id}
+                        >
+                          <Row noGutters>
+                            <Col sm={5} xs={12}>
+                              <div className="image-container first-slider-wrap">
+                                <div className="first-slider-wrap__left">
+                                  {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
+                                  <Link to={`detail`}>
+                                    {node.frontmatter.featuredImage ? (
+                                      <Image
+                                        className="image-example"
+                                        src={
+                                          node.frontmatter.featuredImage
+                                            .publicURL
+                                        }
+                                        alt="Image 1"
+                                        fluid
+                                      />
+                                    ) : (
+                                      <Image
+                                        className="image-example"
+                                        src={ImageExample}
+                                        alt="Image 1"
+                                        fluid
+                                      />
+                                    )}
+                                  </Link>
+                                  <div className="container-below-image">
+                                    <div className="row">
+                                      <span className="fs-12 fw-bold">
+                                        Công trình:
+                                      </span>
+                                      <span className="ml-1 fs-12">
+                                        {" "}
+                                        Căn hộ
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </Col>
+                            <Col>
+                              <div className="first-slider-wrap__right">
+                                {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
+                                <Link to={`detail`}>
                                   <div className="text-title fs-16">
                                     {node.frontmatter.title}
                                   </div>
@@ -491,77 +552,13 @@ const TechnicalSol = ({ data }) => {
                                   <div className="text-description fs-14">
                                     {node.frontmatter.description}
                                   </div>
-                                </div>
-                              </Col>
-                            </Row>
-                          </div>
-                        );
-                      })
-                    : currentPosts?.map(({ node }) => {
-                        return (
-                          <div
-                            className="container-first-slider"
-                            key={node.frontmatter.id}
-                          >
-                            <Row noGutters>
-                              <Col sm={5} xs={12}>
-                                <div className="image-container first-slider-wrap">
-                                  <div className="first-slider-wrap__left">
-                                    {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
-                                    <Link to={`detail`}>
-                                      {node.frontmatter.featuredImage ? (
-                                        <Image
-                                          className="image-example"
-                                          src={
-                                            node.frontmatter.featuredImage
-                                              .publicURL
-                                          }
-                                          alt="Image 1"
-                                          fluid
-                                        />
-                                      ) : (
-                                        <Image
-                                          className="image-example"
-                                          src={ImageExample}
-                                          alt="Image 1"
-                                          fluid
-                                        />
-                                      )}
-                                    </Link>
-                                    <div className="container-below-image">
-                                      <div className="row">
-                                        <span className="fs-12 fw-bold">
-                                          Công trình:
-                                        </span>
-                                        <span className="ml-1 fs-12">
-                                          {" "}
-                                          Căn hộ
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </Col>
-                              <Col>
-                                <div className="first-slider-wrap__right">
-                                  {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
-                                  <Link to={`detail`}>
-                                    <div className="text-title fs-16">
-                                      {node.frontmatter.title}
-                                    </div>
-                                    <div className="text-date fs-12">
-                                      {node.frontmatter.date}
-                                    </div>
-                                    <div className="text-description fs-14">
-                                      {node.frontmatter.description}
-                                    </div>
-                                  </Link>
-                                </div>
-                              </Col>
-                            </Row>
-                          </div>
-                        );
-                      })}
+                                </Link>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                      );
+                    })}
                   {post?.length && (
                     <div className="pagination-container">
                       <nav>

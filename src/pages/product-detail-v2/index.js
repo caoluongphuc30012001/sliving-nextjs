@@ -1,26 +1,60 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import BuildThumbs from "./thumb";
-import { Row, Col } from "react-bootstrap";
-import LayoutV2 from "@components/layout-new";
-import star from "@images/product-v2/star.png";
+
+import LayoutSmartHome from "@components/layout-smart-home";
 import ButtonShop from '@components/button/button-shop';
 import SectionFeatureProduct from '@components/section/section-feature-product';
-import DataProductNew from '@query/product-hot';
 import IconHeart from "@components/svg/heart";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
+
+import DataProductNew from '@query/product-hot';
+
+import { Row, Col } from "react-bootstrap";
 import { graphql } from 'gatsby';
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+
+import star from "@images/product-v2/star.png";
+
+import BuildThumbs from "./thumb";
+
+import i18next from 'i18next';
+
+const handelFilter = (dataCurrent) => {
+    if (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) {
+        return true;
+    }
+    return false;
+}
+
 const IndexPage = ({ pageContext }) => {
+    const lngCurrent = i18next.language;
+    const [dataCurrent, setDataCurrent] = useState();
     const { data } = pageContext;
+
+
+    const filterPostByLgn = (data) => {
+        if (data?.length > 0) {
+            for (const item in data) {
+                const itemPost = data[item];
+                const lngPost = itemPost.distinct[0];
+                if (lngPost === lngCurrent) {
+                    setDataCurrent(itemPost.nodes[0]);
+                    if (handelFilter(itemPost.nodes[0]) === true) {
+                        getDataMechanical(itemPost.nodes[0].frontmatter);
+                    } else {
+                        setDataThumbs(itemPost.nodes[0].frontmatter?.imgSrcThumbs);
+                    }
+                }
+
+            }
+        }
+    }
+    useEffect(() => {
+        filterPostByLgn(data);
+    }, [data, i18next])
+
     const [dataThumbs, setDataThumbs] = useState();
 
     const dataProductFeature = DataProductNew();
-    const handelFilter = () => {
-        if (data && data.frontmatter.type.indexOf("Switch") > -1) {
-            return true;
-        }
-        return false;
-    }
-    const isFilter = handelFilter();
+
 
     const [mechanical_1, setMechanical_1] = useState();
     const [mechanical_2, setMechanical_2] = useState();
@@ -29,14 +63,6 @@ const IndexPage = ({ pageContext }) => {
     const [mechanical_6, setMechanical_6] = useState();
     const [mechanicalActive, setMechanicalActive] = useState();
 
-    useEffect(() => {
-        if (isFilter) {
-            getDataMechanical(data.frontmatter);
-        } else {
-            setDataThumbs(data.frontmatter.imgSrcThumbs);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data, isFilter])
 
     const getDataMechanical = (dataSwitch) => {
         var dataNew = [];
@@ -150,44 +176,44 @@ const IndexPage = ({ pageContext }) => {
     const BuildProductInfos = () => {
         return (
             <>
-                {data && (<section className="section-product-info">
+                {dataCurrent && (<section className="section-product-info">
                     <article className='product-info-detail'>
-                        <h6>{data?.frontmatter?.type || "Smart Control"}</h6>
-                        <h2>{data?.frontmatter?.title || "Thermostat"}</h2>
+                        <h6>{dataCurrent?.frontmatter?.type || "Smart Control"}</h6>
+                        <h2>{dataCurrent?.frontmatter?.title || "Thermostat"}</h2>
                         <div className="product-star"><img src={star} alt="" /> <span>15 reviews</span></div>
-                        <p>{data?.frontmatter?.details?.length > 0 ? data.frontmatter.details.map((des, index) => <li key={index}><span>{des}</span></li>) : "I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. "}</p>
-                        {isFilter && (<Row noGutters className="group-option">
+                        <p>{dataCurrent?.frontmatter?.details?.length > 0 ? dataCurrent.frontmatter.details.map((des, index) => <li key={index}><span>{des}</span></li>) : "I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. "}</p>
+                        {handelFilter(dataCurrent) === true && (<Row noGutters className="group-option">
                             <Col xs={12} md={6}>
                                 <Row noGutters className="version">
                                     <span>Version:</span>
                                 </Row>
                                 <Row noGutters className="group-btn-version">
                                     <button className={`btn-version ${versionActive === 0 ? 'is-active-btn' : null}`} onClick={() => handleActiveNeutral(0)} disabled={mechanicalActive?.withNeutral ? false : true}>
-                                        {!data?.frontmatter?.mechanical_6 || !data?.frontmatter?.mechanical_4 ? 'With neutral' : 'Zigbee'}
+                                        {!dataCurrent?.frontmatter?.mechanical_6 || !dataCurrent?.frontmatter?.mechanical_4 ? 'With neutral' : 'Zigbee'}
                                     </button>
                                     <button className={`btn-version ${versionActive === 1 ? 'is-active-btn' : null}`} onClick={() => handleActiveNeutral(1)} disabled={mechanicalActive?.nonNeutral ? false : true}>
-                                        {!data?.frontmatter?.mechanical_6 || !data?.frontmatter?.mechanical_4 ? 'Non-neutral' : 'Wifi'}
+                                        {!dataCurrent?.frontmatter?.mechanical_6 || !dataCurrent?.frontmatter?.mechanical_4 ? 'Non neutral' : 'Wifi'}
                                     </button>
                                 </Row>
                             </Col>
-                            {!data?.frontmatter?.mechanical_6 && (<Col xs={12} md={6}>
+                            {!dataCurrent?.frontmatter?.mechanical_6 && (<Col xs={12} md={6}>
                                 <Row noGutters className="version">
                                     <span>Button:</span>
                                 </Row>
                                 <Row noGutters className="group-btn-version">
-                                    {data?.frontmatter?.mechanical_1 && (<button className={`btn-version ${buttonActive === 1 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(1)} disabled={((versionActive === 0 && mechanical_1?.withNeutral) || (versionActive === 1 && mechanical_1?.nonNeutral)) ? false : true}>
+                                    {dataCurrent?.frontmatter?.mechanical_1 && (<button className={`btn-version ${buttonActive === 1 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(1)} disabled={((versionActive === 0 && mechanical_1?.withNeutral) || (versionActive === 1 && mechanical_1?.nonNeutral)) ? false : true}>
                                         {1} button
                                     </button>)}
-                                    {data?.frontmatter?.mechanical_2 && (<button className={`btn-version ${buttonActive === 2 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(2)} disabled={((versionActive === 0 && mechanical_2?.withNeutral) || (versionActive === 1 && mechanical_2?.nonNeutral)) ? false : true}>
+                                    {dataCurrent?.frontmatter?.mechanical_2 && (<button className={`btn-version ${buttonActive === 2 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(2)} disabled={((versionActive === 0 && mechanical_2?.withNeutral) || (versionActive === 1 && mechanical_2?.nonNeutral)) ? false : true}>
                                         {2} button
                                     </button>)}
-                                    {data?.frontmatter?.mechanical_3 && (<button className={`btn-version ${buttonActive === 3 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(3)} disabled={((versionActive === 0 && mechanical_3?.withNeutral) || (versionActive === 1 && mechanical_3?.nonNeutral)) ? false : true}>
+                                    {dataCurrent?.frontmatter?.mechanical_3 && (<button className={`btn-version ${buttonActive === 3 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(3)} disabled={((versionActive === 0 && mechanical_3?.withNeutral) || (versionActive === 1 && mechanical_3?.nonNeutral)) ? false : true}>
                                         {3} button
                                     </button>)}
-                                    {data?.frontmatter?.mechanical_4 && (<button className={`btn-version ${buttonActive === 4 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(4)} disabled={((versionActive === 0 && mechanical_4?.withNeutral) || (versionActive === 1 && mechanical_4?.nonNeutral)) ? false : true}>
+                                    {dataCurrent?.frontmatter?.mechanical_4 && (<button className={`btn-version ${buttonActive === 4 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(4)} disabled={((versionActive === 0 && mechanical_4?.withNeutral) || (versionActive === 1 && mechanical_4?.nonNeutral)) ? false : true}>
                                         {4} button
                                     </button>)}
-                                    {/* {data?.frontmatter?.mechanical_6 && (<button className={`btn-version ${buttonActive === 6 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(6)} disabled={((versionActive === 0 && mechanical_6?.withNeutral) || (versionActive === 1 && mechanical_6?.nonNeutral)) ? false : true}>
+                                    {/* {dataCurrent?.frontmatter?.mechanical_6 && (<button className={`btn-version ${buttonActive === 6 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(6)} disabled={((versionActive === 0 && mechanical_6?.withNeutral) || (versionActive === 1 && mechanical_6?.nonNeutral)) ? false : true}>
                                         {6} button
                                     </button>)} */}
                                 </Row>
@@ -221,11 +247,11 @@ const IndexPage = ({ pageContext }) => {
         </section>)
     }
     return (
-        <LayoutV2>
+        <LayoutSmartHome>
             <BuildHeader />
-            {data?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: data?.html }} /></section>)}
+            {dataCurrent?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} /></section>)}
             {dataProductFeature && (< SectionFeatureProduct dataProductHot={dataProductFeature} />)}
-        </LayoutV2>
+        </LayoutSmartHome>
     );
 }
 

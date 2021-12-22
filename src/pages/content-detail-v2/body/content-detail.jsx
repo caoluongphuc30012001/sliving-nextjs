@@ -4,7 +4,6 @@ import car from "@images/content-page/image.png";
 import BotBanner from '@images/support-page-v2-img/banner1.jpg'
 
 const ContentDetail = ({ pageContext }) => {
-  console.log();
   return (
     <section className="contentDetail">
       <h1 className="mt-5">
@@ -57,7 +56,7 @@ const ContentDetail = ({ pageContext }) => {
       </div>
       <div className="footerContent"><span>Share:</span><span className="icon">f</span><div>45</div></div>
       <div class="bot-banner" >
-        <img class="bot-banner-img" src={BotBanner} alt="bottom banner"/>
+        <img class="bot-banner-img" src={BotBanner} alt="bottom banner" />
       </div>
     </section>
   );

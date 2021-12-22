@@ -6,12 +6,8 @@ import logo from "@images/new-home-page/footer/logo.png";
 import iconFb from "@images/new-home-page/footer/icon-fb.png";
 import iconIns from "@images/new-home-page/footer/icon-insta.png";
 
-import iconAddress from "@images/icon/svg/address.svg";
-import iconEmail from "@images/icon/svg/email.svg";
-import iconPhone from "@images/icon/svg/phone.svg";
 
 import { useTranslation } from "react-i18next";
-
 
 export default function FooterV2() {
 
@@ -48,7 +44,7 @@ export default function FooterV2() {
               <div className="footer-info">
                 <div className="footer-info-detail">
                   <span>
-                    <img src={iconAddress} width={32} height={32} alt="icon address" />
+                    {t(`footer_address`)}:
                   </span>
                   <span>
                     {t(`address_head_quarters`)}
@@ -58,7 +54,7 @@ export default function FooterV2() {
               <div className="footer-info">
                 <div className="footer-info-detail">
                   <span>
-                    <img src={iconPhone} width={32} height={32} alt="icon address" />
+                    {t(`footer_phone`)}:
                   </span>
                   <span>
                     02473039999
@@ -68,9 +64,9 @@ export default function FooterV2() {
               <div className="footer-info">
                 <div className="footer-info-detail">
                   <span>
-                    <img src={iconEmail} width={32} height={32} alt="icon address" />
+                    {t(`footer_email`)}:
                   </span>
-                  <span>
+                  <span style={{ textTransform: ' lowercase' }}>
                     hello@sliving.vn
                   </span>
                 </div>
@@ -88,9 +84,9 @@ export default function FooterV2() {
                 </div>
               </div>
               <div className="footer-info">
-                <div className="footer-info-detail">
-                  <span>
-                    <img src={iconAddress} width={32} height={32} alt="icon address" />
+                <div className="footer-info-detail" >
+                  <span style={{ alignSelf: "stretch", whiteSpace: 'nowrap' }}>
+                    {t(`footer_address`)}:
                   </span>
                   <span>
                     {t(`ADDRESS.ADDRESS_COMPANY`)}
@@ -100,7 +96,7 @@ export default function FooterV2() {
               <div className="footer-info">
                 <div className="footer-info-detail">
                   <span>
-                    <img src={iconPhone} width={32} height={32} alt="icon address" />
+                    {t(`footer_phone`)}:
                   </span>
                   <span>
                     028 71079995

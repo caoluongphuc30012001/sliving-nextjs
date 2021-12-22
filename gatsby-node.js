@@ -1,7 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { QueryProductPage } = require("./src/query/await/ProductPage");
-const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -30,10 +29,17 @@ function checkDetectPage(page, namePage) {
     return true;
   return false;
 }
-
 exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
-  if ((checkDetectPage(page, "/main-page-v2") === true || checkDetectPage(page, "/product-detail-v2") === true || checkDetectPage(page, "/support-page-v2") === true || checkDetectPage(page, "/product-page-v2") === true || checkDetectPage(page, "/smart-home-page-v2") === true)) {
+  if ((checkDetectPage(page, "/main-page-v2") === true ||
+    checkDetectPage(page, "/product-detail-v2") === true ||
+    checkDetectPage(page, "/support-page-v2") === true ||
+    checkDetectPage(page, "/product-page-v2") === true ||
+    checkDetectPage(page, "/smart-home-page-v2") === true ||
+    checkDetectPage(page, "/smart-light-v2") === true ||
+    checkDetectPage(page, "/contact-page-v2") === true ||
+    checkDetectPage(page, "/support-page-v2") === true
+  )) {
     deletePage(page)
   }
 }
@@ -80,8 +86,8 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   }
 `);
-const querySupportPage = await graphql(
-  `
+  const querySupportPage = await graphql(
+    `
   {dataTechnicalAnswer:
   allMarkdownRemark(
     filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
@@ -104,29 +110,28 @@ const querySupportPage = await graphql(
 }
 
 `
-);
+  );
 
-createPage({
-  path: `/support/`,
-  component: pagesSupport,
-  context: {
-    data: querySupportPage
-  }
+  createPage({
+    path: `/support/`,
+    component: pagesSupport,
+    context: {
+      data: querySupportPage
+    }
 
-});
-createPage({
-  path: `/support/detail`,
-  component: detailSupport,
-  context: {
-    data: querySupportPage
-  }
+  });
+  createPage({
+    path: `/support/detail`,
+    component: detailSupport,
+    context: {
+      data: querySupportPage
+    }
 
-});
+  });
   const arrLng = await getLng({ graphql: graphql });
   if (arrLng.length > 0 && productPage) {
     arrLng.forEach((lng) => {
       if (lng.lng === "en") {
-       
         createPage({
           path: `/smart-home/`,
           component: smartHomeComponent,
@@ -145,11 +150,11 @@ createPage({
           },
         });
         createPage({
-          path: `/smart-lighting/contact`,
+          path: `/smart-lighting/contact/`,
           component: contactComponent,
           context: {
             data: productPage.data.ProductPage,
-            isNavbarContact:{isSmartLighting:true}
+            isNavbarContact: { isSmartLighting: true }
           },
         });
 
@@ -161,19 +166,19 @@ createPage({
           },
         });
         createPage({
-          path: `/smart-home/contact`,
+          path: `/smart-home/contact/`,
           component: contactComponent,
           context: {
             data: productPage.data.ProductPage,
-            isNavbarContact:{isSmartHome:true}
+            isNavbarContact: { isSmartHome: true }
           },
         });
-        productPage.data.ProductPage.edges.forEach((product) => {
+        productPage.data.ProductPage.group.forEach((product) => {
           createPage({
-            path: `/smart-home/products/${product.node.frontmatter.slug}`,
+            path: `/smart-home/products/${product.distinct[0]}`,
             component: productDetailComponent,
             context: {
-              data: product.node
+              data: product.group
             },
           });
         });

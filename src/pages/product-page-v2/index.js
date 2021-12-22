@@ -4,17 +4,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
     Navigation, Pagination
 } from 'swiper';
+
 import { Col, Row } from 'react-bootstrap';
 import ThreeElementVertical from './three-element-vertical';
-import LayoutV2 from "@components/layout-new.jsx";
-import ButtonShop from '@components/button/button-shop';
+import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import SectionFeatureProduct from '@components/section/section-feature-product';
 import SlideProduct from '@components/section/section-product';
 import ButtonLearn from '@components/button/button-learn';
+import ButtonShop from '@components/button/button-shop';
+
 
 import DataProductNew from "@query/product-hot";
 
-import imgProd from "@images/product-v2/touch.png";
 
 import imgProd1 from "@images/product-v2/smart-button.png";
 import imgProd2 from "@images/product-v2/t2-2.png";
@@ -149,7 +150,7 @@ const IndexPage = ({ data }) => {
 
     const dataProdHot = data?.allMarkdownRemark?.edges || [];
     return (
-        <LayoutV2>
+        <LayoutSmartHome>
             <div className="page-product-v2">
                 <BuildHeader />
                 <ThreeElementVertical dataProdHot={dataProdHot} />
@@ -158,7 +159,7 @@ const IndexPage = ({ data }) => {
                 {buildSlideProduct}
                 <BuildBannerRevolution />
             </div>
-        </LayoutV2>
+        </LayoutSmartHome>
     );
 }
 
