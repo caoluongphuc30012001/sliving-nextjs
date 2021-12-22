@@ -5,12 +5,6 @@ import logo from "@images/new-home-page/footer/logo.png";
 import iconFb from "@images/new-home-page/footer/icon-fb.png";
 import iconIns from "@images/new-home-page/footer/icon-insta.png";
 
-import iconAddress from "@images/icon/svg/address.svg";
-import iconEmail from "@images/icon/svg/email.svg";
-import iconPhone from "@images/icon/svg/phone.svg";
-
-
-
 import SectionMap from "@components/map";
 
 import { useTranslation } from "react-i18next";
@@ -56,7 +50,7 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        <img src={iconAddress} width={32} height={32} alt="icon address" />
+                                        {t(`address`)}:
                                     </span>
                                     <span>
                                         {t(`address_head_quarters`)}
@@ -66,7 +60,7 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        <img src={iconPhone} width={32} height={32} alt="icon address" />
+                                        {t(`phone`)}:
                                     </span>
                                     <span>
                                         02473039999
@@ -76,9 +70,9 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        <img src={iconEmail} width={32} height={32} alt="icon address" />
+                                        {t(`email`)}:
                                     </span>
-                                    <span>
+                                    <span style={{ textTransform: ' lowercase' }}>
                                         hello@sliving.vn
                                     </span>
                                 </div>
@@ -96,9 +90,9 @@ export default function FooterHomePage() {
                                 </div>
                             </div>
                             <div className="footer-info">
-                                <div className="footer-info-detail">
-                                    <span>
-                                        <img src={iconAddress} width={32} height={32} alt="icon address" />
+                                <div className="footer-info-detail" >
+                                    <span style={{ alignSelf: "stretch" }}>
+                                        {t(`address`)}:
                                     </span>
                                     <span>
                                         {t(`ADDRESS.ADDRESS_COMPANY`)}
@@ -108,23 +102,13 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        <img src={iconPhone} width={32} height={32} alt="icon address" />
+                                        {t(`phone`)}:
                                     </span>
                                     <span>
                                         028 71079995
                                     </span>
                                 </div>
                             </div>
-                            {/* <div className="footer-info">
-                                <div className="footer-info-detail">
-                                    <span>
-                                        <img src={iconEmail} width={32} height={32} alt="icon address" />
-                                    </span>
-                                    <span>
-                                        info@sliving.vn
-                                    </span>
-                                </div>
-                            </div> */}
                         </Col>
                     </Row>
                     <Row noGutters>

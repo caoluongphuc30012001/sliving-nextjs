@@ -1,13 +1,13 @@
 import React from 'react';
 import LayoutV2 from "@components/layout-new.jsx";
-import TechnicalSolution from "./body/technicalSolution";
+import TechnicalSol from './body/technicalSolution';
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from 'gatsby'
 
 const IndexPage = ({ pageContext }) => {
   return (
-    <LayoutV2>
-      <TechnicalSolution data={pageContext.data.data} />
+    <LayoutV2 isMainPage pageContext={{ isSmartHome: true }}>
+      <TechnicalSol data={pageContext?.data?.data} />
     </LayoutV2>
   );
 };

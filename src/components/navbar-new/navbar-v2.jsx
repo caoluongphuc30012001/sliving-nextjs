@@ -4,13 +4,16 @@ import Link from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
+import { useTranslation } from "react-i18next";
+
 export default function NavbarNew() {
+
+  const { t } = useTranslation();
   const arrMenu = [
-    { id: "0", title: "Smart Home", isActive: true, path: "/smart-home" },
-    { id: "1", title: "Smart Building", isActive: false, path: "#" },
-    { id: "2", title: "Fintech IoT", isActive: false, path: "#" },
-    { id: "3", title: "Lighting", isActive: false, path: "/smart-lighting-v2" },
-    { id: "4", title: "About Us", isActive: false, path: "/contact-page-v2" },
+    { id: "0", title: "Smart Home", isActive: true, path: "/smart-home/" },
+    { id: "1", title: "Fintech IoT", isActive: false, path: "#" },
+    { id: "2", title: "Lighting", isActive: false, path: "/smart-lighting-v2/" },
+    { id: "3", title: "About Us", isActive: false, path: "#" },
   ];
 
   return (
@@ -25,7 +28,7 @@ export default function NavbarNew() {
               id="nav-bar"
             >
               <Link to="/" className="logo nav-logo nav-brand">
-                <Image
+                <img
                   className="img-obj-cover"
                   src={logo}
                   width={202}
@@ -37,21 +40,28 @@ export default function NavbarNew() {
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2 "
               >
-                <Nav className="nav-desktop">
-                  {arrMenu &&
-                    arrMenu.map((nav, index) => {
-                      return (
-                        <Link
-                          key={index}
-                          to={nav.path}
-                          className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
-                            }`}
-                          id="item-menu"
-                        >
-                          {nav.title}
-                        </Link>
-                      );
-                    })}
+                <Nav className="nav-desktop navbarItem">
+                  <div>
+                    {arrMenu &&
+                      arrMenu.map((nav, index) => {
+                        return (
+                          <Link
+                            key={index}
+                            to={nav.path}
+                            className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
+                              }`}
+                            id="item-menu"
+                          >
+                            {nav.title}
+                            {nav.title === "About Us" ? <ul className="subNav">
+                              <li><Link>Brand Story</Link></li>
+                              <li><Link>News</Link></li>
+                              <li><Link to='/contact-page-v2'>Contact us</Link></li>
+                            </ul> : ""}
+                          </Link>
+                        );
+                      })}
+                  </div>
                   <LanguageSwitcher />
                 </Nav>
               </Navbar.Collapse>

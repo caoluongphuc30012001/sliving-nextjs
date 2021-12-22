@@ -5,10 +5,12 @@ import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
 import lineImg from "@images/new-home-page/app-img/line.png";
 import Link from "@components/gatsby-link";
+import i18next from 'i18next';
 
 import { useTranslation } from 'react-i18next';
 import "../style.scss";
 const SectionFeatureProduct = ({ dataProductHot }) => {
+    const lngCurrent = i18next.language;
     const { t } = useTranslation();
     const NextArrow = (props) => {
         const { className, style, onClick } = props;
@@ -45,7 +47,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     const filterProduct = (filter) => {
         if (dataProductHot[filter]?.edges.length > 0) {
             const arrNew = dataProductHot[filter].edges;
-            const arrFilter = arrNew.filter((element) => element.node.frontmatter.lgn === "en");
+            const arrFilter = arrNew.filter((element) => element.node.frontmatter.lgn === lngCurrent);
             setArrProductHot(arrOld => arrOld.concat(arrFilter));
         }
     }

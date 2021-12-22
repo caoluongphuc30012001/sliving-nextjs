@@ -1,7 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { QueryProductPage } = require("./src/query/await/ProductPage");
-const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -30,10 +29,17 @@ function checkDetectPage(page, namePage) {
     return true;
   return false;
 }
-
 exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
-  if ((checkDetectPage(page, "/main-page-v2") === true || checkDetectPage(page, "/product-detail-v2") === true || checkDetectPage(page, "/support-page-v2") === true || checkDetectPage(page, "/product-page-v2") === true || checkDetectPage(page, "/smart-home-page-v2") === true)) {
+  if ((checkDetectPage(page, "/main-page-v2") === true ||
+    checkDetectPage(page, "/product-detail-v2") === true ||
+    checkDetectPage(page, "/support-page-v2") === true ||
+    checkDetectPage(page, "/product-page-v2") === true ||
+    checkDetectPage(page, "/smart-home-page-v2") === true ||
+    checkDetectPage(page, "/smart-light-v2") === true ||
+    checkDetectPage(page, "/contact-page-v2") === true ||
+    checkDetectPage(page, "/support-page-v2") === true
+  )) {
     deletePage(page)
   }
 }
@@ -62,6 +68,8 @@ exports.createPages = async function ({ actions, graphql }) {
   const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
   const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
   const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
+  const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
+  const detailSupport = require.resolve("./src/pages/content-detail-v2");
   const smartLightingComponent = require.resolve("./src/pages/smart-lighting-v2/index.js");
   const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
 
@@ -77,33 +85,43 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   }
 `);
-
   const querySupportPage = await graphql(
     `
-    {dataTechnicalAnswer:
-    allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            subtitle
-            slug
-          }
-          html
+  {dataTechnicalAnswer:
+  allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          description
+          details
+          title
+          type
+          date
+          subtitle
+          slug
         }
+        html
       }
     }
   }
-  
+}
+
 `
   );
 
-  const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
   createPage({
     path: `/support/`,
     component: pagesSupport,
+    context: {
+      data: querySupportPage
+    }
+
+  });
+  createPage({
+    path: `/support/detail`,
+    component: detailSupport,
     context: {
       data: querySupportPage
     }
@@ -113,6 +131,7 @@ exports.createPages = async function ({ actions, graphql }) {
   if (arrLng.length > 0 && productPage) {
     arrLng.forEach((lng) => {
       if (lng.lng === "en") {
+
         createPage({
           path: `/smart-home/`,
           component: smartHomeComponent,
@@ -131,11 +150,11 @@ exports.createPages = async function ({ actions, graphql }) {
           },
         });
         createPage({
-          path: `/smart-lighting/contact`,
+          path: `/smart-lighting/contact/`,
           component: contactComponent,
           context: {
             data: productPage.data.ProductPage,
-            isNavbarContact:{isSmartLighting:true}
+            isNavbarContact: { isSmartLighting: true }
           },
         });
 
@@ -147,19 +166,19 @@ exports.createPages = async function ({ actions, graphql }) {
           },
         });
         createPage({
-          path: `/smart-home/contact`,
+          path: `/smart-home/contact/`,
           component: contactComponent,
           context: {
             data: productPage.data.ProductPage,
-            isNavbarContact:{isSmartHome:true}
+            isNavbarContact: { isSmartHome: true }
           },
         });
-        productPage.data.ProductPage.edges.forEach((product) => {
+        productPage.data.ProductPage.group.forEach((product) => {
           createPage({
-            path: `/smart-home/products/${product.node.frontmatter.slug}`,
+            path: `/smart-home/products/${product.distinct[0]}`,
             component: productDetailComponent,
             context: {
-              data: product.node
+              data: product.group
             },
           });
         });

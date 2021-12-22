@@ -31,7 +31,7 @@ export default function NavbarSmartHomeDesktop() {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
       isActive: false,
-      path: "#",
+      path: "products",
     },
     {
       id: "2",
@@ -43,13 +43,13 @@ export default function NavbarSmartHomeDesktop() {
       id: "3",
       title: t(`HEADER.HOMEPAGE.SUPPORT.SUPPORT`),
       isActive: false,
-      path: "#",
+      path: "/support",
     },
     {
       id: "4",
       title: t(`HEADER.HOMEPAGE.CONTACTUS`),
       isActive: false,
-      path: "/smart-home/contact",
+      path: "contact",
     },
   ];
   const arrMenuSolution = [
@@ -98,7 +98,7 @@ export default function NavbarSmartHomeDesktop() {
               >
                 <Nav className="nav-desktop">
                   <Link
-                    to="/smart-home"
+                    to="/smart-home/"
                     className="item-menu item-menu-child link fs-16 1"
                     id="item-menu"
                   >
@@ -110,9 +110,8 @@ export default function NavbarSmartHomeDesktop() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
+                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
+                            }`}
                           id="item-menu"
                         >
                           {nav.title}

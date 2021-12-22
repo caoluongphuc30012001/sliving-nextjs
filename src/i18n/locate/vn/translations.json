@@ -347,8 +347,8 @@
   "home_page_v2.product_development_strategy": "Chiến lược phát triển sản phẩm",
   "ready_go_to_global": "Vươn tầm quốc tế",
   "CONNECTING_ECOsystems": "Kết nối các hệ sinh thái",
-  "sub_ready_go_to_global": "Tại Unicloud, mọi sản phẩm được khai sinh để giải các bài toán local nhưng phải được thiết kế để sẵn sàng go-global. Thiết kế mở, cho phép dễ dàng tích hợp với mọi platform, hardware và hệ thống của các đối tác toàn cầu.",
-  "sub_CONNECTING_ECOsystems": "Sở hữu các hệ thống lõi và công nghệ lõi để khai thác Big Data thông qua việc chia sẻ người dùng với các nền tảng khác. Tập trung nguồn lực vào các hệ sinh thái tạo ra hàng triệu người dùng, hàng tỷ giao dịch xoay quanh Bất động sản, Banking, Tài Chính, Bảo hiểm và các dịch vụ thiết yếu hàng ngày.",
+  "sub_ready_go_to_global": "Tại Unicloud, mọi sản phẩm được khai sinh để giải các bài toán local nhưng phải được thiết kế để sẵn sàng go-global.",
+  "sub_CONNECTING_ECOsystems": "Sở hữu các hệ thống lõi và công nghệ lõi để khai thác Big Data thông qua việc chia sẻ người dùng với các nền tảng khác.",
   "sub_CUSTOMER_CENTRIC": "Lấy khách hàng làm trung tâm chuyển đổi số, khai thác tối đa tài nguyên & giữ chân khách hàng.",
   "products_v2": {
     "header": "Chúng tôi có mọi thứ trong tầm kiểm soát. Chúng tôi cung cấp một loạt các giải pháp điều khiển để đáp ứng nhu cầu của hầu hết mọi dự án",
@@ -458,6 +458,9 @@
       }
     },
     "footer": "Tìm các tùy chọn khác hoàn hảo cho bạn.",
-    "subFooter": "Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!"
+    "subFooter": "Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "address": "Địa chỉ"
   }
 }
