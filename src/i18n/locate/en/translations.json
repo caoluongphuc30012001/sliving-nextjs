@@ -408,7 +408,8 @@
     
     },
     "lighting":{
-      "header":"The technology of light gives your colour.",
+      "header":"The technology of light gives your",
+      "color":" colour.",
       "subHeader":"Complex project management experience. When selecting an offshore software development company, ensure that they have", 
       "section_1":{
         "title":"Protect your health",
@@ -424,6 +425,30 @@
       }
     },
     "footer":"Find other options that are perfect for you.",
-    "subFooter":"We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!"
+    "subFooter":"We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
+    "Cinema":"Cinema",
+    "Store":"Store",
+    "Home":"Home",
+    "Office":"Office",
+    "School":"School",
+    "titleSolution":"Smart lighting solutions for your life."
+  },
+  "Contact":{
+    "ErrorYourName":"Please provide Your Name",
+    "ErrorTypesofCustomer":"Please provide Types of Customer",
+    "ErrorCountry":"Please provide Country",
+    "ErrorEmail":"Please provide Email",
+    "ErrorNumber":"NPlease provide Phone Number",
+    "ErrorCompanyName":"Please provide Company Name",
+    "Title":"The Sliving's team stands ready to co-operate with you.",
+    "Action":"Please fill out the fields below and someone will be in touch with you very soon.",
+    "YourName":"Your Name",
+    "TypesofCustomer":"Types of Customer",
+    "Country":"Country",
+    "Email":"Email Address",
+    "Number":"Phone Number",
+    "CompanyName":"Company Name",
+    "Job":"Job Title",
+    "Submit":"Submit"
   }
 }

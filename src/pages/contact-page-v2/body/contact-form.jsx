@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
+  const [preNumPhone,setPreNumPhone]=useState('+84')
+  const { t } = useTranslation();
+
+  const arrNumRange=['+84','+354','+380','+66','+1']
 
   const validateFeedback = (field) => {
     return (
       <Form.Control.Feedback type="invalid">
-        Please provide {field}
+        {t(`Contact.${field}`)}
       </Form.Control.Feedback>
     );
   };
@@ -33,13 +38,12 @@ const ContactForm = () => {
     <section className="contactUs d-flex justify-content-center mb-5">
       <Form noValidate validated={validated} onSubmit={handleOnSubmit}>
         <h4 className="text-center">
-          The Sliving's team stands ready to co-operate with you.
+          {t(`Contact.Title`)}
         </h4>
         <p className="text-center">
-          Please fill out the fields below and someone will be in touch with you
-          very soon.
+          {t(`Contact.Action`)}
         </p>
-        <label htmlFor="customerName">Your Name</label>
+        <label htmlFor="customerName">{t(`Contact.YourName`)}</label>
           <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="Nguyen Van A"
@@ -47,9 +51,9 @@ const ContactForm = () => {
               type="text"
               required
             />
-            {validateFeedback("Your Name")}
+            {validateFeedback("ErrorYourName")}
           </Form.Group>
-        <label htmlFor="type">Types of Customer</label>
+        <label htmlFor="type">{t(`Contact.TypesofCustomer`)}</label>
           <Form.Group style={{width:'100%'}}>
             <Form.Control
               name="type"
@@ -58,15 +62,12 @@ const ContactForm = () => {
               as="select"
               className="form-select"
             >
-            <option value="" disabled selected hidden>
-              --None--
-            </option>
             <option value="1">Distributors</option>
             <option value="2">Intergration & Customizing Solutions</option>
             </Form.Control>
-            {validateFeedback("Types of Customer")}
+            {validateFeedback("ErrorTypesofCustomer")}
           </Form.Group>
-        <label htmlFor="country">Country</label>
+        <label htmlFor="country">{t(`Contact.Country`)}</label>
           <Form.Group style={{width:'100%'}}>
             <Form.Control
               name="country"
@@ -74,19 +75,21 @@ const ContactForm = () => {
               required
               as="select"
               className="form-select"
+              defaultValue={'--None--'}
+              onChange={(e)=>setPreNumPhone(arrNumRange[e.target.value])}
             >
-            <option value="" disabled selected hidden>
+            {/* <option value="" disabled selected hidden>
               --None--
-            </option>
-            <option value="1">Viet Nam</option>
-            <option value="2">Iceland</option>
-            <option value="3">Ukraine</option>
-            <option value="4">Thailand</option>
-            <option value="5">Saint Kitts and Nevis</option>
+            </option> */}
+            <option value={0}>Viet Nam</option>
+            <option value={1}>Iceland</option>
+            <option value={2}>Ukraine</option>
+            <option value={3}>Thailand</option>
+            <option value={4}>Saint Kitts and Nevis</option>
             </Form.Control>
-            {validateFeedback("Country")}
+            {validateFeedback("ErrorCountry")}
           </Form.Group>
-        <label htmlFor="email">Email Address</label>
+        <label htmlFor="email">{t(`Contact.Email`)}</label>
         <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="youremail@gmail.com"
@@ -95,23 +98,23 @@ const ContactForm = () => {
               type="email"
               required
             />
-            {validateFeedback("Email")}
+            {validateFeedback("ErrorEmail")}
           </Form.Group>
-        <label htmlFor="phoneNumber">Phone Number</label>
+        <label htmlFor="phoneNumber">{t(`Contact.Number`)}</label>
           <Form.Group style={{ width: "100%" }} className="phoneNumber">
-            <span className="numberPrefix">+84</span>
+            <span className="numberPrefix">{preNumPhone}</span>
             <Form.Control
               name="Phone number"
               id="phoneNumber"
               placeholder="379503xxx"
-              type="text"
+              type="number"
               pattern="[0-9]{9}|[0-9]{10}"
               onInput={handleValidatorNumber}
               required
             />
-            {validateFeedback("Phone Number")}
+            {validateFeedback("ErrorNumber")}
           </Form.Group>
-        <label htmlFor="companyName">Company Name</label>
+        <label htmlFor="companyName">{t(`Contact.CompanyName`)}</label>
         <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="ABC Company"
@@ -121,9 +124,9 @@ const ContactForm = () => {
               pattern="abc"
               required
             />
-            {validateFeedback("Company Name")}
+            {validateFeedback("ErrorCompanyName")}
           </Form.Group>
-        <label htmlFor="jobTitle">Job Title</label>
+        <label htmlFor="jobTitle">{t(`Contact.Job`)}</label>
                 <Form.Group style={{ width: "100%" }}>
             <Form.Control
               placeholder="Project Manager"
@@ -142,7 +145,7 @@ const ContactForm = () => {
             />
           </Form.Group>
         <button type="submit" className="btn btn-lg btn-block">
-          Submit
+          {t(`Contact.Submit`)}
         </button>
       </Form>
     </section>

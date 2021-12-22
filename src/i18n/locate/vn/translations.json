@@ -410,7 +410,8 @@
     
     },
     "lighting":{
-      "header":"Công nghệ ánh sáng mang lại sắc màu.",
+      "header":"Công nghệ ánh sáng mang lại sắc",
+      "color":" màu.",
       "subHeader":"Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có", 
       "section_1":{
         "title":"Bảo vệ sức khỏe của bạn",
@@ -426,6 +427,30 @@
       }
     },
     "footer":"Tìm các tùy chọn khác hoàn hảo cho bạn.",
-    "subFooter":"Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!"
+    "subFooter":"Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!",
+    "Cinema":"Rạp chiếu phim",
+    "Store":"Cửa hàng",
+    "Home":"Nhà",
+    "Office":"Văn phòng",
+    "School":"Trường",
+    "titleSolution":"Giải pháp ánh sáng thông minh cho cuộc sống"
+  },
+  "Contact":{
+    "ErrorYourName":"Nhập tên của bạn",
+    "ErrorTypesofCustomer":"Nhập loại khách hàng",
+    "ErrorCountry":"Nhập đất nước của bạn",
+    "ErrorEmail":"Nhập email",
+    "ErrorNumber":"Nhập số điện thoại",
+    "ErrorCompanyName":"Nhập tên công ty",
+    "Title":"Đội nhóm Sliving sẵn sàng hợp tác với bạn.",
+    "Action":"Xin mời điền vào form bên dưới sẽ có người liên hệ với bạn sau.",
+    "YourName":"Tên của bạn",
+    "TypesofCustomer":"Loại khách hàng",
+    "Country":"Đất nước",
+    "Email":"Địa chỉ email",
+    "Number":"Số điện thoại",
+    "CompanyName":"Tên công ty",
+    "Job":"Ngành nghề",
+    "Submit":"Xác nhận"
   }
 }

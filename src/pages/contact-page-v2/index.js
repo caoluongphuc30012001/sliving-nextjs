@@ -12,8 +12,8 @@ import "./style.scss";
 const ContactUs = (props) => {
   return (
     <LayoutNew pageContext={props.pageContext.isNavbarContact}>
-      <RequestSupport />
-      <ContactSupport />
+      {/* <RequestSupport />
+      <ContactSupport /> */}
       <HeaderImage />
       <ContactForm />
       <BottomImage />
