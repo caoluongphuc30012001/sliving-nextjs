@@ -427,5 +427,29 @@
     },
     "footer":"Tìm các tùy chọn khác hoàn hảo cho bạn.",
     "subFooter":"Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!"
+  },
+  "reason":{
+    "header":"Lý do bạn nên lựa chọn Sliving",
+    "subHeader":"Tiên phong trong việc cung cấp các giải pháp toàn diện cho Nền tảng IoT tại Việt Nam",
+    "reason_1":{
+      "title":"Sản phẩm chất lượng quốc tế",
+      "description":"Đặt mình vào vị trí của khách hàng là chiến lược mà chúng tôi áp dụng tại Sliving để hiểu những gì khách hàng cần. Để thay đổi sự không chắc chắn của khách hàng về chất lượng sản phẩm thông minh trong nước, chúng tôi đã và đang hoàn thiện sản phẩm của mình. Điều này được chứng minh bằng nhiều chứng chỉ chất lượng quốc tế mà chúng tôi đã và sẽ nhận được trong thời gian tới, MFi là một trong số đó."
+    },
+    "reason_2":{
+      "title":"Nhiều loại sản phẩm và giải pháp",
+      "description":"<ul> <li> Thiết kế giao diện cho các ứng dụng di động (Mobile App), giám sát các trang web để kiểm soát và giới thiệu sản phẩm. </li> <li> Thiết kế các sản phẩm phần cứng </li> <li> Sản xuất thiết bị công nghệ thông minh. </ li > <li> Xây dựng các chương trình máy tính như Phần mềm cơ sở, Máy chủ đám mây. </li> <li> AI (Trí tuệ nhân tạo). </li> </ul>"
+    },
+    "reason_3":{
+      "title":"Chuỗi cung ứng mạnh mẽ",
+      "description":"Với mục tiêu dẫn đầu thị trường công nghệ thông minh, Sliving là doanh nghiệp đầu tiên được cấp phép sản xuất các thiết bị trong hệ sinh thái Smart Living. Nhà máy có diện tích gần 4500m2, tổng công suất sản xuất ước tính khoảng 270.000 thiết bị/năm. Trong đó, công suất sản xuất giai đoạn 1 của dự án là 135 nghìn sản phẩm/năm và tăng dần giai đoạn 2, đạt 100% công suất vào tháng 6 năm 2025."
+    },
+    "reason_4":{
+      "title":"Hỗ trợ kỹ thuật và hỗ trợ bảo hành",
+      "description":"Nhân viên dự án, nhân viên kỹ thuật, nhân viên kinh doanh sẵn sàng tư vấn / hỗ trợ khách hàng những giải pháp phù hợp, đáp ứng mong muốn của từng khách hàng với chi phí thấp."
+    },
+    "reason_5":{
+      "title":"Năng lực và kinh nghiệm đã được chứng minh",
+      "description":"<ul> <li> <b> 07 DỰ ÁN </b> sử dụng các thiết bị thông minh của SLIVING. </li> <li> Hơn <b> 300 000 THIẾT BỊ </b> đã được cài đặt. </li> <li> Thêm hơn <b> 120 nhân viên </b> đang phát triển và đổi mới liên tục để cải thiện các sản phẩm SLIVING ngày một tốt hơn mỗi ngày. </li> </ul>"
+    }
   }
 }
