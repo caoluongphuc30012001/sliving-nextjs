@@ -1,36 +1,52 @@
 import React, { useMemo, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-import imgRemote from "@images/product/prod-about.svg";
-import LayoutV2 from "@components/layout-new.jsx";
-import ButtonShop from '@components/button/button-shop';
+
 import SwiperCore, {
     Navigation, Pagination
 } from 'swiper';
 import { Col, Row } from 'react-bootstrap';
-import "./style.scss";
-import "../smart-home-page-v2/style.scss"
 import ThreeElementVertical from './three-element-vertical';
+import LayoutV2 from "@components/layout-new.jsx";
+import ButtonShop from '@components/button/button-shop';
 import SectionFeatureProduct from '@components/section/section-feature-product';
-import imgProd from "@images/product-v2/touch.png";
 import SlideProduct from '@components/section/section-product';
-import DataProductNew from "../../query/product-hot";
 import ButtonLearn from '@components/button/button-learn';
+
+import DataProductNew from "@query/product-hot";
+
+import imgProd from "@images/product-v2/touch.png";
+
+import imgProd1 from "@images/product-v2/smart-button.png";
+import imgProd2 from "@images/product-v2/t2-2.png";
+import imgProd3 from "@images/product-v2/door-sensor.png";
+import imgProd4 from "@images/product-v2/t-scene-6-1.png";
+
+import imgTouch1 from "@images/product-v2/t1-1.png";
+import imgTouch2 from "@images/product-v2/t2-2.png";
+import imgTouch3 from "@images/product-v2/t3-1.png";
+import imgTouch4 from "@images/product-v2/t4.png";
+
+
 import line from "@images/product-v2/line-blue.png";
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
+
+
 import { graphql } from "gatsby";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import { useTranslation } from 'react-i18next';
 
-
+import "./style.scss";
+import "../smart-home-page-v2/style.scss"
 SwiperCore.use([Navigation, Pagination,]);
 const IndexPage = ({ data }) => {
+    const { t } = useTranslation();
     const dataProducts = DataProductNew();
     const [arrImg] = useState([
-        { id: 0, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
-        { id: 1, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
-        { id: 2, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
-        { id: 3, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
-        { id: 4, title: "Sliving Thermostat", desc: "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.", src: imgRemote, alt: "" },
+        { id: 0, title: "Sliving Smart Button", desc: "products_v2.header", src: imgProd1, alt: "" },
+        { id: 1, title: "Sliving Switch Touch", desc: "products_v2.header", src: imgProd2, alt: "" },
+        { id: 2, title: "Sliving Door Sensor", desc: "products_v2.header", src: imgProd3, alt: "" },
+        { id: 3, title: "Sliving Switch Scene", desc: "products_v2.header", src: imgProd4, alt: "" },
     ])
     const BuildHeader = () => {
         const BuildImg = ({ src }) => {
@@ -60,7 +76,7 @@ const IndexPage = ({ data }) => {
                     <Row noGutters>
                         <Col xs={12} md={6} className="header-left">
                             <h2>{img.title}</h2>
-                            <p className="mt-8">{img.desc}</p>
+                            <p className="mt-8">{t(`${img.desc}`)}</p>
                             <article className="mt-58"><ButtonShop content={"SHOP NOW"} /></article>
                         </Col>
                         <Col xs={12} md={6}><div className="product-img-header"><BuildImg src={img.src} /></div></Col>
@@ -84,7 +100,7 @@ const IndexPage = ({ data }) => {
                     </Col>
                     <Col xs={12} md={4} className="contact-detail-right" >
                         <div>
-                            <img src={product.imgUrl} alt="" width={394} height={563} />
+                            <img src={product.imgUrl} alt="" width={394} height={563} style={{ objectFit: "cover" }} />
                         </div>
                     </Col>
                 </Row>
@@ -94,10 +110,10 @@ const IndexPage = ({ data }) => {
 
     const BuildBanner = () => {
         const arrProdContact = [
-            { id: 0, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgProd },
-            { id: 1, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgProd },
-            { id: 2, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgProd },
-            { id: 3, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgProd },
+            { id: 0, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch1 },
+            { id: 1, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch2 },
+            { id: 2, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch3 },
+            { id: 3, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch4 },
 
         ];
         return (

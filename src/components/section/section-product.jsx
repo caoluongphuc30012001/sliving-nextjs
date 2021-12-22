@@ -1,24 +1,32 @@
 import React, { useState, useEffect, useMemo } from 'react';
+
 import CardProductV2 from '../card/card-product-v2';
 import imgLine from "@images/new-home-page/app-img/line.png";
-import { Col, Row } from "react-bootstrap";
-import "../style.scss";
+
 import Link from "@components/gatsby-link";
 
+import { Col, Row } from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
+
+import i18next from 'i18next';
+
+import "../style.scss";
+
 const SlideProduct = ({ data, noTitle, noNavbar }) => {
+    const lngCurrent = i18next.language;
     const getData = data;
     const [post, setPost] = useState([]);
-
+    const { t } = useTranslation();
     const [arrProduct] = useState([
         { title: "LED", id: 0, isActive: true, filterName: "productLed" },
-        { title: "Switch", id: 1, isActive: false, filterName: "productSwitch" },
-        { title: "Socket", id: 2, isActive: false, filterName: "productSocket" },
-        { title: "Sensor", id: 3, isActive: false, filterName: "productSensor" },
-        { title: "Zigbee Kit", id: 7, isActive: false, filterName: "productZigbee" },
-        { title: "Smart Button", id: 4, isActive: false, filterName: "productSmartButton" },
-        { title: "Smart Curtain", id: 5, isActive: false, filterName: "productSmartCurtain" },
-        { title: "Smart Meter", id: 6, isActive: false, filterName: "productSmartMeter" },
-        { title: "Motor", id: 8, isActive: false, filterName: "productMotor" },
+        { title: "navProduct.Switches", id: 1, isActive: false, filterName: "productSwitch" },
+        { title: "navProduct.Sockets", id: 2, isActive: false, filterName: "productSocket" },
+        { title: "navProduct.Sensors", id: 3, isActive: false, filterName: "productSensor" },
+        { title: "navProduct.Zigbee_KIT", id: 7, isActive: false, filterName: "productZigbee" },
+        { title: "navProduct.Smart_Button", id: 4, isActive: false, filterName: "productSmartButton" },
+        { title: "navProduct.Smart_Curtain", id: 5, isActive: false, filterName: "productSmartCurtain" },
+        { title: "navProduct.Smart_Meter", id: 6, isActive: false, filterName: "productSmartMeter" },
+        { title: "navProduct.Motor", id: 8, isActive: false, filterName: "productMotor" },
 
     ]);
     const handleSelect = (filter) => {
@@ -28,7 +36,7 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const filterProduct = (filter) => {
         if (getData[filter]?.edges.length > 0) {
             const arrNew = getData[filter].edges;
-            const arrFilter = arrNew.filter(element => element.node.frontmatter.lgn === "en");
+            const arrFilter = arrNew.filter(element => element.node.frontmatter.lgn === lngCurrent);
             setPost(arrFilter);
         }
     }
@@ -40,19 +48,19 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const buildSlideProduct = useMemo(() => {
         return (
             <section className="container-wrap carousel-product-filter">
-                {noNavbar&&noTitle?'':<div className="product-filter-header">
-                    {noTitle?'':<Row>
+                {noNavbar && noTitle ? '' : <div className="product-filter-header">
+                    {noTitle ? '' : <Row>
                         <div className="product-header">
-                            <h3>Sliving products</h3>
+                            <h3>{t(`smart_home_v2.sliving_products`)}</h3>
                             <img src={imgLine} alt="" />
                         </div>
                     </Row>}
-                    {noNavbar?'':<Row>
+                    {noNavbar ? '' : <Row>
                         <Col xl={12} lg={12} md={12} className="product-filter-item">
                             <ul >
                                 {arrProduct && arrProduct.map((item, index) => {
                                     return (<div key={index} role="button" className={item.isActive ? 'is-active-filter' : null} style={{ cursor: "pointer" }} onClick={() => handleSelect(item)} onKeyPress={() => handleSelect(item)} tabIndex={0}>
-                                        <span>{item.title}</span>
+                                        <span>{t(`${item.title}`)}</span>
                                     </div>)
                                 })}
                             </ul>

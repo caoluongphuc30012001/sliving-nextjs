@@ -4,8 +4,10 @@ import { Col, Row } from "react-bootstrap";
 import imgLed from "@images/new-home-page/header/img-led.png";
 import imgCamera from "@images/new-home-page/header/img-camera.png";
 import imgRoom from "@images/new-home-page/header/img-room.png";
+import { useTranslation } from "react-i18next";
 
 export default function NewSectionHeader() {
+  const { t } = useTranslation();
   return (
     <section>
       <div className="home-page-header">
@@ -13,12 +15,11 @@ export default function NewSectionHeader() {
           <Row>
             <Col xl={6} lg={6} md={6} className="header-left">
               <div className="header-left-title">
-                <h1>The era of intelligent life.</h1>
+                <h1>{t(`smart_home_v2.header_title`)}</h1>
               </div>
               <div className="header-left-desc">
                 <p>
-                  Complex project management experience. When selecting an
-                  offshore software development company, ensure that they have
+                  {t(`smart_home_v2.header_sub_title`)}
                 </p>
               </div>
             </Col>

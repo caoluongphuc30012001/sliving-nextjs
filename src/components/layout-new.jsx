@@ -1,18 +1,20 @@
 import React from "react";
+
 import ButtonRounded from "@components/button/button-card-rounded";
+
+
 import NavbarV2 from "./navbar-new/navbar-v2";
-import NavbarSmartHome from "./navbar-new/smarthome/navbar-smarthome";
-import NavbarLighting from "./navbar-new/navbar-lighting";
-import FooterNew from "./footer/footer-new";
+import FooterHomePage from "./footer/footer-home-page";
+
 import "../i18n/i18n";
 import "./style.scss";
 
-function LayoutNew({ children, pageContext, isMainPage }) {
+function LayoutNew({ children }) {
   return (
     <div className="page">
-      {pageContext?.isSmartHome ? <NavbarSmartHome /> : pageContext?.isSmartLighting ? <NavbarLighting /> : <NavbarV2 />}
-      <main>{children}</main>
-      <FooterNew isMainPage={isMainPage} />
+      <NavbarV2 />
+      <main style={{ marginTop: "81px" }}>{children}</main>
+      <FooterHomePage />
       <ButtonRounded />
     </div>
   );

@@ -21,7 +21,6 @@ const IndexPage = ({ pageContext }) => {
         return false;
     }
     const isFilter = handelFilter();
-    console.log("a", isFilter);
 
     const [mechanical_1, setMechanical_1] = useState();
     const [mechanical_2, setMechanical_2] = useState();
@@ -136,7 +135,7 @@ const IndexPage = ({ pageContext }) => {
         }
 
     }
-    
+
     const [versionActive, setVersionActive] = useState(0);
     const handleActiveNeutral = (versionId) => {
         if (versionId === 0) {

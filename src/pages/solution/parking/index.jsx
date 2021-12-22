@@ -1,14 +1,14 @@
 import React from "react";
-import LayoutNew from "@components/layout-new";
+import LayoutSmartHome from "@components/layout-smart-home";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from "gatsby";
 import IntroductHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
 import "./style.scss";
 import SectionFeatureProduct from "@components/section/section-feature-product";
-import imgFirst from "@images/solution/parking/imgFirst.svg";
-import imgSecond from "@images/solution/parking/imgSecond.svg";
-import imgThird from "@images/solution/parking/imgThird.svg";
+import imgFirst from "@images/solution/parking/imgFirst.png";
+import imgSecond from "@images/solution/parking/imgSecond.png";
+import imgThird from "@images/solution/parking/imgThird.png";
 import card1 from "@images/solution/parking/card1.svg";
 import card2 from "@images/solution/parking/card2.svg";
 import card3 from "@images/solution/parking/card3.svg";
@@ -20,7 +20,7 @@ const SmarthomeSolution = () => {
   const { t } = useTranslation();
   const data = DataProductNew();
   return (
-    <LayoutNew isMainPage pageContext={{ isSmartHome: true }}>
+    <LayoutSmartHome>
       <div className="introduct-main" id="introduct-main-parking">
         <IntroductHeader />
         <SectionFeatureProduct dataProductHot={data} />
@@ -77,7 +77,7 @@ const SmarthomeSolution = () => {
           btnContact={true}
         />
       </div>
-    </LayoutNew>
+    </LayoutSmartHome>
   );
 };
 export default withI18next()(SmarthomeSolution);
