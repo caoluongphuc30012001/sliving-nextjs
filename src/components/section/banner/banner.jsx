@@ -45,7 +45,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 </button>{" "}
               </Link>
             ) : (
-              <Link to="/smart-home/contact">
+              <Link to="/smart-home/contact" style={{textDecoration:'none'}}>
               <button
                 className="btn-research-wrap d-flex al-center"
                 id="btn-research-wrap"

@@ -1,14 +1,15 @@
 import React from "react";
-import LayoutV2 from "@components/layout-new.jsx";
+import LayoutSmartHome from "@components/layout-smart-home.jsx";
+
 import TechnicalSol from "./body/technicalSolution";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from "gatsby";
 
 const IndexPage = ({ pageContext }) => {
   return (
-    <LayoutV2 isMainPage pageContext={{ isSmartHome: true }}>
+    <LayoutSmartHome isMainPage>
       <TechnicalSol data={pageContext?.data?.data} />
-    </LayoutV2>
+    </LayoutSmartHome>
   );
 };
 export default withI18next()(IndexPage);

@@ -452,7 +452,7 @@ const TechnicalSol = ({ data }) => {
                           className="container-first-slider"
                           key={node.frontmatter.id}
                         >
-                          <Row noGutters>
+                          <Row noGutters onMouseDown={()=>navigate('detail')}>
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
@@ -500,12 +500,12 @@ const TechnicalSol = ({ data }) => {
                           className="container-first-slider"
                           key={node.frontmatter.id}
                         >
-                          <Row noGutters>
+                          <Row noGutters onMouseDown={()=>navigate('detail')}>
                             <Col sm={5} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
                                   {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
-                                  <Link to={`detail`}>
+                                  <Link>
                                     {node.frontmatter.featuredImage ? (
                                       <Image
                                         className="image-example"

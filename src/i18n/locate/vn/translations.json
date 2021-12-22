@@ -14,7 +14,10 @@
       "CONTACTUS": "Liên hệ",
       "PROJECT": "Dự án",
       "BLOG": "Tin tức",
-      "PRODUCT&SOLUTION": "Sản phẩm và Giải pháp"
+      "PRODUCT&SOLUTION": "Sản phẩm và Giải pháp", 
+      "STORY":"Câu chuyện",
+      "NEWS":"Tin tức",
+      "LIGHTING":"Chiếu sáng"
     },
     "REGISTER": "ĐĂNG KÝ",
     "EMAIL": "ĐỊA CHỈ EMAIL",
@@ -452,7 +455,8 @@
       "section_3": {
         "title": "Điều khiển tự động",
         "description": "Sliving's Smart Lighting giúp hệ thống chiếu sáng thông minh hơn thông qua các yếu tố: Điều khiển và kiểm soát hệ thống từ xa thông qua ứng dụng. Thiết lập một kịch bản hoạt động theo lịch trình hoạt động và công việc"
-      }
+      },
+      "led_product":"Sản phẩm LED"
     },
     "footer":"Tìm các tùy chọn khác hoàn hảo cho bạn.",
     "subFooter":"Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!",
@@ -461,6 +465,7 @@
     "Home":"Nhà",
     "Office":"Văn phòng",
     "School":"Trường",
+    "Villa":"Biệt thự",
     "titleSolution":"Giải pháp ánh sáng thông minh cho cuộc sống"
   },
   "Contact":{
@@ -487,8 +492,10 @@
   "footer_email": "Email",
   "footer_phone": "Số điện thoại",
   "footer_address": "Địa chỉ",
+  "article_map":"Vui lòng giữ liên lạc để nhận được các cập nhật mới nhất.",
   "reason": {
     "header": "Lý do bạn nên lựa chọn Sliving",
+    "description":"Bạn đang cần một môi trường với đầy đủ các tiện ích thông minh, có một số yếu tố cần quan tâm. Nó sẽ được sử dụng cho ngôi nhà của bạn, văn phòng của bạn, hoặc thậm chí có thể ở mọi nơi bạn muốn ...",
     "subHeader": "Tiên phong trong việc cung cấp các giải pháp toàn diện cho Nền tảng IoT tại Việt Nam",
     "reason_1": {
       "title": "Sản phẩm chất lượng quốc tế",

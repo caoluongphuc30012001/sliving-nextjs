@@ -8,10 +8,12 @@ import { withI18next } from "@wapps/gatsby-plugin-i18next";
 
 import SectionBannerV2 from "@components/section/banner/banner";
 import LayoutSmartLighting from "@components/layout-smart-lighting";
+import { useTranslation } from "react-i18next";
 
 import "./style.scss"
 
 const LightingPage = () => {
+  const { t } = useTranslation();
   return <LayoutSmartLighting isMainPage pageContext={{ isSmartLighting: true }}>
     <div id='smartLighting'>
       <LightingHeader />
@@ -19,7 +21,7 @@ const LightingPage = () => {
       <IntroMain />
       <LedLightProduct />
       <div className="lightBanner">
-        <SectionBannerV2 title={'Find other options that are perfect for you.'} desc={'We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!'} btnContact />
+        <SectionBannerV2 title={t(`solution.footer`)} desc={t(`solution.subFooter`)} btnContact />
       </div>
     </div>
   </LayoutSmartLighting>

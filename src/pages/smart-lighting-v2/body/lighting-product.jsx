@@ -43,12 +43,7 @@ const LightingProduct=()=>{
         {
           id: 6,
           img: imgSchool,
-          name: t(`solution.School`),
-        },
-        {
-          id: 7,
-          img: imgSchool,
-          name: t(`solution.School`),
+          name: t(`solution.Villa`),
         },
       ];
     

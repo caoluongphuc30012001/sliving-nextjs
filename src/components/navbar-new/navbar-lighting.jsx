@@ -22,7 +22,7 @@ export default function NavbarLighting() {
     }
   }, [i18n.language,dataProductMenu]);
   const arrMenu = [
-    { id: "0", title: "Lighting", isActive: true, path: "/en/smart-lighting-v2/" },
+    { id: "0", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: true, path: "/en/smart-lighting-v2/" },
     {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),

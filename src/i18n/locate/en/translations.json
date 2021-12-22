@@ -14,7 +14,10 @@
       "CONTACTUS": "Contact Us",
       "PROJECT": "Project",
       "BLOG": "Blog",
-      "PRODUCT&SOLUTION": "Product and Solution"
+      "PRODUCT&SOLUTION": "Product and Solution",
+      "STORY":"Brand story",
+      "NEWS":"News",
+      "LIGHTING":"Lighting"
     },
     "REGISTER": "REGISTER",
     "EMAIL": "EMAIL",
@@ -451,7 +454,8 @@
       "section_3": {
         "title": "Automatic control",
         "description": "Sliving's Smart Lighting makes the lighting system smarter through the following factors: Control and control the system remotely via the app. Set up an activity scenario by the schedule of activities and work"
-      }
+      },
+      "led_product":"LED lighting’s products"
     },
     "footer":"Find other options that are perfect for you.",
     "subFooter":"We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
@@ -460,6 +464,7 @@
     "Home":"Home",
     "Office":"Office",
     "School":"School",
+    "Villa":"Villa",
     "titleSolution":"Smart lighting solutions for your life."
   },
   "Contact":{
@@ -486,8 +491,12 @@
   "footer_email": "Email",
   "footer_phone": "Phone",
   "footer_address": "Address",
+  "article_map":"Please keep in touch to get the latest updates.",
+
   "reason": {
+
     "header": "The Reasons Why You Should Choose Sliving",
+    "description":"You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...",
     "subHeader": "A pioneer in providing comprehensive solutions for IoT Flatform in Vietnam",
     "reason_1": {
       "title": "International quality products",
