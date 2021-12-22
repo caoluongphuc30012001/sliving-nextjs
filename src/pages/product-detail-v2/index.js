@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 
-import LayoutV2 from "@components/layout-new";
+import LayoutSmartHome from "@components/layout-smart-home";
 import ButtonShop from '@components/button/button-shop';
 import SectionFeatureProduct from '@components/section/section-feature-product';
 import IconHeart from "@components/svg/heart";
@@ -247,12 +247,11 @@ const IndexPage = ({ pageContext }) => {
         </section>)
     }
     return (
-        <LayoutV2>
+        <LayoutSmartHome>
             <BuildHeader />
             {dataCurrent?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} /></section>)}
             {dataProductFeature && (< SectionFeatureProduct dataProductHot={dataProductFeature} />)}
-            not found
-        </LayoutV2>
+        </LayoutSmartHome>
     );
 }
 

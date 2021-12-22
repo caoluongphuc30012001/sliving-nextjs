@@ -50,7 +50,7 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        {t(`address`)}:
+                                        {t(`footer_address`)}:
                                     </span>
                                     <span>
                                         {t(`address_head_quarters`)}
@@ -60,7 +60,7 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        {t(`phone`)}:
+                                        {t(`footer_phone`)}:
                                     </span>
                                     <span>
                                         02473039999
@@ -70,7 +70,7 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        {t(`email`)}:
+                                        {t(`footer_email`)}:
                                     </span>
                                     <span style={{ textTransform: ' lowercase' }}>
                                         hello@sliving.vn
@@ -91,8 +91,8 @@ export default function FooterHomePage() {
                             </div>
                             <div className="footer-info">
                                 <div className="footer-info-detail" >
-                                    <span style={{ alignSelf: "stretch" }}>
-                                        {t(`address`)}:
+                                    <span style={{ alignSelf: "stretch", whiteSpace: 'nowrap' }}>
+                                        {t(`footer_address`)}:
                                     </span>
                                     <span>
                                         {t(`ADDRESS.ADDRESS_COMPANY`)}
@@ -102,7 +102,7 @@ export default function FooterHomePage() {
                             <div className="footer-info">
                                 <div className="footer-info-detail">
                                     <span>
-                                        {t(`phone`)}:
+                                        {t(`footer_phone`)}:
                                     </span>
                                     <span>
                                         028 71079995

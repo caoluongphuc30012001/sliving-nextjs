@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import LayoutV2 from "@components/layout-new.jsx";
-import TechnicalSol from './body/technicalSolution';
+import TechnicalSol from "./body/technicalSolution";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby";
 
 const IndexPage = ({ pageContext }) => {
   return (
@@ -13,7 +13,7 @@ const IndexPage = ({ pageContext }) => {
 };
 export default withI18next()(IndexPage);
 export const query = graphql`
-  query($lng: String!) {
+  query ($lng: String!) {
     locales: allLocale(
       filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
     ) {

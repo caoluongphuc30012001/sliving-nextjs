@@ -407,7 +407,6 @@
         "title": "Get your parking session notifications",
         "description": "After sending the car, users are fully confident of operating when the application updates the information: Parking lot status. Indicate when the enrollment period is about to end to avoid extra charges"
       }
-
     },
     "security": {
       "header": "Smart security.",
@@ -436,7 +435,6 @@
         "title": "Face recognition",
         "description": "Using biometric technology to extract facial recognition features: Authenticate residents, control access to areas to be monitored as well as used to call elevators, open barriers. Integrated into a security camera. Can recognize multiple faces at the same time"
       }
-
     },
     "lighting": {
       "header": "The technology of light gives your colour.",
@@ -455,9 +453,34 @@
       }
     },
     "footer": "Find other options that are perfect for you.",
-    "subFooter": "We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
-    "email": "Email",
-    "phone": "Phone",
-    "address": "Address"
+    "subFooter": "We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!"
+
+  },
+  "footer_email": "Email",
+  "footer_phone": "Phone",
+  "footer_address": "Address",
+  "reason": {
+    "header": "The Reasons Why You Should Choose Sliving",
+    "subHeader": "A pioneer in providing comprehensive solutions for IoT Flatform in Vietnam",
+    "reason_1": {
+      "title": "International quality products",
+      "description": "Putting yourself in the customers' shoes is a strategy we employ here at Sliving to understand what the customer needs. To change the customer's uncertainty about the domestic smart product quality, we have been perfecting our products. This is proved by multiple international quality certificates that we have and will receive in the near future, MFi is one of them."
+    },
+    "reason_2": {
+      "title": "Wide range of products and solutions",
+      "description": "<ul><li> Designing interfaces for mobile applications (Mobile App), monitoring websites to control, and introduce products.</li><li>Design hardware products</li><li>Producing smart technology equipment.</li><li>Building computer programs such as Firmware, Cloud Server.</li><li>AI (Artificial Intelligence).</li></ul>"
+    },
+    "reason_3": {
+      "title": "Strong supply chain",
+      "description": "Intending to lead the smart technology market, Sliving is the first enterprise licensed to manufacture devices in the Smart Living ecosystem. The factory has an area of ​​nearly 4500m2, the total production capacity is estimated at 270,000 devices/year. In which, the production capacity in phase 1 of the project will be 135 thousand products/year and gradually increase in phase 2, reaching 100% capacity by June 2025."
+    },
+    "reason_4": {
+      "title": "Technical support and warranty assistant",
+      "description": "Project staff, technical staff, and sales staff are ready to advise/support customers with suitable solutions to meet each customer's expectations with low costs."
+    },
+    "reason_5": {
+      "title": "Proven Competence and Experience",
+      "description": "<ul><li><b>07 PROJECT</b> using SLIVING's smart devices.</li><li> More than <b> 300 000 DEVICES </b>was installed.</li><li> More than <b>120 employees </b>are developing and innovating continuously to improve SLIVING products better and better everyday.</li></ul>"
+    }
   }
 }

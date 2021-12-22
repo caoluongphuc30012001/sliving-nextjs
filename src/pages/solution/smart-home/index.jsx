@@ -1,5 +1,5 @@
 import React from "react";
-import LayoutNew from "@components/layout-new";
+import LayoutSmartHome from "@components/layout-smart-home";
 import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { graphql } from "gatsby";
 import IntroductHeader from "./header/section-header";
@@ -7,11 +7,11 @@ import SectionContent from "./body/section-content";
 import "./style.scss";
 import SectionFeatureProduct from "@components/section/section-feature-product";
 import imgFirst from "@images/solution/smart-home/imgFirst.svg";
-import imgSecond from "@images/solution/smart-home/imgSecond.svg";
-import imgThird from "@images/solution/smart-home/imgThird.svg";
-import imgFour from "@images/solution/smart-home/imgFour.svg";
+import imgSecond from "@images/solution/smart-home/imgSecond.png";
+import imgThird from "@images/solution/smart-home/imgThird.png";
+import imgFour from "@images/solution/smart-home/imgFour.png";
 import imgFive from "@images/solution/smart-home/imgFive.svg";
-import imgSix from "@images/solution/smart-home/imgSix.svg";
+import imgSix from "@images/solution/smart-home/imgSix.png";
 import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
 import { useTranslation } from "react-i18next";
@@ -19,7 +19,7 @@ const SmarthomeSolution = () => {
   const { t } = useTranslation();
   const data = DataProductNew();
   return (
-    <LayoutNew isMainPage pageContext={{ isSmartHome: true }}>
+    <LayoutSmartHome >
       <div className="introduct-main" id="introduct-main-smarthome">
         <IntroductHeader />
         <SectionFeatureProduct dataProductHot={data} />
@@ -84,7 +84,7 @@ const SmarthomeSolution = () => {
           btnContact={true}
         />
       </div>
-    </LayoutNew>
+    </LayoutSmartHome>
   );
 };
 export default withI18next()(SmarthomeSolution);

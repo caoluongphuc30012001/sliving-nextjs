@@ -68,6 +68,7 @@ exports.createPages = async function ({ actions, graphql }) {
   const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
   const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
   const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
+  const SupportPage = require.resolve("./src/pages/support-page-v2/index.js");
   const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
   const detailSupport = require.resolve("./src/pages/content-detail-v2");
   const smartLightingComponent = require.resolve("./src/pages/smart-lighting-v2/index.js");
@@ -131,7 +132,6 @@ exports.createPages = async function ({ actions, graphql }) {
   if (arrLng.length > 0 && productPage) {
     arrLng.forEach((lng) => {
       if (lng.lng === "en") {
-
         createPage({
           path: `/smart-home/`,
           component: smartHomeComponent,
