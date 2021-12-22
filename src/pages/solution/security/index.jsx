@@ -8,7 +8,7 @@ import "./style.scss";
 import SectionFeatureProduct from "@components/section/section-feature-product";
 import imgFirst from "@images/solution/security/imgFirst.svg";
 import imgSecond from "@images/solution/security/imgSecond.svg";
-import imgThird from "@images/solution/security/imgThird.svg";
+import imgThird from "@images/solution/security/imgThird.png";
 import card1 from "@images/solution/security/card1.svg";
 import card2 from "@images/solution/security/card2.svg";
 import card3 from "@images/solution/security/card3.svg";
