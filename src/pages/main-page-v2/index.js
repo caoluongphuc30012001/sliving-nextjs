@@ -10,7 +10,6 @@ import ImageHp_2 from "@images/main-page-v2/ai.png";
 import ImageHp_3 from "@images/main-page-v2/artboard-2.png";
 import ImageHp_4 from "@images/main-page-v2/artboard.png";
 
-import sectionLeft from "@images/main-page-v2/element-left.png";
 
 import sectionLeft1 from "@images/main-page-v2/crm.jpg";
 

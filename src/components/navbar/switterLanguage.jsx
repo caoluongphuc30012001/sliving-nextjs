@@ -17,9 +17,10 @@ const LanguageSwitcher = ({ changeLng }) => {
   }
   const useLng = useMemo(() => {
     if (i18n.language === "vi") {
+      i18n.changeLanguage("vn");
       changeLng("vn");
     }
-  }, [i18n, changeLng]);
+  }, [i18n.language, changeLng]);
 
   return (
     <>
@@ -35,7 +36,7 @@ const LanguageSwitcher = ({ changeLng }) => {
           role={"button"}
         >
           <span style={{ textTransform: "uppercase" }}>
-            {i18n.language === "en" ? "vn" : "en"}
+            {i18n.language}
           </span>
           <img src={iconLanguage} alt="" />
         </Dropdown.Toggle>
