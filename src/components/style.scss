@@ -3124,6 +3124,7 @@ a.btn-link-a {
   }
   .footer-icon {
     margin-right: 16px;
+    width: fit-content;
   }
   .footer-info-company {
     margin-top: 32px;
@@ -3445,6 +3446,12 @@ a.btn-link-a {
     line-height: 131.25%;
     text-align: center;
     color: #d1e5f7;
+  }
+  .banner-icon {
+    width: fit-content;
+  }
+  a {
+    width: fit-content;
   }
   .banner-btn-v2 {
     width: 72px;

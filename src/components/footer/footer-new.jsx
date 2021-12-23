@@ -50,13 +50,13 @@ export default function FooterV2() {
                 </div>
               </Row>
             </div>
-            <Col lg={6} >
+            <Col lg={6} style={{ marginTop: "16px" }}>
               <div className="footer-name">
                 <span>{t(`company_name`)}</span>
               </div>
             </Col>
           </Row>
-          <Row noGutters className="footer-info-company">
+          <Row noGutters className="footer-info-company" style={{ marginTop: "16px" }}>
             <Col xs={12} md={6} sm={6}>
               <div className='branch-hn'>
 

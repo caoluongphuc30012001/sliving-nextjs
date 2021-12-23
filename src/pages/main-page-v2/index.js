@@ -296,7 +296,7 @@ const IndexPage = () => {
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={sectionFour3Full} alt="" width={595} height={186} />
+              <img src={sectionFour3Full} alt="" height={186} />
               <div className="group-hover-info">
                 <h2>Fintech IoT</h2>
               </div>
@@ -306,7 +306,7 @@ const IndexPage = () => {
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={sectionFour4Full} alt="" width={595} height={186} />
+              <img src={sectionFour4Full} alt="" height={186} />
               <div className="group-hover-info">
                 <h2>Smart Parking</h2>
               </div>
