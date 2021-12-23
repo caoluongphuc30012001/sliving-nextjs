@@ -9,18 +9,16 @@ module.exports = {
   pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [
     `gatsby-plugin-sass`,
-    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "12345",
-      },
-    },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
