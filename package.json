@@ -41,6 +41,7 @@
     "i18next-browser-languagedetector": "^6.1.2",
     "i18next-xhr-backend": "^3.2.2",
     "leaflet": "^1.7.1",
+    "react": "^16.14.0",
     "react-bootstrap": "^2.0.4",
     "react-burger-menu": "^3.0.6",
     "react-i18next": "^11.15.1",
