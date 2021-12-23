@@ -31,7 +31,7 @@ export default function NavbarSmartHomeDesktop() {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
       isActive: false,
-      path: "products",
+      path: "/smart-home/products",
     },
     {
       id: "2",
@@ -49,7 +49,7 @@ export default function NavbarSmartHomeDesktop() {
       id: "4",
       title: t(`HEADER.HOMEPAGE.CONTACTUS`),
       isActive: false,
-      path: "contact",
+      path: "/smart-home/contact",
     },
   ];
   const arrMenuSolution = [

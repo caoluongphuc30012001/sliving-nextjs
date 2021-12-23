@@ -51,7 +51,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
             setArrProductHot(arrOld => arrOld.concat(arrFilter));
         }
     }
-    const arrFilterName = ["productAir", "productGateWay", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productSwitch", "productZigbee"];
+    const arrFilterName = ["productAir", "productGateWay", "productSwitch", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productZigbee"];
     useEffect(() => {
         for (let index = 0; index < arrFilterName.length; index++) {
             const filter = arrFilterName[index];
@@ -69,7 +69,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
     };
-
+    console.log("arrProductHot", arrProductHot);
     return (
         <section className="container-v2 section-prod-feature">
             <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>

@@ -96,8 +96,8 @@ const IndexPage = ({ data }) => {
                 <Row className="container-wrap contact-product-wrap" noGutters>
                     <Col xs={12} md={8} className="contact-detail-left">
                         <h2>{product.title}</h2>
-                        <p>{product.desc}</p>
-                        <ButtonLearn />
+                        <p>{t(`products_desc`)}</p>
+                        <ButtonLearn url={'/smart-home/products/smart-touch'} />
                     </Col>
                     <Col xs={12} md={4} className="contact-detail-right" >
                         <div>
@@ -111,10 +111,10 @@ const IndexPage = ({ data }) => {
 
     const BuildBanner = () => {
         const arrProdContact = [
-            { id: 0, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch1 },
-            { id: 1, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch2 },
-            { id: 2, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch3 },
-            { id: 3, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch4 },
+            { id: 0, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch1 },
+            { id: 1, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch2 },
+            { id: 2, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch3 },
+            { id: 3, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch4 },
 
         ];
         return (

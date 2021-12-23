@@ -18,8 +18,8 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const [post, setPost] = useState([]);
     const { t } = useTranslation();
     const [arrProduct] = useState([
-        { title: "LED", id: 0, isActive: true, filterName: "productLed" },
         { title: "navProduct.Switches", id: 1, isActive: false, filterName: "productSwitch" },
+        { title: "LED", id: 0, isActive: true, filterName: "productLed" },
         { title: "navProduct.Sockets", id: 2, isActive: false, filterName: "productSocket" },
         { title: "navProduct.Sensors", id: 3, isActive: false, filterName: "productSensor" },
         { title: "navProduct.Zigbee_KIT", id: 7, isActive: false, filterName: "productZigbee" },

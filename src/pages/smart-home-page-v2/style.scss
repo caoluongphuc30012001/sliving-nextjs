@@ -7,6 +7,7 @@
         background-image: url("../../images/new-home-page/header/bg-header.png");
         background-repeat: no-repeat;
         min-height: 800px;
+        transition: background-image 0.3s ease-in-out;
         .container-wrap {
             .header-left {
                 padding: 0;
@@ -68,6 +69,11 @@
                     }
                 }
             }
+        }
+        .header-right-image-1,
+        .header-right-image-2,
+        .header-right-image-3 {
+            transition: all 00.3s ease-out;
         }
     }
 
