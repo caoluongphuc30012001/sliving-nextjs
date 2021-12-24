@@ -24,7 +24,7 @@ const SmarthomeSolution = () => {
       <div className="introduct-main" id="introduct-main-security">
         <IntroductHeader />
         <SectionFeatureProduct dataProductHot={data} />
-        <div className="container-v2 card-solution">
+        <div className="container-wrap card-solution">
           <CardSolution
             imgUrl={card1}
             title={t(`solution.security.card_1.title`)}

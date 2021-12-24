@@ -3755,7 +3755,7 @@ a.btn-link-a {
 
 /*8. Section Feature Porduct*/
 .section-prod-feature {
-  max-width: 1210px;
+  // max-width: 1210px;
   margin-top: 60px;
   margin-bottom: 100px;
   h2 {
@@ -4372,7 +4372,8 @@ a.btn-link-a {
       img {
         width: 350px;
         height: 350px;
-        border-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
     }
     .prod-line-wrap__body {

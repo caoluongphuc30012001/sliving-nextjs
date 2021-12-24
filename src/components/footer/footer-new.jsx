@@ -18,7 +18,7 @@ export default function FooterV2() {
   return (
     <>
       <footer className="footer-new">
-        <Row noGutters>
+        <Row noGutters className="g-0">
           <Col xs={12}><article className="bottom-contact container-v2">
             <div className="bottom-contact-wrap">
               <div className="contact-wrap-left">

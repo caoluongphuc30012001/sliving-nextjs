@@ -60,7 +60,6 @@ const IndexPage = () => {
   }
   
    `);
-  console.log("data", queryData);
   const { isMobile } = useWindowSize();
 
   const BuildImageCarousel = ({ carousel, isButton }) => {
