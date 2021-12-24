@@ -120,11 +120,5 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `https://data.sliving.vn/graphql`,
-      },
-    },
   ],
 };
