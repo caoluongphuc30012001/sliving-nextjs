@@ -317,8 +317,8 @@ const IndexPage = () => {
 
   const BuildSectionBannerReason = () => {
     return <SectionBannerV2
-      title='The reason you should go with Sliving.'
-      desc='You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...' />
+      title={t(`reason.header`)}
+      desc={t(`reason.description`)}/>
   };
 
   return (

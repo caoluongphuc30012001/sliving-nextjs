@@ -12,8 +12,8 @@ export default function NavbarNew() {
   const arrMenu = [
     { id: "0", title: "Smart Home", isActive: true, path: "/smart-home/" },
     { id: "1", title: "Fintech IoT", isActive: false, path: "#" },
-    { id: "2", title: "Lighting", isActive: false, path: "/smart-lighting-v2/" },
-    { id: "3", title: "About Us", isActive: false, path: "#" },
+    { id: "2", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: false, path: "/smart-lighting-v2/" },
+    { id: "3", title: t(`HEADER.HOMEPAGE.ABOUTUS`), isActive: false, path: "#" },
   ];
 
   return (
@@ -53,10 +53,9 @@ export default function NavbarNew() {
                             id="item-menu"
                           >
                             {nav.title}
-                            {nav.title === "About Us" ? <ul className="subNav">
-                              <li><Link>Brand Story</Link></li>
-                              <li><Link>News</Link></li>
-                              <li><Link to='/contact-page-v2'>Contact us</Link></li>
+                            {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? <ul className="subNav">
+                              <Link><li>{t(`HEADER.HOMEPAGE.STORY`)} </li></Link>
+                              <Link to='/contact-page'><li>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</li></Link>
                             </ul> : ""}
                           </Link>
                         );

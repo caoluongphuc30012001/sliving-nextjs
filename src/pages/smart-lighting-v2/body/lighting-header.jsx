@@ -17,6 +17,7 @@ const LightingHeader = () => {
             <h1>
               {t(`solution.lighting.header`)}
               <span>
+                {t(`solution.lighting.color`)}
                 <img src={vector} alt="vector" />
               </span>
             </h1>

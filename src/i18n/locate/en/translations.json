@@ -14,7 +14,10 @@
       "CONTACTUS": "Contact Us",
       "PROJECT": "Project",
       "BLOG": "Blog",
-      "PRODUCT&SOLUTION": "Product and Solution"
+      "PRODUCT&SOLUTION": "Product and Solution",
+      "STORY":"Brand story",
+      "NEWS":"News",
+      "LIGHTING":"Lighting"
     },
     "REGISTER": "REGISTER",
     "EMAIL": "EMAIL",
@@ -436,12 +439,13 @@
         "description": "Using biometric technology to extract facial recognition features: Authenticate residents, control access to areas to be monitored as well as used to call elevators, open barriers. Integrated into a security camera. Can recognize multiple faces at the same time"
       }
     },
-    "lighting": {
-      "header": "The technology of light gives your colour.",
-      "subHeader": "Complex project management experience. When selecting an offshore software development company, ensure that they have",
-      "section_1": {
-        "title": "Protect your health",
-        "description": "Sliving's lighting system prioritizes protecting users' health through the following criteria: Wide variety of CRI colour rendering index (CRI=70-95): suitable for work requirements in many different spaces, from houses, offices to factories... contributing to protecting eye health. Ability to change colour temperature: suitable for many activities, helping to focus on work, good mood and sound sleep for users"
+    "lighting":{
+      "header":"The technology of light gives your",
+      "color":" colour.",
+      "subHeader":"Complex project management experience. When selecting an offshore software development company, ensure that they have", 
+      "section_1":{
+        "title":"Protect your health",
+        "description":"Sliving's lighting system prioritizes protecting users' health through the following criteria: Wide variety of CRI colour rendering index (CRI=70-95): suitable for work requirements in many different spaces, from houses, offices to factories... contributing to protecting eye health. Ability to change colour temperature: suitable for many activities, helping to focus on work, good mood and sound sleep for users"
       },
       "section_2": {
         "title": "Energy saving",
@@ -450,17 +454,49 @@
       "section_3": {
         "title": "Automatic control",
         "description": "Sliving's Smart Lighting makes the lighting system smarter through the following factors: Control and control the system remotely via the app. Set up an activity scenario by the schedule of activities and work"
-      }
+      },
+      "led_product":"LED lighting’s products"
     },
+    "footer":"Find other options that are perfect for you.",
+    "subFooter":"We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
+    "Cinema":"Cinema",
+    "Store":"Store",
+    "Home":"Home",
+    "Office":"Office",
+    "School":"School",
+    "Villa":"Villa",
+    "titleSolution":"Smart lighting solutions for your life."
+  },
+  "Contact":{
+    "ErrorYourName":"Please provide Your Name",
+    "ErrorTypesofCustomer":"Please provide Types of Customer",
+    "ErrorCountry":"Please provide Country",
+    "ErrorEmail":"Please provide Email",
+    "ErrorNumber":"NPlease provide Phone Number",
+    "ErrorCompanyName":"Please provide Company Name",
+    "Title":"The Sliving's team stands ready to co-operate with you.",
+    "Action":"Please fill out the fields below and someone will be in touch with you very soon.",
+    "YourName":"Your Name",
+    "TypesofCustomer":"Types of Customer",
+    "Country":"Country",
+    "Email":"Email Address",
+    "Number":"Phone Number",
+    "CompanyName":"Company Name",
+    "Job":"Job Title",
+    "Submit":"Submit",
     "footer": "Find other options that are perfect for you.",
-    "subFooter": "We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!"
-
+    "subFooter": "We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
+    "Revolution":"Revolution of intelligent illumination"
   },
   "footer_email": "Email",
   "footer_phone": "Phone",
   "footer_address": "Address",
+  "article_map":"Please keep in touch to get the latest updates.",
+
   "reason": {
+
     "header": "The Reasons Why You Should Choose Sliving",
+    "description":"You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...",
     "subHeader": "A pioneer in providing comprehensive solutions for IoT Flatform in Vietnam",
     "reason_1": {
       "title": "International quality products",
