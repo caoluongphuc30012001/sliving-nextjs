@@ -34,7 +34,6 @@
     "gatsby-remark-images": "^6.4.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^4.4.0",
-    "gatsby-source-wordpress": "^6.4.0",
     "gatsby-transformer-json": "^4.4.0",
     "gatsby-transformer-remark": "^5.4.0",
     "gatsby-transformer-sharp": "^4.4.0",
@@ -53,5 +52,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
     "swiper": "^7.3.4"
+  },
+  "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.26"
   }
 }

@@ -94,12 +94,12 @@ const IndexPage = ({ data }) => {
         return (
             <article className="contact-product-v2 container-v2">
                 <Row className="container-wrap contact-product-wrap" noGutters>
-                    <Col xs={12} md={8} className="contact-detail-left">
+                    <Col md={8} className="contact-detail-left">
                         <h2>{product.title}</h2>
                         <p>{t(`products_desc`)}</p>
                         <ButtonLearn url={'/smart-home/products/smart-touch'} />
                     </Col>
-                    <Col xs={12} md={4} className="contact-detail-right" >
+                    <Col md={4} className="contact-detail-right" >
                         <div>
                             <img src={product.imgUrl} alt="" width={394} height={563} style={{ objectFit: "cover" }} />
                         </div>
@@ -168,7 +168,6 @@ export const pageQuery = graphql`
 query($lng: String!) {
     allMarkdownRemark(
       filter: {frontmatter: {type: {regex: "/Sensor/"}, lgn: {eq: $lng}}}
-      limit: 3
     ) {
       edges {
         node {

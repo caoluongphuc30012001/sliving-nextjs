@@ -16,7 +16,18 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+
+          backgroundColor: `transparent`,
+        }
+      }
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     {
@@ -41,6 +52,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: `images`,
         path: `${__dirname}/src/images/`,
       },
     },
@@ -120,11 +132,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `https://data.sliving.vn/graphql`,
-      },
-    },
+    "gatsby-plugin-webpack-bundle-analyser-v2"
   ],
 };

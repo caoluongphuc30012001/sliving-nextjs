@@ -82,7 +82,7 @@ export default function NavbarSmartHomeDesktop() {
               expand="lg"
               id="nav-bar"
             >
-              <Navbar.Brand href="/">
+              <Navbar.Brand href="/" aria-label="Link to home">
                 <Image
                   className="img-obj-cover"
                   src={logo}
@@ -100,7 +100,7 @@ export default function NavbarSmartHomeDesktop() {
                   <Link
                     to="/smart-home/"
                     className="item-menu item-menu-child link fs-16 1"
-                    id="item-menu"
+                    id="item-menu-parent"
                   >
                     Smart Home
                   </Link>
@@ -112,7 +112,7 @@ export default function NavbarSmartHomeDesktop() {
                           to={nav.path}
                           className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
                             }`}
-                          id="item-menu"
+                          id={`item-menu${index}`}
                         >
                           {nav.title}
                         </Link>

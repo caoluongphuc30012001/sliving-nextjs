@@ -12,6 +12,19 @@ import "../style.scss";
 const SectionFeatureProduct = ({ dataProductHot }) => {
     const lngCurrent = i18next.language;
     const { t } = useTranslation();
+
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+
+
     const NextArrow = (props) => {
         const { className, style, onClick } = props;
         return (
@@ -47,12 +60,13 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     const filterProduct = (filter) => {
         if (dataProductHot[filter]?.edges.length > 0) {
             const arrNew = dataProductHot[filter].edges;
-            const arrFilter = arrNew.filter((element) => element.node.frontmatter.lgn === lngCurrent);
+            var arrFilter = arrNew.filter((element) => element.node.frontmatter.lgn === lngCurrent);
             setArrProductHot(arrOld => arrOld.concat(arrFilter));
         }
     }
-    const arrFilterName = ["productAir", "productGateWay", "productSwitch", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productZigbee"];
+    var arrFilterName = ["productAir", "productGateWay", "productSwitch", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productZigbee"];
     useEffect(() => {
+        arrFilterName = shuffle(arrFilterName);
         for (let index = 0; index < arrFilterName.length; index++) {
             const filter = arrFilterName[index];
             filterProduct(filter);

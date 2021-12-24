@@ -20,7 +20,7 @@ export default function NavbarLighting() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, [i18n.language,dataProductMenu]);
+  }, [i18n.language, dataProductMenu]);
   const arrMenu = [
     { id: "0", title: "Lighting", isActive: true, path: "/en/smart-lighting-v2/" },
     {
@@ -47,7 +47,7 @@ export default function NavbarLighting() {
               expand="lg"
               id="nav-bar"
             >
-              <Link to="/" className="logo nav-logo nav-brand">
+              <Link to="/" className="logo nav-logo nav-brand" aria-label="Link to home">
                 <Image className="img-obj-cover" src={logo} alt="sliving" />
               </Link>
               <Navbar.Collapse
@@ -60,19 +60,18 @@ export default function NavbarLighting() {
                       return (
                         <Link
                           key={index}
-                          className={`item-menu item-menu-child link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
-                          id="item-menu"
-                          onMouseDown={()=>{
-                            if(nav.title==='Products'){
-                                if(document.location.pathname!==nav.path) navigate(`${nav.path}`)
-                                return setTimeout(() => {
-                                    const errorElements = document.getElementById("productLighting");
-                                    errorElements.scrollIntoView({ block: 'center', behavior: 'smooth' });
-                                }, 100);
+                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
+                            }`}
+                          id={`item-menu${index}`}
+                          onMouseDown={() => {
+                            if (nav.title === 'Products') {
+                              if (document.location.pathname !== nav.path) navigate(`${nav.path}`)
+                              return setTimeout(() => {
+                                const errorElements = document.getElementById("productLighting");
+                                errorElements.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                              }, 100);
                             }
-                            navigate(`${nav.path}`,{state: {isSmartLighting:true}})
+                            navigate(`${nav.path}`, { state: { isSmartLighting: true } })
                             // if(document.location.path==='/en/smart-lighting-v2/')
                           }}
                         >

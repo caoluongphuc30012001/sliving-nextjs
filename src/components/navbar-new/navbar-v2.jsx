@@ -27,7 +27,7 @@ export default function NavbarNew() {
               expand="lg"
               id="nav-bar"
             >
-              <Link to="/" className="logo nav-logo nav-brand">
+              <Link to="/" aria-label="Link to home" className="logo nav-logo nav-brand">
                 <img
                   className="img-obj-cover"
                   src={logo}
@@ -50,7 +50,7 @@ export default function NavbarNew() {
                             to={nav.path}
                             className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
                               }`}
-                            id="item-menu"
+                            id={`item-menu${index}`}
                           >
                             {nav.title}
                             {nav.title === "About Us" ? <ul className="subNav">

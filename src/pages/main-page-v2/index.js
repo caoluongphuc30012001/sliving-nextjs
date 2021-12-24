@@ -4,27 +4,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
-import ImageHp_1 from "@images/main-page-v2/iot.webp";
-import ImageHp_2 from "@images/main-page-v2/ai.webp";
 
-import ImageHp_3 from "@images/main-page-v2/artboard-2.webp";
-import ImageHp_4 from "@images/main-page-v2/artboard.webp";
-
-
-import sectionLeft1 from "@images/main-page-v2/crm.webp";
-
-import sectionLeft2 from "@images/main-page-v2/global.webp";
-
-import sectionLeft3 from "@images/main-page-v2/ai.webp";
-
-
-import sectionFour1Full from "@images/main-page-v2/banner-left.webp";
+import sectionFour1Full from "@images/main-page-v2/clip-path-1.webp";
 import sectionFour2Full from "@images/main-page-v2/rectangle-1.webp";
 import sectionFour3Full from "@images/main-page-v2/rectangle-2.webp";
 import sectionFour4Full from "@images/main-page-v2/rectangle-3.webp";
 
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import useWindowSize from "@hook/useWindowSize";
 
@@ -36,6 +24,7 @@ import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 
 import { useTranslation } from 'react-i18next';
+import { graphql, useStaticQuery } from "gatsby";
 
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
@@ -48,77 +37,44 @@ const IndexPage = () => {
   }, []);
 
   const { t } = useTranslation();
-
-  const { isMobile } = useWindowSize();
-  const [arrHeader] = useState([
-    {
-      alt: "",
-      src: ImageHp_1,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-    {
-      alt: "",
-      src: ImageHp_2,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-    {
-      alt: "",
-      src: ImageHp_3,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-    {
-      alt: "",
-      src: ImageHp_4,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-  ]);
-
-  const [arrSectionLeft] = useState([
-    {
-      alt: "",
-      src: sectionLeft1,
-      description: "",
-      title: "",
-      titleBold: " ",
-    },
-    {
-      alt: "",
-      src: sectionLeft2,
-      description: "",
-      title: "",
-      titleBold: " ",
-    },
-    {
-      alt: "",
-      src: sectionLeft3,
-      description: "",
-      title: "",
-      titleBold: " ",
+  const queryData = useStaticQuery(graphql`
+  query MyQuery {
+    header: allFile(
+      filter: {absolutePath: {regex: "/(/images/main-page-v2/header-top)/"}}
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(sizes: "1440", width: 1440, quality: 100, layout: FULL_WIDTH)
+        }
+      }
     }
-  ]);
+    bannerLeft: allFile(
+      filter: {absolutePath: {regex: "/(/images/main-page-v2/banner-left)/"}}
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(sizes: "1440", width: 1440, quality: 100, layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+  
+   `);
+  console.log("data", queryData);
+  const { isMobile } = useWindowSize();
 
   const BuildImageCarousel = ({ carousel, isButton }) => {
     return (
       <div className="header-banner-v2">
-        <img
-          src={carousel.src}
-          data-src={carousel.src}
+        <GatsbyImage
+          // src={carousel.src}
+          // data-src={carousel.src}
+          image={carousel}
           alt="sliving alt"
           width={1440}
           height={799}
           loading="eager"
+          data-main-image
         />
         <div className="banner-v2-wrap">
           {/* {carousel.title && <BuildText carousel={carousel} />} */}
@@ -131,7 +87,7 @@ const IndexPage = () => {
   const BuildNextEl = () => {
     return (
       <div className="btn-next btn-carousel btn-carousel-right">
-        <img src={iconNextEl} alt="icon" />
+        <img src={iconNextEl} alt="icon" loading="eager" />
       </div>
     );
   };
@@ -174,9 +130,7 @@ const IndexPage = () => {
             return (
               <SwiperSlide key={index}>
                 <BuildImageCarousel
-                  carousel={carousel}
-                  src={carousel.src}
-                  alt={carousel.alt}
+                  carousel={carousel.childImageSharp.gatsbyImageData}
                   isButton={isButton}
                 />
               </SwiperSlide>
@@ -193,20 +147,21 @@ const IndexPage = () => {
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={false} array={arrHeader} isAutoPlay={true} />;
+    return <BuildCarousel isButton={false} array={queryData?.header?.nodes?.slice(0, 4) || []
+    } isAutoPlay={true} />;
   };
 
   const BuildSectionTwoElement = () => {
     return (
       <section className="section-l-r-v2">
-        <Row noGutters>
+        <Row noGutters className="g-0">
           <Col xs={12} lg={6} className="section-l-v2">
-            <BuildCarousel isButton={false} array={arrSectionLeft} />
+            <BuildCarousel isButton={false} array={queryData?.bannerLeft?.nodes?.slice(0, 4) || []} />
           </Col>
           <Col xs={12} lg={6} className="section-r-v2">
             <article>
               <h2>{t(`who_are_we`)}</h2>
-              <span>
+              <span style={{ color: "#aaaeb3" }}>
                 <span>{t(`sub-who-are-we.title`)}</span>
                 <ul>
                   <li>{t(`sub-who-are-we.description_1`)}</li>
@@ -339,3 +294,4 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
