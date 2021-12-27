@@ -92,16 +92,6 @@ module.exports = {
       },
     },
     {
-      resolve: "@wapps/gatsby-plugin-i18next",
-      options: {
-        availableLngs: ["vn", "en"],
-        fallbackLng: "vn",
-        i18nextOptions: {
-          debug: false,
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,

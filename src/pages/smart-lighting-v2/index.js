@@ -3,8 +3,6 @@ import LightingHeader from "./body/lighting-header";
 import LedLightProduct from "./body/lighting-led-product";
 import LightingProduct from "./body/lighting-product";
 import IntroMain from "./body/light-intro";
-import { graphql } from "gatsby";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
 
 import SectionBannerV2 from "@components/section/banner/banner";
 import LayoutSmartLighting from "@components/layout-smart-lighting";
@@ -26,13 +24,5 @@ const LightingPage = () => {
     </div>
   </LayoutSmartLighting>
 }
-export default withI18next()(LightingPage);
-export const query = graphql`
-  query($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default LightingPage;
+

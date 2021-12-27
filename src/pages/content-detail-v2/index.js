@@ -4,8 +4,7 @@ import ContentDetail from "./body/content-detail";
 import BannerTop from "./body/banner-top"
 import "./index.scss"
 
-const IndexPage = ({ pageContext }) => {
-  console.log('content',pageContext)
+const IndexPage = () => {
   return (
     <LayoutSmartHome >
       <div className="contentPage container">

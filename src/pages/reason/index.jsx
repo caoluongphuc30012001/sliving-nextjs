@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
-import CardHorizonal from "@components/card/card-horizontal/card-horizontal";
+import React from "react";
 import LayoutNew from "@components/layout-new";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
 
 import flag from "../../images/intro-content/group2.png";
 import { Row, Col } from "react-bootstrap";
-import { graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
 import "./styles.scss";
-const IntroContentPageTemplate = ({ pageContext }) => {
+const IntroContentPageTemplate = () => {
   const { t } = useTranslation();
-  const content=[1,2,3,4,5]
-  
+  const content = [1, 2, 3, 4, 5]
+
   return (
     <LayoutNew>
       <section className="reason container" id="reason">
@@ -19,7 +16,7 @@ const IntroContentPageTemplate = ({ pageContext }) => {
         <div className="header">
           <div className="header-title">
             <h1>
-            {t(`reason.subHeader`)}
+              {t(`reason.subHeader`)}
             </h1>
           </div>
         </div>
@@ -51,13 +48,4 @@ const Card = ({ index, title, des }) => {
     </Row>
   );
 };
-export default withI18next()(IntroContentPageTemplate);
-export const query = graphql`
-  query ($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default IntroContentPageTemplate;

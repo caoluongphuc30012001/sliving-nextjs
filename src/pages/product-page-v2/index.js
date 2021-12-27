@@ -34,7 +34,6 @@ import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 
 
 import { graphql } from "gatsby";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { useTranslation } from 'react-i18next';
 
 import "./style.scss";
@@ -163,7 +162,7 @@ const IndexPage = ({ data }) => {
     );
 }
 
-export default withI18next()(IndexPage);
+export default IndexPage;
 export const pageQuery = graphql`
 query($lng: String!) {
     allMarkdownRemark(
@@ -183,11 +182,5 @@ query($lng: String!) {
         }
       }
     }
-    locales: allLocale(
-        filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-      ) {
-        ...LocaleFragment
-      }
-      
   }
 `;

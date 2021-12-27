@@ -17,9 +17,6 @@ import CardSolution from "@components/card/card-solution/card-solution";
 
 import { useTranslation } from "react-i18next";
 
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from "gatsby";
-
 import "./style.scss";
 
 const SmartHomeSolution = () => {
@@ -84,13 +81,4 @@ const SmartHomeSolution = () => {
     </LayoutSmartHome>
   );
 };
-export default withI18next()(SmartHomeSolution);
-export const query = graphql`
-  query ($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default SmartHomeSolution;

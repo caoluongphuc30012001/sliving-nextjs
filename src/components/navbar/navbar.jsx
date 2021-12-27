@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Navbar, Image, Nav, InputGroup, FormControl } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
-import { Link } from '@wapps/gatsby-plugin-i18next';
+import { Link } from 'gatsby';
 import logo from "@images/logo/logo-v2.svg";
 import PortfolioContext from "@context/context";
 import imgSearch from "@images/icon/icon-search.svg";

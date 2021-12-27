@@ -8,9 +8,6 @@ import IconHeart from "@components/svg/heart";
 import DataProductNew from '@query/product-hot';
 
 import { Row, Col } from "react-bootstrap";
-import { graphql } from 'gatsby';
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-
 import star from "@images/product-v2/star.png";
 
 import BuildThumbs from "./thumb";
@@ -255,13 +252,4 @@ const IndexPage = ({ pageContext }) => {
     );
 }
 
-export default withI18next()(IndexPage);
-export const query = graphql`
-  query($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default IndexPage;

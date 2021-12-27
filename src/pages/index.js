@@ -1,18 +1,19 @@
 import React from "react";
+
+import favicon from "../images/logo/logo-small.svg";
+import HomePageV2 from "./main-page-v2/index";
+
+import { Helmet } from "react-helmet";
 import "../fonts/Montserrat/Montserrat-ExtraLight.ttf";
 import "../style/base/_typography.scss";
 import "../i18n/i18n";
 import "../style/main.scss";
-import favicon from "../images/logo/logo-small.svg";
-import { Head } from "@wapps/gatsby-plugin-i18next";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import HomePageV2 from "./main-page-v2/index";
-import { graphql } from "gatsby";
+
 
 const IndexPage = () => {
   return (
     <>
-      <Head hreflang="vn">
+      <Helmet >
         <meta charSet="utf-8" />
         <title>Sliving</title>
         <meta name="description" content={"Sliving"} />
@@ -26,18 +27,9 @@ const IndexPage = () => {
           href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap"
           rel="stylesheet"
         />
-      </Head>
+      </Helmet>
       <HomePageV2 />
     </>
   );
 };
-export default withI18next()(IndexPage);
-export const query = graphql`
-  query($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default IndexPage;
