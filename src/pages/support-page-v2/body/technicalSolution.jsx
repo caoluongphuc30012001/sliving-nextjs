@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./support-style.scss";
-import Slider from "react-slick";
 import { Form, Dropdown, Image } from "react-bootstrap";
 import Searchicon from "@images/icon/searchicon.svg";
 import DropArrow from "@images/icon/dropdownArrow.svg";
@@ -254,7 +253,7 @@ const TechnicalSol = ({ data }) => {
     <div>
       <div className="banner"></div>
       <div className="support-pages big-container fluid container-wrap">
-        <Row noGutters>
+        <Row  >
           <Col sm={5} xs={12}>
             <div className="support-page-left">
               <div className="left-container">
@@ -367,7 +366,7 @@ const TechnicalSol = ({ data }) => {
                       <Accordion.Collapse eventKey="0">
                         <Card.Body>
                           {
-                            <Row noGutters>
+                            <Row  >
                               <Col className="col-in-containerOutside">
                                 <Dropdown id="dropdowm-toggle">
                                   <Dropdown.Toggle
@@ -452,7 +451,7 @@ const TechnicalSol = ({ data }) => {
                           className="container-first-slider"
                           key={node.frontmatter.id}
                         >
-                          <Row noGutters onMouseDown={()=>navigate('detail')}>
+                          <Row onMouseDown={() => navigate('detail')}>
                             <Col sm={3} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">
@@ -500,7 +499,7 @@ const TechnicalSol = ({ data }) => {
                           className="container-first-slider"
                           key={node.frontmatter.id}
                         >
-                          <Row noGutters onMouseDown={()=>navigate('detail')}>
+                          <Row onMouseDown={() => navigate('detail')}>
                             <Col sm={5} xs={12}>
                               <div className="image-container first-slider-wrap">
                                 <div className="first-slider-wrap__left">

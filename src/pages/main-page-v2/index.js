@@ -153,7 +153,7 @@ const IndexPage = () => {
   const BuildSectionTwoElement = () => {
     return (
       <section className="section-l-r-v2">
-        <Row noGutters className="g-0">
+        <Row className="g-0">
           <Col xs={12} lg={6} className="section-l-v2">
             <BuildCarousel isButton={false} array={queryData?.bannerLeft?.nodes?.slice(0, 4) || []} />
           </Col>

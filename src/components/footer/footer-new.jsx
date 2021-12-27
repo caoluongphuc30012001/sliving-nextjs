@@ -18,7 +18,7 @@ export default function FooterV2() {
   return (
     <>
       <footer className="footer-new">
-        <Row noGutters className="g-0">
+        <Row className="g-0">
           <Col xs={12}><article className="bottom-contact container-v2">
             <div className="bottom-contact-wrap">
               <div className="contact-wrap-left">
@@ -39,7 +39,7 @@ export default function FooterV2() {
           </article></Col>
         </Row>
         <div className="footer-info-address container-v2">
-          <Row noGutters style={{ alignItems: "flex-end" }}>
+          <Row style={{ alignItems: "flex-end" }}>
             <div >
               <Row>
                 <div className="footer-icon">
@@ -56,7 +56,7 @@ export default function FooterV2() {
               </div>
             </Col>
           </Row>
-          <Row noGutters className="footer-info-company" style={{ marginTop: "16px" }}>
+          <Row className="footer-info-company" style={{ marginTop: "16px" }}>
             <Col xs={12} md={6} sm={6}>
               <div className='branch-hn'>
 
@@ -84,7 +84,7 @@ export default function FooterV2() {
               </div>
             </Col>
           </Row>
-          {/* <Row noGutters>
+          {/* <Row  >
                         <Col lg={12} md={12} sm={12} xs={12} className="footer-social">
                             <div className="footer-list-item">
                                 <a href="https://www.facebook.com/UnicloudCareers" target='_blank'

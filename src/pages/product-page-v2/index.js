@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => {
                 prevEl: ".btn-prev",
             }} className="product-swiper">
                 {arrImg.map((img, index) => <SwiperSlide key={index}>
-                    <Row noGutters>
+                    <Row  >
                         <Col xs={12} md={6} className="header-left">
                             <h2>{img.title}</h2>
                             <p className="mt-8">{t(`${img.desc}`)}</p>
@@ -93,7 +93,7 @@ const IndexPage = ({ data }) => {
 
         return (
             <article className="contact-product-v2 container-v2">
-                <Row className="container-wrap contact-product-wrap" noGutters>
+                <Row className="container-wrap contact-product-wrap"  >
                     <Col md={8} className="contact-detail-left">
                         <h2>{product.title}</h2>
                         <p>{t(`products_desc`)}</p>

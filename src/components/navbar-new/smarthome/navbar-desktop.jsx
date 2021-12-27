@@ -58,19 +58,19 @@ export default function NavbarSmartHomeDesktop() {
     { id: 2, title: "Smart Security", path: "/solution/security" },
     { id: 3, title: "Smart Lighting", path: "/smart-lighting-v2" },
   ];
-  const arrMenuSupport = [
-    { id: 0, title: "FAQ", img: iconBook },
-    {
-      id: 1,
-      title: t(`HEADER.HOMEPAGE.SUPPORT.USER_MANUALS`),
-      img: iconComment,
-    },
-    {
-      id: 2,
-      title: t(`HEADER.HOMEPAGE.SUPPORT.PRODUCT_VIDEOS`),
-      img: iconVideo,
-    },
-  ];
+  // const arrMenuSupport = [
+  //   { id: 0, title: "FAQ", img: iconBook },
+  //   {
+  //     id: 1,
+  //     title: t(`HEADER.HOMEPAGE.SUPPORT.USER_MANUALS`),
+  //     img: iconComment,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: t(`HEADER.HOMEPAGE.SUPPORT.PRODUCT_VIDEOS`),
+  //     img: iconVideo,
+  //   },
+  // ];
   return (
     <>
       <nav className="top-navbar-new">

@@ -68,7 +68,7 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
                     </Row>}
                 </div>}
                 <div className="product-list-item carousel-product">
-                    <Row noGutters>
+                    <Row  >
                         {post && (post.map((product, index) => <Col xl={3} lg={3} md={3} className="product-item" key={index}>
                             <Link to={`/smart-home/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
                         </Col>))

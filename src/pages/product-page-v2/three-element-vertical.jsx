@@ -15,7 +15,7 @@ const ThreeElementVertical = ({ dataProdHot }) => {
     var dataProdHots = shuffle(dataProdHot).slice(0, 3);
     return (
         <section className="section-product-name">
-            <Row noGutters>
+            <Row  >
                 {dataProdHots && dataProdHots.map((data, index) =>
                     <Col xs={12} md={4} className='product-name-hover' key={index}>
                         <img src={data?.node?.frontmatter?.imgSrcProduct?.publicURL} width={302} height={302} alt="" />

@@ -182,12 +182,12 @@ const IndexPage = ({ pageContext }) => {
                         <h2>{dataCurrent?.frontmatter?.title || "Thermostat"}</h2>
                         <div className="product-star"><img src={star} alt="" /> <span>15 reviews</span></div>
                         <p>{dataCurrent?.frontmatter?.details?.length > 0 ? dataCurrent.frontmatter.details.map((des, index) => <li key={index}><span>{des}</span></li>) : "I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. "}</p>
-                        {handelFilter(dataCurrent) === true && (<Row noGutters className="group-option">
+                        {handelFilter(dataCurrent) === true && (<Row className="group-option">
                             <Col xs={12} md={6}>
-                                <Row noGutters className="version">
+                                <Row className="version">
                                     <span>Version:</span>
                                 </Row>
-                                <Row noGutters className="group-btn-version">
+                                <Row className="group-btn-version">
                                     <button className={`btn-version ${versionActive === 0 ? 'is-active-btn' : null}`} onClick={() => handleActiveNeutral(0)} disabled={mechanicalActive?.withNeutral ? false : true}>
                                         {!dataCurrent?.frontmatter?.mechanical_6 || !dataCurrent?.frontmatter?.mechanical_4 ? 'With neutral' : 'Zigbee'}
                                     </button>
@@ -197,10 +197,10 @@ const IndexPage = ({ pageContext }) => {
                                 </Row>
                             </Col>
                             {!dataCurrent?.frontmatter?.mechanical_6 && (<Col xs={12} md={6}>
-                                <Row noGutters className="version">
+                                <Row className="version">
                                     <span>Button:</span>
                                 </Row>
-                                <Row noGutters className="group-btn-version">
+                                <Row className="group-btn-version">
                                     {dataCurrent?.frontmatter?.mechanical_1 && (<button className={`btn-version ${buttonActive === 1 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(1)} disabled={((versionActive === 0 && mechanical_1?.withNeutral) || (versionActive === 1 && mechanical_1?.nonNeutral)) ? false : true}>
                                         {1} button
                                     </button>)}

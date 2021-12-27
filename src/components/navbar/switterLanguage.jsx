@@ -20,7 +20,7 @@ const LanguageSwitcher = ({ changeLng }) => {
       i18n.changeLanguage("vn");
       changeLng("vn");
     }
-  }, [i18n.language, changeLng]);
+  }, [i18n, i18n.language, changeLng]);
 
   return (
     <>

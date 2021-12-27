@@ -7,7 +7,7 @@ const CardHorizonal = (props) => {
     const Lgn = useGetLgn();
     return (
         <div className="card-horizonal">
-            <Row className="card-horizonal-wrap" noGutters>
+            <Row className="card-horizonal-wrap"  >
                 <Col className="card-horizonal-wrap__img">
                     {
                         props.isVideo && (
