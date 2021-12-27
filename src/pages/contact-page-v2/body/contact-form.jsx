@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
+  const [preNumPhone, setPreNumPhone] = useState('+84')
+  const { t } = useTranslation();
+
+  const arrNumRange = ['+84', '+354', '+380', '+66', '+1']
 
   const validateFeedback = (field) => {
     return (
       <Form.Control.Feedback type="invalid">
-        Please provide {field}
+        {t(`Contact.${field}`)}
       </Form.Control.Feedback>
     );
   };
@@ -33,11 +38,10 @@ const ContactForm = () => {
     <section className="contactUs d-flex justify-content-center mb-5">
       <Form noValidate validated={validated} onSubmit={handleOnSubmit}>
         <h4 className="text-center">
-          The Sliving's team stands ready to co-operate with you.
+          {t(`Contact.Title`)}
         </h4>
         <p className="text-center">
-          Please fill out the fields below and someone will be in touch with you
-          very soon.
+          {t(`Contact.Action`)}
         </p>
         <Form.Group style={{ width: "100%" }}>
           <Form.Label htmlFor="customerName">Your Name</Form.Label>
@@ -144,7 +148,7 @@ const ContactForm = () => {
           />
         </Form.Group>
         <button type="submit" className="btn btn-lg btn-block">
-          Submit
+          {t(`Contact.Submit`)}
         </button>
       </Form>
     </section>

@@ -1,17 +1,18 @@
 import React from "react";
-import LayoutV2 from "@components/layout-new.jsx";
+import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import ContentDetail from "./body/content-detail";
 import BannerTop from "./body/banner-top"
 import "./index.scss"
 
 const IndexPage = ({ pageContext }) => {
+  console.log('content',pageContext)
   return (
-    <LayoutV2 isMainPage pageContext={{ isSmartHome: true }}>
+    <LayoutSmartHome >
       <div className="contentPage container">
         <BannerTop />
         <ContentDetail />
       </div>
-    </LayoutV2>
+    </LayoutSmartHome>
   );
 };
 export default IndexPage;

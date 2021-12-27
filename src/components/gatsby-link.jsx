@@ -7,7 +7,7 @@ const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
     const lngCurrent = i18next.language;
     if (internal) {
         return (
-            <GatsbyLink
+            <GatsbyLink style={{textDecorarion:'none'}}
                 to={`/${lngCurrent}${to}`}
                 activeClassName={activeClassName}
                 partiallyActive={partiallyActive}

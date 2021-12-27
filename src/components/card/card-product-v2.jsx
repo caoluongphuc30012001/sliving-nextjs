@@ -8,7 +8,7 @@ const BodyTag = styled.div`
 backgroundColor: ${props => props.background}
 `
 const CardProductV2 = ({ props, isButton, background }) => {
-
+    console.log('card product',props, isButton, background)
     return (
         <div className="card-product-v2" >
             <div className="product-v2-img">

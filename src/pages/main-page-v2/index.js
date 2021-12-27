@@ -273,8 +273,8 @@ const IndexPage = () => {
 
   const BuildSectionBannerReason = () => {
     return <SectionBannerV2
-      title='home_page_v2.reason'
-      desc='home_page_v2.sub_reason' />
+      title={t(`reason.header`)}
+      desc={t(`reason.description`)} />
   };
 
   return (

@@ -41,6 +41,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 </button>{" "}
               </Link>
             ) : (
+              <Link to="/smart-home/contact" style={{textDecoration:'none'}}>
               <button
                 className="btn-research-wrap d-flex al-center"
                 id="btn-research-wrap"
@@ -48,6 +49,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 <span className="fs-18 fw-bold">{t(`Contact_us`)}</span>
                 <img src={imgArrowRight} alt="arrow right" />
               </button>
+              </Link>
             )}
           </Row>
         </div>

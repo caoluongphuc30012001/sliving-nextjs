@@ -14,7 +14,10 @@
       "CONTACTUS": "Liên hệ",
       "PROJECT": "Dự án",
       "BLOG": "Tin tức",
-      "PRODUCT&SOLUTION": "Sản phẩm và Giải pháp"
+      "PRODUCT&SOLUTION": "Sản phẩm và Giải pháp", 
+      "STORY":"Câu chuyện",
+      "NEWS":"Tin tức",
+      "LIGHTING":"Chiếu sáng"
     },
     "REGISTER": "ĐĂNG KÝ",
     "EMAIL": "ĐỊA CHỈ EMAIL",
@@ -438,12 +441,13 @@
         "description": "Sử dụng công nghệ sinh trắc học để trích xuất các đặc điểm nhận dạng khuôn mặt: Xác thực cư dân, kiểm soát ra vào khu vực cần giám sát cũng như dùng để gọi thang máy, mở rào chắn. Tích hợp vào một camera an ninh. Có thể nhận ra nhiều khuôn mặt cùng một lúc"
       }
     },
-    "lighting": {
-      "header": "Công nghệ ánh sáng mang lại sắc màu.",
-      "subHeader": "Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có",
-      "section_1": {
-        "title": "Bảo vệ sức khỏe của bạn",
-        "description": "Hệ thống chiếu sáng của Sliving ưu tiên bảo vệ sức khỏe người dùng thông qua các tiêu chí: Chỉ số hoàn màu CRI đa dạng (CRI = 70-95): phù hợp với yêu cầu công việc ở nhiều không gian khác nhau, từ nhà ở, văn phòng đến nhà xưởng… góp phần bảo vệ mắt. Sức khỏe. Khả năng thay đổi nhiệt độ màu: thích hợp cho nhiều hoạt động, giúp tập trung làm việc, tâm trạng tốt và giấc ngủ ngon cho người dùng"
+    "lighting":{
+      "header":"Công nghệ ánh sáng mang lại sắc",
+      "color":" màu.",
+      "subHeader":"Kinh nghiệm quản lý dự án phức tạp. Khi chọn một công ty phát triển phần mềm nước ngoài, hãy đảm bảo rằng họ có", 
+      "section_1":{
+        "title":"Bảo vệ sức khỏe của bạn",
+        "description":"Hệ thống chiếu sáng của Sliving ưu tiên bảo vệ sức khỏe người dùng thông qua các tiêu chí: Chỉ số hoàn màu CRI đa dạng (CRI = 70-95): phù hợp với yêu cầu công việc ở nhiều không gian khác nhau, từ nhà ở, văn phòng đến nhà xưởng… góp phần bảo vệ mắt. Sức khỏe. Khả năng thay đổi nhiệt độ màu: thích hợp cho nhiều hoạt động, giúp tập trung làm việc, tâm trạng tốt và giấc ngủ ngon cho người dùng"
       },
       "section_2": {
         "title": "Tiết kiệm năng lượng",
@@ -452,17 +456,47 @@
       "section_3": {
         "title": "Điều khiển tự động",
         "description": "Sliving's Smart Lighting giúp hệ thống chiếu sáng thông minh hơn thông qua các yếu tố: Điều khiển và kiểm soát hệ thống từ xa thông qua ứng dụng. Thiết lập một kịch bản hoạt động theo lịch trình hoạt động và công việc"
-      }
+      },
+      "led_product":"Sản phẩm LED"
     },
+    "footer":"Tìm các tùy chọn khác hoàn hảo cho bạn.",
+    "subFooter":"Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!",
+    "Cinema":"Rạp chiếu phim",
+    "Store":"Cửa hàng",
+    "Home":"Nhà",
+    "Office":"Văn phòng",
+    "School":"Trường",
+    "Villa":"Biệt thự",
+    "titleSolution":"Giải pháp ánh sáng thông minh cho cuộc sống"
+  },
+  "Contact":{
+    "ErrorYourName":"Nhập tên của bạn",
+    "ErrorTypesofCustomer":"Nhập loại khách hàng",
+    "ErrorCountry":"Nhập đất nước của bạn",
+    "ErrorEmail":"Nhập email",
+    "ErrorNumber":"Nhập số điện thoại",
+    "ErrorCompanyName":"Nhập tên công ty",
+    "Title":"Đội nhóm Sliving sẵn sàng hợp tác với bạn.",
+    "Action":"Xin mời điền vào form bên dưới sẽ có người liên hệ với bạn sau.",
+    "YourName":"Tên của bạn",
+    "TypesofCustomer":"Loại khách hàng",
+    "Country":"Đất nước",
+    "Email":"Địa chỉ email",
+    "Number":"Số điện thoại",
+    "CompanyName":"Tên công ty",
+    "Job":"Ngành nghề",
+    "Submit":"Xác nhận",
     "footer": "Tìm các tùy chọn khác hoàn hảo cho bạn.",
-    "subFooter": "Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!"
-
+    "subFooter": "Chúng tôi có thể trả lời bất kỳ câu hỏi nào của bạn, cung cấp các bản demo sản phẩm và tìm ra gói sản phẩm hoàn hảo cho bạn. Hãy để lại lời nhắn với chúng tôi!",
+    "Revolution":"Cách mạng ánh sáng thông minh"
   },
   "footer_email": "Email",
   "footer_phone": "Số điện thoại",
   "footer_address": "Địa chỉ",
+  "article_map":"Vui lòng giữ liên lạc để nhận được các cập nhật mới nhất.",
   "reason": {
     "header": "Lý do bạn nên lựa chọn Sliving",
+    "description":"Bạn đang cần một môi trường với đầy đủ các tiện ích thông minh, có một số yếu tố cần quan tâm. Nó sẽ được sử dụng cho ngôi nhà của bạn, văn phòng của bạn, hoặc thậm chí có thể ở mọi nơi bạn muốn ...",
     "subHeader": "Tiên phong trong việc cung cấp các giải pháp toàn diện cho Nền tảng IoT tại Việt Nam",
     "reason_1": {
       "title": "Sản phẩm chất lượng quốc tế",

@@ -32,5 +32,5 @@ i18n
 
 
 i18n.languages = ['vn', 'en'];
-
+i18n.language='en'
 export default i18n

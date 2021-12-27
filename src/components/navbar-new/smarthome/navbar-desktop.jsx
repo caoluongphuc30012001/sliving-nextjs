@@ -49,7 +49,7 @@ export default function NavbarSmartHomeDesktop() {
       id: "4",
       title: t(`HEADER.HOMEPAGE.CONTACTUS`),
       isActive: false,
-      path: "/smart-home/contact",
+      path: "/smart-home/contact/",
     },
   ];
   const arrMenuSolution = [
