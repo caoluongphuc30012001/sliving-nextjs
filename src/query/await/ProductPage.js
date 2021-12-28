@@ -26,7 +26,7 @@ const QueryProductPage = () => {
               imgSrcThumbs {
                 publicURL
                 childImageSharp {
-                  fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
+                  fluid(maxWidth: 460, maxHeight: 460, fit: INSIDE) {
                     src
                     srcSet
                     aspectRatio
@@ -37,7 +37,7 @@ const QueryProductPage = () => {
               imgSrcProduct {
                 publicURL
                 childImageSharp {
-                  fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
+                  fluid(maxWidth: 460, maxHeight: 460, fit: INSIDE) {
                     src
                     srcSet
                     aspectRatio

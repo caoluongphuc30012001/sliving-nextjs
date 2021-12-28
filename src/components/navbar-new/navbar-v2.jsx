@@ -3,18 +3,21 @@ import { Navbar, Nav } from "react-bootstrap";
 import Link from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-
+import {navigate} from "gatsby";
+import { useLocation } from "@reach/router";
 import { useTranslation } from "react-i18next";
 
 export default function NavbarNew() {
-
-  const { t } = useTranslation();
+  const {location} = useLocation();
+  const { t ,i18n} = useTranslation();
   const arrMenu = [
     { id: "0", title: "Smart Home", isActive: true, path: "/smart-home/" },
     { id: "1", title: "Fintech IoT", isActive: false, path: "#" },
     { id: "2", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: false, path: "/smart-lighting-v2/" },
     { id: "3", title: t(`HEADER.HOMEPAGE.ABOUTUS`), isActive: false, path: "#" },
   ];
+
+
 
   return (
     <>
@@ -54,8 +57,8 @@ export default function NavbarNew() {
                           >
                             {nav.title}
                             {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? <ul className="subNav">
-                              <Link><li>{t(`HEADER.HOMEPAGE.STORY`)} </li></Link>
-                              <Link to='/contact-page'><li>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</li></Link>
+                            <li>{t(`HEADER.HOMEPAGE.STORY`)} </li>
+                            <li onClick={()=> navigate(`/${i18n.language}/contact-page/`)}>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</li>
                             </ul> : ""}
                           </Link>
                         );

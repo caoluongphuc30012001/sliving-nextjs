@@ -13,7 +13,7 @@ import loadable from "@loadable/component";
 
 import { useTranslation } from "react-i18next";
 
-//const Carousel = loadable(() => import("react-spring-3d-carousel"));
+const Carousel = loadable(() => import("react-spring-3d-carousel"));
 
 const isBrowser = typeof window !== "undefined";
 
@@ -39,7 +39,7 @@ export default function NewSectionCarousel() {
 
   const BuildCarousel = useMemo(() => {
     if (isBrowser) {
-      // return (//<Carousel slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />);
+   return (<Carousel animationConfig={"stiff"} slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />);
     } else {
       return null;
     }

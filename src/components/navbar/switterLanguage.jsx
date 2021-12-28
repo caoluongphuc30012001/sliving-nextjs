@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import iconLanguage from "@images/new-home-page/header/icon-language.png";

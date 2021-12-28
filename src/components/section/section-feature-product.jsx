@@ -15,7 +15,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
 
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
-        while (currentIndex != 0) {
+        while (currentIndex !== 0) {
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
             [array[currentIndex], array[randomIndex]] = [
@@ -64,9 +64,9 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
             setArrProductHot(arrOld => arrOld.concat(arrFilter));
         }
     }
-    var arrFilterName = ["productAir", "productGateWay", "productSwitch", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productZigbee"];
+    var arrFilterNames = ["productAir", "productGateWay", "productSwitch", "productLed", "productSensor", "productSmartCurtain", "productSmartMeter", "productZigbee"];
     useEffect(() => {
-        arrFilterName = shuffle(arrFilterName);
+     var   arrFilterName = shuffle(arrFilterNames);
         for (let index = 0; index < arrFilterName.length; index++) {
             const filter = arrFilterName[index];
             filterProduct(filter);
@@ -83,7 +83,6 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
     };
-    console.log("arrProductHot", arrProductHot);
     return (
         <section className="container-v2 section-prod-feature">
             <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>

@@ -1,7 +1,8 @@
 module.exports = {
   flags: {
-    PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    DEV_WEBPACK_CACHE: true,
+    PARALLEL_QUERY_RUNNING: true,
+    PARALLEL_SOURCING : false ,
+    DETECT_NODE_MUTATIONS: true
   },
   siteMetadata: {
     title: "Sliving",
@@ -15,7 +16,7 @@ module.exports = {
         // Add any options here
       },
     },
-    `gatsby-transformer-sharp`,
+   
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -23,11 +24,22 @@ module.exports = {
           formats: [`auto`, `webp`],
           placeholder: `dominantColor`,
           quality: 50,
-
+          breakpoints: [750, 1080, 1366, 1920],
           backgroundColor: `transparent`,
-        }
-      }
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+        base64Width: 20,
+        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
+        stripMetadata: true,
+        defaultQuality: 50,
+      },
     },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     {

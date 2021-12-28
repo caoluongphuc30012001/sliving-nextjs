@@ -16,11 +16,8 @@ const IndexPage = () => {
       <Helmet >
         <meta charSet="utf-8" />
         <title>Sliving</title>
-        <meta name="description" content={"Sliving"} />
+        <meta name="description" content="Sliving" />
         <link rel="preload" as="font" />
-        <link rel="preload" href="./fonts/svn-gilroy/SVN-Gilroy-Regular.ttf" as="font" type="font/ttf" crossorigin />
-        <link rel="preload" href="./fonts/svn-gilroy/SVN-Gilroy-Bold.ttf" as="font" type="font/ttf" crossorigin />
-
         <link rel="shortcut icon" type="image/svg" href={favicon} />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

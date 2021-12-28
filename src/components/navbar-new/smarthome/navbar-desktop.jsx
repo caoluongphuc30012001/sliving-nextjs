@@ -5,9 +5,6 @@ import { useTranslation } from "react-i18next";
 
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-import iconBook from "@images/new-home-page/solution/icon-book.svg";
-import iconComment from "@images/new-home-page/solution/icon-comment.svg";
-import iconVideo from "@images/new-home-page/solution/icon-video.svg";
 import Link from '@components/gatsby-link'
 
 export default function NavbarSmartHomeDesktop() {
@@ -53,10 +50,10 @@ export default function NavbarSmartHomeDesktop() {
     },
   ];
   const arrMenuSolution = [
-    { id: 0, title: "Smart Home", path: "/solution/smart-home" },
-    { id: 1, title: "Smart Parking", path: "/solution/parking" },
-    { id: 2, title: "Smart Security", path: "/solution/security" },
-    { id: 3, title: "Smart Lighting", path: "/smart-lighting-v2" },
+    { id: 0, title: "Smart Home", path: "/solutions/smart-home/" },
+    { id: 1, title: "Smart Parking", path: "/solutions/smart-parking/" },
+    { id: 2, title: "Smart Security", path: "/solutions/smart-security/" },
+    { id: 3, title: "Smart Lighting", path: "/smart-lighting/" },
   ];
   // const arrMenuSupport = [
   //   { id: 0, title: "FAQ", img: iconBook },

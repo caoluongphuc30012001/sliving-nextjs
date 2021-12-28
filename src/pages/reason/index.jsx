@@ -38,7 +38,7 @@ const Card = ({ index, title, des }) => {
         sm={{ span: 2, offset: 1 }}
         className="image-flag"
       >
-        <img src={flag} />
+        <img src={flag} alt="flag" />
       </Col>
       <Col lg={7} sm={7} className="content">
         <h1>{index}</h1>

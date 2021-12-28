@@ -16,8 +16,8 @@ import useGetLgn from "@hook/useGetLgn";
 import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
 import { useLocation } from "@reach/router";
-import { graphql, navigate } from "gatsby";
-const TechnicalSol = ({ data }) => {
+import {navigate } from "gatsby";
+const ListSupports = ({data}) => {
   const Lgn = useGetLgn();
   const { t } = useTranslation();
 
@@ -76,54 +76,6 @@ const TechnicalSol = ({ data }) => {
     { id: 7, title: "navProduct.Zigbee_KIT", isActive: false },
     { id: 8, title: "navProduct.Door_motor_gate", isActive: false },
   ]);
-  const settings = {
-    dots: true,
-    dotsClass: "slick-dots slick-thumb",
-    infinite: true,
-    slidesToShow: post?.length > 6 ? 6 : 3,
-    slidesToScroll: post?.length > 6 ? 6 : 3,
-    vertical: true,
-    row: post?.length > 6 ? 6 : 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 6,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-    customPaging: (i) => (
-      <div
-        style={{
-          width: "15px",
-          height: "16px",
-          backgroundColor: "#F2F2F2",
-          textAlign: "center",
-          borderRadius: "3px",
-          fontSize: "14px",
-        }}
-      >
-        {i + 1}
-      </div>
-    ),
-  };
   const [titleSuport, SetTitleSuport] = useState("Technical_solutions");
   const [isMobile, SetIsMobile] = useState(false);
 
@@ -260,10 +212,10 @@ const TechnicalSol = ({ data }) => {
                 {!isMobile && (
                   <div className="technical-dropdown card">
                     {arrDrop &&
-                      arrDrop.map((item) => {
+                      arrDrop.map((item,index) => {
                         return (
                           <Dropdown.Item
-                            key={item}
+                            key={index}
                             className={`${item.isActive ? "is-active-item" : ""
                               }`}
                             onClick={() => handleClick(item.id, item.title)}
@@ -290,10 +242,10 @@ const TechnicalSol = ({ data }) => {
                         <Accordion.Collapse eventKey="0">
                           <Card.Body>
                             {arrDrop &&
-                              arrDrop.map((item) => {
+                              arrDrop.map((item,index) => {
                                 return (
                                   <Dropdown.Item
-                                    key={item}
+                                    key={index}
                                     className={`${item.isActive ? "is-active-item" : ""
                                       }`}
                                     onClick={() =>
@@ -445,11 +397,11 @@ const TechnicalSol = ({ data }) => {
                 </div>
                 <div className="support-slider">
                   {id === 6
-                    ? currentPosts?.map(({ node }) => {
+                    ? currentPosts?.map(({ node ,index}) => {
                       return (
                         <div
                           className="container-first-slider"
-                          key={node.frontmatter.id}
+                          key={index}
                         >
                           <Row onMouseDown={() => navigate('detail')}>
                             <Col sm={3} xs={12}>
@@ -493,11 +445,11 @@ const TechnicalSol = ({ data }) => {
                         </div>
                       );
                     })
-                    : currentPosts?.map(({ node }) => {
+                    : currentPosts?.map(({ node ,index}) => {
                       return (
                         <div
                           className="container-first-slider"
-                          key={node.frontmatter.id}
+                          key={index}
                         >
                           <Row onMouseDown={() => navigate('detail')}>
                             <Col sm={5} xs={12}>
@@ -563,22 +515,23 @@ const TechnicalSol = ({ data }) => {
                       <nav>
                         <ul className="pagination">
                           <li>
-                            <a onClick={() => paginatePrev()}>
+                            <a href="#" onClick={() => paginatePrev()} onKeyPress={() => paginatePrev()}  tabIndex={0} role={"table"}>
                               <Image
                                 src={PrevIcon}
-                                className="pagination-btn-prev"
+                                className="pagination-btn-prev" alt="icon"
                               />
                             </a>
                           </li>
-                          {pageNumbers.map((num) => (
-                            <li className="page-item" key={num}>
-                              <a
+                          {pageNumbers.map((num,index) => (
+                            <li className="page-item" key={index}>
+                              <a href="#"
                                 className={
                                   num === currentPage
                                     ? "page-link active"
                                     : "page-link"
                                 }
                                 onClick={() => paginate(num)}
+                                onKeyPress={() => paginate(num)} tabIndex={0} role={"table"}
                                 style={{ cursor: "pointer" }}
                               >
                                 {num}
@@ -586,7 +539,7 @@ const TechnicalSol = ({ data }) => {
                             </li>
                           ))}
                           <li>
-                            <a onClick={() => paginateNext()}>
+                            <a href="#" onClick={() => paginateNext()} onKeyPress={() => paginateNext()} tabIndex={0} role={"table"}>
                               <Image
                                 src={NextIcon}
                                 className="pagination-btn-next"
@@ -610,32 +563,9 @@ const TechnicalSol = ({ data }) => {
       </div>
 
       <div class="bot-banner">
-        <img class="bot-banner-img" src={BotBanner} />
+        <img class="bot-banner-img" src={BotBanner} alt="bottom banner"/>
       </div>
     </div>
   );
 };
-export default TechnicalSol;
-
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(/contents/support-page/)/" } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            description
-            details
-            title
-            type
-            date
-            subtitle
-            slug
-          }
-          html
-        }
-      }
-    }
-  }
-`;
+export default ListSupports;

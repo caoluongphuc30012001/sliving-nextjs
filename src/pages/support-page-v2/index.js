@@ -1,11 +1,11 @@
 import React from "react";
 import LayoutSmartHome from "@components/layout-smart-home.jsx";
-import TechnicalSol from "./body/technicalSolution";
+import ListSupports from "./body/technicalSolution";
 
 const IndexPage = ({ pageContext }) => {
   return (
     <LayoutSmartHome isMainPage>
-      <TechnicalSol data={pageContext?.data?.data} />
+      <ListSupports data={pageContext?.data?.data} />
     </LayoutSmartHome>
   );
 };

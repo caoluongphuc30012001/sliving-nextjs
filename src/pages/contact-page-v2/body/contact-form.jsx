@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
-  const [preNumPhone, setPreNumPhone] = useState('+84')
+  //const [ setPreNumPhone] = useState('+84')
   const { t } = useTranslation();
 
-  const arrNumRange = ['+84', '+354', '+380', '+66', '+1']
+  //const arrNumRange = ['+84', '+354', '+380', '+66', '+1']
 
   const validateFeedback = (field) => {
     return (

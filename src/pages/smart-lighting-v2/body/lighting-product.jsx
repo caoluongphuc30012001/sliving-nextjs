@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import imgCinema from "@components/svg/cinema";
@@ -7,7 +7,6 @@ import imgStore from "@components/svg/store";
 import imgHome from "@components/svg/house";
 import imgOffice from "@components/svg/office";
 import imgSchool from "@components/svg/school";
-import imgLine from "@images/new-home-page/app-img/line.png";
 import TitleSection from "../../../components/section/title/title-section";
 import { useTranslation } from "react-i18next";
 SwiperCore.use([Pagination, Navigation]);
