@@ -12,7 +12,7 @@ const CardProductV2 = ({ props, isButton, background }) => {
     return (
         <div className="card-product-v2" >
             <div className="product-v2-img">
-                <GatsbyImage fluid={props?.imgSrcProduct?.childImageSharp?.gatsbyImageData} alt="" />
+                <GatsbyImage image={props?.imgSrcProduct?.childImageSharp?.gatsbyImageData} alt="" />
             </div>
             <BodyTag className="product-v2-detail" background={background}>
                 <h6>{props?.type}</h6>

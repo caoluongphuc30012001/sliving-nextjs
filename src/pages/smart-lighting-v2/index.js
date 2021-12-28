@@ -12,7 +12,8 @@ import "./style.scss"
 
 const LightingPage = () => {
   const { t } = useTranslation();
-  return <LayoutSmartLighting isMainPage pageContext={{ isSmartLighting: true }}>
+  return (
+    <LayoutSmartLighting>
     <div id='smartLighting'>
       <LightingHeader />
       <LightingProduct />
@@ -23,6 +24,7 @@ const LightingPage = () => {
       </div>
     </div>
   </LayoutSmartLighting>
+  );
 }
 export default LightingPage;
 

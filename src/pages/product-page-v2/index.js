@@ -5,7 +5,7 @@ import SwiperCore, {
     Navigation, Pagination
 } from 'swiper';
 
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row} from 'react-bootstrap';
 import ThreeElementVertical from './three-element-vertical';
 import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import SectionFeatureProduct from '@components/section/section-feature-product';
@@ -37,7 +37,7 @@ import { graphql } from "gatsby";
 import { useTranslation } from 'react-i18next';
 
 import "./style.scss";
-import "../smart-home-page-v2/style.scss"
+import "../smart-home-page-v2/style.scss";
 SwiperCore.use([Navigation, Pagination,]);
 const IndexPage = ({ data }) => {
     const { t } = useTranslation();

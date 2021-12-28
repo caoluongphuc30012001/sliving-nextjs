@@ -120,12 +120,12 @@ export default function NavbarSmartHomeDesktop() {
                   <div className="nav-hover-product">
                     <Row>
                       {data &&
-                        data.map((item) => (
+                        data.map((item,index) => (
                           <Col
                             xl={3}
                             lg={3}
                             md={3}
-                            key={item.id}
+                            key={index}
                             className="product-mt"
                           >
                             <div className="hover-product-first">
@@ -155,12 +155,12 @@ export default function NavbarSmartHomeDesktop() {
                   <div className="nav-hover-solution">
                     <Row>
                       {arrMenuSolution &&
-                        arrMenuSolution.map((item) => (
+                        arrMenuSolution.map((item,index) => (
                           <Col
                             xl={3}
                             lg={3}
                             md={3}
-                            key={item.id}
+                            key={index}
                             className="solution-mt"
                           >
                             <div className="hover-solution">

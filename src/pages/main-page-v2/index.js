@@ -44,7 +44,7 @@ const IndexPage = () => {
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(sizes: "1440", width: 1440, quality: 100, layout: FULL_WIDTH)
+          gatsbyImageData
         }
       }
     }
@@ -53,7 +53,7 @@ const IndexPage = () => {
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData(sizes: "1440", width: 1440, quality: 100, layout: FULL_WIDTH)
+          gatsbyImageData
         }
       }
     }
@@ -66,8 +66,6 @@ const IndexPage = () => {
     return (
       <div className="header-banner-v2">
         <GatsbyImage
-          // src={carousel.src}
-          // data-src={carousel.src}
           image={carousel}
           alt="sliving alt"
           width={1440}

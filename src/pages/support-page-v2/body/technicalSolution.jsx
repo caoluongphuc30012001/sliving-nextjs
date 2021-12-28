@@ -465,14 +465,12 @@ const ListSupports = ({data}) => {
                                             .publicURL
                                         }
                                         alt="Image 1"
-                                        fluid
                                       />
                                     ) : (
                                       <Image
                                         className="image-example"
                                         src={ImageExample}
                                         alt="Image 1"
-                                        fluid
                                       />
                                     )}
                                   </Link>

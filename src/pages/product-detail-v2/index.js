@@ -47,7 +47,7 @@ const IndexPage = ({ pageContext }) => {
     useEffect(() => {
         filterPostByLgn(data);
          // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [data])
+    }, [data,lngCurrent])
 
     const [dataThumbs, setDataThumbs] = useState();
 

@@ -24,27 +24,13 @@ const DataProductSolution = () => {
           imgSrcThumbs {
             publicURL
             childImageSharp {
-              gatsbyImageData(
-                quality: 100
-                width: 460
-                height: 460
-                placeholder: BLURRED
-                transformOptions: {fit: INSIDE}
-                layout: CONSTRAINED
-              )
+              gatsbyImageData
             }
           }
           imgSrcProduct {
             publicURL
             childImageSharp {
-              gatsbyImageData(
-                quality: 100
-                width: 460
-                height: 460
-                placeholder: BLURRED
-                transformOptions: {fit: INSIDE}
-                layout: CONSTRAINED
-              )
+              gatsbyImageData
             }
           }
         }

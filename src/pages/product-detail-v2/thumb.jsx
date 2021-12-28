@@ -98,10 +98,9 @@ export default class CenterMode extends Component {
 
                         {this.state.arrThumbs && this.state.arrThumbs?.map((element, index) => {
                             return (
-                                <div className="thumb-center" data-fancybox="gallery" data-src={element?.publicURL} key={index}>
-                                    <GatsbyImage fluid={element?.childImageSharp?.gatsbyImageData} alt="" />
-
-                                </div>
+                                <div className="thumb-center" data-fancybox="gallery" data-src={element.publicURL} key={index}>
+                                <GatsbyImage image={element.childImageSharp.gatsbyImageData} alt="" style={{width:"100%",margin:"auto"}} />
+                            </div>
                             );
                         })}
                     </Slider>
@@ -115,7 +114,9 @@ export default class CenterMode extends Component {
                     {this.state.arrThumbs.map((element, index) => {
                         return (
                             <div key={index} className="thumb-bottom">
-                                <GatsbyImage fluid={element?.childImageSharp?.gatsbyImageData} alt="" />
+                           <div className=""  key={index}>
+                                    <GatsbyImage image={element.childImageSharp.gatsbyImageData} alt="" />
+                                </div>
                             </div>
                         );
                     })}

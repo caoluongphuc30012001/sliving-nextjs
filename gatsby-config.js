@@ -1,7 +1,7 @@
 module.exports = {
   flags: {
     PARALLEL_QUERY_RUNNING: true,
-    PARALLEL_SOURCING : false ,
+    PARALLEL_SOURCING : true ,
     DETECT_NODE_MUTATIONS: true
   },
   siteMetadata: {

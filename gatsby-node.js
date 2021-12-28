@@ -42,6 +42,7 @@ exports.onCreatePage = ({ page, actions }) => {
   )) {
     deletePage(page)
   }
+  
 }
 async function getLng() {
   const lngValue = ["en", "vn"];
@@ -64,9 +65,7 @@ exports.createPages = async function ({ actions, graphql }) {
   const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
   const solutionSmartSecurity  = require.resolve("./src/pages/solution/security/index.jsx");
 
-  if(!productPage){
-    return;
-  }
+
   await graphql(
     `{
     allFile(filter: {absolutePath: {regex: "/(images/product-v2/)/"}}) {
@@ -80,33 +79,34 @@ exports.createPages = async function ({ actions, graphql }) {
 `);
   const querySupportPage = await graphql(
     `
-  {dataTechnicalAnswer:
-  allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
-  ) {
-    edges {
-      node {
-        frontmatter {
-          description
-          details
-          title
-          type
-          date
-          subtitle
-          slug
+  {
+    dataTechnicalAnswer: allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            description
+            details
+            title
+            type
+            date
+            subtitle
+            slug
+          }
+          html
         }
-        html
       }
     }
   }
-}
-
-`
+  `
   );
-
-
-  const arrLng = await getLng();
- await Promise.all( arrLng.map((lng) => {
+const arrLng = await getLng();
+arrLng.map((lng) => {
+  createPage({
+    path: `/${lng}/`,
+    component: homePage,
+    });
   createPage({
     path: `/${lng}/support/`,
     component: pagesSupport,
@@ -115,16 +115,12 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   });
   createPage({
-    path: `/${lng}/`,
-    component: homePage,
-  });
-  createPage({
     path: `/${lng}/support/detail`,
     component: detailSupport,
     context: {
       data: querySupportPage
     }
-
+  
   });
   createPage({
     path: `/${lng}/contact-page`,
@@ -138,7 +134,6 @@ exports.createPages = async function ({ actions, graphql }) {
     component: smartHomeComponent,
     context: {
       data: productPage.data.ProductPage,
-      isSmartHome: true
     },
   });
   createPage({
@@ -161,7 +156,8 @@ exports.createPages = async function ({ actions, graphql }) {
     path: `/${lng}/smart-home/products/`,
     component: productComponent,
     context: {
-      data: productPage.data.ProductPage
+      data: productPage.data.ProductPage,
+      lng:lng
     },
   });
   createPage({
@@ -172,7 +168,7 @@ exports.createPages = async function ({ actions, graphql }) {
       isNavbarContact: { isSmartHome: true }
     },
   });
-
+  
   createPage({
     path: `/${lng}/solutions/smart-home/`,
     component: solutionSmartHome,
@@ -195,7 +191,7 @@ exports.createPages = async function ({ actions, graphql }) {
       },
     });
   });
-}))
+});
 };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
