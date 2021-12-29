@@ -1,27 +1,25 @@
 import React from "react";
 import LayoutSmartHome from "@components/layout-smart-home";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from "gatsby";
-import IntroductHeader from "./header/section-header";
+import IntroductionHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
 import "./style.scss";
 import SectionFeatureProduct from "@components/section/section-feature-product";
-import imgFirst from "@images/solution/smart-home/imgFirst.svg";
-import imgSecond from "@images/solution/smart-home/imgSecond.png";
-import imgThird from "@images/solution/smart-home/imgThird.png";
-import imgFour from "@images/solution/smart-home/imgFour.png";
-import imgFive from "@images/solution/smart-home/imgFive.svg";
-import imgSix from "@images/solution/smart-home/imgSix.png";
+import imgFirst from "@images/solution/smart-home/imgFirst.webp";
+import imgSecond from "@images/solution/smart-home/imgSecond.webp";
+import imgThird from "@images/solution/smart-home/imgThird.webp";
+import imgFour from "@images/solution/smart-home/imgFour.webp";
+import imgFive from "@images/solution/smart-home/imgFive.webp";
+import imgSix from "@images/solution/smart-home/imgSix.webp";
 import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
 import { useTranslation } from "react-i18next";
-const SmarthomeSolution = () => {
+const SmartHomeSolution = () => {
   const { t } = useTranslation();
   const data = DataProductNew();
   return (
     <LayoutSmartHome >
       <div className="introduct-main" id="introduct-main-smarthome">
-        <IntroductHeader />
+        <IntroductionHeader />
         <SectionFeatureProduct dataProductHot={data} />
         <section className="introSection container">
           <div className="background-image "></div>
@@ -87,13 +85,4 @@ const SmarthomeSolution = () => {
     </LayoutSmartHome>
   );
 };
-export default withI18next()(SmarthomeSolution);
-export const query = graphql`
-  query ($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default SmartHomeSolution;

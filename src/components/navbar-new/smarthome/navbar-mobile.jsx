@@ -48,7 +48,7 @@ export default function NavbarSmartHomeMobile() {
           collapseOnSelect
           expand="lg"
         >
-          <Navbar.Brand href="/" className="logo">
+          <Navbar.Brand href="/" className="logo" aria-label="Link to home">
             <Image src={logo} width={202} height={44} />
           </Navbar.Brand>
         </Navbar>

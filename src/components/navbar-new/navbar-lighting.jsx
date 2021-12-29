@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav } from "react-bootstrap";
-import { Link, graphql, useStaticQuery, navigate } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 import { useTranslation } from "react-i18next";
+import GatsbyLink from "@components/gatsby-link";
 
 export default function NavbarLighting() {
   const dataProductMenu = DataProductMenu();
@@ -20,14 +21,14 @@ export default function NavbarLighting() {
     } else {
       setData(cutArray(dataProductMenu["vn"].group));
     }
-  }, [i18n.language,dataProductMenu]);
+  }, [i18n.language, dataProductMenu]);
   const arrMenu = [
-    { id: "0", title: "Lighting", isActive: true, path: "/en/smart-lighting-v2/" },
+    { id: "0", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: true, path: "/smart-lighting/" },
     {
       id: "1",
       title: t(`HEADER.HOMEPAGE.PRODUCT`),
       isActive: false,
-      path: "/en/smart-lighting-v2/",
+      path: "/smart-lighting#productLighting",
     },
     {
       id: "2",
@@ -47,9 +48,9 @@ export default function NavbarLighting() {
               expand="lg"
               id="nav-bar"
             >
-              <Link to="/" className="logo nav-logo nav-brand">
+              <GatsbyLink to="/" className="logo nav-logo nav-brand" aria-label="Link to home">
                 <Image className="img-obj-cover" src={logo} alt="sliving" />
-              </Link>
+              </GatsbyLink>
               <Navbar.Collapse
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2"
@@ -58,26 +59,24 @@ export default function NavbarLighting() {
                   {arrMenu &&
                     arrMenu.map((nav, index) => {
                       return (
-                        <Link
+                        <GatsbyLink
                           key={index}
-                          className={`item-menu item-menu-child link fs-16  ${
-                            nav.isActive ? "is-active" : ""
-                          }`}
-                          id="item-menu"
-                          onMouseDown={()=>{
-                            if(nav.title==='Products'){
-                                if(document.location.pathname!==nav.path) navigate(`${nav.path}`)
-                                return setTimeout(() => {
-                                    const errorElements = document.getElementById("productLighting");
-                                    errorElements.scrollIntoView({ block: 'center', behavior: 'smooth' });
-                                }, 100);
-                            }
-                            navigate(`${nav.path}`,{state: {isSmartLighting:true}})
-                            // if(document.location.path==='/en/smart-lighting-v2/')
-                          }}
+                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""}`}
+                          to={nav.path}
+                          // onMouseDown={() => {
+                          //   if (nav.title === 'Products') {
+                          //     if (document.location.pathname !== nav.path) navigate(`${nav.path}`)
+                          //     return setTimeout(() => {
+                          //       const errorElements = document.getElementById("productLighting");
+                          //       errorElements.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                          //     }, 100);
+                          //   }
+                          //   navigate(`${nav.path}`, { state: { isSmartLighting: true } })
+                          //   // if(document.location.path==='/en/smart-lighting-v2/')
+                          // }}
                         >
                           {nav.title}
-                        </Link>
+                        </GatsbyLink>
                       );
                     })}
                 </Nav>

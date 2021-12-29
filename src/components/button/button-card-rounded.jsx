@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import iconRounded from "./../../images/icon/icon-rounded.svg";
+import iconRounded from "@images/icon/icon-rounded.svg";
 const isBrowser = typeof window !== "undefined";
 const ButtonRounded = () => {
-    const srollTop = ({ isScroll }) => {
+    const scrollTop = () => {
         if (isBrowser) {
             window.scroll({
                 top: 0,
@@ -11,25 +11,20 @@ const ButtonRounded = () => {
             });
         }
     }
+    const setScroll = () => {
+        if (window.scrollY > 500) {
+            setIsScroll(true);
+        } else {
+            setIsScroll(false);
+        }
+    }
     const [isScroll, setIsScroll] = useState(false);
     useEffect(() => {
         if (isBrowser) {
-            window.addEventListener("scroll", () => {
-                if (window.scrollY > 500) {
-                    setIsScroll(true);
-                } else {
-                    setIsScroll(false);
-                }
-            }, false)
+            window.addEventListener("scroll", setScroll, false)
         }
         return () => {
-            window.removeEventListener("scroll", () => {
-                if (window.scrollY > 500) {
-                    setIsScroll(true);
-                } else {
-                    setIsScroll(false);
-                }
-            }, false)
+            window.removeEventListener("scroll", setScroll, false)
         }
 
     }, [])
@@ -39,9 +34,9 @@ const ButtonRounded = () => {
                 role="button"
                 tabIndex={0}
                 className="btn-rounded"
-                onClick={() => srollTop(true)}
+                onClick={() => scrollTop()}
                 style={{ display: isScroll }}
-                onKeyPress={() => srollTop(true)}>
+                onKeyPress={() => scrollTop()}>
                 <img src={iconRounded} alt="icon arrow top" />
             </div>
             )}

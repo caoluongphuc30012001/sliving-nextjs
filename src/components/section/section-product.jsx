@@ -18,8 +18,8 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const [post, setPost] = useState([]);
     const { t } = useTranslation();
     const [arrProduct] = useState([
-        { title: "LED", id: 0, isActive: true, filterName: "productLed" },
         { title: "navProduct.Switches", id: 1, isActive: false, filterName: "productSwitch" },
+        { title: "LED", id: 0, isActive: true, filterName: "productLed" },
         { title: "navProduct.Sockets", id: 2, isActive: false, filterName: "productSocket" },
         { title: "navProduct.Sensors", id: 3, isActive: false, filterName: "productSensor" },
         { title: "navProduct.Zigbee_KIT", id: 7, isActive: false, filterName: "productZigbee" },
@@ -68,7 +68,7 @@ const SlideProduct = ({ data, noTitle, noNavbar }) => {
                     </Row>}
                 </div>}
                 <div className="product-list-item carousel-product">
-                    <Row noGutters>
+                    <Row  >
                         {post && (post.map((product, index) => <Col xl={3} lg={3} md={3} className="product-item" key={index}>
                             <Link to={`/smart-home/products/${product.node.frontmatter.slug}`}>  <CardProductV2 props={product.node.frontmatter} /></Link>
                         </Col>))

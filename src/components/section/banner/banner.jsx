@@ -4,7 +4,7 @@ import { Row } from "react-bootstrap";
 import imgStar from "@images/new-home-page/banner/icon-star.png";
 import imgArrow from "@images/new-home-page/banner/arrow-button.png";
 import imgArrowRight from "@images/new-home-page/banner/arrowRight.svg";
-import Link  from "@components/gatsby-link";
+import Link from "@components/gatsby-link";
 import { useTranslation } from "react-i18next";
 import "../../style.scss";
 
@@ -22,18 +22,14 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
           <Row className="center-row">
             <div className="banner-title">
               <h3>
-                {title ? title : "The reason you should go with Sliving."}
+                {t(`${title}`)}
               </h3>
             </div>
           </Row>
           <Row className="row-banner-desc center-row">
             <div className="banner-desc">
               <p>
-                {desc
-                  ? desc
-                  : `You are in need of an environment full of smart gadgets, there
-                are several factors to consider. It will be used for your home,
-                your office, or maybe even everywhere you want to...`}
+                {t(`${desc}`)}
               </p>
             </div>
           </Row>
@@ -45,6 +41,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 </button>{" "}
               </Link>
             ) : (
+              <Link to="/smart-home/contact" style={{textDecoration:'none'}}>
               <button
                 className="btn-research-wrap d-flex al-center"
                 id="btn-research-wrap"
@@ -52,6 +49,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
                 <span className="fs-18 fw-bold">{t(`Contact_us`)}</span>
                 <img src={imgArrowRight} alt="arrow right" />
               </button>
+              </Link>
             )}
           </Row>
         </div>

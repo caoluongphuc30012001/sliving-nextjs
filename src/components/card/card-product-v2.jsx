@@ -3,16 +3,16 @@ import ButtonShop from '../button/button-shop';
 import "../style.scss";
 import IconHeart from "../svg/heart";
 import styled from 'styled-components';
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
+
 const BodyTag = styled.div`
 backgroundColor: ${props => props.background}
 `
 const CardProductV2 = ({ props, isButton, background }) => {
-
     return (
         <div className="card-product-v2" >
             <div className="product-v2-img">
-                <Img fluid={props?.imgSrcProduct?.childImageSharp?.fluid} alt="" />
+                <GatsbyImage image={props?.imgSrcProduct?.childImageSharp?.gatsbyImageData} alt="" />
             </div>
             <BodyTag className="product-v2-detail" background={background}>
                 <h6>{props?.type}</h6>
@@ -23,7 +23,6 @@ const CardProductV2 = ({ props, isButton, background }) => {
                 </div>)}
             </BodyTag>
         </div>
-
     );
 }
 export default CardProductV2;

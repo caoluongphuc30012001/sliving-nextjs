@@ -26,54 +26,32 @@ const QueryProductPage = () => {
               imgSrcThumbs {
                 publicURL
                 childImageSharp {
-                  fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                    src
-                    srcSet
-                    aspectRatio
-                    sizes
-                  }
+                  gatsbyImageData
                 }
               }
               imgSrcProduct {
                 publicURL
                 childImageSharp {
-                  fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                    src
-                    srcSet
-                    aspectRatio
-                    sizes
-                  }
+                  gatsbyImageData
                 }
               }
               mechanical_1 {
                 imgSrcProduct {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 withNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 nonNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
               }
@@ -81,31 +59,19 @@ const QueryProductPage = () => {
                 imgSrcProduct {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 withNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 nonNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
               }
@@ -113,31 +79,19 @@ const QueryProductPage = () => {
                 imgSrcProduct {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 withNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 nonNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
               }
@@ -145,31 +99,19 @@ const QueryProductPage = () => {
                 imgSrcProduct {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 withNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 nonNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
               }
@@ -177,11 +119,7 @@ const QueryProductPage = () => {
                 imgSrcProduct {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 isHidden
@@ -190,21 +128,13 @@ const QueryProductPage = () => {
                 withNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
                 nonNeutral {
                   publicURL
                   childImageSharp {
-                    fluid {
-                      src
-                      srcSet
-                      aspectRatio
-                    }
+                    gatsbyImageData
                   }
                 }
               }

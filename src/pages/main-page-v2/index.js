@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import LayoutNew from "@components/layout-new";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
-import ImageHp_1 from "@images/main-page-v2/iot.jpg";
-import ImageHp_2 from "@images/main-page-v2/ai.png";
 
-import ImageHp_3 from "@images/main-page-v2/artboard-2.png";
-import ImageHp_4 from "@images/main-page-v2/artboard.png";
-
-
-import sectionLeft1 from "@images/main-page-v2/crm.jpg";
-
-import sectionLeft2 from "@images/main-page-v2/global.jpeg";
-
-import sectionLeft3 from "@images/main-page-v2/phat-trien-sp-2.jpg";
-
-
-import sectionFour1Full from "@images/main-page-v2/banner-left-full.svg";
-import sectionFour2Full from "@images/main-page-v2/rectangle-1.png";
-import sectionFour3Full from "@images/main-page-v2/rectangle-2.png";
-import sectionFour4Full from "@images/main-page-v2/rectangle-3.png";
+import sectionFour1Full from "@images/main-page-v2/clip-path-1.webp";
+import sectionFour2Full from "@images/main-page-v2/rectangle-1.webp";
+import sectionFour3Full from "@images/main-page-v2/rectangle-2.webp";
+import sectionFour4Full from "@images/main-page-v2/rectangle-3.webp";
 
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
-import iconArrowRight from "@images/icon/icon-arrow white.svg";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import useWindowSize from "@hook/useWindowSize";
 
@@ -37,6 +24,7 @@ import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 
 import { useTranslation } from 'react-i18next';
+import { graphql, useStaticQuery } from "gatsby";
 
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
@@ -49,76 +37,41 @@ const IndexPage = () => {
   }, []);
 
   const { t } = useTranslation();
-
-  const { isMobile } = useWindowSize();
-  const [arrHeader] = useState([
-    {
-      alt: "",
-      src: ImageHp_1,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-    {
-      alt: "",
-      src: ImageHp_2,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-    {
-      alt: "",
-      src: ImageHp_3,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-    {
-      alt: "",
-      src: ImageHp_4,
-      description:
-        "Vestibulum tempus imperdiet sem ac porttitor. Vivamus pulvinar commodo orci, suscipit porttitor velit elementum non. Fusce nec pellentesque erat, id lobortis nunc. ",
-      title: "New Arrival",
-      titleBold: " In The Future",
-    },
-  ]);
-
-  const [arrSectionLeft] = useState([
-    {
-      alt: "",
-      src: sectionLeft1,
-      description: "",
-      title: "",
-      titleBold: " ",
-    },
-    {
-      alt: "",
-      src: sectionLeft2,
-      description: "",
-      title: "",
-      titleBold: " ",
-    },
-    {
-      alt: "",
-      src: sectionLeft3,
-      description: "",
-      title: "",
-      titleBold: " ",
+  const queryData = useStaticQuery(graphql`
+  query MyQuery {
+    header: allFile(
+      filter: {absolutePath: {regex: "/(/images/main-page-v2/header-top)/"}}
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
-  ]);
+    bannerLeft: allFile(
+      filter: {absolutePath: {regex: "/(/images/main-page-v2/banner-left)/"}}
+    ) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+  
+   `);
+  const { isMobile } = useWindowSize();
 
   const BuildImageCarousel = ({ carousel, isButton }) => {
     return (
       <div className="header-banner-v2">
-        <img
-          src={carousel.src}
+        <GatsbyImage
+          image={carousel}
           alt="sliving alt"
-          loading="lazy"
           width={1440}
           height={799}
+          loading="eager"
+          data-main-image
         />
         <div className="banner-v2-wrap">
           {/* {carousel.title && <BuildText carousel={carousel} />} */}
@@ -131,7 +84,7 @@ const IndexPage = () => {
   const BuildNextEl = () => {
     return (
       <div className="btn-next btn-carousel btn-carousel-right">
-        <img src={iconNextEl} alt="icon" />
+        <img src={iconNextEl} alt="icon" loading="eager" />
       </div>
     );
   };
@@ -174,9 +127,7 @@ const IndexPage = () => {
             return (
               <SwiperSlide key={index}>
                 <BuildImageCarousel
-                  carousel={carousel}
-                  src={carousel.src}
-                  alt={carousel.alt}
+                  carousel={carousel.childImageSharp.gatsbyImageData}
                   isButton={isButton}
                 />
               </SwiperSlide>
@@ -193,28 +144,31 @@ const IndexPage = () => {
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={false} array={arrHeader} isAutoPlay={true} />;
+    return <BuildCarousel isButton={false} array={queryData?.header?.nodes?.slice(0, 4) || []
+    } isAutoPlay={true} />;
   };
 
   const BuildSectionTwoElement = () => {
-    const objTech = {
-      title: "home_page_v2.product_development_strategy",
-      subtitle: "Virtual Tour on Iphone and Ipad",
-      description:
-        "Virtual Tours go Mobile! Our web Design's protfolio of 360 degree panoramas are now available to view and enjoy via the Iphone and Ipads. Our tour are now reviewable on any device without the need for an app.",
-    };
     return (
       <section className="section-l-r-v2">
-        <Row noGutters>
+        <Row className="g-0">
           <Col xs={12} lg={6} className="section-l-v2">
-            <BuildCarousel isButton={false} array={arrSectionLeft} />
+            <BuildCarousel isButton={false} array={queryData?.bannerLeft?.nodes?.slice(0, 4) || []} />
           </Col>
           <Col xs={12} lg={6} className="section-r-v2">
             <article>
-              {/* <h3>{t(`${objTech.subTitle}`)}</h3> */}
-              <h2>{t(`${objTech.title}`)}</h2>
-              <p>{t(`${objTech.description}`)}</p>
-              <BuildLearnMore />
+              <h2>{t(`who_are_we`)}</h2>
+              <span style={{ color: "#aaaeb3" }}>
+                <span>{t(`sub-who-are-we.title`)}</span>
+                <ul>
+                  <li>{t(`sub-who-are-we.description_1`)}</li>
+                  <li>{t(`sub-who-are-we.description_2`)}</li>
+                  <li>{t(`sub-who-are-we.description_3`)}</li>
+                  <li>{t(`sub-who-are-we.description_4`)}</li>
+                  <li>{t(`sub-who-are-we.description_5`)}</li>
+                </ul>
+                <p>{t(`Over-the-years`)}</p>
+              </span>
             </article>
           </Col>
         </Row>
@@ -222,16 +176,16 @@ const IndexPage = () => {
     );
   };
 
-  const BuildLearnMore = () => {
-    return (
-      <div className="learn-more">
-        <span>Learn more</span>
-        <div className="btn-circle">
-          <img src={iconArrowRight} alt="" />
-        </div>
-      </div>
-    );
-  };
+  // const BuildLearnMore = () => {
+  //   return (
+  //     <div className="learn-more">
+  //       <span>Learn more</span>
+  //       <div className="btn-circle">
+  //         <img src={iconArrowRight} alt="" />
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const BuildSectionThreeElement = () => {
     const arrElement = [
@@ -244,7 +198,7 @@ const IndexPage = () => {
         description: "sub_CONNECTING_ECOsystems",
       },
       {
-        title: "CONNECTING_ECOsystems",
+        title: "CUSTOMER_CENTRIC",
         description: "sub_CUSTOMER_CENTRIC",
       },
     ];
@@ -273,7 +227,7 @@ const IndexPage = () => {
             data-aos="fade-right"
             data-aos-duration="400"
           >
-            <img src={sectionFour1Full} alt="" />
+            <img src={sectionFour1Full} alt="" width={905} height={620} />
             <div className="group-hover-info">
               <h2>Smart Home</h2>
             </div>
@@ -284,7 +238,7 @@ const IndexPage = () => {
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={sectionFour2Full} alt="" />
+              <img src={sectionFour2Full} alt="" width={595} height={186} />
               <div className="group-hover-info">
                 <h2>Smart Lighting</h2>
               </div>
@@ -294,7 +248,7 @@ const IndexPage = () => {
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={sectionFour3Full} alt="" />
+              <img src={sectionFour3Full} alt="" height={186} />
               <div className="group-hover-info">
                 <h2>Fintech IoT</h2>
               </div>
@@ -304,7 +258,7 @@ const IndexPage = () => {
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={sectionFour4Full} alt="" />
+              <img src={sectionFour4Full} alt="" height={186} />
               <div className="group-hover-info">
                 <h2>Smart Parking</h2>
               </div>
@@ -317,8 +271,8 @@ const IndexPage = () => {
 
   const BuildSectionBannerReason = () => {
     return <SectionBannerV2
-      title='The reason you should go with Sliving.'
-      desc='You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...' />
+      title={t(`reason.header`)}
+      desc={t(`reason.description`)} />
   };
 
   return (
@@ -337,3 +291,4 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+

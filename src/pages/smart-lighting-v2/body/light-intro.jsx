@@ -1,8 +1,8 @@
 import React from "react";
 import Introduction from "../../../components/section/introduction/introduction";
-import url1 from "@images/lighting-page/family.svg";
-import url2 from "@images/lighting-page/many.svg";
-import url3 from "@images/lighting-page/phone.svg";
+import url1 from "@images/lighting-page/family.png";
+import url2 from "@images/lighting-page/smart.png";
+import url3 from "@images/lighting-page/phone.png";
 import { useTranslation } from "react-i18next";
 const IntroMain = () => {
   const { t } = useTranslation();

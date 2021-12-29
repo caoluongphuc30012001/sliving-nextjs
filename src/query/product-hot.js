@@ -3,156 +3,59 @@ const DataProductNew = () => {
   const data = useStaticQuery(graphql`
   {
     productLed: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/led/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/led/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productSocket: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/socket/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/socket/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productSwitch: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/switch/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/switch/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
+            ...FrontmatterFragment
             mechanical_1 {
               imgSrcProduct {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               withNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               nonNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
             }
@@ -160,31 +63,19 @@ const DataProductNew = () => {
               imgSrcProduct {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               withNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               nonNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
             }
@@ -192,31 +83,19 @@ const DataProductNew = () => {
               imgSrcProduct {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               withNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               nonNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
             }
@@ -224,31 +103,19 @@ const DataProductNew = () => {
               imgSrcProduct {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               withNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
               nonNeutral {
                 publicURL
                 childImageSharp {
-                  fluid {
-                    src
-                    srcSet
-                    aspectRatio
-                  }
+                  gatsbyImageData
                 }
               }
             }
@@ -258,138 +125,42 @@ const DataProductNew = () => {
       }
     }
     productZigbee: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productSensor: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/sensor/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/sensor/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460,fit: INSIDE) {
-                src
-                srcSet
-                aspectRatio
-                sizes
-              }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productZigbee: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/zigbee-kit/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
@@ -403,177 +174,49 @@ const DataProductNew = () => {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productMotor: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/motor/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/motor/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productSmartMeter: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/meter/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/meter/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
       }
     }
     productSmartButton: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/button/)/"}, frontmatter: {}}
+      filter: {fileAbsolutePath: {regex: "/(contents/product-v2/button/)/"}}
       sort: {fields: frontmatter___date}
       limit: 16
     ) {
       edges {
         node {
           frontmatter {
-            id
-            title
-            subtitle
-            slug
-            lgn
-            type
-            version
-            button
-            date
-            description
-            details
-            imgSrcThumbs {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
-            imgSrcProduct {
-              publicURL
-              childImageSharp {
-                fluid(quality: 100, pngQuality: 100, maxWidth: 460, maxHeight: 460, fit: INSIDE) {
-                  src
-                  srcSet
-                  aspectRatio
-                  sizes
-                }
-              }
-            }
+            ...FrontmatterFragment
           }
           html
         }
@@ -581,9 +224,33 @@ const DataProductNew = () => {
     }
   }
   
+  fragment FrontmatterFragment on Frontmatter {
+    id
+    title
+    subtitle
+    slug
+    lgn
+    type
+    version
+    button
+    date
+    description
+    details
+    imgSrcThumbs {
+      publicURL
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+    imgSrcProduct {
+      publicURL
+      childImageSharp {
+        gatsbyImageData
+      }
+    }
+  }
+  
 `);
-
-
   return (
     data
   )
