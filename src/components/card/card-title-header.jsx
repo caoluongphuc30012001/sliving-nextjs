@@ -26,7 +26,7 @@ const CardTitleHeader = ({ title, id, isShow }, ...props) => {
     }, [])
     return (
         <div className="container-wrap">
-            <Row className="card-title-header d-flex al-center txt-blue just-cont-bt" noGutters>
+            <Row className="card-title-header d-flex al-center txt-blue just-cont-bt"  >
                 <Col className="card-title-header__title fs-32 fw-bold "><span>{t(`${title}`)}</span></Col>
                 <Col>
                     {!isMobile && !isShow && (

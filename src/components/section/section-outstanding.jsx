@@ -14,7 +14,7 @@ const SectionOutstanding = () => {
                                 <h4 className="project">{t(`Outstanding_Project`)}</h4>
                             </Col>
                         </Row>
-                        <Row noGutters className="article-wrap-container section-outstanding-project">
+                        <Row className="article-wrap-container section-outstanding-project">
                             <Col sm={6} xs={12} className="article-wrap-left">
                                 <img className="image6 " src={Image6} class="img-responsive" alt="sliving second banner" />
                             </Col>

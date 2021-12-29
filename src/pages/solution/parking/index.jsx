@@ -1,30 +1,31 @@
 import React from "react";
-import LayoutSmartHome from "@components/layout-smart-home";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from "gatsby";
+
 import IntroductHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
-import "./style.scss";
-import SectionFeatureProduct from "@components/section/section-feature-product";
+
 import imgFirst from "@images/solution/parking/imgFirst.png";
 import imgSecond from "@images/solution/parking/imgSecond.png";
 import imgThird from "@images/solution/parking/imgThird.png";
+
 import card1 from "@images/solution/parking/card1.svg";
 import card2 from "@images/solution/parking/card2.svg";
 import card3 from "@images/solution/parking/card3.svg";
+
+import LayoutSmartHome from "@components/layout-smart-home";
 import SectionBannerV2 from "@components/section/banner/banner";
-import DataProductNew from "../../../query/product-hot";
 import CardSolution from "@components/card/card-solution/card-solution";
+
 import { useTranslation } from "react-i18next";
-const SmarthomeSolution = () => {
+
+import "./style.scss";
+
+const SmartHomeSolution = () => {
   const { t } = useTranslation();
-  const data = DataProductNew();
   return (
     <LayoutSmartHome>
       <div className="introduct-main" id="introduct-main-parking">
         <IntroductHeader />
-        <SectionFeatureProduct dataProductHot={data} />
-        <div className="container-v2 card-solution">
+        <div className="container-wrap card-solution">
           <CardSolution
             imgUrl={card1}
             title={t(`solution.parking.card_1.title`)}
@@ -80,13 +81,4 @@ const SmarthomeSolution = () => {
     </LayoutSmartHome>
   );
 };
-export default withI18next()(SmarthomeSolution);
-export const query = graphql`
-  query ($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default SmartHomeSolution;

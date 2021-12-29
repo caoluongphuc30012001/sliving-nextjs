@@ -5,15 +5,13 @@ import React from "react";
 import HeaderImage from "./body/contact-header-img";
 import BottomImage from "./body/contact-footer-img";
 import ContactForm from "./body/contact-form";
-import ContactSupport from "./body/contact-support";
-import RequestSupport from "./body/contact-request-support";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from 'gatsby';
+// import ContactSupport from "./body/contact-support";
+// import RequestSupport from "./body/contact-request-support";
 import "./style.scss";
 
 const ContactUs = (props) => {
-  if(props.pageContext.isNavbarContact?.isSmartHome){
-    return(
+  if (props.pageContext.isNavbarContact?.isSmartHome) {
+    return (
       <LayoutSmartHome>
         <HeaderImage />
         <ContactForm />
@@ -21,11 +19,11 @@ const ContactUs = (props) => {
       </LayoutSmartHome>
     )
   }
-  if(props.pageContext.isNavbarContact?.isSmartLighting){
+  if (props.pageContext.isNavbarContact?.isSmartLighting) {
     return <LayoutLighting>
-        <HeaderImage />
-        <ContactForm />
-        <BottomImage />
+      <HeaderImage />
+      <ContactForm />
+      <BottomImage />
     </LayoutLighting>
   }
   return (
@@ -38,13 +36,4 @@ const ContactUs = (props) => {
     </LayoutNew>
   );
 };
-export default withI18next()(ContactUs);
-export const query = graphql`
-  query($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default ContactUs;

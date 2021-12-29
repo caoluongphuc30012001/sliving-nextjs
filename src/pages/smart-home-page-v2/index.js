@@ -10,8 +10,6 @@ import NewSectionProduct from "./body/new-section-product";
 
 import LayoutSmartHome from "@components/layout-smart-home";
 
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from "gatsby";
 
 import "./style.scss";
 
@@ -30,13 +28,4 @@ const HomePageNew = ({ pageContext }) => {
     </LayoutSmartHome>
   );
 }
-export default withI18next()(HomePageNew);
-export const query = graphql`
-  query ($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default HomePageNew;

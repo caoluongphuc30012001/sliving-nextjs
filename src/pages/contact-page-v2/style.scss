@@ -12,6 +12,10 @@
 .contactUs {
   form {
     width: 790px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 1rem;
     h4 {
       color: $blue-text;
       font-weight: $bold-text;
@@ -31,7 +35,7 @@
 
       .numberPrefix {
         position: absolute;
-        top: 19px;
+        top: 50px;
         left: 10px;
         transform: translateY(-50%);
         z-index: 10;

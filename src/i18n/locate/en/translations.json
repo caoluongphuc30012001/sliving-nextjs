@@ -340,10 +340,10 @@
     "solution_home": "Smart home solutions"
   },
   "read_more": "Read more",
-  "company_name": "CÔNG TY CỔ PHẦN TẬP ĐOÀN CÔNG NGHỆ UNICLOUD",
+  "company_name": "UNICLOUD TECHNOLOGY INVESTMENT JOINT STOCK COMPANY",
   "branch": "Branch",
   "address_head_quarters": "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
-  "home_page_v2.product_development_strategy": " Product Development strategy",
+  "product_development_strategy": " Product Development strategy",
   "ready_go_to_global": "Ready go to global",
   "CONNECTING_ECOsystems": "Connecting ECOsystems",
   "CUSTOMER_CENTRIC": "Customer centric",
@@ -518,5 +518,15 @@
       "title": "Proven Competence and Experience",
       "description": "<ul><li><b>07 PROJECT</b> using SLIVING's smart devices.</li><li> More than <b> 300 000 DEVICES </b>was installed.</li><li> More than <b>120 employees </b>are developing and innovating continuously to improve SLIVING products better and better everyday.</li></ul>"
     }
-  }
+  },
+  "home_page_v2": {
+    "reason": "The reason you should go with Sliving.",
+    "sub_reason": "You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to..."
+
+  },
+  "please_enter_email": "Please Enter Your Email Address",
+  "get_the_latest_news_from_us": "Get the latest news from us",
+  "subscribe": "Subscribe",
+  "products_desc": "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...",
+  "learn_more": "Learn more"
 }
