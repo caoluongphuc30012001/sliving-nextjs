@@ -30,15 +30,17 @@ i18n
     },
   })
 
-
+const isBrowser=typeof window !== 'undefined'
 i18n.languages = ['vn', 'en'];
-if(window.location.pathname.includes('vn')){
-  i18n.language='vn'
-  i18n.changeLanguage("vn");
-
-}
-else{
-  i18n.language='en'
-  i18n.changeLanguage("en");
+if(isBrowser){
+  if(window.location.pathname.includes('vn')){
+    i18n.language='vn'
+    i18n.changeLanguage("vn");
+  
+  }
+  else{
+    i18n.language='en'
+    i18n.changeLanguage("en");
+  }
 }
 export default i18n
