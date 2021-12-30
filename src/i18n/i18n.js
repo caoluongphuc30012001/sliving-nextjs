@@ -32,5 +32,13 @@ i18n
 
 
 i18n.languages = ['vn', 'en'];
-i18n.language='en'
+if(document.location.pathname.includes('vn')){
+  i18n.language='vn'
+  i18n.changeLanguage("vn");
+
+}
+else{
+  i18n.language='en'
+  i18n.changeLanguage("en");
+}
 export default i18n

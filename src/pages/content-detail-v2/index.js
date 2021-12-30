@@ -2,6 +2,8 @@ import React from "react";
 import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import ContentDetail from "./body/content-detail";
 import BannerTop from "./body/banner-top"
+import { withI18next } from "@wapps/gatsby-plugin-i18next";
+import { graphql } from 'gatsby';
 import "./index.scss"
 
 const IndexPage = ({ pageContext }) => {
@@ -15,4 +17,13 @@ const IndexPage = ({ pageContext }) => {
     </LayoutSmartHome>
   );
 };
-export default IndexPage;
+export default withI18next()(IndexPage);
+export const query = graphql`
+  query($lng: String!) {
+    locales: allLocale(
+      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
+    ) {
+      ...LocaleFragment
+    }
+  }
+`;

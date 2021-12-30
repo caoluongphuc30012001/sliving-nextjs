@@ -47,7 +47,7 @@ const LightingProduct=()=>{
         },
       ];
     
-    return <section className="smart-home-page-v2">
+    return <section className="smart-lighting-page-v2 container">
         <TitleSection content={t(`solution.titleSolution`)} color={'bold'} direction={'center'}/>
     <div className="home-page-app">
       <Col className="app-slider">
