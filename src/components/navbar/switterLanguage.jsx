@@ -8,7 +8,7 @@ const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const location = useLocation();
 
-  const changeLanguage = () => {
+  function changeLanguage() {
     if (i18n.language === "en") {
       i18n.changeLanguage("vn");
       if(location.pathname==='/') return navigate("/vn/")
