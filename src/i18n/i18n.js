@@ -32,7 +32,7 @@ i18n
 
 
 i18n.languages = ['vn', 'en'];
-if(document.location.pathname.includes('vn')){
+if(window.location.pathname.includes('vn')){
   i18n.language='vn'
   i18n.changeLanguage("vn");
 
