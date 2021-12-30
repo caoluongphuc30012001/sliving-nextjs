@@ -2,13 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import { useTranslation } from "react-i18next";
-
+import GatsbyLink from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-import iconBook from "@images/new-home-page/solution/icon-book.svg";
-import iconComment from "@images/new-home-page/solution/icon-comment.svg";
-import iconVideo from "@images/new-home-page/solution/icon-video.svg";
-import Link from '@components/gatsby-link'
+import Link from "@components/gatsby-link";
 
 export default function NavbarSmartHomeDesktop() {
   const dataProductMenu = DataProductMenu();
@@ -53,24 +50,24 @@ export default function NavbarSmartHomeDesktop() {
     },
   ];
   const arrMenuSolution = [
-    { id: 0, title: "Smart Home", path: "/solution/smart-home" },
-    { id: 1, title: "Smart Parking", path: "/solution/parking" },
-    { id: 2, title: "Smart Security", path: "/solution/security" },
-    { id: 3, title: "Smart Lighting", path: "/smart-lighting-v2" },
+    { id: 0, title: "Smart Home", path: "/solutions/smart-home/" },
+    { id: 1, title: "Smart Parking", path: "/solutions/smart-parking/" },
+    { id: 2, title: "Smart Security", path: "/solutions/smart-security/" },
+    { id: 3, title: "Smart Lighting", path: "/smart-lighting/" },
   ];
-  const arrMenuSupport = [
-    { id: 0, title: "FAQ", img: iconBook },
-    {
-      id: 1,
-      title: t(`HEADER.HOMEPAGE.SUPPORT.USER_MANUALS`),
-      img: iconComment,
-    },
-    {
-      id: 2,
-      title: t(`HEADER.HOMEPAGE.SUPPORT.PRODUCT_VIDEOS`),
-      img: iconVideo,
-    },
-  ];
+  // const arrMenuSupport = [
+  //   { id: 0, title: "FAQ", img: iconBook },
+  //   {
+  //     id: 1,
+  //     title: t(`HEADER.HOMEPAGE.SUPPORT.USER_MANUALS`),
+  //     img: iconComment,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: t(`HEADER.HOMEPAGE.SUPPORT.PRODUCT_VIDEOS`),
+  //     img: iconVideo,
+  //   },
+  // ];
   return (
     <>
       <nav className="top-navbar-new">
@@ -82,16 +79,13 @@ export default function NavbarSmartHomeDesktop() {
               expand="lg"
               id="nav-bar"
             >
-              <Navbar.Brand href="/">
-                <Image
-                  className="img-obj-cover"
-                  src={logo}
-                  alt="sliving"
-                  width={202}
-                  height={44}
-                />
-              </Navbar.Brand>
-
+              <GatsbyLink
+                to="/"
+                className="logo nav-logo nav-brand"
+                aria-label="Link to home"
+              >
+                <Image className="img-obj-cover" src={logo} alt="sliving" />
+              </GatsbyLink>
               <Navbar.Collapse
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2"
@@ -100,7 +94,7 @@ export default function NavbarSmartHomeDesktop() {
                   <Link
                     to="/smart-home/"
                     className="item-menu item-menu-child link fs-16 1"
-                    id="item-menu"
+                    id="item-menu-parent"
                   >
                     Smart Home
                   </Link>
@@ -112,7 +106,7 @@ export default function NavbarSmartHomeDesktop() {
                           to={nav.path}
                           className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
                             }`}
-                          id="item-menu"
+                          id={`item-menu${index}`}
                         >
                           {nav.title}
                         </Link>
@@ -123,12 +117,12 @@ export default function NavbarSmartHomeDesktop() {
                   <div className="nav-hover-product">
                     <Row>
                       {data &&
-                        data.map((item) => (
+                        data.map((item,index) => (
                           <Col
                             xl={3}
                             lg={3}
                             md={3}
-                            key={item.id}
+                            key={index}
                             className="product-mt"
                           >
                             <div className="hover-product-first">
@@ -158,12 +152,12 @@ export default function NavbarSmartHomeDesktop() {
                   <div className="nav-hover-solution">
                     <Row>
                       {arrMenuSolution &&
-                        arrMenuSolution.map((item) => (
+                        arrMenuSolution.map((item,index) => (
                           <Col
                             xl={3}
                             lg={3}
                             md={3}
-                            key={item.id}
+                            key={index}
                             className="solution-mt"
                           >
                             <div className="hover-solution">

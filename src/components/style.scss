@@ -3114,13 +3114,19 @@ a.btn-link-a {
 
 //FooterNew
 .footer-new {
-  margin-top: 32px;
   .footer-info-address {
+    background-color: #d6e4f0;
     padding: 56px 235px 88px 134px;
-    margin-top: 32px;
     @media only screen and(max-width:768px) {
       padding: 50px 20px;
     }
+  }
+  .footer-icon {
+    margin-right: 16px;
+    width: fit-content;
+  }
+  .footer-info-company {
+    margin-top: 32px;
   }
 
   .footer-map {
@@ -3199,18 +3205,19 @@ a.btn-link-a {
     }
   }
   .footer-info-address {
+    background-color: #d6e4f0;
     padding-top: 3%;
     .footer-left,
     .footer-right {
-      text-transform: capitalize;
       margin-top: 32px;
+      text-transform: capitalize;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      row-gap: 16px;
+      row-gap: 8px;
       .footer-info {
         &:nth-child(1) {
-          color: #1a6eec;
+          color: #212121;
           font-size: 24px;
           font-weight: bold;
         }
@@ -3218,13 +3225,12 @@ a.btn-link-a {
     }
 
     .footer-name {
-      margin-top: 32px;
       span {
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
         line-height: 131.25%;
-        color: #1564ad;
+        color: #212121;
       }
     }
     .footer-info-detail {
@@ -3236,7 +3242,7 @@ a.btn-link-a {
         font-weight: 600;
         font-size: 14px;
         line-height: 150%;
-        color: #76b1e8;
+        color: #212121;
         img {
           max-width: unset !important;
         }
@@ -3254,6 +3260,20 @@ a.btn-link-a {
         margin-left: 0;
         justify-content: center;
       }
+    }
+  }
+}
+.bottom-contact-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  background-color: #f1f3f4;
+  .contact-wrap-right {
+    input {
+      width: 300px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 6px 0px #b9b9b9;
     }
   }
 }
@@ -3391,7 +3411,7 @@ a.btn-link-a {
 /* 3. Banner full screen (width)*/
 
 .banner-wrap-v2 {
-  background-image: url("../images/new-home-page/banner/img-bg.png");
+  background-image: url("../images/new-home-page/banner/img-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 610px;
@@ -3425,6 +3445,12 @@ a.btn-link-a {
     line-height: 131.25%;
     text-align: center;
     color: #d1e5f7;
+  }
+  .banner-icon {
+    width: fit-content;
+  }
+  a {
+    width: fit-content;
   }
   .banner-btn-v2 {
     width: 72px;
@@ -3547,42 +3573,7 @@ a.btn-link-a {
       }
     }
   }
-  .contact-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 16px;
-    height: 56px;
-    width: 100%;
-    .contact-form-group {
-      width: 100%;
-    }
-    input {
-      background: #e8f2fb;
-      border-top-left-radius: 8px;
-      border-bottom-left-radius: 8px;
-      width: 100%;
-      height: 56px;
-      border: none;
-      padding: 17.5px 8px 17.5px 16px;
-      &:focus-visible {
-        outline: none !important;
-      }
-    }
-  }
-  .btn-send {
-    background: #fe8258;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border: none;
-    box-shadow: unset;
-    height: 56px;
-  }
+
   .contact-desc {
     p {
       font-style: normal;
@@ -3596,6 +3587,40 @@ a.btn-link-a {
     }
   }
 }
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  height: 56px;
+  width: 100%;
+
+  input {
+    background: #e8f2fb;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    padding: 17.5px 8px 17.5px 16px;
+    &:focus-visible {
+      outline: none !important;
+    }
+  }
+}
+.btn-send {
+  background: #fe8258;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: none;
+  box-shadow: unset;
+  height: 56px;
+}
 /*6. button shopping */
 .btn-shopping {
   width: 237px;
@@ -3604,18 +3629,28 @@ a.btn-link-a {
   border-radius: 8px;
   border: none;
   padding: 12px 40px;
+  margin-top: 32px !important;
+  .btn-shopping-wrap {
+    margin: auto;
+    width: fit-content;
+    column-gap: 8px;
+    > div {
+      padding-right: 8px;
+      border-right: 1px solid #f1f3f4;
+    }
+  }
   &:hover {
     background: #e55b13;
   }
   .row {
     align-items: center;
-    flex-wrap: nowrap !important;
-    white-space: nowrap;
+    > div {
+      &:nth-child(1) {
+        border-right: 1px solid #f1f3f4;
+      }
+    }
   }
-  span {
-    color: #ffffff;
-    padding: 0 10px;
-  }
+
   h4 {
     color: #ffffff;
     font-size: 21px;
@@ -3683,7 +3718,7 @@ a.btn-link-a {
     h2 {
       font-style: normal;
       font-weight: bold;
-      font-size: 21px;
+      font-size: 20px;
       line-height: 131.25%;
       color: #104b82;
       letter-spacing: -0.05rem;
@@ -3703,6 +3738,7 @@ a.btn-link-a {
         padding: 8px !important;
         max-width: 138px;
         max-height: 44px;
+        margin-top: 0 !important;
         span {
           padding: 0 5px;
         }
@@ -3718,7 +3754,7 @@ a.btn-link-a {
 
 /*8. Section Feature Porduct*/
 .section-prod-feature {
-  max-width: 1210px;
+  // max-width: 1210px;
   margin-top: 60px;
   margin-bottom: 100px;
   h2 {
@@ -3809,6 +3845,13 @@ a.btn-link-a {
   justify-content: center;
   color: #fe8258;
   font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  .btn-learn-wrap {
+    margin-top: 32px !important;
+  }
   img {
     width: 24px;
     height: 24px;
@@ -3914,10 +3957,10 @@ a.btn-link-a {
       margin-left: 2%;
       .item-menu-child {
         padding: 40px 32px;
-        color: #76787a;
+        color: #4b4b4b;
         max-height: 99px;
         text-decoration: none;
-        font-weight: bold;
+        font-weight: normal;
         // line-height: 131.25%;
       }
       .item-menu-child:hover {
@@ -3949,13 +3992,14 @@ a.btn-link-a {
           margin-top: 5%;
           padding-left: 0;
           margin-bottom: 10px;
+          position: relative;
           .hover-product-first {
             width: 85%;
             .product-name {
               span {
-                color: #76787a;
+                color: #5e5e5e;
                 font-style: normal;
-                font-weight: bold;
+                font-weight: 600;
                 font-size: 16px;
                 line-height: 131.25%;
               }
@@ -3965,13 +4009,14 @@ a.btn-link-a {
               margin: 0;
               li {
                 list-style-type: none;
-                padding: 5% 0;
+                padding: 2% 0;
                 a {
-                  color: #aaaeb3;
+                  color: #5e5e5e;
                   font-style: normal;
                   font-weight: 500;
                   font-size: 16px;
                   line-height: 131.25%;
+                  text-decoration: none;
                 }
               }
               li:hover {
@@ -4029,14 +4074,17 @@ a.btn-link-a {
         padding: 25px;
         display: none;
         .solution-mt {
+          position: relative;
           margin-top: 1%;
           .hover-solution {
             .solution-list-item {
               .solution-name {
+                a {
+                  text-decoration: none;
+                }
                 span {
-                  color: #76787a;
+                  color: #5e5e5e;
                   font-style: normal;
-                  font-weight: bold;
                   font-size: 16px;
                   line-height: 131.25%;
                 }
@@ -4046,7 +4094,7 @@ a.btn-link-a {
                 margin: 0;
                 li {
                   list-style-type: none;
-                  padding: 5% 0;
+                  padding: 2% 0;
                   a {
                     color: #aaaeb3;
                     font-style: normal;
@@ -4135,6 +4183,7 @@ a.btn-link-a {
       }
       .item-menu-child:nth-child(1) {
         font-size: 23px;
+        font-weight: 600;
         ::before {
           content: "";
           top: 20%;
@@ -4322,7 +4371,8 @@ a.btn-link-a {
       img {
         width: 350px;
         height: 350px;
-        border-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
     }
     .prod-line-wrap__body {

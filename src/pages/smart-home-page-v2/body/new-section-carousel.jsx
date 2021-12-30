@@ -2,10 +2,10 @@ import React, { useState, useMemo } from "react";
 import { Row } from "react-bootstrap";
 
 import imgLine from "@images/new-home-page/app-img/line.png";
-import img1 from "@images/new-home-page/carousel/diamond-river.jpg";
-import img2 from "@images/new-home-page/carousel/continental.jpg";
-import img3 from "@images/new-home-page/carousel/horizon.jpg";
-import img4 from "@images/new-home-page/carousel/citysg-dai-dien-sshomes.jpg";
+import img1 from "@images/new-home-page/carousel/diamond-river.webp";
+import img2 from "@images/new-home-page/carousel/continental.webp";
+import img3 from "@images/new-home-page/carousel/horizon.webp";
+import img4 from "@images/new-home-page/carousel/citysg-dai-dien-sshomes.webp";
 
 import imgTest from "@images/main-page-v2/element-left.png";
 
@@ -39,7 +39,7 @@ export default function NewSectionCarousel() {
 
   const BuildCarousel = useMemo(() => {
     if (isBrowser) {
-      return (<Carousel slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />);
+   return (<Carousel animationConfig={"stiff"} slides={arrImg} offsetRadius={10} goToSlide={goToSlide} />);
     } else {
       return null;
     }

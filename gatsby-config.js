@@ -1,7 +1,8 @@
 module.exports = {
   flags: {
-    PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    DEV_WEBPACK_CACHE: true,
+    PARALLEL_QUERY_RUNNING: true,
+    PARALLEL_SOURCING : true ,
+    DETECT_NODE_MUTATIONS: true
   },
   siteMetadata: {
     title: "Sliving",
@@ -9,18 +10,38 @@ module.exports = {
   pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [
     `gatsby-plugin-sass`,
-    "gatsby-plugin-styled-components",
-    `gatsby-transformer-sharp`,
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        trackingId: "12345",
+        // Add any options here
       },
     },
+   
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+        base64Width: 20,
+        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
+        stripMetadata: true,
+        defaultQuality: 50,
+      },
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -43,6 +64,7 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: `images`,
         path: `${__dirname}/src/images/`,
       },
     },
@@ -82,16 +104,6 @@ module.exports = {
       },
     },
     {
-      resolve: "@wapps/gatsby-plugin-i18next",
-      options: {
-        availableLngs: ["vn", "en"],
-        fallbackLng: "vn",
-        i18nextOptions: {
-          debug: false,
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
@@ -120,12 +132,6 @@ module.exports = {
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        url: `https://data.sliving.vn/graphql`,
       },
     },
   ],

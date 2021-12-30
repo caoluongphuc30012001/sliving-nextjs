@@ -1,20 +1,21 @@
 import React from "react";
-import { Navbar, Image, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import Link from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-
+import {navigate} from "gatsby";
 import { useTranslation } from "react-i18next";
 
 export default function NavbarNew() {
-
-  const { t } = useTranslation();
+  const { t ,i18n} = useTranslation();
   const arrMenu = [
     { id: "0", title: "Smart Home", isActive: true, path: "/smart-home/" },
     { id: "1", title: "Fintech IoT", isActive: false, path: "#" },
-    { id: "2", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: false, path: "/smart-lighting-v2/" },
+    { id: "2", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: false, path: "/smart-lighting/" },
     { id: "3", title: t(`HEADER.HOMEPAGE.ABOUTUS`), isActive: false, path: "#" },
   ];
+
+
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function NavbarNew() {
               expand="lg"
               id="nav-bar"
             >
-              <Link to="/" className="logo nav-logo nav-brand">
+              <Link to="/" aria-label="Link to home" className="logo nav-logo nav-brand">
                 <img
                   className="img-obj-cover"
                   src={logo}
@@ -50,12 +51,12 @@ export default function NavbarNew() {
                             to={nav.path}
                             className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
                               }`}
-                            id="item-menu"
+                            id={`item-menu${index}`}
                           >
                             {nav.title}
                             {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? <ul className="subNav">
-                              <Link><li>{t(`HEADER.HOMEPAGE.STORY`)} </li></Link>
-                              <Link to='/contact-page'><li>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</li></Link>
+                            <li>{t(`HEADER.HOMEPAGE.STORY`)} </li>
+                            <div style={{padding:" 15px 30px 15px 30px"}}  role="button" tabIndex={0} onClick={()=> navigate(`/${i18n.language}/contact-page/`)} onKeyPress={()=> navigate(`/${i18n.language}/contact-page/`)}>  {t(`HEADER.HOMEPAGE.CONTACTUS`)}</div>
                             </ul> : ""}
                           </Link>
                         );

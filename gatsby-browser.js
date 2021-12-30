@@ -1,3 +1,8 @@
+require('swiper/scss');
+require( 'swiper/scss/navigation');
+require ('swiper/scss/pagination');
+require ("./src/style/main.scss");
+
 exports.shouldUpdateScroll = ({
   routerProps: { location },
   prevRouterProps

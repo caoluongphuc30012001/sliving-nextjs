@@ -7,9 +7,9 @@ const CardSuggest = (props) => {
         <div className="card-suggest">
             <div className="card-suggest-wrap">
                 <div className="card-suggest-wrap__title fs-32 fw-bold">
-                   <h3>{props.title}</h3>
+                    <h3>{props.title}</h3>
                 </div>
-                <Row className="card-suggest-wrap__body" noGutters>
+                <Row className="card-suggest-wrap__body"  >
                     {
                         (post && post.map(({ node }) => {
                             return (

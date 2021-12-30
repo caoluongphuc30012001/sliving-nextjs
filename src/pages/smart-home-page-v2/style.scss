@@ -4,9 +4,10 @@
     margin-right: auto;
 
     .home-page-header {
-        background-image: url("../../images/new-home-page/header/bg-header.png");
+        background-image: url("../../images/new-home-page/header/bg-header.webp");
         background-repeat: no-repeat;
         min-height: 800px;
+        transition: background-image 0.3s linear;
         .container-wrap {
             .header-left {
                 padding: 0;
@@ -69,6 +70,11 @@
                 }
             }
         }
+        .header-right-image-1,
+        .header-right-image-2,
+        .header-right-image-3 {
+            transition: all 00.3s ease-out;
+        }
     }
 
     .home-page-app {
@@ -114,7 +120,7 @@
             .btn-carousel-left {
                 left: 0%;
             }
-            .swiper-container {
+            .swiper-solution {
                 margin-left: 135px;
                 .swiper-wrapper {
                     .swiper-slide {
@@ -1059,6 +1065,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    transition: all 0.3s linear;
     &:hover {
         .item-detail,
         .item-detail-2,
@@ -1108,7 +1115,7 @@
 }
 
 .item4 {
-    background-image: url("../../images/introduction-page/smart-security/slide-3.svg");
+    background-image: url("../../images/new-home-page/carousel/slide-3.webp");
     background-repeat: no-repeat;
     background-size: cover;
     .item-detail-4 {

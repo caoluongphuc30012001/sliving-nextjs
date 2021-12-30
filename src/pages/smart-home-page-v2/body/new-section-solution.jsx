@@ -7,6 +7,7 @@ import arrowSolution from "@images/new-home-page/solution/arrow-right.png";
 import AOS from "aos";
 
 import { useTranslation } from "react-i18next";
+import GatsbyLink from "@components/gatsby-link.jsx";
 
 export default function NewSectionSolution() {
 
@@ -38,10 +39,9 @@ export default function NewSectionSolution() {
                       {t(`smart_home_v2.solution_lighting`)}
                     </p>
                     <div className="btn-read-more">
-                      <a href="#">
-                        {' '}
+                      <GatsbyLink to="/solutions/smart-lighting/">
                         <p className="p3">{t(`read_more`)}</p>{' '}
-                      </a>{' '}
+                      </GatsbyLink>
                       <img
                         src={arrowSolution}
                         className="icon-read-more"
@@ -58,10 +58,10 @@ export default function NewSectionSolution() {
                       {t(`smart_home_v2.solution_parking`)}
                     </p>
                     <div className="btn-read-more">
-                      <a href="#">
+                      <GatsbyLink to="/solutions/smart-parking/">
                         {' '}
                         <p className="p3">{t(`read_more`)}</p>
-                      </a>
+                      </GatsbyLink>
                       <img
                         src={arrowSolution}
                         className="icon-read-more"
@@ -78,9 +78,9 @@ export default function NewSectionSolution() {
                       {t(`smart_home_v2.solution_security`)}
                     </p>
                     <div className="btn-read-more">
-                      <a href="https://unicloud.com.vn/he-sinh-thai/he-sinh-thai-iot-smart/">
+                      <GatsbyLink to="/solutions/smart-security/" >
                         <p className="p3">{t(`read_more`)}</p>
-                      </a>{' '}
+                      </GatsbyLink>{' '}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"
@@ -97,9 +97,9 @@ export default function NewSectionSolution() {
                       {t(`smart_home_v2.solution_home`)}
                     </p>
                     <div className="btn-read-more">
-                      <a href="https://unicloud.com.vn/he-sinh-thai/he-sinh-thai-chinh-phu-dien-tu/">
+                      <GatsbyLink to="/solutions/smart-home/">
                         <p className="p3">{t(`read_more`)}</p>
-                      </a>{' '}
+                      </GatsbyLink>{' '}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"

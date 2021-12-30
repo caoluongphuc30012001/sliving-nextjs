@@ -1,13 +1,10 @@
 import React from "react";
 import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import ContentDetail from "./body/content-detail";
-import BannerTop from "./body/banner-top"
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from 'gatsby';
+import BannerTop from "./body/banner-top";
 import "./index.scss"
 
-const IndexPage = ({ pageContext }) => {
-  console.log('content',pageContext)
+const IndexPage = () => {
   return (
     <LayoutSmartHome >
       <div className="contentPage container">
@@ -17,13 +14,4 @@ const IndexPage = ({ pageContext }) => {
     </LayoutSmartHome>
   );
 };
-export default withI18next()(IndexPage);
-export const query = graphql`
-  query($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default IndexPage;

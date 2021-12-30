@@ -8,13 +8,12 @@ p {
 #introduct-main-security {
   margin-top: 80px;
   margin-bottom: 56px;
-  .card-solution{
+  .card-solution {
     display: flex;
-    max-width: 1440px;
     justify-content: space-around;
+    column-gap: 64px;
   }
   .background-image {
-    
     width: 100%;
     height: calc(100% - 55px);
     position: absolute;
@@ -25,17 +24,17 @@ p {
     width: 100%;
     height: 100%;
   }
-  .introSection{
+  .introSection {
     position: relative;
   }
   .banner-wrap-v2 {
-    background-image: url("@images/solution/smart-home/section.svg");
+    background-image: url("@images/solution/smart-home/section.webp");
   }
   .margin-bottom {
     margin-bottom: 200px;
   }
-  .bottomImage{
-    img{
+  .bottomImage {
+    img {
       height: 900px;
       width: 1440px;
     }
@@ -52,29 +51,28 @@ p {
         position: relative;
         font-size: 82px;
         width: 797px;
-     
+
         text-shadow: -2px -2px rgb(52, 24, 177);
         img {
           position: absolute;
-          top:80%;
+          top: 80%;
           bottom: 0;
           left: 0;
           z-index: -1;
           height: 53px;
         }
       }
-      p{
+      p {
         margin-top: 5vh;
         width: 770px;
         font-size: 21px;
-       }
+      }
     }
   }
-  .container{
+  .container {
     max-width: 1440px;
   }
-   
- 
+
   .container-v2 {
     .card-product-v2 {
       .product-v2-detail {
@@ -212,6 +210,7 @@ p {
           font-size: 32px;
           line-height: 40px;
           letter-spacing: -0.5px;
+          color: #104b82;
         }
         img {
           width: 15%;

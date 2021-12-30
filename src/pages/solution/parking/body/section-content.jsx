@@ -13,7 +13,7 @@ const SectionContent = ({ imgUrl, title, subDescription, description }) => {
           </div>
 
           <div className="content-wrap__right" xs={12}>
-            <h4 className="txt-blue fw-bold">{title}</h4>
+            <h4 className="fw-bold">{title}</h4>
             <img src={imgLine} alt="" />
 
             <p>

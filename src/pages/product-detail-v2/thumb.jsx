@@ -8,7 +8,7 @@ import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
 import "@fancyapps/ui/dist/fancybox.css";
 import Fancybox from "@hook/fancybox";
-import Img from "gatsby-image";
+import {GatsbyImage} from "gatsby-plugin-image";
 
 const NextArrow = (props) => {
     const { className, style, onClick } = props;
@@ -97,12 +97,11 @@ export default class CenterMode extends Component {
                     >
 
                         {this.state.arrThumbs && this.state.arrThumbs?.map((element, index) => {
-                            return (<div className="thumb-center" data-fancybox="gallery" data-src={element?.publicURL} key={index}>
-                                <Img fluid={element?.childImageSharp?.fluid} alt="" />
-
+                            return (
+                                <div className="thumb-center" data-fancybox="gallery" data-src={element.publicURL} key={index}>
+                                <GatsbyImage image={element.childImageSharp.gatsbyImageData} alt="" style={{width:"100%",margin:"auto"}} />
                             </div>
-
-                            )
+                            );
                         })}
                     </Slider>
                 </Fancybox>
@@ -115,9 +114,11 @@ export default class CenterMode extends Component {
                     {this.state.arrThumbs.map((element, index) => {
                         return (
                             <div key={index} className="thumb-bottom">
-                                <Img fluid={element?.childImageSharp?.fluid} alt="" />
+                           <div className=""  key={index}>
+                                    <GatsbyImage image={element.childImageSharp.gatsbyImageData} alt="" />
+                                </div>
                             </div>
-                        )
+                        );
                     })}
                 </Slider>
             </div >

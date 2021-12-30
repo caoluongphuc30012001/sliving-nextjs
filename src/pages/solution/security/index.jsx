@@ -1,7 +1,5 @@
 import React from "react";
 import LayoutSmartHome from "@components/layout-smart-home";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
-import { graphql } from "gatsby";
 import IntroductHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
 import "./style.scss";
@@ -16,7 +14,7 @@ import SectionBannerV2 from "@components/section/banner/banner";
 import DataProductNew from "../../../query/product-hot";
 import CardSolution from "@components/card/card-solution/card-solution";
 import { useTranslation } from "react-i18next";
-const SmarthomeSolution = () => {
+const SmartHomeSolution = () => {
   const { t } = useTranslation();
   const data = DataProductNew();
   return (
@@ -24,7 +22,7 @@ const SmarthomeSolution = () => {
       <div className="introduct-main" id="introduct-main-security">
         <IntroductHeader />
         <SectionFeatureProduct dataProductHot={data} />
-        <div className="container-v2 card-solution">
+        <div className="container-wrap card-solution">
           <CardSolution
             imgUrl={card1}
             title={t(`solution.security.card_1.title`)}
@@ -80,13 +78,4 @@ const SmarthomeSolution = () => {
     </LayoutSmartHome>
   );
 };
-export default withI18next()(SmarthomeSolution);
-export const query = graphql`
-  query ($lng: String!) {
-    locales: allLocale(
-      filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-    ) {
-      ...LocaleFragment
-    }
-  }
-`;
+export default SmartHomeSolution;

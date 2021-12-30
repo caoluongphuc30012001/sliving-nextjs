@@ -5,7 +5,7 @@ import SwiperCore, {
     Navigation, Pagination
 } from 'swiper';
 
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row} from 'react-bootstrap';
 import ThreeElementVertical from './three-element-vertical';
 import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import SectionFeatureProduct from '@components/section/section-feature-product';
@@ -34,11 +34,10 @@ import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 
 
 import { graphql } from "gatsby";
-import { withI18next } from "@wapps/gatsby-plugin-i18next";
 import { useTranslation } from 'react-i18next';
 
 import "./style.scss";
-import "../smart-home-page-v2/style.scss"
+import "../smart-home-page-v2/style.scss";
 SwiperCore.use([Navigation, Pagination,]);
 const IndexPage = ({ data }) => {
     const { t } = useTranslation();
@@ -74,7 +73,7 @@ const IndexPage = ({ data }) => {
                 prevEl: ".btn-prev",
             }} className="product-swiper">
                 {arrImg.map((img, index) => <SwiperSlide key={index}>
-                    <Row noGutters>
+                    <Row  >
                         <Col xs={12} md={6} className="header-left">
                             <h2>{img.title}</h2>
                             <p className="mt-8">{t(`${img.desc}`)}</p>
@@ -93,13 +92,13 @@ const IndexPage = ({ data }) => {
 
         return (
             <article className="contact-product-v2 container-v2">
-                <Row className="container-wrap contact-product-wrap" noGutters>
-                    <Col xs={12} md={8} className="contact-detail-left">
+                <Row className="container-wrap contact-product-wrap"  >
+                    <Col md={8} className="contact-detail-left">
                         <h2>{product.title}</h2>
-                        <p>{product.desc}</p>
-                        <ButtonLearn />
+                        <p>{t(`products_desc`)}</p>
+                        <ButtonLearn url={'/smart-home/products/smart-touch'} />
                     </Col>
-                    <Col xs={12} md={4} className="contact-detail-right" >
+                    <Col md={4} className="contact-detail-right" >
                         <div>
                             <img src={product.imgUrl} alt="" width={394} height={563} style={{ objectFit: "cover" }} />
                         </div>
@@ -111,10 +110,10 @@ const IndexPage = ({ data }) => {
 
     const BuildBanner = () => {
         const arrProdContact = [
-            { id: 0, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch1 },
-            { id: 1, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch2 },
-            { id: 2, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch3 },
-            { id: 3, title: "Sliving Smart Switch", desc: "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...", imgUrl: imgTouch4 },
+            { id: 0, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch1 },
+            { id: 1, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch2 },
+            { id: 2, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch3 },
+            { id: 3, title: "Sliving Smart Switch", desc: "product_desc", imgUrl: imgTouch4 },
 
         ];
         return (
@@ -163,12 +162,11 @@ const IndexPage = ({ data }) => {
     );
 }
 
-export default withI18next()(IndexPage);
+export default IndexPage;
 export const pageQuery = graphql`
 query($lng: String!) {
     allMarkdownRemark(
       filter: {frontmatter: {type: {regex: "/Sensor/"}, lgn: {eq: $lng}}}
-      limit: 3
     ) {
       edges {
         node {
@@ -184,11 +182,5 @@ query($lng: String!) {
         }
       }
     }
-    locales: allLocale(
-        filter: { lng: { eq: $lng }, ns: { eq: "translations" } }
-      ) {
-        ...LocaleFragment
-      }
-      
   }
 `;

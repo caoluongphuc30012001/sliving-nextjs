@@ -22,6 +22,7 @@
     width: 170px !important;
     height: 160px;
     border-radius: 8px;
+
 }
 .slick-current {
     .thumb-bottom {
@@ -97,6 +98,8 @@
     .btn-shopping {
         width: fit-content !important;
         padding: 12px !important;
+        margin-top: 0 !important;
+
         h4 {
             font-size: 16px;
         }
@@ -145,6 +148,9 @@
 .group-btn-version {
     column-gap: 8px;
     row-gap: 8px;
+    > button {
+        width: unset !important;
+    }
 }
 .group-shopping {
     display: flex;
