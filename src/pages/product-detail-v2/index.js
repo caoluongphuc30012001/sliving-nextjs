@@ -14,6 +14,8 @@ import BuildThumbs from "./thumb";
 
 import i18next from 'i18next';
 
+import { PortfolioConsumer } from '@context/context';
+
 const handelFilter = (dataCurrent) => {
     if (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) {
         return true;
@@ -245,11 +247,13 @@ const IndexPage = ({ pageContext }) => {
         </section>)
     }
     return (
-        <LayoutSmartHome>
+     <PortfolioConsumer>
+         {context => (<LayoutSmartHome title={context?.dataTitles?.dataTitles.product_page}>
             <BuildHeader />
             {dataCurrent?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} /></section>)}
             {dataProductFeature && (< SectionFeatureProduct dataProductHot={dataProductFeature} />)}
-        </LayoutSmartHome>
+        </LayoutSmartHome>)}
+     </PortfolioConsumer>
     );
 }
 

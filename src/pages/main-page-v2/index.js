@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React from "react";
 import LayoutNew from "@components/layout-new";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
@@ -16,9 +16,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import useWindowSize from "@hook/useWindowSize";
 
-import "./style.scss";
-
-import AOS from "aos";
 
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
@@ -26,15 +23,13 @@ import SectionBannerV2 from "@components/section/banner/banner";
 import { useTranslation } from 'react-i18next';
 import { graphql, useStaticQuery } from "gatsby";
 
+import {PortfolioConsumer} from "@context/context";
+
+import "./style.scss";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const IndexPage = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-  }, []);
 
   const { t } = useTranslation();
   const queryData = useStaticQuery(graphql`
@@ -274,21 +269,26 @@ const IndexPage = () => {
       title={t(`reason.header`)}
       desc={t(`reason.description`)} />
   };
+ 
 
   return (
-    <LayoutNew isMainPage={true}>
-      <header className="header-main-page container-v2">
-        <BuildHeader />
-      </header>
-      <main id="main_page" className="container-v2">
-        <BuildSectionTwoElement />
-        <BuildSectionThreeElement />
-        <BuildSectionFourElement />
-        <BuildSectionBannerReason />
-      </main>
-    </LayoutNew>
+    <PortfolioConsumer>
+      {context => {
+        return ((<LayoutNew title={context?.dataTitles?.dataTitles?.home_page}>
+        <header className="header-main-page container-v2">
+          <BuildHeader />
+        </header>
+        <main id="main_page" className="container-v2">
+          <BuildSectionTwoElement />
+          <BuildSectionThreeElement />
+          <BuildSectionFourElement />
+          <BuildSectionBannerReason />
+        </main>
+      </LayoutNew>))
+      }}
+    </PortfolioConsumer>
+    
   );
 };
 
 export default IndexPage;
-

@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from "react";
-import "./support-style.scss";
 import { Form, Dropdown, Image } from "react-bootstrap";
+
 import Searchicon from "@images/icon/searchicon.svg";
 import DropArrow from "@images/icon/dropdownArrow.svg";
 import BotBanner from "@images/support-page-v2-img/banner1.jpg";
 import ImageExample from "../../../../contents/images/support-page/technical-solution/apartment/apartment-1.png";
-import FormPagination from "@components/pagination/form-pagination";
-import { Link } from "gatsby";
-import { useTranslation } from "react-i18next";
-import { Row, Col, Accordion, Card } from "react-bootstrap";
 import DownLoadIcons from "@images/icon/download.png";
 import PrevIcon from "@images/icon/icon-prev.svg";
 import NextIcon from "@images/icon/icon-next.svg";
-import useGetLgn from "@hook/useGetLgn";
 import iconDropdown from "@images/icon/dropdownArrow.svg";
 import iconSort from "@images/icon/sort-icon.svg";
+
+import FormPagination from "@components/pagination/form-pagination";
+
+import { Row, Col, Accordion, Card } from "react-bootstrap";
+
+import useGetLgn from "@hook/useGetLgn";
+
 import { useLocation } from "@reach/router";
-import {navigate } from "gatsby";
+import { useTranslation } from "react-i18next";
+
+import {navigate ,Link} from "gatsby";
+
+import "./support-style.scss";
+
 const ListSupports = ({data}) => {
   const Lgn = useGetLgn();
   const { t } = useTranslation();
@@ -513,36 +520,37 @@ const ListSupports = ({data}) => {
                       <nav>
                         <ul className="pagination">
                           <li>
-                            <a href="#" onClick={() => paginatePrev()} onKeyPress={() => paginatePrev()}  tabIndex={0} role={"table"}>
+                            <div role={"table"} onClick={() => paginatePrev()}    style={{ cursor: "pointer" }} aria-hidden >
                               <Image
                                 src={PrevIcon}
                                 className="pagination-btn-prev" alt="icon"
                               />
-                            </a>
+                            </div>
                           </li>
                           {pageNumbers.map((num,index) => (
                             <li className="page-item" key={index}>
-                              <a href="#"
+                              <div
+                               style={{ cursor: "pointer" }}
+                               role={"table"}
                                 className={
                                   num === currentPage
                                     ? "page-link active"
                                     : "page-link"
                                 }
                                 onClick={() => paginate(num)}
-                                onKeyPress={() => paginate(num)} tabIndex={0} role={"table"}
-                                style={{ cursor: "pointer" }}
+                                aria-hidden
                               >
                                 {num}
-                              </a>
+                              </div>
                             </li>
                           ))}
                           <li>
-                            <a href="#" onClick={() => paginateNext()} onKeyPress={() => paginateNext()} tabIndex={0} role={"table"}>
+                            <div  role={"table"}  style={{ cursor: "pointer" }} onClick={() => paginateNext()} aria-hidden> 
                               <Image
                                 src={NextIcon}
                                 className="pagination-btn-next"
                               />
-                            </a>
+                            </div>
                           </li>
                         </ul>
                       </nav>

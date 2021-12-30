@@ -13,11 +13,7 @@ import "../style/main.scss";
 const IndexPage = () => {
   return (
     <>
-      <Helmet >
-        <meta charSet="utf-8" />
-        <title>Sliving</title>
-        <meta name="description" content="Sliving" />
-        <link rel="preload" as="font" />
+      <Helmet  >
         <link rel="shortcut icon" type="image/svg" href={favicon} />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
