@@ -513,16 +513,16 @@ const ListSupports = ({data}) => {
                       <nav>
                         <ul className="pagination">
                           <li>
-                            <a href="#" onClick={() => paginatePrev()} onKeyPress={() => paginatePrev()}  tabIndex={0} role={"table"}>
+                            <Link to={`detail`} onClick={() => paginatePrev()} onKeyPress={() => paginatePrev()}  tabIndex={0} role={"table"}>
                               <Image
                                 src={PrevIcon}
                                 className="pagination-btn-prev" alt="icon"
                               />
-                            </a>
+                            </Link>
                           </li>
                           {pageNumbers.map((num,index) => (
                             <li className="page-item" key={index}>
-                              <a href="#"
+                              <Link to={`detail`}
                                 className={
                                   num === currentPage
                                     ? "page-link active"
@@ -533,16 +533,16 @@ const ListSupports = ({data}) => {
                                 style={{ cursor: "pointer" }}
                               >
                                 {num}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                           <li>
-                            <a href="#" onClick={() => paginateNext()} onKeyPress={() => paginateNext()} tabIndex={0} role={"table"}>
+                            <Link to={`detail`} onClick={() => paginateNext()} onKeyPress={() => paginateNext()} tabIndex={0} role={"table"}>
                               <Image
                                 src={NextIcon}
                                 className="pagination-btn-next"
                               />
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </nav>
