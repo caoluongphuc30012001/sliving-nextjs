@@ -12,35 +12,43 @@ import arrowRight from "@images/new-home-page/footer/arrow-right.png";
 import { useTranslation } from "react-i18next";
 
 export default function FooterV2() {
-
   const { t } = useTranslation();
 
   return (
     <>
       <footer className="footer-new">
         <Row className="g-0">
-          <Col xs={12}><article className="bottom-contact container-v2">
-            <div className="bottom-contact-wrap">
-              <div className="contact-wrap-left">
-                <h4>{t(`subscribe`)}</h4>
-                <p>{t(`get_the_latest_news_from_us`)}</p>
-              </div>
-              <div className="contact-wrap-right">
-                <div className="contact-form">
-                  <div className="contact-form-group">
-                    <input type="text" placeholder={t(`please_enter_email`)} />
+          <Col xs={12}>
+            <article className="bottom-contact container-v2">
+              <div className="bottom-contact-wrap">
+                <div className="contact-wrap-left">
+                  <h4>{t(`subscribe`)}</h4>
+                  <p>{t(`get_the_latest_news_from_us`)}</p>
+                </div>
+                <div className="contact-wrap-right">
+                  <div className="contact-form">
+                    <div className="contact-form-group">
+                      <input
+                        type="text"
+                        placeholder={t(`please_enter_email`)}
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      className="btn-right-algin"
+                      aria-label="Center Align"
+                    >
+                      <img src={arrowRight} alt="" width={24} height={24} />
+                    </button>
                   </div>
-                  <button type="button" className="btn-send">
-                    <img src={arrowRight} alt="" />
-                  </button>
                 </div>
               </div>
-            </div>
-          </article></Col>
+            </article>
+          </Col>
         </Row>
         <div className="footer-info-address container-v2">
           <Row style={{ alignItems: "flex-end" }}>
-            <div >
+            <div>
               <Row>
                 <div className="footer-icon">
                   <img src={logo} alt="unicloud" width={72} height={72} />
@@ -58,12 +66,11 @@ export default function FooterV2() {
           </Row>
           <Row className="footer-info-company" style={{ marginTop: "16px" }}>
             <Col xs={12} md={6} sm={6}>
-              <div className='branch-hn'>
-
+              <div className="branch-hn">
                 <p>
                   {t(`HEAD_QUARTERS`)}: Hà Nội
                   <br />
-                  {t(`footer_address`)}:  {t(`address_head_quarters`)}
+                  {t(`footer_address`)}: {t(`address_head_quarters`)}
                   <br />
                   {t(`footer_phone`)}: 02473039999
                   <br />
@@ -72,7 +79,7 @@ export default function FooterV2() {
               </div>
             </Col>
             <Col xs={12} md={6} sm={6}>
-              <div className='branch-hcm'>
+              <div className="branch-hcm">
                 <p>
                   {t(`branch`)}: Hồ chí Minh
                   <br />

@@ -10,12 +10,14 @@ import NewSectionProduct from "./body/new-section-product";
 
 import LayoutSmartHome from "@components/layout-smart-home";
 
+import { PortfolioConsumer } from "@context/context";
 
 import "./style.scss";
 
 const HomePageNew = ({ pageContext }) => {
   return (
-    <LayoutSmartHome pageContext={pageContext} >
+   <PortfolioConsumer>
+      {context => (<LayoutSmartHome pageContext={pageContext} title={context?.dataTitles?.dataTitles.smart_home_page}>
       <div className="smart-home-page-v2">
         <NewSectionHeader />
         <NewSectionApp />
@@ -25,7 +27,8 @@ const HomePageNew = ({ pageContext }) => {
         <NewSectionSolution />
         <NewSectionVideo />
       </div>
-    </LayoutSmartHome>
+    </LayoutSmartHome>)}
+   </PortfolioConsumer>
   );
 }
 export default HomePageNew;

@@ -1,5 +1,5 @@
 import React from "react";
-import header from "@images/solution/security//header/header.png";
+import header from "@images/solution/security//header/header.jpg";
 import underLine from "@images/contact-page-v2/Rectangle1256.png";
 import { useTranslation } from "react-i18next";
 const BottomImage = () => {

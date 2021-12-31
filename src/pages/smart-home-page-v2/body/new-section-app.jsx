@@ -71,7 +71,7 @@ export default function NewSectionApp() {
     );
   };
   return (
-    <section>
+    <section  className="container-v2">
       <div className="home-page-app">
         <div className="container-wrap">
           <Row>

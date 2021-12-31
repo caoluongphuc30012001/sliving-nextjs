@@ -7,7 +7,7 @@ import imgStore from "@components/svg/store";
 import imgHome from "@components/svg/house";
 import imgOffice from "@components/svg/office";
 import imgSchool from "@components/svg/school";
-import TitleSection from "../../../components/section/title/title-section";
+import TitleSection from "@components/section/title/title-section";
 import { useTranslation } from "react-i18next";
 SwiperCore.use([Pagination, Navigation]);
 
@@ -46,7 +46,7 @@ const LightingProduct=()=>{
         },
       ];
     
-    return <section className="smart-home-page-v2">
+    return <section className="smart-lighting-page-v2 container">
         <TitleSection content={t(`solution.titleSolution`)} color={'bold'} direction={'center'}/>
     <div className="home-page-app">
       <Col className="app-slider">

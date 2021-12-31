@@ -64,6 +64,8 @@ exports.createPages = async function ({ actions, graphql }) {
   const solutionSmartHome  = require.resolve("./src/pages/solution/smart-home/index.jsx");
   const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
   const solutionSmartSecurity  = require.resolve("./src/pages/solution/security/index.jsx");
+  const reasonPage  = require.resolve("./src/pages/reason/index.jsx");
+
 
 
   await graphql(
@@ -180,6 +182,11 @@ arrLng.map((lng) => {
   createPage({
     path: `/${lng}/solutions/smart-security/`,
     component: solutionSmartSecurity,
+  });
+
+  createPage({
+    path: `/${lng}/reason/`,
+    component: reasonPage,
   });
   
   productPage.data.ProductPage.group.forEach((product) => {

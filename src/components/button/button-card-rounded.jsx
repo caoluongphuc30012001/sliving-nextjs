@@ -21,10 +21,10 @@ const ButtonRounded = () => {
     const [isScroll, setIsScroll] = useState(false);
     useEffect(() => {
         if (isBrowser) {
-            window.addEventListener("scroll", setScroll, false)
+            window.addEventListener("scroll", setScroll)
         }
         return () => {
-            window.removeEventListener("scroll", setScroll, false)
+            window.removeEventListener("scroll", setScroll)
         }
 
     }, [])

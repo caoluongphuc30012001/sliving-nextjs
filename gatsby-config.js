@@ -6,6 +6,10 @@ module.exports = {
   },
   siteMetadata: {
     title: "Sliving",
+    description:"Sliving Kỷ Nguyên công nghệ mới",
+    author:"Sliving",
+    keywords:"Sliving",
+    siteUrl:"https://sliving.vn"
   },
   pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [

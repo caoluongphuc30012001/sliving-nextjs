@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import iconLanguage from "@images/new-home-page/header/icon-language.png";
@@ -11,23 +11,14 @@ const LanguageSwitcher = () => {
   function changeLanguage() {
     if (i18n.language === "en") {
       i18n.changeLanguage("vn");
+      if(location.pathname==='/') return navigate("/vn/")
       navigate(location.pathname.replace("en", "vn"));
     } else {
       i18n.changeLanguage("en");
+      if(location.pathname==='/') return navigate("/en/")
       navigate(location.pathname.replace("vn", "en"));
     }
-  }
-
-  useEffect(() => {
-    const checkLng = () => {
-      if (location.pathname.indexOf("/en/") > -1) {
-        i18n.changeLanguage("en");
-      } else {
-        i18n.changeLanguage("vn");
-      }
-    };
-    checkLng();
-  }, [i18n, location.pathname]);
+  };
 
   return (
     <>

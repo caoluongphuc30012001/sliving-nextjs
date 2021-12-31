@@ -54,8 +54,9 @@
         }
         .headerImage {
           position: absolute;
-          right: 5%;
+          right: 10%;
           transform: translateY(10%);
+          transition: all 0.3s linear;
           div {
             position: relative;
             .brightness {
@@ -235,10 +236,7 @@
       }
     }
   }
-  .smart-home-page-v2 {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+  .smart-lighting-page-v2 {
     .home-page-app {
       padding-top: 0!important;
       height: unset!important;
