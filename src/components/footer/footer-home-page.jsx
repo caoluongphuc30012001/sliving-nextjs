@@ -29,8 +29,8 @@ export default function FooterHomePage() {
                                     <div className="contact-form-group">
                                         <input type="text" placeholder={t(`please_enter_email`)} />
                                     </div>
-                                    <button type="button" className="btn-send">
-                                        <img src={arrowRight} alt="" />
+                                    <button type="button" className="btn-right-algin" aria-label="Center Align">
+                                    <img src={arrowRight} alt="" width={24} height={24} />
                                     </button>
                                 </div>
                             </div>

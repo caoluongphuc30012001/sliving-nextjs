@@ -1,6 +1,6 @@
 import React from "react";
 
-import IntroductHeader from "./header/section-header";
+import IntroductionHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
 
 import imgFirst from "@images/solution/parking/imgFirst.png";
@@ -17,68 +17,79 @@ import CardSolution from "@components/card/card-solution/card-solution";
 
 import { useTranslation } from "react-i18next";
 
+import { PortfolioConsumer } from "@context/context";
+
 import "./style.scss";
 
 const SmartHomeSolution = () => {
   const { t } = useTranslation();
-  return (
-    <LayoutSmartHome>
-      <div className="introduct-main" id="introduct-main-parking">
-        <IntroductHeader />
-        <div className="container-wrap card-solution">
-          <CardSolution
-            imgUrl={card1}
-            title={t(`solution.parking.card_1.title`)}
-            description={t(`solution.parking.card_1.description`)}
-          />
-          <CardSolution
-            imgUrl={card2}
-            title={t(`solution.parking.card_2.title`)}
-            description={t(`solution.parking.card_2.description`)}
-          />
-          <CardSolution
-            imgUrl={card3}
-            title={t(`solution.parking.card_3.title`)}
-            description={t(`solution.parking.card_3.description`)}
-          />
-        </div>
-        <section className="introSection container">
-          <div className="background-image "></div>
-          <div>
-            <div className="margin-bottom">
-              <SectionContent
-                imgUrl={imgFirst}
-                title={t(`solution.parking.section_1.title`)}
-                subDescription={t(`solution.parking.section_1.description`)}
-                description={""}
-              />
-            </div>
+  const BuildThreeSolution = ()=> {
+    return (<div className="container-wrap card-solution">
+    <CardSolution
+      imgUrl={card1}
+      title={t(`solution.parking.card_1.title`)}
+      description={t(`solution.parking.card_1.description`)}
+    />
+    <CardSolution
+      imgUrl={card2}
+      title={t(`solution.parking.card_2.title`)}
+      description={t(`solution.parking.card_2.description`)}
+    />
+    <CardSolution
+      imgUrl={card3}
+      title={t(`solution.parking.card_3.title`)}
+      description={t(`solution.parking.card_3.description`)}
+    />
+  </div>);
+  }
+  const BuildThreeContent = () => {
+    return (<section className="introSection container">
+    <div className="background-image "></div>
+    <div>
+      <div className="margin-bottom">
+        <SectionContent
+          imgUrl={imgFirst}
+          title={t(`solution.parking.section_1.title`)}
+          subDescription={t(`solution.parking.section_1.description`)}
+          description={""}
+        />
+      </div>
 
-            <div className="section-second margin-bottom">
-              <SectionContent
-                imgUrl={imgSecond}
-                title={t(`solution.parking.section_2.title`)}
-                subDescription={t(`solution.parking.section_2.description`)}
-                description={""}
-              />
-            </div>
-            <div className=" margin-bottom">
-              <SectionContent
-                imgUrl={imgThird}
-                title={t(`solution.parking.section_3.title`)}
-                subDescription={t(`solution.parking.section_3.description`)}
-                description={""}
-              />
-            </div>
-          </div>
-        </section>
+      <div className="section-second margin-bottom">
+        <SectionContent
+          imgUrl={imgSecond}
+          title={t(`solution.parking.section_2.title`)}
+          subDescription={t(`solution.parking.section_2.description`)}
+          description={""}
+        />
+      </div>
+      <div className=" margin-bottom">
+        <SectionContent
+          imgUrl={imgThird}
+          title={t(`solution.parking.section_3.title`)}
+          subDescription={t(`solution.parking.section_3.description`)}
+          description={""}
+        />
+      </div>
+    </div>
+  </section>)
+  }
+
+  return (
+   <PortfolioConsumer>
+     {context => ( <LayoutSmartHome title={context?.dataTitles?.dataTitles.smart_parking}>
+      <div className="introduct-main" id="introduct-main-parking">
+        <IntroductionHeader />
+        <BuildThreeSolution />
+        <BuildThreeContent />
         <SectionBannerV2
           title={t(`solution.footer`)}
           desc={t(`solution.subFooter`)}
           btnContact={true}
         />
       </div>
-    </LayoutSmartHome>
+    </LayoutSmartHome>)}
+   </PortfolioConsumer>
   );
 };
 export default SmartHomeSolution;

@@ -239,13 +239,13 @@ const DataProductNew = () => {
     imgSrcThumbs {
       publicURL
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
     imgSrcProduct {
       publicURL
       childImageSharp {
-        gatsbyImageData
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }

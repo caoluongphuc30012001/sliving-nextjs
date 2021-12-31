@@ -11,7 +11,7 @@ const LightingHeader = () => {
   const { t } = useTranslation();
   return (
     <header>
-      <div className="headerContainer">
+      <div className="headerContainer container-v2">
         <div className="container">
           <div className="headerContent">
             <h1>
