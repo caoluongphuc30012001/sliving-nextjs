@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 import DataProductNew from "../../../query/product-hot";
 import TitleSection from "../../../components/section/title/title-section";
 import SlideProduct from "../../../components/section/section-product";
@@ -8,7 +8,7 @@ const LedLightProduct=()=>{
     const { t } = useTranslation();
     return <section className="ledLightProduct container" id='productLighting'>
         <TitleSection content={t(`solution.lighting.led_product`)} color={'bold'} direction={'center'} width={'40%'}/>
-        <SlideProduct data={dataProducts} noTitle noNavbar/>
+        <SlideProduct data={dataProducts} noTitle noNavbar type="LED"/>
     </section>
 }
-export default LedLightProduct;
+export default memo(LedLightProduct);
