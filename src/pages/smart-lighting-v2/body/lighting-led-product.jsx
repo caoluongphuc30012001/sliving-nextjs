@@ -8,7 +8,7 @@ const LedLightProduct=()=>{
     const { t } = useTranslation();
     return <section className="ledLightProduct container" id='productLighting'>
         <TitleSection content={t(`solution.lighting.led_product`)} color={'bold'} direction={'center'} width={'40%'}/>
-        <SlideProduct data={dataProducts} noTitle noNavbar type="LED"/>
+        <SlideProduct data={dataProducts} noTitle noNavbar/>
     </section>
 }
 export default memo(LedLightProduct);

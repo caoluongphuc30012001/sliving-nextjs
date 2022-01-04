@@ -7,7 +7,6 @@ const ContactForm = () => {
   const [validated, setValidated] = useState(false);
   const [ phone,setPreNumPhone] = useState('+84')
   const { t } = useTranslation();
-  console.log('json',data)
 
   //const arrNumRange = ['+84', '+354', '+380', '+66', '+1']
 

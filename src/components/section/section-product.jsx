@@ -12,7 +12,7 @@ import i18next from 'i18next';
 
 import "../style.scss";
 
-const SlideProduct = ({ data, noTitle, noNavbar, type }) => {
+const SlideProduct = ({ data, noTitle, noNavbar }) => {
     const lngCurrent = i18next.language;
     const getData = data;
     const [post, setPost] = useState([]);
@@ -41,10 +41,6 @@ const SlideProduct = ({ data, noTitle, noNavbar, type }) => {
         }
     }
     useEffect(() => {
-        if(type){
-            let filterPro=arrProduct.filter(item=>item.title===type)
-            return handleSelect(filterPro[0])
-        }
         handleSelect(arrProduct[0]);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
