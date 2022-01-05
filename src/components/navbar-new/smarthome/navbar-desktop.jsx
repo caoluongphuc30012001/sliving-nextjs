@@ -79,7 +79,6 @@ export default function NavbarSmartHomeDesktop() {
               expand="lg"
               id="nav-bar"
             >
-<<<<<<< HEAD
               <Navbar.Brand aria-label="Link to home">
                <Link to="/">
                <Image
@@ -92,15 +91,6 @@ export default function NavbarSmartHomeDesktop() {
                </Link>
               </Navbar.Brand>
 
-=======
-              <GatsbyLink
-                to="/"
-                className="logo nav-logo nav-brand"
-                aria-label="Link to home"
-              >
-                <Image className="img-obj-cover" src={logo} alt="sliving" />
-              </GatsbyLink>
->>>>>>> a8078096eb53f1f6d82b6cec2c8d8e3a61e9cbd7
               <Navbar.Collapse
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2"
