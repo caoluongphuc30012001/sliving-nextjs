@@ -17,6 +17,6 @@ const LedLightProduct = () => {
         width={"40%"}
       />
       <SlideProduct data={dataProducts} noTitle noNavbar indexProduct={1}/>
-    </section>
+    </section>);
 }
 export default memo(LedLightProduct);
