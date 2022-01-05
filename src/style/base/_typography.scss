@@ -14,6 +14,6 @@
     font-display: swap;
 }
 
-* {
-    font-family: "SvnGilroy";
+:root{
+    --bs-font-sans-serif: "SvnGilroy", sans-serif;
 }

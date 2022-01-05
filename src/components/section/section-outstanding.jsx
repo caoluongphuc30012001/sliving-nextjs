@@ -16,7 +16,7 @@ const SectionOutstanding = () => {
                         </Row>
                         <Row className="article-wrap-container section-outstanding-project">
                             <Col sm={6} xs={12} className="article-wrap-left">
-                                <img className="image6 " src={Image6} class="img-responsive" alt="sliving second banner" />
+                                <img className="image6 " src={Image6} className="img-responsive" alt="sliving second banner" />
                             </Col>
                             <Col sm={6} xs={12} className="article-wrap-right">
                                 <div>

@@ -22,6 +22,7 @@
     width: 170px !important;
     height: 160px;
     border-radius: 8px;
+    
 
 }
 .slick-current {
@@ -201,4 +202,22 @@
     border-radius: 4px;
     color: #1564ad !important;
     font-size: 12px;
+}
+
+/*-----------------------------Responsive*/
+@media only screen and (max-width:768px){
+    .product-header-page{
+        margin-top: unset;
+        padding-top: 20px;
+        .header-page-wrap{
+            flex-wrap: wrap !important;
+        }
+    }
+   .thumb-bottom{
+    width: fit-content !important;
+    height: auto;
+   }
+   .thumb-center{
+       height: auto;
+   }
 }

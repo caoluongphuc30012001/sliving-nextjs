@@ -79,14 +79,16 @@ export default function NavbarSmartHomeDesktop() {
               expand="lg"
               id="nav-bar"
             >
-              <Navbar.Brand href="/" aria-label="Link to home">
-                <Image
+              <Navbar.Brand aria-label="Link to home">
+               <Link to="/">
+               <Image
                   className="img-obj-cover"
                   src={logo}
                   alt="sliving"
                   width={202}
                   height={44}
                 />
+               </Link>
               </Navbar.Brand>
 
               <Navbar.Collapse
