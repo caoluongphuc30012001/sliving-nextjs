@@ -20,39 +20,39 @@ import useGetLgn from "@hook/useGetLgn";
 import { useLocation } from "@reach/router";
 import { useTranslation } from "react-i18next";
 
-import {navigate ,Link} from "gatsby";
+import { navigate, Link } from "gatsby";
 
 import "./support-style.scss";
 
-const ListSupports = ({data}) => {
+const ListSupports = ({ data }) => {
   const Lgn = useGetLgn();
   const { t } = useTranslation();
 
   const dataTechnicalAnswer = data?.dataTechnicalAnswer?.edges || [];
   const dataConstructionInstruction = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-      item?.node?.frontmatter?.slug?.includes("construction-manual")
-    )
+        item?.node?.frontmatter?.slug?.includes("construction-manual")
+      )
     : [];
   const dataAgriculturalMaterialNorm = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-      item?.node?.frontmatter?.slug?.includes("agricultural-material-quota")
-    )
+        item?.node?.frontmatter?.slug?.includes("agricultural-material-quota")
+      )
     : [];
   const dataProductIdentification = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-      item?.node?.frontmatter?.slug?.includes("product-identification")
-    )
+        item?.node?.frontmatter?.slug?.includes("product-identification")
+      )
     : [];
   const dataProductWarranty = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter((item) =>
-      item?.node?.frontmatter?.slug?.includes("product-warranty")
-    )
+        item?.node?.frontmatter?.slug?.includes("product-warranty")
+      )
     : [];
   const dataDocumentsDownload = data?.dataTechnicalAnswer?.edges
     ? data?.dataTechnicalAnswer?.edges?.filter(
-      (item) => item?.node?.frontmatter?.slug === null
-    )
+        (item) => item?.node?.frontmatter?.slug === null
+      )
     : [];
 
   const [post, setPost] = useState(dataTechnicalAnswer);
@@ -212,19 +212,20 @@ const ListSupports = ({data}) => {
     <div>
       <div className="banner container-v2"></div>
       <div className="support-pages big-container fluid container-wrap">
-        <Row  >
+        <Row>
           <Col sm={5} xs={12}>
             <div className="support-page-left">
               <div className="left-container">
                 {!isMobile && (
                   <div className="technical-dropdown card">
                     {arrDrop &&
-                      arrDrop.map((item,index) => {
+                      arrDrop.map((item, index) => {
                         return (
                           <Dropdown.Item
                             key={index}
-                            className={`${item.isActive ? "is-active-item" : ""
-                              }`}
+                            className={`${
+                              item.isActive ? "is-active-item" : ""
+                            }`}
                             onClick={() => handleClick(item.id, item.title)}
                           >
                             {t(`${item.title}`)}
@@ -249,12 +250,13 @@ const ListSupports = ({data}) => {
                         <Accordion.Collapse eventKey="0">
                           <Card.Body>
                             {arrDrop &&
-                              arrDrop.map((item,index) => {
+                              arrDrop.map((item, index) => {
                                 return (
                                   <Dropdown.Item
                                     key={index}
-                                    className={`${item.isActive ? "is-active-item" : ""
-                                      }`}
+                                    className={`${
+                                      item.isActive ? "is-active-item" : ""
+                                    }`}
                                     onClick={() =>
                                       handleClick(item.id, item.title)
                                     }
@@ -296,8 +298,9 @@ const ListSupports = ({data}) => {
                       />
                       <button
                         type="button"
-                        className={`btn btn-search btn-research fs-12 ${isMobile ? "btn-search-mobile" : null
-                          }`}
+                        className={`btn btn-search btn-research fs-12 ${
+                          isMobile ? "btn-search-mobile" : null
+                        }`}
                         aria-label="search icon"
                       >
                         <img src={Searchicon} alt="" />
@@ -325,7 +328,7 @@ const ListSupports = ({data}) => {
                       <Accordion.Collapse eventKey="0">
                         <Card.Body>
                           {
-                            <Row  >
+                            <Row>
                               <Col className="col-in-containerOutside">
                                 <Dropdown id="dropdowm-toggle">
                                   <Dropdown.Toggle
@@ -404,101 +407,36 @@ const ListSupports = ({data}) => {
                 </div>
                 <div className="support-slider">
                   {id === 6
-                    ? currentPosts?.map(({ node ,index}) => {
-                      return (
-                        <div
-                          className="container-first-slider"
-                          key={index}
-                        >
-                          <Row onMouseDown={() => navigate('detail')}>
-                            <Col sm={3} xs={12}>
-                              <div className="image-container first-slider-wrap">
-                                <div className="first-slider-wrap__left">
-                                  <Link to={`${Lgn}${node.frontmatter.slug}`}>
-                                    <div className="download__container">
-                                      <img
-                                        src={DownLoadIcons}
-                                        alt="icon download"
-                                      />
-                                    </div>
-                                  </Link>
-                                  <div className="container-below-image">
-                                    <div className="row">
-                                      <span className="fs-12 fw-bold mt-2">
-                                        Công trình:{" "}
-                                      </span>
-                                      <span className="fs-12 mt-2 ml-1">
-                                        Căn hộ
-                                      </span>
+                    ? currentPosts?.map(({ node, index }) => {
+                        return (
+                          <div className="container-first-slider" key={index}>
+                            <Row onMouseDown={() => navigate("detail")}>
+                              <Col sm={3} xs={12}>
+                                <div className="image-container first-slider-wrap">
+                                  <div className="first-slider-wrap__left">
+                                    <Link to={`${Lgn}${node.frontmatter.slug}`}>
+                                      <div className="download__container">
+                                        <img
+                                          src={DownLoadIcons}
+                                          alt="icon download"
+                                        />
+                                      </div>
+                                    </Link>
+                                    <div className="container-below-image">
+                                      <div className="row">
+                                        <span className="fs-12 fw-bold mt-2">
+                                          Công trình:{" "}
+                                        </span>
+                                        <span className="fs-12 mt-2 ml-1">
+                                          Căn hộ
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                            </Col>
-                            <Col>
-                              <div className="first-slider-wrap__right">
-                                <div className="text-title fs-16">
-                                  {node.frontmatter.title}
-                                </div>
-                                <div className="text-date fs-12">
-                                  {node.frontmatter.date}
-                                </div>
-                                <div className="text-description fs-14">
-                                  {node.frontmatter.description}
-                                </div>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                      );
-                    })
-                    : currentPosts?.map(({ node ,index}) => {
-                      return (
-                        <div
-                          className="container-first-slider"
-                          key={index}
-                        >
-                          <Row onMouseDown={() => navigate('detail')}>
-                            <Col sm={5} xs={12}>
-                              <div className="image-container first-slider-wrap">
-                                <div className="first-slider-wrap__left">
-                                  {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
-                                  <Link>
-                                    {node.frontmatter.featuredImage ? (
-                                      <Image
-                                        className="image-example"
-                                        src={
-                                          node.frontmatter.featuredImage
-                                            .publicURL
-                                        }
-                                        alt="Image 1"
-                                      />
-                                    ) : (
-                                      <Image
-                                        className="image-example"
-                                        src={ImageExample}
-                                        alt="Image 1"
-                                      />
-                                    )}
-                                  </Link>
-                                  <div className="container-below-image">
-                                    <div className="row">
-                                      <span className="fs-12 fw-bold">
-                                        Công trình:
-                                      </span>
-                                      <span className="ml-1 fs-12">
-                                        {" "}
-                                        Căn hộ
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </Col>
-                            <Col>
-                              <div className="first-slider-wrap__right">
-                                {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
-                                <Link to={`detail`}>
+                              </Col>
+                              <Col>
+                                <div className="first-slider-wrap__right">
                                   <div className="text-title fs-16">
                                     {node.frontmatter.title}
                                   </div>
@@ -508,30 +446,95 @@ const ListSupports = ({data}) => {
                                   <div className="text-description fs-14">
                                     {node.frontmatter.description}
                                   </div>
-                                </Link>
-                              </div>
-                            </Col>
-                          </Row>
-                        </div>
-                      );
-                    })}
+                                </div>
+                              </Col>
+                            </Row>
+                          </div>
+                        );
+                      })
+                    : currentPosts?.map(({ node, index }) => {
+                        return (
+                          <div className="container-first-slider" key={index}>
+                            <Row onMouseDown={() => navigate("detail")}>
+                              <Col sm={5} xs={12}>
+                                <div className="image-container first-slider-wrap">
+                                  <div className="first-slider-wrap__left">
+                                    {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
+                                    <Link>
+                                      {node.frontmatter.featuredImage ? (
+                                        <Image
+                                          className="image-example"
+                                          src={
+                                            node.frontmatter.featuredImage
+                                              .publicURL
+                                          }
+                                          alt="Image 1"
+                                        />
+                                      ) : (
+                                        <Image
+                                          className="image-example"
+                                          src={ImageExample}
+                                          alt="Image 1"
+                                        />
+                                      )}
+                                    </Link>
+                                    <div className="container-below-image">
+                                      <div className="row">
+                                        <span className="fs-12 fw-bold">
+                                          Công trình:
+                                        </span>
+                                        <span className="ml-1 fs-12">
+                                          {" "}
+                                          Căn hộ
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </Col>
+                              <Col>
+                                <div className="first-slider-wrap__right">
+                                  {/* <Link to={`${Lgn}support-page/${node.frontmatter.slug}`}> */}
+                                  <Link to={`detail`}>
+                                    <div className="text-title fs-16">
+                                      {node.frontmatter.title}
+                                    </div>
+                                    <div className="text-date fs-12">
+                                      {node.frontmatter.date}
+                                    </div>
+                                    <div className="text-description fs-14">
+                                      {node.frontmatter.description}
+                                    </div>
+                                  </Link>
+                                </div>
+                              </Col>
+                            </Row>
+                          </div>
+                        );
+                      })}
                   {post?.length && (
                     <div className="pagination-container">
                       <nav>
                         <ul className="pagination">
                           <li>
-                            <div role={"table"} onClick={() => paginatePrev()}    style={{ cursor: "pointer" }} aria-hidden >
+                            <div
+                              role={"table"}
+                              onClick={() => paginatePrev()}
+                              style={{ cursor: "pointer" }}
+                              aria-hidden
+                            >
                               <Image
                                 src={PrevIcon}
-                                className="pagination-btn-prev" alt="icon"
+                                className="pagination-btn-prev"
+                                alt="icon"
                               />
                             </div>
                           </li>
-                          {pageNumbers.map((num,index) => (
+                          {pageNumbers.map((num, index) => (
                             <li className="page-item" key={index}>
                               <div
-                               style={{ cursor: "pointer" }}
-                               role={"table"}
+                                style={{ cursor: "pointer" }}
+                                role={"table"}
                                 className={
                                   num === currentPage
                                     ? "page-link active"
@@ -545,7 +548,12 @@ const ListSupports = ({data}) => {
                             </li>
                           ))}
                           <li>
-                            <div  role={"table"}  style={{ cursor: "pointer" }} onClick={() => paginateNext()} aria-hidden> 
+                            <div
+                              role={"table"}
+                              style={{ cursor: "pointer" }}
+                              onClick={() => paginateNext()}
+                              aria-hidden
+                            >
                               <Image
                                 src={NextIcon}
                                 className="pagination-btn-next"

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Image, Nav, Row, Col } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import { useTranslation } from "react-i18next";
-
+import GatsbyLink from "@components/gatsby-link";
 import logo from "@images/logo/logo-header.svg";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
-import Link from '@components/gatsby-link'
+import Link from "@components/gatsby-link";
 
 export default function NavbarSmartHomeDesktop() {
   const dataProductMenu = DataProductMenu();
@@ -79,6 +79,7 @@ export default function NavbarSmartHomeDesktop() {
               expand="lg"
               id="nav-bar"
             >
+<<<<<<< HEAD
               <Navbar.Brand aria-label="Link to home">
                <Link to="/">
                <Image
@@ -91,6 +92,15 @@ export default function NavbarSmartHomeDesktop() {
                </Link>
               </Navbar.Brand>
 
+=======
+              <GatsbyLink
+                to="/"
+                className="logo nav-logo nav-brand"
+                aria-label="Link to home"
+              >
+                <Image className="img-obj-cover" src={logo} alt="sliving" />
+              </GatsbyLink>
+>>>>>>> a8078096eb53f1f6d82b6cec2c8d8e3a61e9cbd7
               <Navbar.Collapse
                 id="responsive-navbar-nav"
                 className="animation-nav animation-nav-v2"

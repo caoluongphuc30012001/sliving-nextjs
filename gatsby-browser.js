@@ -25,8 +25,6 @@ window.scrollTo([0, 0])
 
 exports.wrapRootElement = ({ element }) => {
   return (
-    <PortfolioProvider value={{dataTitles}}>
-      {element}
-    </PortfolioProvider>
-  )
-}
+    <PortfolioProvider value={{ dataTitles }}>{element}</PortfolioProvider>
+  );
+};
