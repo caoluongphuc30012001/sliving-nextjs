@@ -1,8 +1,8 @@
-import React from "react";
-import DataProductNew from "@query/product-hot";
-import TitleSection from "@components/section/title/title-section";
-import SlideProduct from "@components/section/section-product";
 
+import React, {memo} from "react";
+import DataProductNew from "../../../query/product-hot";
+import TitleSection from "../../../components/section/title/title-section";
+import SlideProduct from "../../../components/section/section-product";
 import { useTranslation } from "react-i18next";
 
 const LedLightProduct = () => {
@@ -18,6 +18,5 @@ const LedLightProduct = () => {
       />
       <SlideProduct data={dataProducts} noTitle noNavbar indexProduct={1}/>
     </section>
-  );
-};
-export default LedLightProduct;
+}
+export default memo(LedLightProduct);

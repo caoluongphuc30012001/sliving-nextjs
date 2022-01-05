@@ -23,7 +23,7 @@ const LoadingPage = ({time}) => {
       window.removeEventListener("load",handle);
 
       };
-    }, [isLoading]);
+    }, []);
   return (
     <div className={isLoading ? "loader-wrapper" : "loader-hidden"}>
       <div

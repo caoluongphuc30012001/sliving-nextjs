@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import data from "./../../../data/countrycode/countrycode.json"
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
-  //const [ setPreNumPhone] = useState('+84')
+  const [ phone,setPreNumPhone] = useState('+84')
   const { t } = useTranslation();
 
   //const arrNumRange = ['+84', '+354', '+380', '+66', '+1']
@@ -62,7 +63,7 @@ const ContactForm = () => {
             as="select"
             className="form-select"
           >
-            <option value="" disabled selected hidden>
+            <option value="" hidden>
               --None--
             </option>
             <option value="1">Distributors</option>
@@ -78,15 +79,15 @@ const ContactForm = () => {
             required
             as="select"
             className="form-select"
+            defaultValue="Your Country"
+            onChange={(value)=>setPreNumPhone(value.target.value)}
           >
-            <option value="" disabled selected hidden>
+            <option value="" hidden>
               --None--
             </option>
-            <option value="1">Viet Nam</option>
-            <option value="2">Iceland</option>
-            <option value="3">Ukraine</option>
-            <option value="4">Thailand</option>
-            <option value="5">Saint Kitts and Nevis</option>
+            {data.map(item=><option key={item.code} value={item.dial_code}>
+              {item.name}
+            </option>)}
           </Form.Control>
           {validateFeedback("Country")}
         </Form.Group>
@@ -103,7 +104,7 @@ const ContactForm = () => {
         </Form.Group>
         <Form.Group style={{ width: "100%" }} className="phoneNumber ">
           <Form.Label htmlFor="phoneNumber">Phone Number</Form.Label>
-          <span className="numberPrefix phone-number" id="phone-number">+84</span>
+          <span className="numberPrefix phone-number" id="phone-number">{phone}</span>
           <Form.Control
             name="Phone number"
             id="phoneNumber"
