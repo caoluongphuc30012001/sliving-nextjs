@@ -6,10 +6,11 @@ import { graphql, useStaticQuery } from "gatsby";
 import bgSendMailSuccess from '../../../images/contact-page-v2/image121.jpg';
 import circleImg from '../../../images/contact-page-v2/circle.png';
 import vectorImg from '../../../images/contact-page-v2/Vector2.png';
-
+import data from "./../../../data/countrycode/countrycode.json"
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
+  const [ phone,setPreNumPhone] = useState('+84')
   const [formValue, setFormValue] = useState({
     name: "",
     type: "",
@@ -130,7 +131,7 @@ const ContactForm = () => {
               }))
             }
           >
-            <option value="" disabled selected hidden>
+            <option value="" hidden>
               --None--
             </option>
             <option value="1">Distributors</option>
@@ -147,21 +148,22 @@ const ContactForm = () => {
             as="select"
             className="form-select"
             value={formValue.country}
-            onChange={(e) =>
+            defaultValue="Your Country"
+            onChange={(e) => {
               setFormValue((formFields) => ({
                 ...formFields,
                 country: e.target.value,
-              }))
+              }));
+              setPreNumPhone(e.target.value)
+            }
             }
           >
-            <option value="" disabled selected hidden>
+            <option value="" hidden>
               --None--
             </option>
-            <option value="1">Viet Nam</option>
-            <option value="2">Iceland</option>
-            <option value="3">Ukraine</option>
-            <option value="4">Thailand</option>
-            <option value="5">Saint Kitts and Nevis</option>
+            {data.map(item=><option key={item.code} value={item.dial_code}>
+              {item.name}
+            </option>)}
           </Form.Control>
           {validateFeedback("Country")}
         </Form.Group>
@@ -185,9 +187,7 @@ const ContactForm = () => {
         </Form.Group>
         <Form.Group style={{ width: "100%" }} className="phoneNumber ">
           <Form.Label htmlFor="phoneNumber">Phone Number</Form.Label>
-          <span className="numberPrefix phone-number" id="phone-number">
-            +84
-          </span>
+          <span className="numberPrefix phone-number" id="phone-number">{phone}</span>
           <Form.Control
             name="phoneNumber"
             id="phoneNumber"
