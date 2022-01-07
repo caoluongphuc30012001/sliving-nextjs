@@ -3,27 +3,36 @@ import { Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { sendMail } from "../../../utils/ses-send-email";
 import { graphql, useStaticQuery } from "gatsby";
-import bgSendMailSuccess from '../../../images/contact-page-v2/image121.jpg';
-import circleImg from '../../../images/contact-page-v2/circle.png';
-import vectorImg from '../../../images/contact-page-v2/Vector2.png';
-import data from "./../../../data/countrycode/countrycode.json"
+import bgSendMailSuccess from "../../../images/contact-page-v2/image121.jpg";
+import circleImg from "../../../images/contact-page-v2/circle.png";
+import vectorImg from "../../../images/contact-page-v2/Vector2.png";
+import data from "./../../../data/countrycode/countrycode.json";
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
-  const [ phone,setPreNumPhone] = useState('+84')
+  const [phone, setPreNumPhone] = useState("+84");
   const [formValue, setFormValue] = useState({
     name: "",
-    type: "",
-    country: "",
+    type: {
+      id: "",
+      name: "",
+    },
+    country: {
+      id: "",
+      name: "",
+    },
     email: "",
-    phoneNumber: "",
+    phoneNumber: {
+      value: "",
+      prefix: phone,
+    },
     companyName: "",
     jobTitle: "",
     website: "",
   });
-  const [showMessage,setShowMessage] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
-  const queryGetEmail = QueryGetEmail();
+  const queryGetContentEmail = QueryGetContentEmail();
 
   //const [ setPreNumPhone] = useState('+84')
   const { t } = useTranslation();
@@ -38,13 +47,22 @@ const ContactForm = () => {
     );
   };
 
-  const formatFormValue = () => {
+  const resetForm = () => {
     setFormValue({
       name: "",
-      type: "",
-      country: "",
+      type: {
+        id: "",
+        name: "",
+      },
+      country: {
+        id: "",
+        name: "",
+      },
       email: "",
-      phoneNumber: "",
+      phoneNumber: {
+        value: "",
+        prefix: "+84",
+      },
       companyName: "",
       jobTitle: "",
       website: "",
@@ -75,11 +93,11 @@ const ContactForm = () => {
 
     const sendToCustomer = sendMail(
       formValue,
-      queryGetEmail?.EmailCustomer?.nodes[0]
+      queryGetContentEmail?.contentEmailCustomer?.nodes[0]
     ); // send mail to customer
     const sendToSale = sendMail(
       formValue,
-      queryGetEmail?.EmailSale?.nodes[0],
+      queryGetContentEmail?.contentEmailSale?.nodes[0],
       1
     ); // send mail to sale
     if (sendToCustomer && sendToSale) {
@@ -88,13 +106,13 @@ const ContactForm = () => {
         setShowMessage(false);
       }, 2000);
       setValidated(false);
-      formatFormValue()
+      setPreNumPhone("+84");
+      resetForm();
     }
   };
 
   return (
     <section className="contactUs d-flex justify-content-center mb-5">
-
       <Form noValidate validated={validated} onSubmit={handleOnSubmit}>
         <h4 className="text-center">{t(`Contact.Title`)}</h4>
         <p className="text-center">{t(`Contact.Action`)}</p>
@@ -123,19 +141,30 @@ const ContactForm = () => {
             required
             as="select"
             className="form-select"
-            value={formValue.type}
-            onChange={(e) =>
+            value={formValue.type.id}
+            onChange={(e) => {
+              const getNameTypesCustomer =
+                e.target.childNodes[e.target.selectedIndex].getAttribute(
+                  "data-name"
+                );
               setFormValue((formFields) => ({
                 ...formFields,
-                type: e.target.value,
-              }))
-            }
+                type: {
+                  id: e.target.value,
+                  name: getNameTypesCustomer,
+                },
+              }));
+            }}
           >
-            <option value="" hidden>
+            <option value="" hidden data-name="">
               --None--
             </option>
-            <option value="1">Distributors</option>
-            <option value="2">Intergration & Customizing Solutions</option>
+            <option value="1" data-name="Distributors">
+              Distributors
+            </option>
+            <option value="2" data-name="Intergration & Customizing Solutions">
+              Intergration & Customizing Solutions
+            </option>
           </Form.Control>
           {validateFeedback("Types of Customer")}
         </Form.Group>
@@ -147,23 +176,39 @@ const ContactForm = () => {
             required
             as="select"
             className="form-select"
-            value={formValue.country}
             defaultValue="Your Country"
+            value={formValue.country.id}
             onChange={(e) => {
+              const getNameCountry =
+                e.target.childNodes[e.target.selectedIndex].getAttribute(
+                  "data-name"
+                );
               setFormValue((formFields) => ({
                 ...formFields,
-                country: e.target.value,
+                country: {
+                  id: e.target.value,
+                  name: getNameCountry,
+                },
+                phoneNumber: {
+                  ...formValue.phoneNumber,
+                  prefix: e.target.value,
+                },
               }));
-              setPreNumPhone(e.target.value)
-            }
-            }
+              setPreNumPhone(e.target.value);
+            }}
           >
-            <option value="" hidden>
+            <option data-name="" value="" hidden>
               --None--
             </option>
-            {data.map(item=><option key={item.code} value={item.dial_code}>
-              {item.name}
-            </option>)}
+            {data.map((item) => (
+              <option
+                data-name={item.name}
+                key={item.code}
+                value={item.dial_code}
+              >
+                {item.name}
+              </option>
+            ))}
           </Form.Control>
           {validateFeedback("Country")}
         </Form.Group>
@@ -187,7 +232,9 @@ const ContactForm = () => {
         </Form.Group>
         <Form.Group style={{ width: "100%" }} className="phoneNumber ">
           <Form.Label htmlFor="phoneNumber">Phone Number</Form.Label>
-          <span className="numberPrefix phone-number" id="phone-number">{phone}</span>
+          <span className="numberPrefix phone-number" id="phone-number">
+            {phone}
+          </span>
           <Form.Control
             name="phoneNumber"
             id="phoneNumber"
@@ -197,11 +244,14 @@ const ContactForm = () => {
             onInput={handleValidatorNumber}
             required
             aria-describedby="phone-number"
-            value={formValue.phoneNumber}
+            value={formValue.phoneNumber.value}
             onChange={(e) =>
               setFormValue((formFields) => ({
                 ...formFields,
-                phoneNumber: e.target.value,
+                phoneNumber: {
+                  ...formValue.phoneNumber,
+                  value: e.target.value,
+                },
               }))
             }
           />
@@ -264,33 +314,31 @@ const ContactForm = () => {
         </button>
       </Form>
 
-       <div className={showMessage ? "message-notify open":"message-notify"}>
-         <div className="bg-message-notify" style={{backgroundImage:`url(${bgSendMailSuccess})`}}>
-              <div className="message-notify-content">
-                  <div className="message-notify-icon">
-                      <img className='img-vector' src={vectorImg} alt="vectorImg" />
-                      <img className="img-circle" src={circleImg} alt="circleImg" />
-                  </div>
-                  <div className="message-notify-info">
-                    {t(`thanks_submitform`)}
-                  </div>
-                  <div className="message-notify-line">
-
-                  </div>
-              </div>
-              
+      <div className={showMessage ? "message-notify open" : "message-notify"}>
+        <div
+          className="bg-message-notify"
+          style={{ backgroundImage: `url(${bgSendMailSuccess})` }}
+        >
+          <div className="message-notify-content">
+            <div className="message-notify-icon">
+              <img className="img-vector" src={vectorImg} alt="vectorImg" />
+              <img className="img-circle" src={circleImg} alt="circleImg" />
+            </div>
+            <div className="message-notify-info">{t(`thanks_submitform`)}</div>
+            <div className="message-notify-line"></div>
           </div>
-       </div>       
+        </div>
+      </div>
     </section>
   );
 };
 
 export default ContactForm;
 
-const QueryGetEmail = () => {
+const QueryGetContentEmail = () => {
   return useStaticQuery(graphql`
     {
-      EmailCustomer: allMarkdownRemark(
+      contentEmailCustomer: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/sendmail/" }
           frontmatter: { typeEmail: { eq: 0 } }
@@ -299,17 +347,11 @@ const QueryGetEmail = () => {
         nodes {
           html
           frontmatter {
-            typeEmail
-            imgBaner {
-              publicURL
-            }
-            imgLogo {
-              publicURL
-            }
+            emailForSale
           }
         }
       }
-      EmailSale: allMarkdownRemark(
+      contentEmailSale: allMarkdownRemark(
         filter: {
           fileAbsolutePath: { regex: "/sendmail/" }
           frontmatter: { typeEmail: { eq: 1 } }
@@ -318,13 +360,7 @@ const QueryGetEmail = () => {
         nodes {
           html
           frontmatter {
-            typeEmail
-            imgBaner {
-              publicURL
-            }
-            imgLogo {
-              publicURL
-            }
+            emailForSale
           }
         }
       }

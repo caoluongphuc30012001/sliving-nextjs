@@ -1,52 +1,55 @@
-const {Credentials} = require('aws-sdk');
-const AWS = require('aws-sdk');
+const { Credentials } = require("aws-sdk");
+const AWS = require("aws-sdk");
 
-const accessKeyId = 'AKIA4P4SIDBG2JAJ3BVY';
-const secretAccessKey = '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';
-const region = 'us-east-1';
-const emailForSale = 'hoangph@sunshinegroup.vn';
-const host = 'https://sliving.vn/';
+const accessKeyId = process.env.accessKeyId;
+const secretAccessKey = process.env.secretAccessKey;
+const region = process.env.region;
 
-
-export const sendMail = async (formData,data,typeEmail = 0) => {
-  // typeEmail = 0 => Gửi cho người dùng, 
+export const sendMail = async (formData, data, typeEmail = 0) => {
+  // typeEmail = 0 => Gửi cho người dùng,
   // typeEmail = 1 => gửi cho sale
 
-  const {name, email,type,country,phoneNumber,companyName,jobTitle,website} = formData;
+  const {
+    name,
+    email,
+    type,
+    country,
+    phoneNumber,
+    companyName,
+    jobTitle,
+    website,
+  } = formData;
 
-  const credentials = new Credentials({accessKeyId, secretAccessKey});
+  const credentials = new Credentials({ accessKeyId, secretAccessKey });
   const ses = new AWS.SES({
-    apiVersion: '2012-10-17',
+    apiVersion: "2012-10-17",
     credentials,
     region,
   });
-  
-  const {html,frontmatter} = data;
-  const {imgBaner,imgLogo} = frontmatter;
+
+  const { html, frontmatter } = data;
   let htmlData = html;
   let emailSent;
 
   //nôi dung mail gửi cho khách hàng
-  if(typeEmail === 0){
+  if (typeEmail === 0) {
     emailSent = formData.email;
-    let urlImg = host+imgBaner.publicURL;
-    let urlLogo = host+imgLogo.publicURL;
-
-    htmlData = htmlData.replaceAll('$name',name);
-    htmlData = htmlData.replaceAll('$img',`<img src="${urlImg}" alt="banner" />`);
-    htmlData = htmlData.replaceAll('$logo',`<img src="${urlLogo}" alt="logo" />`);
-  }else{ // nôi dung mail gửi cho sale
-    emailSent = emailForSale;
-    htmlData = htmlData.replaceAll('$name',name);
-    htmlData = htmlData.replaceAll('$type',type);
-    htmlData = htmlData.replaceAll('$nation',country);
-    htmlData = htmlData.replaceAll('$email',email);
-    htmlData = htmlData.replaceAll('$phone',phoneNumber);
-    htmlData = htmlData.replaceAll('$company',companyName);
-    htmlData = htmlData.replaceAll('$position',jobTitle);
-    htmlData = htmlData.replaceAll('$web',website);
+    htmlData = htmlData.replaceAll("$name", name);
+  } else {
+    // nôi dung mail gửi cho sale
+    emailSent = frontmatter.emailForSale;
+    htmlData = htmlData.replaceAll("$name", name);
+    htmlData = htmlData.replaceAll("$type", type.name);
+    htmlData = htmlData.replaceAll("$nation", country.name);
+    htmlData = htmlData.replaceAll("$email", email);
+    htmlData = htmlData.replaceAll(
+      "$phone",
+      phoneNumber.prefix + phoneNumber.value
+    );
+    htmlData = htmlData.replaceAll("$company", companyName);
+    htmlData = htmlData.replaceAll("$position", jobTitle);
+    htmlData = htmlData.replaceAll("$web", website);
   }
-
 
   const params = {
     Destination: {
@@ -57,20 +60,20 @@ export const sendMail = async (formData,data,typeEmail = 0) => {
       Body: {
         Html: {
           // HTML Format of the email
-          Charset: 'UTF-8',
-          Data: htmlData
+          Charset: process.env.charset,
+          Data: htmlData,
         },
         Text: {
-          Charset: 'UTF-8',
-          Data: '',
+          Charset: process.env.charset,
+          Data: "",
         },
       },
       Subject: {
-        Charset: 'UTF-8',
-        Data: 'From Contact Form',
+        Charset: process.env.charset,
+        Data: process.env.subject,
       },
     },
-    Source: 'no-reply@unicloud.com.vn',
+    Source: process.env.source,
   };
 
   return ses
