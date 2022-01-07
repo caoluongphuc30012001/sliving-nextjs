@@ -6,16 +6,13 @@ import FooterV2 from "./footer/footer-new";
 
 import Seo from "@components/seo";
 
-import "../i18n/i18n";
-import "./style.scss";
-
 function LayoutSmartHome({ children, title }) {
   return (
     <>
       <Seo title={title} />
       <div className="page">
         <NavbarSmartHome />
-        <main style={{ marginTop: "81px" }}>{children}</main>
+        <main>{children}</main>
         <FooterV2 />
         <ButtonRounded />
       </div>

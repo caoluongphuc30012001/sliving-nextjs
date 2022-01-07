@@ -49,7 +49,7 @@ export default function NavbarLighting() {
               id="nav-bar"
             >
               <GatsbyLink to="/" className="logo nav-logo nav-brand" aria-label="Link to home">
-                <Image className="img-obj-cover" src={logo} alt="sliving" />
+                <Image className="img-obj-cover" width={204} src={logo} alt="sliving" />
               </GatsbyLink>
               <Navbar.Collapse
                 id="responsive-navbar-nav"

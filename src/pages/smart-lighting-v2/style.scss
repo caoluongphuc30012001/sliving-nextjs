@@ -1,5 +1,6 @@
 @import "./../../style/abstracts/_variables.scss";
 #smartLighting {
+  margin-top: 101px;
   header {
     @keyframes rockit {
       0% {
@@ -22,7 +23,6 @@
       background-size: cover;
       width: 100%;
       height: 700px;
-      margin-top: 80px;
       animation: rockit 2.8s ease infinite alternate;
       .container {
         position: relative;
