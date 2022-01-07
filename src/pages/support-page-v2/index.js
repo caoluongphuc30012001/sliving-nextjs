@@ -5,7 +5,7 @@ import ListSupports from "./body/technicalSolution";
 const IndexPage = ({ pageContext }) => {
   return (
     <LayoutSmartHome isMainPage>
-      <ListSupports data={pageContext?.data?.data} />
+      <ListSupports data={[]} />
     </LayoutSmartHome>
   );
 };

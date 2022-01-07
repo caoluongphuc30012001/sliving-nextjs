@@ -210,7 +210,7 @@ const ListSupports = ({ data }) => {
   }
   return (
     <div>
-      <div className="banner"></div>
+      <div className="banner container-v2"></div>
       <div className="support-pages big-container fluid container-wrap">
         <Row>
           <Col sm={5} xs={12}>
@@ -576,8 +576,8 @@ const ListSupports = ({ data }) => {
         </Row>
       </div>
 
-      <div class="bot-banner">
-        <img class="bot-banner-img" src={BotBanner} alt="bottom banner" />
+      <div className="bot-banner">
+        <img className="bot-banner-img" src={BotBanner} alt="bottom banner"/>
       </div>
     </div>
   );

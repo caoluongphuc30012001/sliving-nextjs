@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby";
+import favicon from "../images/logo/logo-small.svg"
 function SEO({ description, lang, meta, image: metaImage, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -30,8 +30,23 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
       htmlAttributes={{
         lang,
       }}
+     
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel:'preload',href: require('../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf'), as:'font'  ,type:"font/woff2" ,crossorigin:''
+        },
+        {
+          rel:"icon" ,href:favicon, type:"image/x-icon"
+        },
+       {rel:"shortcut icon", type:"image/svg", href:favicon}
+       ,{rel:"preconnect", href:"https://fonts.gstatic.com"},
+      {
+        href:"https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap", rel:"stylesheet"
+      }
+      ]}
+     
       meta={[
         {
           name: `description`,

@@ -55,8 +55,8 @@ const ContentDetail = ({ pageContext }) => {
         </p>
       </div>
       <div className="footerContent"><span>Share:</span><span className="icon">f</span><div>45</div></div>
-      <div class="bot-banner" >
-        <img class="bot-banner-img" src={BotBanner} alt="bottom banner" />
+      <div className="bot-banner" >
+        <img className="bot-banner-img" src={BotBanner} alt="bottom banner" />
       </div>
     </section>
   );

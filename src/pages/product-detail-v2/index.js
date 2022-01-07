@@ -15,6 +15,8 @@ import BuildThumbs from "./thumb";
 import i18next from 'i18next';
 
 import { PortfolioConsumer } from '@context/context';
+import { useTranslation } from 'react-i18next';
+
 
 const handelFilter = (dataCurrent) => {
     if (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) {
@@ -27,6 +29,7 @@ const IndexPage = ({ pageContext }) => {
     const lngCurrent = i18next.language;
     const [dataCurrent, setDataCurrent] = useState();
     const { data } = pageContext;
+    const { t } = useTranslation();
 
 
     const filterPostByLgn = (data) => {
@@ -241,14 +244,14 @@ const IndexPage = ({ pageContext }) => {
     const BuildHeader = () => {
         return (<section className="container-wrap product-header-page">
             <Row className="header-page-wrap">
-                <Col xs={12} md={6}>{buildThumbsProduct}</Col>
-                <Col xs={12} md={6}><BuildProductInfos /></Col>
+                <Col xs={12} lg={6}>{buildThumbsProduct}</Col>
+                <Col xs={12} lg={6}><BuildProductInfos /></Col>
             </Row>
         </section>)
     }
     return (
      <PortfolioConsumer>
-         {context => (<LayoutSmartHome title={context?.dataTitles?.dataTitles.product_page}>
+         {context => (<LayoutSmartHome title={t(`${context?.dataTitles?.dataTitles.product_page}`)}>
             <BuildHeader />
             {dataCurrent?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} /></section>)}
             {dataProductFeature && (< SectionFeatureProduct dataProductHot={dataProductFeature} />)}

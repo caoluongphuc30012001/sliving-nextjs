@@ -25,6 +25,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import {PortfolioConsumer} from "@context/context";
 
+
 import "./style.scss";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
@@ -274,7 +275,7 @@ const IndexPage = () => {
   return (
     <PortfolioConsumer>
       {context => {
-        return ((<LayoutNew title={context?.dataTitles?.dataTitles?.home_page}>
+        return ((<LayoutNew title={t(`${context?.dataTitles?.dataTitles?.home_page}`)}>
         <header className="header-main-page container-v2">
           <BuildHeader />
         </header>

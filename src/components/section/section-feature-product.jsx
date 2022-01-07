@@ -84,7 +84,7 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
         prevArrow: <PrevArrow />
     };
     return (
-        <section className="container-v2 section-prod-feature">
+        <section className="container-wrap section-prod-feature">
             <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>
             <div className="prod-line"><img src={lineImg} alt="" /></div>
             <Slider {...settings}>
