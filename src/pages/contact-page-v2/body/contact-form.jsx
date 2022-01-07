@@ -272,7 +272,7 @@ const ContactForm = () => {
                       <img className="img-circle" src={circleImg} alt="circleImg" />
                   </div>
                   <div className="message-notify-info">
-                    {t(`tks_submitform`)}
+                    {t(`thanks_submitform`)}
                   </div>
                   <div className="message-notify-line">
 

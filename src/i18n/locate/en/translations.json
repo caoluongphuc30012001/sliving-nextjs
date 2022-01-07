@@ -529,5 +529,17 @@
   "subscribe": "Subscribe",
   "products_desc": "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...",
   "learn_more": "Learn more",
-  "tks_submitform":"Thank you so much for being so interested in our products and services."
+  "thanks_submitform":"Thank you so much for being so interested in our products and services.",
+  "dataTitles": {
+    "home_page": "Sliving - Technology Era",
+    "product_page": "Products Sliving - IoT",
+    "smart_home_page": "Technology IoT - Sliving",
+    "support_page": "Technical Assistance",
+    "smart_lighting": "Light Smart Solution",
+    "smart_security": "Smart Security Solution",
+    "smart_parking": "Smart Parking Solution",
+    "smart_home": "Smart technology solutions - IoT",
+    "reason_page":"5 reasons you should choose Sliving",
+    "contact_page":"Contact Sliving"
+  }
 }

@@ -81,7 +81,8 @@
     .nav-logo {
       //  margin-right: 241px;
       //min-width: 253px;
-      width: fit-content;
+      width: 204px;
+      height: 50px;
     }
 
     .nav-desktop {
@@ -238,7 +239,7 @@
     background-color: #ffffff;
     position: fixed;
     top: 0;
-    box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+    box-shadow: 0px 8px 28px -6px rgb(24 39 75 / 12%), 0px 18px 88px -4px rgb(227 227 227 / 14%)
   }
 }
 
@@ -3664,6 +3665,7 @@ a.btn-link-a {
 .card-product-v2 {
   max-width: 370px;
   max-height: 515px;
+  margin: auto;
   border-radius: 16px;
   width: 100%;
   height: 100%;
@@ -3784,10 +3786,10 @@ a.btn-link-a {
   a {
     text-decoration: none;
   }
-  .slick-slide {
-    margin: 0 16px;
-    max-width: 370px;
-  }
+  // .slick-slide {
+  //   margin: 0 16px;
+  //   max-width: 370px;
+  // }
 }
 
 /*9. Carousel product v2*/
@@ -4275,6 +4277,7 @@ a.btn-link-a {
   left: 0;
   right: 0;
   z-index: 1050;
+  box-shadow: 0px 1px 6px #c1c1c1;
   .nav-mobile {
     position: absolute;
     min-width: 300px;
@@ -4393,5 +4396,39 @@ a.btn-link-a {
         max-width: 345px;
       }
     }
+  }
+}
+
+
+/*---------------------loader page---------------------------------*/
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  z-index: 1051;
+}
+
+.loader {
+  border: 5px solid #e3e3e3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

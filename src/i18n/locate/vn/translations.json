@@ -528,5 +528,17 @@
   "subscribe": "Theo dõi",
   "products_desc": "Công tắc điều khiển từ xa Sliving Smart Switch sử dụng kết nối Wifi linh hoạt và tiện lợi, phần mềm đi kèm kết nối với thiết bị chỉ qua vài thao tác thiết lập đơn giản là có thể sử dụng được, phù hợp với các ứng dụng. Với thiết bị, nó có thể được sử dụng trong một vài bước đơn giản, thích ứng với các ứng dụng điều khiển từ xa qua Internet, IoT,",
   "learn_more": "Xem thêm",
-  "tks_submitform":"Cảm ơn bạn rất nhiều vì đã quan tâm đến sản phẩm và dịch vụ của chúng tôi."
+  "thanks_submitform":"Cảm ơn bạn rất nhiều vì đã quan tâm đến sản phẩm và dịch vụ của chúng tôi.",
+  "dataTitles": {
+    "home_page": "Sliving - Kỷ nguyên công nghệ",
+    "product_page": "Sản phẩm Sliving - IoT",
+    "smart_home_page": "Công nghệ IoT - Sliving",
+    "support_page": "Hỗ trợ kỹ thuật",
+    "smart_lighting": "Giải pháp ánh sáng",
+    "smart_security": "Giải pháp an ninh",
+    "smart_parking": "Giải pháp an toàn bãi đổ xe",
+    "smart_home": "Giải pháp công nghệ thông minh - IoT",
+    "reason_page":"5 lý do bạn nên chọn Sliving",
+    "contact_page":"Liên hệ Sliving"
+  }
 }

@@ -79,58 +79,63 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   }
 `);
-  const querySupportPage = await graphql(
-    `
-  {
-    dataTechnicalAnswer: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            description
-            details
-            title
-            type
-            date
-            subtitle
-            slug
-          }
-          html
-        }
-      }
-    }
-  }
-  `
-  );
+const querySupportPage=[];
+  // const querySupportPage = await graphql(
+  //   `
+  // {
+  //   dataTechnicalAnswer: allMarkdownRemark(
+  //     filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
+  //   ) {
+  //     edges {
+  //       node {
+  //         frontmatter {
+  //           description
+  //           details
+  //           title
+  //           type
+  //           date
+  //           subtitle
+  //           slug
+  //         }
+  //         html
+  //       }
+  //     }
+  //   }
+  // }
+  // `
+  // );
 const arrLng = await getLng();
 arrLng.map((lng) => {
   createPage({
     path: `/${lng}/`,
     component: homePage,
     });
-  createPage({
-    path: `/${lng}/support/`,
-    component: pagesSupport,
-    context: {
-      data: querySupportPage
+    createPage({
+      path: `/${lng}/support/`,
+      component: pagesSupport,
+      context: {
+        data: querySupportPage
+      }
+    });
+    if(querySupportPage.length > 0){
+      
+      createPage({
+        path: `/${lng}/support/detail`,
+        component: detailSupport,
+        context: {
+          data: querySupportPage
+        }
+      
+      });
+      
     }
-  });
-  createPage({
-    path: `/${lng}/support/detail`,
-    component: detailSupport,
-    context: {
-      data: querySupportPage
-    }
-  
-  });
-  createPage({
-    path: `/${lng}/contact-page`,
-    component: contactComponent,
-    context: {
-      data: querySupportPage
-    }
-  });
+    createPage({
+      path: `/${lng}/contact-page`,
+      component: contactComponent,
+      context: {
+        data: querySupportPage
+      }
+    });
   createPage({
     path: `/${lng}/smart-home/`,
     component: smartHomeComponent,

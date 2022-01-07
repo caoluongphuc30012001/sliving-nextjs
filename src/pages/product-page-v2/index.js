@@ -36,8 +36,12 @@ import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 import { graphql } from "gatsby";
 import { useTranslation } from 'react-i18next';
 
+import { PortfolioConsumer } from '@context/context';
+
+
 import "./style.scss";
 import "../smart-home-page-v2/style.scss";
+
 SwiperCore.use([Navigation, Pagination,]);
 const IndexPage = ({ data }) => {
     const { t } = useTranslation();
@@ -149,7 +153,8 @@ const IndexPage = ({ data }) => {
 
     const dataProdHot = data?.allMarkdownRemark?.edges || [];
     return (
-        <LayoutSmartHome>
+       <PortfolioConsumer>
+           {context => ( <LayoutSmartHome title={t(`${context?.dataTitles?.dataTitles.product_page}`)}>
             <div className="page-product-v2">
                 <BuildHeader />
                 <ThreeElementVertical dataProdHot={dataProdHot} />
@@ -158,7 +163,8 @@ const IndexPage = ({ data }) => {
                 {buildSlideProduct}
                 <BuildBannerRevolution />
             </div>
-        </LayoutSmartHome>
+        </LayoutSmartHome>)}
+       </PortfolioConsumer>
     );
 }
 

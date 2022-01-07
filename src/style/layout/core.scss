@@ -1,51 +1,4 @@
-.fs-12 {
-    font-size: 12px;
-    line-height: 22px;
-    letter-spacing: 0.3px;
-}
 
-.fs-14 {
-    font-size: 14px;
-    line-height: 24px;
-}
-
-.fs-16 {
-    font-size: 16px;
-}
-
-.fs-18 {
-    font-size: 18px;
-}
-
-.fs-20 {
-    font-size: 20px;
-}
-
-.fs-24 {
-    font-size: 24px;
-}
-
-.fs-32 {
-    font-size: 32px;
-}
-
-.fs-34 {
-    font-size: 34px;
-}
-
-.fs-48 {
-    font-size: 48px;
-}
-
-.fs-64 {
-    font-size: 64px;
-    line-height: 74px;
-    letter-spacing: -1px;
-}
-
-.fw-bold {
-    font-weight: bold;
-}
 
 /*--------------------------------------------margin----------------------------------*/
 .mt-8 {
@@ -55,6 +8,7 @@
     margin-top: 58px;
 }
 
+/*----------------------------------------Flexbox (Flexible Box)-------------------------------------------------*/
 .d-flex {
     display: flex;
 }
@@ -77,6 +31,8 @@
     justify-content: center;
 }
 
+/*---------------------------------------------------Text CSS--------------------------------------------------------------------------------*/
+
 .txt-hover {
     cursor: pointer;
 
@@ -90,9 +46,11 @@
     color: #1a7dd8;
 }
 
-.btn-pointer {
-    cursor: pointer;
+.fw-bold {
+    font-weight: bold;
 }
+
+/*--------------------------------------------------Position custom--------------------------------------------------------------------------*/
 
 .position-fixed {
     position: fixed;
@@ -101,6 +59,8 @@
     right: 0%;
     z-index: 999999;
 }
+
+/*---------------------------------------------------Layout container--------------------------------------------------------------------------------*/
 .container-wrap {
     margin-left: 135px;
     margin-right: 135px;
@@ -117,7 +77,7 @@
     margin-right: auto;
 }
 
-/*-----coppy text slick slide----*/
+/*-----------------------------------------Slick slide---------------------------------------------------------------------------------------*/
 .slick-slider {
     -webkit-user-select: text;
     -khtml-user-select: text;
@@ -134,60 +94,30 @@
     user-select: none;
 }
 
-@media (max-width: 1024px) {
-    .container-wrap,
-    .leaflet-container {
-        max-width: 970px;
-    }
-    .fs-64 {
-        font-size: 48px;
-    }
-    .fs-48 {
-        font-size: 32px;
-        h3 {
-            font-size: 32px;
-        }
-    }
-    .fs-16 {
-        font-size: 12px;
-    }
+
+
+/*---------------------------------------------------Element Tag------------------------------------------------------------------------- */
+
+img {
+    max-width: 100% !important;
 }
-@media (max-width: 768px) {
-    .container-wrap,
-    .leaflet-container {
-        max-width: 700px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .fs-20 {
-        font-size: 14px;
-    }
-    .fs-32 {
-        font-size: 24px;
-    }
+
+a {
+    text-decoration: none !important;
 }
-@media (max-width: 576px) {
-    .container-wrap,
-    .leaflet-container {
-        max-width: 500px;
-    }
-    .fs-32 {
-        font-size: 20px;
-    }
+
+.gatsby-image-wrapper {
+    height: 100%;
 }
 
 .has-image[data-image-fit="contain"] .fancybox__image {
     width: 500px !important;
 }
-.gatsby-image-wrapper {
-    height: 100%;
-}
 
-img {
-    max-width: 100% !important;
-    //  height: auto !important;
+/*-----------------------------------------------------Responsive------------------------------------------------------------------------ */
+@media (max-width: 1024px) {
 }
-
-a {
-    text-decoration: none !important;
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
 }
