@@ -3,7 +3,6 @@ import "./style.scss"
 
 const LoadingPage = ({time}) => {
   const [isLoading, setIsLoading] = useState(true);
-  const timeOut = time || 500;
   const handle = () => {
     console.log("abc");
     setIsLoading(false)

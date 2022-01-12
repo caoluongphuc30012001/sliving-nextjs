@@ -15,7 +15,6 @@ import BuildThumbs from "./thumb";
 import i18next from 'i18next';
 
 import { PortfolioConsumer } from '@context/context';
-import { useTranslation } from 'react-i18next';
 
 
 const handelFilter = (dataCurrent) => {
@@ -29,7 +28,6 @@ const IndexPage = ({ pageContext }) => {
     const lngCurrent = i18next.language;
     const [dataCurrent, setDataCurrent] = useState();
     const { data } = pageContext;
-    const { t } = useTranslation();
 
 
     const filterPostByLgn = (data) => {
@@ -251,7 +249,7 @@ const IndexPage = ({ pageContext }) => {
     }
     return (
      <PortfolioConsumer>
-         {context => (<LayoutSmartHome title={t(`${context?.dataTitles?.dataTitles.product_page}`)}>
+         {context => (<LayoutSmartHome  title={dataCurrent?.frontmatter?.title} description={dataCurrent?.frontmatter?.details &&dataCurrent?.frontmatter?.details[0]} metaImage={dataCurrent?.frontmatter.imgSrcProduct &&dataCurrent?.frontmatter.imgSrcProduct.publicURL} >
             <BuildHeader />
             {dataCurrent?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} /></section>)}
             {dataProductFeature && (< SectionFeatureProduct dataProductHot={dataProductFeature} />)}

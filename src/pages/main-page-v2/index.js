@@ -275,7 +275,7 @@ const IndexPage = () => {
   return (
     <PortfolioConsumer>
       {context => {
-        return ((<LayoutNew title={t(`${context?.dataTitles?.dataTitles?.home_page}`)}>
+        return ((<LayoutNew title={t(`${context?.dataTitles?.dataTitles?.home_page.title}`)}>
         <header className="header-main-page container-v2">
           <BuildHeader />
         </header>

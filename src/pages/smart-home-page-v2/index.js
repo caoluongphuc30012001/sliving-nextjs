@@ -12,12 +12,15 @@ import LayoutSmartHome from "@components/layout-smart-home";
 
 import { PortfolioConsumer } from "@context/context";
 
+import { useTranslation } from "react-i18next";
+
 import "./style.scss";
 
 const HomePageNew = ({ pageContext }) => {
+  const { t } = useTranslation();
   return (
    <PortfolioConsumer>
-      {context => (<LayoutSmartHome pageContext={pageContext} title={context?.dataTitles?.dataTitles.smart_home_page}>
+      {context => (<LayoutSmartHome  pageContext={pageContext} title={t(`${context?.dataTitles?.dataTitles.smart_home_page.title}`)}>
       <div className="smart-home-page-v2">
         <NewSectionHeader />
         <NewSectionApp />

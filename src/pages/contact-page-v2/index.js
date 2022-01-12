@@ -23,7 +23,7 @@ const ContactUs = (props) => {
     return (
       <PortfolioConsumer>
         {(context) => (
-          <LayoutSmartHome title={context?.dataTitles?.dataTitles.contact_page}>
+          <LayoutSmartHome title={context?.dataTitles?.dataTitles.contact_page.title}>
             <BuildBodyContact />
           </LayoutSmartHome>
         )}
@@ -34,7 +34,7 @@ const ContactUs = (props) => {
     return (
       <PortfolioConsumer>
         {(context) => (
-          <LayoutLighting title={context?.dataTitles?.dataTitles.contact_page}>
+          <LayoutLighting title={context?.dataTitles?.dataTitles.contact_page.title}>
             <BuildBodyContact />
           </LayoutLighting>
         )}
@@ -44,7 +44,7 @@ const ContactUs = (props) => {
   return (
     <PortfolioConsumer>
       {(context) => (
-        <LayoutNew title={context?.dataTitles?.dataTitles.contact_page}>
+        <LayoutNew title={context?.dataTitles?.dataTitles.contact_page.title}>
           <BuildBodyContact />
         </LayoutNew>
       )}

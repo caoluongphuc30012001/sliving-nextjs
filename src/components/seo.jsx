@@ -1,9 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import favicon from "../images/logo/logo-small.svg"
-function SEO({ description, lang, meta, image: metaImage, title }) {
+import favicon from "../images/logo/logo-small.svg";
+import banner from "@images/main-page-v2/header-top-4.jpg";
+import font from "../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf";
+function SEO({ url,description, lang, metaImage, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,103 +20,57 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         }
       }
     `
-  )
-  const metaDescription = description || site.siteMetadata.description
-  const image =
-    metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null
-
+  );
+  const metaDescription = description || site.siteMetadata.description;
+  const image = metaImage || banner;
+  const metaUrl = url || site.siteMetadata.siteUrl;
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-     
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={[
-        {
-          rel:'preload',href: require('../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf'), as:'font'  ,type:"font/woff2" ,crossorigin:''
-        },
-        {
-          rel:"icon" ,href:favicon, type:"image/x-icon"
-        },
-       {rel:"shortcut icon", type:"image/svg", href:favicon}
-       ,{rel:"preconnect", href:"https://fonts.gstatic.com"},
-      {
-        href:"https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap", rel:"stylesheet"
-      }
-      ]}
-     
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-       
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          metaImage
-            ? [
-                {
-                  property: "og:image",
-                  content: image,
-                },
-                {
-                  property: "og:image:width",
-                  content: metaImage.width,
-                },
-                {
-                  property: "og:image:height",
-                  content: metaImage.height,
-                },
-                {
-                  name: "twitter:card",
-                  content: "summary_large_image",
-                },
-              ]
-            : [
-                {
-                  name: "twitter:card",
-                  content: "summary",
-                },
-              ]
-        )
-        .concat(meta)}
-    />
-  )
+    >
+      <link
+        rel="preload"
+        href={font}
+        as="font"
+        crossorigin="anonymous"
+        type="truetype"
+      />
+      <link href={favicon} rel="shortcut icon"></link>
+      <title>{title}</title>
+      <link rel="canonical" href={site.siteMetadata.siteUrl} />
+      <meta name="description" content={metaDescription} />
+      <meta name="image" content={image} />
+      <meta name="keywords" content={site.siteMetadata.keywords} />
+
+      {/* <!-- Google / Search Engine Tags --> */}
+      <meta itemprop="name" content="Career Unicloud" />
+      <meta itemprop="description" content={metaDescription} />
+      <meta itemprop="image" content={image} />
+
+      {/* <!-- Facebook Meta Tags --> */}
+      <meta property="og:url" content={metaUrl} />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={image} />
+
+      {/* <!-- Twitter Meta Tags --> */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={"Unicloud"} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={image} />
+    </Helmet>
+  );
 }
 
 SEO.defaultProps = {
-  lang: `vi`,
+  lang: `vn`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
@@ -126,6 +82,6 @@ SEO.propTypes = {
     height: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
   }),
-}
+};
 
-export default SEO
+export default SEO;
