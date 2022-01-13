@@ -4,7 +4,6 @@ import "./style.scss"
 const LoadingPage = ({time}) => {
   const [isLoading, setIsLoading] = useState(true);
   const handle = () => {
-    console.log("abc");
     setIsLoading(false)
   }
     useEffect(() => {

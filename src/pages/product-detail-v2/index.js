@@ -249,7 +249,7 @@ const IndexPage = ({ pageContext }) => {
     }
     return (
      <PortfolioConsumer>
-         {context => (<LayoutSmartHome  title={dataCurrent?.frontmatter?.title} description={dataCurrent?.frontmatter?.details &&dataCurrent?.frontmatter?.details[0]} metaImage={dataCurrent?.frontmatter.imgSrcProduct &&dataCurrent?.frontmatter.imgSrcProduct.publicURL} >
+         {context => (<LayoutSmartHome  title={dataCurrent && dataCurrent?.frontmatter?.title} description={dataCurrent?.frontmatter?.details &&dataCurrent?.frontmatter?.details.toString().slice(0,120)} metaImage={dataCurrent?.frontmatter.imgSrcProduct &&dataCurrent?.frontmatter.imgSrcProduct.publicURL} >
             <BuildHeader />
             {dataCurrent?.html && (<section className="container-wrap product-info-v2"> <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} /></section>)}
             {dataProductFeature && (< SectionFeatureProduct dataProductHot={dataProductFeature} />)}

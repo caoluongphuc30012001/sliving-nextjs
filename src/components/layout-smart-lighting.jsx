@@ -9,16 +9,19 @@ import Seo from "@components/seo";
 import "../i18n/i18n";
 import "./style.scss";
 
-function LayoutSmartLighting({  children, title , url,description ,metaImage}) {
+function LayoutSmartLighting({ children, title, url, description, metaImage }) {
   return (
     <>
-      <Seo title={title} url={url} description={description} metaImage={metaImage}  />
-      <div className="page">
-        <NavbarLighting />
-        <main>{children}</main>
-        <FooterV2 />
-        <ButtonRounded />
-      </div>
+      <Seo
+        title={title}
+        url={url}
+        description={description}
+        metaImage={metaImage}
+      />
+      <NavbarLighting />
+      <main>{children}</main>
+      <FooterV2 />
+      <ButtonRounded />
     </>
   );
 }

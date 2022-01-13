@@ -2,10 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import favicon from "../images/logo/logo-small.svg";
+
+import favicon from "@images/logo/logo-small.svg";
 import banner from "@images/main-page-v2/header-top-4.jpg";
+
 import font from "../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf";
-function SEO({ url,description, lang, metaImage, title }) {
+
+import i18next from "i18next";
+function Seo({ url,description, metaImage, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,6 +25,7 @@ function SEO({ url,description, lang, metaImage, title }) {
       }
     `
   );
+  const lang = i18next.language; 
   const metaDescription = description || site.siteMetadata.description;
   const image = metaImage || banner;
   const metaUrl = url || site.siteMetadata.siteUrl;
@@ -45,7 +50,7 @@ function SEO({ url,description, lang, metaImage, title }) {
       <meta name="keywords" content={site.siteMetadata.keywords} />
 
       {/* <!-- Google / Search Engine Tags --> */}
-      <meta itemprop="name" content="Career Unicloud" />
+      <meta itemprop="name" content="Sliving - IoT" />
       <meta itemprop="description" content={metaDescription} />
       <meta itemprop="image" content={image} />
 
@@ -58,7 +63,7 @@ function SEO({ url,description, lang, metaImage, title }) {
 
       {/* <!-- Twitter Meta Tags --> */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={"Unicloud"} />
+      <meta name="twitter:creator" content={"unicloud"} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={image} />
@@ -66,17 +71,15 @@ function SEO({ url,description, lang, metaImage, title }) {
   );
 }
 
-SEO.defaultProps = {
-  lang: `vn`,
+Seo.defaultProps = {
   meta: [],
   description: ``,
 };
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   image: PropTypes.shape({
     src: PropTypes.string.isRequired,
     height: PropTypes.number.isRequired,
@@ -84,4 +87,4 @@ SEO.propTypes = {
   }),
 };
 
-export default SEO;
+export default Seo;

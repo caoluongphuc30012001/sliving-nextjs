@@ -529,16 +529,46 @@
   "subscribe": "Subscribe",
   "products_desc": "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...",
   "learn_more": "Learn more",
-  "dataTitles": {
-    "home_page": "Sliving - Technology Era",
-    "product_page": "Products Sliving - IoT",
-    "smart_home_page": "Technology IoT - Sliving",
-    "support_page": "Technical Assistance",
-    "smart_lighting": "Light Smart Solution",
-    "smart_security": "Smart Security Solution",
-    "smart_parking": "Smart Parking Solution",
-    "smart_home": "Smart technology solutions - IoT",
-    "reason_page":"5 reasons you should choose Sliving",
-    "contact_page":"Contact Sliving"
+  "dataMeta": {
+    "home_page": {
+      "title":"Sliving - Providing a comprehensive solution for IoT Flatform",
+      "description":"Specializing in smart solutions and advanced technology to help users experience a comfortable, comfortable and convenient life"
+    },
+    "product_page": {
+      "title":"Products Sliving - IoT",
+      "description":"Sliving - IoT products, providing a wide range of control solutions for smart devices to meet the needs of most projects"
+    },
+    "smart_home_page": {
+      "title":"Technology IoT - Sliving",
+      "description":"Sliving - IoT products, providing a wide range of smart home solutions to meet the needs of most projects"
+    },
+    "support_page": {
+      "title":"Technical Assistance",
+      "description":"Solving - Technical support for problems related to smart solutions in the most effective way"
+    },
+    "smart_lighting": {
+      "title": "Light Smart Solution",
+      "description":"Smart Lighting Solution provides lighting effects that are suitable for the environment, creating the best atmosphere and environment for users."
+    },
+    "smart_security": {
+      "title": "Smart Security Solution",
+      "description":"The innovative solution builds a 'multi-layered' security system that ensures a private and safe space for each customer and is easy to control for the manager"
+    },
+    "smart_parking": {
+      "title": "Smart Parking Solution",
+      "description":"Sliving's innovative security solution builds a 'multi-layered' security system that ensures privacy and safety"
+    },
+    "smart_home": {
+      "title": "Smart technology solutions - IoT",
+      "description":"Smart home solutions help devices connect to each other in a smart system, through a phone application to remotely control lighting, air conditioning, curtains, doors,..."
+    },
+    "reason_page":{
+      "title": "5 reasons you should choose Sliving",
+      "description":"The reason you should choose Living. With Sliving - IoT, SmartHome is always ready to provide the best smart products and solutions for you"
+    },
+    "contact_page":{
+      "title": "Contact Sliving",
+      "description":"Sliving team is always ready to support you anytime, anywhere with smart products and solutions"
+    }
   }
 }
