@@ -275,8 +275,8 @@ const IndexPage = () => {
   return (
     <PortfolioConsumer>
       {context => {
-        const dataMeta = context?.dataTitles?.dataTitles;
-        return (<LayoutNew title={t(`${dataMeta?.home_page.title}`)} description={t(`${dataMeta?.home_page.description}`)}  >
+        const dataMeta = context && context.dataTitles.dataTitles;
+        return (dataMeta && <LayoutNew title={t(`${dataMeta.home_page.title}`)} description={t(`${dataMeta.home_page.description}`)}  >
         <header className="header-main-page container-v2">
           <BuildHeader />
         </header>
