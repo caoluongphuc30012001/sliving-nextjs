@@ -9,10 +9,10 @@ module.exports = {
     DETECT_NODE_MUTATIONS: true
   },
   siteMetadata: {
-    title: "Sliving",
-    description:"Sliving Kỷ Nguyên công nghệ mới",
+    title: "Sliving - Cung cấp giải pháp toàn diện về IoT Flatform",
+    description:"Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi",
     author:"Sliving",
-    keywords:"Sliving",
+    keywords:"Sliving, san pham smarthome, sản phẩm IoT",
     siteUrl:"https://sliving.vn"
   },
   pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",

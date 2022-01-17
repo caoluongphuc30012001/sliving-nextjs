@@ -16,17 +16,20 @@ const LightingPage = () => {
   const { t } = useTranslation();
   return (
     <PortfolioConsumer>
-      {context => (<LayoutSmartLighting title={context?.dataTitles?.dataTitles.smart_lighting}>
-    <div id='smartLighting'>
-      <LightingHeader />
-      <NewSectionApp />
-      <IntroMain />
-      <LedLightProduct />
-      <div className="lightBanner">
-        <SectionBannerV2 title={t(`solution.footer`)} desc={t(`solution.subFooter`)} btnContact />
-      </div>
-    </div>
-  </LayoutSmartLighting>)}
+      {context => {
+        const dataMeta = context?.dataTitles?.dataTitles;
+        return (<LayoutSmartLighting title={t(`${dataMeta?.smart_lighting.title}`)} description={dataMeta?.smart_lighting.description}>
+        <div id='smartLighting'>
+          <LightingHeader />
+          <NewSectionApp />
+          <IntroMain />
+          <LedLightProduct />
+          <div className="lightBanner">
+            <SectionBannerV2 title={t(`solution.footer`)} desc={t(`solution.subFooter`)} btnContact />
+          </div>
+        </div>
+      </LayoutSmartLighting>)
+      }}
     </PortfolioConsumer>
   );
 }

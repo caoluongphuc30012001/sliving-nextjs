@@ -18,6 +18,7 @@ import DataProductNew from "@query/product-hot";
 import { useTranslation } from "react-i18next";
 
 import "./style.scss";
+import { PortfolioConsumer } from "../../../context/context";
 
 const SmartHomeSolution = () => {
   const { t } = useTranslation();
@@ -80,7 +81,8 @@ const SmartHomeSolution = () => {
     );
   };
   return (
-    <LayoutSmartHome>
+   <PortfolioConsumer>
+     {context => ( <LayoutSmartHome title={`${t(context?.dataTitles?.dataTitles.smart_security.title)}`}>
       <div className="introduct-main" id="introduct-main-security">
         <IntroductionHeader />
         <SectionFeatureProduct dataProductHot={data} />
@@ -92,7 +94,8 @@ const SmartHomeSolution = () => {
           btnContact={true}
         />
       </div>
-    </LayoutSmartHome>
+    </LayoutSmartHome>)}
+   </PortfolioConsumer>
   );
 };
 export default SmartHomeSolution;

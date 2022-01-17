@@ -77,7 +77,7 @@ const SmartHomeSolution = () => {
 
   return (
    <PortfolioConsumer>
-     {context => ( <LayoutSmartHome title={context?.dataTitles?.dataTitles.smart_parking}>
+     {context => ( <LayoutSmartHome title={`${t(context?.dataTitles?.dataTitles.smart_parking.title)}`}>
       <div className="introduct-main" id="introduct-main-parking">
         <IntroductionHeader />
         <BuildThreeSolution />

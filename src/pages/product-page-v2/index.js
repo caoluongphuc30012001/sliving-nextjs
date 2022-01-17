@@ -154,16 +154,19 @@ const IndexPage = ({ data }) => {
     const dataProdHot = data?.allMarkdownRemark?.edges || [];
     return (
        <PortfolioConsumer>
-           {context => ( <LayoutSmartHome title={t(`${context?.dataTitles?.dataTitles.product_page}`)}>
-            <div className="page-product-v2">
-                <BuildHeader />
-                <ThreeElementVertical dataProdHot={dataProdHot} />
-                <SectionFeatureProduct dataProductHot={dataProducts} />
-                <BuildBanner />
-                {buildSlideProduct}
-                <BuildBannerRevolution />
-            </div>
-        </LayoutSmartHome>)}
+           {context => {
+               const dataMeta = context?.dataTitles?.dataTitles.product_page;
+               return (<LayoutSmartHome title={t(`${dataMeta?.title}`)} description={dataMeta?.description} url={dataMeta?.url}>
+               <div className="page-product-v2">
+                   <BuildHeader />
+                   <ThreeElementVertical dataProdHot={dataProdHot} />
+                   <SectionFeatureProduct dataProductHot={dataProducts} />
+                   <BuildBanner />
+                   {buildSlideProduct}
+                   <BuildBannerRevolution />
+               </div>
+           </LayoutSmartHome>)
+           }}
        </PortfolioConsumer>
     );
 }

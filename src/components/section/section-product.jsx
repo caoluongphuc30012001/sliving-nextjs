@@ -5,7 +5,7 @@ import imgLine from "@images/new-home-page/app-img/line.png";
 
 import Link from "@components/gatsby-link";
 
-import { navigate, useScrollRestoration } from "gatsby";
+import { navigate } from "gatsby";
 
 import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
