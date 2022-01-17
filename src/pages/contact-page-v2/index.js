@@ -7,9 +7,14 @@ import BottomImage from "./body/contact-footer-img";
 import ContactForm from "./body/contact-form";
 import { PortfolioConsumer } from "@context/context";
 
+import { useTranslation } from "react-i18next";
+
 import "./style.scss";
 
 const ContactUs = (props) => {
+
+  const {t} = useTranslation();
+
   const BuildBodyContact = () => {
     return (
       <>
@@ -23,7 +28,7 @@ const ContactUs = (props) => {
     return (
       <PortfolioConsumer>
         {(context) => (
-          <LayoutSmartHome title={context?.dataTitles?.dataTitles.contact_page}>
+          <LayoutSmartHome title={t(`${context?.dataTitles?.dataTitles.contact_page.title}`)}>
             <BuildBodyContact />
           </LayoutSmartHome>
         )}
@@ -34,7 +39,7 @@ const ContactUs = (props) => {
     return (
       <PortfolioConsumer>
         {(context) => (
-          <LayoutLighting title={context?.dataTitles?.dataTitles.contact_page}>
+          <LayoutLighting title={t(`${context?.dataTitles?.dataTitles.contact_page.title}`)}>
             <BuildBodyContact />
           </LayoutLighting>
         )}
@@ -44,7 +49,7 @@ const ContactUs = (props) => {
   return (
     <PortfolioConsumer>
       {(context) => (
-        <LayoutNew title={context?.dataTitles?.dataTitles.contact_page}>
+        <LayoutNew title={t(`${context?.dataTitles?.dataTitles.contact_page.title}`)}>
           <BuildBodyContact />
         </LayoutNew>
       )}

@@ -36,7 +36,7 @@ const IntroContentPageTemplate = () => {
 
   return (
    <PortfolioConsumer>
-     {context => ( <LayoutNew title={context?.dataTitles?.dataTitles.reason}>
+     {context => ( <LayoutNew title={context?.dataTitles?.dataTitles.reason.title}>
       <section className="reason container" id="reason">
         <h1>{t(`reason.header`)}</h1>
         <div className="header">

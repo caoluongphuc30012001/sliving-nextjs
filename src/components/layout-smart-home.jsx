@@ -1,21 +1,19 @@
 import React from "react";
 
 import ButtonRounded from "@components/button/button-card-rounded";
-import NavbarSmartHome from "./navbar-new/smarthome/navbar-smarthome";
-import FooterV2 from "./footer/footer-new";
+import NavbarSmartHome from "@components/navbar-new/smarthome/navbar-smarthome";
+import FooterV2 from "@components/footer/footer-new";
 
 import Seo from "@components/seo";
 
-function LayoutSmartHome({ children, title }) {
+function LayoutSmartHome({ children, title , url,description ,metaImage}) {
   return (
     <>
-      <Seo title={title} />
-      <div className="page">
-        <NavbarSmartHome />
+      <Seo title={title} url={url} description={description} metaImage={metaImage} />
+      <NavbarSmartHome />
         <main>{children}</main>
         <FooterV2 />
         <ButtonRounded />
-      </div>
     </>
   );
 }

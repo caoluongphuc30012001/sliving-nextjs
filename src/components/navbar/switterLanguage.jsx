@@ -7,16 +7,18 @@ import { navigate } from "gatsby";
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const location = useLocation();
-
+  const {pathname,search,hash} = location;
   function changeLanguage() {
     if (i18n.language === "en") {
       i18n.changeLanguage("vn");
-      if(location.pathname==='/') return navigate("/vn/")
-      navigate(location.pathname.replace("en", "vn"));
+      if(pathname==='/') return navigate("/vn/");
+      const newUrl =pathname.replace("en", "vn")
+      navigate(newUrl);
     } else {
       i18n.changeLanguage("en");
-      if(location.pathname==='/') return navigate("/en/")
-      navigate(location.pathname.replace("vn", "en"));
+      if(pathname==='/') return navigate("/en/");
+      const newUrl =pathname.replace("vn", "en")
+      navigate(newUrl);
     }
   };
 

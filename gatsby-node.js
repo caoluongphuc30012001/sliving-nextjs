@@ -219,6 +219,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@mock": path.resolve(__dirname, "./src/mock"),
         "@context": path.resolve(__dirname, "./src/context"),
       },
+      fallback: {
+        util: false
+      },
     },
+
   });
 };

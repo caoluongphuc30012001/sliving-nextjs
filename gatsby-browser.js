@@ -7,7 +7,7 @@ require("./src/components/style.scss");
 require("./src/i18n/i18n");
 const React = require("react")
 const { PortfolioProvider } = require("./src/context/context");
-const dataTitles = require("./src/mock/dataTitle.json");
+const dataTitles = require("./src/data/dataMeta.json");
 
 exports.shouldUpdateScroll = ({
   routerProps: { location },

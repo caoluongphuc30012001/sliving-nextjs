@@ -1,0 +1,64 @@
+{
+  "dataTitles": {
+    "home_page": {
+      "title": "dataMeta.home_page.title",
+      "url": "https://sliving.vn/",
+      "description": "dataMeta.home_page.description",
+      "image": ""
+    },
+    "product_page": {
+      "title": "dataMeta.product_page.title",
+      "url": "https://sliving.vn/vn/smart-home/products",
+      "description": "dataMeta.product_page.description",
+      "image": "../../images/product-v2/zigbee-full.jpg"
+    },
+    "smart_home_page": {
+      "title": "dataMeta.smart_home_page.title",
+      "url": "https://sliving.vn/en/smart-home/",
+      "description": "dataMeta.smart_home_page.description",
+      "image": ""
+    },
+    "support_page": {
+      "title": "dataMeta.support_page.title",
+      "url": "http://localhost:8000/vn/support",
+      "description": "",
+      "image": ""
+    },
+    "smart_lighting": {
+      "title": "dataMeta.smart_lighting.title",
+      "url": "https://sliving.vn/vn/smart-lighting/",
+      "description": "dataMeta.smart_lighting.description",
+      "image": ""
+    },
+    "smart_security": {
+      "title": "dataMeta.smart_security.title",
+      "url": "https://sliving.vn/vn/solutions/smart-security/",
+      "description": "dataMeta.smart_security.description",
+      "image": ""
+    },
+    "smart_parking": {
+      "title": "dataMeta.smart_parking.title",
+      "url": "https://sliving.vn/vn/solutions/smart-parking/",
+      "description": "dataMeta.smart_parking.description",
+      "image": ""
+    },
+    "smart_home": {
+      "title": "dataMeta.smart_home.title",
+      "url": "https://sliving.vn/vn/solutions/smart-home/",
+      "description": "dataMeta.smart_home.description",
+      "image": ""
+    },
+    "reason_page": {
+      "title": "dataMeta.reason_page.title",
+      "url": "https://sliving.vn/vn/reason",
+      "description": "dataMeta.reason_page.description",
+      "image": ""
+    },
+    "contact_page": {
+      "title": "dataMeta.contact_page.title",
+      "url": "https://sliving.vn/vn/contact-page/",
+      "description": "dataMeta.contact_page.description",
+      "image": ""
+    }
+  }
+}
