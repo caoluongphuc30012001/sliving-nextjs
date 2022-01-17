@@ -7,7 +7,7 @@ import { navigate } from "gatsby";
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const location = useLocation();
-  const {pathname,search,hash} = location;
+  const {pathname} = location;
   function changeLanguage() {
     if (i18n.language === "en") {
       i18n.changeLanguage("vn");

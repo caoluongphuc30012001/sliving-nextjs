@@ -7,7 +7,7 @@ import FooterHomePage from "./footer/footer-home-page";
 
 import Seo from "@components/seo";
 
-function LayoutNew({ children, title,description }) {
+function LayoutNew({ children, title, description }) {
   return (
     <>
       <Seo title={title} description={description} />
