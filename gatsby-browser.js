@@ -1,10 +1,10 @@
+require("./src/i18n/i18n");
 require( "swiper/scss");
 require( "swiper/scss/navigation");
 require( "swiper/scss/pagination");
 require( "./src/style/main.scss");
 require("./src/style/base/_typography.scss");
 require("./src/components/style.scss");
-require("./src/i18n/i18n");
 const React = require("react")
 const { PortfolioProvider } = require("./src/context/context");
 const dataTitles = require("./src/data/dataMeta.json");

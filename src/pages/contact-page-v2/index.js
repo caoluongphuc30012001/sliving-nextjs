@@ -8,12 +8,15 @@ import ContactForm from "./body/contact-form";
 
 import { useTranslation } from "react-i18next";
 
-import dataMetaDetails   from "@data/dataMeta.json";
+import dataMetaDetails from "@data/dataMeta.json";
+
+import Seo from "@components/seo";
+
 import "./style.scss";
 
 const ContactUs = (props) => {
   const { t } = useTranslation();
-const dataMeta = dataMetaDetails["dataMeta"];
+  const dataMeta = dataMetaDetails["dataMeta"];
 
   const BuildBodyContact = () => {
     return (
@@ -26,29 +29,35 @@ const dataMeta = dataMetaDetails["dataMeta"];
   };
   if (props.pageContext.isNavbarContact?.isSmartHome) {
     return (
-      <LayoutSmartHome
-        title={t(`${dataMeta.contact_page.title}`)}
-        description={t(`${dataMeta.contact_page.description}`)}
-      >
+      <LayoutSmartHome>
+        <Seo
+          title={t(`${dataMeta.contact_page.title}`)}
+          description={t(`${dataMeta.contact_page.description}`)}
+          url={dataMeta.contact_page.url_smart_home}
+        />
         <BuildBodyContact />
       </LayoutSmartHome>
     );
   }
   if (props.pageContext.isNavbarContact?.isSmartLighting) {
     return (
-      <LayoutLighting
-        title={t(`${dataMeta.contact_page.title}`)}
-        description={t(`${dataMeta.contact_page.description}`)}
-      >
+      <LayoutLighting>
+        <Seo
+          title={t(`${dataMeta.contact_page.title}`)}
+          description={t(`${dataMeta.contact_page.description}`)}
+          url={dataMeta.contact_page.url_smart_lighting}
+        />
         <BuildBodyContact />
       </LayoutLighting>
     );
   }
   return (
-    <LayoutNew
-      title={t(`${dataMeta.contact_page.title}`)}
-      description={t(`${dataMeta.contact_page.description}`)}
-    >
+    <LayoutNew>
+      <Seo
+        title={t(`${dataMeta.contact_page.title}`)}
+        description={t(`${dataMeta.contact_page.description}`)}
+        url={dataMeta.contact_page.url}
+      />
       <BuildBodyContact />
     </LayoutNew>
   );

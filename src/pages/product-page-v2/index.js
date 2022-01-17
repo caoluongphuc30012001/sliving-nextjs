@@ -38,6 +38,8 @@ import { useTranslation } from 'react-i18next';
 
 import dataMetaDetails   from "@data/dataMeta.json";
 
+import Seo from "@components/seo";
+
 import "./style.scss";
 import "../smart-home-page-v2/style.scss";
 
@@ -155,7 +157,8 @@ const dataMeta = dataMetaDetails["dataMeta"];
 
     const dataProdHot = data?.allMarkdownRemark?.edges || [];
     return (
-        <LayoutSmartHome title={t(`${dataMeta.product_page.title}`)} description={`${dataMeta.product_page.description}`} url={dataMeta.product_page.url}>
+        <LayoutSmartHome >
+        <Seo title={t(`${dataMeta.product_page.title}`)} description={`${dataMeta.product_page.description}`} url={dataMeta.product_page.url} />
         <div className="page-product-v2">
             <BuildHeader />
             <ThreeElementVertical dataProdHot={dataProdHot} />

@@ -14,8 +14,9 @@ import BuildThumbs from "./thumb";
 
 import i18next from "i18next";
 
-import {useLocation} from "@reach/router";
+import { useLocation } from "@reach/router";
 
+import Seo from "@components/seo";
 
 const handelFilter = (dataCurrent) => {
   if (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) {
@@ -342,23 +343,23 @@ const IndexPage = ({ pageContext }) => {
       </section>
     );
   };
-const location = useLocation();
-const {href} = location;
+  const location = useLocation();
+  const { href } = location;
   return (
-    <LayoutSmartHome
-      title={ dataCurrent?.frontmatter?.title}
-      description={
-        dataCurrent?.frontmatter?.details?.toString().slice(0, 120)
-      }
-      metaImage={
-        dataCurrent?.frontmatter?.imgSrcProduct?.publicURL
-      }
-      url={href}
-    >
+    <LayoutSmartHome>
+      <Seo
+        title={dataCurrent?.frontmatter?.title}
+        description={dataCurrent?.frontmatter?.details
+          ?.toString()
+          .slice(0, 120)}
+        metaImage={dataCurrent?.frontmatter?.imgSrcProduct?.publicURL}
+        url={href}
+      />
+
       <BuildHeader />
       <section className="container-wrap product-info-v2">
-          <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} />
-        </section>
+        <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} />
+      </section>
       {dataProductFeature && (
         <SectionFeatureProduct dataProductHot={dataProductFeature} />
       )}

@@ -58,7 +58,9 @@
       "title": "dataMeta.contact_page.title",
       "url": "https://sliving.vn/vn/contact-page/",
       "description": "dataMeta.contact_page.description",
-      "image": ""
+      "image": "",
+      "url_smart_home":"https://sliving.vn/en/smart-home/contact/",
+      "url_smart_lighting":"https://sliving.vn/en/smart-lighting/contact"
     }
   }
 }

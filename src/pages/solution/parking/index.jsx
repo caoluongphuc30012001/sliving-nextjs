@@ -19,6 +19,8 @@ import dataMetaDetails   from "@data/dataMeta.json";
 
 import { useTranslation } from "react-i18next";
 
+import Seo from "@components/seo";
+
 
 import "./style.scss";
 
@@ -79,7 +81,8 @@ const dataMeta = dataMetaDetails["dataMeta"];
   }
 
   return (
-    <LayoutSmartHome title={t(`${dataMeta.smart_parking.title}`)} description={t(`${dataMeta.smart_parking.description}`)} url={dataMeta.smart_parking.url}>
+    <LayoutSmartHome >
+    <Seo title={t(`${dataMeta.smart_parking.title}`)} description={t(`${dataMeta.smart_parking.description}`)} url={dataMeta.smart_parking.url}  />
     <div className="introduct-main" id="introduct-main-parking">
       <IntroductionHeader />
       <BuildThreeSolution />

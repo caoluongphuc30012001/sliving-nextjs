@@ -11,6 +11,8 @@ import NewSectionApp from "../smart-home-page-v2/body/new-section-app";
 
 import dataMetaDetails   from "@data/dataMeta.json";
 
+import Seo from "@components/seo";
+
 import "./style.scss"
 
 const LightingPage = () => {
@@ -18,7 +20,8 @@ const LightingPage = () => {
 const dataMeta = dataMetaDetails["dataMeta"];
 
   return (
-    <LayoutSmartLighting title={t(`${dataMeta?.smart_lighting.title}`)} description={t(`${dataMeta?.smart_lighting.description}`)} url={dataMeta.smart_lighting.url}>
+    <LayoutSmartLighting >
+        <Seo title={t(`${dataMeta?.smart_lighting.title}`)} description={t(`${dataMeta?.smart_lighting.description}`)} url={dataMeta.smart_lighting.url}  />
         <div id='smartLighting'>
           <LightingHeader />
           <NewSectionApp />

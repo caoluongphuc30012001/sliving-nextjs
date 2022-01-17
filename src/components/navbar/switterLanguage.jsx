@@ -9,6 +9,7 @@ const LanguageSwitcher = () => {
   const location = useLocation();
   const {pathname} = location;
   function changeLanguage() {
+    console.log("start function");
     if (i18n.language === "en") {
       i18n.changeLanguage("vn");
       if(pathname==='/') return navigate("/vn/");
@@ -39,12 +40,11 @@ const LanguageSwitcher = () => {
               textTransform: "uppercase",
             }}
           >
-            {" "}
-            {i18n.language}{" "}
-          </span>{" "}
+            {i18n.language}
+          </span>
           <img src={iconLanguage} alt="" />
-        </Dropdown.Toggle>{" "}
-      </Dropdown>{" "}
+        </Dropdown.Toggle>
+      </Dropdown>
     </>
   );
 };

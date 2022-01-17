@@ -19,6 +19,8 @@ import { useTranslation } from "react-i18next";
 
 import dataMetaDetails   from "@data/dataMeta.json";
 
+import Seo from "@components/seo";
+
 import "./style.scss";
 
 const SmartHomeSolution = () => {
@@ -82,7 +84,8 @@ const data = DataProductNew();
   </section>)
   }
   return (
-    <LayoutSmartHome  title={t(`${dataMeta.smart_home.title}`)} description={t(`${dataMeta.smart_home.description}`)} url={dataMeta.smart_home.url}>
+    <LayoutSmartHome  >
+      <Seo title={t(`${dataMeta.smart_home.title}`)} description={t(`${dataMeta.smart_home.description}`)} url={dataMeta.smart_home.url}  />
       <div className="introduct-main" id="introduct-main-smarthome">
         <IntroductionHeader />
         <SectionFeatureProduct dataProductHot={data} />

@@ -6,7 +6,9 @@ import flag from "@images/intro-content/group2.png";
 import { Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
-import dataMetaDetails   from "@data/dataMeta.json";
+import dataMetaDetails from "@data/dataMeta.json";
+
+import Seo from "@components/seo";
 
 import "./styles.scss";
 
@@ -32,13 +34,14 @@ const Card = ({ index, title, des }) => {
 const IntroContentPageTemplate = () => {
   const { t } = useTranslation();
   const content = [1, 2, 3, 4, 5];
-  const dataMeta =dataMetaDetails["dataMeta"];
+  const dataMeta = dataMetaDetails["dataMeta"];
   return (
-    <LayoutNew
-      title={t(`${dataMeta.reason_page.title}`)}
-      description={t(`${dataMeta.reason_page.description}`)}
-      url={dataMeta.reason_page.url}
-    >
+    <LayoutNew>
+      <Seo
+        title={t(`${dataMeta.reason_page.title}`)}
+        description={t(`${dataMeta.reason_page.description}`)}
+        url={dataMeta.reason_page.url}
+      />
       <section className="reason container" id="reason">
         <h1>{t(`reason.header`)}</h1>
         <div className="header">

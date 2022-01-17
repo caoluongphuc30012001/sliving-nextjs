@@ -7,7 +7,7 @@ import favicon from "@images/logo/logo-small.svg";
 //import banner from "@images/main-page-v2/header-top-4.jpg";
 
 import i18next from "i18next";
-function Seo({ url,description, metaImage, title }) {
+function Seo({ url,description,  title }) {
   const { site } = useStaticQuery(
     graphql`
       query {

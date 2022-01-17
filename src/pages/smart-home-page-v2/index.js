@@ -14,6 +14,8 @@ import { useTranslation } from "react-i18next";
 
 import dataMetaDetails   from "@data/dataMeta.json";
 
+import Seo from "@components/seo";
+
 import "./style.scss";
 
 const HomePageNew = ({ pageContext }) => {
@@ -21,7 +23,8 @@ const HomePageNew = ({ pageContext }) => {
 const dataMeta = dataMetaDetails["dataMeta"];
 
   return (
-    <LayoutSmartHome  pageContext={pageContext} title={t(`${dataMeta.smart_home_page.title}`)} description={t(`${dataMeta.smart_home_page.description}`)} url={dataMeta.smart_home_page.url}>
+    <LayoutSmartHome  pageContext={pageContext} >
+    <Seo title={t(`${dataMeta.smart_home_page.title}`)} description={t(`${dataMeta.smart_home_page.description}`)} url={dataMeta.smart_home_page.url}  />
     <div className="smart-home-page-v2">
       <NewSectionHeader />
       <NewSectionApp />

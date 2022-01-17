@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
-
 import sectionFour1Full from "@images/main-page-v2/clip-path-1.webp";
 import sectionFour2Full from "@images/main-page-v2/rectangle-1.webp";
 import sectionFour3Full from "@images/main-page-v2/rectangle-2.webp";
@@ -24,6 +23,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import dataMetaDetails  from "@data/dataMeta.json";
 
+import Seo from "@components/seo";
 
 import "./style.scss";
 
@@ -272,7 +272,8 @@ const dataMeta = dataMetaDetails["dataMeta"];
  
 
   return (
-    <LayoutNew title={t(`${dataMeta.home_page.title}`)} description={t(`${dataMeta.home_page.description}`)}  >
+    <LayoutNew >
+        <Seo title={t(`${dataMeta.home_page.title}`)} description={t(`${dataMeta.home_page.description}`)}  />
         <header className="header-main-page container-v2">
           <BuildHeader />
         </header>
