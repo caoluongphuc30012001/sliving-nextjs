@@ -15,14 +15,17 @@ import LayoutSmartHome from "@components/layout-smart-home";
 import SectionBannerV2 from "@components/section/banner/banner";
 import CardSolution from "@components/card/card-solution/card-solution";
 
+import dataMetaDetails   from "@data/dataMeta.json";
+
 import { useTranslation } from "react-i18next";
 
-import { PortfolioConsumer } from "@context/context";
 
 import "./style.scss";
 
 const SmartHomeSolution = () => {
   const { t } = useTranslation();
+const dataMeta = dataMetaDetails["dataMeta"];
+
   const BuildThreeSolution = ()=> {
     return (<div className="container-wrap card-solution">
     <CardSolution
@@ -76,20 +79,18 @@ const SmartHomeSolution = () => {
   }
 
   return (
-   <PortfolioConsumer>
-     {context => ( <LayoutSmartHome title={`${t(context?.dataTitles?.dataTitles.smart_parking.title)}`}>
-      <div className="introduct-main" id="introduct-main-parking">
-        <IntroductionHeader />
-        <BuildThreeSolution />
-        <BuildThreeContent />
-        <SectionBannerV2
-          title={t(`solution.footer`)}
-          desc={t(`solution.subFooter`)}
-          btnContact={true}
-        />
-      </div>
-    </LayoutSmartHome>)}
-   </PortfolioConsumer>
+    <LayoutSmartHome title={t(`${dataMeta.smart_parking.title}`)} description={t(`${dataMeta.smart_parking.description}`)} url={dataMeta.smart_parking.url}>
+    <div className="introduct-main" id="introduct-main-parking">
+      <IntroductionHeader />
+      <BuildThreeSolution />
+      <BuildThreeContent />
+      <SectionBannerV2
+        title={t(`solution.footer`)}
+        desc={t(`solution.subFooter`)}
+        btnContact={true}
+      />
+    </div>
+  </LayoutSmartHome>
   );
 };
 export default SmartHomeSolution;

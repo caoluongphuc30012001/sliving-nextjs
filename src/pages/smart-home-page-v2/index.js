@@ -10,28 +10,28 @@ import NewSectionProduct from "./body/new-section-product";
 
 import LayoutSmartHome from "@components/layout-smart-home";
 
-import { PortfolioConsumer } from "@context/context";
-
 import { useTranslation } from "react-i18next";
+
+import dataMetaDetails   from "@data/dataMeta.json";
 
 import "./style.scss";
 
 const HomePageNew = ({ pageContext }) => {
   const { t } = useTranslation();
+const dataMeta = dataMetaDetails["dataMeta"];
+
   return (
-   <PortfolioConsumer>
-      {context => (<LayoutSmartHome  pageContext={pageContext} title={t(`${context?.dataTitles?.dataTitles.smart_home_page.title}`)}>
-      <div className="smart-home-page-v2">
-        <NewSectionHeader />
-        <NewSectionApp />
-        <NewSectionImg360 />
-        <NewSectionProduct />
-        <NewSectionCarousel />
-        <NewSectionSolution />
-        <NewSectionVideo />
-      </div>
-    </LayoutSmartHome>)}
-   </PortfolioConsumer>
+    <LayoutSmartHome  pageContext={pageContext} title={t(`${dataMeta.smart_home_page.title}`)} description={t(`${dataMeta.smart_home_page.description}`)} url={dataMeta.smart_home_page.url}>
+    <div className="smart-home-page-v2">
+      <NewSectionHeader />
+      <NewSectionApp />
+      <NewSectionImg360 />
+      <NewSectionProduct />
+      <NewSectionCarousel />
+      <NewSectionSolution />
+      <NewSectionVideo />
+    </div>
+  </LayoutSmartHome>
   );
 }
 export default HomePageNew;

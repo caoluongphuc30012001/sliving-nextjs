@@ -16,14 +16,13 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import useWindowSize from "@hook/useWindowSize";
 
-
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 
 import { useTranslation } from 'react-i18next';
 import { graphql, useStaticQuery } from "gatsby";
 
-import {PortfolioConsumer} from "@context/context";
+import dataMetaDetails  from "@data/dataMeta.json";
 
 
 import "./style.scss";
@@ -31,7 +30,7 @@ import "./style.scss";
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const IndexPage = () => {
-
+const dataMeta = dataMetaDetails["dataMeta"];
   const { t } = useTranslation();
   const queryData = useStaticQuery(graphql`
   query MyQuery {
@@ -273,10 +272,7 @@ const IndexPage = () => {
  
 
   return (
-    <PortfolioConsumer>
-      {context => {
-        const dataMeta = context && context.dataTitles.dataTitles;
-        return (dataMeta && <LayoutNew title={t(`${dataMeta.home_page.title}`)} description={t(`${dataMeta.home_page.description}`)}  >
+    <LayoutNew title={t(`${dataMeta.home_page.title}`)} description={t(`${dataMeta.home_page.description}`)}  >
         <header className="header-main-page container-v2">
           <BuildHeader />
         </header>
@@ -286,10 +282,7 @@ const IndexPage = () => {
           <BuildSectionFourElement />
           <BuildSectionBannerReason />
         </main>
-      </LayoutNew>)
-      }}
-    </PortfolioConsumer>
-    
+      </LayoutNew>
   );
 };
 

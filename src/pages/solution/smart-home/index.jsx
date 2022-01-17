@@ -16,13 +16,15 @@ import LayoutSmartHome from "@components/layout-smart-home";
 import DataProductNew from "@query/product-hot";
 
 import { useTranslation } from "react-i18next";
-import { PortfolioConsumer } from "@context/context";
+
+import dataMetaDetails   from "@data/dataMeta.json";
 
 import "./style.scss";
 
 const SmartHomeSolution = () => {
   const { t } = useTranslation();
-  const data = DataProductNew();
+const dataMeta = dataMetaDetails["dataMeta"];
+const data = DataProductNew();
   const BuildFiveContent = () => {
     return (<section className="introSection container">
     <div className="background-image "></div>
@@ -80,8 +82,7 @@ const SmartHomeSolution = () => {
   </section>)
   }
   return (
-    <PortfolioConsumer>
-      {context => (<LayoutSmartHome  title={`${t(context?.dataTitles?.dataTitles.smart_home.title)}`}>
+    <LayoutSmartHome  title={t(`${dataMeta.smart_home.title}`)} description={t(`${dataMeta.smart_home.description}`)} url={dataMeta.smart_home.url}>
       <div className="introduct-main" id="introduct-main-smarthome">
         <IntroductionHeader />
         <SectionFeatureProduct dataProductHot={data} />
@@ -93,8 +94,7 @@ const SmartHomeSolution = () => {
           btnContact={true}
         />
       </div>
-    </LayoutSmartHome>)}
-    </PortfolioConsumer>
+    </LayoutSmartHome>
   );
 };
 export default SmartHomeSolution;

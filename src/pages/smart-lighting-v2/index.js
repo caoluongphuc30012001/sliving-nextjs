@@ -7,18 +7,18 @@ import SectionBannerV2 from "@components/section/banner/banner";
 import LayoutSmartLighting from "@components/layout-smart-lighting";
 import { useTranslation } from "react-i18next";
 
-import { PortfolioConsumer } from "@context/context";
+import NewSectionApp from "../smart-home-page-v2/body/new-section-app";
+
+import dataMetaDetails   from "@data/dataMeta.json";
 
 import "./style.scss"
-import NewSectionApp from "../smart-home-page-v2/body/new-section-app";
 
 const LightingPage = () => {
   const { t } = useTranslation();
+const dataMeta = dataMetaDetails["dataMeta"];
+
   return (
-    <PortfolioConsumer>
-      {context => {
-        const dataMeta = context?.dataTitles?.dataTitles;
-        return (<LayoutSmartLighting title={t(`${dataMeta?.smart_lighting.title}`)} description={dataMeta?.smart_lighting.description}>
+    <LayoutSmartLighting title={t(`${dataMeta?.smart_lighting.title}`)} description={t(`${dataMeta?.smart_lighting.description}`)} url={dataMeta.smart_lighting.url}>
         <div id='smartLighting'>
           <LightingHeader />
           <NewSectionApp />
@@ -28,10 +28,7 @@ const LightingPage = () => {
             <SectionBannerV2 title={t(`solution.footer`)} desc={t(`solution.subFooter`)} btnContact />
           </div>
         </div>
-      </LayoutSmartLighting>)
-      }}
-    </PortfolioConsumer>
+      </LayoutSmartLighting>
   );
 }
 export default LightingPage;
-

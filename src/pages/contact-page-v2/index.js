@@ -5,15 +5,15 @@ import React from "react";
 import HeaderImage from "./body/contact-header-img";
 import BottomImage from "./body/contact-footer-img";
 import ContactForm from "./body/contact-form";
-import { PortfolioConsumer } from "@context/context";
 
 import { useTranslation } from "react-i18next";
 
+import dataMetaDetails   from "@data/dataMeta.json";
 import "./style.scss";
 
 const ContactUs = (props) => {
-
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+const dataMeta = dataMetaDetails["dataMeta"];
 
   const BuildBodyContact = () => {
     return (
@@ -26,34 +26,31 @@ const ContactUs = (props) => {
   };
   if (props.pageContext.isNavbarContact?.isSmartHome) {
     return (
-      <PortfolioConsumer>
-        {(context) => (
-          <LayoutSmartHome title={t(`${context?.dataTitles?.dataTitles.contact_page.title}`)}>
-            <BuildBodyContact />
-          </LayoutSmartHome>
-        )}
-      </PortfolioConsumer>
+      <LayoutSmartHome
+        title={t(`${dataMeta.contact_page.title}`)}
+        description={t(`${dataMeta.contact_page.description}`)}
+      >
+        <BuildBodyContact />
+      </LayoutSmartHome>
     );
   }
   if (props.pageContext.isNavbarContact?.isSmartLighting) {
     return (
-      <PortfolioConsumer>
-        {(context) => (
-          <LayoutLighting title={t(`${context?.dataTitles?.dataTitles.contact_page.title}`)}>
-            <BuildBodyContact />
-          </LayoutLighting>
-        )}
-      </PortfolioConsumer>
+      <LayoutLighting
+        title={t(`${dataMeta.contact_page.title}`)}
+        description={t(`${dataMeta.contact_page.description}`)}
+      >
+        <BuildBodyContact />
+      </LayoutLighting>
     );
   }
   return (
-    <PortfolioConsumer>
-      {(context) => (
-        <LayoutNew title={t(`${context?.dataTitles?.dataTitles.contact_page.title}`)}>
-          <BuildBodyContact />
-        </LayoutNew>
-      )}
-    </PortfolioConsumer>
+    <LayoutNew
+      title={t(`${dataMeta.contact_page.title}`)}
+      description={t(`${dataMeta.contact_page.description}`)}
+    >
+      <BuildBodyContact />
+    </LayoutNew>
   );
 };
 export default ContactUs;

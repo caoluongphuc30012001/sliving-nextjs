@@ -218,6 +218,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@hook": path.resolve(__dirname, "./src/hook"),
         "@mock": path.resolve(__dirname, "./src/mock"),
         "@context": path.resolve(__dirname, "./src/context"),
+        "@data": path.resolve(__dirname, "./src/data"),
       },
       fallback: {
         util: false

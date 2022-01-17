@@ -6,9 +6,6 @@ import NavbarLighting from "./navbar-new/navbar-lighting";
 
 import Seo from "@components/seo";
 
-import "../i18n/i18n";
-import "./style.scss";
-
 function LayoutSmartLighting({ children, title, url, description, metaImage }) {
   return (
     <>

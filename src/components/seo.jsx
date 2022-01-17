@@ -76,8 +76,8 @@ function Seo({ url,description, metaImage, title }) {
       <meta property="og:image:height" content="686" />
 
       {/* <!-- Twitter Meta Tags --> */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@unicloud" />
+      {/* <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@unicloud" /> */}
 
     </Helmet>
   );

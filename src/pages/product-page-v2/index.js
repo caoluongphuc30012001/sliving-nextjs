@@ -36,14 +36,15 @@ import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
 import { graphql } from "gatsby";
 import { useTranslation } from 'react-i18next';
 
-import { PortfolioConsumer } from '@context/context';
-
+import dataMetaDetails   from "@data/dataMeta.json";
 
 import "./style.scss";
 import "../smart-home-page-v2/style.scss";
 
 SwiperCore.use([Navigation, Pagination,]);
 const IndexPage = ({ data }) => {
+const dataMeta = dataMetaDetails["dataMeta"];
+
     const { t } = useTranslation();
     const dataProducts = DataProductNew();
     const [arrImg] = useState([
@@ -151,23 +152,19 @@ const IndexPage = ({ data }) => {
         return (<SlideProduct data={dataProducts} />)
     }, [dataProducts]);
 
+
     const dataProdHot = data?.allMarkdownRemark?.edges || [];
     return (
-       <PortfolioConsumer>
-           {context => {
-               const dataMeta = context?.dataTitles?.dataTitles.product_page;
-               return (<LayoutSmartHome title={t(`${dataMeta?.title}`)} description={dataMeta?.description} url={dataMeta?.url}>
-               <div className="page-product-v2">
-                   <BuildHeader />
-                   <ThreeElementVertical dataProdHot={dataProdHot} />
-                   <SectionFeatureProduct dataProductHot={dataProducts} />
-                   <BuildBanner />
-                   {buildSlideProduct}
-                   <BuildBannerRevolution />
-               </div>
-           </LayoutSmartHome>)
-           }}
-       </PortfolioConsumer>
+        <LayoutSmartHome title={t(`${dataMeta.product_page.title}`)} description={`${dataMeta.product_page.description}`} url={dataMeta.product_page.url}>
+        <div className="page-product-v2">
+            <BuildHeader />
+            <ThreeElementVertical dataProdHot={dataProdHot} />
+            <SectionFeatureProduct dataProductHot={dataProducts} />
+            <BuildBanner />
+            {buildSlideProduct}
+            <BuildBannerRevolution />
+        </div>
+    </LayoutSmartHome>
     );
 }
 
