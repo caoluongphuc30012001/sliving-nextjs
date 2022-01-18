@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 
+import "@i18n/i18n";
+
 import LayoutSmartHome from "@components/layout-smart-home";
 import ButtonShop from "@components/button/button-shop";
 import SectionFeatureProduct from "@components/section/section-feature-product";

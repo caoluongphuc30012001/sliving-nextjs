@@ -1,4 +1,7 @@
 import React, { useMemo, useState } from 'react';
+
+import "@i18n/i18n";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore, {

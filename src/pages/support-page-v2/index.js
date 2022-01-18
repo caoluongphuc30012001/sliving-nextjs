@@ -1,4 +1,7 @@
 import React from "react";
+
+import "@i18n/i18n";
+
 import LayoutSmartHome from "@components/layout-smart-home.jsx";
 import ListSupports from "./body/technicalSolution";
 import { useTranslation } from "react-i18next";

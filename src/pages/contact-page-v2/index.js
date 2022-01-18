@@ -1,7 +1,11 @@
+import React from "react";
+
+import "@i18n/i18n";
+
 import LayoutNew from "@components/layout-new";
 import LayoutSmartHome from "@components/layout-smart-home";
 import LayoutLighting from "@components/layout-smart-lighting";
-import React from "react";
+
 import HeaderImage from "./body/contact-header-img";
 import BottomImage from "./body/contact-footer-img";
 import ContactForm from "./body/contact-form";

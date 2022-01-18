@@ -25,6 +25,9 @@ import dataMetaDetails  from "@data/dataMeta.json";
 
 import Seo from "@components/seo";
 
+import "@i18n/i18n";
+
+
 import "./style.scss";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);

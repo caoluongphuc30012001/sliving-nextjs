@@ -1,17 +1,21 @@
 import React from "react";
+
+import "@i18n/i18n";
+
 import LightingHeader from "./body/lighting-header";
 import LedLightProduct from "./body/lighting-led-product";
 import IntroMain from "./body/light-intro";
 
 import SectionBannerV2 from "@components/section/banner/banner";
 import LayoutSmartLighting from "@components/layout-smart-lighting";
-import { useTranslation } from "react-i18next";
+
+import Seo from "@components/seo";
 
 import NewSectionApp from "../smart-home-page-v2/body/new-section-app";
 
 import dataMetaDetails   from "@data/dataMeta.json";
 
-import Seo from "@components/seo";
+import { useTranslation } from "react-i18next";
 
 import "./style.scss"
 

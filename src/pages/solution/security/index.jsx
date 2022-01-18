@@ -1,4 +1,7 @@
 import React from "react";
+
+import "@i18n/i18n";
+
 import LayoutSmartHome from "@components/layout-smart-home";
 import IntroductionHeader from "./header/section-header";
 import SectionContent from "./body/section-content";

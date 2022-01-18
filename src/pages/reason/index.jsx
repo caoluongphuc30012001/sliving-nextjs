@@ -1,5 +1,9 @@
 import React from "react";
+
+import "@i18n/i18n";
+
 import LayoutNew from "@components/layout-new";
+import Seo from "@components/seo";
 
 import flag from "@images/intro-content/group2.png";
 
@@ -8,11 +12,10 @@ import { useTranslation } from "react-i18next";
 
 import dataMetaDetails from "@data/dataMeta.json";
 
-import Seo from "@components/seo";
-
 import "./styles.scss";
 
 const Card = ({ index, title, des }) => {
+  
   return (
     <Row className="row">
       <Col

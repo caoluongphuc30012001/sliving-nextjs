@@ -1,5 +1,7 @@
 import React from "react";
 
+import "@i18n/i18n";
+
 import IntroductionHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
 
