@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 import { Row, Col } from "react-bootstrap";
 
-import sectionFour1Full from "@images/main-page-v2/clip-path-1.webp";
-import sectionFour2Full from "@images/main-page-v2/rectangle-1.webp";
-import sectionFour3Full from "@images/main-page-v2/rectangle-2.webp";
-import sectionFour4Full from "@images/main-page-v2/rectangle-3.webp";
+import sectionFour1Full from "@images/main-page-v2/rectangle-smart-home.jpg";
+import sectionFour2Full from "@images/main-page-v2/rectangle-lighting.jpg";
+import sectionFour3Full from "@images/main-page-v2/rectangle-fintech.jpg";
+import sectionFour4Full from "@images/main-page-v2/rectangle-parking.jpg";
 
 import iconPrevEl from "@images/icon/arrow-down-left-v2.svg";
 import iconNextEl from "@images/icon/arrow-down-right-v2.svg";
@@ -38,11 +38,11 @@ const dataMeta = dataMetaDetails["dataMeta"];
   const queryData = useStaticQuery(graphql`
   query MyQuery {
     header: allFile(
-      filter: {absolutePath: {regex: "/(/images/main-page-v2/header-top)/"}}
+      filter: {absolutePath: {regex: "/(/images/main-page-v2/shutterstock)/"}}
     ) {
       nodes {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(width: 1440, height: 799)
         }
       }
     }
@@ -142,7 +142,7 @@ const dataMeta = dataMetaDetails["dataMeta"];
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={false} array={queryData?.header?.nodes?.slice(0, 4) || []
+    return <BuildCarousel isButton={false} array={queryData?.header?.nodes || []
     } isAutoPlay={true} />;
   };
 
@@ -236,7 +236,7 @@ const dataMeta = dataMetaDetails["dataMeta"];
               data-aos="fade-left"
               data-aos-duration="400"
             >
-              <img src={sectionFour2Full} alt="" width={595} height={186} />
+              <img src={sectionFour2Full} alt="" width={610} height={186} />
               <div className="group-hover-info">
                 <h2>Smart Lighting</h2>
               </div>
