@@ -25,6 +25,7 @@ i18n
     },
     react: {
       useSuspense: false,
+      bindI18n: 'languageChanged loaded',
     },
     initImmediate: false,
   });

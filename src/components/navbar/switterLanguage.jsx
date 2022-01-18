@@ -12,6 +12,7 @@ const LanguageSwitcher = () => {
   const { pathname } = location;
 
   function changeLanguage() {
+    console.log("start");
     if (i18n.language === "en" || i18n.language === "en-US") {
       i18n.changeLanguage("vn");
       if (pathname === "/") return navigate("/vn/");
@@ -27,9 +28,7 @@ const LanguageSwitcher = () => {
   }
 
   useEffect(() => {
-    console.log("start detect");
     const changeDetectLanguage = () => {
-      console.log("changeDetectLanguage");
       if (
         pathname.includes("vn") &&
         (i18n.language === "en" || i18n.language === "en-US")

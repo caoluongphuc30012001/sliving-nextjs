@@ -166,7 +166,7 @@ module.exports = {
         lang:`vn`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        icon: `static/favicon-32x32.png`,
+        icon: `static/apple-touch-icon.png`,
         start_url: `/`,
         localize: [
           {

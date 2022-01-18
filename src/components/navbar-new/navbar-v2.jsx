@@ -1,7 +1,5 @@
 import React from "react";
 
-import "@i18n/i18n";
-
 import { Navbar, Nav } from "react-bootstrap";
 
 import logo from "@images/logo/logo-header.svg";
