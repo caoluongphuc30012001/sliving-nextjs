@@ -151,5 +151,33 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/en/`,`/vn/`],
+      },
+    },{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Sliving`,
+        short_name: `Sliving`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        lang:`vn`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `static/favicon-32x32.png`,
+        start_url: `/`,
+        localize: [
+          {
+            start_url: `/vn/`,
+            lang: `vn`,
+            name: `Sliving - Cung cấp giải pháp toàn diện về IoT Platform`,
+            short_name: `Sliving`,
+            description: `Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi`
+          },
+        ],
+      },
+    }
   ],
 };
