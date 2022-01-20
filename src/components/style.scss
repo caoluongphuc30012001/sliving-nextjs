@@ -447,7 +447,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 4px;
-    padding: 4px 16px;
+    padding: 8px 16px;
     border-radius: 8px;
     text-align: center;
     &:focus {
@@ -3107,8 +3107,13 @@ a.btn-link-a {
     border-radius: 8px;
     border: inherit;
     width: 70px !important;
+    img{
+      opacity: 0;
+      transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
     span {
       float: left;
+      line-height: 16px;
     }
   }
 }
@@ -3289,6 +3294,10 @@ a.btn-link-a {
   margin-left: 152px;
   margin-right: 135px;
   padding: 0 !important;
+  span{
+    display: inline-block;
+    width: 202px;
+  }
   .animation-nav {
     justify-content: flex-end;
     align-items: center;
@@ -3957,10 +3966,10 @@ a.btn-link-a {
     .nav-desktop {
       position: relative;
       margin-left: 2%;
+      align-items: center;
       .item-menu-child {
-        padding: 40px 32px;
+        padding: 32px;
         color: #4b4b4b;
-        max-height: 99px;
         text-decoration: none;
         font-weight: normal;
         // line-height: 131.25%;
@@ -4180,9 +4189,7 @@ a.btn-link-a {
           border: none;
         }
       }
-      .item-menu {
-        line-height: 16px;
-      }
+    
       .item-menu-child:nth-child(1) {
         font-size: 23px;
         font-weight: 600;

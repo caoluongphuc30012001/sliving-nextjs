@@ -38,7 +38,7 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/smart-home-page-v2") === true ||
     checkDetectPage(page, "/smart-light-v2") === true ||
     checkDetectPage(page, "/contact-page-v2") === true ||
-    checkDetectPage(page, "/support-page-v2") === true
+    checkDetectPage(page, "/support-page-v2") === true 
   )) {
     deletePage(page)
   }

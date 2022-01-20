@@ -28,6 +28,7 @@ i18n
       bindI18n: 'languageChanged loaded',
     },
     initImmediate: false,
+    serializeConfig: false,
   });
 
 export default i18n;

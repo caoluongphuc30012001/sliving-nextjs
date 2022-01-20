@@ -12,7 +12,9 @@ const LightingHeader = () => {
   return (
     <header>
       <div className="headerContainer container-v2">
-        <div className="container">
+       
+      </div>
+      <div className="container">
           <div className="headerContent">
             <h1>
               {t(`solution.lighting.header`)}
@@ -23,7 +25,7 @@ const LightingHeader = () => {
             </h1>
             <p>{t(`solution.lighting.subHeader`)}</p>
           </div>
-          <div className="headerImage">
+          <div className="headerImage" style={{transform:'translateY(10%)'}}>
             <div>
               <img src={iphone} alt="iphone" />
               <img src={brightness} alt="brightness" className="brightness" />
@@ -34,7 +36,6 @@ const LightingHeader = () => {
             </div>
           </div>
         </div>
-      </div>
     </header>
   );
 };
