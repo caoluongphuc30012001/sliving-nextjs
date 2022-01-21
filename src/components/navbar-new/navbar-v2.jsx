@@ -61,7 +61,7 @@ export default function NavbarNew() {
                             {nav.title}
                             {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? <ul className="subNav">
                             <li>{t(`HEADER.HOMEPAGE.STORY`)} </li>
-                            <div style={{padding:" 15px 30px 15px 30px"}}  role="button" tabIndex={0} onClick={()=> navigate(`/${i18n.language}/contact-page/`)} onKeyPress={()=> navigate(`/${i18n.language}/contact-page/`)}>  {t(`HEADER.HOMEPAGE.CONTACTUS`)}</div>
+                            <div style={{padding:" 15px 30px 15px 30px"}}  role="button" tabIndex={0} onClick={()=> navigate(`/${i18n.language}/contact-page/`)} onKeyPress={()=> navigate(`/${i18n.language}/contact-page/`)}>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</div>
                             </ul> : ""}
                           </Link>
                         );

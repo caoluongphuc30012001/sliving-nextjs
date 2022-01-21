@@ -11,8 +11,8 @@ const LanguageSwitcher = () => {
   const { pathname } = location;
 
   const typeLng = {
-    en: { locale: "en", detect: "en-US" },
-    vn: { locale: "vn", detect: "vi" },
+    en: "en",
+    vn: "vn",
   };
   const urlDefault = "/";
 
@@ -23,68 +23,38 @@ const LanguageSwitcher = () => {
   }
 
   function changeLanguage() {
-    if (
-      i18n.language === typeLng.en.locale ||
-      i18n.language === typeLng.en.detect
-    ) {
-      console.log("abc en");
-      return replaceUrlByI18n(typeLng.en.locale, typeLng.vn.locale);
+    if (i18n.language === typeLng.en) {
+      return replaceUrlByI18n(typeLng.en, typeLng.vn);
     }
-    if (
-      i18n.language === typeLng.vn.locale ||
-      i18n.language === typeLng.vn.detect
-    ) {
-      console.log("abc vn");
-
-      return replaceUrlByI18n(typeLng.vn.locale, typeLng.en.locale);
+    if (i18n.language === typeLng.vn) {
+      return replaceUrlByI18n(typeLng.vn, typeLng.en);
     }
   }
 
-  function redirectUrl(lng) {
-    i18n.changeLanguage(lng);
-    return navigate(lng);
-  }
+  // function redirectUrl(lng) {
+  //   i18n.changeLanguage(lng);
+  //   return navigate(lng);
+  // }
 
   useEffect(() => {
     const changeDetectLanguage = () => {
-      if (pathname === urlDefault) {
-        if (
-          i18n.language === typeLng.vn.detect ||
-          i18n.language === typeLng.vn.locale
-        ) {
-          return redirectUrl(typeLng.vn.locale);
-        } else {
-          return redirectUrl(typeLng.en.locale);
-        }
-      }
-
-      if (i18n.language === typeLng.en.detect) {
-        return redirectUrl(typeLng.en.locale);
-      }
-
-      if (i18n.language === typeLng.vn.detect) {
-        return redirectUrl(typeLng.vn.locale);
-      }
-
       if (
-        pathname.includes(typeLng.vn.locale) &&
-        (i18n.language === typeLng.en.locale ||
-          i18n.language === typeLng.en.detect)
+        pathname.includes(typeLng.vn) &&
+        i18n.language === typeLng.en
       ) {
-        i18n.changeLanguage(typeLng.vn.locale);
+        i18n.changeLanguage(typeLng.vn);
         return;
       }
 
       if (
-        pathname.includes(typeLng.en.locale) &&
-        (i18n.language === typeLng.vn.locale ||
-          i18n.language === typeLng.vn.detect)
+        pathname.includes(typeLng.en) &&
+        i18n.language === typeLng.vn
       ) {
-        i18n.changeLanguage(typeLng.en.locale);
+        i18n.changeLanguage(typeLng.en);
         return;
       }
     };
-    changeDetectLanguage();
+   changeDetectLanguage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -106,7 +76,13 @@ const LanguageSwitcher = () => {
         >
           {i18n.language}
         </span>
-        <img src={iconLanguage} width={16} height={16} alt="icon localization"  style={{opacity:'1'}}/>
+        <img
+          src={iconLanguage}
+          width={16}
+          height={16}
+          alt="icon localization"
+          style={{ opacity: "1" }}
+        />
       </Dropdown.Toggle>
     </Dropdown>
   );
