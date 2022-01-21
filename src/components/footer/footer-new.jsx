@@ -51,10 +51,10 @@ export default function FooterV2() {
             <div>
               <Row>
                 <div className="footer-icon">
-                  <img src={logo} alt="unicloud" width={72} height={72} />
+                  <img src={logo} alt="unicloud" width={50} height={50} />
                 </div>
                 <div className="footer-icon" style={{ alignSelf: "flex-end" }}>
-                  <img src={logoUni} alt="" width={115} />
+                  <img src={logoUni} alt="" width={115} height={50} />
                 </div>
               </Row>
             </div>

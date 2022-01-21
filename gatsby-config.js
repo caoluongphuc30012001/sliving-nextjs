@@ -107,8 +107,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/i18n/locate`,
-        name: `locale`,
+        path: `${__dirname}/src/i18n/locales`,
+        name: `locales`,
       },
     },
     {
@@ -142,15 +142,15 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        color: `tomato`,
-        // Disable the loading spinner.
-        showSpinner: false,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-nprogress`,
+    //   options: {
+    //     // Setting a color is optional.
+    //     color: `tomato`,
+    //     // Disable the loading spinner.
+    //     showSpinner: false,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-offline`,
       options: {

@@ -1,7 +1,12 @@
 import React from "react";
 import LayoutNew from "@components/layout-new";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
+import SwiperCore, {
+  EffectFade,
+  Pagination,
+  Navigation,
+  Autoplay,
+} from "swiper";
 import { Row, Col } from "react-bootstrap";
 
 import sectionFour1Full from "@images/main-page-v2/rectangle-smart-home.jpg";
@@ -18,46 +23,51 @@ import useWindowSize from "@hook/useWindowSize";
 import ButtonCustom from "@components/button/button-v2";
 import SectionBannerV2 from "@components/section/banner/banner";
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { graphql, useStaticQuery } from "gatsby";
 
-import dataMetaDetails  from "@data/dataMeta.json";
+import dataMetaDetails from "@data/dataMeta.json";
 
 import Seo from "@components/seo";
 
 import "@i18n/i18n";
 
+import "swiper/css/effect-fade";
 
 import "./style.scss";
+import GatsbyLink from "@components/gatsby-link";
 
-SwiperCore.use([Pagination, Navigation, Autoplay]);
+SwiperCore.use([EffectFade, Pagination, Navigation, Autoplay]);
 
 const IndexPage = () => {
-const dataMeta = dataMetaDetails["dataMeta"];
+  const dataMeta = dataMetaDetails["dataMeta"];
   const { t } = useTranslation();
   const queryData = useStaticQuery(graphql`
-  query MyQuery {
-    header: allFile(
-      filter: {absolutePath: {regex: "/(/images/main-page-v2/shutterstock)/"}}
-    ) {
-      nodes {
-        childImageSharp {
-          gatsbyImageData(width: 1440, height: 799)
+    query MyQuery {
+      header: allFile(
+        filter: {
+          absolutePath: { regex: "/(/images/main-page-v2/shutterstock)/" }
+        }
+      ) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData(width: 1440, height: 799)
+          }
+        }
+      }
+      bannerLeft: allFile(
+        filter: {
+          absolutePath: { regex: "/(/images/main-page-v2/banner-left)/" }
+        }
+      ) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }
-    bannerLeft: allFile(
-      filter: {absolutePath: {regex: "/(/images/main-page-v2/banner-left)/"}}
-    ) {
-      nodes {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
-    }
-  }
-  
-   `);
+  `);
   const { isMobile } = useWindowSize();
 
   const BuildImageCarousel = ({ carousel, isButton }) => {
@@ -98,6 +108,7 @@ const dataMeta = dataMetaDetails["dataMeta"];
   const BuildCarousel = ({ array, isButton, isAutoPlay }) => {
     return (
       <Swiper
+        effect={"fade"}
         spaceBetween={30}
         pagination={{
           bulletClass: "bullet-section",
@@ -106,16 +117,20 @@ const dataMeta = dataMetaDetails["dataMeta"];
             : "bullet-active-section-v2",
           clickable: true,
         }}
-        autoplay={isAutoPlay ? {
-          "delay": 2500,
-          "disableOnInteraction": false
-        } : false}
+        autoplay={
+          isAutoPlay
+            ? {
+                delay: 2500,
+                disableOnInteraction: false,
+              }
+            : false
+        }
         navigation={
           isButton
             ? {
-              nextEl: ".btn-next",
-              prevEl: ".btn-prev",
-            }
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+              }
             : isButton
         }
         className="mySwiper"
@@ -142,16 +157,24 @@ const dataMeta = dataMetaDetails["dataMeta"];
   };
 
   const BuildHeader = () => {
-    return <BuildCarousel isButton={false} array={queryData?.header?.nodes || []
-    } isAutoPlay={true} />;
+    return (
+      <BuildCarousel
+        isButton={false}
+        array={queryData?.header?.nodes || []}
+        isAutoPlay={true}
+      />
+    );
   };
 
   const BuildSectionTwoElement = () => {
     return (
-      <section className="section-l-r-v2">
+      <section className="section-l-r-v2 container-v2">
         <Row className="g-0">
           <Col xs={12} lg={6} className="section-l-v2">
-            <BuildCarousel isButton={false} array={queryData?.bannerLeft?.nodes?.slice(0, 4) || []} />
+            <BuildCarousel
+              isButton={false}
+              array={queryData?.bannerLeft?.nodes?.slice(0, 4) || []}
+            />
           </Col>
           <Col xs={12} lg={6} className="section-r-v2">
             <article>
@@ -201,7 +224,7 @@ const dataMeta = dataMetaDetails["dataMeta"];
       },
     ];
     return (
-      <section className="section-banner-three">
+      <section className="section-banner-three container-v2">
         <Row className="banner-three-wrap">
           {arrElement.map((element, index) => {
             return (
@@ -268,25 +291,65 @@ const dataMeta = dataMetaDetails["dataMeta"];
   };
 
   const BuildSectionBannerReason = () => {
-    return <SectionBannerV2
-      title={t(`reason.header`)}
-      desc={t(`reason.description`)} />
+    return (
+      <SectionBannerV2
+        title={t(`reason.header`)}
+        desc={t(`reason.description`)}
+      />
+    );
   };
- 
+
+  const BuildCard = ({title,description,image,url}) => {
+    return (
+      <div className="card-aspect">
+        <img src={image} alt="aspect smart home" width={750} height={'auto'} />
+        <div className="card-aspect-group">
+          <GatsbyLink to={url}>
+          <h3>{title}</h3>
+          </GatsbyLink>
+          <p>{t(`${description}`)}</p>
+        </div>
+      </div>
+    );
+  } 
+
+  const BuildAspects = () => {
+    const description = {
+      smartHome: "smart-apartment-description",
+      smartParking:"smart_parking_description",
+      smartLighting:"core-feature",
+      iot:"iot_description"
+    }
+    return (
+      <section className="container-v2 aspect">
+        <h2 className="txt-center mb-32 fs-44">{t(`pion_field`)}</h2>
+        <Row className="container-wrap aspect-wrap">
+          <Col xs={6} md={6} className="aspect-wrap-detail"><BuildCard title={"Smart Home"} description={description.smartHome} image={sectionFour1Full} url={'/smart-home/'} /></Col>
+          <Col xs={6} md={6} className="aspect-wrap-detail"><BuildCard title={"Smart Lighting"} description={description.smartLighting} image={sectionFour2Full} url={'/smart-lighting/'}/></Col>
+          <Col xs={6} md={6} className="aspect-wrap-detail"><BuildCard title={"Smart Parking"} description={description.smartParking} image={sectionFour4Full} url={'/solutions/smart-parking/'}/></Col>
+          <Col xs={6} md={6} className="aspect-wrap-detail"><BuildCard title={"Fintech IoT"} description={description.iot} image={sectionFour3Full} url={'#'}/></Col>
+        </Row>
+      </section>
+    );
+  };
 
   return (
-    <LayoutNew >
-        <Seo title={t(`${dataMeta.home_page.title}`)} description={t(`${dataMeta.home_page.description}`)}  />
-        <header className="header-main-page container-v2">
-          <BuildHeader />
-        </header>
-        <main id="main_page" className="container-v2">
-          <BuildSectionTwoElement />
-          <BuildSectionThreeElement />
-          <BuildSectionFourElement />
-          <BuildSectionBannerReason />
-        </main>
-      </LayoutNew>
+    <LayoutNew>
+      <Seo
+        title={t(`${dataMeta.home_page.title}`)}
+        description={t(`${dataMeta.home_page.description}`)}
+      />
+      <header className="header-main-page container-v2">
+        <BuildHeader />
+      </header>
+      <main id="main_page" >
+        <BuildSectionTwoElement />
+        <BuildSectionThreeElement />
+        {/* <BuildSectionFourElement /> */}
+        <BuildAspects />
+        <BuildSectionBannerReason />
+      </main>
+    </LayoutNew>
   );
 };
 

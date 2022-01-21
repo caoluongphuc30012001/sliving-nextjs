@@ -12,7 +12,7 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
   const { t } = useTranslation();
   return (
     <section className="section-banner-v2">
-      <div className="banner-wrap-v2 container-v2">
+      <div className="banner-wrap-v2 ">
         <div className="banner-wrap container-wrap">
           <Row className="center-row">
             <div className="banner-icon">
@@ -21,9 +21,9 @@ export default function SectionBannerV2({ url, title, desc, btnContact }) {
           </Row>
           <Row className="center-row">
             <div className="banner-title">
-              <h3>
+              <h2 className="banner-title">
                 {t(`${title}`)}
-              </h3>
+              </h2>
             </div>
           </Row>
           <Row className="row-banner-desc center-row">
