@@ -3148,6 +3148,9 @@ a.btn-link-a {
   }
   .footer-info-company {
     margin-top: 32px;
+    a{
+      color: #212121;
+    }
   }
 
   .footer-map {
@@ -3665,7 +3668,7 @@ a.btn-link-a {
     background: #e8f2fb;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    width: 260px;
+    width: 300px;
     height: 56px;
     border: none;
     padding: 17.5px 8px 17.5px 16px;

@@ -57,24 +57,24 @@ export default function FooterHomePage() {
             <Col xs={12} md={6} sm={6}>
               <div className="branch-hn">
                 <p>
-                  {t(`HEAD_QUARTERS`)}: Hà Nội
+                  {t(`HEAD_QUARTERS`)}: {t(`Ha_Noi`)}
                   <br />
                   {t(`footer_address`)}: {t(`address_head_quarters`)}
                   <br />
-                  {t(`footer_phone`)}: 02473039999
+                  {t(`footer_phone`)}: 024 7303 9999
                   <br />
-                  {t(`footer_email`)}: hello@unicloud.vn
+                  {t(`footer_email`)}: <a href = "mailto: hello@sliving.vn">hello@sliving.vn</a> 
                 </p>
               </div>
             </Col>
             <Col xs={12} md={6} sm={6}>
               <div className="branch-hcm">
                 <p>
-                  {t(`branch`)}: Hồ chí Minh
+                  {t(`branch`)}: {t(`Ho_Chi_Minh`)}
                   <br />
                   {t(`footer_address`)}: {t(`ADDRESS.ADDRESS_COMPANY`)}
                   <br />
-                  {t(`footer_phone`)}: 02871079995
+                  {t(`footer_phone`)}: 028 7107 9995
                   {/* MST: 0107432651-001 */}
                 </p>
               </div>
