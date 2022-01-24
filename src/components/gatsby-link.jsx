@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink } from "gatsby";
+import PropTypes from 'prop-types';
+
 import i18next from 'i18next';
 
 const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
@@ -18,7 +20,6 @@ const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
         )
     }
 
-
     return (
         <a href={to} {...other}>
             {children}
@@ -26,5 +27,11 @@ const Link = ({ children, to, activeClassName, partiallyActive, ...other }) => {
     )
 }
 
-export default Link;
+Link.prototype = {
+    children: PropTypes.any.isRequired,
+    to: PropTypes.string.isRequired, 
+    activeClassName : PropTypes.any, 
+    partiallyActive: PropTypes.any
+}
 
+export default Link;

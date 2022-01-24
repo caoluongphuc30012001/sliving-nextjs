@@ -1,22 +1,23 @@
 @font-face {
-    font-family: "SvnGilroy";
-    src: local("SvnGilroy"), url("../../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf") format("truetype");
+    font-family: "svn-gilroy";
+    src: url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "SvnGilroy";
-    src: local("SvnGilroy"), url("../../fonts/svn-gilroy/SVN-Gilroy-Bold.ttf") format("truetype");
+    font-family: "svn-gilroy";
+    src: local("svn-gilroy"), url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 :root{
-    --bs-font-sans-serif: "SvnGilroy", sans-serif;
+    --bs-font-sans-serif: "svn-gilroy", sans-serif;
 }
-*, html{
-    font-family: inherit;
+
+*{
+    font-family: "svn-gilroy" !important;
 }

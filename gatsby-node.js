@@ -38,7 +38,7 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/smart-home-page-v2") === true ||
     checkDetectPage(page, "/smart-light-v2") === true ||
     checkDetectPage(page, "/contact-page-v2") === true ||
-    checkDetectPage(page, "/support-page-v2") === true
+    checkDetectPage(page, "/support-page-v2") === true 
   )) {
     deletePage(page)
   }
@@ -199,7 +199,8 @@ arrLng.map((lng) => {
       path: `/${lng}/smart-home/products/${product.distinct[0]}`,
       component: productDetailComponent,
       context: {
-        data: product.group
+        data: product.group,
+        dataMeta: product.group
       },
     });
   });
@@ -218,6 +219,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@hook": path.resolve(__dirname, "./src/hook"),
         "@mock": path.resolve(__dirname, "./src/mock"),
         "@context": path.resolve(__dirname, "./src/context"),
+        "@data": path.resolve(__dirname, "./src/data"),
+        "@i18n": path.resolve(__dirname, "./src/i18n"),
       },
       fallback: {
         util: false

@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
+
+import "@i18n/i18n";
+
 import { Navbar, Image, Nav, NavDropdown } from "react-bootstrap";
 import { graphql, useStaticQuery } from "gatsby";
 import { slide as Menu } from "react-burger-menu";
-import Link from "@components/gatsby-link";
 import { useTranslation } from "react-i18next";
+
 import logo from "@images/logo/logo-header.svg";
+
 import LanguageSwitcher from "@components/navbar/switterLanguage";
+import Link from "@components/gatsby-link";
+
 export default function NavbarSmartHomeMobile() {
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();

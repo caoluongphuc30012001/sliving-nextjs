@@ -4,12 +4,10 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 import favicon from "@images/logo/logo-small.svg";
-import banner from "@images/main-page-v2/header-top-4.jpg";
-
-import font from "../fonts/svn-gilroy/SVN-Gilroy-Regular.ttf";
+//import banner from "@images/main-page-v2/header-top-4.jpg";
 
 import i18next from "i18next";
-function Seo({ url,description, metaImage, title }) {
+function Seo({ url,description,  title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,23 +25,29 @@ function Seo({ url,description, metaImage, title }) {
   );
   const lang = i18next.language; 
   const metaDescription = description || site.siteMetadata.description;
-  const image = metaImage || banner;
   const metaUrl = url || site.siteMetadata.siteUrl;
+  const titleMeta = title || site.siteMetadata.title;
+  const image = `${site.siteMetadata.siteUrl}/sliving-banner.jpg`;
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
     >
-      <link
-        rel="preload"
-        href={font}
-        as="font"
-        crossorigin="anonymous"
-        type="truetype"
-      />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
       <link href={favicon} rel="shortcut icon"></link>
-      <title>{title}</title>
+      <title>{titleMeta}</title>
       <link rel="canonical" href={site.siteMetadata.siteUrl} />
       <meta name="description" content={metaDescription} />
       <meta name="image" content={image} />
@@ -56,17 +60,28 @@ function Seo({ url,description, metaImage, title }) {
 
       {/* <!-- Facebook Meta Tags --> */}
       <meta property="og:url" content={metaUrl} />
-      <meta property="og:type" content="article" />
-      <meta property="og:title" content={title} />
+      <meta property="og:type" content="website" />
+      <meta property="og:locale" content={lang} />
+      <meta property="og:title" content={titleMeta} />
+      <meta property="og:site_name" content={titleMeta} />
       <meta property="og:description" content={metaDescription} />
+
       <meta property="og:image" content={image} />
+      <meta
+          property="og:image:alt"
+          content={metaDescription}
+        />
+
+      <meta property="og:image:with" content="1280" />
+      <meta property="og:image:height" content="686" />
 
       {/* <!-- Twitter Meta Tags --> */}
+      <meta property="twitter:title" content={metaDescription} />
+      <meta property="twitter:description" content={metaDescription} />
+      <meta property="twitter:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={"unicloud"} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={image} />
+      <meta property="twitter:url" content={metaUrl} />
+
     </Helmet>
   );
 }
@@ -79,7 +94,7 @@ Seo.defaultProps = {
 Seo.propTypes = {
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   image: PropTypes.shape({
     src: PropTypes.string.isRequired,
     height: PropTypes.number.isRequired,

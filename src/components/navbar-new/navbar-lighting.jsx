@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from "react";
+
+import "@i18n/i18n";
+
 import { Navbar, Image, Nav } from "react-bootstrap";
+
 import { graphql, useStaticQuery } from "gatsby";
+
 import logo from "@images/logo/logo-header.svg";
-import LanguageSwitcher from "@components/navbar/switterLanguage";
+
 import { useTranslation } from "react-i18next";
+
 import GatsbyLink from "@components/gatsby-link";
+import LanguageSwitcher from "@components/navbar/switterLanguage";
 
 export default function NavbarLighting() {
+  
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
   const { t } = useTranslation();

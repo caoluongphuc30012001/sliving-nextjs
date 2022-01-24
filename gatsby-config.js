@@ -9,7 +9,7 @@ module.exports = {
     DETECT_NODE_MUTATIONS: true
   },
   siteMetadata: {
-    title: "Sliving - Cung cấp giải pháp toàn diện về IoT Flatform",
+    title: "Sliving - Cung cấp giải pháp toàn diện về IoT Platform",
     description:"Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi",
     author:"Sliving",
     keywords:"Sliving, san pham smarthome, sản phẩm IoT",
@@ -107,8 +107,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/i18n/locate`,
-        name: `locale`,
+        path: `${__dirname}/src/i18n/locales`,
+        name: `locales`,
       },
     },
     {
@@ -142,5 +142,42 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-nprogress`,
+    //   options: {
+    //     // Setting a color is optional.
+    //     color: `tomato`,
+    //     // Disable the loading spinner.
+    //     showSpinner: false,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/en/`,`/vn/`],
+      },
+    },{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Sliving`,
+        short_name: `Sliving`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        lang:`vn`,
+        theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `static/apple-touch-icon.png`,
+        start_url: `/`,
+        localize: [
+          {
+            start_url: `/vn/`,
+            lang: `vn`,
+            name: `Sliving - Cung cấp giải pháp toàn diện về IoT Platform`,
+            short_name: `Sliving`,
+            description: `Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi`
+          },
+        ],
+      },
+    }
   ],
 };

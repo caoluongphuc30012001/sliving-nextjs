@@ -1,4 +1,7 @@
 import React from "react";
+
+import "@i18n/i18n";
+
 import LayoutSmartHome from "@components/layout-smart-home";
 import IntroductionHeader from "./header/section-header";
 import SectionContent from "./body/section-content";
@@ -17,12 +20,16 @@ import CardSolution from "@components/card/card-solution/card-solution";
 import DataProductNew from "@query/product-hot";
 import { useTranslation } from "react-i18next";
 
+import dataMetaDetails   from "@data/dataMeta.json";
+
+import Seo from "@components/seo";
+
 import "./style.scss";
-import { PortfolioConsumer } from "../../../context/context";
 
 const SmartHomeSolution = () => {
   const { t } = useTranslation();
   const data = DataProductNew();
+  const dataMeta = dataMetaDetails["dataMeta"];
 
   const BuildThreeSolution = () => {
     return (
@@ -81,21 +88,20 @@ const SmartHomeSolution = () => {
     );
   };
   return (
-   <PortfolioConsumer>
-     {context => ( <LayoutSmartHome title={`${t(context?.dataTitles?.dataTitles.smart_security.title)}`}>
-      <div className="introduct-main" id="introduct-main-security">
-        <IntroductionHeader />
-        <SectionFeatureProduct dataProductHot={data} />
-        <BuildThreeSolution />
-        <BuildThreeContent />
-        <SectionBannerV2
-          title={t(`solution.footer`)}
-          desc={t(`solution.subFooter`)}
-          btnContact={true}
-        />
-      </div>
-    </LayoutSmartHome>)}
-   </PortfolioConsumer>
+    <LayoutSmartHome title={t(`${dataMeta.smart_security.title}`)} description={t(`${dataMeta.smart_security.description}`)} url={dataMeta.smart_security.url}>
+    <Seo title={t(`${dataMeta.smart_security.title}`)} description={t(`${dataMeta.smart_security.description}`)} url={dataMeta.smart_security.url}  />
+    <div className="introduct-main" id="introduct-main-security">
+      <IntroductionHeader />
+      <SectionFeatureProduct dataProductHot={data} />
+      <BuildThreeSolution />
+      <BuildThreeContent />
+      <SectionBannerV2
+        title={t(`solution.footer`)}
+        desc={t(`solution.subFooter`)}
+        btnContact={true}
+      />
+    </div>
+  </LayoutSmartHome>
   );
 };
 export default SmartHomeSolution;

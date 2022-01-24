@@ -1,0 +1,574 @@
+{
+  "HEADER": {
+    "HOMEPAGE": {
+      "HOME": "Home",
+      "PRODUCT": "Products",
+      "SOLUTION": "Solutions",
+      "COOPERATION": "Cooperation",
+      "SUPPORT": {
+        "SUPPORT": "Support",
+        "USER_MANUALS": "User Manuals",
+        "PRODUCT_VIDEOS": "Product Videos"
+      },
+      "ABOUTUS": "About Us",
+      "CONTACTUS": "Contact Us",
+      "PROJECT": "Project",
+      "BLOG": "Blog",
+      "PRODUCT&SOLUTION": "Product and Solution",
+      "STORY": "Brand story",
+      "NEWS": "News",
+      "LIGHTING": "Lighting"
+    },
+    "REGISTER": "REGISTER",
+    "EMAIL": "EMAIL",
+    "SEARCH_KEY_WORD": "Search ..."
+  },
+  "ADDRESS": {
+    "ADDRESS": "ADDRESS",
+    "ADDRESS_COMPANY": "Block 5, Lot I-3B-1, Street N6, Saigon Hi-Tech Park, Ward Tan Phu, Thu Duc City, Ho Chi Minh City, Vietnam, 700000"
+  },
+  "CONTACT_PHONE": "CONTACT_PHONE",
+  "HEAD_QUARTERS": "Head Quarter",
+  "SHOW_ROOM": "SHOW_ROOM",
+  "Help_Us_Know": "Help us know you better, What your job's title?",
+  "Investor": "Investor",
+  "Architect": "Architect",
+  "Distributor": "Distributor",
+  "Contractor": "Contractor",
+  "Select_The_Project": "Select The Project That You Want To Construct",
+  "Civil_Construction": "Civil Construction",
+  "Commercial_Construction": "Commercial Construction",
+  "Building": "Building",
+  "Hospital": "Hospital",
+  "Supermarket": "Supermarket",
+  "More_Info": "See more",
+  "More_Information": "More information",
+  "Solution_Suggestions": "Solution Suggestions",
+  "Sliving_IOT_Products": "Sliving IOT's products",
+  "navProduct": {
+    "led": "LED",
+    "Switches": "Switches",
+    "Sockets": "Sockets",
+    "Sensors": "Sensors",
+    "Air_Conditioning_System": "Air Conditioning System",
+    "Smart_Curtain": "Smart Curtain",
+    "Smart_Meter": "Smart Meter",
+    "Zigbee_KIT": "Zigbee KIT",
+    "Door_motor_gate": "Door Motor Gate",
+    "Smart_Button": "Smart Button",
+    "Motor": "Motor"
+  },
+  "The_Reason": "The Reasons Why You Should Choose Sliving",
+  "Outstanding_Project": "Outstanding Project",
+  "News": "News",
+  "Product_Application": "Product Applications For Different Area In A Contruction",
+  "Product_Consultation": "Product Consultation",
+  "Technical_solutions": "Technical Solutions",
+  "Construction_Manual": "Construction Manual",
+  "Agricultural_Materials": "Agricultural Materials Quota",
+  "Product_Identification": "Product Identification",
+  "Product_Warranty": "Product Warranty",
+  "Documents_Download": "Documents Download",
+  "Current_Construction": "Current Constructions",
+  "Product_Groups": "Product Groups",
+  "Product_Features": "Product Features",
+  "Search": "Search ...",
+  "Sorted_by": "Sort by",
+  "Newest_To_Oldest": "Newer to Older",
+  "Oldest_To_Newest": "Older to Newer",
+  "Smart_Home": "Sliving's Smart Home",
+  "Latest_News": "Latest News",
+  "Latest_Video": "Latest Video",
+  "New_Posts": "New Posts",
+  "Sales/Contruction_agent": "Sales/Contruction Agent Management System:",
+  "Nearest_agency": "Find the Vinh Tuong agency near your location in Vietnam:",
+  "Province/City": "Province/City",
+  "District": "District",
+  "Address/Name_Distributor": "Address/Name of The Distributor",
+  "How_Can_We_help": "How Can We Help You?",
+  "Your_Name": "Your Name",
+  "Your_Email": "Your Email",
+  "Send_Message": "Send Message",
+  "select_contrucstion": "Select the construction you want to build",
+  "civil_works": "Civil Works",
+  "commercial_construction": "Commercial Construction",
+  "who_are_we": "Sliving IoT - Who are we?",
+  "PRODUCTS_BE_USED": "PRODUCTS BEING USED",
+  "USE_THE_SOLUTION": "SOLUTIONS",
+  "NAME_CONSTRUCTIN": "NAME OF THE CONSTRUCTION WORKS",
+  "POST": "posts",
+  "no_result": "No Result Found",
+  "where_to_sell": "Where to sell",
+  "PRODUCTS": {
+    "specification": "Specification",
+    "application": "Application",
+    "recommend": "Recommend",
+    "document": "Document"
+  },
+  "Product": "Product",
+  "Information": "Information",
+  "Company": "Company",
+  "Employee_database": "Employee database",
+  "Payroll": "Payroll",
+  "Absences": "Absences",
+  "Time_tracking": "Time tracking",
+  "Shift_planner": "Shift planner",
+  "Recruiting": "Recruiting",
+  "Blog": "Blog",
+  "Support": "Support",
+  "FAQ": "FAQ",
+  "About_us": "About us",
+  "Careers": "Careers",
+  "Contact_us": "Contact us",
+  "Lift_media": "Lift media",
+  "Stay_in_touches": "Stay in touch with us for the latest product updates.",
+  "Terms": "Terms",
+  "Privacy": "Privacy",
+  "Vision-Mission": "Vision - Mission",
+  "Leading-company": "As a leading company in smart technology market, by putting prestige as a top priority factor, Sliving has become one of the most reputable technology companies, not only in Viet Nam but also internationally.",
+  "Who-are-we": "who are we?",
+  "Help-users": "Sliving is constantly developing, and releasing advanced technology solutions to help users experience a more comfortable life,...",
+  "The_era": "Are you ready for the era of",
+  "Advance-tech": "Smart living applies advanced technologies to high-end projects to bring a high standard of living for the residents. Such technologies include Smart Security Monitoring, Smart Parking, Smart Home and Smart Operations Management",
+  "Smart-home": "Smart home",
+  "Comprehensive-Shome": "We are proud to provide the most comprehensive smart home solution for customers",
+  "lighting": "Smart lighting",
+  "conditioner": "Smart air conditioner",
+  "electricity-water": "Smart electricity and water metering",
+  "curtain": "Smart curtains",
+  "speaker": "Smart speaker",
+  "Smart-Parking": "Smart Parking",
+  "Pioneering": "Pioneering in applying IoT technologies to smart parking solutions.",
+  "Reservation": "Reservation of parking spaces through the App",
+  "Directions": "Directions to the parking location",
+  "Find-parking": "Find parking location through App, Kios PC",
+  "parking-vacancies": "Notice of parking vacancies",
+  "Security-control": "Security control",
+  "facial-recognition": "Use facial recognition technology to monitor people entering and leaving controlled areas.",
+  "Face-ID": "Using facial recognition technology (Face ID) to operate the elevator",
+  "Identify-strangers": "Identify strangers",
+  "recognition-camera": "Time attendance using face recognition camera",
+  "Control-elevators": "Control elevators, control turnstiles (turnstiles)",
+  "Smart-management": "Smart energy",
+  "Create-solution": "Creating solutions to manage and operate projects including managing residents, services, operations...",
+  "Resident-management": "Resident management, facial recognition",
+  "Managing-Building": "Managing Building services",
+  "Managing revenue": "Managing revenue and expenditure of services provided to residents",
+  "Provide-residents": "Provide residents with a mobile application to interact with the management",
+  "5-reasons": "5 reasons to choose SLIVING",
+  "posted-at": "posted at",
+  "International-quality": "International quality products",
+  "customers-shoes": "Putting yourself in the customers' shoes is a strategy we employ here at Sliving to understand what the customer needs. To change the customer's uncertainty about the domestic smart product quality, we have been perfecting our products. This is proved by multiple international quality certificates that we have and will receive in the near future, MFi is one of them.",
+  "Wide-range": "Wide range of products and solutions",
+  "Designing-interfaces": " Designing interfaces for mobile applications (Mobile App), monitoring websites to control, and introduce products.",
+  "Design-hardware": " Design hardware products",
+  "Producing-smart": " Producing smart technology equipment.",
+  "Building-computer": " Building computer programs such as Firmware, Cloud Server.",
+  "AI": " AI (Artificial Intelligence).",
+  "Strong-supply": "Strong supply chain",
+  "goal-leading1": "Intending to lead the smart technology market, Sliving is the first enterprise licensed to manufacture devices in the Smart Living ecosystem. The factory has an area of ​​nearly 4500m2, the total production capacity is estimated at",
+  "goal-leading2": " 270,000 devices/year.",
+  "goal-leading3": " In which, the production capacity in phase 1 of the project will be ",
+  "goal-leading4": "135 thousand products/year",
+  "goal-leading5": " and gradually increase in phase 2, reaching 100% capacity by June 2025.",
+  "Technical-warranty-support": "Technical support and warranty assistant",
+  "Project-staffs": "Project staff, technical staff, and sales staff are ready to advise/support customers with suitable solutions to meet each customer's expectations with low costs.",
+  "Proven-Competence": "Proven Competence and Experience",
+  "PROJECT": "PROJECT",
+  "SLIVING's-smart": "using SLIVING's smart devices.",
+  "More-than": "More than",
+  "DEVICES": "DEVICES",
+  "was-installed": "was installed",
+  "employees": "employees",
+  "better-and-better": "are developing and innovating continuously to improve SLIVING products better and better everyday.",
+  "Recommended-news": "Recommended news",
+  "IoT-Flatform": "A pioneer in providing comprehensive solutions for IoT Platform in Vietnam",
+  "Smart-parking-solution": "Parking solution for your project",
+  "private-vehicles": "You often worry on the road that you do not know if the upcoming parking lot is available or not. When you get there, you will have to waste time looking for an empty place in the cellar. All the above problems are solved by Smart Parking solution - smart parking of SLiving.",
+  "Lighting-solutions": "Smart lighting solutions for your projects",
+  "Smart-lighting": "Smart lighting",
+  "core-feature": "The core feature of smart lighting is the flexibility of the control system – meaning the users won't need to rely on traditional wall switches to turn the lights on/off. This system will help control the light anywhere in the house through an app on a mobile phone, or tablet. Not only that, smart lighting products also have many extremely outstanding features such as being able to manually adjust power, brightness, timer on and off, changing colors according to the music... ",
+  "Career-opportunities": "Career opportunities",
+  "embody-core-values": "Each SLIVING member is expected to embody core values ​​such as attitudes, behaviors, beliefs, and values in any position in the organization. These core values ​​are formed from the values ​​of the people who run the business and the collective of workers.",
+  "Smart-security-solution": "Smart security solutions for you",
+  "Energy-saving": "Energy saving",
+  "collect-energy": "SLiving's energy-saving solution",
+  "Smart-Security-system": "Products in the Smart Security system",
+  "Smart-parking-product": "Products in the Smart Parking system",
+  "Smart-energy-product": "Products in the Energy-saving solution",
+  "Energy-saving-product": "Energy-saving product",
+  "Parking-products": "Parking products",
+  "Smart_security_product": "Smart security product",
+  "smart-energy": "SMART ENERGY",
+  "SMART-OFFICE": "SMART OFFICE",
+  "SMART-APARTMENT": "SMART HOME",
+  "LED-Downlight": "LED Downlight",
+  "smart-apartment-description": "With Sliving smart home, the users can control and manage the smart devices located inside the house through the application installed on their phone or tablet. By that way, the customers can monitor, turn on/off the air conditioning system, electricity, and water, ... while they not there. Not only that, the smart home can also trigger alarms for emergency situations such as: fire, earthquake, to family members having an accident/fall, injury, etc. .",
+  "Thermostat-control": "Thermostat air conditioner control",
+  "Smart-switch": "Smart switch",
+  "Sensor": "Sensor",
+  "Door-Gate": "Door-Gate motor",
+  "security-description": "SLiving's smart security solution builds a “multi-layer” security system that ensures a private, safe space for each customer and is easy to control for managers.",
+  "Smart-security": "Smart security",
+  "Smart-Fingerprint": "Smart Fingerprint Lock",
+  "Smart-Swing": "Smart Swing Door",
+  "Face-ID-title": "Face ID",
+  "fingerprint-recognition": {
+    "step_1": "Use fingerprint recognition method to close / open the door.",
+    "step_2": "Integrated with magnetic card scanner, password.",
+    "step_3": "There are clear lights and tones for all cases.",
+    "step_4": "Can unlock remotely via bluetooth feature on the phone."
+  },
+  "swing-door-descrip": {
+    "step_1": "Area security management device combined with proprietary software",
+    "step_2": "Integrated facial recognition system or magnetic card",
+    "step_3": "Combine with smart elevator to call floors automatically",
+    "step_4": "Automatically open the door when there is an emergency notification"
+  },
+  "biometric-technology": {
+    "step_1": "Using biometric technology to extract facial features",
+    "step_2": "Authenticate residents, control access to areas to be monitored as well as use to call elevators, open barriers",
+    "step_3": "Integrated into security camera",
+    "step_4": "Can recognize multiple faces at the same time"
+  },
+  "specialized-business": "Specialized business areas: ",
+  "Over-the-years": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, and convenient life.",
+  "footer-description": "Hello, we are Lift Media. Our goal is to translate the positive effects from revolutionizing how companies engage with their clients & their team.",
+  "Search-parking": "Search parking location easily",
+  "vacant-spot": "When arriving at the parking lot, users can easily find the vacant slot by using:",
+  "fastest-route": "A navigation app that shows the fastest route",
+  "direction-the-basements": "A led panel that indicates the direction in the basements",
+  "Reserve-parking": "Reserve parking slot quickly",
+  "System-automatic": "The system is fully automatic, using sensor technology, accurately updating the necessary information for reservation such as:",
+  "position-vacancies": "Number and position of vacancies in each area, basement",
+  "Operation-hours": "Operation hours of the parking lot",
+  "Corresponding-parking-fees": "Corresponding parking fees in real time",
+  "After-parking": "After parking, users are assured to work while the application will update these information:",
+  "Parking-status": "Parking status",
+  "Notify-the-users": "Notify the users when the registration period is about to end to avoid additional costs",
+  "Ultrasonic-sensors": "Ultrasonic sensors",
+  "Power-Socket-V3": "Power Socket V3",
+  "Light-Sensor": "Light Sensor",
+  "Rectangular-Socket": "Rectangular Socket",
+  "sub-who-are-we": {
+    "title": "Company development areas:",
+    "description_1": "Building interface design for mobile applications (Mobile App), websites (website) for monitoring, controlling and introducing products.",
+    "description_2": "Product's Hardware Design.",
+    "description_3": "Producing smart technology equipment",
+    "description_4": "Build computer programs such as Firmware, Cloud Server",
+    "description_5": "AI (Artificial Intelligence)",
+    "sub-description": "Over the years, Sliving has constantly developed and launched advanced technology solutions to help each user experience the most comfortable, comfortable and convenient life..."
+  },
+  "name_of_construction_works": "NAME OF CONSTRUCTION WORKS",
+  "construction": {
+    "villa": "Villa",
+    "cinema": "Cinema",
+    "hospital": "Hospital",
+    "Office": "Office",
+    "restaurant": "Restaurant",
+    "school": "School",
+    "store": "Store",
+    "townhouse": "Townhouse",
+    "factory": "Factory",
+    "apartment": "Apartment",
+    "building": "Building"
+  },
+  "smart-parking": {
+    "section_1": {
+      "title": "Search parking location easily",
+      "subDescription": "When arriving at the parking lot, users can easily reach the vacant position through:",
+      "description_1": "The fastest navigation app",
+      "description_2": "Led panel indicating direction in basements"
+    },
+    "section_2": {
+      "title": "Reserve your parking space quickly",
+      "subDescription": "The system is fully automatic, using sensor technology, accurately updates the necessary information for booking such as:",
+      "description_1": "Number and position of vacancies in each area, basement",
+      "description_2": "Hours of operation of the parking lot",
+      "description_3": "Corresponding parking fees in real time"
+    },
+    "section_3": {
+      "title": "Get notified about your parking session",
+      "subDescription": "After sending the car, users are completely assured to work when the application will update the information:",
+      "description_1": "Parking session status",
+      "description_2": "Notify when the registration period is about to end to avoid additional costs"
+    }
+  },
+  "smart-home": {
+    "section_1": {
+      "subDescription": "The solution brings lighting effects that are suitable for the environment, creating the best atmosphere and mood for users. All controlled remotely, anytime, anywhere with ease."
+    },
+    "section_2": {
+      "subDescription": "The solution uses devices to connect the air conditioner to the phone application. Users can monitor and control when not at home"
+    },
+    "section_3": {
+      "subDescription": "The solution uses devices to connect the switch to the phone app. Users can monitor and control when not at home.",
+      "description_1": "Smart Switch",
+      "description_2": "Touch 1 nút",
+      "description_3": "Smart Switch Battery"
+    },
+    "section_4": {
+      "subDescription": "We are proud to provide the most comprehensive smart home solution for customers.",
+      "description_1": "Pir",
+      "description_2": "Ultrasonic sensors",
+      "description_3": "Light Sensor"
+    },
+    "section_5": {
+      "subDescription": "We are proud to provide the most comprehensive smart home solution for customers.",
+      "description_1": "Pir",
+      "description_2": "Ultrasonic sensors",
+      "description_3": "Light Sensor"
+    },
+    "section_6": {
+      "subDescription": "We are proud to provide the most comprehensive smart home solution for customers.",
+      "description_1": "Pir",
+      "description_2": "Ultrasonic sensors",
+      "description_3": "Light Sensor"
+    }
+  },
+  "smart_home_v2": {
+    "header_title": "The era of intelligent life.",
+    "header_sub_title": "Complex project management experience. When selecting an offshore software development company, ensure that they have",
+    "sliving_products": "Sliving products",
+    "project_types_that_use_Sliving_solutions": "Project types that use Sliving solutions.",
+    "the_trend_towards_the_application": "The trend towards the application of technology in property management is also seen as one way to improve the operational capacity of the project. This factor also helps make a difference in the standard of professional property management services,...",
+    "successful_projects": "Successful projects using Sliving products",
+    "solution_for_your_needs": "Solution for your needs",
+    "solution_parking": "Smart parking management system",
+    "solution_lighting": "Light control system",
+    "solution_security": "Security management system",
+    "solution_home": "Smart home solutions"
+  },
+  "read_more": "Read more",
+  "company_name": "UNICLOUD TECHNOLOGY INVESTMENT JOINT STOCK COMPANY",
+  "branch": "Branch",
+  "address_head_quarters": "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+  "product_development_strategy": " Product Development strategy",
+  "ready_go_to_global": "Ready go to global",
+  "CONNECTING_ECOsystems": "Connecting ECOsystems",
+  "CUSTOMER_CENTRIC": "Customer centric",
+  "sub_ready_go_to_global": "At Unicloud, every product is born to solve local problems but must be designed to be go-global ready.",
+  "sub_CONNECTING_ECOsystems": "Owning core systems and core technologies to exploit Big Data through sharing users with other platforms.",
+  "sub_CUSTOMER_CENTRIC": "Taking customers as the center of digital transformation, maximizing resources & retaining customers.",
+  "products_v2": {
+    "header": "We have everything under control. We offer a broad range of control solutions to meet the needs of almost every project.",
+    "Featured_Product": "Featured Product"
+  },
+  "solution": {
+    "smart-home": {
+      "header": "New intelligent style for your home.",
+      "subHeader": "The Smart Home solution makes it possible for appliances to connect together in a smart system. Users use apps on phones to remotely control lighting, air conditioners, drapes, doors, etc. From there, they function more efficiently, more economically, and more efficiently. Improve the user experience.",
+      "section_1": {
+        "title": "Smart lighting",
+        "description": "On arrival at the parking lot, users can easily reach the vacancy through.The fastest browser application.Led sign indicating a direction in foundations"
+      },
+      "section_2": {
+        "title": "Remote control for air conditioning",
+        "description": "The solution uses equipment to connect the air conditioner to the telephony application. The air conditioner works with other appliances depending on the user scenario and the system is monitored and controlled remotely"
+      },
+      "section_3": {
+        "title": "Smart switch",
+        "description": "Sliving's smart switch products allow users to control devices via the app, including lights, blinds, air conditioners or embedded multi-device operating scenarios. Different designs ranging from modern touch switches to traditional mechanical switches meet every user's needs and preferences"
+      },
+      "section_4": {
+        "title": "Sensors",
+        "description": "The system of motion sensors, light sensors, door sensors, etc., combined with electrical equipment, creates a business case to meet the safety and comfort demands of the home"
+      },
+      "section_5": {
+        "title": "Smart curtain",
+        "description": "Help remote control the curtain by telephone. The curtain system closes and opens automatically according to the program specified by the user"
+      },
+      "section_6": {
+        "title": "Door - gate motor",
+        "description": "The gate - door motor is connected to the Sliving system for remote control via phone, saving users from having to go to the door to open and close, ensuring safety and reducing waiting time"
+      }
+    },
+    "parking": {
+      "header": "Convenient residential parking solution",
+      "subHeader": "The Smart Lighting solution not only provides a simple, light source, but also contributes to protecting the health of users and saving energy. The solution provides lighting effects that are appropriate for the environment, creating the best atmosphere and ambience for the user. Everything is controlled remotely, at any time, anywhere with facility.",
+      "card_1": {
+        "title": "Telescopes 101",
+        "description": "History of modern astronomy, there is probably no one greater."
+      },
+      "card_2": {
+        "title": "Moon Gazing",
+        "description": "History of modern astronomy, there is probably no one greater."
+      },
+      "card_3": {
+        "title": "The Amazing Hubble",
+        "description": "History of modern astronomy, there is probably no one greater."
+      },
+      "section_1": {
+        "title": "Search for parking space easily",
+        "description": "The solution provides lighting effects adapted to the environment, creating the best ambience for the user. All remote controlled, any time, anywhere with ease"
+      },
+      "section_2": {
+        "title": "Quickly reserve your parking space.",
+        "description": "The system is fully automatic, using sensor technology, accurately updates the necessary information for booking such as: Number and position of vacancies in each area, basement. Parking lot hour.Corresponding parking fees in real-time quickly reserve your parking space"
+      },
+      "section_3": {
+        "title": "Get your parking session notifications",
+        "description": "After sending the car, users are fully confident of operating when the application updates the information: Parking lot status. Indicate when the enrollment period is about to end to avoid extra charges"
+      }
+    },
+    "security": {
+      "header": "Smart security.",
+      "subHeader": "Sliving's innovative security solution builds a 'multi-layer' security system that helps ensure a private and safe space for each customer and is easy to control for managers.",
+      "card_1": {
+        "title": "Telescopes 101",
+        "description": "History of modern astronomy, there is probably no one greater."
+      },
+      "card_2": {
+        "title": "Moon Gazing",
+        "description": "History of modern astronomy, there is probably no one greater."
+      },
+      "card_3": {
+        "title": "The Amazing Hubble",
+        "description": "History of modern astronomy, there is probably no one greater."
+      },
+      "section_1": {
+        "title": "Smart lock",
+        "description": "Use fingerprinting to open or close the door. Built-in magnetic card reader, passcode. There are LEDs and bright tones for the suitcases. Can be unlocked from a distance via the phone's Bluetooth function"
+      },
+      "section_2": {
+        "title": "Smart revolving door",
+        "description": "Zone safety management feature combined with proprietary software: Integrated facial recognition and magnetic card system. Combine with intelligent elevator to call floors automatically.Open the gate automatically in case of an emergency notification"
+      },
+      "section_3": {
+        "title": "Face recognition",
+        "description": "Using biometric technology to extract facial recognition features: Authenticate residents, control access to areas to be monitored as well as used to call elevators, open barriers. Integrated into a security camera. Can recognize multiple faces at the same time"
+      }
+    },
+    "lighting": {
+      "header": "The technology of light gives your",
+      "color": " colour.",
+      "subHeader": "Complex project management experience. When selecting an offshore software development company, ensure that they have",
+      "section_1": {
+        "title": "Protect your health",
+        "description": "Sliving's lighting system prioritizes protecting users' health through the following criteria: Wide variety of CRI colour rendering index (CRI=70-95): suitable for work requirements in many different spaces, from houses, offices to factories... contributing to protecting eye health. Ability to change colour temperature: suitable for many activities, helping to focus on work, good mood and sound sleep for users"
+      },
+      "section_2": {
+        "title": "Energy saving",
+        "description": "Sliving's lighting solutions ensure energy savings through the following advantages: Maintains high luminescence efficiency (>100 lm/w). Long LED lamp life thanks to the use of modern led chip technology (SMD-COB), for an average lifespan of 50,000 hours of lighting. The remote control system helps overcome the situation of forgetting to turn off the device when leaving the workplace."
+      },
+      "section_3": {
+        "title": "Automatic control",
+        "description": "Sliving's Smart Lighting makes the lighting system smarter through the following factors: Control and control the system remotely via the app. Set up an activity scenario by the schedule of activities and work"
+      },
+      "led_product": "LED lighting’s products"
+    },
+    "footer": "Find other options that are perfect for you.",
+    "subFooter": "We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
+    "Cinema": "Cinema",
+    "Store": "Store",
+    "Home": "Home",
+    "Office": "Office",
+    "School": "School",
+    "Villa": "Villa",
+    "titleSolution": "Smart lighting solutions for your life."
+  },
+  "Contact": {
+    "ErrorYourName": "Please provide Your Name",
+    "ErrorTypesofCustomer": "Please provide Types of Customer",
+    "ErrorCountry": "Please provide Country",
+    "ErrorEmail": "Please provide Email",
+    "ErrorNumber": "NPlease provide Phone Number",
+    "ErrorCompanyName": "Please provide Company Name",
+    "Title": "The Sliving's team stands ready to co-operate with you.",
+    "Action": "Please fill out the fields below and someone will be in touch with you very soon.",
+    "YourName": "Your Name",
+    "TypesofCustomer": "Types of Customer",
+    "Country": "Country",
+    "Email": "Email Address",
+    "Number": "Phone Number",
+    "CompanyName": "Company Name",
+    "Job": "Job Title",
+    "Submit": "Submit",
+    "footer": "Find other options that are perfect for you.",
+    "subFooter": "We can answer any of your questions, provide product demos, and find the perfect package for you. Please leave a message with us!",
+    "Revolution": "Revolution of intelligent illumination"
+  },
+  "footer_email": "Email",
+  "footer_phone": "Phone",
+  "footer_address": "Address",
+  "article_map": "Please keep in touch to get the latest updates.",
+
+  "reason": {
+    "header": "The Reasons Why You Should Choose Sliving",
+    "description": "You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to...",
+    "subHeader": "A pioneer in providing comprehensive solutions for IoT Platform in Vietnam",
+    "reason_1": {
+      "title": "International quality products",
+      "description": "Putting yourself in the customers' shoes is a strategy we employ here at Sliving to understand what the customer needs. To change the customer's uncertainty about the domestic smart product quality, we have been perfecting our products. This is proved by multiple international quality certificates that we have and will receive in the near future, MFi is one of them."
+    },
+    "reason_2": {
+      "title": "Wide range of products and solutions",
+      "description": "<ul><li> Designing interfaces for mobile applications (Mobile App), monitoring websites to control, and introduce products.</li><li>Design hardware products</li><li>Producing smart technology equipment.</li><li>Building computer programs such as Firmware, Cloud Server.</li><li>AI (Artificial Intelligence).</li></ul>"
+    },
+    "reason_3": {
+      "title": "Strong supply chain",
+      "description": "Intending to lead the smart technology market, Sliving is the first enterprise licensed to manufacture devices in the Smart Living ecosystem. The factory has an area of ​​nearly 4500m2, the total production capacity is estimated at 270,000 devices/year. In which, the production capacity in phase 1 of the project will be 135 thousand products/year and gradually increase in phase 2, reaching 100% capacity by June 2025."
+    },
+    "reason_4": {
+      "title": "Technical support and warranty assistant",
+      "description": "Project staff, technical staff, and sales staff are ready to advise/support customers with suitable solutions to meet each customer's expectations with low costs."
+    },
+    "reason_5": {
+      "title": "Proven Competence and Experience",
+      "description": "<ul><li><b>07 PROJECT</b> using SLIVING's smart devices.</li><li> More than <b> 300 000 DEVICES </b>was installed.</li><li> More than <b>120 employees </b>are developing and innovating continuously to improve SLIVING products better and better everyday.</li></ul>"
+    }
+  },
+  "home_page_v2": {
+    "reason": "The reason you should go with Sliving.",
+    "sub_reason": "You are in need of an environment full of smart gadgets, there are several factors to consider. It will be used for your home, your office, or maybe even everywhere you want to..."
+  },
+  "please_enter_email": "Please Enter Your Email Address",
+  "get_the_latest_news_from_us": "Get the latest news from us",
+  "subscribe": "Subscribe",
+  "products_desc": "The Sliving Smart Switch remote control switch uses a flexible and convenient Wifi connection,the included software connects to the device through just a few simple setup steps,it can be used, suitable for applications. With the device, it can be used in a few simple steps,adapted to remote control applications via Internet, IoT,...",
+  "learn_more": "Learn more",
+
+  "dataMeta": {
+    "home_page": {
+      "title": "Sliving - Providing a comprehensive solution for IoT Platform",
+      "description": "Specializing in smart solutions and advanced technology to help users experience a comfortable, comfortable and convenient life"
+    },
+    "product_page": {
+      "title": "Products Sliving - IoT",
+      "description": "Sliving - IoT products, providing a wide range of control solutions for smart devices to meet the needs of most projects"
+    },
+    "smart_home_page": {
+      "title": "Technology IoT - Sliving",
+      "description": "Sliving - IoT products, providing a wide range of smart home solutions to meet the needs of most projects"
+    },
+    "support_page": {
+      "title": "Technical Assistance",
+      "description": "Solving - Technical support for problems related to smart solutions in the most effective way"
+    },
+    "smart_lighting": {
+      "title": "Light Smart Solution",
+      "description": "Smart Lighting Solution provides lighting effects that are suitable for the environment, creating the best atmosphere and environment for users."
+    },
+    "smart_security": {
+      "title": "Smart Security Solution",
+      "description": "The innovative solution builds a 'multi-layered' security system that ensures a private and safe space for each customer and is easy to control for the manager"
+    },
+    "smart_parking": {
+      "title": "Smart Parking Solution",
+      "description": "Sliving's innovative security solution builds a 'multi-layered' security system that ensures privacy and safety"
+    },
+    "smart_home": {
+      "title": "Smart technology solutions - IoT",
+      "description": "Smart home solutions help devices connect to each other in a smart system, through a phone application to remotely control lighting, air conditioning, curtains, doors,..."
+    },
+    "reason_page": {
+      "title": "5 reasons you should choose Sliving",
+      "description": "The reason you should choose Living. With Sliving - IoT, SmartHome is always ready to provide the best smart products and solutions for you"
+    },
+    "contact_page": {
+      "title": "Contact Sliving",
+      "description": "Sliving team is always ready to support you anytime, anywhere with smart products and solutions"
+    }
+  },
+    "thanks_submitform": "Thank you so much for being so interested in our products and services."
+}

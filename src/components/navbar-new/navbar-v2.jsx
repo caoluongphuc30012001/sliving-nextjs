@@ -1,12 +1,19 @@
 import React from "react";
+
 import { Navbar, Nav } from "react-bootstrap";
-import Link from "@components/gatsby-link";
+
 import logo from "@images/logo/logo-header.svg";
+
+import Link from "@components/gatsby-link";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
+
 import {navigate} from "gatsby";
+
 import { useTranslation } from "react-i18next";
 
+
 export default function NavbarNew() {
+  
   const { t ,i18n} = useTranslation();
   const arrMenu = [
     { id: "0", title: "Smart Home", isActive: true, path: "/smart-home/" },
@@ -14,8 +21,6 @@ export default function NavbarNew() {
     { id: "2", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: false, path: "/smart-lighting/" },
     { id: "3", title: t(`HEADER.HOMEPAGE.ABOUTUS`), isActive: false, path: "#" },
   ];
-
-
 
   return (
     <>
@@ -56,7 +61,7 @@ export default function NavbarNew() {
                             {nav.title}
                             {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? <ul className="subNav">
                             <li>{t(`HEADER.HOMEPAGE.STORY`)} </li>
-                            <div style={{padding:" 15px 30px 15px 30px"}}  role="button" tabIndex={0} onClick={()=> navigate(`/${i18n.language}/contact-page/`)} onKeyPress={()=> navigate(`/${i18n.language}/contact-page/`)}>  {t(`HEADER.HOMEPAGE.CONTACTUS`)}</div>
+                            <div style={{padding:" 15px 30px 15px 30px"}}  role="button" tabIndex={0} onClick={()=> navigate(`/${i18n.language}/contact-page/`)} onKeyPress={()=> navigate(`/${i18n.language}/contact-page/`)}>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</div>
                             </ul> : ""}
                           </Link>
                         );

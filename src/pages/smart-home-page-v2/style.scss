@@ -7,7 +7,8 @@
         background-image: url("../../images/new-home-page/header/bg-header.webp");
         background-repeat: no-repeat;
         min-height: 800px;
-        transition: background-image 0.3s linear;
+        background-color: #f1caba;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
         .container-wrap {
             .header-left {
                 padding: 0;
