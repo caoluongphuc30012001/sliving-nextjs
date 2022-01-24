@@ -342,7 +342,7 @@
   "read_more": "Read more",
   "company_name": "UNICLOUD TECHNOLOGY INVESTMENT JOINT STOCK COMPANY",
   "branch": "Branch",
-  "address_head_quarters": "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+  "address_head_quarters": "6th floor, Sunshine Center Building No. 16, Pham Hung Street, Nam Tu Liem District, Hanoi",
   "product_development_strategy": " Product Development strategy",
   "ready_go_to_global": "Ready go to global",
   "CONNECTING_ECOsystems": "Connecting ECOsystems",
@@ -573,5 +573,7 @@
   "thanks_submitform": "Thank you so much for being so interested in our products and services.",
   "pion_field": "Pioneering field",
   "smart_parking_description": "Smart Parking Solution - SLiving's smart parking. Search parking location easily. Quickly reserve your parking space.",
-  "iot_description": "Developing optimal solutions for existing products for Smart Home, Smart Building, Smart City to connect with other smart platforms in the real estate ecosystem and e-government through technologies."
+  "iot_description": "Developing optimal solutions for existing products for Smart Home, Smart Building, Smart City to connect with other smart platforms in the real estate ecosystem and e-government through technologies.",
+  "Ho_Chi_Minh": "Ho chi Minh",
+  "Ha_Noi": "Ha Noi"
 }
