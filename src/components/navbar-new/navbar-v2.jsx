@@ -54,15 +54,32 @@ export default function NavbarNew() {
                           <Link
                             key={index}
                             to={nav.path}
-                            className={`item-menu item-menu-v2 link fs-16  ${nav.isActive ? "is-active" : ""
-                              }`}
+                            className="item-menu item-menu-v2 link fs-16"
+                            partiallyActive={true}
+                            activeClassName={"is-active"}
                             id={`item-menu${index}`}
                           >
                             {nav.title}
-                            {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? <ul className="subNav">
-                            <li>{t(`HEADER.HOMEPAGE.STORY`)} </li>
-                            <div style={{padding:" 15px 30px 15px 30px"}}  role="button" tabIndex={0} onClick={()=> navigate(`/${i18n.language}/contact-page/`)} onKeyPress={()=> navigate(`/${i18n.language}/contact-page/`)}>{t(`HEADER.HOMEPAGE.CONTACTUS`)}</div>
-                            </ul> : ""}
+                            {nav.title === t(`HEADER.HOMEPAGE.ABOUTUS`) ? (
+                              <ul className="subNav">
+                                <li>{t(`HEADER.HOMEPAGE.STORY`)} </li>
+                                <div
+                                  style={{ padding: " 15px 30px 15px 30px" }}
+                                  role="button"
+                                  tabIndex={0}
+                                  onClick={() =>
+                                    navigate(`/${i18n.language}/contact-page/`)
+                                  }
+                                  onKeyPress={() =>
+                                    navigate(`/${i18n.language}/contact-page/`)
+                                  }
+                                >
+                                  {t(`HEADER.HOMEPAGE.CONTACTUS`)}
+                                </div>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </Link>
                         );
                       })}

@@ -51,7 +51,7 @@
     "react-i18next": "^11.15.1",
     "react-image-webp": "^0.8.0",
     "react-is": "^17.0.2",
-    "react-leaflet": "^2.8.0",
+    "react-leaflet": "^3.2.5",
     "react-modal": "^3.14.4",
     "react-slick": "^0.28.1",
     "react-spring-3d-carousel": "^1.2.1",

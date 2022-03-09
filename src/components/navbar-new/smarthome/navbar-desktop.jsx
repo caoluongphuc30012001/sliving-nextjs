@@ -85,15 +85,15 @@ export default function NavbarSmartHomeDesktop() {
               id="nav-bar"
             >
               <Navbar.Brand aria-label="Link to home">
-               <Link to="/">
-               <Image
-                  className="img-obj-cover"
-                  src={logo}
-                  alt="sliving"
-                  width={202}
-                  height={44}
-                />
-               </Link>
+                <Link to="/">
+                  <Image
+                    className="img-obj-cover"
+                    src={logo}
+                    alt="sliving"
+                    width={202}
+                    height={44}
+                  />
+                </Link>
               </Navbar.Brand>
 
               <Navbar.Collapse
@@ -105,6 +105,8 @@ export default function NavbarSmartHomeDesktop() {
                     to="/smart-home/"
                     className="item-menu item-menu-child link fs-16 1"
                     id="item-menu-parent"
+                  
+                    activeClassName={"is-active"}
                   >
                     Smart Home
                   </Link>
@@ -114,8 +116,8 @@ export default function NavbarSmartHomeDesktop() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
-                            }`}
+                          className="item-menu item-menu-child link fs-16"
+                          activeClassName={"is-active"}
                           id={`item-menu${index}`}
                         >
                           {nav.title}
@@ -127,7 +129,7 @@ export default function NavbarSmartHomeDesktop() {
                   <div className="nav-hover-product">
                     <Row>
                       {data &&
-                        data.map((item,index) => (
+                        data.map((item, index) => (
                           <Col
                             xl={3}
                             lg={3}
@@ -162,7 +164,7 @@ export default function NavbarSmartHomeDesktop() {
                   <div className="nav-hover-solution">
                     <Row>
                       {arrMenuSolution &&
-                        arrMenuSolution.map((item,index) => (
+                        arrMenuSolution.map((item, index) => (
                           <Col
                             xl={3}
                             lg={3}

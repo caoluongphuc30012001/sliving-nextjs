@@ -40,7 +40,7 @@ test:
     - develop
     - master
   tags:
-    - runner-191
+    - hcm-share-docker-runner-1
 
 build-and-deploy:
   stage: build-and-deploy
@@ -56,4 +56,4 @@ build-and-deploy:
   only:
     - master
   tags:
-    - runner-191
+    - hcm-share-docker-runner-1
