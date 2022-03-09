@@ -36,6 +36,7 @@ import "swiper/css/effect-fade";
 
 import "./style.scss";
 import GatsbyLink from "@components/gatsby-link";
+import SectionMap from "@components/map";
 
 SwiperCore.use([EffectFade, Pagination, Navigation, Autoplay]);
 
@@ -48,6 +49,7 @@ const IndexPage = () => {
         filter: {
           absolutePath: { regex: "/(/images/main-page-v2/shutterstock)/" }
         }
+        sort: { fields: name }
       ) {
         nodes {
           childImageSharp {
@@ -78,7 +80,7 @@ const IndexPage = () => {
           alt="sliving alt"
           width={1440}
           height={799}
-          loading="eager"
+          loading="lazy"
           data-main-image
         />
         <div className="banner-v2-wrap">
@@ -333,6 +335,13 @@ const IndexPage = () => {
     );
   };
 
+   const BuildSectionMap = () => {
+   return (
+     <section className="container-v2">
+       <SectionMap />;
+     </section>
+   );
+ };
   return (
     <LayoutNew>
       <Seo
@@ -342,13 +351,14 @@ const IndexPage = () => {
       <header className="header-main-page container-v2">
         <BuildHeader />
       </header>
-      <main id="main_page" >
+      <main id="main_page">
         <BuildSectionTwoElement />
         <BuildSectionThreeElement />
         {/* <BuildSectionFourElement /> */}
         <BuildAspects />
         <BuildSectionBannerReason />
       </main>
+      <BuildSectionMap />
     </LayoutNew>
   );
 };

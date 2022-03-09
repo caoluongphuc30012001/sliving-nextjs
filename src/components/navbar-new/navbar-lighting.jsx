@@ -69,8 +69,10 @@ export default function NavbarLighting() {
                       return (
                         <GatsbyLink
                           key={index}
-                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""}`}
+                          className="item-menu item-menu-child link fs-16"
                           to={nav.path}
+                          partiallyActive={true}
+                          activeClassName={'is-active'}
                           // onMouseDown={() => {
                           //   if (nav.title === 'Products') {
                           //     if (document.location.pathname !== nav.path) navigate(`${nav.path}`)

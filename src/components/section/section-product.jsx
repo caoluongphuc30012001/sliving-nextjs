@@ -111,11 +111,11 @@ const SlideProduct = ({ data, noTitle, noNavbar, indexProduct }) => {
       (prod) => (prod.isActive = filter.id === prod.id ? true : false)
     );
     filterProduct(filter.filterName);
-    searchParams.delete("productname");
-    searchParams.append("productname", filter.searchParam);
-    navigate(
-      `${location.pathname}?productname=${searchParams.get("productname")}`
-    );
+    // searchParams.delete("productname");
+    // searchParams.append("productname", filter.searchParam);
+    // navigate(
+    //   `${location.pathname}?productname=${searchParams.get("productname")}`
+    // );
   };
 
   const filterProduct = (filter) => {
@@ -157,12 +157,12 @@ const SlideProduct = ({ data, noTitle, noNavbar, indexProduct }) => {
   };
 
   useEffect(() => {
-    if (search) {
-      filterDataBySearchParam(arrProduct[Products[search] || 0]);
-    } else {
-      filterData(arrProduct[indexProduct || 0]);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // if (search) {
+    //   filterDataBySearchParam(arrProduct[Products[search] || 0]);
+    // } else {
+    //   filterData(arrProduct[indexProduct || 0]);
+    // }
+    filterData(arrProduct[indexProduct || 0]);
   }, [search, arrProduct]);
 
   const buildSlideProduct = useMemo(() => {
