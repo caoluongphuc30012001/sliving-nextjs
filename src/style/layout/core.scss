@@ -1,123 +1,126 @@
-
-
 /*--------------------------------------------margin----------------------------------*/
 .mt-8 {
-    margin-top: 8px;
+  margin-top: 8px;
 }
-.mb-32{
-    margin-bottom: 32px;
+.mb-32 {
+  margin-bottom: 32px;
 }
 .mt-58 {
-    margin-top: 58px;
+  margin-top: 58px;
 }
 
 /*----------------------------------------Flexbox (Flexible Box)-------------------------------------------------*/
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .al-center {
-    align-items: center;
+  align-items: center;
 }
 
 .just-cont-bt {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .just-cont-fl-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 .just-cont-fl-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 .just-cont-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 /*---------------------------------------------------Text CSS--------------------------------------------------------------------------------*/
 
 .txt-hover {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        color: #1a7dd8;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: #1a7dd8;
+    text-decoration: underline;
+  }
 }
 
 .txt-blue {
-    color: #1a7dd8;
+  color: #1a7dd8;
 }
 
 .fw-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
-.txt-center{
-    text-align: center;
+.txt-center {
+  text-align: center;
 }
 
 /*--------------------------------------------------Position custom--------------------------------------------------------------------------*/
 
 .position-fixed {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    z-index: 999999;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 999999;
 }
 
 /*---------------------------------------------------Layout container--------------------------------------------------------------------------------*/
 .container-wrap {
-    margin-left: 135px;
-    margin-right: 135px;
+  margin-left: 135px;
+  margin-right: 135px;
 
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-v2 {
-    max-width: 1440px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-v3 {
+  max-width: 1180px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*-----------------------------------------Slick slide---------------------------------------------------------------------------------------*/
 .slick-slider {
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 .slick-list.draggable {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
-
 
 /*---------------------------------------------------Element Tag------------------------------------------------------------------------- */
 
 img {
-    max-width: 100% !important;
+  max-width: 100% !important;
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .gatsby-image-wrapper {
-    height: 100%;
+  height: 100%;
 }
 
 .has-image[data-image-fit="contain"] .fancybox__image {
-    width: 500px !important;
+  width: 500px !important;
 }
 
 /*-----------------------------------------------------Responsive------------------------------------------------------------------------ */

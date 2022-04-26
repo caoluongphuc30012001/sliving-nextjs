@@ -110,100 +110,100 @@ arrLng.map((lng) => {
     path: `/${lng}/`,
     component: homePage,
     });
-    createPage({
-      path: `/${lng}/support/`,
-      component: pagesSupport,
-      context: {
-        data: querySupportPage
-      }
-    });
-    if(querySupportPage.length > 0){
+  //   createPage({
+  //     path: `/${lng}/support/`,
+  //     component: pagesSupport,
+  //     context: {
+  //       data: querySupportPage
+  //     }
+  //   });
+  //   if(querySupportPage.length > 0){
       
-      createPage({
-        path: `/${lng}/support/detail`,
-        component: detailSupport,
-        context: {
-          data: querySupportPage
-        }
+  //     createPage({
+  //       path: `/${lng}/support/detail`,
+  //       component: detailSupport,
+  //       context: {
+  //         data: querySupportPage
+  //       }
       
-      });
+  //     });
       
-    }
-    createPage({
-      path: `/${lng}/contact-page`,
-      component: contactComponent,
-      context: {
-        data: querySupportPage
-      }
-    });
-  createPage({
-    path: `/${lng}/smart-home/`,
-    component: smartHomeComponent,
-    context: {
-      data: productPage.data.ProductPage,
-    },
-  });
-  createPage({
-    path: `/${lng}/smart-lighting/`,
-    component: smartLightingComponent,
-    context: {
-      data: productPage.data.ProductPage,
-      isSmartLighting: true
-    },
-  });
-  createPage({
-    path: `/${lng}/smart-lighting/contact/`,
-    component: contactComponent,
-    context: {
-      data: productPage.data.ProductPage,
-      isNavbarContact: { isSmartLighting: true }
-    },
-  });
-  createPage({
-    path: `/${lng}/smart-home/products/`,
-    component: productComponent,
-    context: {
-      data: productPage.data.ProductPage,
-      lng:lng
-    },
-  });
-  createPage({
-    path: `/${lng}/smart-home/contact/`,
-    component: contactComponent,
-    context: {
-      data: productPage.data.ProductPage,
-      isNavbarContact: { isSmartHome: true }
-    },
-  });
+  //   }
+  //   createPage({
+  //     path: `/${lng}/contact-page`,
+  //     component: contactComponent,
+  //     context: {
+  //       data: querySupportPage
+  //     }
+  //   });
+  // createPage({
+  //   path: `/${lng}/smart-home/`,
+  //   component: smartHomeComponent,
+  //   context: {
+  //     data: productPage.data.ProductPage,
+  //   },
+  // });
+  // createPage({
+  //   path: `/${lng}/smart-lighting/`,
+  //   component: smartLightingComponent,
+  //   context: {
+  //     data: productPage.data.ProductPage,
+  //     isSmartLighting: true
+  //   },
+  // });
+  // createPage({
+  //   path: `/${lng}/smart-lighting/contact/`,
+  //   component: contactComponent,
+  //   context: {
+  //     data: productPage.data.ProductPage,
+  //     isNavbarContact: { isSmartLighting: true }
+  //   },
+  // });
+  // createPage({
+  //   path: `/${lng}/smart-home/products/`,
+  //   component: productComponent,
+  //   context: {
+  //     data: productPage.data.ProductPage,
+  //     lng:lng
+  //   },
+  // });
+  // createPage({
+  //   path: `/${lng}/smart-home/contact/`,
+  //   component: contactComponent,
+  //   context: {
+  //     data: productPage.data.ProductPage,
+  //     isNavbarContact: { isSmartHome: true }
+  //   },
+  // });
   
-  createPage({
-    path: `/${lng}/solutions/smart-home/`,
-    component: solutionSmartHome,
-  });
-  createPage({
-    path: `/${lng}/solutions/smart-parking/`,
-    component: solutionSmartParking,
-  });
-  createPage({
-    path: `/${lng}/solutions/smart-security/`,
-    component: solutionSmartSecurity,
-  });
+  // createPage({
+  //   path: `/${lng}/solutions/smart-home/`,
+  //   component: solutionSmartHome,
+  // });
+  // createPage({
+  //   path: `/${lng}/solutions/smart-parking/`,
+  //   component: solutionSmartParking,
+  // });
+  // createPage({
+  //   path: `/${lng}/solutions/smart-security/`,
+  //   component: solutionSmartSecurity,
+  // });
 
-  createPage({
-    path: `/${lng}/reason/`,
-    component: reasonPage,
-  });
+  // createPage({
+  //   path: `/${lng}/reason/`,
+  //   component: reasonPage,
+  // });
   
-  productPage.data.ProductPage.group.forEach((product) => {
-    createPage({
-      path: `/${lng}/smart-home/products/${product.distinct[0]}`,
-      component: productDetailComponent,
-      context: {
-        data: product.group,
-        dataMeta: product.group
-      },
-    });
-  });
+  // productPage.data.ProductPage.group.forEach((product) => {
+  //   createPage({
+  //     path: `/${lng}/smart-home/products/${product.distinct[0]}`,
+  //     component: productDetailComponent,
+  //     context: {
+  //       data: product.group,
+  //       dataMeta: product.group
+  //     },
+  //   });
+  // });
 });
 };
 

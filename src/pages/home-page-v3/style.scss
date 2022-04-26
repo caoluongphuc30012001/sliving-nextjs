@@ -1,0 +1,86 @@
+// Home Page Version 3
+/*
+* 0. Core
+*/
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  margin-bottom: 0px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h4.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+span.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  color: #ffffff;
+  min-height: 57px;
+  min-width: 214px;
+}
+
+/* 
+* 1. Header Page
+*/
+.home-page-v3 {
+  margin-top: 80px;
+}
+.home-page-tag {
+  background: #000e28;
+  padding: 49px 20px;
+}
+.group-contact-header {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  span {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 133%;
+    /* identical to box height, or 48px */
+    color: #ffffff;
+  }
+}
+
+.card-sub-tag {
+  padding: 20px;
+  background-color: #44a9fe;
+  &:nth-child(2) {
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+  }
+}
+
+.group-service-tag {
+  margin-top: -12%;
+  position: relative;
+  z-index: 2;
+  transition-duration: 0.3s;
+}

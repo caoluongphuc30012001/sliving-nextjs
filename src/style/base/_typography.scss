@@ -1,23 +1,45 @@
 @font-face {
-    font-family: "svn-gilroy";
-    src: url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "svn-gilroy";
+  src: url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "svn-gilroy";
-    src: local("svn-gilroy"), url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "svn-gilroy";
+  src: local("svn-gilroy"),
+    url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-:root{
-    --bs-font-sans-serif: "svn-gilroy", sans-serif;
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-*{
-    font-family: "svn-gilroy" !important;
+@font-face {
+  font-family: "SVN-Gilroy";
+  src: local("svn-gilroy"),
+    url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bs-font-sans-serif: "svn-gilroy", sans-serif;
+}
+
+* {
+  font-family: "svn-gilroy" !important;
 }
