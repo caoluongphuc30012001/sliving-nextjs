@@ -1,0 +1,62 @@
+import React from "react";
+import { Col, Row, Image } from "react-bootstrap";
+import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
+import iconBusiness from "@images/home-page-v3/svg/icon-business.svg";
+import iconSupport from "@images/home-page-v3/svg/icon-support.svg";
+import iconMedia from "@images/home-page-v3/svg/icon-media.svg";
+
+const SectionHelpMore = () => {
+  const listItemCard = [
+    {
+      id: 0,
+      linkImg: iconBusiness,
+      title: "Kinh Doanh",
+      desc: "sales@unicloud.com.vn",
+    },
+    {
+      id: 1,
+      linkImg: iconSupport,
+      title: "Hỗ Trợ Khách Hàng",
+      desc: "supports@unicloud.com.vn",
+    },
+    {
+      id: 2,
+      linkImg: iconMedia,
+      title: "Truyền Thông",
+      desc: "media@unicloud.com.vn",
+    },
+  ];
+  return (
+    <section className="bg-ground-help-more">
+      <div className="max-width-1180 p-left-right">
+        <Row className="row-line-center">
+          <span className="title-eng-line-center">CONTACT US</span>
+          <h1 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h1>
+          <div className="img-line-center d-flex justify-content-center">
+            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+          </div>
+          <p className="description-line-center">
+            Truy vấn, khiếu nại và phản hồi. Chúng tôi sẽ rất vui khi được phục
+            vụ bạn
+          </p>
+        </Row>
+        <Row lg={3} md={3} xs={1} className="help-more-cards gy-4 gx-4">
+          {listItemCard.map((itemCard) => (
+            <Col key={itemCard.id}>
+              <div className="help-more-card">
+                <Image
+                  src={itemCard.linkImg}
+                  alt="img-card-description"
+                  className="help-more-card-image"
+                />
+                <h3 className="help-more-card-title">{itemCard.title}</h3>
+                <span className="help-more-card-des">{itemCard.desc}</span>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </section>
+  );
+};
+export default SectionHelpMore;

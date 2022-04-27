@@ -8,6 +8,7 @@ import "./style.scss";
 
 import SectionHeader from "./body/section-header";
 import SectionSolution from "./body/section-solution";
+import SectionHelpMore from "./body/section-help";
 
 const IndexPage = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <SectionHeader />
       <main id="main_page">
         <SectionSolution />
+        <SectionHelpMore />
       </main>
     </LayoutNew>
   );
