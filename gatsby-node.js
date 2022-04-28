@@ -38,8 +38,7 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/smart-home-page-v2") === true ||
     checkDetectPage(page, "/smart-light-v2") === true ||
     checkDetectPage(page, "/contact-page-v2") === true ||
-    checkDetectPage(page, "/support-page-v2") === true ||
-    checkDetectPage(page, "/policy") === true
+    checkDetectPage(page, "/support-page-v2") === true
   ) {
     deletePage(page);
   }
@@ -214,11 +213,6 @@ exports.createPages = async function ({ actions, graphql }) {
       component: reasonPage,
     });
 
-    createPage({
-      path: `/${lng}/policy/`,
-      component: policyPage,
-    });
-
     productPage.data.ProductPage.group.forEach((product) => {
       createPage({
         path: `/${lng}/smart-home/products/${product.distinct[0]}`,
@@ -229,6 +223,11 @@ exports.createPages = async function ({ actions, graphql }) {
         },
       });
     });
+  });
+
+  createPage({
+    path: `/policy/`,
+    component: policyPage,
   });
 };
 
