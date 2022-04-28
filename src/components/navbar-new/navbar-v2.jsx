@@ -7,19 +7,27 @@ import logo from "@images/logo/logo-header.svg";
 import Link from "@components/gatsby-link";
 import LanguageSwitcher from "@components/navbar/switterLanguage";
 
-import {navigate} from "gatsby";
+import { navigate } from "gatsby";
 
 import { useTranslation } from "react-i18next";
 
-
 export default function NavbarNew() {
-  
-  const { t ,i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const arrMenu = [
     { id: "0", title: "Smart Home", isActive: true, path: "/smart-home/" },
     { id: "1", title: "Fintech IoT", isActive: false, path: "#" },
-    { id: "2", title: t(`HEADER.HOMEPAGE.LIGHTING`), isActive: false, path: "/smart-lighting/" },
-    { id: "3", title: t(`HEADER.HOMEPAGE.ABOUTUS`), isActive: false, path: "#" },
+    {
+      id: "2",
+      title: t(`HEADER.HOMEPAGE.LIGHTING`),
+      isActive: false,
+      path: "/smart-lighting/",
+    },
+    {
+      id: "3",
+      title: t(`HEADER.HOMEPAGE.ABOUTUS`),
+      isActive: false,
+      path: "#",
+    },
   ];
 
   return (
@@ -33,7 +41,11 @@ export default function NavbarNew() {
               expand="lg"
               id="nav-bar"
             >
-              <Link to="/" aria-label="Link to home" className="logo nav-logo nav-brand">
+              <Link
+                to="/"
+                aria-label="Link to home"
+                className="logo nav-logo nav-brand"
+              >
                 <img
                   className="img-obj-cover"
                   src={logo}
@@ -76,6 +88,15 @@ export default function NavbarNew() {
                                 >
                                   {t(`HEADER.HOMEPAGE.CONTACTUS`)}
                                 </div>
+                                <li>
+                                  <a
+                                    href="https://sliving.vn/policy"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    Policy
+                                  </a>
+                                </li>
                               </ul>
                             ) : (
                               ""
