@@ -88,14 +88,17 @@ export default function NavbarNew() {
                                 >
                                   {t(`HEADER.HOMEPAGE.CONTACTUS`)}
                                 </div>
-                                <li>
-                                  <a
-                                    href="https://sliving.vn/policy"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                  >
-                                    Policy
-                                  </a>
+                                <li
+                                  role="button"
+                                  tabIndex={0}
+                                  onClick={() =>
+                                    navigate(`/${i18n.language}/policy`)
+                                  }
+                                  onKeyPress={() =>
+                                    navigate(`/${i18n.language}/policy`)
+                                  }
+                                >
+                                  Policy
                                 </li>
                               </ul>
                             ) : (
