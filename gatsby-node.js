@@ -10,7 +10,7 @@ exports.onPostBuild = () => {
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
   const typeDefs = `
   type MarkdownRemark implements Node {
     frontmatter: Frontmatter
@@ -20,30 +20,29 @@ exports.createSchemaCustomization = ({ actions }) => {
     nonNeutral: File
     details: [String]
   }
-  `
-  createTypes(typeDefs)
-}
+  `;
+  createTypes(typeDefs);
+};
 
 function checkDetectPage(page, namePage) {
-  if (page.path.indexOf(namePage) > -1)
-    return true;
+  if (page.path.indexOf(namePage) > -1) return true;
   return false;
 }
 exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
-  if ((checkDetectPage(page, "/main-page-v2") === true ||
+  if (
+    checkDetectPage(page, "/main-page-v2") === true ||
     checkDetectPage(page, "/product-detail-v2") === true ||
     checkDetectPage(page, "/support-page-v2") === true ||
     checkDetectPage(page, "/product-page-v2") === true ||
     checkDetectPage(page, "/smart-home-page-v2") === true ||
     checkDetectPage(page, "/smart-light-v2") === true ||
     checkDetectPage(page, "/contact-page-v2") === true ||
-    checkDetectPage(page, "/support-page-v2") === true 
-  )) {
-    deletePage(page)
+    checkDetectPage(page, "/support-page-v2") === true
+  ) {
+    deletePage(page);
   }
-  
-}
+};
 async function getLng() {
   const lngValue = ["en", "vn"];
   return lngValue;
@@ -51,35 +50,58 @@ async function getLng() {
 
 exports.createPages = async function ({ actions, graphql }) {
   const { createPage } = actions;
-  const productPage = await graphql(`${QueryProductPage()}`);
-  const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
-  const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
-  const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
+  const productPage = await graphql(
+    `
+      ${QueryProductPage()}
+    `
+  );
+  const productDetailComponent = require.resolve(
+    "./src/pages/product-detail-v2/index.js"
+  );
+  const productComponent = require.resolve(
+    "./src/pages/product-page-v2/index.js"
+  );
+  const smartHomeComponent = require.resolve(
+    "./src/pages/smart-home-page-v2/index.js"
+  );
   const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
-  const detailSupport = require.resolve("./src/pages/content-detail-v2/index.js");
-  const smartLightingComponent = require.resolve("./src/pages/smart-lighting-v2/index.js");
-  const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
+  const detailSupport = require.resolve(
+    "./src/pages/content-detail-v2/index.js"
+  );
+  const smartLightingComponent = require.resolve(
+    "./src/pages/smart-lighting-v2/index.js"
+  );
+  const contactComponent = require.resolve(
+    "./src/pages/contact-page-v2/index.js"
+  );
   const homePage = require.resolve("./src/pages/index.js");
 
-  const solutionSmartHome  = require.resolve("./src/pages/solution/smart-home/index.jsx");
-  const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
-  const solutionSmartSecurity  = require.resolve("./src/pages/solution/security/index.jsx");
-  const reasonPage  = require.resolve("./src/pages/reason/index.jsx");
-
-
+  const solutionSmartHome = require.resolve(
+    "./src/pages/solution/smart-home/index.jsx"
+  );
+  const solutionSmartParking = require.resolve(
+    "./src/pages/solution/parking/index.jsx"
+  );
+  const solutionSmartSecurity = require.resolve(
+    "./src/pages/solution/security/index.jsx"
+  );
+  const reasonPage = require.resolve("./src/pages/reason/index.jsx");
+  const policyPage = require.resolve("./src/pages/policy/index.jsx");
 
   await graphql(
-    `{
-    allFile(filter: {absolutePath: {regex: "/(images/product-v2/)/"}}) {
-      edges {
-        node {
-          publicURL
+    `
+      {
+        allFile(filter: { absolutePath: { regex: "/(images/product-v2/)/" } }) {
+          edges {
+            node {
+              publicURL
+            }
+          }
         }
       }
-    }
-  }
-`);
-const querySupportPage=[];
+    `
+  );
+  const querySupportPage = [];
   // const querySupportPage = await graphql(
   //   `
   // {
@@ -104,11 +126,11 @@ const querySupportPage=[];
   // }
   // `
   // );
-const arrLng = await getLng();
-arrLng.map((lng) => {
-  createPage({
-    path: `/${lng}/`,
-    component: homePage,
+  const arrLng = await getLng();
+  arrLng.map((lng) => {
+    createPage({
+      path: `/${lng}/`,
+      component: homePage,
     });
   //   createPage({
   //     path: `/${lng}/support/`,
@@ -223,9 +245,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@i18n": path.resolve(__dirname, "./src/i18n"),
       },
       fallback: {
-        util: false
+        util: false,
       },
     },
-
   });
 };

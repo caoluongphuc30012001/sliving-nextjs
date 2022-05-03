@@ -1,0 +1,42 @@
+.privacy-title-number {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.019em;
+  color: rgba(43, 43, 51, 0.8);
+  margin-bottom: 14px;
+}
+.ul-privacy {
+  padding-left: 12px;
+}
+.ul-privacy {
+  list-style-type: '\2022';
+}
+.ul-privacy li {
+  padding-left: 8px;
+}
+
+.tab-new-privacy-page {
+  /* margin-bottom: 200px; */
+  padding-bottom: 215px;
+}
+.title-privacy-details {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.019em;
+  color: #2b2b33;
+  margin-bottom: 20px;
+}
+
+.page-policy-terms {
+  margin-top: 81px !important;
+  margin-bottom: 60px !important;
+  padding: 60px 20px;
+}
