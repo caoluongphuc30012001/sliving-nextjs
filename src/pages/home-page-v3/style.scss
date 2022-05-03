@@ -87,17 +87,18 @@ span.detail-v3 {
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
 @media only screen and (max-width: 1024px) {
   .p-left-right {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .p-left-right {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
+
 .max-width-1180 {
   max-width: 1180px;
   margin: 0 auto;
@@ -105,6 +106,50 @@ span.detail-v3 {
 }
 .bg-ground-help-more {
   margin: 120px auto;
+  .help-more-cards {
+    margin-top: 28.5px;
+  }
+
+  .help-more-card {
+    text-align: center;
+    border: 1px solid #6fc0fe;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 34px 0;
+  }
+
+  .help-more-card-image {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .help-more-card-title {
+    margin: 16px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 133%;
+    text-align: center;
+    text-transform: capitalize;
+
+    background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .help-more-card-des {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 133%;
+    text-align: center;
+    color: #59637e;
+    margin-bottom: 12px;
+    max-width: 366px;
+    margin: auto;
+    padding-bottom: 34px;
+  }
 }
 .row-line-center {
   .title-eng-line-center {
@@ -137,48 +182,144 @@ span.detail-v3 {
   }
 }
 
-.help-more-cards {
-  margin-top: 28.5px;
-}
-
-.help-more-card {
-  text-align: center;
-  border: 1px solid #6fc0fe;
-  box-sizing: border-box;
-  border-radius: 16px;
-  padding: 34px 0;
-}
-
-.help-more-card-image {
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-}
-
-.help-more-card-title {
-  margin: 16px 0;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 133%;
-  text-align: center;
-  text-transform: capitalize;
-
-  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.help-more-card-des {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 133%;
-  text-align: center;
-  color: #59637e;
-  margin-bottom: 12px;
-  max-width: 366px;
-  margin: auto;
-  padding-bottom: 34px;
-}
 //---------------------------------------------------------------End Section Help More-------------------------------------------------
+
+//---------------------------------------------------------------Begin Section Feature Project-------------------------------------------------
+.bg-ground-feature-project {
+  background: #f3f9ff;
+  .feature-project-container {
+    padding: 120px 20px;
+  }
+  .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 22px;
+    min-width: 600px;
+    height: 532px;
+
+    @for $i from 1 through 4 {
+      @media screen and (max-width: 798px - ($i * 80)) {
+        min-width: 600px - $i * 80;
+        .option:nth-child(#{6-$i}) {
+          display: none;
+        }
+      }
+    }
+
+    .option {
+      position: relative;
+      overflow: hidden;
+      min-width: 80px;
+      margin: 10px;
+
+      background-size: auto 120%;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+      &.active {
+        flex-grow: 10000;
+        transform: scale(1);
+        max-width: 764px;
+        margin: 0px 10px;
+        border-radius: 56px;
+
+        .shadow {
+          background: linear-gradient(
+            180deg,
+            rgba(33, 33, 33, 0) 0%,
+            #242424 100%
+          );
+        }
+        .label {
+          bottom: 20px;
+          left: 20px;
+          .info > div {
+            left: 0px;
+            opacity: 1;
+          }
+        }
+      }
+      &:not(.active) {
+        flex-grow: 1;
+
+        border-radius: 30px;
+        .shadow {
+          bottom: -40px;
+          box-shadow: inset 0 -120px 0px -120px black,
+            inset 0 -120px 0px -100px black;
+        }
+        .label {
+          bottom: 10px;
+          left: 10px;
+          .info > div {
+            left: 20px;
+            opacity: 0;
+          }
+        }
+      }
+      .shadow {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 120px;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+      .label {
+        display: flex;
+        position: absolute;
+        right: 0px;
+        height: 60px;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        .icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          min-width: 60px;
+          max-width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          background-color: white;
+
+          .number {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            color: #0979fd;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+          color: white;
+          white-space: pre;
+          > div {
+            position: relative;
+            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+              opacity 0.5s ease-out;
+          }
+          .main {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 32px;
+            text-align: center;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+//---------------------------------------------------------------End Section Feature Project-------------------------------------------------
