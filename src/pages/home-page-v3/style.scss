@@ -85,18 +85,8 @@ span.detail-v3 {
   transition-duration: 0.3s;
 }
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
-@media only screen and (max-width: 1024px) {
-  .p-left-right {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .p-left-right {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
+.p-left-right {
+  padding: 0 20px;
 }
 
 .max-width-1180 {
@@ -104,53 +94,54 @@ span.detail-v3 {
   margin: 0 auto;
   width: 100%;
 }
-.bg-ground-help-more {
-  margin: 120px auto;
-  .help-more-cards {
-    margin-top: 28.5px;
-  }
 
-  .help-more-card {
-    text-align: center;
-    border: 1px solid #6fc0fe;
-    box-sizing: border-box;
-    border-radius: 16px;
-    padding: 34px 0;
-  }
-
-  .help-more-card-image {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto;
-  }
-
-  .help-more-card-title {
-    margin: 16px 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 133%;
-    text-align: center;
-    text-transform: capitalize;
-
-    background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .help-more-card-des {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 133%;
-    text-align: center;
-    color: #59637e;
-    margin-bottom: 12px;
-    max-width: 366px;
-    margin: auto;
-    padding-bottom: 34px;
-  }
+.help-more-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
+.help-more-card {
+  text-align: center;
+  border: 1px solid #6fc0fe;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 34px 0;
+  margin-top: 28.5px;
+}
+
+.help-more-card-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.help-more-card-title {
+  margin: 16px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 133%;
+  text-align: center;
+  text-transform: capitalize;
+
+  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.help-more-card-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  text-align: center;
+  color: #59637e;
+  margin-bottom: 12px;
+  max-width: 366px;
+  margin: auto;
+  padding-bottom: 34px;
+}
+
 .row-line-center {
   .title-eng-line-center {
     font-style: normal;
@@ -160,19 +151,21 @@ span.detail-v3 {
     text-align: center;
     letter-spacing: 0.22em;
     color: #0979fd;
-    margin-bottom: 14px;
   }
 
   .title-line-center {
+    margin-top: 14px;
     font-weight: 700;
     font-size: 36px;
     line-height: 48px;
     text-align: center;
     color: #2c2d2e;
   }
+
   .img-line-center {
-    margin: 14px auto;
+    margin: 16px auto 36px;
   }
+
   .description-line-center {
     font-weight: 500;
     font-size: 16px;
@@ -188,21 +181,20 @@ span.detail-v3 {
 .bg-ground-feature-project {
   background: #f3f9ff;
   .feature-project-container {
-    padding: 120px 20px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .options {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    margin-left: -20px;
-    margin-right: -20px;
     margin-top: 22px;
     min-width: 600px;
     height: 532px;
 
     @for $i from 1 through 4 {
-      @media screen and (max-width: 798px - ($i * 80)) {
+      @media screen and (max-width: (798px - $i * 80)) {
         min-width: 600px - $i * 80;
         .option:nth-child(#{6-$i}) {
           display: none;
@@ -247,7 +239,6 @@ span.detail-v3 {
       }
       &:not(.active) {
         flex-grow: 1;
-
         border-radius: 30px;
         .shadow {
           bottom: -40px;

@@ -28,10 +28,10 @@ const SectionHelpMore = () => {
   ];
   return (
     <section className="bg-ground-help-more">
-      <div className="max-width-1180 p-left-right">
+      <div className="max-width-1180 p-left-right help-more-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">CONTACT US</span>
-          <h1 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h1>
+          <h2 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h2>
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
@@ -40,7 +40,7 @@ const SectionHelpMore = () => {
             vụ bạn
           </p>
         </Row>
-        <Row lg={3} md={3} xs={1} className="help-more-cards gy-4 gx-4">
+        <Row lg={3} md={3} xs={1} className="help-more-cards">
           {listItemCard.map((itemCard) => (
             <Col key={itemCard.id}>
               <div className="help-more-card">
