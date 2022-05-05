@@ -10,6 +10,8 @@ import SectionHeader from "./body/section-header";
 import SectionSolution from "./body/section-solution";
 import SectionHelpMore from "./body/section-help";
 import SectionFeaturedProject from "./body/section-featured-project";
+import SectionSmartLighting from "./body/section-smart-lighting";
+import SectionSmartParking from "./body/section-smart-parking";
 
 const IndexPage = () => {
   return (
@@ -17,6 +19,8 @@ const IndexPage = () => {
       <SectionHeader />
       <main id="main_page">
         <SectionSolution />
+        <SectionSmartParking />
+        <SectionSmartLighting />
         <SectionFeaturedProject />
         <SectionHelpMore />
       </main>
