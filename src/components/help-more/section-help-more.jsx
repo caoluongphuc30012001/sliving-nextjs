@@ -42,7 +42,7 @@ const SectionHelpMore = () => {
         </Row>
         <Row lg={3} md={3} xs={1} className="help-more-cards">
           {listItemCard.map((itemCard) => (
-            <Col key={itemCard.id}>
+            <Col key={itemCard.id} className="gx-4 gy-4">
               <div className="help-more-card">
                 <Image
                   src={itemCard.linkImg}
