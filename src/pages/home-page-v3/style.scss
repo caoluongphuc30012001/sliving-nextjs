@@ -194,7 +194,7 @@ span.detail-v3 {
     flex-direction: row;
     align-items: stretch;
     overflow: hidden;
-    margin-top: 22px;
+    margin-top: 60px;
     min-width: 600px;
     height: 532px;
     // margin-left: -10px;
@@ -325,6 +325,9 @@ span.detail-v3 {
 .bg-ground-smart-lighting {
   padding-top: 60px;
   padding-bottom: 120px;
+  .smart-lighting-row {
+    margin-top: 60px;
+  }
   .smart-lighting-des {
     font-weight: 500;
     font-size: 16px;
@@ -367,7 +370,7 @@ span.detail-v3 {
           line-height: 24px;
           text-align: center;
           color: #454647;
-          padding: 8px 8px;
+          padding: 8px 8px 0px;
         }
       }
     }
@@ -383,11 +386,6 @@ span.detail-v3 {
 
   .smart-lighting-img-right {
     min-height: 625px;
-  }
-
-  .smart-lighting-img-right,
-  .smart-lighting-img-left {
-    margin: 0 auto;
   }
 }
 
@@ -454,6 +452,7 @@ span.detail-v3 {
   padding: 60px 0;
   .smart-parking-group-img {
     margin: 0 auto;
+    margin-top: 60px;
   }
   .smart-parking-title {
     text-align: center;

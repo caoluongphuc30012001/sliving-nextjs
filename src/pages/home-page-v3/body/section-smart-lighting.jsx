@@ -37,7 +37,7 @@ function SectionSmartLighting() {
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
         </div>
-        <Row>
+        <Row className="smart-lighting-row">
           <Col lg={7} md={12} className="">
             <p className="smart-lighting-des">
               Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
