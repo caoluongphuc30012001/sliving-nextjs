@@ -1,0 +1,185 @@
+import React from "react";
+import styled from "styled-components";
+import iconCheckOutline from "@images/icon/icon-check-circle-outline.svg";
+import imgCurtain from "@images/home-page-v3/img-curtain.png";
+import imgSwitch from "@images/home-page-v3/img-switch.png";
+import imgApp from "@images/home-page-v3/img-app.png";
+import imgTouch from "@images/home-page-v3/img-touch.png";
+
+import { Col, Row } from "react-bootstrap";
+
+export const Divider = styled("div")`
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
+  margin: 20px auto;
+  border-radius: 200px;
+  padding-bottom: 60px;
+`;
+
+const SectionProduct = () => {
+  const arrSmartTouch = [
+    {
+      id: 0,
+      title: "Công Tắc Thông Minh",
+      subTitle: "Smart Switch",
+      image: imgSwitch,
+      listItem: [
+        {
+          id: 0,
+          title: "Tính năng vượt trội",
+          subTitle:
+            "Với ngoại hình của dòng công tắc cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng những trải nghiệm mà sản phẩm mang đến lại hoàn toàn mới mẻ.",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 1,
+          title: "Dễ sử dụng",
+          subTitle:
+            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian smart living đẳng cấp.",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 2,
+          title: "Trải nghiệm mới từ lớp vỏ truyền thống",
+          subTitle:
+            "Ngoài tính năng điều khiển bật tắt cục bộ như công tắc thường, sản phẩm còn có khả năng kết nối thông qua gateway để điều khiển trên internet. Chạy kịch bản bằng nhấn đơn và nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên gateway.",
+          icon: iconCheckOutline,
+        },
+      ],
+    },
+    {
+      id: 1,
+      title: "Công Tắc Cảm Ứng",
+      subTitle: "Touch switch",
+      image: imgTouch,
+      listItem: [
+        {
+          id: 0,
+          title: "Thiết kế sang trọng",
+          subTitle:
+            "Với thiết kế đơn giản nhưng không kém phần sang trọng, sản phẩm có mặt kính cường lực chống trầy, sở hữu viền nhôm mạ vàng 18k cao cấp với độ dày vừa phải cùng với đường bo cạnh mềm mại, tạo nên sự thân thiện với người sử dụng vừa thuận tiện cho việc lắp đặt, sử dụng, bảo hành.",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 1,
+          title: "Dễ sử dụng",
+          subTitle:
+            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian smart living đẳng cấp.",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 2,
+          title: "Tính năng vượt trội",
+          subTitle:
+            "Ngoài tính năng điều khiển bật tắt cục bộ như công tắc thường, sản phẩm còn có khả năng kết nối thông qua gateway để điều khiển trên internet. Chạy kịch bản bằng nhấn đơn và nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên gateway.",
+          icon: iconCheckOutline,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "Ứng Dụng Di Động Sliving",
+      subTitle: "App Sliving",
+      image: imgApp,
+      listItem: [
+        {
+          id: 0,
+          title: "Tạo các kịch bản tự động",
+          subTitle:
+            "Công tắc mini không dây, công tắc điều khiển không dây và khối Cube được tùy chỉnh để tự động hóa một loạt các tác vụ công việc trong nhà Thiết lập công tắc mini không dây để bật chế độ đọc. Chẳng hạn như, chỉ với một nút bấm duy nhất bạn có thể thực hiện 2 tác vụ cùng một lúc như đóng rèm cửa và tự động điều chỉnh ánh sáng đèn theo ý muốn:",
+
+          listChild: [
+            "Bật và điều chỉnh độ sáng của đèn",
+            "Đóng và mở rèm tự động",
+            " Điều khiển từ xa các thiết bị kết nối với phích cắm thông minh",
+          ],
+          icon: iconCheckOutline,
+        },
+        {
+          id: 1,
+          title: "Giám sát & nhận các tính năng cảnh báo",
+          subTitle:
+            "Kiểm tra lượng điện nước tiêu thụ mỗi tháng sẽ không còn khó khăn, mất nhiều thời gian và thủ công như trước nữa. Thiết bị cho phép giám sát lượng điện tiêu thụ điện và nước trực tiếp 24/24, đồng thời cho phép thiết lập các ngưỡng tiêu thụ tối đa và gửi các thông tin cảnh báo khi vượt ngưỡng. ",
+          icon: iconCheckOutline,
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Động Cơ Rèm",
+      subTitle: "Smart Curtain",
+      image: imgCurtain,
+      listItem: [
+        {
+          id: 0,
+          title: "Dễ dàng chia sẻ thiết bị - Điều khiển từ xa",
+          subTitle:
+            "Thông qua ứng dụng Sliving - có thể chia sẻ thiết bị cho nhiều người dùng khác nhau. Hỗ trợ điều khiển từ xa tương thích với tỷ lệ mở rèm được cài đặt sẵn.",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 1,
+          title: "Thiết kế dễ dàng lắp đặt và sử dụng",
+          subTitle:
+            "Với kích thước nhỏ gọn, phù hợp với nhiều loại hình không gian khác nhau. Toàn bộ phần vỏ bên ngoài đều được làm bằng nhôm cao cấp, có khả năng chịu được lực va chạm mạnh, chịu nhiệt và chống ăn mòn tốt.",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 2,
+          title: "Hoạt động dựa trên tương tác vật lý",
+          subTitle:
+            "Khi có sự cố về điện, vẫn có thể dễ dàng mở và đóng rèm một cách nhẹ nhàng. Người tiêu dùng không cần phải quá lo lắng về việc thiết bị ngưng hoạt động và không sử dụng được.",
+          icon: iconCheckOutline,
+        },
+      ],
+    },
+  ];
+
+  return (
+    <section className="section-product-v3">
+      <div className="container-v3">
+        <h5 className="detail-sub-v3 text-uppercase">ABOUT SLIVING</h5>
+        <h3 className="detail-v3">Sản Phẩm Smart Home</h3>
+        <Divider />
+
+        {arrSmartTouch.map((smart) => {
+          return (
+            <Row key={smart.id} className="card-product">
+              <Col lg={7}>
+                <img src={smart.image} alt="" />
+              </Col>
+              <Col lg={5}>
+                <h3>{smart.title}</h3>
+                <h4>{smart.subTitle}</h4>
+                <ul className="card-product-content">
+                  {smart.listItem.map((item) => (
+                    <li key={item.id}>
+                      <div className="d-flex align-items-center">
+                        <img src={item.icon} alt="" className="mr-2 m" />
+                        <h4>{item.title}</h4>
+                      </div>
+                      <div>
+                        <p>
+                          {item.subTitle}
+                          <ul>
+                            {item?.listChild &&
+                              item?.listChild.map((child) => {
+                                <li key={child}>{child}</li>;
+                              })}
+                          </ul>
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </Col>
+            </Row>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export default SectionProduct;

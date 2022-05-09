@@ -22,6 +22,15 @@ img {
   display: block;
 }
 
+h3.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2b2b33;
+}
+
 h4.detail-v3 {
   font-family: "SVN-Gilroy";
   font-style: normal;
@@ -33,15 +42,43 @@ h4.detail-v3 {
   margin-top: 10px;
   margin-bottom: 6px;
 }
+
+h5.detail-sub-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: 0.22em;
+  color: #0979fd;
+}
 span.detail-v3 {
   font-family: "SVN-Gilroy";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 133%;
-  color: #ffffff;
-  min-height: 57px;
-  min-width: 214px;
+  color: #212633;
+  margin-bottom: 18px;
+}
+
+.btn-gradient-blue {
+  width: fit-content;
+  height: 50px;
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+  border-radius: 68px;
+  border: none;
+  padding: 8px 64px;
+  span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 133%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* 
@@ -502,3 +539,105 @@ span.detail-v3 {
   }
 }
 //---------------------------------------------------------------End Section Smart Parking-------------------------------------------------
+
+h4.title-card {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Light mode/Gray/gray_800 */
+
+  color: #2c2d2e;
+}
+/* 
+* 2. Section Solution
+*/
+.section-solution {
+  padding-top: 100px;
+  background-color: #f2f6ff;
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      &::marker {
+        display: none;
+      }
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 4px;
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #454647;
+      margin-bottom: 14px;
+      &::before {
+        content: "";
+        background-image: url("../../images/icon/icon-done-check.svg");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  ul.list-flex-auto {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 78px;
+    .flex-auto-item {
+      width: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0px 12px;
+    }
+  }
+
+  .section-solution-about {
+    padding-bottom: 50px;
+  }
+  .section-solution-sliving {
+    padding-bottom: 60px;
+  }
+}
+
+/*
+* 3. Section Product
+*/
+
+.section-product-v3 {
+  padding-top: 120px;
+}
+
+.card-product {
+  ul.card-product-content {
+    > {
+      margin-bottom: 14px;
+      div {
+        &:nth-child(1) {
+          column-gap: 10px;
+        }
+      }
+      p {
+        max-width: 480px;
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #454647;
+      }
+    }
+  }
+}
