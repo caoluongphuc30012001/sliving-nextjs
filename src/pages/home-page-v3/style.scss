@@ -192,6 +192,8 @@ span.detail-v3 {
     margin-top: 22px;
     min-width: 600px;
     height: 532px;
+    // margin-left: -10px;
+    // margin-right: -10px;
 
     @for $i from 1 through 4 {
       @media screen and (max-width: (798px - $i * 80)) {
@@ -373,7 +375,17 @@ span.detail-v3 {
       }
     }
   }
+
+  .smart-lighting-img-right {
+    min-height: 625px;
+  }
+
+  .smart-lighting-img-right,
+  .smart-lighting-img-left {
+    margin: 0 auto;
+  }
 }
+
 .btn-group {
   margin: 32px 0;
   .advise-now-btn {
