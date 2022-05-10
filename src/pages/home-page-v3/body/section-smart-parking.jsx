@@ -31,7 +31,7 @@ function SectionSmartParking() {
   ];
   return (
     <section className="bg-ground-smart-parking">
-      <div className="max-width-1180 p-left-right">
+      <div className="max-width-1180 container-v3">
         <Row className="row-line-center ">
           <span className="title-eng-line-center">SMART PARKING</span>
           <h1 className="title-line-center">

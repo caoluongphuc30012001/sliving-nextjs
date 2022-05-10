@@ -13,19 +13,19 @@ const SectionHeader = () => {
     {
       id: 0,
       title: "Thiết lập và cài đặt",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      desc: "Dễ dàng thao tác với cấu hình tùy chỉnh để giám sát từ xa và kiểm soát năng lượng tiêu dùng.",
       icon: iconSettings,
     },
     {
       id: 1,
       title: "Tư vấn thi công",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      desc: "Sẵn sàng tư vấn thi công cho khách hàng lắp đặt và sử dụng tiện lợi với không gian sống.",
       icon: iconSupport,
     },
     {
       id: 2,
       title: "Hỗ trợ 24/7",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      desc: "Đồng hành cùng khách hàng 24/7, sẵn sàng hỗ trợ và tư vấn tất cả các ngày trong tuần.",
       icon: icon24Line,
     },
   ];
@@ -69,8 +69,11 @@ const SectionHeader = () => {
       </Carousel>
       <div className="home-page-tag">
         <div className="container-v3">
-          <Row noGutters={true}>
-            <Col lg={4}>
+          <Row
+            noGutters={true}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <Col lg={3}>
               <div className="group-contact-header">
                 <img
                   src={iconPhone}
@@ -79,26 +82,29 @@ const SectionHeader = () => {
                   alt="icon phone fill"
                 />
                 <div className="contact-header-wrap">
-                  <span>Hotline</span>
+                  <span className="hotline">Hotline</span>
                   <span>(023) 2665 5559</span>
                 </div>
               </div>
             </Col>
-            <Col lg={8} noGutters={true}>
-              <div className="group-service-tag grid-3">
+            <Col lg={9} noGutters={true}>
+              <Row className="group-service-tag">
                 {arrService.map((service) => (
-                  <div key={service.id} className="card-sub-tag">
-                    <img
-                      height={50}
-                      src={service.icon}
-                      alt="icon settings"
-                      loading="eager"
-                    />
-                    <h4 className="detail-v3">{service.title}</h4>
-                    <span className="detail-v3">{service.desc}</span>
-                  </div>
+                  <Col key={service.id} className="gx-4 gy-4">
+                    <div className="card-sub-tag">
+                      <img
+                        height={48}
+                        src={service.icon}
+                        alt="icon settings"
+                        loading="eager"
+                        className="card-sub-tag-icon"
+                      />
+                      <h4 className="card-sub-tag-title">{service.title}</h4>
+                      <span className="card-sub-tag-des">{service.desc}</span>
+                    </div>
+                  </Col>
                 ))}
-              </div>
+              </Row>
             </Col>
           </Row>
         </div>

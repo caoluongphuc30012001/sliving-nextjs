@@ -26,11 +26,11 @@ const IndexPage = () => {
       <SectionHeader />
       <main id="main_page">
         <SectionSolution />
+        <SectionProduct />
         <SectionSmartParking />
         <SectionSmartLighting />
         <SectionFeaturedProject />
         <SectionHelpMore />
-        <SectionProduct />
       </main>
     </LayoutNew>
   );

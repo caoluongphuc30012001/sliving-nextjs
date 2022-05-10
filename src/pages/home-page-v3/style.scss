@@ -88,8 +88,9 @@ span.detail-v3 {
   margin-top: 80px;
 }
 .home-page-tag {
-  background: #000e28;
-  padding: 49px 20px;
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+
+  // padding: 40px 20px;
 }
 .group-contact-header {
   display: flex;
@@ -98,34 +99,99 @@ span.detail-v3 {
   span {
     font-family: "SVN-Gilroy";
     font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 133%;
-    /* identical to box height, or 48px */
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 40px;
     color: #ffffff;
+    &.hotline {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 }
 
 .card-sub-tag {
-  padding: 20px;
-  background-color: #44a9fe;
-  &:nth-child(2) {
-    border-right: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  // min-height: 200px;
+  .card-sub-tag-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 32px;
+    color: #ffffff;
+    padding-top: 10px;
+  }
+  .card-sub-tag-des {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
   }
 }
 
-.group-service-tag {
-  margin-top: -12%;
-  position: relative;
-  z-index: 2;
-  transition-duration: 0.3s;
+@media only screen and (max-width: 992px) {
+  .home-page-tag {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .group-contact-header {
+    justify-content: center;
+    img {
+      height: 24px;
+      width: 24px;
+    }
+    .contact-header-wrap {
+      display: flex;
+      span {
+        font-size: 14px;
+        &.hotline {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .group-service-tag {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .card-sub-tag {
+    padding: 8px;
+    .card-sub-tag-icon {
+      margin: 0 auto;
+    }
+    .card-sub-tag-title {
+      text-align: center;
+      font-size: 14px;
+    }
+    .card-sub-tag-des {
+      display: none;
+    }
+  }
 }
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
-.p-left-right {
+.container-v3 {
   padding: 0 20px;
 }
+@media only screen and (max-width: 1240px) {
+  .container-v3 {
+    padding: 0px 40px;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .container-v3 {
+    padding: 0px 20px;
+  }
+}
 .max-width-1180 {
   max-width: 1180px;
   margin: 0 auto;
