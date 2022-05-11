@@ -5,8 +5,9 @@ import imgCurtain from "@images/home-page-v3/img-curtain.png";
 import imgSwitch from "@images/home-page-v3/img-switch.png";
 import imgApp from "@images/home-page-v3/img-app.png";
 import imgTouch from "@images/home-page-v3/img-touch.png";
+import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
-import { Col, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 
 export const Divider = styled("div")`
   width: 56px;
@@ -98,7 +99,7 @@ const SectionProduct = () => {
         },
         {
           id: 1,
-          title: "Giám sát & nhận các tính năng cảnh báo",
+          title: "Giám sát & cảnh báo",
           subTitle:
             "Kiểm tra lượng điện nước tiêu thụ mỗi tháng sẽ không còn khó khăn, mất nhiều thời gian và thủ công như trước nữa. Thiết bị cho phép giám sát lượng điện tiêu thụ điện và nước trực tiếp 24/24, đồng thời cho phép thiết lập các ngưỡng tiêu thụ tối đa và gửi các thông tin cảnh báo khi vượt ngưỡng. ",
           icon: iconCheckOutline,
@@ -139,28 +140,43 @@ const SectionProduct = () => {
   return (
     <section className="section-product-v3">
       <div className="container-v3">
-        <h5 className="detail-sub-v3 text-uppercase">ABOUT SLIVING</h5>
-        <h3 className="detail-v3">Sản Phẩm Smart Home</h3>
-        <Divider />
-
+        <Row className="row-line-center">
+          <span className="title-eng-line-center">ABOUT SLIVING</span>
+          <h2 className="title-line-center">Sản Phẩm Smart Home</h2>
+          <div className="img-line-center">
+            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+          </div>
+        </Row>
         {arrSmartTouch.map((smart) => {
           return (
-            <Row key={smart.id} className="card-product">
+            <Row
+              key={smart.id}
+              className={`${
+                smart.id % 2 === 0
+                  ? "card-product"
+                  : "card-product flex-row-reverse"
+              } `}
+            >
               <Col lg={7}>
-                <img src={smart.image} alt="" />
+                <img src={smart.image} alt="" className="card-product-img" />
               </Col>
               <Col lg={5}>
-                <h3>{smart.title}</h3>
-                <h4>{smart.subTitle}</h4>
+                <h3 className="card-product-title">{smart.title}</h3>
+                <h4 className="card-product-subtitle">{smart.subTitle}</h4>
+                <div className="card-product-img-mobile d-none">
+                  <img src={smart.image} alt="" class="float-none" />
+                </div>
                 <ul className="card-product-content">
                   {smart.listItem.map((item) => (
-                    <li key={item.id}>
+                    <li key={item.id} className="card-product-item">
                       <div className="d-flex align-items-center">
                         <img src={item.icon} alt="" className="mr-2 m" />
-                        <h4>{item.title}</h4>
+                        <h4 className="card-product-item-title">
+                          {item.title}
+                        </h4>
                       </div>
                       <div>
-                        <p>
+                        <p className="card-product-item-des">
                           {item.subTitle}
                           <ul>
                             {item?.listChild &&
@@ -172,6 +188,14 @@ const SectionProduct = () => {
                       </div>
                     </li>
                   ))}
+                  <div className="btn-group">
+                    <button className="advise-now-btn">
+                      <span>Tư vấn ngay</span>
+                    </button>
+                    <button type="button" className="learn-more-btn">
+                      <span>Tìm hiểu thêm</span>
+                    </button>
+                  </div>
                 </ul>
               </Col>
             </Row>

@@ -319,6 +319,7 @@ span.detail-v3 {
 }
 @media only screen and (max-width: 992px) {
   .section-solution {
+    padding-top: 40px !important;
     h3.detail-v3 {
       font-family: "SVN-Gilroy";
       font-style: normal;
@@ -356,6 +357,7 @@ span.detail-v3 {
     }
 
     .section-solution-sliving {
+      padding-top: 0;
       .solution-sliving-img {
         display: none;
       }
