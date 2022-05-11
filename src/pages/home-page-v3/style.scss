@@ -82,15 +82,34 @@ span.detail-v3 {
 }
 
 /* 
-* 1. Header Page
+* ======================Begin Header Page======================
 */
+
 .home-page-v3 {
   margin-top: 80px;
+  // =======Begin Custom swiper=======
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 60px !important;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next,
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+  }
+  // =======End Custom swiper=======
+}
+.bg-img {
+  width: 100%;
 }
 .home-page-tag {
   background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-
-  // padding: 40px 20px;
 }
 .group-contact-header {
   display: flex;
@@ -113,11 +132,14 @@ span.detail-v3 {
   }
 }
 
+.group-service-tag {
+  padding: 40px 0;
+}
 .card-sub-tag {
   border: 2px solid #ffffff;
   border-radius: 16px;
   padding: 16px;
-  // min-height: 200px;
+  height: 100%;
   .card-sub-tag-title {
     font-family: "SVN-Gilroy";
     font-style: normal;
@@ -138,8 +160,15 @@ span.detail-v3 {
 }
 
 @media only screen and (max-width: 992px) {
+  .home-page-v3 .swiper-horizontal > .swiper-pagination-bullets,
+  .home-page-v3 .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .home-page-v3 .swiper-pagination-custom,
+  .home-page-v3 .swiper-pagination-fraction {
+    bottom: 8px !important;
+  }
+
   .home-page-tag {
-    padding-top: 20px;
+    // padding-top: 20px;
     padding-bottom: 20px;
   }
   .group-contact-header {
@@ -159,12 +188,16 @@ span.detail-v3 {
     }
   }
   .group-service-tag {
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    padding: 0;
   }
-
+  .card-sub-tag-col {
+    padding-top: 10px;
+  }
   .card-sub-tag {
     padding: 8px;
+    // height: auto;
     .card-sub-tag-icon {
       margin: 0 auto;
     }
@@ -177,6 +210,10 @@ span.detail-v3 {
     }
   }
 }
+/* 
+* ======================End Header Page======================
+*/
+
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
 .container-v3 {
   padding: 0 20px;

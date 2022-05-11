@@ -21,7 +21,7 @@ const IndexPage = () => {
   const { t } = useTranslation();
 
   return (
-    <LayoutNew>
+    <>
       <Seo title="Sliving" description="Sliving" url="https://sliving.vn" />
       <SectionHeader />
       <main id="main_page">
@@ -32,7 +32,7 @@ const IndexPage = () => {
         <SectionFeaturedProject />
         <SectionHelpMore />
       </main>
-    </LayoutNew>
+    </>
   );
 };
 

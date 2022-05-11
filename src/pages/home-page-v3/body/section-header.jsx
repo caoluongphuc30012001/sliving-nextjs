@@ -1,13 +1,20 @@
-import React from "react";
-import { Carousel, Col, Row } from "react-bootstrap";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-
+import icon24Line from "@images/icon/icon-24h-line.svg";
 import iconPhone from "@images/icon/icon-phone.svg";
 import iconSettings from "@images/icon/icon-setting.svg";
 import iconSupport from "@images/icon/icon-support.svg";
-import icon24Line from "@images/icon/icon-24h-line.svg";
+import imgBg from "@images/home-page-v3/bg-home-page.png";
+import imgBg2 from "@images/home-page-v3/bg-home-page2.png";
+import React from "react";
+import { Col, Row } from "react-bootstrap";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Pagination, Navigation } from "swiper";
 const SectionHeader = () => {
   const arrService = [
     {
@@ -29,44 +36,31 @@ const SectionHeader = () => {
       icon: icon24Line,
     },
   ];
-  const { coverImage } = useStaticQuery(graphql`
-    {
-      coverImage: file(relativePath: { regex: "/bg-home-page.png/" }) {
-        childImageSharp {
-          gatsbyImageData(
-            transformOptions: { fit: COVER }
-            layout: FULL_WIDTH
-            quality: 100
-            placeholder: BLURRED
-          )
-        }
-      }
-    }
-  `);
 
-  const coverImg = coverImage.childImageSharp.gatsbyImageData;
   return (
     <header className="home-page-v3">
-      {/* {coverImg && (
-          <GatsbyImage image={coverImg} alt="home page" loading="eager" />
-        )} */}
-      <Carousel>
-        <Carousel.Item>
-          {coverImg && (
-            <GatsbyImage image={coverImg} alt="home page" loading="eager" />
-          )}
-        </Carousel.Item>
-        <Carousel.Item>
-          {coverImg && (
-            <GatsbyImage image={coverImg} alt="home page" loading="eager" />
-          )}
-        </Carousel.Item>
-        <Carousel.Item>
-          {coverImg && (
-            <GatsbyImage image={coverImg} alt="home page" loading="eager" />
-          )}
-        </Carousel.Item>
-      </Carousel>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div>
+            <img src={imgBg} alt="" className="bg-img" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            <img src={imgBg2} alt="" className="bg-img" />
+          </div>
+        </SwiperSlide>
+      </Swiper>
       <div className="home-page-tag">
         <div className="container-v3">
           <Row
@@ -88,9 +82,9 @@ const SectionHeader = () => {
               </div>
             </Col>
             <Col lg={9} noGutters={true}>
-              <Row className="group-service-tag">
+              <Row className="group-service-tag" md={3} xs={1}>
                 {arrService.map((service) => (
-                  <Col key={service.id} className="gx-4 gy-4">
+                  <Col key={service.id} className="gx-4 card-sub-tag-col">
                     <div className="card-sub-tag">
                       <img
                         height={48}
