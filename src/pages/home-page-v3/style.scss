@@ -540,6 +540,105 @@ span.detail-v3 {
 * ======================End Section Product======================
 */
 
+/* 
+* ======================Begin Section Smart Parking======================
+*/
+.bg-ground-smart-parking {
+  border: 1px solid #e1e3e6;
+  padding: 60px 0;
+  .smart-parking-group-img {
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  .smart-parking-group-img-mobile {
+    display: none;
+  }
+  .smart-parking-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    color: #0979fd;
+    margin-top: 36px;
+  }
+  .smart-parking-des {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    color: #454647;
+    max-width: 765px;
+    margin-top: 14px;
+  }
+
+  .smart-parking-card {
+    text-align: center;
+    margin-top: 32px;
+    .smart-parking-card-top {
+      height: 100px;
+    }
+    .smart-parking-card-img {
+      margin: 0 auto;
+    }
+    .smart-parking-card-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #454647;
+      margin-top: 25px;
+    }
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .smart-parking-card-col {
+    border-bottom: 1px solid #e1e3e6;
+  }
+  .bg-ground-smart-parking {
+    border: none;
+    .smart-parking-group-img {
+      display: none;
+    }
+    .smart-parking-group-img-mobile {
+      display: block !important;
+    }
+    .smart-parking-title {
+      font-size: 21px;
+      margin-top: 32px;
+    }
+    .smart-parking-des {
+      text-align: justify;
+    }
+    .smart-parking-card {
+      display: flex;
+      align-items: center;
+      .smart-parking-card-top {
+        height: 100px;
+        width: 100px;
+        margin-right: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .smart-parking-card-title {
+        text-align: start;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* 
+* ======================End Section Smart Parking======================
+*/
+
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
 .container-v3 {
   padding: 0 20px;
@@ -878,62 +977,6 @@ span.detail-v3 {
     margin-top: 10px;
   }
 }
-//---------------------------------------------------------------Begin Section Smart Parking-------------------------------------------------
-.bg-ground-smart-parking {
-  border: 1px solid #e1e3e6;
-  padding: 60px 0;
-  .smart-parking-group-img {
-    margin: 0 auto;
-    margin-top: 60px;
-  }
-  .smart-parking-title {
-    text-align: center;
-
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-
-    text-align: center;
-
-    color: #0979fd;
-    margin-top: 36px;
-  }
-  .smart-parking-des {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0 auto;
-    color: #454647;
-    max-width: 765px;
-    margin-top: 14px;
-  }
-
-  .smart-parking-card {
-    text-align: center;
-    margin-top: 32px;
-    .smart-parking-card-top {
-      height: 100px;
-    }
-    .smart-parking-card-img {
-      margin: 0 auto;
-    }
-    .smart-parking-card-title {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: center;
-      color: #454647;
-      margin-top: 25px;
-    }
-  }
-  .btn-group {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-  }
-}
-//---------------------------------------------------------------End Section Smart Parking-------------------------------------------------
 
 h4.title-card {
   font-family: "SVN-Gilroy";

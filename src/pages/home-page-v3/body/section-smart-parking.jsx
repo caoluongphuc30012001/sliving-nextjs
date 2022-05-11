@@ -6,6 +6,7 @@ import imgItemCart2 from "@images/home-page-v3/svg/icon-smart-parking-item2.svg"
 import imgItemCart3 from "@images/home-page-v3/svg/icon-smart-parking-item3.svg";
 import imgItemCart4 from "@images/home-page-v3/svg/icon-smart-parking-item4.svg";
 import imgSmartParking from "@images/home-page-v3/png/img-smart-parking.png";
+import imgSmartParkingMobile from "@images/home-page-v3/png/img-smart-parking-mobile.png";
 function SectionSmartParking() {
   const listItemCard = [
     {
@@ -31,16 +32,20 @@ function SectionSmartParking() {
   ];
   return (
     <section className="bg-ground-smart-parking">
-      <div className="max-width-1180 container-v3">
+      <div className="container-v3">
         <Row className="row-line-center ">
           <span className="title-eng-line-center">SMART PARKING</span>
           <h1 className="title-line-center">
             Giải Pháp Trạm Gửi Xe Thông Minh
           </h1>
-          <div className="img-line-center d-flex justify-content-center">
+          <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
           <Image src={imgSmartParking} className="smart-parking-group-img" />
+          <Image
+            src={imgSmartParkingMobile}
+            className="smart-parking-group-img-mobile"
+          />
           <h2 className="smart-parking-title">
             Ứng dụng công nghệ IoT và AI trong một giải pháp
           </h2>
@@ -52,9 +57,9 @@ function SectionSmartParking() {
           </p>
         </Row>
 
-        <Row lg={4} md={4} xs={2} className="smart-parking-cards">
+        <Row lg={4} md={4} xs={1} className="smart-parking-cards">
           {listItemCard.map((itemCard) => (
-            <Col className="gx-5 gy-3">
+            <Col className="gx-5 gy-3 smart-parking-card-col">
               <div className="smart-parking-card">
                 <div className="smart-parking-card-top">
                   <Image
