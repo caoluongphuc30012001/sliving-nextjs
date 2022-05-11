@@ -1,6 +1,6 @@
 // Home Page Version 3
 /*
-* 0. Core
+* ======================Begin Core CSS======================
 */
 p,
 span,
@@ -80,6 +80,9 @@ span.detail-v3 {
     justify-content: center;
   }
 }
+/*
+* ======================End Core CSS======================
+*/
 
 /* 
 * ======================Begin Header Page======================
@@ -158,7 +161,7 @@ span.detail-v3 {
     color: #ffffff;
   }
 }
-
+// =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .home-page-v3 .swiper-horizontal > .swiper-pagination-bullets,
   .home-page-v3 .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -192,9 +195,9 @@ span.detail-v3 {
     margin-right: -10px !important;
     padding: 0;
   }
-  .card-sub-tag-col {
-    padding-top: 10px;
-  }
+  // .card-sub-tag-col {
+  //   padding-top: 10px;
+  // }
   .card-sub-tag {
     padding: 8px;
     // height: auto;
@@ -210,8 +213,241 @@ span.detail-v3 {
     }
   }
 }
+// =======End Responsive=======
 /* 
 * ======================End Header Page======================
+*/
+
+/* 
+* ======================Begin Section Solution======================
+*/
+.section-solution {
+  padding-top: 100px;
+  background-color: #f2f6ff;
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      &::marker {
+        display: none;
+      }
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 4px;
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #454647;
+
+      &::before {
+        content: "";
+        background-image: url("../../images/icon/icon-done-check.svg");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .section-solution-about {
+    padding-bottom: 50px;
+  }
+
+  .section-solution-sliving {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .solution-sliving-img {
+      margin-left: -95px;
+    }
+
+    .solution-sliving-card {
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .solution-sliving-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #454647;
+      padding: 0 24px;
+    }
+  }
+
+  .solution-about-img-mobile,
+  .solution-about-cap {
+    display: none !important;
+  }
+
+  .solution-about-cap {
+    padding: 12px;
+    background: #f3f9ff;
+    box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12),
+      0px 8px 16px -6px rgba(24, 39, 75, 0.08);
+    border-radius: 8px;
+    min-height: 96px;
+    .solution-about-cap-line {
+      background: #0979fd;
+      border-radius: 44.5833px;
+      // height: 100%;
+      width: 5px;
+      margin-right: 16px;
+    }
+    .solution-about-cap-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454647;
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .section-solution {
+    h3.detail-v3 {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 32px;
+      color: #2c2d2e;
+    }
+    span.detail-v3 {
+      margin-bottom: 0;
+    }
+    .solution-about-img {
+      display: none;
+    }
+
+    .solution-about-img-mobile,
+    .solution-about-cap {
+      display: flex !important;
+      margin-top: 32px;
+      width: 100%;
+    }
+
+    .solution-about-cap {
+      margin-bottom: 32px;
+    }
+
+    .btn-gradient-blue {
+      width: 100%;
+    }
+
+    .list-ul-li {
+      li {
+        margin-bottom: 4px;
+      }
+    }
+
+    .section-solution-sliving {
+      .solution-sliving-img {
+        display: none;
+      }
+      .solution-sliving-content {
+        padding: 0;
+      }
+    }
+  }
+}
+/* 
+* ======================End Section Solution======================
+*/
+
+/* 
+* ======================Begin Section Product======================
+*/
+.section-product-v3 {
+  padding-top: 120px;
+}
+.card-product {
+  padding-top: 60px;
+  img {
+    float: right;
+  }
+  .card-product-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #0979fd;
+  }
+  .card-product-subtitle {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    color: #454647;
+    padding-top: 4px;
+  }
+  .card-product-content {
+    padding: 0;
+  }
+  .card-product-item {
+    list-style: none;
+    padding-top: 32px;
+
+    .card-product-item-title {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 10px;
+      color: #2c2d2e;
+    }
+
+    .card-product-item-des {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 16px;
+      color: #454647;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    .card-product {
+      padding-top: 32px;
+    }
+    .card-product-item {
+      padding-top: 24px;
+    }
+    .card-product-img {
+      display: none;
+    }
+    .card-product-img-mobile {
+      display: block !important;
+    }
+    .card-product-subtitle {
+      padding-bottom: 12px;
+    }
+    .card-product-item-des {
+      padding-top: 12px !important;
+    }
+  }
+}
+/* 
+* ======================End Section Product======================
 */
 
 //---------------------------------------------------------------Begin Section Help More-------------------------------------------------
@@ -712,35 +948,5 @@ h4.title-card {
   }
   .section-solution-sliving {
     padding-bottom: 60px;
-  }
-}
-
-/*
-* 3. Section Product
-*/
-
-.section-product-v3 {
-  padding-top: 120px;
-}
-
-.card-product {
-  ul.card-product-content {
-    > {
-      margin-bottom: 14px;
-      div {
-        &:nth-child(1) {
-          column-gap: 10px;
-        }
-      }
-      p {
-        max-width: 480px;
-        font-family: "SVN-Gilroy";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        color: #454647;
-      }
-    }
   }
 }

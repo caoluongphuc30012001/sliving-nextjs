@@ -10,6 +10,9 @@ import iconLight from "@images/icon/icon-light.svg";
 import iconSecurity from "@images/icon/icon-security-color.svg";
 import iconRemote from "@images/icon/icon-remote.svg";
 import iconCurtain from "@images/icon/icon-curtain.svg";
+import imgAboutTop from "@images/home-page-v3/png/about-sliving-top.png";
+// import imgAboutBottom from "@images/home-page-v3/png/about-sliving-bottom.png";
+import imgSolution from "@images/home-page-v3/png/solution-sliving.png";
 
 export const Divider = styled("div")`
   width: 56px;
@@ -74,18 +77,31 @@ const SectionSolution = () => {
   return (
     <section className="section-solution">
       <div className="container-v3 section-solution-about">
-        <Row>
-          <Col lg={5}>
+        <Row className="justify-content-around">
+          <Col lg={6}>
             <h5 className="detail-sub-v3 text-uppercase">ABOUT SLIVING</h5>
             <h3 className="detail-v3">
               Giải pháp Nhà thông minh hàng đầu Việt Nam
             </h3>
             <Divider />
+            <img
+              src={imgAboutTop}
+              alt=""
+              className="solution-about-img-mobile"
+            />
+
+            <div className="solution-about-cap d-flex">
+              <div className="solution-about-cap-line"></div>
+              <span className="solution-about-cap-content d-flex align-items-center">
+                "The light is what guides you home, the warmth is what keeps you
+                there." - Ellie Rodriguez
+              </span>
+            </div>
             <span className="detail-v3">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Sliving cung cấp giải pháp nhà thông minh với thuật toán AI để
+              thực hiện giám sát từ xa an toàn và an ninh. Hỗ trợ điều khiển
+              bằng giọng nói và ứng dụng Mobile để dễ dàng thao tác, nhận thông
+              báo kịp thời với các giải pháp tích hợp như:
             </span>
             <ul className="list-ul-li">
               {arrSolution.map((solution) => (
@@ -96,17 +112,17 @@ const SectionSolution = () => {
               <span>Khám phá ngay</span>
             </button>
           </Col>
-          <Col lg={7} className="d-flex align-items-center justify-content-end">
-            <img src={imgRight} alt="" />
+          <Col lg={6}>
+            <img src={imgRight} alt="" className="solution-about-img" />
           </Col>
         </Row>
       </div>
       <div className="container-v3 section-solution-sliving">
-        <Row>
-          <Col lg={5} className="d-flex align-items-center justify-content-end">
+        <Row className="justify-content-between">
+          <Col lg={6} className="solution-sliving-img">
             <img src={imgLeft} alt="" />
           </Col>
-          <Col lg={7}>
+          <Col lg={6} className=" solution-sliving-col-right">
             <h5 className="detail-sub-v3 text-uppercase">SOLUTION SLIVING</h5>
             <h3 className="detail-v3">
               Kiến tạo phong cách sống Hiện Đại Đẳng Cấp
@@ -117,14 +133,28 @@ const SectionSolution = () => {
               thiết kế để bổ sung một cách hiệu quả cho lối sống của bạn với sự
               Thuận tiện, An toàn và Thoải mái.
             </span>
-            <ul className="list-flex-auto">
+            <Row className="">
               {arrProd.map((prod) => (
-                <div key={prod.id} className="flex-auto-item">
-                  <img src={prod.icon} alt="" />
-                  <div>{prod.desc}</div>
-                </div>
+                <Col
+                  key={prod.id}
+                  className="gx-4 gy-3 col-4"
+                  lg={4}
+                  md={4}
+                  sm={4}
+                  // md={6}
+                >
+                  <div className="solution-sliving-card ">
+                    <img src={prod.icon} alt="" />
+                  </div>
+                  <span className="solution-sliving-content">{prod.desc}</span>
+                </Col>
               ))}
-            </ul>
+            </Row>
+            <img
+              src={imgSolution}
+              alt=""
+              className="solution-about-img-mobile"
+            />
           </Col>
         </Row>
       </div>

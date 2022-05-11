@@ -82,7 +82,7 @@ const SectionHeader = () => {
               </div>
             </Col>
             <Col lg={9} noGutters={true}>
-              <Row className="group-service-tag" md={3} xs={1}>
+              <Row className="group-service-tag" md={3}>
                 {arrService.map((service) => (
                   <Col key={service.id} className="gx-4 card-sub-tag-col">
                     <div className="card-sub-tag">
