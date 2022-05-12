@@ -11,7 +11,7 @@ const MenuTopSmartHome = () => {
                 {
                     id:0,
                     nameRoute: "SMART LIGHTING",
-                    href:"/#"
+                    href:"/"
                 },
                 {
                     id:1,

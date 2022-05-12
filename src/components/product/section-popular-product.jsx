@@ -10,7 +10,7 @@ const SectionPopularProduct = ({ listProduct }) => {
     const [current, setCurrent] = useState(1);
     return (
         <section
-            className='section-popular-product-v3 container-v3'
+            className='section-popular-product-v3'
         >
             <div className="popular-product-container">
                 <div className="title-box">

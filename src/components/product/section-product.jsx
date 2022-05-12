@@ -84,7 +84,7 @@ const ItemProduct = ({ listProduct,itemId }) => {
 const SectionProduct = ({listProduct}) => {
     const [current, setCurrent] = useState(0);
     return (
-        <section className="section-product-v3 container-v3">
+        <section className="section-product-v3">
             <div className="product-container">
                 <div className="title-box">
                     <div className="sub-title">SLIVING PRODUCTS</div>
