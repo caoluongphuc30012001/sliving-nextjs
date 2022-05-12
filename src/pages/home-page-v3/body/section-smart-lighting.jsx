@@ -33,30 +33,43 @@ function SectionSmartLighting() {
           <h1 className="title-line-center">
             Hệ Thống Điều Khiển Ánh Sáng Thông Minh
           </h1>
-          <div className="img-line-center d-flex justify-content-center">
+          <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
         </div>
         <Row className="smart-lighting-row">
           <Col lg={7} md={12} className="">
-            <p className="smart-lighting-des">
-              Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
-              nhằm đạt hai mục tiêu: Nâng cao chất lượng chiếu sáng (thay đổi
-              các chỉ tiêu ánh sáng của môi trường được chiếu sáng về độ rọi, độ
-              chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Việc tích hợp phần
-              cứng và xây dựng phần mềm điều khiển các dự án chiếu sáng công
-              nghiệp, thương mại, cơ quan công quyền, công trình công cộng, nhà
-              ở... được chú trọng.
-            </p>
-            <br />
-            <p className="smart-lighting-des">
-              Tích hợp, thử nghiệm thành công và đưa ra thị trường bộ điều khiển
-              panel LED, LED downlight cho phép bật tắt, dimming, đổi màu từ xa
-              bằng công nghệ RF. Điều khiển trên smartphone bằng công nghệ không
-              dây nhằm mục đích điều khiển chiếu sáng hội trường, phòng trưng
-              bày sản phẩm, bộ điều khiển tòa nhà có nhiều kịch bản chiếu sáng
-              theo yêu cầu của khách hàng.
-            </p>
+            <div className="smart-lighting-des-desktop">
+              <p className="smart-lighting-des">
+                Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
+                nhằm đạt hai mục tiêu: Nâng cao chất lượng chiếu sáng (thay đổi
+                các chỉ tiêu ánh sáng của môi trường được chiếu sáng về độ rọi,
+                độ chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Việc tích hợp
+                phần cứng và xây dựng phần mềm điều khiển các dự án chiếu sáng
+                công nghiệp, thương mại, cơ quan công quyền, công trình công
+                cộng, nhà ở... được chú trọng.
+              </p>
+              <br />
+              <p className="smart-lighting-des">
+                Tích hợp, thử nghiệm thành công và đưa ra thị trường bộ điều
+                khiển panel LED, LED downlight cho phép bật tắt, dimming, đổi
+                màu từ xa bằng công nghệ RF. Điều khiển trên smartphone bằng
+                công nghệ không dây nhằm mục đích điều khiển chiếu sáng hội
+                trường, phòng trưng bày sản phẩm, bộ điều khiển tòa nhà có nhiều
+                kịch bản chiếu sáng theo yêu cầu của khách hàng.
+              </p>
+            </div>
+            <div className="smart-lighting-des-mobile d-none">
+              <p className="smart-lighting-des">
+                Unicloud đã tích hợp, thử nghiệm thành công và đưa ra thị trường
+                bộ điều khiển panel LED, LED Downlight cho phép bật tắt,
+                Dimming, đổi màu từ xa bằng công nghệ RF. Điều khiển trên
+                Smartphone bằng công nghệ không dây, nhằm mục đích điều khiển
+                chiếu sáng hội trường, phòng trưng bày sản phẩm, bộ điều khiển
+                tòa nhà có nhiều kịch bản chiếu sáng theo yêu cầu của khách
+                hàng.
+              </p>
+            </div>
             <div className="btn-group">
               <button className="advise-now-btn">
                 <span>Tư vấn ngay</span>
@@ -91,6 +104,10 @@ function SectionSmartLighting() {
             <Image
               src={imgSmartLightingRight}
               className="smart-lighting-img-right"
+            />
+            <Image
+              src={imgSmartLightingLeft}
+              className="smart-lighting-img-left-mobile d-none"
             />
           </Col>
         </Row>

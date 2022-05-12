@@ -1,6 +1,6 @@
 // Home Page Version 3
 /*
-* ======================Begin Core CSS======================
+* 0.======================Begin Core CSS======================
 */
 p,
 span,
@@ -52,6 +52,7 @@ h5.detail-sub-v3 {
   letter-spacing: 0.22em;
   color: #0979fd;
 }
+
 span.detail-v3 {
   font-family: "SVN-Gilroy";
   font-style: normal;
@@ -80,8 +81,110 @@ span.detail-v3 {
     justify-content: center;
   }
 }
+
+.container-v3 {
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .container-v3 {
+    padding: 0px 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-v3 {
+    padding: 0px 20px;
+  }
+}
+.max-width-1180 {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
 /*
 * ======================End Core CSS======================
+*/
+
+/*
+* ======================Begin Button Group CSS======================
+*/
+.btn-group {
+  margin: 32px 0;
+  .advise-now-btn,
+  .learn-more-btn {
+    height: 40px;
+    padding: 8px 28px;
+  }
+
+  .advise-now-btn {
+    margin-right: 34px;
+
+    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    border-radius: 68px;
+    border: none;
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
+  .learn-more-btn {
+    border-radius: 68px;
+
+    border: 2px solid transparent;
+    background: linear-gradient(to right, white, white),
+      linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .btn-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .advise-now-btn {
+      margin-right: 0;
+    }
+  }
+}
+
+//   .advise-now-btn span,
+//   .learn-more-btn span {
+//     font-size: 12px !important;
+//   }
+// }
+
+// @media only screen and (max-width: 390px) {
+//   .btn-group {
+//     display: block !important;
+//   }
+
+//   .advise-now-btn,
+//   .learn-more-btn {
+//     width: 100% !important;
+//     margin-top: 10px;
+//   }
+// }
+// =======End Responsive=======
+/*
+* ======================End Button Group CSS======================
 */
 
 /*
@@ -122,6 +225,8 @@ span.detail-v3 {
     margin-top: 16px;
   }
 }
+
+// =======Begin Responsive=======
 @media only screen and (max-width: 576px) {
   .row-line-center {
     .title-eng-line-center,
@@ -140,14 +245,14 @@ span.detail-v3 {
     }
   }
 }
+// =======End Responsive=======
 /*
 * ======================End CSS Row Center======================
 */
 
 /* 
-* ======================Begin Header Page======================
+* 1.======================Begin Header Page======================
 */
-
 .home-page-v3 {
   margin-top: 80px;
   // =======Begin Custom swiper=======
@@ -168,12 +273,15 @@ span.detail-v3 {
   }
   // =======End Custom swiper=======
 }
+
 .bg-img {
   width: 100%;
 }
+
 .home-page-tag {
   background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
 }
+
 .group-contact-header {
   display: flex;
   align-items: center;
@@ -198,6 +306,7 @@ span.detail-v3 {
 .group-service-tag {
   padding: 40px 0;
 }
+
 .card-sub-tag {
   border: 2px solid #ffffff;
   border-radius: 16px;
@@ -221,6 +330,7 @@ span.detail-v3 {
     color: #ffffff;
   }
 }
+
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .home-page-v3 .swiper-horizontal > .swiper-pagination-bullets,
@@ -274,13 +384,12 @@ span.detail-v3 {
   }
 }
 // =======End Responsive=======
-
 /* 
 * ======================End Header Page======================
 */
 
 /* 
-* ======================Begin Section Solution======================
+* 2.======================Begin Section Solution======================
 */
 .section-solution {
   padding-top: 100px;
@@ -380,6 +489,7 @@ span.detail-v3 {
     }
   }
 }
+
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .section-solution {
@@ -424,7 +534,7 @@ span.detail-v3 {
     }
 
     .section-solution-sliving {
-      padding-top: 0;
+      padding-top: 40px;
       background-color: #ffffff !important;
       .solution-sliving-img {
         display: none;
@@ -437,17 +547,17 @@ span.detail-v3 {
   }
 }
 // =======End Responsive=======
-
 /* 
 * ======================End Section Solution======================
 */
 
 /* 
-* ======================Begin Section Product======================
+* 3.======================Begin Section Product======================
 */
 .section-product-v3 {
   padding-top: 120px;
 }
+
 .card-product {
   padding-top: 60px;
   img {
@@ -509,7 +619,8 @@ span.detail-v3 {
       display: none;
     }
     .card-product-img-mobile {
-      display: block !important;
+      display: flex !important;
+      justify-content: center;
     }
     .card-product-subtitle {
       padding-bottom: 12px;
@@ -519,6 +630,7 @@ span.detail-v3 {
     }
   }
 }
+
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .section-product-v3 {
@@ -541,11 +653,14 @@ span.detail-v3 {
 */
 
 /* 
-* ======================Begin Section Smart Parking======================
+* 4.======================Begin Section Smart Parking======================
 */
 .bg-ground-smart-parking {
   border: 1px solid #e1e3e6;
   padding: 60px 0;
+  .smart-parking-cards {
+    margin-top: 32px;
+  }
   .smart-parking-group-img {
     margin: 0 auto;
     margin-top: 60px;
@@ -554,11 +669,11 @@ span.detail-v3 {
     display: none;
   }
   .smart-parking-title {
-    text-align: center;
     font-weight: 700;
     font-size: 28px;
     line-height: 32px;
     text-align: center;
+    text-transform: capitalize;
     color: #0979fd;
     margin-top: 36px;
   }
@@ -575,7 +690,7 @@ span.detail-v3 {
 
   .smart-parking-card {
     text-align: center;
-    margin-top: 32px;
+    // margin-top: 32px;
     .smart-parking-card-top {
       height: 100px;
     }
@@ -591,34 +706,44 @@ span.detail-v3 {
       margin-top: 25px;
     }
   }
-  .btn-group {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-  }
+  // .btn-group {
+  //   display: flex;
+  //   justify-content: center;
+  //   margin-bottom: 0;
+  // }
 }
+// =======Begin Responsive=======
 @media only screen and (max-width: 768px) {
+  .bg-ground-smart-parking {
+    padding: 40px 0;
+  }
   .smart-parking-card-col {
     border-bottom: 1px solid #e1e3e6;
   }
   .bg-ground-smart-parking {
     border: none;
+
     .smart-parking-group-img {
       display: none;
     }
+
     .smart-parking-group-img-mobile {
       display: block !important;
     }
+
     .smart-parking-title {
       font-size: 21px;
       margin-top: 32px;
     }
+
     .smart-parking-des {
       text-align: justify;
     }
+
     .smart-parking-card {
       display: flex;
       align-items: center;
+
       .smart-parking-card-top {
         height: 100px;
         width: 100px;
@@ -627,6 +752,7 @@ span.detail-v3 {
         justify-content: center;
         align-items: center;
       }
+
       .smart-parking-card-title {
         text-align: start;
         margin-top: 0;
@@ -634,32 +760,117 @@ span.detail-v3 {
     }
   }
 }
-
+// =======End Responsive=======
 /* 
 * ======================End Section Smart Parking======================
 */
 
-//---------------------------------------------------------------Begin Section Help More-------------------------------------------------
-.container-v3 {
-  padding: 0 20px;
-}
-@media only screen and (max-width: 1240px) {
-  .container-v3 {
-    padding: 0px 40px;
+/* 
+* 5.======================Begin Section Smart Lighting======================
+*/
+.bg-ground-smart-lighting {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  .smart-lighting-row {
+    margin-top: 60px;
+  }
+  .smart-lighting-des {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    color: #454647;
+  }
+
+  .smart-lighting-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #454647;
+  }
+
+  .smart-lighting-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    .smart-lighting-card {
+      max-width: 100px;
+
+      .smart-lighting-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+      }
+
+      .smart-lighting-bottom {
+        .smart-lighting-content {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          color: #454647;
+          padding: 8px 8px 0px;
+        }
+      }
+    }
+    .smart-lighting-icon {
+      height: 100px;
+      width: 100px;
+
+      .smart-lighting-img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .smart-lighting-img-right {
+    min-height: 625px;
   }
 }
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .bg-ground-smart-lighting {
+    padding: 40px 0;
+    background: #f3f9ff;
 
-@media only screen and (max-width: 768px) {
-  .container-v3 {
-    padding: 0px 20px;
+    .smart-lighting-row {
+      margin-top: 32px;
+      flex-direction: column-reverse;
+    }
+    .smart-lighting-group {
+      margin-bottom: 0;
+    }
+    .smart-lighting-img-right,
+    .smart-lighting-img-left,
+    .smart-lighting-des-desktop {
+      display: none;
+    }
+
+    .smart-lighting-img-left-mobile,
+    .smart-lighting-des-mobile {
+      display: block !important;
+    }
+
+    .smart-lighting-img-left-mobile {
+      padding: 32px 0;
+    }
   }
 }
-.max-width-1180 {
-  max-width: 1180px;
-  margin: 0 auto;
-  width: 100%;
-}
+// =======End Responsive=======
+/* 
+* ======================End Section Smart Lighting======================
+*/
 
+/* 
+* ======================Begin Section Help More======================
+*/
 .help-more-container {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -710,8 +921,9 @@ span.detail-v3 {
   margin: auto;
   padding-bottom: 34px;
 }
-
-//---------------------------------------------------------------End Section Help More-------------------------------------------------
+/* 
+* ======================End Section Help More======================
+*/
 
 //---------------------------------------------------------------Begin Section Feature Project-------------------------------------------------
 .bg-ground-feature-project {
@@ -852,200 +1064,3 @@ span.detail-v3 {
   }
 }
 //---------------------------------------------------------------End Section Feature Project-------------------------------------------------
-
-.bg-ground-smart-lighting {
-  padding-top: 60px;
-  padding-bottom: 120px;
-  .smart-lighting-row {
-    margin-top: 60px;
-  }
-  .smart-lighting-des {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: justify;
-    color: #454647;
-  }
-
-  .smart-lighting-title {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #454647;
-  }
-
-  .smart-lighting-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-
-    .smart-lighting-card {
-      max-width: 100px;
-
-      .smart-lighting-top {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: 100px;
-      }
-
-      .smart-lighting-bottom {
-        .smart-lighting-content {
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 24px;
-          text-align: center;
-          color: #454647;
-          padding: 8px 8px 0px;
-        }
-      }
-    }
-    .smart-lighting-icon {
-      height: 100px;
-      width: 100px;
-
-      .smart-lighting-img {
-        margin: 0 auto;
-      }
-    }
-  }
-
-  .smart-lighting-img-right {
-    min-height: 625px;
-  }
-}
-
-.btn-group {
-  margin: 32px 0;
-  .advise-now-btn {
-    margin-right: 34px;
-    padding: 8px 34px;
-    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-    border-radius: 68px;
-    border: none;
-    width: 184px;
-    height: 40px;
-    span {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      color: #ffffff;
-    }
-  }
-  .learn-more-btn {
-    border-radius: 68px;
-    padding: 8px 34px;
-    border: 2px solid transparent;
-    background: linear-gradient(to right, white, white),
-      linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-
-    span {
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-}
-@media only screen and (max-width: 460px) {
-  .advise-now-btn {
-    width: auto !important;
-  }
-  .advise-now-btn span,
-  .learn-more-btn span {
-    font-size: 12px !important;
-  }
-}
-@media only screen and (max-width: 390px) {
-  .btn-group {
-    display: block !important;
-  }
-  .advise-now-btn,
-  .learn-more-btn {
-    width: 100% !important;
-    margin-top: 10px;
-  }
-}
-
-h4.title-card {
-  font-family: "SVN-Gilroy";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
-
-  /* Light mode/Gray/gray_800 */
-
-  color: #2c2d2e;
-}
-/* 
-* 2. Section Solution
-*/
-.section-solution {
-  padding-top: 100px;
-  background-color: #f2f6ff;
-  ul {
-    list-style-type: none;
-    padding: 0;
-
-    li {
-      &::marker {
-        display: none;
-      }
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      column-gap: 14px;
-      row-gap: 4px;
-      font-family: "SVN Gilroy";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 150%;
-      color: #454647;
-      margin-bottom: 14px;
-      &::before {
-        content: "";
-        background-image: url("../../images/icon/icon-done-check.svg");
-        width: 24px;
-        height: 24px;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
-  }
-
-  ul.list-flex-auto {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 78px;
-    .flex-auto-item {
-      width: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 0px 12px;
-    }
-  }
-
-  .section-solution-about {
-    padding-bottom: 50px;
-  }
-  .section-solution-sliving {
-    padding-bottom: 60px;
-  }
-}

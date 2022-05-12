@@ -36,7 +36,7 @@ function SectionSmartParking() {
         <Row className="row-line-center ">
           <span className="title-eng-line-center">SMART PARKING</span>
           <h1 className="title-line-center">
-            Giải Pháp Trạm Gửi Xe Thông Minh
+            Giải Pháp Quản Lý Bãi Đỗ Xe Thông Minh
           </h1>
           <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -59,7 +59,7 @@ function SectionSmartParking() {
 
         <Row lg={4} md={4} xs={1} className="smart-parking-cards">
           {listItemCard.map((itemCard) => (
-            <Col className="gx-5 gy-3 smart-parking-card-col">
+            <Col className="gx-5 smart-parking-card-col">
               <div className="smart-parking-card">
                 <div className="smart-parking-card-top">
                   <Image
