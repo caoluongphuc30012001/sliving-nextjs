@@ -885,7 +885,7 @@ p.factory-bottom-left-content {
 @media (max-width: 1200px) {
   .factory-bottom-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     .factory-bottom-left-content {
       max-width: 100%;
