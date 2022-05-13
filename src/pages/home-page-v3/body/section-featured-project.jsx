@@ -6,6 +6,13 @@ import imgFeature2 from "@images/home-page-v3/png/feature-2.png";
 import imgFeature3 from "@images/home-page-v3/png/feature-3.png";
 import imgFeature4 from "@images/home-page-v3/png/feature-4.png";
 import imgFeature5 from "@images/home-page-v3/png/feature-5.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Pagination } from "swiper";
 
 function SectionFeaturedProject() {
   const [solutionTable, setSolutionTable] = React.useState(1);
@@ -54,7 +61,7 @@ function SectionFeaturedProject() {
   ];
   return (
     <section className="bg-ground-feature-project">
-      <div className="max-width-1180 container-v3 feature-project-container">
+      <div className="container-v3 feature-project-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">FEATURED PROJECT</span>
           <h2 className="title-line-center">Dự Án Thực Tế Nổi Bật Nhất</h2>
@@ -85,6 +92,34 @@ function SectionFeaturedProject() {
           ))}
         </div>
       </div>
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={20}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        modules={[Pagination]}
+        className="mySwiper options-mobile d-none"
+      >
+        {listItemCard.map((itemCard) => (
+          <SwiperSlide key={itemCard.id}>
+            <div
+              className="feature-card"
+              style={{ backgroundImage: `url(${itemCard.linkImg})` }}
+            >
+              <div className="shadow" />
+              <div className="label">
+                <div className="icon">
+                  <span className="number">0{itemCard.id}</span>
+                </div>
+                <div className="info">
+                  <div className="main">{itemCard.title}</div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 }
