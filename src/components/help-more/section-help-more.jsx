@@ -28,7 +28,7 @@ const SectionHelpMore = () => {
   ];
   return (
     <section className="bg-ground-help-more">
-      <div className="max-width-1180 container-v3 help-more-container">
+      <div className="container-v3 help-more-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">CONTACT US</span>
           <h2 className="title-line-center">Bạn Cần Sự Giúp Đỡ Nhiều Hơn?</h2>

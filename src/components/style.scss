@@ -45,7 +45,7 @@
 .is-active {
   font-weight: bold;
   text-decoration: underline;
-   background-color: #fff2ee;
+  background-color: #fff2ee;
 }
 #menu-mobile-wrap {
   position: fixed;
@@ -222,7 +222,8 @@
             padding: 15px 30px 15px 30px;
             list-style-type: none;
           }
-          div,li{
+          div,
+          li {
             &:hover {
               background-color: #fff2ee;
               border-bottom-left-radius: 4px;
@@ -396,10 +397,10 @@
   }
 }
 
-.row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
+// .row {
+//   margin-left: 0 !important;
+//   margin-right: 0 !important;
+// }
 
 .header-nav {
   background-color: #ffffff;
@@ -3149,7 +3150,7 @@ a.btn-link-a {
   }
   .footer-info-company {
     margin-top: 32px;
-    a{
+    a {
       color: #212121;
     }
   }
@@ -3502,14 +3503,14 @@ a.btn-link-a {
     margin: 16px;
   }
   .banner-desc {
-   p{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 131.25%;
-    text-align: center;
-    color: #d1e5f7;
-   }
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 131.25%;
+      text-align: center;
+      color: #d1e5f7;
+    }
   }
   .banner-icon {
     width: fit-content;

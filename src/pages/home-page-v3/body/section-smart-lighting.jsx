@@ -74,7 +74,7 @@ function SectionSmartLighting() {
               <button className="advise-now-btn">
                 <span>Tư vấn ngay</span>
               </button>
-              <button type="button" className="learn-more-btn">
+              <button className="learn-more-btn">
                 <span>Tìm hiểu thêm</span>
               </button>
             </div>
@@ -107,7 +107,7 @@ function SectionSmartLighting() {
             />
             <Image
               src={imgSmartLightingLeft}
-              className="smart-lighting-img-left-mobile d-none"
+              className="smart-lighting-img-left-mobile d-none w-100"
             />
           </Col>
         </Row>

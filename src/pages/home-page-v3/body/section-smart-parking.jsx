@@ -78,7 +78,7 @@ function SectionSmartParking() {
           <button className="advise-now-btn">
             <span>Tư vấn ngay</span>
           </button>
-          <button type="button" className="learn-more-btn">
+          <button className="learn-more-btn">
             <span>Tìm hiểu thêm</span>
           </button>
         </div>

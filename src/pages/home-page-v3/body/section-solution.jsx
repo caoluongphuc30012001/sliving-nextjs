@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Image } from "react-bootstrap";
 import styled from "styled-components";
 import imgRight from "@images/home-page-v3/img-solution-smart.png";
 import imgLeft from "@images/home-page-v3/img-smart-life.png";
@@ -13,6 +13,7 @@ import iconCurtain from "@images/icon/icon-curtain.svg";
 import imgAboutTop from "@images/home-page-v3/png/about-sliving-top.png";
 // import imgAboutBottom from "@images/home-page-v3/png/about-sliving-bottom.png";
 import imgSolution from "@images/home-page-v3/png/solution-sliving.png";
+import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
 export const Divider = styled("div")`
   width: 56px;
@@ -79,11 +80,16 @@ const SectionSolution = () => {
       <div className="container-v3 section-solution-about">
         <Row className="justify-content-around">
           <Col lg={6}>
-            <h5 className="detail-sub-v3 text-uppercase">ABOUT SLIVING</h5>
-            <h3 className="detail-v3">
-              Giải pháp Nhà thông minh hàng đầu Việt Nam
-            </h3>
-            <Divider />
+            <Row className="row-line-center">
+              <span className="title-eng-line-center">ABOUT SLIVING</span>
+              <h2 className="title-line-center">
+                Giải pháp Nhà thông minh hàng đầu Việt Nam
+              </h2>
+              <div className="img-line-center">
+                <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+              </div>
+            </Row>
+
             <img
               src={imgAboutTop}
               alt=""
@@ -123,11 +129,16 @@ const SectionSolution = () => {
             <img src={imgLeft} alt="" />
           </Col>
           <Col lg={6} className=" solution-sliving-col-right">
-            <h5 className="detail-sub-v3 text-uppercase">SOLUTION SLIVING</h5>
-            <h3 className="detail-v3">
-              Kiến tạo phong cách sống Hiện Đại Đẳng Cấp
-            </h3>
-            <Divider />
+            <Row className="row-line-center">
+              <span className="title-eng-line-center">SOLUTION SLIVING</span>
+              <h2 className="title-line-center">
+                Kiến tạo phong cách sống Hiện Đại Đẳng Cấp
+              </h2>
+              <div className="img-line-center">
+                <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+              </div>
+            </Row>
+
             <span className="detail-v3">
               Bộ sưu tập các Sản phẩm Nhà thông minh đặt riêng của Sliving được
               thiết kế để bổ sung một cách hiệu quả cho lối sống của bạn với sự

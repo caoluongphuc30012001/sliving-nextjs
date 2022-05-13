@@ -188,15 +188,15 @@ const SectionProduct = () => {
                       </div>
                     </li>
                   ))}
-                  <div className="btn-group">
-                    <button className="advise-now-btn">
-                      <span>Tư vấn ngay</span>
-                    </button>
-                    <button type="button" className="learn-more-btn">
-                      <span>Tìm hiểu thêm</span>
-                    </button>
-                  </div>
                 </ul>
+                <div className="btn-group">
+                  <button className="advise-now-btn">
+                    <span>Tư vấn ngay</span>
+                  </button>
+                  <button className="learn-more-btn">
+                    <span>Tìm hiểu thêm</span>
+                  </button>
+                </div>
               </Col>
             </Row>
           );
