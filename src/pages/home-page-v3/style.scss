@@ -287,7 +287,29 @@ span.detail-v3 {
   }
   // =======End Custom swiper=======
 }
-
+.mySwiper {
+  position: relative;
+  .view-360 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    button {
+      border-radius: 68px;
+      padding: 8px 24px;
+      background-color: transparent;
+      font-size: 12px;
+      color: #fff;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        margin-right: 16px;
+      }
+    }
+  }
+}
 .bg-img {
   width: 100%;
 }
@@ -358,6 +380,17 @@ span.detail-v3 {
     // padding-top: 20px;
     padding-bottom: 20px;
   }
+  .home-page-v3 {
+    .back-ground-mobile,
+    .back-ground-mobile {
+      display: block !important;
+    }
+    .back-ground-desktop,
+    .slider-desktop {
+      display: none !important;
+    }
+  }
+
   .group-contact-header {
     justify-content: center;
     img {
@@ -406,12 +439,12 @@ span.detail-v3 {
 * 2.======================Begin Section Solution======================
 */
 .section-solution {
-  padding-top: 100px;
+  padding-top: 120px;
   background-color: #f2f6ff;
   ul {
     list-style-type: none;
     padding: 0;
-
+    padding-top: 16px;
     li {
       &::marker {
         display: none;
@@ -440,7 +473,7 @@ span.detail-v3 {
   }
 
   .section-solution-about {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 
   .section-solution-sliving {
@@ -540,11 +573,12 @@ span.detail-v3 {
     .solution-about-img-mobile,
     .solution-about-cap {
       display: flex !important;
-      margin-top: 32px;
+      // padding-top: 32px;
       width: 100%;
     }
 
     .solution-about-cap {
+      margin-top: 32px;
       margin-bottom: 32px;
     }
 
@@ -559,7 +593,7 @@ span.detail-v3 {
     }
 
     .section-solution-sliving {
-      padding-top: 40px;
+      // padding-top: 40px;
       background-color: #ffffff !important;
       .solution-sliving-img {
         display: none;
@@ -580,7 +614,8 @@ span.detail-v3 {
 * 3.======================Begin Section Product======================
 */
 .section-product-v3 {
-  padding-top: 120px;
+  padding: 120px 0 60px;
+  background: #fff !important;
 }
 
 .card-product {
