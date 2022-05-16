@@ -153,6 +153,9 @@
 }
 
 .section-menu-top-mobile{
+    .logo{
+        position: static;
+    }
     width: 100%;
     position: fixed;
     background-color: white;
@@ -160,7 +163,7 @@
     .menu-top-container{
         width: 100%;
         .title-box{
-            padding:0 20px;
+            padding:0 20px; 
             width: 100%;
             height: 64px;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
