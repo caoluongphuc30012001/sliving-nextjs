@@ -38,7 +38,11 @@ img {
   margin: 0 auto;
   width: 100%;
 }
-
+// padding
+.padding-left-right {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 //---------------------------------------------------------------Begin Section Header-------------------------------------------------
 .about-us-background {
   position: fixed;
@@ -840,43 +844,39 @@ p.factory-bottom-left-content {
 
 //==========================Section Intro
 @media (max-width: 825px) {
-  .intro-content-container {
-    .intro-content-wrapper {
-      flex-direction: column;
-      width: 100%;
-      row-gap: 40px;
-    }
-    .intro-flex-revert {
-      flex-direction: column;
-    }
+  .intro-content-wrapper {
+    flex-direction: column;
+    width: 100%;
+    row-gap: 40px;
+  }
+  .intro-flex-revert {
+    flex-direction: column;
   }
 }
 //==========================Section Brand Story
 @media (max-width: 550px) {
-  .bg-section-brand-story {
-    .brand-story-container {
-      .title-line-center {
-        font-size: 28px;
-      }
-    }
+  .row-line-center > * {
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+  .title-line-center {
+    font-size: 28px;
   }
 }
 //==========================Section Custumer Centric
 @media (max-width: 1130px) {
-  .section-customer-centric {
-    .customer-centric-row {
-      display: flex;
-      row-gap: 32px;
-      flex-direction: column-reverse;
+  .customer-centric-row {
+    display: flex;
+    row-gap: 32px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    & > * {
+      width: 100% !important;
       align-items: center;
-      justify-content: center;
-      width: 100%;
-      & > * {
-        width: 100% !important;
-        align-items: center;
-        img {
-          width: 100%;
-        }
+      img {
+        width: 100%;
       }
     }
   }
@@ -925,6 +925,11 @@ p.factory-bottom-left-content {
         }
       }
     }
+  }
+}
+@media (max-width: 550px) {
+  .factory-top-content {
+    align-items: flex-start;
   }
 }
 
