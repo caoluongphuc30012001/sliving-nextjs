@@ -20,72 +20,96 @@ function SectionSmartParking() {
           </div>
           <Row className="gx-md-5 gy-md-5 gy-4 px-0">
             <Col md={6}>
-              <div className="div-wrapper-smart-parking">
-                <Row className="row-smart-parking-security gy-4">
-                  <Col md={4} lg={3} className="d-flex justify-content-center">
-                    <Image src={icon1} className="img-fluid" />
-                  </Col>
-                  <Col md={8} lg={9} className="">
-                    <h3 className="title-smart-parking-security">
-                      Smart Door Locks
-                    </h3>
-                    <p className="sub-title-smart-parking-security">
-                      Hệ Thống Khoá Cửa Thông Minh
-                    </p>
-                  </Col>
-                </Row>
-              </div>
+              <a href="#smart-door-locks">
+                <div className="div-wrapper-smart-parking">
+                  <Row className="row-smart-parking-security gy-4">
+                    <Col
+                      md={4}
+                      lg={3}
+                      className="d-flex justify-content-center"
+                    >
+                      <Image src={icon1} className="img-fluid" />
+                    </Col>
+                    <Col md={8} lg={9} className="">
+                      <h3 className="title-smart-parking-security">
+                        Smart Door Locks
+                      </h3>
+                      <p className="sub-title-smart-parking-security">
+                        Hệ Thống Khoá Cửa Thông Minh
+                      </p>
+                    </Col>
+                  </Row>
+                </div>
+              </a>
             </Col>
             <Col md={6}>
-              <div className="div-wrapper-smart-parking">
-                <Row className="row-smart-parking-security gy-4">
-                  <Col md={4} lg={3} className="d-flex justify-content-center">
-                    <Image src={icon2} className="img-fluid" />
-                  </Col>
-                  <Col md={8} lg={9} className="">
-                    <h3 className="title-smart-parking-security">
-                      SMART ELEVATOR
-                    </h3>
-                    <p className="sub-title-smart-parking-security">
-                      Hệ Thống Thang Máy Thông Minh
-                    </p>
-                  </Col>
-                </Row>
-              </div>
+              <a href="#smart-elevator">
+                <div className="div-wrapper-smart-parking">
+                  <Row className="row-smart-parking-security gy-4">
+                    <Col
+                      md={4}
+                      lg={3}
+                      className="d-flex justify-content-center"
+                    >
+                      <Image src={icon2} className="img-fluid" />
+                    </Col>
+                    <Col md={8} lg={9} className="">
+                      <h3 className="title-smart-parking-security">
+                        SMART ELEVATOR
+                      </h3>
+                      <p className="sub-title-smart-parking-security">
+                        Hệ Thống Thang Máy Thông Minh
+                      </p>
+                    </Col>
+                  </Row>
+                </div>
+              </a>
             </Col>
             <Col md={6}>
-              <div className="div-wrapper-smart-parking">
-                <Row className="row-smart-parking-security gy-4">
-                  <Col md={4} lg={3} className="d-flex justify-content-center">
-                    <Image src={icon3} className="img-fluid" />
-                  </Col>
-                  <Col md={8} lg={9} className="">
-                    <h3 className="title-smart-parking-security">
-                      SMART TURNSTILE
-                    </h3>
-                    <p className="sub-title-smart-parking-security">
-                      Hệ Thống Cửa Xoay Thông Minh
-                    </p>
-                  </Col>
-                </Row>
-              </div>
+              <a href="#smart-turnstile">
+                <div className="div-wrapper-smart-parking">
+                  <Row className="row-smart-parking-security gy-4">
+                    <Col
+                      md={4}
+                      lg={3}
+                      className="d-flex justify-content-center"
+                    >
+                      <Image src={icon3} className="img-fluid" />
+                    </Col>
+                    <Col md={8} lg={9} className="">
+                      <h3 className="title-smart-parking-security">
+                        SMART TURNSTILE
+                      </h3>
+                      <p className="sub-title-smart-parking-security">
+                        Hệ Thống Cửa Xoay Thông Minh
+                      </p>
+                    </Col>
+                  </Row>
+                </div>
+              </a>
             </Col>
             <Col md={6}>
-              <div className="div-wrapper-smart-parking">
-                <Row className="row-smart-parking-security gy-4">
-                  <Col md={4} lg={3} className="d-flex justify-content-center">
-                    <Image src={icon4} className="img-fluid" />
-                  </Col>
-                  <Col md={8} lg={9} className="">
-                    <h3 className="title-smart-parking-security">
-                      FACE ID TIME ATTENDANCE
-                    </h3>
-                    <p className="sub-title-smart-parking-security">
-                      Hệ Thống Chấm Công Bằng Khuôn Mặt
-                    </p>
-                  </Col>
-                </Row>
-              </div>
+              <a href="#face-id-attendance">
+                <div className="div-wrapper-smart-parking">
+                  <Row className="row-smart-parking-security gy-4">
+                    <Col
+                      md={4}
+                      lg={3}
+                      className="d-flex justify-content-center"
+                    >
+                      <Image src={icon4} className="img-fluid" />
+                    </Col>
+                    <Col md={8} lg={9} className="">
+                      <h3 className="title-smart-parking-security">
+                        FACE ID TIME ATTENDANCE
+                      </h3>
+                      <p className="sub-title-smart-parking-security">
+                        Hệ Thống Chấm Công Bằng Khuôn Mặt
+                      </p>
+                    </Col>
+                  </Row>
+                </div>
+              </a>
             </Col>
           </Row>
         </Row>

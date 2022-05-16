@@ -5,7 +5,7 @@ import iconV from "../../../images/smart-security-v3/icon-tick-v-smart-security.
 
 function SectionSmartElevator() {
   return (
-    <section className="bg-smart-door-locks">
+    <section className="bg-smart-door-locks" id="smart-elevator">
       <Container className="max-width-1180 px-0">
         <Row className="padding-left-right-smart-door">
           <h3 className="sub-title-smart-secuirity">SMART ELEVATOR</h3>
