@@ -84,9 +84,9 @@ function SectionSmartLighting() {
             />
           </Col>
           <Col lg={5} md={12} className="">
-            <div className="smart-lighting-group">
+            <Row className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
-                <div className="smart-lighting-card" key={itemCard.id}>
+                <Col className="smart-lighting-card" key={itemCard.id}>
                   <div className="smart-lighting-top">
                     <Image
                       src={itemCard.linkImg}
@@ -98,9 +98,9 @@ function SectionSmartLighting() {
                       {itemCard.title}
                     </span>
                   </div>
-                </div>
+                </Col>
               ))}
-            </div>
+            </Row>
             <Image
               src={imgSmartLightingRight}
               className="smart-lighting-img-right"
