@@ -64,7 +64,6 @@ const SectionHeader = () => {
       <div className="home-page-tag">
         <div className="container-v3">
           <Row
-            noGutters={true}
             className="d-flex justify-content-center align-items-center"
           >
             <Col lg={3}>
@@ -81,7 +80,7 @@ const SectionHeader = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={9} noGutters={true}>
+            <Col lg={9}>
               <Row className="group-service-tag" md={3}>
                 {arrService.map((service) => (
                   <Col key={service.id} className="gx-4 card-sub-tag-col">

@@ -11,17 +11,17 @@ const MenuTopSmartHome = () => {
                 {
                     id:0,
                     nameRoute: "SMART LIGHTING",
-                    href:"/"
+                    href:"/smart-lighting-v3"
                 },
                 {
                     id:1,
                     nameRoute:"SMART PARKING",
-                    href:"/#"
+                    href:"/smart-parking-v3"
                 },
                 {
                     id:2,
                     nameRoute:"SMART SECURITY",
-                    href:"/#"
+                    href:"/smart-security-v3"
                 },
             ]
         },
@@ -39,7 +39,7 @@ const MenuTopSmartHome = () => {
         {
             id:3,
             nameRoute: "LIÊN HỆ",
-            href:"/#"
+            href:"/home-page-v3"
         },
 
     ];

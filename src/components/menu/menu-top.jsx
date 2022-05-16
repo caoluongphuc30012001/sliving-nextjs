@@ -1,6 +1,7 @@
 import React from "react";
 import search from "../../images/smart-home-v3/svg/search.svg";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
+import { Link } from "gatsby";
 import './style.scss'
 const MenuTop = ({ logo, listRoute }) => {
   return (
@@ -23,17 +24,21 @@ const MenuTop = ({ logo, listRoute }) => {
                 <div className="drop-box">
                   {item.listRoute.map((item) => {
                     return (
-                      <div key={item.id} className="item-select">
-                        {item.nameRoute}
-                      </div>
+                      <Link to={item.href} key={item.id}>
+                        <div className="item-select">
+                          {item.nameRoute}
+                        </div>
+                      </Link>
                     );
                   })}
                 </div>
               </div>
             ) : (
-              <div className={`item-menu ${item.active ? "active" : ""}`} key={item.id}>
-                {item.nameRoute}
-              </div>
+              <Link to={item.href} key={item.id}>
+                <div className={`item-menu ${item.active ? "active" : ""}`}>
+                  {item.nameRoute}
+                </div>
+              </Link>
             );
           })}
         </div>

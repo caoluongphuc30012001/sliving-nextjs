@@ -59,7 +59,9 @@ function SectionSmartParking() {
 
         <Row lg={4} md={4} xs={1} className="smart-parking-cards">
           {listItemCard.map((itemCard) => (
-            <Col className="gx-5 smart-parking-card-col">
+            <Col className="gx-5 smart-parking-card-col"
+              key={itemCard.id}
+            >
               <div className="smart-parking-card">
                 <div className="smart-parking-card-top">
                   <Image

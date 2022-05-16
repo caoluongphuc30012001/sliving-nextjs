@@ -164,7 +164,7 @@ const SectionProduct = () => {
                 <h3 className="card-product-title">{smart.title}</h3>
                 <h4 className="card-product-subtitle">{smart.subTitle}</h4>
                 <div className="card-product-img-mobile d-none">
-                  <img src={smart.image} alt="" class="float-none" />
+                  <img src={smart.image} alt="" className="float-none" />
                 </div>
                 <ul className="card-product-content">
                   {smart.listItem.map((item) => (

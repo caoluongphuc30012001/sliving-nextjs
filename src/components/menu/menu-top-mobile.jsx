@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import menuIcon from "../../images/smart-home-v3/png/menu-icon.png";
 import close from "../../images/smart-home-v3/png/close.png";
+import {Link} from 'gatsby'
 import "./style.scss";
 const MenuTopMobile = ({ logo, listRoute }) => {
   const [mobile, setMobile] = useState(true);
@@ -20,6 +21,7 @@ const MenuTopMobile = ({ logo, listRoute }) => {
               onClick={() => {
                 setMobile(!mobile);
               }}
+              onKeyDown={()=>{}}
             />
           )}
           {!mobile && (
@@ -30,6 +32,7 @@ const MenuTopMobile = ({ logo, listRoute }) => {
               onClick={() => {
                 setMobile(!mobile);
               }}
+              onKeyDown={()=>{}}
             />
           )}
         </div>
@@ -49,20 +52,21 @@ const MenuTopMobile = ({ logo, listRoute }) => {
                 <div className="drop-box">
                   {item.listRoute.map((item) => {
                     return (
-                      <div key={item.id} className="item-select">
-                        {item.nameRoute}
-                      </div>
+                      <Link to={item.href} key={item.id}>
+                        <div className="item-select">
+                          {item.nameRoute}
+                        </div>
+                      </Link>
                     );
                   })}
                 </div>
               </div>
             ) : (
-              <div
-                className={`item-menu ${item.active ? "active" : ""}`}
-                key={item.id}
-              >
-                {item.nameRoute}
-              </div>
+              <Link to={item.href} key={item.id}>
+                <div className={`item-menu ${item.active ? "active" : ""}`}>
+                  {item.nameRoute}
+                </div>
+              </Link>
             );
           })}
         </div>
