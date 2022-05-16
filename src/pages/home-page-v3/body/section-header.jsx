@@ -4,6 +4,9 @@ import iconSettings from "@images/icon/icon-setting.svg";
 import iconSupport from "@images/icon/icon-support.svg";
 import imgBg from "@images/home-page-v3/bg-home-page.png";
 import imgBg2 from "@images/home-page-v3/bg-home-page2.png";
+import imgBgMobile from "@images/home-page-v3/bg-home-page-mobile.png";
+import imgBgMobile2 from "@images/home-page-v3/bg-home-page2-mobile.png";
+import iconEarth from "@images/home-page-v3/svg/icon-earth.svg";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 // Import Swiper React components
@@ -36,6 +39,14 @@ const SectionHeader = () => {
       icon: icon24Line,
     },
   ];
+  const imgBackground = [
+    { id: 0, imgUrl: imgBg },
+    { id: 1, imgUrl: imgBg2 },
+  ];
+  const imgBackgroundMobile = [
+    { id: 0, imgUrl: imgBgMobile },
+    { id: 1, imgUrl: imgBgMobile2 },
+  ];
 
   return (
     <header className="home-page-v3">
@@ -48,25 +59,54 @@ const SectionHeader = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper slider-desktop"
       >
-        <SwiperSlide>
-          <div>
-            <img src={imgBg} alt="" className="bg-img" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <img src={imgBg2} alt="" className="bg-img" />
-          </div>
-        </SwiperSlide>
+        {imgBackground.map((item) => (
+          <SwiperSlide key={item.id} className="back-ground-desktop">
+            <div className="view-360">
+              <button>
+                <span>
+                  Xem 360 <sup>0</sup>
+                </span>
+                <img src={iconEarth} alt="" />
+              </button>
+            </div>
+            <img src={item.imgUrl} alt="" className="bg-img" />
+          </SwiperSlide>
+        ))}
       </Swiper>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper slider-mobile"
+      >
+        {imgBackgroundMobile.map((item) => (
+          <SwiperSlide key={item.id} className="back-ground-mobile d-none">
+            <div className="view-360">
+              <button>
+                <span>
+                  Xem 360 <sup>0</sup>
+                </span>
+                <img src={iconEarth} alt="" />
+              </button>
+            </div>
+            <img src={item.imgUrl} alt="" className="bg-img" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
       <div className="home-page-tag">
         <div className="container-v3">
           <Row
             className="d-flex justify-content-center align-items-center"
           >
-            <Col lg={3}>
+            <Col lg={3} className="gy-3">
               <div className="group-contact-header">
                 <img
                   src={iconPhone}
@@ -80,7 +120,7 @@ const SectionHeader = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={9}>
+            <Col lg={9} className="gy-3">
               <Row className="group-service-tag" md={3}>
                 {arrService.map((service) => (
                   <Col key={service.id} className="gx-4 card-sub-tag-col">

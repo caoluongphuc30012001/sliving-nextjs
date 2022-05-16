@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import iconCheckOutline from "@images/icon/icon-check-circle-outline.svg";
 import imgCurtain from "@images/home-page-v3/img-curtain.png";
-import imgSwitch from "@images/home-page-v3/img-switch.png";
+import imgSwitch from "@images/home-page-v3/img-abc.png";
 import imgApp from "@images/home-page-v3/img-app.png";
 import imgTouch from "@images/home-page-v3/img-touch.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
@@ -158,7 +158,12 @@ const SectionProduct = () => {
               } `}
             >
               <Col lg={7}>
-                <img src={smart.image} alt="" className="card-product-img" />
+                <img
+                  src={smart.image}
+                  alt=""
+                  className="card-product-img"
+                  style={{ float: `${smart.id % 2 === 0 ? "left" : "right"}` }}
+                />
               </Col>
               <Col lg={5}>
                 <h3 className="card-product-title">{smart.title}</h3>
@@ -188,15 +193,15 @@ const SectionProduct = () => {
                       </div>
                     </li>
                   ))}
-                  <div className="btn-group">
-                    <button className="advise-now-btn">
-                      <span>Tư vấn ngay</span>
-                    </button>
-                    <button type="button" className="learn-more-btn">
-                      <span>Tìm hiểu thêm</span>
-                    </button>
-                  </div>
                 </ul>
+                <div className="btn-group">
+                  <button className="advise-now-btn">
+                    <span>Tư vấn ngay</span>
+                  </button>
+                  <button className="learn-more-btn">
+                    <span>Tìm hiểu thêm</span>
+                  </button>
+                </div>
               </Col>
             </Row>
           );

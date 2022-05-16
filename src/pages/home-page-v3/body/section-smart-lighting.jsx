@@ -74,7 +74,7 @@ function SectionSmartLighting() {
               <button className="advise-now-btn">
                 <span>Tư vấn ngay</span>
               </button>
-              <button type="button" className="learn-more-btn">
+              <button className="learn-more-btn">
                 <span>Tìm hiểu thêm</span>
               </button>
             </div>
@@ -84,9 +84,9 @@ function SectionSmartLighting() {
             />
           </Col>
           <Col lg={5} md={12} className="">
-            <div className="smart-lighting-group">
+            <Row className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
-                <div className="smart-lighting-card" key={itemCard.id}>
+                <Col className="smart-lighting-card" key={itemCard.id}>
                   <div className="smart-lighting-top">
                     <Image
                       src={itemCard.linkImg}
@@ -98,16 +98,16 @@ function SectionSmartLighting() {
                       {itemCard.title}
                     </span>
                   </div>
-                </div>
+                </Col>
               ))}
-            </div>
+            </Row>
             <Image
               src={imgSmartLightingRight}
               className="smart-lighting-img-right"
             />
             <Image
               src={imgSmartLightingLeft}
-              className="smart-lighting-img-left-mobile d-none"
+              className="smart-lighting-img-left-mobile d-none w-100"
             />
           </Col>
         </Row>
