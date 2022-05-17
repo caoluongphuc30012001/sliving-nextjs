@@ -14,7 +14,11 @@ import "swiper/css/pagination";
 // import required modules
 import "swiper/css/navigation";
 import { Pagination, Navigation, EffectCoverflow } from "swiper";
+// swiper bundle styles
+import "swiper/css/bundle";
 
+// swiper core styles
+import "swiper/css";
 // import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
 import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
 
@@ -242,52 +246,51 @@ const SectionSmartFactory = () => {
           </div>
         </div>
       </div>
-      <div className="smart-factory-swiper-container">
-        <div className="smart-factory-slider-wrapper">
-          <div className="smart-factory-slider">
-            <Swiper
-              onSwiper={setSwip}
-              onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
-              effect={"coverflow"}
-              grabCursor={true}
-              slidesPerView={5}
-              //spaceBetween={40}
-              centeredSlides={true}
-              loop={true}
-              navigation={{
-                nextEl: ".button-next-slider",
-                prevEl: ".button-prev-slider",
-              }}
-              modules={[Pagination, Navigation, EffectCoverflow]}
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 0,
-                modifier: 1,
-                slideShadows: false,
-              }}
-            >
-              {listSlide.map((slide) => (
-                <SwiperSlide
-                  key={slide.id}
-                  className="swiper-smart-factory-img"
-                >
-                  <div className="swiper-item-wrap">
-                    <div className="swiper-item-bottom-line" />
-                    <div className="item-wrap">
-                      <img src={slide.img} alt="" />
-                    </div>
+      <div className="swiper-wrapper-container">
+        <div className="smart-factory-swiper-container">
+          <Swiper
+            onSwiper={setSwip}
+            onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
+            effect={"coverflow"}
+            grabCursor={true}
+            slidesPerView={1}
+            //spaceBetween={40}
+            centeredSlides={true}
+            loop={true}
+            navigation={{
+              nextEl: ".button-next-slider",
+              prevEl: ".button-prev-slider",
+            }}
+            breakpoints={{
+              400: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              1000: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+              },
+            }}
+            modules={[Pagination, Navigation, EffectCoverflow]}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 0,
+              modifier: 1,
+              slideShadows: false,
+            }}
+          >
+            {listSlide.map((slide) => (
+              <SwiperSlide key={slide.id} className="swiper-smart-factory-img">
+                <div className="swiper-item-wrap">
+                  <div className="item-wrap">
+                    <img src={slide.img} alt="" />
                   </div>
-                  <div className="item-border"></div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-          <div className="nav-swiper-box">
-            <img src={arrowLeft} alt="" className="button-prev-slider" />
-            <p className="page-current">{`${current}/${listSlide.length}`}</p>
-            <img src={arrowRight} alt="" className="button-next-slider" />
-          </div>
+                  <div className="swiper-item-bottom-line" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>
