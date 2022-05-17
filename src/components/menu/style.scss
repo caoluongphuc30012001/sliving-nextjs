@@ -250,10 +250,21 @@
     .section-menu-top-mobile{
         display: none;
     }
+    
+    #smart_lighting_page{
+        .section-smart-lighting-header{
+            margin-top: 90px;
+        }
+    }
 }
 @media(max-width:1000px){
     #smart_home_page{
         .section-product-slider{
+            margin-top: 64px;
+        }
+    }
+    #smart_lighting_page{
+        .section-smart-lighting-header{
             margin-top: 64px;
         }
     }
