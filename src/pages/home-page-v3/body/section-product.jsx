@@ -139,7 +139,7 @@ const SectionProduct = () => {
 
   return (
     <section className="section-product-v3">
-      <div className="container-v3">
+      <div className="container-1220">
         <Row className="row-line-center">
           <span className="title-eng-line-center">ABOUT SLIVING</span>
           <h2 className="title-line-center">Sản Phẩm Smart Home</h2>
@@ -157,7 +157,7 @@ const SectionProduct = () => {
                   : "card-product flex-row-reverse"
               } `}
             >
-              <Col lg={7}>
+              <Col lg={7} className="px-0">
                 <img
                   src={smart.image}
                   alt=""
@@ -165,7 +165,7 @@ const SectionProduct = () => {
                   style={{ float: `${smart.id % 2 === 0 ? "left" : "right"}` }}
                 />
               </Col>
-              <Col lg={5}>
+              <Col lg={5} className="px-0">
                 <h3 className="card-product-title">{smart.title}</h3>
                 <h4 className="card-product-subtitle">{smart.subTitle}</h4>
                 <div className="card-product-img-mobile d-none">

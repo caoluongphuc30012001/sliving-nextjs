@@ -403,9 +403,7 @@ span.detail-v3 {
 }
 // ======================End Header Page=====================
 
-/* 
-* 2.======================Begin Section Solution======================
-*/
+// ======================Begin Section Solution======================
 .section-solution {
   .row-line-center {
     text-align: start !important;
@@ -568,19 +566,13 @@ span.detail-v3 {
 
   // =======End Responsive=======
 }
+// ======================End Section Solution======================
 
-/* 
-* ======================End Section Solution======================
-*/
-
-/* 
-* 3.======================Begin Section Product======================
-*/
+// ======================Begin Section Product======================
 .section-product-v3 {
   padding: 120px 0 60px;
   background: #fff !important;
 }
-
 .card-product {
   padding-top: 60px;
   img {
@@ -632,11 +624,10 @@ span.detail-v3 {
     }
   }
 }
-
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .section-product-v3 {
-    background: #f3f9ff;
+    background: #f3f9ff !important;
     padding-top: 40px;
 
     .card-product-item {
@@ -672,9 +663,7 @@ span.detail-v3 {
   }
 }
 // =======End Responsive=======
-/* 
-* ======================End Section Product======================
-*/
+// ======================End Section Product======================
 
 /* 
 * 4.======================Begin Section Smart Parking======================
