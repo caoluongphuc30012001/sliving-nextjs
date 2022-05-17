@@ -89,7 +89,7 @@ span.detail-v3 {
 
 .m-left-right-12 {
   margin-left: -12px !important;
-  margin-right: 12px !important;
+  margin-right: -12px !important;
 }
 // ======================End Core CSS======================
 
@@ -572,58 +572,59 @@ span.detail-v3 {
 .section-product-v3 {
   padding: 120px 0 60px;
   background: #fff !important;
-}
-.card-product {
-  padding-top: 60px;
-  img {
-    float: right;
-  }
-  .card-product-title {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-    color: #0979fd;
-  }
-  .card-product-subtitle {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 32px;
-    color: #454647;
-    padding-top: 4px;
-  }
-  .card-product-content {
-    padding: 0;
-    margin: 0;
-  }
-  .card-product-item {
-    list-style: none;
-    padding-top: 32px;
-
-    .card-product-item-title {
+  .card-product {
+    padding-top: 60px;
+    img {
+      float: right;
+    }
+    .card-product-title {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      padding-left: 10px;
-      color: #2c2d2e;
+      font-size: 28px;
+      line-height: 32px;
+      color: #0979fd;
     }
-
-    .card-product-item-des {
+    .card-product-subtitle {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      padding-top: 16px;
+      font-size: 21px;
+      line-height: 32px;
       color: #454647;
+      padding-top: 4px;
+    }
+    .card-product-content {
+      padding: 0;
+      margin: 0;
+    }
+    .card-product-item {
+      list-style: none;
+      padding-top: 32px;
+
+      .card-product-item-title {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 10px;
+        color: #2c2d2e;
+      }
+
+      .card-product-item-des {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        padding-top: 16px;
+        color: #454647;
+      }
     }
   }
 }
+
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .section-product-v3 {
@@ -662,6 +663,10 @@ span.detail-v3 {
     }
     .card-product:not(:last-child) {
       border-bottom: 1px solid #e1e3e6;
+    }
+    .btn-group {
+      width: 100%;
+      justify-content: space-between;
     }
   }
 }
@@ -1144,7 +1149,6 @@ span.detail-v3 {
     }
   }
 }
-
 // ======================End Section Feature Project======================
 
 /* 

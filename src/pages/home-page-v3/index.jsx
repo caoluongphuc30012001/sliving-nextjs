@@ -30,7 +30,7 @@ const IndexPage = () => {
         <SectionSmartParking />
         <SectionSmartLighting />
         <SectionFeaturedProject />
-        {/* <SectionHelpMore /> */}
+        <SectionHelpMore />
       </main>
     </>
   );
