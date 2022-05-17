@@ -108,7 +108,7 @@ const SectionProduct = () => {
     },
     {
       id: 3,
-      title: "Động Cơ Rèm",
+      title: "Động Cơ Rèm Thông Minh",
       subTitle: "Smart Curtain",
       image: imgCurtain,
       listItem: [

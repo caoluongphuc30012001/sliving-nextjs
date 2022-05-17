@@ -103,7 +103,7 @@ function SectionSmartLighting() {
             </Row>
             <Image
               src={imgSmartLightingRight}
-              className="smart-lighting-img-right"
+              className="smart-lighting-img-right w-100"
             />
             <Image
               src={imgSmartLightingLeft}
