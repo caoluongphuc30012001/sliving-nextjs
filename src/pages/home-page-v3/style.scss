@@ -1,7 +1,5 @@
 // Home Page Version 3
-/*
-* 0.======================Begin Core CSS======================
-*/
+// ======================Begin Core CSS======================
 p,
 span,
 h1,
@@ -82,33 +80,16 @@ span.detail-v3 {
   }
 }
 
-.container-v3 {
-  padding: 0 20px;
-}
-
-@media only screen and (max-width: 1240px) {
-  .container-v3 {
-    padding: 0px 40px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container-v3 {
-    padding: 0px 20px;
-  }
-}
-.max-width-1180 {
-  max-width: 1180px;
+.container-1220 {
+  max-width: 1220px;
   margin: 0 auto;
   width: 100%;
+  padding: 0px 20px;
 }
-/*
-* ======================End Core CSS======================
-*/
 
-/*
-* ======================Begin Button Group CSS======================
-*/
+// ======================End Core CSS======================
+
+// ======================Begin Button Group CSS======================
 .btn-group {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -162,45 +143,35 @@ span.detail-v3 {
       -webkit-text-fill-color: transparent;
     }
   }
-}
 
-// =======Begin Responsive=======
-@media only screen and (max-width: 992px) {
-  .btn-group {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .advise-now-btn {
-      margin-right: 0;
+  // =======Begin Responsive=======
+  @media only screen and (max-width: 992px) {
+    .btn-group {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .advise-now-btn {
+        margin-right: 0;
+      }
     }
   }
-}
 
-//   .advise-now-btn span,
-//   .learn-more-btn span {
-//     font-size: 12px !important;
-//   }
-// }
+  @media only screen and (max-width: 390px) {
+    .btn-group {
+      display: block !important;
+    }
 
-@media only screen and (max-width: 390px) {
-  .btn-group {
-    display: block !important;
+    .advise-now-btn,
+    .learn-more-btn {
+      width: 100% !important;
+      margin-top: 10px;
+    }
   }
-
-  .advise-now-btn,
-  .learn-more-btn {
-    width: 100% !important;
-    margin-top: 10px;
-  }
+  // =======End Responsive=======
 }
-// =======End Responsive=======
-/*
-* ======================End Button Group CSS======================
-*/
+// ======================End Button Group CSS======================
 
-/*
-* ======================Begin CSS Row Center======================
-*/
+// ======================Begin CSS Row Center======================
 .row-line-center {
   text-align: center;
   .title-eng-line-center {
@@ -208,7 +179,6 @@ span.detail-v3 {
     font-weight: 700;
     font-size: 16px;
     line-height: 133%;
-    // text-align: center;
     letter-spacing: 0.22em;
     color: #0979fd;
   }
@@ -218,7 +188,6 @@ span.detail-v3 {
     font-weight: 700;
     font-size: 36px;
     line-height: 48px;
-    // text-align: center;
     color: #2c2d2e;
   }
 
@@ -237,38 +206,32 @@ span.detail-v3 {
     color: #454647;
     margin-top: -16px;
   }
-}
-
-// =======Begin Responsive=======
-@media only screen and (max-width: 992px) {
-  .row-line-center {
-    .title-eng-line-center,
-    .title-line-center {
-      // text-align: start;
-      font-size: 28px;
-    }
-    .title-eng-line-center {
-      font-size: 14px;
-    }
-    .img-line-center {
-      padding-top: 16px;
-      padding-bottom: 32px;
-    }
-    .description-line-center {
-      display: none;
+  // =======Begin Responsive=======
+  @media only screen and (max-width: 992px) {
+    .row-line-center {
+      .title-eng-line-center,
+      .title-line-center {
+        font-size: 28px;
+      }
+      .title-eng-line-center {
+        font-size: 14px;
+      }
+      .img-line-center {
+        padding-top: 16px;
+        padding-bottom: 32px;
+      }
+      .description-line-center {
+        display: none;
+      }
     }
   }
+  // =======End Responsive=======
 }
-// =======End Responsive=======
-/*
-* ======================End CSS Row Center======================
-*/
+// ======================End CSS Row Center======================
 
-/* 
-* 1.======================Begin Header Page======================
-*/
+// 1.======================Begin Header Page=====================
 .home-page-v3 {
-  margin-top: 80px;
+  // margin-top: 80px;
   // =======Begin Custom swiper=======
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -286,101 +249,102 @@ span.detail-v3 {
     background-color: #ffffff !important;
   }
   // =======End Custom swiper=======
-}
-.mySwiper {
-  position: relative;
-  .view-360 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    button {
-      border-radius: 68px;
-      padding: 8px 24px;
-      background-color: transparent;
-      font-size: 12px;
-      color: #fff;
-      border: 2px solid #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      span {
-        margin-right: 16px;
+  .mySwiper {
+    position: relative;
+    .view-360 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      button {
+        border-radius: 68px;
+        padding: 8px 24px;
+        background-color: transparent;
+        font-size: 12px;
+        color: #fff;
+        border: 2px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          margin-right: 16px;
+        }
       }
     }
   }
-}
-.bg-img {
-  width: 100%;
-}
-
-.home-page-tag {
-  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-}
-
-.group-contact-header {
-  display: flex;
-  align-items: center;
-  column-gap: 13px;
-  span {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 29px;
-    line-height: 40px;
-    color: #ffffff;
-    &.hotline {
-      font-family: "SVN-Gilroy";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 40px;
-    }
-  }
-}
-
-.group-service-tag {
-  padding: 40px 0;
-}
-
-.card-sub-tag {
-  border: 2px solid #ffffff;
-  border-radius: 16px;
-  padding: 16px;
-  height: 100%;
-  .card-sub-tag-title {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 32px;
-    color: #ffffff;
-    padding-top: 10px;
-  }
-  .card-sub-tag-des {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 24px;
-    color: #ffffff;
-  }
-}
-
-// =======Begin Responsive=======
-@media only screen and (max-width: 992px) {
-  .home-page-v3 .swiper-horizontal > .swiper-pagination-bullets,
-  .home-page-v3 .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .home-page-v3 .swiper-pagination-custom,
-  .home-page-v3 .swiper-pagination-fraction {
-    bottom: 8px !important;
+  .bg-img {
+    width: 100%;
   }
 
   .home-page-tag {
-    // padding-top: 20px;
-    padding-bottom: 20px;
+    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
   }
-  .home-page-v3 {
+
+  .group-contact-header {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+    span {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 29px;
+      line-height: 40px;
+      color: #ffffff;
+      &.hotline {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .group-service-tag {
+    padding: 40px 0;
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+  }
+
+  .card-sub-tag {
+    border: 2px solid #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    height: 100%;
+    .card-sub-tag-title {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 32px;
+      color: #ffffff;
+      padding-top: 10px;
+    }
+    .card-sub-tag-des {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
+
+  // =======Begin Responsive=======
+  @media only screen and (max-width: 992px) {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 0 !important;
+    }
+
+    .home-page-tag {
+      // padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
     .back-ground-mobile,
     .back-ground-mobile {
       display: block !important;
@@ -389,48 +353,51 @@ span.detail-v3 {
     .slider-desktop {
       display: none !important;
     }
-  }
 
-  .group-contact-header {
-    justify-content: center;
-    img {
-      height: 24px;
-      width: 24px;
+    .group-contact-header {
+      justify-content: center;
+      img {
+        height: 24px;
+        width: 24px;
+      }
+      .contact-header-wrap {
+        display: flex;
+        span {
+          font-size: 14px;
+          &.hotline {
+            margin-right: 8px;
+          }
+        }
+      }
     }
-    .contact-header-wrap {
-      display: flex;
-      span {
+
+    .group-service-tag {
+      padding: 0 !important;
+    }
+
+    .card-sub-tag {
+      padding: 8px;
+      .card-sub-tag-icon {
+        margin: 0 auto;
+      }
+      .card-sub-tag-title {
+        text-align: center;
         font-size: 14px;
-        &.hotline {
-          margin-right: 8px;
+      }
+      .card-sub-tag-des {
+        display: none;
+      }
+    }
+    .mySwiper {
+      .view-360 {
+        button {
+          padding: 2px 10px;
         }
       }
     }
   }
-  .group-service-tag {
-    margin-left: -10px !important;
-    margin-right: -10px !important;
-    padding: 0;
-  }
-  // .card-sub-tag-col {
-  //   padding-top: 10px;
-  // }
-  .card-sub-tag {
-    padding: 8px;
-    // height: auto;
-    .card-sub-tag-icon {
-      margin: 0 auto;
-    }
-    .card-sub-tag-title {
-      text-align: center;
-      font-size: 14px;
-    }
-    .card-sub-tag-des {
-      display: none;
-    }
-  }
+  // =======End Responsive=======
 }
-// =======End Responsive=======
 /* 
 * ======================End Header Page======================
 */

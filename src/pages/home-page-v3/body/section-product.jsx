@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import iconCheckOutline from "@images/icon/icon-check-circle-outline.svg";
 import imgCurtain from "@images/home-page-v3/img-curtain.png";
-import imgSwitch from "@images/home-page-v3/img-abc.png";
+import imgSwitch from "@images/home-page-v3/img-switch.png";
 import imgApp from "@images/home-page-v3/img-app.png";
 import imgTouch from "@images/home-page-v3/img-touch.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
