@@ -665,9 +665,7 @@ span.detail-v3 {
 // =======End Responsive=======
 // ======================End Section Product======================
 
-/* 
-* 4.======================Begin Section Smart Parking======================
-*/
+// ======================Begin Section Smart Parking======================
 .bg-ground-smart-parking {
   border: 1px solid #e1e3e6;
   padding: 60px 0;
@@ -723,22 +721,17 @@ span.detail-v3 {
       margin-top: 25px;
     }
   }
-}
-// =======Begin Responsive=======
-@media only screen and (max-width: 992px) {
-  .btn-group {
-    display: flex;
-    justify-content: space-around !important;
+
+  // =======Begin Responsive=======
+  @media only screen and (max-width: 992px) {
+    .btn-group {
+      display: flex;
+      justify-content: space-around !important;
+    }
   }
-}
-@media only screen and (max-width: 768px) {
-  .bg-ground-smart-parking {
+  @media only screen and (max-width: 768px) {
     padding: 40px 0;
-  }
-
-  .bg-ground-smart-parking {
     border: none;
-
     .smart-parking-group-img {
       display: none;
     }
@@ -775,11 +768,10 @@ span.detail-v3 {
       }
     }
   }
+
+  // =======End Responsive=======
 }
-// =======End Responsive=======
-/* 
-* ======================End Section Smart Parking======================
-*/
+// ======================End Section Smart Parking======================
 
 /* 
 * 5.======================Begin Section Smart Lighting======================

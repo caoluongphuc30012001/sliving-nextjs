@@ -27,8 +27,8 @@ const IndexPage = () => {
       <main id="main_page">
         <SectionSolution />
         <SectionProduct />
-        {/* <SectionSmartParking />
-        <SectionSmartLighting />
+        <SectionSmartParking />
+        {/* <SectionSmartLighting />
         <SectionFeaturedProject />
         <SectionHelpMore /> */}
       </main>

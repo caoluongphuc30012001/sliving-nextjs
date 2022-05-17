@@ -129,7 +129,7 @@ const SectionSolution = () => {
             <img src={imgLeft} alt="" />
           </Col>
           <Col lg={6} className=" solution-sliving-col-right px-0">
-            <Row className="row-line-center">
+            <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">
                 Kiến tạo phong cách sống Hiện Đại Đẳng Cấp
