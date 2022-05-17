@@ -29,7 +29,7 @@ const listRoute = [
     },
     {
         id:1,
-        nameRoute: "SẢN PHẨM",
+        nameRoute: "GIẢI PHÁP",
         href:"/#",
         active:true,
     },
