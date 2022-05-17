@@ -87,6 +87,10 @@ span.detail-v3 {
   padding: 0px 20px;
 }
 
+.m-left-right-12 {
+  margin-left: -12px !important;
+  margin-right: 12px !important;
+}
 // ======================End Core CSS======================
 
 // ======================Begin Button Group CSS======================
@@ -208,28 +212,27 @@ span.detail-v3 {
   }
   // =======Begin Responsive=======
   @media only screen and (max-width: 992px) {
-    .row-line-center {
-      .title-eng-line-center,
-      .title-line-center {
-        font-size: 28px;
-      }
-      .title-eng-line-center {
-        font-size: 14px;
-      }
-      .img-line-center {
-        padding-top: 16px;
-        padding-bottom: 32px;
-      }
-      .description-line-center {
-        display: none;
-      }
+    .title-eng-line-center,
+    .title-line-center {
+      font-size: 28px;
+    }
+    .title-eng-line-center {
+      font-size: 14px;
+    }
+    .img-line-center {
+      padding-top: 16px;
+      padding-bottom: 32px;
+    }
+    .description-line-center {
+      display: none;
     }
   }
+
   // =======End Responsive=======
 }
 // ======================End CSS Row Center======================
 
-// 1.======================Begin Header Page=====================
+// ======================Begin Header Page=====================
 .home-page-v3 {
   // margin-top: 80px;
   // =======Begin Custom swiper=======
@@ -398,13 +401,28 @@ span.detail-v3 {
   }
   // =======End Responsive=======
 }
-/* 
-* ======================End Header Page======================
-*/
+// ======================End Header Page=====================
 
 /* 
 * 2.======================Begin Section Solution======================
 */
+.section-solution {
+  .row-line-center {
+    text-align: start !important;
+    .img-line-center {
+      justify-content: normal !important;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    padding-top: 40px !important;
+    .row-line-center {
+      text-align: center !important;
+      .img-line-center {
+        justify-content: center !important;
+      }
+    }
+  }
+}
 .section-solution {
   padding-top: 120px;
   background-color: #f2f6ff;
@@ -444,8 +462,8 @@ span.detail-v3 {
   }
 
   .section-solution-sliving {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     .solution-sliving-img {
       margin-left: -95px;
@@ -502,33 +520,9 @@ span.detail-v3 {
       color: #454647;
     }
   }
-  .row-line-center {
-    text-align: start !important;
-    .img-line-center {
-      justify-content: normal !important;
-    }
-  }
-}
 
-// =======Begin Responsive=======
-@media only screen and (max-width: 992px) {
-  .section-solution {
-    padding-top: 40px !important;
-    .row-line-center {
-      text-align: center !important;
-      .img-line-center {
-        justify-content: center !important;
-      }
-    }
-    h3.detail-v3 {
-      font-family: "SVN-Gilroy";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 32px;
-      color: #2c2d2e;
-    }
-
+  // =======Begin Responsive=======
+  @media only screen and (max-width: 992px) {
     span.detail-v3 {
       margin-bottom: 0;
     }
@@ -540,7 +534,7 @@ span.detail-v3 {
     .solution-about-img-mobile,
     .solution-about-cap {
       display: flex !important;
-      // padding-top: 32px;
+      padding-top: 32px;
       width: 100%;
     }
 
@@ -571,8 +565,10 @@ span.detail-v3 {
       }
     }
   }
+
+  // =======End Responsive=======
 }
-// =======End Responsive=======
+
 /* 
 * ======================End Section Solution======================
 */

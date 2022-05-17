@@ -25,8 +25,8 @@ const IndexPage = () => {
       <Seo title="Sliving" description="Sliving" url="https://sliving.vn" />
       <SectionHeader />
       <main id="main_page">
-        {/* <SectionSolution />
-        <SectionProduct />
+        <SectionSolution />
+        {/* <SectionProduct />
         <SectionSmartParking />
         <SectionSmartLighting />
         <SectionFeaturedProject />
