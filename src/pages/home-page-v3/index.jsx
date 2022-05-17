@@ -28,8 +28,8 @@ const IndexPage = () => {
         <SectionSolution />
         <SectionProduct />
         <SectionSmartParking />
-        {/* <SectionSmartLighting />
-        <SectionFeaturedProject />
+        <SectionSmartLighting />
+        {/* <SectionFeaturedProject />
         <SectionHelpMore /> */}
       </main>
     </>

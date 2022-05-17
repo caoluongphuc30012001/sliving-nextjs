@@ -773,9 +773,7 @@ span.detail-v3 {
 }
 // ======================End Section Smart Parking======================
 
-/* 
-* 5.======================Begin Section Smart Lighting======================
-*/
+// ======================Begin Section Smart Lighting======================
 .bg-ground-smart-lighting {
   padding-top: 60px;
   padding-bottom: 120px;
@@ -839,6 +837,10 @@ span.detail-v3 {
   .smart-lighting-img-right {
     min-height: 625px;
   }
+
+  .smart-lighting-col-left {
+    padding-right: 40px !important;
+  }
 }
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
@@ -868,12 +870,18 @@ span.detail-v3 {
     .smart-lighting-img-left-mobile {
       padding: 32px 0;
     }
+
+    .smart-lighting-col-left {
+      padding-right: 0px !important;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: space-around !important;
+    }
   }
 }
 // =======End Responsive=======
-/* 
-* ======================End Section Smart Lighting======================
-*/
+// ======================End Section Smart Lighting======================
 
 /* 
 * ======================Begin Section Help More======================
