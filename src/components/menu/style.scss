@@ -2,6 +2,7 @@
     display: none;
     width: 100%;
     position: fixed;
+    top: 0px;
     background-color: white;
     z-index: 20;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -158,6 +159,7 @@
     }
     width: 100%;
     position: fixed;
+    top: 0px;
     background-color: white;
     z-index: 20;
     .menu-top-container{
@@ -247,5 +249,12 @@
     }
     .section-menu-top-mobile{
         display: none;
+    }
+}
+@media(max-width:1000px){
+    #smart_home_page{
+        .section-product-slider{
+            margin-top: 64px;
+        }
     }
 }

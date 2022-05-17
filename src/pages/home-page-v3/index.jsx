@@ -1,6 +1,5 @@
 import React from "react";
 import dataMeta from "@data/dataMeta.json";
-import LayoutNew from "@components/layout-new";
 
 import Seo from "@components/seo";
 import "@i18n/i18n";

@@ -6,6 +6,8 @@
     width: 1180px;
 }
 .section-product-v3{
+    padding-left: 20px;
+    padding-right: 20px;
     .product-container{
         max-width: 1180px;
         width: 100%;
@@ -524,3 +526,366 @@
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////
+//-------------Begin Section Products Slider-------------------------------------------------
+#smart_home_page{
+    .section-product-slider{
+        margin-top: 90px;
+    }
+}
+.section-product-slider {
+    width: 100%;
+    height: 731px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    // padding-top: 90px;
+  
+    .smart-home-bg-left {
+      width: 100%;
+      max-width: 960px;
+      background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+      position: relative;
+      min-height: 320px;
+    }
+  
+    .smart-home-bg-right {
+      width: 100%;
+      background: #f3f9ff;
+      max-width: 960px;
+      position: relative;
+      min-height: 527px;
+    }
+  
+    .btn-big-arrow-right-mobie{
+      position: absolute;
+      top: calc(50% - 20px);
+      z-index: 1;
+      width: fit-content;
+      display: none;
+    }
+  
+    .btn-big-arrow-left {
+      position: absolute;
+      top: calc(50% - 20px);
+      right: 2.5%;
+      z-index: 1;
+      width: fit-content;
+    }
+  
+    .btn-big-arrow-right {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: 2.5%;
+      z-index: 1;
+      width: fit-content;
+    }
+  
+    .products-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .product-slide-wrapper {
+      width: 100%;
+      display: none;
+      height: 100%;
+    }
+  
+    .product-slide-wrapper-active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .left-content-container {
+      max-width: 50%;
+      width: 960px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .product-left-content {
+      max-width: 640px;
+      width: 100%;
+      margin: auto;
+      padding: 0px 20px;
+    }
+  
+    .right-content-container {
+      max-width: 50%;
+      width: 960px;
+      height: 100%;
+      background-color: #f3f9ff;
+    }
+  
+    .product-right-content {
+      max-width: 800px;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 20px;
+    }
+  
+    .product-right-all-contents {
+      max-width: 100%;
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454647;
+    }
+  
+    .product-right-all-contents > p:not(:last-child) {
+      margin-bottom: 8px !important;
+    }
+  
+    .product-right-desc-container {
+      font-weight: 500;
+    }
+  
+    .product-right-main-title {
+      font-weight: 700;
+    }
+  
+    .product-right-title {
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 48px;
+      color: #2c2d2e;
+      margin-top: 16px;
+    }
+  
+    .product-right-subtitle {
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 133%;
+      letter-spacing: 0.22em;
+      color: #0979fd;
+    }
+  
+    .product-right-divider {
+      width: 88px;
+      height: 4px;
+      background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
+      border-radius: 200px;
+      margin: 16px 0px;
+    }
+  
+    .product-right-main-title {
+      display: inline-block;
+    }
+  
+    // phone img object
+    .product-phone-wrapper {
+      position: relative;
+      margin: auto;
+      max-height: 534px;
+      z-index: 1;
+    }
+  
+    .download-apps-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 139px;
+      bottom: -5%;
+      z-index: 2;
+    }
+  
+    .download-app-item {
+      max-width: 251px;
+      max-height: 100%;
+      box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+        0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+    }
+  
+    .download-app-img {
+      border-radius: 6px;
+    }
+  
+    // slider
+  
+    .banner-products-slider {
+      .swiper-slide {
+        max-height: 360px;
+      }
+    }
+  
+    .banner-products-btn-group {
+      margin-top: 49px;
+      display: flex;
+      border: 2px solid #ffffff;
+      border-radius: 100px;
+      min-height: 40px;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .products-btn-item {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      cursor: pointer;
+      background: none;
+    }
+  
+    .products-btn-item.active {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  
+    .product-item-title {
+      padding: 8px 0px;
+    }
+  }
+  
+  // animation fade up
+  // left-content-animate left-content-fadeUp
+  
+  .products-slider {
+    .animate {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      -webkit-animation-fill-mode: both;
+    }
+  
+    @-webkit-keyframes fadeUp {
+      from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+  
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+      }
+      to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+  
+    .fadeUp {
+      -webkit-animation-name: fadeUp;
+      animation-name: fadeUp;
+    }
+  }
+  ///=========Responsive==========//
+  @media(max-width:1550px){
+    .section-product-slider {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+      .product-slide-wrapper{
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .smart-home-bg-left {
+        max-width: 100%;
+      }
+      .smart-home-bg-right {
+        max-width: 100%;
+      }
+      .btn-big-arrow-left{
+        left: 0px;
+      }
+      .btn-big-arrow-right {
+        display: none;
+      }
+      .btn-big-arrow-right-mobie{
+        display: block;
+        position: absolute;
+        left: calc(100% - 41px);
+        transform: rotate(180deg);
+      }
+      .swiper-image{
+        width: 320px;
+        object-fit: cover;
+      }
+      .product-left-content {
+        margin: 0px;
+        width: 100%;
+      }
+      .left-content-container{
+        height: 40%;
+        min-width: 510px;
+        align-items: center;
+        justify-content: center;
+      }
+      .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right-content-container {
+        max-width: 100%;
+        width: 100%;
+        height: 60%;
+      }
+      .banner-products-btn-group {
+        margin: 2rem auto 0 auto;
+        max-width: 510px;
+      }
+      .product-phone-wrapper{
+        max-width: 300px;
+      }
+    }}
+    @media(max-width:570px){
+      .section-product-slider {
+        .product-right-desc-container {
+          text-align: center;
+        }
+        .left-content-container{
+          width: 100%;
+          min-width: 350px;
+          align-items: center;
+          justify-content: center;
+        }
+        .product-right-content{
+          height: auto;
+          align-items: center;
+          justify-content: center;
+          .product-right-title{
+            text-align: center; 
+          }
+        }
+        .btn-group, .btn-group-vertical {
+          margin: 10px 0;
+          display: flex;
+          justify-content: space-between;
+      }
+    }
+  }
