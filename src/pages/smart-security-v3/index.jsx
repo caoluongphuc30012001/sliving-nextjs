@@ -12,26 +12,28 @@ import SectionTechnologyTurnstile from "./body/SectionTechnologyTurnstile";
 import SectionSmartFaceID from "./body/SectionSmartFaceID";
 import SectionTechnologyFaceID from "./body/SectionTechnologyFaceID";
 import SectionHelpMore from "../../components/help-more/section-help-more";
-
+import LayoutSecurity from "../../components/layout-smart-security-v3";
 import "./style.scss";
 
 const SmartSecurity = () => {
   return (
-    <main>
-      <Container className="max-width-100 px-0" fluid>
-        <SectionTopSmartSecurity />
-        <SectionSmartParking />
-        <SectionSmartDoorLocks />
-        <SectionTechnologyDoorLocks />
-        <SectionSmartElevator />
-        <SectionTechnologyElevator />
-        <SectionSmartTurnstile />
-        <SectionTechnologyTurnstile />
-        <SectionSmartFaceID />
-        <SectionTechnologyFaceID />
-        <SectionHelpMore />
-      </Container>
-    </main>
+    <LayoutSecurity>
+      <main>
+        <Container className="max-width-100 px-0" fluid>
+          <SectionTopSmartSecurity />
+          <SectionSmartParking />
+          <SectionSmartDoorLocks />
+          <SectionTechnologyDoorLocks />
+          <SectionSmartElevator />
+          <SectionTechnologyElevator />
+          <SectionSmartTurnstile />
+          <SectionTechnologyTurnstile />
+          <SectionSmartFaceID />
+          <SectionTechnologyFaceID />
+          <SectionHelpMore />
+        </Container>
+      </main>
+    </LayoutSecurity>
   );
 };
 
