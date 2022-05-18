@@ -66,7 +66,7 @@ const SectionSolution = () => {
     },
     {
       id: 4,
-      desc: "Điều khiển từ xa thông minh",
+      desc: "Điều khiển từ xa thông minh      ",
       icon: iconRemote,
     },
     {
