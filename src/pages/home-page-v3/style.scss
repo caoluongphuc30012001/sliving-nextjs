@@ -82,21 +82,18 @@ span.detail-v3 {
   }
 }
 
-.container-v3 {
-  padding: 0 20px;
+.container-1220 {
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 20px;
 }
 
-@media only screen and (max-width: 1240px) {
-  .container-v3 {
-    padding: 0px 40px;
-  }
+.m-left-right-12 {
+  margin-left: -12px !important;
+  margin-right: -12px !important;
 }
 
-@media only screen and (max-width: 768px) {
-  .container-v3 {
-    padding: 0px 20px;
-  }
-}
 .max-width-1180 {
   max-width: 1180px;
   margin: 0 auto;
@@ -268,7 +265,6 @@ span.detail-v3 {
 * 1.======================Begin Header Page======================
 */
 .home-page-v3 {
-  margin-top: 80px;
   // =======Begin Custom swiper=======
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -616,56 +612,55 @@ span.detail-v3 {
 .section-product-v3 {
   padding: 120px 0 60px;
   background: #fff !important;
-}
-
-.card-product {
-  padding-top: 60px;
-  img {
-    float: right;
-  }
-  .card-product-title {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-    color: #0979fd;
-  }
-  .card-product-subtitle {
-    font-family: "SVN-Gilroy";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 32px;
-    color: #454647;
-    padding-top: 4px;
-  }
-  .card-product-content {
-    padding: 0;
-    margin: 0;
-  }
-  .card-product-item {
-    list-style: none;
-    padding-top: 32px;
-
-    .card-product-item-title {
+  .card-product {
+    padding-top: 60px;
+    img {
+      float: right;
+    }
+    .card-product-title {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      padding-left: 10px;
-      color: #2c2d2e;
+      font-size: 28px;
+      line-height: 32px;
+      color: #0979fd;
     }
-
-    .card-product-item-des {
+    .card-product-subtitle {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      padding-top: 16px;
+      font-size: 21px;
+      line-height: 32px;
       color: #454647;
+      padding-top: 4px;
+    }
+    .card-product-content {
+      padding: 0;
+      margin: 0;
+    }
+    .card-product-item {
+      list-style: none;
+      padding-top: 32px;
+
+      .card-product-item-title {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 10px;
+        color: #2c2d2e;
+      }
+
+      .card-product-item-des {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        padding-top: 16px;
+        color: #454647;
+      }
     }
   }
 }
@@ -693,7 +688,7 @@ span.detail-v3 {
 
     .card-product {
       padding-top: 0px;
-      border-bottom: 1px solid #e1e3e6;
+
       .card-product-title {
         font-size: 21px;
         text-align: center;
@@ -705,6 +700,13 @@ span.detail-v3 {
         text-align: center;
         padding-bottom: 12px;
       }
+    }
+    .card-product:not(:last-child) {
+      border-bottom: 1px solid #e1e3e6;
+    }
+    .btn-group {
+      width: 100%;
+      justify-content: space-between;
     }
   }
 }
@@ -931,75 +933,7 @@ span.detail-v3 {
 * ======================End Section Smart Lighting======================
 */
 
-/* 
-* ======================Begin Section Help More======================
-*/
-.help-more-container {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.help-more-cards {
-  margin-top: 36px !important;
-}
-
-.help-more-card {
-  text-align: center;
-  border: 1px solid #6fc0fe;
-  box-sizing: border-box;
-  border-radius: 16px;
-  padding: 34px 0;
-  // margin-top: 28.5px;
-}
-
-.help-more-card-image {
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
-}
-
-.help-more-card-title {
-  margin: 16px 0;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 133%;
-  text-align: center;
-  text-transform: capitalize;
-
-  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.help-more-card-des {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 133%;
-  text-align: center;
-  color: #59637e;
-  margin-bottom: 12px;
-  max-width: 366px;
-  margin: auto;
-  // padding-bottom: 34px;
-}
-@media only screen and (max-width: 992px) {
-  .help-more-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .help-more-cards {
-    margin-top: 0 !important;
-  }
-}
-/* 
-* ======================End Section Help More======================
-*/
-
-/* 
-* ======================Begin Section Feature Project======================
-*/
+// ======================Begin Section Feature Project======================
 .bg-ground-feature-project {
   background: #f3f9ff;
   .feature-project-container {
@@ -1029,7 +963,7 @@ span.detail-v3 {
     .option {
       position: relative;
       overflow: hidden;
-      min-width: 80px;
+      min-width: 90px;
       margin: 10px;
 
       background-size: auto 120%;
@@ -1071,7 +1005,7 @@ span.detail-v3 {
         }
         .label {
           bottom: 10px;
-          left: 10px;
+          left: 15px;
           .info > div {
             left: 20px;
             opacity: 0;
@@ -1233,24 +1167,13 @@ span.detail-v3 {
     .swiper-slide {
       width: 80%;
     }
-
-    // .swiper-slide:nth-child(2n) {
-    //   width: 80%;
-    // }
-
-    // .swiper-slide:nth-child(3n) {
-    //   width: 80%;
-    // }
-
     // =======End Custom swiper=======
   }
-}
-@media only screen and (max-width: 992px) {
-  .bg-ground-feature-project {
+  @media only screen and (max-width: 992px) {
     background: #ffffff;
     .feature-project-container {
       padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 0px;
     }
     .options {
       display: none;
@@ -1258,16 +1181,80 @@ span.detail-v3 {
     .options-mobile {
       display: block !important;
       padding-left: 40px;
-      // padding-top: 32px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .options-mobile {
+      display: block !important;
+      padding-left: 20px !important;
     }
   }
 }
-@media only screen and (max-width: 768px) {
-  .options-mobile {
-    display: block !important;
-    padding-left: 20px !important;
+// ======================End Section Feature Project======================
+
+/* 
+* ======================Begin Section Help More======================
+*/
+.help-more-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.help-more-cards {
+  margin-top: 36px !important;
+}
+
+.help-more-card {
+  text-align: center;
+  border: 1px solid #6fc0fe;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 34px 0;
+  // margin-top: 28.5px;
+}
+
+.help-more-card-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.help-more-card-title {
+  margin: 16px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 133%;
+  text-align: center;
+  text-transform: capitalize;
+
+  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.help-more-card-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  text-align: center;
+  color: #59637e;
+  margin-bottom: 12px;
+  max-width: 366px;
+  margin: auto;
+  // padding-bottom: 34px;
+}
+@media only screen and (max-width: 992px) {
+  .help-more-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .help-more-cards {
+    margin-top: 0 !important;
   }
 }
 /* 
-* ======================End Section Feature Project======================
+* ======================End Section Help More======================
 */

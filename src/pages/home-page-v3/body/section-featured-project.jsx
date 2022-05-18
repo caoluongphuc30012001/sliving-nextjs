@@ -61,7 +61,7 @@ function SectionFeaturedProject() {
   ];
   return (
     <section className="bg-ground-feature-project">
-      <div className="container-v3 feature-project-container">
+      <div className="container-1220 feature-project-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">FEATURED PROJECT</span>
           <h2 className="title-line-center">Dự Án Thực Tế Nổi Bật Nhất</h2>

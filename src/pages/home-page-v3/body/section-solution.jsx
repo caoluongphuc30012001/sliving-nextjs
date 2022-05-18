@@ -66,7 +66,7 @@ const SectionSolution = () => {
     },
     {
       id: 4,
-      desc: "Điều khiển từ xa thông minh",
+      desc: "Điều khiển từ xa thông minh      ",
       icon: iconRemote,
     },
     {
@@ -77,10 +77,10 @@ const SectionSolution = () => {
   ];
   return (
     <section className="section-solution">
-      <div className="container-v3 section-solution-about">
+      <div className="container-1220 section-solution-about">
         <Row className="justify-content-around">
-          <Col lg={6}>
-            <Row className="row-line-center">
+          <Col lg={6} className="px-0">
+            <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
                 Giải pháp Nhà thông minh hàng đầu Việt Nam
@@ -118,18 +118,18 @@ const SectionSolution = () => {
               <span>Khám phá ngay</span>
             </button>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="px-0">
             <img src={imgRight} alt="" className="solution-about-img" />
           </Col>
         </Row>
       </div>
-      <div className="container-v3 section-solution-sliving">
+      <div className="container-1220 section-solution-sliving">
         <Row className="justify-content-between">
           <Col lg={6} className="solution-sliving-img">
             <img src={imgLeft} alt="" />
           </Col>
-          <Col lg={6} className=" solution-sliving-col-right">
-            <Row className="row-line-center">
+          <Col lg={6} className=" solution-sliving-col-right px-0">
+            <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">
                 Kiến tạo phong cách sống Hiện Đại Đẳng Cấp

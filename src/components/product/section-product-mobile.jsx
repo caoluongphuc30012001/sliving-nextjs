@@ -56,7 +56,7 @@ const ContentRight = ({ listProduct }) => {
 const SectionProductMobile = ({listProduct}) => {
     const [current, setCurrent] = useState(0);
     return (
-        <section className="section-product-v3-mobile container-v3">
+        <section className="section-product-v3-mobile ">
             <div className="product-container">
                 <div className="title-box">
                     <div className="sub-title">SLIVING PRODUCTS</div>

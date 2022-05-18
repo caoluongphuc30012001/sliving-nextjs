@@ -11,19 +11,22 @@ import SectionOurPartner from "./body/section-our-partner";
 import SectionActivity from "./body/section-field-activity";
 import SectionCustomerCentric from "./body/section-customer-centric";
 import SectionBrandStory from "./body/section-brand-story";
+import LayoutV3 from "../../components/layout-v3";
 
 const AboutPage = () => {
   return (
-    <main>
-      <SectionHeader />
-      <SectionIntro />
-      <SectionBrandStory />
-      <SectionCustomerCentric />
-      <SectionSmartFactory />
-      <SectionActivity />
-      <SectionOurPartner />
-      <SectionHelpMore />
-    </main>
+    <LayoutV3>
+      <main id="about_us_page">
+        <SectionHeader />
+        <SectionIntro />
+        <SectionBrandStory />
+        <SectionCustomerCentric />
+        <SectionSmartFactory />
+        <SectionActivity />
+        <SectionOurPartner />
+        <SectionHelpMore />
+      </main>
+    </LayoutV3>
   );
 };
 

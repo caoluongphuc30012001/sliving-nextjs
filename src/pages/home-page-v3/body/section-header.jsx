@@ -102,12 +102,12 @@ const SectionHeader = () => {
       </Swiper>
 
       <div className="home-page-tag">
-        <div className="container-v3">
+        <div className="container-1220">
           <Row
             noGutters={true}
             className="d-flex justify-content-center align-items-center"
           >
-            <Col lg={3} className="gy-3">
+            <Col lg={3} className="gy-3 px-0">
               <div className="group-contact-header">
                 <img
                   src={iconPhone}
@@ -121,7 +121,7 @@ const SectionHeader = () => {
                 </div>
               </div>
             </Col>
-            <Col lg={9} className="gy-3">
+            <Col lg={9} className="gy-3 px-0">
               <Row className="group-service-tag" md={3}>
                 {arrService.map((service) => (
                   <Col key={service.id} className="gx-4 card-sub-tag-col">

@@ -27,7 +27,7 @@ function SectionSmartLighting() {
   ];
   return (
     <section className="bg-ground-smart-lighting">
-      <div className="max-width-1180 container-v3">
+      <div className="container-1220">
         <div className="row-line-center">
           <span className="title-eng-line-center">SMART LIGHTING</span>
           <h1 className="title-line-center">
@@ -38,7 +38,7 @@ function SectionSmartLighting() {
           </div>
         </div>
         <Row className="smart-lighting-row">
-          <Col lg={7} md={12} className="">
+          <Col lg={7} md={12} className="px-0 smart-lighting-col-left">
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
                 Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
@@ -83,10 +83,10 @@ function SectionSmartLighting() {
               className="smart-lighting-img-left"
             />
           </Col>
-          <Col lg={5} md={12} className="">
+          <Col lg={5} md={12} className="px-0 smart-lighting-col-right">
             <Row className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
-                <Col className="smart-lighting-card" key={itemCard.id}>
+                <Col className="smart-lighting-card px-0" key={itemCard.id}>
                   <div className="smart-lighting-top">
                     <Image
                       src={itemCard.linkImg}
@@ -103,7 +103,7 @@ function SectionSmartLighting() {
             </Row>
             <Image
               src={imgSmartLightingRight}
-              className="smart-lighting-img-right"
+              className="smart-lighting-img-right w-100"
             />
             <Image
               src={imgSmartLightingLeft}
