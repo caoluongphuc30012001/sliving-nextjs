@@ -1,0 +1,119 @@
+///=========================Section Header
+.smart-parking-v3{
+    width: 100%;
+    position: relative;
+    // padding: clamp( 40px, 15vw, 250px) clamp( 20px, 20vw, 370px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: clamp( 560px, 60vw, 844px);
+    overflow: hidden;
+    .back-ground{
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        max-height: 844px;
+        min-height: 560px;
+        .back-ground__img{
+            mask-image: linear-gradient(
+                to bottom,
+                rgba(64, 64, 64, 1) 0%,
+                rgba(64, 64, 64, 0.75) 35%,
+                rgba(64, 64, 64, 0) 60%,
+            );
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(180deg, #32D7D4 0%, rgba(8, 156, 234, 0.65) 55.41%, rgba(8, 156, 234, 0.1) 85.6%, rgba(255, 255, 255, 0) 100%);
+            opacity: 1;
+          }
+    }
+    .smart-parking-header{
+        width: clamp( 420px, 100%, 1180px);
+        padding: 40px 20px;
+        .smart-parking-content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            & > *{
+                max-height: 343px;
+            }
+            .content-left{
+                width: 100%;
+                max-width: 600px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .content-left-title{
+                    font-family: 'SVN Gilroy';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: clamp( 32px, 4vw, 62px);
+                    line-height: 72px;
+                    letter-spacing: 1px;
+                    color: #FFFFFF;
+                }
+                .content-left-text{
+                    font-family: 'SVN Gilroy';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: clamp( 14px, 1vw, 16px);
+                    line-height: 24px;
+                    color: #FFFFFF;
+                }
+            }
+            .content-right{
+                width: clamp(180px, 25vw, 400px);
+                .content-right__img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+///=========================End Section Header
+
+
+///=========================Responsive
+@media(max-width:900px){
+    .smart-parking-v3{
+        background-image: linear-gradient(180deg, #32D7D4 0%, rgba(8, 156, 234, 0.65) 55.41%, rgba(8, 156, 234, 0.1) 85.6%, rgba(255, 255, 255, 0) 100%);
+        .back-ground{   
+            .back-ground__img{
+                position: absolute;
+                min-height: 360px;
+                top:35%;//
+            }
+            &::after {
+                opacity: 1;
+              }
+        }
+        .smart-parking-header{
+            .smart-parking-content{
+                flex-direction: column;
+                gap: 32px;
+                .content-left{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    .content-left-title{
+                        align-items: center;//
+                    }
+                    .content-left-text{
+                        line-height: 24px;//
+                    }
+                }
+            }
+        }
+    }
+}
