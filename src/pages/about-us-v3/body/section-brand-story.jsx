@@ -5,7 +5,7 @@ import imgBrandStory from "../../../images/about-us-v3/png/img-brand-story.png";
 
 function SectionBrandStory() {
   return (
-    <section className="bg-section-brand-story container-v3">
+    <section className="bg-section-brand-story">
       <div className="max-width-1180 brand-story-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">BRAND STORY</span>

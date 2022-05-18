@@ -407,140 +407,150 @@ img {
   }
 }
 @media(max-width:1000px) and (min-width:400px){
-  .swiper{
-    display: flex;
-    .swiper-wrapper{
+  .section-smart-factory-v3{
+    .swiper{
       display: flex;
-      align-items: flex-end;
-    }
-    .swiper-slide{
-      .swiper-item-bottom-line{
-        width: 0px;
-        height: 4px;
-        transition: 0.6s;
+      .swiper-wrapper{
+        display: flex;
+        align-items: flex-end;
       }
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      .swiper-item-wrap{
-        overflow: hidden;
+      .swiper-slide{
+        .swiper-item-bottom-line{
+          width: 0px;
+          height: 4px;
+          transition: 0.6s;
+        }
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 70%;
-        border-radius: 8px;
-        transition: 0.6s;
-        .item-wrap{
-          // width:140%;
-          width: 500%;
-          // height: 500%;
+        .swiper-item-wrap{
+          overflow: hidden;
           display: flex;
           align-items: center;
           flex-direction: column;
-          img{
-            width: 400px;
-          }
+          width: 70%;
+          border-radius: 8px;
           transition: 0.6s;
-        }
-      }
-    }
-    .swiper-slide-prev{
-      align-items: flex-start;
-      transition: 0.5s;
-    }
-    .swiper-slide-next{
-      align-items: flex-end;
-      transition: 0.6s;
-    }
-    .swiper-slide-active{
-      margin-bottom: -10px;
-      .swiper-item-wrap{
-        width: 160%;
-        .item-wrap{
-          // width:140%;
-          width: 500%;
-          // height: 500%;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          img{
-            width: 400px;
+          .item-wrap{
+            filter: brightness(0.6);
+          }
+          .item-wrap{
+            // width:140%;
+            width: 500%;
+            // height: 500%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img{
+              width: 400px;
+            }
+            transition: 0.6s;
           }
         }
       }
-      .swiper-item-bottom-line{
-        background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
-        border-radius: 2.5px;
-        width: 100%;
-        max-width: 400px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+      .swiper-slide-prev{
+        align-items: flex-start;
         transition: 0.5s;
+      }
+      .swiper-slide-next{
+        align-items: flex-end;
+        transition: 0.6s;
+      }
+      .swiper-slide-active{
+        margin-bottom: -10px;
+        .swiper-item-wrap{
+          width: 160%;
+          .item-wrap{
+            filter: brightness(1);
+          }
+          .item-wrap{
+            // width:140%;
+            width: 500%;
+            // height: 500%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img{
+              width: 400px;
+            }
+          }
+        }
+        .swiper-item-bottom-line{
+          background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
+          border-radius: 2.5px;
+          width: 100%;
+          max-width: 400px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          transition: 0.5s;
+        }
       }
     }
   }
 }
 @media(max-width:400px){
-  .swiper{
-    display: flex;
-    .swiper-wrapper{
+  .section-smart-factory-v3{
+    .swiper{
       display: flex;
-      align-items: flex-end;
-    }
-    .swiper-slide{
-      .swiper-item-bottom-line{
-        width: 0px;
-        height: 4px;
-        transition: 0.6s;
+      .swiper-wrapper{
+        display: flex;
+        align-items: flex-end;
       }
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      .swiper-item-wrap{
-        overflow: hidden;
+      .swiper-slide{
+        .swiper-item-bottom-line{
+          width: 0px;
+          height: 4px;
+          transition: 0.6s;
+        }
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 50%;
-        border-radius: 8px;
-        transition: 0.6s;
-        .item-wrap{
-          // width:140%;
-          width: 500%;
-          // height: 500%;
+        .swiper-item-wrap{
+          overflow: hidden;
           display: flex;
           align-items: center;
           flex-direction: column;
-          img{
-            width: 400px;
-          }
+          width: 50%;
+          border-radius: 8px;
           transition: 0.6s;
-        }
-      }
-    }
-    .swiper-slide-active{
-      margin-bottom: -10px;
-      .swiper-item-wrap{
-        width: 160%;
-        .item-wrap{
-          // width:140%;
-          width: 500%;
-          // height: 500%;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          img{
-            width: 400px;
+          .item-wrap{
+            // width:140%;
+            width: 500%;
+            // height: 500%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img{
+              width: 400px;
+            }
+            transition: 0.6s;
           }
         }
       }
-      .swiper-item-bottom-line{
-        background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
-        border-radius: 2.5px;
-        width: 160%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        transition: 0.5s;
+      .swiper-slide-active{
+        margin-bottom: -10px;
+        .swiper-item-wrap{
+          width: 160%;
+          .item-wrap{
+            // width:140%;
+            width: 500%;
+            // height: 500%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img{
+              width: 400px;
+            }
+          }
+        }
+        .swiper-item-bottom-line{
+          background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
+          border-radius: 2.5px;
+          width: 160%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          transition: 0.5s;
+        }
       }
     }
   }
@@ -782,6 +792,7 @@ img {
       row-gap: 32px;
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
   }
   .section-activity-title {

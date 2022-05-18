@@ -14,21 +14,16 @@ import iconSolving from "../../../images/smart-lighting-v3/svg/icon-solving.svg"
 
 const SectionDefinition = () => {
   const infoItem = {
-    title: "Smart Parking Là Gì ?",
+    title: "Smart Lighting Là Gì ?",
+    
     webContents: [
       {
         id: 0,
-        content:
-          "Giải pháp quản lý bãi đỗ xe Smart Parking đáp ứng tiêu chí hiện đại và tiện lợi trong việc kiểm soát," +
-          " quản lý tình trạng xe ra/vào và cho phép người dùng chủ động lựa chọn được chỗ đỗ xe phù hợp thông qua" +
-          " Smart Parking App. Giải pháp bãi đỗ xe thông minh không chỉ đáp ứng được tiêu chí đảm bảo an toàn - an ninh," +
-          " kiểm soát nguồn xe ra/ vào hiệu quả mà còn giúp giải quyết tốt các hạn chế của việc giữ xe truyền thống.",
+        content:"Hiểu được vai trò quan trọng của yếu tố"+" ánh sáng trong các tòa nhà, căn hộ... Unicloud "+"đã cho ra đời giải pháp chiếu sáng thông minh"+" Smart Lighting: ứng dụng công nghệ hiện đại để "+"điều khiển và tác động vào nguồn sáng nhằm nâng "+"cao chất lượng chiếu sáng và tiết kiệm năng "+"lượng. ",
       },
       {
         id: 1,
-        content:
-          "Với giải pháp Smart Parking của Tập đoàn Unicloud sẽ giúp doanh nghiệp tiết kiệm được nhiều chi phí và nhân lực," +
-          " tăng cường trải nghiệm hữu ích và tiện lợi cho cư dân trong việc dò tìm vị trí bãi đỗ xe hay linh hoạt thanh toán qua ứng dụng.",
+        content:"Người dùng có thể dễ dàng điều chỉnh "+"các thiết bị chiếu sáng, bật tắt Dimming, đổi màu, điều khiển ánh sáng trong hội trường,"+" phòng trưng bày sản phẩm, chạy kịch bản chiếu "+"sáng, bật/tắt theo ý muốn cá nhân mọi lúc"+", mọi nơi bằng Smartphone hoặc bằng giọng nói.",
       },
     ],
     mobileContents: [
@@ -41,16 +36,16 @@ const SectionDefinition = () => {
       },
     ],
     listIcon: [
-      { id: 0, title: "Tiết kiệm thời gian, nguồn lực", icon: iconParkingTime },
-      { id: 1, title: "Đảm bảo an ninh, an toàn", icon: iconSafety },
+      { id: 0, title: "Kiểm soát linh hoạt", icon: iconParkingTime },
+      { id: 1, title: "Tuỳ chỉnh theo nhu cầu", icon: iconSafety },
       {
         id: 2,
-        title: "Giải quyết hạn chế của gửi xe truyền thống",
+        title: "Tương thích mọi thiết bị",
         icon: iconSolving,
       },
-      { id: 3, title: "Lắp đặt, bảo trì nhanh chóng", icon: iconMaintain },
-      { id: 4, title: "Dễ dàng quản lý qua App", icon: iconParkingPhone },
-      { id: 5, title: "Kiểm soát ra/vào hiệu quả", icon: iconModernity },
+      { id: 3, title: "Tiết kiệm điện năng", icon: iconMaintain },
+      { id: 4, title: "Tiết kiệm thời gian", icon: iconParkingPhone },
+      { id: 5, title: "An toàn, tiện lợi", icon: iconModernity },
     ],
   };
 
@@ -62,11 +57,17 @@ const SectionDefinition = () => {
           <div className="left-all-description-container">
             <div className="left-all-description">
               {infoItem.webContents.map((descItem) => {
-                return <p className="web-content-desc">{descItem.content}</p>;
+                return <p 
+                  key={descItem.id}
+                  className="web-content-desc"
+                >{descItem.content}</p>;
               })}
               {infoItem.mobileContents.map((descItem) => {
                 return (
-                  <p className="mobile-content-desc">{descItem.content}</p>
+                  <p 
+                    key={descItem.id}
+                    className="mobile-content-desc"
+                  >{descItem.content}</p>
                 );
               })}
             </div>
@@ -76,7 +77,10 @@ const SectionDefinition = () => {
           <div className="right-content-container">
             {infoItem.listIcon.map((iconItem) => {
               return (
-                <div className="right-icon-item">
+                <div 
+                  key={iconItem.id}
+                  className="right-icon-item"
+                >
                   <img
                     src={iconItem.icon}
                     alt=""
