@@ -10,9 +10,11 @@ const MenuTopMobile = ({ logo, listRoute }) => {
     <nav className="section-menu-top-mobile">
       <div className="menu-top-container">
         <div className="title-box">
-          <div className="logo-box">
-            <img src={logo} alt="" className="logo" />
-          </div>
+          <Link to="/">
+            <div className="logo-box">
+              <img src={logo} alt="" className="logo" />
+            </div>
+          </Link>
           {mobile && (
             <img
               src={menuIcon}

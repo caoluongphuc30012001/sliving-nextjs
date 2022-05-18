@@ -256,6 +256,15 @@
             margin-top: 90px;
         }
     }
+    
+    .home-page-v3{
+        margin-top: 90px;
+    }
+    #about_us_page{
+        .about-us-v3{
+            margin-top: 90px;
+        }
+    }
 }
 @media(max-width:1000px){
     #smart_home_page{
@@ -265,6 +274,14 @@
     }
     #smart_lighting_page{
         .section-smart-lighting-header{
+            margin-top: 64px;
+        }
+    }
+    .home-page-v3{
+        margin-top: 64px;
+    }
+    #about_us_page{
+        .about-us-v3{
             margin-top: 64px;
         }
     }

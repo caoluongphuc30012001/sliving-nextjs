@@ -7,9 +7,11 @@ const MenuTop = ({ logo, listRoute }) => {
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
-        <div className="logo-box">
-          <img src={logo} alt="" className="logo" />
-        </div>
+        <Link to="/">
+          <div className="logo-box">
+            <img src={logo} alt="" className="logo" />
+          </div>
+        </Link>
         <div className="list-item-menu">
           {listRoute.map((item) => {
             return item.listRoute ? (
