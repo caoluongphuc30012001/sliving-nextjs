@@ -62,6 +62,7 @@ function LayoutV3({ children }) {
       id: 5,
       nameRoute: "QUY TRÌNH",
       href: "/implementation-process",
+      active: url.includes("implementation-process"),
     },
   ];
   return (
