@@ -109,6 +109,7 @@
   }
   .row-main-top-security {
     margin-bottom: 25%;
+    margin-top: 64px;
     div {
       padding-left: 0px !important;
       padding-right: 0px !important;
@@ -219,6 +220,13 @@
   line-height: 24px;
   color: #454647;
 }
+@media only screen and (max-width: 1023px) {
+  .div-wrapper-img-smart-security {
+    img {
+      min-height: unset;
+    }
+  }
+}
 @media only screen and (max-width: 575px) {
   .bg-smart-door-locks {
     padding-top: 32px;
@@ -245,6 +253,8 @@
   }
   .col-main-smart-door {
     margin-top: 32px !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .sub-title-smart-door {
     margin-bottom: 16px !important;
