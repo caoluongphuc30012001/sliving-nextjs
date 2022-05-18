@@ -65,7 +65,7 @@ const ProductItemSwiper = ({ slide }) => {
   );
 };
 
-const SectionProductsSlider = ({ listSlide }) => {
+const   SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
 
   const increaseToggleTab = () => {

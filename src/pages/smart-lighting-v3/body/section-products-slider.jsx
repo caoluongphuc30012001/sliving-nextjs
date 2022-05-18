@@ -2,25 +2,16 @@ import React from "react";
 
 import Slider from "../../../components/product/section-products-slider";
 
-import switchItem1 from "../../../images/smart-home-v3/png/rectangle-switch.png";
-
-// import switchItem2 from "@images/smart-home-v3/png/square-switch.png";
-import switchItem2 from "../../../images/smart-home-v3/png/square-switch.png";
-
-// import switchItem3 from "@images/smart-home-v3/png/sensor-switch.png";
-import switchItem3 from "../../../images/smart-home-v3/png/sensor-switch.png";
-
-// import switchItem4 from "@images/smart-home-v3/png/script-switch.png";
-import switchItem4 from "../../../images/smart-home-v3/png/script-switch.png";
-
-// import switchItem5 from "@images/smart-home-v3/png/curtain-motor.png";
-import switchItem5 from "../../../images/smart-home-v3/png/curtain-motor.png";
-
-// import switchItem6 from "@images/smart-home-v3/png/gate-way.png";
-import switchItem6 from "../../../images/smart-home-v3/png/gate-way.png";
-
-// import switchItem7 from "@images/smart-home-v3/png/gateway-slug.png";
-import switchItem7 from "../../../images/smart-home-v3/png/gateway-slug.png";
+import product1 from "../../../images/smart-lighting-v3/png/product1.png";
+import product2 from "../../../images/smart-lighting-v3/png/product2.png";
+import product3 from "../../../images/smart-lighting-v3/png/product3.png";
+import product4 from "../../../images/smart-lighting-v3/png/product4.png";
+import product5 from "../../../images/smart-lighting-v3/png/product5.png";
+import product6 from "../../../images/smart-lighting-v3/png/product6.png";
+import product7 from "../../../images/smart-lighting-v3/png/product7.png";
+import product8 from "../../../images/smart-lighting-v3/png/product8.png";
+import product9 from "../../../images/smart-lighting-v3/png/product9.png";
+import product10 from "../../../images/smart-lighting-v3/png/product10.png";
 
 // import switchItemTelephone from "@images/smart-home-v3/png/telephone-switch.png";
 import switchItemTelephone from "../../../images/smart-home-v3/png/telephone-switch.png";
@@ -34,43 +25,51 @@ import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
 const listSlide = [
   {
     id: 0,
-    title: "Thông Minh",
-    subTitle: "SMART SWITCH",
+    title: "Bộ Điều Khiển Đèn LED",
+    subTitle: "",
     contents: [
       {
         id: 0,
-        title: "Trải nghiệm mới từ lớp vỏ truyền thống:",
-        desc: " Với ngoại hình của dòng cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng mang lại trải nghiệm hoàn toàn mới mẻ và tiện lợi.",
+        title: "",
+        desc: "LED Driver điều chỉnh dòng điện xoay chiều điện áp cao, thành dòng điện một chiều điện áp thấp",
       },
       {
         id: 1,
-        title: "Dễ sử dụng:",
-        desc: " Thông qua mạng Wifi/ Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
+        title: "",
+        desc: "LED Driver bảo vệ đèn LED khỏi biến động điện áp hoặc dòng điện, giữ điện áp và dòng điện chạy qua mạch LED ở mức định mức ổn định",
       },
       {
         id: 2,
-        title: "Tính năng vượt trội:",
-        desc: " Ngoài tính năng điều khiển bật/ tắt cục bộ như thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
+        title: "",
+        desc: "Điều khiển được các đèn LED bằng ứng dụng Smarthome: tắt mở 1 hay 1 cụm LED, tăng giảm độ sáng của 1 hay cả cụm LED, kết hợp với các thiết bị thông minh khác như cảm biến ánh sáng, cảm biến chuyển động để biến căn nhà trở nên thông minh nhất",
       },
     ],
     listItem: [
       {
         id: 0,
-        img: switchItem1,
+        img: product1,
       },
       {
         id: 1,
-        img: switchItem2,
+        img: product2,
+      },
+      {
+        id: 2,
+        img: product3,
       },
     ],
     titles: [
       {
         id: 0,
-        title: "hình chữ nhật",
+        title: "LED Driver 1 kênh",
       },
       {
         id: 1,
-        title: "hình vuông",
+        title: "LED Driver 8 kênh",
+      },
+      {
+        id: 2,
+        title: "LED Driver 10 kênh",
       },
     ],
     phoneImg: null,
@@ -78,39 +77,44 @@ const listSlide = [
   },
   {
     id: 1,
-    title: "Cảm Ứng",
-    subTitle: "TOUCH SWITCH",
+    title: "Cảm Biến",
+    subTitle: "",
     contents: [
       {
         id: 0,
-        title: "Thiết kế sang trọng:",
-        desc: " Sản phẩm có mặt kính cường lực chống trầy, thiết kế đơn giản cùng viền nhôm mạ vàng 18k cao cấp, các góc bo tròn an toàn. được thiết kế tương thích với loại đế âm tường tạo cho người dùng thuận tiện lắp đặt và sử dụng.",
+        title: "",
+        desc: "Cảm biến ánh sáng giúp kiểm soát được mức độ chiếu sáng của hệ thống đèn, giúp tiết kiệm năng lượng của thiết bị",
       },
       {
         id: 1,
-        title: "Tính năng vượt trội:",
-        desc: " Với tính năng bật/tắt cục bộ bằng cảm ứng điện dung, sản phẩm còn có khả năng chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên Gateway.",
+        title: "",
+        desc: "Cảm biến chuyển động giúp phát hiện các chuyển động của thiết bị phát ra bức xạ hồng ngoại để có thể điều chỉnh độ nhạy, chạy kịch bản tắt/ mở đèn, quạt theo nhu cầu người dùng",
+      },
+      {
+        id: 2,
+        title: "",
+        desc: "Thiết lập đơn giản thông qua mạng Wifi/ Zigbee để kết nối tất cả thiết bị như đèn, quạt, điều hòa trong nhà,... giúp trải nghiệm một không gian sống tiện nghi và thông minh",
       },
     ],
 
     listItem: [
       {
         id: 0,
-        img: switchItem3,
+        img: product4,
       },
       {
         id: 1,
-        img: switchItem4,
+        img: product5,
       },
     ],
     titles: [
       {
         id: 0,
-        title: "cảm ứng",
+        title: "Cảm biến ánh sáng",
       },
       {
         id: 1,
-        title: "kịch bản",
+        title: "Cảm biến chuyển động",
       },
     ],
     phoneImg: null,
@@ -118,54 +122,85 @@ const listSlide = [
   },
   {
     id: 2,
-    title: "Động Cơ Rèm",
-    subTitle: "SMART CURTAIN",
+    title: "Đèn LED",
+    subTitle: "",
     contents: [
       {
         id: 0,
-        title: "Thiết kế dễ dàng lắp đặt và sử dụng:",
-        desc: " Toàn bộ sản phẩm bên ngoài được làm bằng nhôm cao cấp, khả năng chịu lực va chạm mạnh, chịu nhiệt và chống ăn mòn cùng với kích thước nhỏ gọn nên phù hợp với nhiều loại hình không gian khác nhau.",
+        title: "",
+        desc: "Công nghệ LED tân tiến cho ra ánh sáng ổn định, chất lượng cao đảm bảo an toàn cho mắt người dùng",
       },
       {
         id: 1,
-        title: "Hoạt động dựa trên tương tác vật lý:",
-        desc: " Với động cơ rèm thông minh, người dùng dễ dàng điều khiển từ xa thông qua ứng dụng hoặc chạy kịch bản mở/đóng theo nhu cầu sử dụng. Khi gặp sự cố về điện, thiết bị vẫn có thể hoạt động bình thường thông qua mở và đóng vật lý dễ dàng.",
+        title: "",
+        desc: "Đèn LED được làm từ chất liệu cao cấp, thân thiện nên có tuổi thọ cao, ít hư hại và phù hợp với nhiều không gian như: chung cư, văn phòng, cửa hàng, trung tâm thương mại,... giúp tiết kiệm năng lượng hiệu quả",
+      },
+      {
+        id: 2,
+        title: "",
+        desc: "Tùy chỉnh nguồn ánh sáng và góc chiếu, hướng chiếu theo từng mục đích khác nhau như trang trí, trưng bày sản phẩm hoặc đơn giản là thắp sáng không gian rộng lớn",
       },
     ],
     listItem: [
       {
         id: 0,
-        img: switchItem5,
+        img: product6,
+      },
+      {
+        id: 1,
+        img: product7,
+      },
+      {
+        id: 2,
+        img: product8,
       },
     ],
-    titles: [],
+    titles: [
+      {
+        id: 0,
+        title: "LED Downlight",
+      },
+      {
+        id: 1,
+        title: "LED Spotlight",
+      },
+      {
+        id: 2,
+        title: "LED Panel 600 x 600",
+      },
+    ],
     phoneImg: null,
     downloadObjects: [],
   },
   {
     id: 3,
     title: "Gateway",
-    subTitle: "GATEWAY",
+    subTitle: "",
     contents: [
       {
         id: 0,
-        title: "Kết nối ổn định & tương thích đa dạng:",
-        desc: " Ngoài tính năng điều khiển bật/ tắt cục bộ như thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
+        title: "",
+        desc: "Bộ điều khiển IoT Gateway là sản phẩm không thể thiếu cho căn nhà thông minh. Thiết bị được xem là trung tâm đầu não giúp điều khiển toàn bộ thiết bị trong hệ sinh thái Sliving",
       },
       {
         id: 1,
-        title: "Độ bảo mật cao:",
-        desc: " Sử dụng công nghệ mã hoá và xác thực đầu cuối, khi điều khiển các thiết bị từ xa thì dữ liệu có liên quan sẽ được mã hoá trong quá trình gửi. Vì vậy đảm bảo quyền riêng tư và tính bảo mật cho dữ liệu người dùng.",
+        title: "",
+        desc: "Bộ điều khiển Gateway tạo ra mối liên kết giữa các thiết bị, thực hiện nhiệm vụ thu tín hiệu, gửi các lệnh trên thiết bị đầu cuối thông qua giao thức không dây Wifi/ Zigbee",
+      },
+      {
+        id: 2,
+        title: "",
+        desc: "Sliving Gateway có thể tương thích các thiết bị đến từ bên thứ ba như Aqara hay Smartthings",
       },
     ],
     listItem: [
       {
         id: 0,
-        img: switchItem6,
+        img: product9,
       },
       {
         id: 1,
-        img: switchItem7,
+        img: product10,
       },
     ],
     titles: [
@@ -175,44 +210,12 @@ const listSlide = [
       },
       {
         id: 1,
-        title: "Gateway Slug",
+        title: "Gateway Plug",
       },
     ],
     phoneImg: null,
     downloadObjects: [],
-  },
-  {
-    id: 4,
-    title: "Ứng Dụng Sliving Điều Khiển Từ Xa",
-    subTitle: "SLIVING APP",
-    contents: [
-      {
-        id: 0,
-        title: "Tính năng vượt trội:",
-        desc: " Thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF. Hỗ trợ điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
-      },
-      {
-        id: 1,
-        title: "Giám sát & cảnh báo:",
-        desc: " Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời đến người dùng.",
-      },
-    ],
-    listItem: [],
-    titles: [],
-    phoneImg: {
-      img: switchItemTelephone,
-    },
-    downloadObjects: [
-      {
-        id: 0,
-        img: appStoreItem,
-      },
-      {
-        id: 1,
-        img: ggPlayItem,
-      },
-    ],
-  },
+  }
 ];
 
 const SectionProductsSlider = () => {

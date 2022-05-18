@@ -21,7 +21,7 @@
         .list-item-menu{
             display: flex;
             align-items: center;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             height: 48px;
             justify-content: space-between;
@@ -243,7 +243,7 @@
         }
     }
 }
-@media(min-width:1000px){
+@media(min-width:1200px){
     .section-menu-top{
         display: block;
     }
@@ -266,7 +266,7 @@
         }
     }
 }
-@media(max-width:1000px){
+@media(max-width:1200px){
     #smart_home_page{
         .section-product-slider{
             margin-top: 64px;
