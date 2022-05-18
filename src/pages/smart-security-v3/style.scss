@@ -227,12 +227,13 @@
     }
   }
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   .bg-smart-door-locks {
     padding-top: 32px;
     padding-bottom: 32px;
   }
   .div-wrapper-img-smart-security {
+    margin-left: 0px;
     position: relative;
     width: 100%;
     img {
@@ -253,8 +254,8 @@
   }
   .col-main-smart-door {
     margin-top: 32px !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .sub-title-smart-door {
     margin-bottom: 16px !important;
@@ -318,4 +319,11 @@
   .detail-partnership-security {
     margin-top: 32px;
   }
+}
+
+#smart-door-locks,
+#smart-elevator,
+#smart-turnstile,
+#face-id-attendance {
+  scroll-margin-top: 60px;
 }

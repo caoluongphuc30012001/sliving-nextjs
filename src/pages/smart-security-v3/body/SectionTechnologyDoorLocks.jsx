@@ -9,8 +9,8 @@ import logoDahua from "../../../images/smart-security-v3/logo-dahua.svg";
 function SectionTechnologyDoorLocks() {
   return (
     <section className="bg-technology-smart-security">
-      <Container className="max-width-1180 px-0">
-        <Row className="padding-left-right gx-md-5 gy-4">
+      <Container className="max-width-1180 padding-left-right">
+        <Row className="gx-md-5 gy-4">
           <Col md={6} className="position-relative">
             <div className="div-wrapper-technology-security">
               <h3 className="title-technology-smart-security">
