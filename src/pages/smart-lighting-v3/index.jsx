@@ -8,11 +8,13 @@ import SectionPopularProductSliving from './body/section-popular-product-sliving
 import SectionProductSliving from './body/section-product-sliving';
 import SectionSwiperVideoSliving from './body/section-swiper-video-sliving';
 import SectionTitlebox from './body/section-titlebox';
+import SectionDefinition from './body/section-definition';
 const SmartLightingPage = () => {
     return (
         <LayoutSmartLighting>
             <main id="smart_lighting_page">
                 <SectionHeader/>
+                <SectionDefinition/>
                 <SectionAboutUs/>
                 <SectionTitlebox/>
                 <SectionProductsSlider/>

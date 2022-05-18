@@ -45,7 +45,7 @@
                     overflow: hidden;
                     position: absolute;
                     right: -47px;
-                    width: 100%;
+                    width: 200%;
                     top:36px;
                     height: 0px;
                     opacity: 0;
@@ -97,7 +97,7 @@
                 color: #0979FD;
             }
             .select-menu-top{
-                width: 200px;
+                // width: 200px;
                 .main-item-select{
                     margin-left: auto;
                 }
@@ -261,7 +261,7 @@
         margin-top: 90px;
     }
     #about_us_page{
-        .about-us-v3{
+        .section-about-us-header{
             margin-top: 90px;
         }
     }
@@ -281,7 +281,7 @@
         margin-top: 64px;
     }
     #about_us_page{
-        .about-us-v3{
+        .section-about-us-header{
             margin-top: 64px;
         }
     }
