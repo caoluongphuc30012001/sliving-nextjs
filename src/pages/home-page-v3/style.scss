@@ -1,5 +1,7 @@
 // Home Page Version 3
-// ======================Begin Core CSS======================
+/*
+* 0.======================Begin Core CSS======================
+*/
 p,
 span,
 h1,
@@ -91,9 +93,19 @@ span.detail-v3 {
   margin-left: -12px !important;
   margin-right: -12px !important;
 }
-// ======================End Core CSS======================
 
-// ======================Begin Button Group CSS======================
+.max-width-1180 {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+/*
+* ======================End Core CSS======================
+*/
+
+/*
+* ======================Begin Button Group CSS======================
+*/
 .btn-group {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -147,35 +159,45 @@ span.detail-v3 {
       -webkit-text-fill-color: transparent;
     }
   }
-
-  // =======Begin Responsive=======
-  @media only screen and (max-width: 992px) {
-    .btn-group {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      .advise-now-btn {
-        margin-right: 0;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 390px) {
-    .btn-group {
-      display: block !important;
-    }
-
-    .advise-now-btn,
-    .learn-more-btn {
-      width: 100% !important;
-      margin-top: 10px;
-    }
-  }
-  // =======End Responsive=======
 }
-// ======================End Button Group CSS======================
 
-// ======================Begin CSS Row Center======================
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .btn-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .advise-now-btn {
+      margin-right: 0;
+    }
+  }
+}
+
+//   .advise-now-btn span,
+//   .learn-more-btn span {
+//     font-size: 12px !important;
+//   }
+// }
+
+@media only screen and (max-width: 390px) {
+  .btn-group {
+    display: block !important;
+  }
+
+  .advise-now-btn,
+  .learn-more-btn {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+}
+// =======End Responsive=======
+/*
+* ======================End Button Group CSS======================
+*/
+
+/*
+* ======================Begin CSS Row Center======================
+*/
 .row-line-center {
   text-align: center;
   .title-eng-line-center {
@@ -183,6 +205,7 @@ span.detail-v3 {
     font-weight: 700;
     font-size: 16px;
     line-height: 133%;
+    // text-align: center;
     letter-spacing: 0.22em;
     color: #0979fd;
   }
@@ -192,6 +215,7 @@ span.detail-v3 {
     font-weight: 700;
     font-size: 36px;
     line-height: 48px;
+    // text-align: center;
     color: #2c2d2e;
   }
 
@@ -210,10 +234,14 @@ span.detail-v3 {
     color: #454647;
     margin-top: -16px;
   }
-  // =======Begin Responsive=======
-  @media only screen and (max-width: 992px) {
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .row-line-center {
     .title-eng-line-center,
     .title-line-center {
+      // text-align: start;
       font-size: 28px;
     }
     .title-eng-line-center {
@@ -227,14 +255,16 @@ span.detail-v3 {
       display: none;
     }
   }
-
-  // =======End Responsive=======
 }
-// ======================End CSS Row Center======================
+// =======End Responsive=======
+/*
+* ======================End CSS Row Center======================
+*/
 
-// ======================Begin Header Page=====================
+/* 
+* 1.======================Begin Header Page======================
+*/
 .home-page-v3 {
-  // margin-top: 80px;
   // =======Begin Custom swiper=======
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -252,102 +282,101 @@ span.detail-v3 {
     background-color: #ffffff !important;
   }
   // =======End Custom swiper=======
-  .mySwiper {
-    position: relative;
-    .view-360 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      button {
-        border-radius: 68px;
-        padding: 8px 24px;
-        background-color: transparent;
-        font-size: 12px;
-        color: #fff;
-        border: 2px solid #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        span {
-          margin-right: 16px;
-        }
+}
+.mySwiper {
+  position: relative;
+  .view-360 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    button {
+      border-radius: 68px;
+      padding: 8px 24px;
+      background-color: transparent;
+      font-size: 12px;
+      color: #fff;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        margin-right: 16px;
       }
     }
   }
-  .bg-img {
-    width: 100%;
+}
+.bg-img {
+  width: 100%;
+}
+
+.home-page-tag {
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+}
+
+.group-contact-header {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  span {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 40px;
+    color: #ffffff;
+    &.hotline {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+
+.group-service-tag {
+  padding: 40px 0;
+}
+
+.card-sub-tag {
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  height: 100%;
+  .card-sub-tag-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 32px;
+    color: #ffffff;
+    padding-top: 10px;
+  }
+  .card-sub-tag-des {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .home-page-v3 .swiper-horizontal > .swiper-pagination-bullets,
+  .home-page-v3 .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .home-page-v3 .swiper-pagination-custom,
+  .home-page-v3 .swiper-pagination-fraction {
+    bottom: 8px !important;
   }
 
   .home-page-tag {
-    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    // padding-top: 20px;
+    padding-bottom: 20px;
   }
-
-  .group-contact-header {
-    display: flex;
-    align-items: center;
-    column-gap: 13px;
-    span {
-      font-family: "SVN-Gilroy";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 29px;
-      line-height: 40px;
-      color: #ffffff;
-      &.hotline {
-        font-family: "SVN-Gilroy";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
-      }
-    }
-  }
-
-  .group-service-tag {
-    padding: 40px 0;
-    margin-left: -12px !important;
-    margin-right: -12px !important;
-  }
-
-  .card-sub-tag {
-    border: 2px solid #ffffff;
-    border-radius: 16px;
-    padding: 16px;
-    height: 100%;
-    .card-sub-tag-title {
-      font-family: "SVN-Gilroy";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 21px;
-      line-height: 32px;
-      color: #ffffff;
-      padding-top: 10px;
-    }
-    .card-sub-tag-des {
-      font-family: "SVN-Gilroy";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 24px;
-      color: #ffffff;
-    }
-  }
-
-  // =======Begin Responsive=======
-  @media only screen and (max-width: 992px) {
-    .swiper-horizontal > .swiper-pagination-bullets,
-    .swiper-pagination-bullets.swiper-pagination-horizontal,
-    .swiper-pagination-custom,
-    .swiper-pagination-fraction {
-      bottom: 0 !important;
-    }
-
-    .home-page-tag {
-      // padding-top: 20px;
-      padding-bottom: 20px;
-    }
-
+  .home-page-v3 {
     .back-ground-mobile,
     .back-ground-mobile {
       display: block !important;
@@ -356,71 +385,55 @@ span.detail-v3 {
     .slider-desktop {
       display: none !important;
     }
+  }
 
-    .group-contact-header {
-      justify-content: center;
-      img {
-        height: 24px;
-        width: 24px;
-      }
-      .contact-header-wrap {
-        display: flex;
-        span {
-          font-size: 14px;
-          &.hotline {
-            margin-right: 8px;
-          }
-        }
-      }
+  .group-contact-header {
+    justify-content: center;
+    img {
+      height: 24px;
+      width: 24px;
     }
-
-    .group-service-tag {
-      padding: 0 !important;
-    }
-
-    .card-sub-tag {
-      padding: 8px;
-      .card-sub-tag-icon {
-        margin: 0 auto;
-      }
-      .card-sub-tag-title {
-        text-align: center;
+    .contact-header-wrap {
+      display: flex;
+      span {
         font-size: 14px;
-      }
-      .card-sub-tag-des {
-        display: none;
-      }
-    }
-    .mySwiper {
-      .view-360 {
-        button {
-          padding: 2px 10px;
+        &.hotline {
+          margin-right: 8px;
         }
       }
     }
   }
-  // =======End Responsive=======
+  .group-service-tag {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    padding: 0;
+  }
+  // .card-sub-tag-col {
+  //   padding-top: 10px;
+  // }
+  .card-sub-tag {
+    padding: 8px;
+    // height: auto;
+    .card-sub-tag-icon {
+      margin: 0 auto;
+    }
+    .card-sub-tag-title {
+      text-align: center;
+      font-size: 14px;
+    }
+    .card-sub-tag-des {
+      display: none;
+    }
+  }
 }
-// ======================End Header Page=====================
+// =======End Responsive=======
+/* 
+* ======================End Header Page======================
+*/
 
-// ======================Begin Section Solution======================
-.section-solution {
-  .row-line-center {
-    text-align: start !important;
-    .img-line-center {
-      justify-content: normal !important;
-    }
-  }
-  @media only screen and (max-width: 992px) {
-    padding-top: 40px !important;
-    .row-line-center {
-      text-align: center !important;
-      .img-line-center {
-        justify-content: center !important;
-      }
-    }
-  }
-}
+/* 
+* 2.======================Begin Section Solution======================
+*/
 .section-solution {
   padding-top: 120px;
   background-color: #f2f6ff;
@@ -460,8 +473,8 @@ span.detail-v3 {
   }
 
   .section-solution-sliving {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     .solution-sliving-img {
       margin-left: -95px;
@@ -518,9 +531,33 @@ span.detail-v3 {
       color: #454647;
     }
   }
+  .row-line-center {
+    text-align: start !important;
+    .img-line-center {
+      justify-content: normal !important;
+    }
+  }
+}
 
-  // =======Begin Responsive=======
-  @media only screen and (max-width: 992px) {
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .section-solution {
+    padding-top: 40px !important;
+    .row-line-center {
+      text-align: center !important;
+      .img-line-center {
+        justify-content: center !important;
+      }
+    }
+    h3.detail-v3 {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 32px;
+      color: #2c2d2e;
+    }
+
     span.detail-v3 {
       margin-bottom: 0;
     }
@@ -532,7 +569,7 @@ span.detail-v3 {
     .solution-about-img-mobile,
     .solution-about-cap {
       display: flex !important;
-      padding-top: 32px;
+      // padding-top: 32px;
       width: 100%;
     }
 
@@ -563,12 +600,15 @@ span.detail-v3 {
       }
     }
   }
-
-  // =======End Responsive=======
 }
-// ======================End Section Solution======================
+// =======End Responsive=======
+/* 
+* ======================End Section Solution======================
+*/
 
-// ======================Begin Section Product======================
+/* 
+* 3.======================Begin Section Product======================
+*/
 .section-product-v3 {
   padding: 120px 0 60px;
   background: #fff !important;
@@ -628,7 +668,7 @@ span.detail-v3 {
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .section-product-v3 {
-    background: #f3f9ff !important;
+    background: #f3f9ff;
     padding-top: 40px;
 
     .card-product-item {
@@ -671,9 +711,13 @@ span.detail-v3 {
   }
 }
 // =======End Responsive=======
-// ======================End Section Product======================
+/* 
+* ======================End Section Product======================
+*/
 
-// ======================Begin Section Smart Parking======================
+/* 
+* 4.======================Begin Section Smart Parking======================
+*/
 .bg-ground-smart-parking {
   border: 1px solid #e1e3e6;
   padding: 60px 0;
@@ -729,17 +773,22 @@ span.detail-v3 {
       margin-top: 25px;
     }
   }
-
-  // =======Begin Responsive=======
-  @media only screen and (max-width: 992px) {
-    .btn-group {
-      display: flex;
-      justify-content: space-around !important;
-    }
+}
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .btn-group {
+    display: flex;
+    justify-content: space-around !important;
   }
-  @media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 768px) {
+  .bg-ground-smart-parking {
     padding: 40px 0;
+  }
+
+  .bg-ground-smart-parking {
     border: none;
+
     .smart-parking-group-img {
       display: none;
     }
@@ -776,12 +825,15 @@ span.detail-v3 {
       }
     }
   }
-
-  // =======End Responsive=======
 }
-// ======================End Section Smart Parking======================
+// =======End Responsive=======
+/* 
+* ======================End Section Smart Parking======================
+*/
 
-// ======================Begin Section Smart Lighting======================
+/* 
+* 5.======================Begin Section Smart Lighting======================
+*/
 .bg-ground-smart-lighting {
   padding-top: 60px;
   padding-bottom: 120px;
@@ -845,10 +897,6 @@ span.detail-v3 {
   .smart-lighting-img-right {
     min-height: 625px;
   }
-
-  .smart-lighting-col-left {
-    padding-right: 40px !important;
-  }
 }
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
@@ -878,18 +926,12 @@ span.detail-v3 {
     .smart-lighting-img-left-mobile {
       padding: 32px 0;
     }
-
-    .smart-lighting-col-left {
-      padding-right: 0px !important;
-    }
-    .btn-group {
-      display: flex;
-      justify-content: space-around !important;
-    }
   }
 }
 // =======End Responsive=======
-// ======================End Section Smart Lighting======================
+/* 
+* ======================End Section Smart Lighting======================
+*/
 
 // ======================Begin Section Feature Project======================
 .bg-ground-feature-project {
