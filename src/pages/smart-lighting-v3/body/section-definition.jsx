@@ -57,11 +57,17 @@ const SectionDefinition = () => {
           <div className="left-all-description-container">
             <div className="left-all-description">
               {infoItem.webContents.map((descItem) => {
-                return <p className="web-content-desc">{descItem.content}</p>;
+                return <p 
+                  key={descItem.id}
+                  className="web-content-desc"
+                >{descItem.content}</p>;
               })}
               {infoItem.mobileContents.map((descItem) => {
                 return (
-                  <p className="mobile-content-desc">{descItem.content}</p>
+                  <p 
+                    key={descItem.id}
+                    className="mobile-content-desc"
+                  >{descItem.content}</p>
                 );
               })}
             </div>
@@ -71,7 +77,10 @@ const SectionDefinition = () => {
           <div className="right-content-container">
             {infoItem.listIcon.map((iconItem) => {
               return (
-                <div className="right-icon-item">
+                <div 
+                  key={iconItem.id}
+                  className="right-icon-item"
+                >
                   <img
                     src={iconItem.icon}
                     alt=""

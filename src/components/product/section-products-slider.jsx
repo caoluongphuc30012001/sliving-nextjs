@@ -46,6 +46,7 @@ const ProductItemSwiper = ({ slide }) => {
           {slide?.titles.map((btnItem) => {
             return (
               <div
+                key={btnItem.id}
                 className={`${
                   swiperIndex === btnItem.id
                     ? "products-btn-item active"
@@ -124,7 +125,9 @@ const   SectionProductsSlider = ({ listSlide }) => {
                   {slide?.downloadObjects?.length > 0 && (
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
-                        <div className="download-app-item">
+                        <div className="download-app-item"
+                          key={object.id}
+                        >
                           <img
                             src={object.img}
                             alt=""
@@ -145,7 +148,9 @@ const   SectionProductsSlider = ({ listSlide }) => {
                 <div className="product-right-all-contents">
                   {slide?.contents &&
                     slide?.contents.map((content) => (
-                      <p className="product-right-desc-container">
+                      <p className="product-right-desc-container"
+                        key={content.id}
+                      >
                         <span className="product-right-main-title">
                           {content.title}
                         </span>
