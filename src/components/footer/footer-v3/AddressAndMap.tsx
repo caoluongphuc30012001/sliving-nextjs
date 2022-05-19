@@ -1,15 +1,14 @@
 import React, { useCallback, useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import { LatLngExpression, Map } from "leaflet";
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 import SectionMap from "./map";
 
-import iconBgPin from "@images/footer-v3/svg/icon-bg-pin.svg";
-import iconBgEmail from "@images/footer-v3/svg/icon-bg-mail.svg";
-import iconBgPhone from "@images/footer-v3/svg/icon-bg-phone.svg";
+import iconBgPin from "/assets/image/svg/icon-bg-pin.svg";
+import iconBgEmail from "/assets/image/svg/icon-bg-mail.svg";
+import iconBgPhone from "/assets/image/svg/icon-bg-phone.svg";
 import { useMemo } from "react";
-
 const isBrowser = typeof window !== "undefined";
 
 const listContact = [
@@ -46,14 +45,14 @@ const listContact = [
   },
 ];
 export default function AddressAndMap() {
-  // const { t } = useTranslation();
-  const [position, setPosition] = useState();
-  const [map, setMap] = useState();
+  const { t } = useTranslation();
+  const [position, setPosition] = useState<LatLngExpression>();
+  const [map, setMap] = useState<Map>();
 
   const MAP_ZOOM = 15;
 
   const onSelectContact = useCallback(
-    (contact) => {
+    (contact: typeof listContact[0]) => {
       if (contact.position && map) {
         setPosition(contact.position);
         map.setView(contact.position, map.getZoom());
@@ -63,9 +62,9 @@ export default function AddressAndMap() {
   );
 
   const onMapCreated = useCallback(
-    (_map) => {
+    (_map: Map) => {
       setMap(_map);
-      _map.setView(listContact[0].position, MAP_ZOOM);
+      _map.setView(listContact[0].position!, MAP_ZOOM);
     },
     [map]
   );
