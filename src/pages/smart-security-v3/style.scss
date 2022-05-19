@@ -125,6 +125,9 @@
   background: #ffffff;
   border: 1px solid #6fc0fe;
   border-radius: 16px;
+  &:hover {
+    box-shadow: 0px 3px 20px 1px rgba(9, 121, 253, 0.2);
+  }
 }
 .row-smart-parking-security {
   display: flex;

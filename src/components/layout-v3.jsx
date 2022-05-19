@@ -2,10 +2,9 @@ import React from "react";
 
 import ButtonRounded from "@components/button/button-card-rounded";
 import Navbar from "@components/menu/index";
-// import FooterV3 from "@components/footer/footer-home-page";
+import FooterV2 from "@components/footer/footer-home-page";
 
 import logo from "../images/smart-home-v3/png/logo.png";
-import Footer from "./footer/footer-v3/footer-v3";
 
 function LayoutV3({ children }) {
   const url = typeof window !== "undefined" ? window.location.href : "";
@@ -70,8 +69,7 @@ function LayoutV3({ children }) {
     <>
       <Navbar listRoute={listRoute} logo={logo} />
       <main>{children}</main>
-      {/* <FooterV3 /> */}
-      <Footer />
+      <FooterV2 />
       <ButtonRounded />
     </>
   );
