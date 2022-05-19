@@ -198,7 +198,7 @@ const SolutionItem = ({ item }) => {
   );
 };
 
-export const SectionParkingSolution = () => {
+const SectionParkingSolution = () => {
   return (
     <section className="section-parking-solution">
       <div className="parking-solution-container">
@@ -214,3 +214,5 @@ export const SectionParkingSolution = () => {
     </section>
   );
 };
+
+export default SectionParkingSolution;
