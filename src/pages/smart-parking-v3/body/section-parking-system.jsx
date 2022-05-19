@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import icon_ellipse from "../../../images/smart-parking-v3/png/icon-ellipse.png";
 import barrier from "../../../images/smart-parking-v3/png/img-barrier.png";
 import cam1 from "../../../images/smart-parking-v3/png/img-camera.png";
@@ -7,11 +7,13 @@ import machine1 from "../../../images/smart-parking-v3/png/img-machine.png";
 import machine2 from "../../../images/smart-parking-v3/png/img-machine2.png";
 import screen from "../../../images/smart-parking-v3/png/img-screen.png";
 import ip13 from "../../../images/smart-parking-v3/png/img-ip13.png";
+import ip_phone from "../../../images/smart-parking-v3/png/icon-iphone-phone.png";
+import ip_map from "../../../images/smart-parking-v3/png/icon-iphone-map.png";
 
 const softwareContentList = [
   {
     id: 0,
-    title: "Phần mềm quản lý bãi đỗ",
+    title: "Quản lý bãi đỗ",
     content: {
       feature: [
         {
@@ -53,7 +55,7 @@ const softwareContentList = [
   },
   {
     id: 1,
-    title: "Phần mềm quản lý chỗ trống",
+    title: "Quản lý chỗ trống",
     content: {
       feature: [
         {
@@ -76,11 +78,15 @@ const softwareContentList = [
       desc: [
         {
           id: 0,
-          text: "Kiểm soát và thông báo các vị trí đỗ xe còn trống thông qua các thanh điều hướng hay các thiết bị đèn báo chỉ dẫn.",
+          text: "Hiển thị số lượng vị trí đỗ xe còn trống",
         },
         {
-          id: 0,
-          text: " Dễ dàng điều hướng phương tiện đến vị trí đỗ thuận tiện và nhanh chóng, tiết kiệm được nhiều thời gian và nhân lực.",
+          id: 1,
+          text: "Chỉ dẫn phương tiện đến vị trí đỗ xe nhanh chóng",
+        },
+        {
+          id: 2,
+          text: "Cho phép người dùng tìm kiếm vị trí đỗ xe trống thông qua ứng dụng",
         },
       ],
     },
@@ -322,6 +328,55 @@ const hardwareItemList = [
   },
 ];
 
+const appMapContent = [
+  {
+    id: 0,
+    title: "APP",
+    icon: ip_phone,
+    content: [
+      {
+        id: 0,
+        content: "Cho phép người dùng đặt chỗ trước",
+      },
+      {
+        id: 1,
+        content: "Xác định đúng vị trí còn trống",
+      },
+      {
+        id: 2,
+        content: "Nhập trước biển số xe",
+      },
+      {
+        id: 3,
+        content: "Dò bản đồ (map) và định vị hướng đi của xe",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "MAP",
+    icon: ip_map,
+    content: [
+      {
+        id: 0,
+        content: "Cho phép người dùng đặt chỗ trước",
+      },
+      {
+        id: 1,
+        content: "Xác định đúng vị trí còn trống",
+      },
+      {
+        id: 2,
+        content: "Nhập trước biển số xe",
+      },
+      {
+        id: 3,
+        content: "Dò bản đồ (map) và định vị hướng đi của xe",
+      },
+    ],
+  },
+];
+
 const HardwareItem = ({ listItem }) => {
   return (
     <div className="item-container">
@@ -329,37 +384,46 @@ const HardwareItem = ({ listItem }) => {
         <div className="text">{listItem.title}</div>
         <div className="underline"></div>
       </div>
-      {listItem.contentList.map((item) => {
+      {listItem.contentList?.map((item) => {
         return (
-          <div className="item-content">
-            <img className="content-left" src={item.img} alt="" />
-            <div className="content-right">
-              <div className="content-right-title">{item.title}</div>
-              <div className="content-right-desc">
-                {item.descList.map((item) => {
-                  return <div className="desc-text">{item}</div>;
-                })}
-              </div>
-              <div className="attribute-list">
-                <div className="attribute-left">
-                  {item.attributeList.map((item) => {
+          <div key={item.id} className="item-sub-container">
+            <div className="item-content">
+              <img className="content-left" src={item.img} alt="" />
+              <div className="content-right">
+                <div className="content-right-title">{item.title}</div>
+                <div className="content-right-desc">
+                  {item.descList.map((item) => {
                     return (
-                      <div className="attribute-left-title">{item.title}</div>
-                    );
-                  })}
-                </div>
-                <div className="attribute-right">
-                  {item.attributeList.map((item) => {
-                    return (
-                      <div className="attribute-right-content">
-                        <div className="text">:</div>
-                        <div className="text">{item.value}</div>
+                      <div key={item.id} className="desc-text">
+                        {item}
                       </div>
                     );
                   })}
                 </div>
+                <div className="attribute-list">
+                  <div className="attribute-left">
+                    {item.attributeList?.map((item) => {
+                      return (
+                        <div key={item.id} className="attribute-left-title">
+                          {item.title}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="attribute-right">
+                    {item.attributeList.map((item) => {
+                      return (
+                        <div key={item.id} className="attribute-right-content">
+                          <div className="text">:</div>
+                          <div className="text">{item.value}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
+            <div className="underline"></div>
           </div>
         );
       })}
@@ -414,8 +478,8 @@ const SectionParkingSystem = () => {
                 </div>
                 <div className="content-text">
                   {softwareContentList[`${seclection}`].content.feature.map(
-                    (item, index) => {
-                      return <div key={index}>{item.text}</div>;
+                    (item) => {
+                      return <div key={item.id}>{item.text}</div>;
                     }
                   )}
                 </div>
@@ -427,8 +491,8 @@ const SectionParkingSystem = () => {
                 </div>
                 <div className="content-text">
                   {softwareContentList[`${seclection}`].content.desc.map(
-                    (item, index) => {
-                      return <div key={index}>{item.text}</div>;
+                    (item) => {
+                      return <div key={item.id}>{item.text}</div>;
                     }
                   )}
                 </div>
@@ -441,6 +505,36 @@ const SectionParkingSystem = () => {
           {hardwareItemList.map((item) => {
             return <HardwareItem key={item.id} listItem={item} />;
           })}
+          <div className="item-container">
+            <div className="title">
+              <div className="text">App &amp; Map</div>
+              <div className="underline"></div>
+            </div>
+            <div className="appNmap-container">
+              <div className="appNmap-img">
+                <img src={ip13} alt=""></img>
+              </div>
+              <div className="appNmap-content-container">
+                {appMapContent.map((item) => {
+                  return (
+                    <div className="appNmap-content">
+                      <div className="appNmap-left">
+                        <img src={item.icon} alt="" />
+                      </div>
+                      <div className="appNmap-right">
+                        <div className="appNmap-right-title">{item.title}</div>
+                        <div className="appNmap-right-text">
+                          {item.content.map((item) => {
+                            return <div>{item.content}</div>;
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

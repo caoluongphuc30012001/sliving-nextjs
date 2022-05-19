@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import item1Img from "../../../images/smart-parking-v3/png/img-solution1.png";
 import item2Img from "../../../images/smart-parking-v3/png/img-solution2.png";
 
@@ -145,7 +145,7 @@ const MobileItem = ({ item }) => {
   );
 };
 
-const IconActive = ({ item }) => {
+const IconActive = ({ item, isActive }) => {
   return (
     <div className="icon-active">
       <div className="content">
@@ -172,7 +172,7 @@ const SolutionItem = ({ item }) => {
         <div className="content-container">
           {item.iconList.map((icon) => {
             return active !== icon.id ? (
-              <div>
+              <div key={icon.id}>
                 <img
                   className="img"
                   src={icon.icon}
@@ -181,13 +181,13 @@ const SolutionItem = ({ item }) => {
                 />
               </div>
             ) : (
-              <IconActive item={icon} />
+              <IconActive key={icon.id} item={icon} />
             );
           })}
         </div>
         <div className="content-container mobile">
           {item.iconList.map((icon) => {
-            return <MobileItem item={icon} />;
+            return <MobileItem key={icon.id} item={icon} />;
           })}
         </div>
       </div>
