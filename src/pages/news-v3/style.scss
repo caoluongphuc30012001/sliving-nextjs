@@ -1,0 +1,144 @@
+#news-page-v3 {
+  .section-news-header {
+    width: 100%;
+    min-height: 400px;
+    .header-container {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background: url(../../images/about-us-v3/png/about-us-banner.png)
+        no-repeat top center/cover;
+      min-height: 400px;
+      z-index: -2;
+      .header-content {
+        position: fixed;
+        width: 100%;
+        min-height: 400px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        z-index: -1;
+        padding: 0px 20px;
+        .content-title {
+          height: 72px;
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 62px;
+          line-height: 72px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          letter-spacing: 1px;
+          color: #ffffff;
+          margin: 16px 0px;
+        }
+        .content-subtitle-container {
+          display: "flex";
+          width: "100%";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .content-subtitle {
+            max-width: 786px;
+            height: 72px;
+            font-family: "SVN Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f2f3f5;
+            margin: 16px 0px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .section-new-cards {
+    margin-top: 72px;
+    .item-card {
+      background: #ffffff;
+      border: 1px solid #e1e3e6;
+      border-radius: 8px;
+      overflow: hidden;
+      .item-card-image {
+        height: 320px;
+        width: 100%;
+      }
+
+      .item-card-content {
+        padding: 16px 24px;
+        .item-card-time {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #76787a;
+        }
+        .item-card-title {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 21px;
+          line-height: 32px;
+          color: #454647;
+          padding: 8px 0;
+        }
+        .item-card-des {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #454647;
+          word-break: break-all;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+        }
+      }
+    }
+  }
+}
+
+.view-more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 8px 45px;
+  margin: 60px auto 0px;
+
+  border-radius: 68px;
+  border: 2px solid transparent;
+  background: linear-gradient(to right, white, white),
+    linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  &:hover {
+    background: linear-gradient(to right, #ddefff, #ddefff),
+      linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+  }
+  &__title {
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__icon {
+    padding-left: 22px;
+  }
+}
