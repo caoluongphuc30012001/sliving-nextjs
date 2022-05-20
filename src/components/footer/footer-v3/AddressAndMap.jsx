@@ -46,13 +46,13 @@ const listContact = [
 ];
 export default function AddressAndMap() {
   const { t } = useTranslation();
-  const [position, setPosition] = useState<LatLngExpression>();
-  const [map, setMap] = useState<Map>();
+  const [position, setPosition] = useState();
+  const [map, setMap] = useState();
 
   const MAP_ZOOM = 15;
 
   const onSelectContact = useCallback(
-    (contact: typeof listContact[0]) => {
+    (contact) => {
       if (contact.position && map) {
         setPosition(contact.position);
         map.setView(contact.position, map.getZoom());
@@ -62,9 +62,9 @@ export default function AddressAndMap() {
   );
 
   const onMapCreated = useCallback(
-    (_map: Map) => {
+    (_map) => {
       setMap(_map);
-      _map.setView(listContact[0].position!, MAP_ZOOM);
+      _map.setView(listContact[0].position, MAP_ZOOM);
     },
     [map]
   );
