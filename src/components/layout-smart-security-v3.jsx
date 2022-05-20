@@ -48,7 +48,7 @@ const listRoute = [
 function LayoutSecurity({ children }) {
   return (
     <>
-      <NavbarSecurity listRoute={listRoute} logo={logo} />
+      <NavbarSecurity listRoute={listRoute} logo={logo} back={true} />
       <main>{children}</main>
       {/* <FooterV2 /> */}
       <Footer />

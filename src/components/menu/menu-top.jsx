@@ -1,16 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
-import search from "../../images/smart-home-v3/svg/search.svg";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import ModalAdvise from "../modal/modal-advise/ModalAdvise";
-
+import backIcon from "../../images/menu/back.svg";
 import "./style.scss";
-const MenuTop = ({ logo, listRoute }) => {
+const MenuTop = ({ logo, listRoute, back }) => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
+        {back && (
+          <Link to="/">
+            <img src={backIcon} alt="" />
+          </Link>
+        )}
         <Link to="/">
           <div className="logo-box">
             <img src={logo} alt="" className="logo" />
