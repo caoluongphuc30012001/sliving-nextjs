@@ -1,16 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
-import search from "../../images/smart-home-v3/svg/search.svg";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import ModalAdvise from "../modal/modal-advise/ModalAdvise";
-
+import backIcon from "../../images/menu/back.svg";
 import "./style.scss";
-const MenuTop = ({ logo, listRoute }) => {
+const MenuTop = ({ logo, listRoute, back }) => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
+        {back && (
+          <Link to="/">
+            <img src={backIcon} alt="" />
+          </Link>
+        )}
         <Link to="/">
           <div className="logo-box">
             <img src={logo} alt="" className="logo" />
@@ -21,8 +25,10 @@ const MenuTop = ({ logo, listRoute }) => {
             return item.listRoute ? (
               <div className="item-menu select-menu-top" key={item.id}>
                 <div className="main-item-select item-select">
-                  <p>{item.nameRoute}</p>
-                  <img src={dropDown} alt="" />
+                  <p className={`${item.nonActive ? "non-active" : ""}`}>
+                    {item.nameRoute}
+                  </p>
+                  {!item.nonActive && <img src={dropDown} alt="" />}
                 </div>
                 <div className="drop-box">
                   {item.listRoute.map((item) => {
@@ -44,10 +50,14 @@ const MenuTop = ({ logo, listRoute }) => {
           })}
         </div>
         <div className="support-box">
-          <button className="btn-advise" onClick={() => setModalShow(true)}>
-            <div className="content">TƯ VẤN NGAY</div>
-          </button>
-          <img src={search} alt="" className="search" />
+          <div className="btn-group">
+            <button
+              className="learn-more-btn"
+              onClick={() => setModalShow(true)}
+            >
+              <span>TƯ VẤN NGAY</span>
+            </button>
+          </div>
         </div>
       </div>
       <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />

@@ -49,7 +49,7 @@ const listRoute = [
 function LayoutSmartLighting({ children }) {
   return (
     <>
-      <NavbarLighting logo={logo} listRoute={listRoute} />
+      <NavbarLighting logo={logo} listRoute={listRoute} back={true} />
       <main>{children}</main>
       {/* <FooterV2 /> */}
       <Footer />

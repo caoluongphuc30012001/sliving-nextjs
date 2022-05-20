@@ -12,7 +12,7 @@ const SectionDropdown = ({listItem}) => {
             </div>
             <div className="drop-down-wrap">
                 <div className="left-part">
-                    <Accordion defaultActiveKey="0">
+                    <Accordion defaultActiveKey={0}>
                         {listItem.map(item=>{
                             return(
                                 <Accordion.Item eventKey={item.id}

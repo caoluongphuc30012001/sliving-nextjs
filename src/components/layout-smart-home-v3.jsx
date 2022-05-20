@@ -48,7 +48,7 @@ const listRoute = [
 function LayoutSmartHome({ children }) {
   return (
     <>
-      <NavbarSmartHome listRoute={listRoute} logo={logo} />
+      <NavbarSmartHome listRoute={listRoute} logo={logo} back={true} />
       <main>{children}</main>
       {/* <FooterV2 /> */}
       <Footer />

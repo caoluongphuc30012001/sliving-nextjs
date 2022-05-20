@@ -24,6 +24,7 @@ function LayoutV3({ children }) {
     },
     {
       id: 2,
+      nonActive:true,
       nameRoute: "GIẢI PHÁP",
       listRoute: [
         {
