@@ -107,7 +107,7 @@ const SectionHeader = () => {
             noGutters={true}
             className="d-flex justify-content-center align-items-center"
           >
-            <Col lg={3} className="gy-3 px-0">
+            <Col lg={3} className="gy-3">
               <div className="group-contact-header">
                 <img
                   src={iconPhone}
@@ -117,11 +117,11 @@ const SectionHeader = () => {
                 />
                 <div className="contact-header-wrap">
                   <span className="hotline">Hotline</span>
-                  <span>(023) 2665 5559</span>
+                  <span>19006054</span>
                 </div>
               </div>
             </Col>
-            <Col lg={9} className="gy-3 px-0">
+            <Col lg={9} className="gy-3">
               <Row className="group-service-tag" md={3}>
                 {arrService.map((service) => (
                   <Col key={service.id} className="gx-4 card-sub-tag-col">

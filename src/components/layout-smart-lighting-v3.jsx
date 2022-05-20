@@ -31,25 +31,25 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/#",
+    href: "#",
     active: true,
   },
   {
     id: 2,
     nameRoute: "QUY TRÌNH",
-    href: "/#",
+    href: "/implementation-process",
   },
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/#",
+    href: "/contact-us-v3",
   },
 ];
 
 function LayoutSmartLighting({ children }) {
   return (
     <>
-      <NavbarLighting logo={logo} listRoute={listRoute} />
+      <NavbarLighting logo={logo} listRoute={listRoute} back={true} />
       <main>{children}</main>
       {/* <FooterV2 /> */}
       <Footer />

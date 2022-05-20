@@ -3,7 +3,7 @@ import { Image, Modal } from "react-bootstrap";
 import iconV from "../../../images/icon/icon-v-thanks.svg";
 import "./ModalThanks.scss";
 
-function ModalThanks(props: any) {
+function ModalThanks(props) {
   return (
     <Modal
       /* eslint-disable-next-line react/jsx-props-no-spreading */

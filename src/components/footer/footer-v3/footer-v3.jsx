@@ -28,16 +28,16 @@ function BuildInformation() {
         Kết nối với chúng tôi
       </h4>
       <div className="group-icon-social d-flex justify-content-center align-items-center">
-        <a href target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <img src={iconFb} alt="facebook" />
         </a>
-        <a href target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <img src={iconYtn} alt="youtube" />
         </a>
-        <a href target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <img src={iconPhone} alt="phone" />
         </a>
-        <a href target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <img src={iconEmail} alt="email" />
         </a>
       </div>
@@ -73,7 +73,12 @@ function BuildApps() {
   return (
     <div className="footer-apps">
       <h4 className="text-white fw-bold fs-4">Kho ứng dụng</h4>
-      <img className="my-3" src={iconApple} alt="" />
+      <a
+        href="https://apps.apple.com/us/app/sliving/id1621276530"
+        target="_blank"
+      >
+        <img className="my-3" src={iconApple} alt="" />
+      </a>
       <img className="my-3" src={iconChPlay} alt="" />
       {/* <img src={qrCode} alt="" /> */}
     </div>
@@ -95,10 +100,10 @@ function Footer() {
 
   const listHref = [
     { id: 0, title: "Điều khoản sử dụng", url: "/home-page-v3" },
-    { id: 0, title: "Điều khoản sử dụng", url: "/home-page-v3" },
-    { id: 0, title: "Cam kết bảo mật", url: "/home-page-v3" },
-    { id: 0, title: "Chính sách bảo vệ dữ liệu", url: "/home-page-v3" },
-    { id: 0, title: "Báo cáo rủi ro & vi phạm", url: "/home-page-v3" },
+    { id: 1, title: "Điều khoản sử dụng", url: "/home-page-v3" },
+    { id: 2, title: "Cam kết bảo mật", url: "/home-page-v3" },
+    { id: 3, title: "Chính sách bảo vệ dữ liệu", url: "/home-page-v3" },
+    { id: 4, title: "Báo cáo rủi ro & vi phạm", url: "/home-page-v3" },
     // { id: 1, title: t('footer.link.privacy'), url: '#' },
     // { id: 2, title: t('footer.link.nda'), url: '#' },
     // { id: 3, title: t('footer.link.personalPolicy'), url: '#' },

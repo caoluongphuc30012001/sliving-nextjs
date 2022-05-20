@@ -6,8 +6,11 @@ import imgSmartLightingRight from "@images/home-page-v3/png/img-smart-lighting-r
 import imgSmartRemoteControl from "@images/home-page-v3/svg/icon-remote-control.svg";
 import imgSmartBrightnessControl from "@images/home-page-v3/svg/icon-brightness-control.svg";
 import imgSmartEnergy from "@images/home-page-v3/svg/icon-energy.svg";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 function SectionSmartLighting() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   const listItemCard = [
     {
       id: 0,
@@ -37,8 +40,8 @@ function SectionSmartLighting() {
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
         </div>
-        <Row className="smart-lighting-row">
-          <Col lg={7} md={12} className="px-0 smart-lighting-col-left">
+        <Row className="smart-lighting-row gx-5">
+          <Col lg={7} md={12} className="smart-lighting-col-left">
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
                 Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
@@ -71,7 +74,10 @@ function SectionSmartLighting() {
               </p>
             </div>
             <div className="btn-group">
-              <button className="advise-now-btn">
+              <button
+                className="advise-now-btn"
+                onClick={() => setModalShow(true)}
+              >
                 <span>Tư vấn ngay</span>
               </button>
               <button className="learn-more-btn">
@@ -83,10 +89,10 @@ function SectionSmartLighting() {
               className="smart-lighting-img-left"
             />
           </Col>
-          <Col lg={5} md={12} className="px-0 smart-lighting-col-right">
+          <Col lg={5} md={12} className="smart-lighting-col-right">
             <Row className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
-                <Col className="smart-lighting-card px-0" key={itemCard.id}>
+                <Col className="smart-lighting-card" key={itemCard.id}>
                   <div className="smart-lighting-top">
                     <Image
                       src={itemCard.linkImg}
@@ -112,6 +118,7 @@ function SectionSmartLighting() {
           </Col>
         </Row>
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 }

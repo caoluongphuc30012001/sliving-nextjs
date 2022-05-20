@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Row, Form, FloatingLabel, Modal, FormControl } from "react-bootstrap";
+import { Form, Modal, FormControl } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
 
-function ModalAdvise(props: any) {
+function ModalAdvise(props) {
   console.log("prop", props);
   const { onHide } = props;
 
@@ -21,7 +21,7 @@ function ModalAdvise(props: any) {
   const googleSheetAPI =
     "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data) => {
     console.log("data", data);
 
     // const formData = new FormData();

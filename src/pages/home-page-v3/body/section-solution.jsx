@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import imgRight from "@images/home-page-v3/img-solution-smart.png";
 import imgLeft from "@images/home-page-v3/img-smart-life.png";
@@ -79,7 +80,7 @@ const SectionSolution = () => {
     <section className="section-solution">
       <div className="container-1220 section-solution-about">
         <Row className="justify-content-around">
-          <Col lg={6} className="px-0">
+          <Col lg={6} className="">
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
@@ -114,11 +115,13 @@ const SectionSolution = () => {
                 <li key={solution.id}>{solution.desc}</li>
               ))}
             </ul>
-            <button type="button" className="btn-gradient-blue">
-              <span>Khám phá ngay</span>
-            </button>
+            <Link to="/about-us-v3">
+              <button type="button" className="btn-gradient-blue">
+                <span>Khám phá ngay</span>
+              </button>
+            </Link>
           </Col>
-          <Col lg={6} className="px-0">
+          <Col lg={6} className="">
             <img src={imgRight} alt="" className="solution-about-img" />
           </Col>
         </Row>
@@ -128,7 +131,7 @@ const SectionSolution = () => {
           <Col lg={6} className="solution-sliving-img">
             <img src={imgLeft} alt="" />
           </Col>
-          <Col lg={6} className=" solution-sliving-col-right px-0">
+          <Col lg={6} className=" solution-sliving-col-right ">
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">

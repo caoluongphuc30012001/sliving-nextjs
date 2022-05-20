@@ -31,24 +31,24 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/#",
+    href: "#",
     active: true,
   },
   {
     id: 2,
     nameRoute: "QUY TRÌNH",
-    href: "/#",
+    href: "/implementation-process",
   },
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/home-page-v3",
+    href: "/contact-us-v3",
   },
 ];
 function LayoutSmartHome({ children }) {
   return (
     <>
-      <NavbarSmartHome listRoute={listRoute} logo={logo} />
+      <NavbarSmartHome listRoute={listRoute} logo={logo} back={true} />
       <main>{children}</main>
       {/* <FooterV2 /> */}
       <Footer />

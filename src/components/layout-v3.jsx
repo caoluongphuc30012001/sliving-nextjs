@@ -14,7 +14,10 @@ function LayoutV3({ children }) {
       id: 0,
       nameRoute: "TRANG CHỦ",
       href: "/",
-      active: !url.includes("about-us-v3"),
+      active:
+        !url.includes("about-us-v3") &&
+        !url.includes("implementation-process") &&
+        !url.includes("news-v3"),
     },
     {
       id: 1,
@@ -24,27 +27,28 @@ function LayoutV3({ children }) {
     },
     {
       id: 2,
+      nonActive: true,
       nameRoute: "GIẢI PHÁP",
       listRoute: [
         {
           id: 0,
+          nameRoute: "SMART HOME",
+          href: "/smart-home-v3",
+        },
+        {
+          id: 1,
           nameRoute: "SMART LIGHTING",
           href: "/smart-lighting-v3",
         },
         {
-          id: 1,
+          id: 2,
           nameRoute: "SMART PARKING",
           href: "/smart-parking-v3",
         },
         {
-          id: 2,
+          id: 3,
           nameRoute: "SMART SECURITY",
           href: "/smart-security-v3",
-        },
-        {
-          id: 3,
-          nameRoute: "SMART HOME",
-          href: "/smart-home-v3",
         },
       ],
     },
@@ -57,7 +61,8 @@ function LayoutV3({ children }) {
     {
       id: 4,
       nameRoute: "TIN TỨC",
-      href: "/news-v3",
+      href: "https://unicloud.com.vn/news",
+      active: url.includes("news-v3"),
     },
     {
       id: 5,
