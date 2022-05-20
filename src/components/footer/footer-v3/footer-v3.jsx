@@ -100,7 +100,7 @@ function Footer() {
 
   const listHref = [
     { id: 0, title: "Điều khoản sử dụng", url: "/home-page-v3" },
-    { id: 0, title: "Điều khoản sử dụng", url: "/home-page-v3" },
+    { id: 0, title: "Chính sách bảo mật", url: "/home-page-v3" },
     { id: 0, title: "Cam kết bảo mật", url: "/home-page-v3" },
     { id: 0, title: "Chính sách bảo vệ dữ liệu", url: "/home-page-v3" },
     { id: 0, title: "Báo cáo rủi ro & vi phạm", url: "/home-page-v3" },
