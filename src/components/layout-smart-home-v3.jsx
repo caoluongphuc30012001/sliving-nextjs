@@ -42,7 +42,7 @@ const listRoute = [
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/contact-us-v33",
+    href: "/contact-us-v3",
   },
 ];
 function LayoutSmartHome({ children }) {
