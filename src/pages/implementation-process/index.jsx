@@ -5,10 +5,13 @@ import LayoutV3 from "../../components/layout-v3";
 import SectionHelpMore from "../../components/help-more/section-help-more";
 import iconArrow from "@images/icon/icon-arrow-process.svg";
 import iconQuestion from "@images/icon/icon-question-process.svg";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import "./style.scss";
 
 const ImplementationProcess = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <LayoutV3>
       <main>
@@ -115,7 +118,7 @@ const ImplementationProcess = () => {
                     Giải đáp mọi thắc mắc của khách hàng về nhu cầu lắp đặt gói
                     giải pháp thông minh và quy trình triển khai dự án.
                   </p>
-                  <button type="button">
+                  <button type="button" onClick={() => setModalShow(true)}>
                     <span>Tư vấn ngay</span>
                   </button>
                 </div>
@@ -127,6 +130,7 @@ const ImplementationProcess = () => {
         </section>
         <SectionHelpMore />
       </main>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </LayoutV3>
   );
 };
