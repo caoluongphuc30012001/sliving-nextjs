@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import SectionTopSmartSecurity from "./body/SectionTopSmartSecurity";
 import SectionSmartParking from "./body/SectionSmartParking";

@@ -6,8 +6,11 @@ import imgSmartLightingRight from "@images/home-page-v3/png/img-smart-lighting-r
 import imgSmartRemoteControl from "@images/home-page-v3/svg/icon-remote-control.svg";
 import imgSmartBrightnessControl from "@images/home-page-v3/svg/icon-brightness-control.svg";
 import imgSmartEnergy from "@images/home-page-v3/svg/icon-energy.svg";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 function SectionSmartLighting() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   const listItemCard = [
     {
       id: 0,
@@ -71,7 +74,10 @@ function SectionSmartLighting() {
               </p>
             </div>
             <div className="btn-group">
-              <button className="advise-now-btn">
+              <button
+                className="advise-now-btn"
+                onClick={() => setModalShow(true)}
+              >
                 <span>Tư vấn ngay</span>
               </button>
               <button className="learn-more-btn">
@@ -112,6 +118,7 @@ function SectionSmartLighting() {
           </Col>
         </Row>
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 }

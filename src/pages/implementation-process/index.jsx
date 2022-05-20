@@ -1,5 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 import { Col, Container, Row, Image } from "react-bootstrap";
 import LayoutV3 from "../../components/layout-v3";
 import SectionHelpMore from "../../components/help-more/section-help-more";

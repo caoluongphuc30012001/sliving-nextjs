@@ -36,7 +36,7 @@ const listRoute = [
   {
     id: 2,
     nameRoute: "QUY TRÌNH",
-    href: "#",
+    href: "/implementation-process",
   },
   {
     id: 3,

@@ -453,7 +453,7 @@
 ///=========================End Section Header
 ///=========================Begin Section Smart Parking
 
-.smart-parking-definition-v3 {
+.smart-lighting-definition-v3 {
     width: 100%;
     height: 624px;
     display: flex;
@@ -560,7 +560,7 @@
 // Section Smart Parking
 
 @media only screen and (max-width: 1200px) {
-    .smart-parking-definition-v3 {
+    .smart-lighting-definition-v3 {
       height: 824px;
       .content {
         flex-direction: column;
@@ -586,7 +586,7 @@
   }
   
   @media only screen and (max-width: 620px) {
-    .smart-parking-definition-v3 {
+    .smart-lighting-definition-v3 {
       padding: 40px 20px;
       .content {
         .left-content {
@@ -603,7 +603,7 @@
   }
   
   @media only screen and (max-width: 412px) {
-    .smart-parking-definition-v3 {
+    .smart-lighting-definition-v3 {
       .content {
         .left-content {
           max-width: 388px;
@@ -623,7 +623,7 @@
   }
   
   @media only screen and (max-width: 400px) {
-    .smart-parking-definition-v3 {
+    .smart-lighting-definition-v3 {
       .content {
         .left-content {
           max-width: 388px;

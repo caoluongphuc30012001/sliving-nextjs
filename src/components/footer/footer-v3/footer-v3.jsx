@@ -73,7 +73,12 @@ function BuildApps() {
   return (
     <div className="footer-apps">
       <h4 className="text-white fw-bold fs-4">Kho ứng dụng</h4>
-      <img className="my-3" src={iconApple} alt="" />
+      <a
+        href="https://apps.apple.com/us/app/sliving/id1621276530"
+        target="_blank"
+      >
+        <img className="my-3" src={iconApple} alt="" />
+      </a>
       <img className="my-3" src={iconChPlay} alt="" />
       {/* <img src={qrCode} alt="" /> */}
     </div>

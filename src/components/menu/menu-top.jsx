@@ -41,7 +41,7 @@ const MenuTop = ({ logo, listRoute, back }) => {
                 </div>
               </div>
             ) : (
-              <Link to={item.href} key={item.id}>
+              <Link to={item.href} key={item.id} target="_blank">
                 <div className={`item-menu ${item.active ? "active" : ""}`}>
                   {item.nameRoute}
                 </div>

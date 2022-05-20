@@ -24,28 +24,28 @@ function LayoutV3({ children }) {
     },
     {
       id: 2,
-      nonActive:true,
+      nonActive: true,
       nameRoute: "GIẢI PHÁP",
       listRoute: [
         {
           id: 0,
+          nameRoute: "SMART HOME",
+          href: "/smart-home-v3",
+        },
+        {
+          id: 1,
           nameRoute: "SMART LIGHTING",
           href: "/smart-lighting-v3",
         },
         {
-          id: 1,
+          id: 2,
           nameRoute: "SMART PARKING",
           href: "/smart-parking-v3",
         },
         {
-          id: 2,
+          id: 3,
           nameRoute: "SMART SECURITY",
           href: "/smart-security-v3",
-        },
-        {
-          id: 3,
-          nameRoute: "SMART HOME",
-          href: "/smart-home-v3",
         },
       ],
     },
