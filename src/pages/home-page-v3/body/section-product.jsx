@@ -6,6 +6,7 @@ import imgSwitch from "@images/home-page-v3/img-switch.png";
 import imgApp from "@images/home-page-v3/img-app.png";
 import imgTouch from "@images/home-page-v3/img-touch.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import { Col, Image, Row } from "react-bootstrap";
 
@@ -19,6 +20,8 @@ export const Divider = styled("div")`
 `;
 
 const SectionProduct = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
   const arrSmartTouch = [
     {
       id: 0,
@@ -195,7 +198,10 @@ const SectionProduct = () => {
                   ))}
                 </ul>
                 <div className="btn-group">
-                  <button className="advise-now-btn">
+                  <button
+                    className="advise-now-btn"
+                    onClick={() => setModalShow(true)}
+                  >
                     <span>Tư vấn ngay</span>
                   </button>
                   <button className="learn-more-btn">
@@ -207,6 +213,7 @@ const SectionProduct = () => {
           );
         })}
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 };

@@ -7,7 +7,11 @@ import imgItemCart3 from "@images/home-page-v3/svg/icon-smart-parking-item3.svg"
 import imgItemCart4 from "@images/home-page-v3/svg/icon-smart-parking-item4.svg";
 import imgSmartParking from "@images/home-page-v3/png/img-smart-parking.png";
 import imgSmartParkingMobile from "@images/home-page-v3/png/img-smart-parking-mobile.png";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+
 function SectionSmartParking() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   const listItemCard = [
     {
       id: 0,
@@ -75,7 +79,7 @@ function SectionSmartParking() {
           ))}
         </Row>
         <div className="btn-group">
-          <button className="advise-now-btn">
+          <button className="advise-now-btn" onClick={() => setModalShow(true)}>
             <span>Tư vấn ngay</span>
           </button>
           <button className="learn-more-btn">
@@ -83,6 +87,7 @@ function SectionSmartParking() {
           </button>
         </div>
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 }
