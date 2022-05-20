@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import imgRight from "@images/home-page-v3/img-solution-smart.png";
 import imgLeft from "@images/home-page-v3/img-smart-life.png";
@@ -114,9 +115,11 @@ const SectionSolution = () => {
                 <li key={solution.id}>{solution.desc}</li>
               ))}
             </ul>
-            <button type="button" className="btn-gradient-blue">
-              <span>Khám phá ngay</span>
-            </button>
+            <Link to="/about-us-v3">
+              <button type="button" className="btn-gradient-blue">
+                <span>Khám phá ngay</span>
+              </button>
+            </Link>
           </Col>
           <Col lg={6} className="">
             <img src={imgRight} alt="" className="solution-about-img" />
