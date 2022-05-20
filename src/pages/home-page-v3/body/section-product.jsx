@@ -157,7 +157,7 @@ const SectionProduct = () => {
                   : "card-product flex-row-reverse"
               } `}
             >
-              <Col lg={7} className="px-0">
+              <Col lg={7} className="">
                 <img
                   src={smart.image}
                   alt=""
@@ -165,7 +165,7 @@ const SectionProduct = () => {
                   style={{ float: `${smart.id % 2 === 0 ? "left" : "right"}` }}
                 />
               </Col>
-              <Col lg={5} className="px-0">
+              <Col lg={5} className="">
                 <h3 className="card-product-title">{smart.title}</h3>
                 <h4 className="card-product-subtitle">{smart.subTitle}</h4>
                 <div className="card-product-img-mobile d-none">

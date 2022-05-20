@@ -79,7 +79,7 @@ const SectionSolution = () => {
     <section className="section-solution">
       <div className="container-1220 section-solution-about">
         <Row className="justify-content-around">
-          <Col lg={6} className="px-0">
+          <Col lg={6} className="">
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
@@ -118,7 +118,7 @@ const SectionSolution = () => {
               <span>Khám phá ngay</span>
             </button>
           </Col>
-          <Col lg={6} className="px-0">
+          <Col lg={6} className="">
             <img src={imgRight} alt="" className="solution-about-img" />
           </Col>
         </Row>
@@ -128,7 +128,7 @@ const SectionSolution = () => {
           <Col lg={6} className="solution-sliving-img">
             <img src={imgLeft} alt="" />
           </Col>
-          <Col lg={6} className=" solution-sliving-col-right px-0">
+          <Col lg={6} className=" solution-sliving-col-right ">
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">

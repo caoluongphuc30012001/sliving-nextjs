@@ -17,7 +17,7 @@ function SectionSmartParking() {
     {
       id: 1,
       linkImg: imgItemCart2,
-      title: "Đặt chỗ trước dẫn đường qua vị trí đỗ bằng App.",
+      title: "Tích hợp bản đồ vào App dễ dàng định vị.",
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ function SectionSmartParking() {
 
         <Row lg={4} md={4} xs={1} className="smart-parking-cards">
           {listItemCard.map((itemCard) => (
-            <Col className="gx-5 smart-parking-card-col px-0">
+            <Col className="gx-5 smart-parking-card-col">
               <div className="smart-parking-card">
                 <div className="smart-parking-card-top">
                   <Image

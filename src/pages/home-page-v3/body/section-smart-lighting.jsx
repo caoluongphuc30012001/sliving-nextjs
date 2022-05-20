@@ -37,8 +37,8 @@ function SectionSmartLighting() {
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
         </div>
-        <Row className="smart-lighting-row">
-          <Col lg={7} md={12} className="px-0 smart-lighting-col-left">
+        <Row className="smart-lighting-row gx-5">
+          <Col lg={7} md={12} className="smart-lighting-col-left">
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
                 Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
@@ -83,10 +83,10 @@ function SectionSmartLighting() {
               className="smart-lighting-img-left"
             />
           </Col>
-          <Col lg={5} md={12} className="px-0 smart-lighting-col-right">
+          <Col lg={5} md={12} className="smart-lighting-col-right">
             <Row className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
-                <Col className="smart-lighting-card px-0" key={itemCard.id}>
+                <Col className="smart-lighting-card" key={itemCard.id}>
                   <div className="smart-lighting-top">
                     <Image
                       src={itemCard.linkImg}
