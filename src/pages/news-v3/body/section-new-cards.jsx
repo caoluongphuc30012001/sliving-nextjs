@@ -156,11 +156,11 @@ function SectionNewCards() {
         <Row lg={2} md={2} xs={1} className="m-left-right-24">
           {listItemCard.slice(0, visible).map((itemCard) => (
             <Col className="gx-5 gy-5" key={itemCard.id}>
-              <div class="item-card">
-                <img src={imgBackground} alt="" class="item-card-image" />
-                <div class="item-card-content">
+              <div className="item-card">
+                <img src={imgBackground} alt="" className="item-card-image" />
+                <div className="item-card-content">
                   <span classname="item-card-time">Thứ Năm, 28/4/2022</span>
-                  <h3 class="item-card-title">{itemCard.title}</h3>
+                  <h3 className="item-card-title">{itemCard.title}</h3>
                   <p className="item-card-des">{itemCard.desc}</p>
                 </div>
               </div>

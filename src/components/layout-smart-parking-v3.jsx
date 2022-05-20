@@ -30,7 +30,7 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/#",
+    href: "#",
     active: true,
   },
   {
@@ -41,7 +41,7 @@ const listRoute = [
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/home-page-v3",
+    href: "/contact-us-v3",
   },
 ];
 function LayoutParking({ children }) {

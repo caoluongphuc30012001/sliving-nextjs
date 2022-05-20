@@ -14,7 +14,7 @@ function LayoutV3({ children }) {
       id: 0,
       nameRoute: "TRANG CHỦ",
       href: "/",
-      active: !url.includes("about-us-v3"),
+      active: !url.includes("about-us-v3")&&!url.includes("implementation-process")&&!url.includes("news-v3"),
     },
     {
       id: 1,
@@ -58,7 +58,8 @@ function LayoutV3({ children }) {
     {
       id: 4,
       nameRoute: "TIN TỨC",
-      href: "https://unicloud.com.vn/news",
+      href: "/news-v3",
+      active: url.includes("news-v3"),
     },
     {
       id: 5,

@@ -68,6 +68,9 @@ body {
             font-size: 16px;
             line-height: 24px;
             color: #2c2d2e;
+            &:hover{
+              font-weight: 600;
+            }
           }
           .item-select:last-child {
             border-bottom: none;
