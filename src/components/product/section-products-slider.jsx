@@ -32,18 +32,16 @@ const ProductItemSwiper = ({ slide }) => {
             setSwiperIndex(s.realIndex);
           }}
         >
-          {slide?.listItem.map((slideItem) => (
-            <>
+          {slide?.listItem.map((slideItem,index) => (
               <SwiperSlide key={slideItem.id}>
                 <img className="swiper-image" src={slideItem.img} alt="" />
               </SwiperSlide>
-            </>
           ))}
         </Swiper>
       )}
       {slide?.titles && slide?.titles.length > 0 && (
         <div className="banner-products-btn-group">
-          {slide?.titles.map((btnItem) => {
+          {slide?.titles.map((btnItem,index) => {
             return (
               <div
                 key={btnItem.id}

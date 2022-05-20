@@ -1,18 +1,18 @@
 import React, { useState,useEffect } from "react";
-import SectionProductMobile from '../../../components/product/section-product-mobile'
-import SectionProduct from '../../../components/product/section-product'
+import SectionProductMobile from './section-product-mobile'
+import SectionProduct from './section-product'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import product1 from "../../../images/smart-home-v3/jpg/product1.jpg";
-import product2 from "../../../images/smart-home-v3/jpg/product2.jpg";
-import product3 from "../../../images/smart-home-v3/jpg/product3.jpg";
-import product4 from "../../../images/smart-home-v3/jpg/product4.jpg";
-import product5 from "../../../images/smart-home-v3/jpg/product5.jpg";
-import product6 from "../../../images/smart-home-v3/jpg/product6.jpg";
+import product1 from "../../images/smart-home-v3/jpg/product1.jpg";
+import product2 from "../../images/smart-home-v3/jpg/product2.jpg";
+import product3 from "../../images/smart-home-v3/jpg/product3.jpg";
+import product4 from "../../images/smart-home-v3/jpg/product4.jpg";
+import product5 from "../../images/smart-home-v3/jpg/product5.jpg";
+import product6 from "../../images/smart-home-v3/jpg/product6.jpg";
 import '../style.scss'
 const isBrowser = typeof window !== "undefined";
-const SectionProductSliving = () => {
+const SectionProductMain = () => {
     const listProduct = [
         {
         id: 0,
@@ -132,4 +132,4 @@ const SectionProductSliving = () => {
     );
 };
 
-export default SectionProductSliving;
+export default SectionProductMain;
