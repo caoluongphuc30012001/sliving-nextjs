@@ -31,18 +31,18 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/#",
+    href: "#",
     active: true,
   },
   {
     id: 2,
     nameRoute: "QUY TRÌNH",
-    href: "/#",
+    href: "#",
   },
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/#",
+    href: "/contact-us-v3",
   },
 ];
 
