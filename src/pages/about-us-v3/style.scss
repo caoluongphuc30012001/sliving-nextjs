@@ -474,6 +474,7 @@ img {
               width: 400px;
             }
           }
+          transition: 0.6s;
         }
         .swiper-item-bottom-line{
           background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
@@ -551,6 +552,14 @@ img {
           margin-bottom: 10px;
           transition: 0.5s;
         }
+      }
+      .swiper-item-bottom-line{
+        background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
+        border-radius: 2.5px;
+        width: 160%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.5s;
       }
     }
   }
