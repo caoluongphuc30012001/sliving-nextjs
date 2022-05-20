@@ -18,17 +18,14 @@ import dualrect_b from "../../../images/smart-parking-v3/png/icon-dual-rect-b.pn
 import wifi_b from "../../../images/smart-parking-v3/png/icon-wifi-b.png";
 import security_b from "../../../images/smart-parking-v3/png/icon-security-b.png";
 
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+
 const ListItem = [
   {
     id: 0,
     title: "Giải Pháp Bãi Đỗ Xe Trong Hầm",
     secondTitle: "Sơ Đồ Giải Pháp Bãi Đỗ Xe Trong Hầm",
     mainImg: item1Img,
-    content: {
-      title: "Smart Cloud",
-      text: "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả",
-      icon: unicloud,
-    },
     iconList: [
       {
         id: 0,
@@ -145,21 +142,26 @@ const MobileItem = ({ item }) => {
   );
 };
 
-const IconActive = ({ item, isActive }) => {
+const IconActive = ({ item, isActive, setActive, id }) => {
   return (
-    <div className="icon-active">
-      <div className="content">
-        <div className="content-title">{item.title}</div>
-        <div className="content-text">{item.text}</div>
-      </div>
+    <div
+      onClick={() => setActive(id)}
+      className={isActive ? "icon-active" : "icon-active deactive"}
+    >
+      {isActive && (
+        <div className="content">
+          <div className="content-title">{item.title}</div>
+          <div className="content-text">{item.text}</div>
+        </div>
+      )}
       <div className="icon">
-        <img src={item.icon_b} alt="" />
+        <img src={isActive ? item.icon_b : item.icon} alt="" />
       </div>
     </div>
   );
 };
 
-const SolutionItem = ({ item }) => {
+const SolutionItem = ({ item, setModalShow }) => {
   const [active, setActive] = useState(0);
   return (
     <div className="solution-item-container">
@@ -172,16 +174,21 @@ const SolutionItem = ({ item }) => {
         <div className="content-container">
           {item.iconList.map((icon) => {
             return active !== icon.id ? (
-              <div key={icon.id}>
-                <img
-                  className="img"
-                  src={icon.icon}
-                  alt=""
-                  onClick={() => setActive(icon.id)}
-                />
-              </div>
+              <IconActive
+                key={icon.id}
+                item={icon}
+                isActive={false}
+                id={icon.id}
+                setActive={setActive}
+              />
             ) : (
-              <IconActive key={icon.id} item={icon} />
+              <IconActive
+                key={icon.id}
+                item={icon}
+                isActive={true}
+                id={icon.id}
+                setActive={setActive}
+              />
             );
           })}
         </div>
@@ -191,7 +198,7 @@ const SolutionItem = ({ item }) => {
           })}
         </div>
       </div>
-      <div className="solution-button">
+      <div onClick={() => setModalShow(true)} className="solution-button">
         <p className="button-text">Tư vấn ngay</p>
       </div>
     </div>
@@ -199,6 +206,8 @@ const SolutionItem = ({ item }) => {
 };
 
 const SectionParkingSolution = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <section className="section-parking-solution">
       <div className="parking-solution-container">
@@ -208,9 +217,16 @@ const SectionParkingSolution = () => {
           <div className="underline"></div>
         </div>
         {ListItem.map((item) => {
-          return <SolutionItem item={item} key={item.id} />;
+          return (
+            <SolutionItem
+              item={item}
+              key={item.id}
+              setModalShow={setModalShow}
+            />
+          );
         })}
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 };

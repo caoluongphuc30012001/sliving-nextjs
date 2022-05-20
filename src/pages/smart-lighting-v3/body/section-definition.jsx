@@ -15,15 +15,27 @@ import iconSolving from "../../../images/smart-lighting-v3/svg/icon-solving.svg"
 const SectionDefinition = () => {
   const infoItem = {
     title: "Smart Lighting Là Gì ?",
-    
+
     webContents: [
       {
         id: 0,
-        content:"Hiểu được vai trò quan trọng của yếu tố"+" ánh sáng trong các tòa nhà, căn hộ... Unicloud "+"đã cho ra đời giải pháp chiếu sáng thông minh"+" Smart Lighting: ứng dụng công nghệ hiện đại để "+"điều khiển và tác động vào nguồn sáng nhằm nâng "+"cao chất lượng chiếu sáng và tiết kiệm năng "+"lượng. ",
+        content:
+          "Hiểu được vai trò quan trọng của yếu tố" +
+          " ánh sáng trong các tòa nhà, căn hộ... Unicloud " +
+          "đã cho ra đời giải pháp chiếu sáng thông minh" +
+          " Smart Lighting: ứng dụng công nghệ hiện đại để " +
+          "điều khiển và tác động vào nguồn sáng nhằm nâng " +
+          "cao chất lượng chiếu sáng và tiết kiệm năng " +
+          "lượng. ",
       },
       {
         id: 1,
-        content:"Người dùng có thể dễ dàng điều chỉnh "+"các thiết bị chiếu sáng, bật tắt Dimming, đổi màu, điều khiển ánh sáng trong hội trường,"+" phòng trưng bày sản phẩm, chạy kịch bản chiếu "+"sáng, bật/tắt theo ý muốn cá nhân mọi lúc"+", mọi nơi bằng Smartphone hoặc bằng giọng nói.",
+        content:
+          "Người dùng có thể dễ dàng điều chỉnh " +
+          "các thiết bị chiếu sáng, bật tắt Dimming, đổi màu, điều khiển ánh sáng trong hội trường," +
+          " phòng trưng bày sản phẩm, chạy kịch bản chiếu " +
+          "sáng, bật/tắt theo ý muốn cá nhân mọi lúc" +
+          ", mọi nơi bằng Smartphone hoặc bằng giọng nói.",
       },
     ],
     mobileContents: [
@@ -50,24 +62,24 @@ const SectionDefinition = () => {
   };
 
   return (
-    <section className="smart-parking-definition-v3">
+    <section className="smart-lighting-definition-v3">
       <div className="content">
         <div className="left-content">
           <h1 className="left-content-title">{infoItem.title}</h1>
           <div className="left-all-description-container">
             <div className="left-all-description">
               {infoItem.webContents.map((descItem) => {
-                return <p 
-                  key={descItem.id}
-                  className="web-content-desc"
-                >{descItem.content}</p>;
+                return (
+                  <p key={descItem.id} className="web-content-desc">
+                    {descItem.content}
+                  </p>
+                );
               })}
               {infoItem.mobileContents.map((descItem) => {
                 return (
-                  <p 
-                    key={descItem.id}
-                    className="mobile-content-desc"
-                  >{descItem.content}</p>
+                  <p key={descItem.id} className="mobile-content-desc">
+                    {descItem.content}
+                  </p>
                 );
               })}
             </div>
@@ -77,10 +89,7 @@ const SectionDefinition = () => {
           <div className="right-content-container">
             {infoItem.listIcon.map((iconItem) => {
               return (
-                <div 
-                  key={iconItem.id}
-                  className="right-icon-item"
-                >
+                <div key={iconItem.id} className="right-icon-item">
                   <img
                     src={iconItem.icon}
                     alt=""
