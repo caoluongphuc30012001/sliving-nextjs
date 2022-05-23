@@ -141,7 +141,7 @@ const SectionProduct = () => {
   ];
 
   return (
-    <section className="section-product-v3">
+    <section className="section-product-home-page-v3">
       <div className="container-1220">
         <Row className="row-line-center">
           <span className="title-eng-line-center">ABOUT SLIVING</span>
