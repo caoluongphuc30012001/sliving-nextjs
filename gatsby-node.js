@@ -60,6 +60,7 @@ exports.createPages = async function ({ actions, graphql }) {
   // const smartLightingComponent = require.resolve("./src/pages/smart-lighting-v2/index.js");
   // const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
   const homePage = require.resolve("./src/pages/index.js");
+  const policy = require.resolve("./src/pages/policy/index.jsx");
 
   // const solutionSmartHome  = require.resolve("./src/pages/solution/smart-home/index.jsx");
   // const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
@@ -202,6 +203,10 @@ exports.createPages = async function ({ actions, graphql }) {
     //     },
     //   });
     // });
+  });
+  createPage({
+    path: `/policy`,
+    component: policy,
   });
 };
 
