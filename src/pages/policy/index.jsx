@@ -1,12 +1,14 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import LayoutNew from "@components/layout-new";
+// import LayoutNew from "@components/layout-new";
+import LayoutV3 from "../../components/layout-v3";
+
 import "./style.scss";
 import Seo from "@components/seo";
 
 function PolicyTerm() {
   return (
-    <LayoutNew>
+    <LayoutV3>
       <Seo title="Policy" description="Policy Sliving" />
       <section className="page-policy-terms container-v2">
         <Row className="row-main-post-details d-flex justify-content-center">
@@ -127,7 +129,7 @@ function PolicyTerm() {
           </Row>
         </Row>
       </section>
-    </LayoutNew>
+    </LayoutV3>
   );
 }
 
