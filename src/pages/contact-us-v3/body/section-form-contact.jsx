@@ -10,8 +10,11 @@ import {
 } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
+import ModalThanks from "../../../components/modal/modal-thanks/ModalThanks";
 
 function SectionFormContact() {
+  const [modalShow, setModalShow] = React.useState(false);
+
   const {
     handleSubmit,
     control,
@@ -19,8 +22,10 @@ function SectionFormContact() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const onSubmit = () => {
-    alert("ok");
+  const onSubmit = (data) => {
+    console.log("data", data);
+
+    setModalShow(true);
     reset();
   };
   return (
@@ -183,6 +188,7 @@ function SectionFormContact() {
           </button>
         </Row>
       </Form>
+      <ModalThanks show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   );
 }

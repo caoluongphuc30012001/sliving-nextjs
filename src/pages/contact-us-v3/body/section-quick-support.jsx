@@ -18,7 +18,7 @@ const listContact = [
   },
   {
     id: 1,
-    title: "Chi nhánh TP.Hồ Chí Minh",
+    title: "Nhà máy",
     position: { lat: 10.849997413384632, lng: 106.80553665690692 },
   },
 ];
@@ -28,11 +28,11 @@ function SectionQuickSupport() {
   const [activeContact, setActiveContact] = useState(listContact[0]);
   const [map, setMap] = useState();
   const isBrowser = typeof window !== "undefined";
-
+  const MAP_ZOOM = 15;
   const onMapCreated = useCallback(
     (_map) => {
       setMap(_map);
-      _map.setView(listContact[0].position, 40);
+      _map.setView(listContact[0].position, MAP_ZOOM);
     },
     [map]
   );
@@ -53,15 +53,12 @@ function SectionQuickSupport() {
     [map]
   );
   return (
-    <section className="section-quick-support" style={{ marginTop: "200px" }}>
-      <Row className="section-quick-support-row position-relative">
-        <Row className="quick-support-content position-absolute container-1220 m-left-right-12">
-          <Col>
+    <section className="section-quick-support">
+      <Row className="section-quick-support-row">
+        <Col md={6} className="col-left">
+          <div className="quick-support-content">
             <div className="quick-support-content-row">
-              <h3 className="quick-support-content-title">Quick Support</h3>
-              <p className="quick-support-content-des">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              <h3 className="quick-support-content-title">Hỗ trợ nhanh</h3>
             </div>
             <div className="quick-support-content-row d-flex">
               <div className="quick-support-icon">
@@ -98,18 +95,16 @@ function SectionQuickSupport() {
                 </span>
               </div>
             </div>
-          </Col>
-          <Col></Col>
-        </Row>
-        <Col className="border col-left px-0"></Col>
-        <Col className="border col-right px-0">
+          </div>
+        </Col>
+        <Col md={6} className="px-0">
           <Row className="menu-map mx-0">
             {listContact.map((contact, index) => (
               <Col
                 className={`${
                   activeContact.id === contact.id
-                    ? "map-active d-flex justify-content-center align-items-center"
-                    : "d-flex justify-content-center align-items-center"
+                    ? "map-active d-flex justify-content-center align-items-center cursor-pointer"
+                    : "d-flex justify-content-center align-items-center cursor-pointer"
                 }`}
                 key={contact.id}
                 onClick={() => handleOnClick(contact)}
@@ -118,14 +113,13 @@ function SectionQuickSupport() {
                   className={`${
                     activeContact.id === contact.id
                       ? "menu-map-title__active text-center"
-                      : "menu-map-title text-center"
+                      : "menu-map-title text-center "
                   }`}
                 >
                   {contact.title}
                 </h1>
               </Col>
             ))}
-            ;
           </Row>
           {checkBrowser}
         </Col>

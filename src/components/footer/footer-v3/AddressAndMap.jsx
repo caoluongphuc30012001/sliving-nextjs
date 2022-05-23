@@ -46,7 +46,7 @@ const listContact = [
 ];
 export default function AddressAndMap() {
   const { t } = useTranslation();
-  const [position, setPosition] = useState();
+  const [position, setPosition] = useState(listContact[0].position);
   const [map, setMap] = useState();
 
   const MAP_ZOOM = 15;
