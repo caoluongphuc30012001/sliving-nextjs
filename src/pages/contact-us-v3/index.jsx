@@ -1,7 +1,30 @@
 import React from "react";
+import SectionHelpMore from "../../components/help-more/section-help-more";
+import LayoutV3 from "../../components/layout-v3-not-map";
+import Seo from "@components/seo";
 
-function IndexPage() {
-  return <div>IndexPage</div>;
+import "./style.scss";
+import SectionQuickSupport from "./body/section-quick-support";
+import SectionFormContact from "./body/section-form-contact";
+import { Col, Row } from "react-bootstrap";
+
+function ContactPage() {
+  return (
+    <LayoutV3>
+      <Seo title="Sliving" description="Sliving" url="https://sliving.vn" />
+      <main id="contact-page-v3" style={{ marginTop: "90px" }}>
+        <Row>
+          <Col md={12}>
+            <SectionQuickSupport />
+          </Col>
+          <Col md={12} className="order-first order-md-last">
+            <SectionFormContact />
+          </Col>
+        </Row>
+        {/* <SectionHelpMore /> */}
+      </main>
+    </LayoutV3>
+  );
 }
 
-export default IndexPage;
+export default ContactPage;
