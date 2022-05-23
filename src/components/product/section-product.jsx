@@ -59,12 +59,12 @@ const ItemProduct = ({ listProduct, itemId }) => {
     <Swiper
       slidesPerView={3}
       spaceBetween={30}
-      centeredSlides={true}
+      //   centeredSlides={true}
       grabCursor={true}
-      loop={true}
+      //   loop={true}
       navigation={{
-        nextEl: `.button-next-${itemId}`,
-        prevEl: `.button-prev-${itemId}`,
+        nextEl: `.button-prev-${itemId}`,
+        prevEl: `.button-next-${itemId}`,
       }}
       modules={[Pagination, Navigation]}
     >

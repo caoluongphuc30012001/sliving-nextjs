@@ -2,7 +2,9 @@ import React from "react";
 
 import "@i18n/i18n";
 
-import LayoutNew from "@components/layout-new";
+// import LayoutNew from "@components/layout-new";
+import LayoutV3 from "../../components/layout-v3";
+
 import Seo from "@components/seo";
 
 import flag from "@images/intro-content/group2.png";
@@ -15,7 +17,6 @@ import dataMetaDetails from "@data/dataMeta.json";
 import "./styles.scss";
 
 const Card = ({ index, title, des }) => {
-  
   return (
     <Row className="row">
       <Col
@@ -39,7 +40,7 @@ const IntroContentPageTemplate = () => {
   const content = [1, 2, 3, 4, 5];
   const dataMeta = dataMetaDetails["dataMeta"];
   return (
-    <LayoutNew>
+    <LayoutV3>
       <Seo
         title={t(`${dataMeta.reason_page.title}`)}
         description={t(`${dataMeta.reason_page.description}`)}
@@ -62,7 +63,7 @@ const IntroContentPageTemplate = () => {
           );
         })}
       </section>
-    </LayoutNew>
+    </LayoutV3>
   );
 };
 export default IntroContentPageTemplate;
