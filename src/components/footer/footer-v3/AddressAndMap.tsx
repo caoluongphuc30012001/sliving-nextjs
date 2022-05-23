@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 
 import SectionMap from "./map";
 
-import iconBgPin from "../../../../assets/image/svg/icon-bg-pin.svg";
-import iconBgEmail from "../../../../assets/image/svg/icon-bg-mail.svg";
-import iconBgPhone from "../../../../assets/image/svg/icon-bg-phone.svg";
+import iconBgPin from "/assets/image/svg/icon-bg-pin.svg";
+import iconBgEmail from "/assets/image/svg/icon-bg-mail.svg";
+import iconBgPhone from "/assets/image/svg/icon-bg-phone.svg";
 import { useMemo } from "react";
 const isBrowser = typeof window !== "undefined";
 
