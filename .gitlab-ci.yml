@@ -23,8 +23,6 @@ before_script:
 
 build-and-deploy:
   stage: build-and-deploy
-  variables:
-    AWS_S3_BUCKET_BETA: beta.sliving.vn
   before_script:
     - export AWS_S3_BUCKET=$AWS_S3_BUCKET_BETA
   script:
@@ -38,6 +36,6 @@ build-and-deploy:
     - npm run build
     - npm run deploy
   only:
-    - testCICD
+    - develop-v2
   tags:
     - hcm-share-docker-runner-1
