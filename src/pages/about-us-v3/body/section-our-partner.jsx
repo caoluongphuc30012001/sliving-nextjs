@@ -5,14 +5,14 @@ import iconPartner1 from "../../../images/about-us-v3/svg/icon-partner1.svg";
 import iconPartner2 from "../../../images/about-us-v3/svg/icon-partner2.svg";
 import iconPartner3 from "../../../images/about-us-v3/svg/icon-partner3.svg";
 import iconPartner4 from "../../../images/about-us-v3/svg/icon-partner4.png";
-import iconPartner5 from "../../../images/about-us-v3/svg/icon-partner5.svg";
+import iconPartner5 from "../../../images/about-us-v3/svg/icon-partner5.png";
 import iconPartner6 from "../../../images/about-us-v3/svg/icon-partner6.svg";
 import iconPartner7 from "../../../images/about-us-v3/svg/icon-partner7.svg";
 import iconPartner8 from "../../../images/about-us-v3/svg/icon-partner8.svg";
 import iconPartner9 from "../../../images/about-us-v3/svg/icon-partner9.svg";
 import iconPartner10 from "../../../images/about-us-v3/svg/icon-partner10.svg";
 import iconPartner11 from "../../../images/about-us-v3/svg/icon-partner11.svg";
-import iconPartner12 from "../../../images/about-us-v3/svg/icon-partner12.svg";
+import iconPartner12 from "../../../images/about-us-v3/svg/icon-partner12.png";
 
 function SectionOurPartner() {
   const listItemLogo = [
