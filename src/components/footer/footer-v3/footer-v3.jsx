@@ -91,16 +91,16 @@ function Footer() {
   //   const { t } = useTranslation();
 
   const listAbout = [
-    { id: 0, title: "Giới thiệu", url: "/home-page-v3" },
+    { id: 0, title: "Giới thiệu", url: "/about-us-v3" },
     { id: 1, title: "Hệ sinh thái", url: "/home-page-v3" },
-    { id: 2, title: "Bản tin công nghệ", url: "/home-page-v3" },
-    { id: 3, title: "Tuyển dụng", url: "/home-page-v3" },
-    { id: 4, title: "Liên hệ", url: "/home-page-v3" },
+    { id: 2, title: "Bản tin công nghệ", url: "https://unicloud.com.vn/news" },
+    { id: 3, title: "Tuyển dụng", url: "https://career.unicloud.com.vn/" },
+    { id: 4, title: "Liên hệ", url: "/contact-us-v3" },
   ];
 
   const listHref = [
     { id: 0, title: "Điều khoản sử dụng", url: "/home-page-v3" },
-    { id: 1, title: "Điều khoản sử dụng", url: "/home-page-v3" },
+    { id: 1, title: "Chính sách bảo mật", url: "/home-page-v3" },
     { id: 2, title: "Cam kết bảo mật", url: "/home-page-v3" },
     { id: 3, title: "Chính sách bảo vệ dữ liệu", url: "/home-page-v3" },
     { id: 4, title: "Báo cáo rủi ro & vi phạm", url: "/home-page-v3" },

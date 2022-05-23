@@ -37,7 +37,7 @@ function SectionActivity() {
     {
       id: 1,
       linkIconLogo: iconActivity1,
-      title: "Fintech",
+      title: "Digital Banking Platform",
     },
     {
       id: 2,
