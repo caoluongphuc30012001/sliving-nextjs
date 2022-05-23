@@ -795,6 +795,13 @@ span.detail-v3 {
   }
 }
 @media only screen and (max-width: 768px) {
+  .mySwiper {
+    .view-360 {
+      button {
+        padding: 8px 24px;
+      }
+    }
+  }
   .bg-ground-smart-parking {
     padding: 40px 0;
   }
