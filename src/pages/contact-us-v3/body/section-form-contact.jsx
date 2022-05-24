@@ -92,6 +92,7 @@ function SectionFormContact() {
           </span>
           <Controller
             control={control}
+            defaultValue=""
             name="fullName"
             rules={{ required: true }}
             render={({
@@ -123,6 +124,7 @@ function SectionFormContact() {
           </span>
           <Controller
             control={control}
+            defaultValue=""
             name="email"
             rules={{
               required: true,
@@ -167,6 +169,7 @@ function SectionFormContact() {
           </span>
           <Controller
             control={control}
+            defaultValue=""
             name="telephone"
             rules={{
               required: true,
@@ -207,6 +210,7 @@ function SectionFormContact() {
           <span className="contact-title">Lời nhắn/ Thắc mắc</span>
           <Controller
             control={control}
+            defaultValue=""
             name="content"
             render={({
               field: { onChange, value, ref },

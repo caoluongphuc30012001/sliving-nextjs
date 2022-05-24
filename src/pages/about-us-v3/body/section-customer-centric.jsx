@@ -65,7 +65,7 @@ function SectionCustomerCentric() {
             ))}
           </Col>
           <Col>
-            <img src={imgCustomerCentric} />
+            <img src={imgCustomerCentric} className="img-customer-centric" />
           </Col>
         </Row>
       </div>
