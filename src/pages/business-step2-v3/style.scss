@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: center;
 
-
     .advise-now-btn {
       min-width: 208px;
       min-height: 40px;
@@ -46,7 +45,6 @@
     .advise-now-btn:disabled {
       background: #aaaeb3;
     }
-
   }
   width: 100%;
   .title-box {
@@ -80,6 +78,10 @@
       border-radius: 2px;
     }
   }
+  .list-house-box {
+    width: 100%;
+  }
+
   .add-house {
     width: 100%;
     display: flex;
