@@ -117,7 +117,8 @@ span.detail-v3 {
   .advise-now-btn,
   .learn-more-btn {
     height: 40px;
-    padding: 8px 28px;
+    padding: 8px 34px;
+    width: 184px;
   }
 
   .advise-now-btn {
@@ -330,7 +331,7 @@ span.detail-v3 {
 .group-contact-header {
   display: flex;
   align-items: center;
-  column-gap: 13px;
+  column-gap: 24px;
   span {
     font-family: "SVN-Gilroy";
     font-style: normal;

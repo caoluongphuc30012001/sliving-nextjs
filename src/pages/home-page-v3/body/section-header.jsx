@@ -1,5 +1,5 @@
 import icon24Line from "@images/icon/icon-24h-line.svg";
-import iconPhone from "@images/icon/icon-phone.svg";
+import iconPhone from "@images/home-page-v3/svg/icon-phone.svg";
 import iconSettings from "@images/icon/icon-setting.svg";
 import iconSupport from "@images/icon/icon-support.svg";
 import imgBg from "@images/home-page-v3/bg-home-page.png";
