@@ -45,7 +45,7 @@ deploy:
   extends:
     - build
   script:
-    - echo "Not deploy yet..."
-    #  npm run deploy
+    - echo "Deploying..."
+    - npm run deploy
   tags:
     - hcm-share-docker-runner-1
