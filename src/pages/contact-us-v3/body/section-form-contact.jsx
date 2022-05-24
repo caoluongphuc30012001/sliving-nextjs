@@ -25,17 +25,9 @@ function SectionFormContact() {
 
   const googleSheetAPI =
     "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
+
   const onSubmit = (data) => {
     console.log("data", data);
-
-    const formData = new FormData();
-    formData.append("name", data.fullName);
-    formData.append("phone", data.telephone);
-    formData.append("email", data.email);
-    formData.append("content", data.content);
-    formData.append("boolean", "true");
-    formData.append("list", "6xdCd892x7gSZoG7768926aeLA");
-    formData.append("subform", "yes");
 
     const googleSheetFormData = new FormData();
     googleSheetFormData.append("fullName", data.fullName);
@@ -47,16 +39,6 @@ function SectionFormContact() {
       new Date().toLocaleDateString().substring(0, 10)
     );
     googleSheetFormData.append("linkedBy", "slving");
-
-    axios
-      .post("/subscribe", formData)
-      .then((response) => {
-        console.log("response: ", response);
-        console.log("response.status: ", response.status);
-        console.log("response.data: ", response.data);
-      })
-      .catch(() => {});
-
     axios
       .post(
         "https://sheet.best/api/sheets/db2c6577-b6f0-4ad7-b78d-d45c7034faaa",
@@ -67,6 +49,24 @@ function SectionFormContact() {
           //   onHide(false);
           setModalShow(true);
         }
+      })
+      .catch(() => {});
+
+    const formData = new FormData();
+    formData.append("name", data.fullName);
+    formData.append("phone", data.telephone);
+    formData.append("email", data.email);
+    formData.append("content", data.content);
+    formData.append("boolean", "true");
+    formData.append("list", "6xdCd892x7gSZoG7768926aeLA");
+    formData.append("subform", "yes");
+
+    axios
+      .post("/subscribe", formData)
+      .then((response) => {
+        console.log("response: ", response);
+        console.log("response.status: ", response.status);
+        console.log("response.data: ", response.data);
       })
       .catch(() => {});
 
