@@ -700,8 +700,9 @@ span.detail-v3 {
     .card-product-item {
       padding-top: 24px;
     }
-    .card-product-img {
-      display: none;
+    .card-product-img,
+    .download-app-list-desktop {
+      display: none !important;
     }
     .card-product-img-mobile {
       display: flex !important;
