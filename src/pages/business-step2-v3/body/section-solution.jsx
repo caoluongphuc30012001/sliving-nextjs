@@ -292,7 +292,7 @@ const SectionSolution = () => {
                 })}
               </div>
             </div>
-            <p className={`check-valid ${!validOption ? "unvalid" : ""}`}>
+            <p className={`check-valid ${!validOption ? "invalid" : ""}`}>
               Không để trống
             </p>
           </div>

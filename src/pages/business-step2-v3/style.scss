@@ -16,6 +16,10 @@
     max-width: 920px;
     padding: 0 20px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 
     .advise-now-btn {
@@ -23,6 +27,7 @@
       min-height: 40px;
       background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
       border-radius: 68px;
+      justify-self: center;
       border: none;
       &:hover {
         box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
@@ -45,6 +50,7 @@
   }
   width: 100%;
   .title-box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,12 +81,13 @@
     }
   }
   .add-house {
+    width: 100%;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
     justify-content: space-between;
+    gap: clamp(12px, 3.2vw, 16px);
     .type-box {
-      max-width: 578px;
       height: 80px;
       width: 100%;
       position: relative;
@@ -174,7 +181,6 @@
       height: 80px;
       position: relative;
       max-width: 286px;
-      width: 100%;
       .name {
         font-family: "SVN Gilroy";
         font-weight: 700;
@@ -186,14 +192,14 @@
       .input-box {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: fit-content;
         justify-content: space-between;
         .quantity-input {
           box-sizing: border-box;
           display: flex;
           flex-direction: row;
           padding: 12px 14px;
-          max-width: 230px;
+          max-width: clamp(80px, 21.3vw, 120px);
           height: 48px;
           background: #ffffff;
           border: 1px solid #aaaeb3;
@@ -222,6 +228,7 @@
     }
   }
   .item-box {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -230,7 +237,7 @@
       font-family: "SVN Gilroy";
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
+      font-size: clamp(10px, 2.73vw, 16px);
       line-height: 24px;
       color: #454647;
     }
@@ -238,7 +245,7 @@
       font-family: "SVN Gilroy";
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
+      font-size: clamp(14px, 2.73vw, 16px);
       line-height: 24px;
       display: flex;
       align-items: center;
@@ -266,7 +273,7 @@
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 700;
-      font-size: 16px;
+      font-size: clamp(10px, 2.73vw, 16px);
       line-height: 24px;
       color: #454647;
       &:focus {
@@ -286,22 +293,21 @@
     border-top: 1px solid #e1e3e6;
     margin-top: 25px;
     .total {
-      max-width: 286px;
       width: 100%;
-      float: right;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       .name {
         font-family: "SVN Gilroy";
         font-weight: 700;
-        font-size: 16px;
+        font-size: clamp(10px, 2.73vw, 16px);
         line-height: 24px;
         color: #2c2d2e;
       }
       .sum {
         font-family: "SVN Gilroy";
         font-weight: 700;
-        font-size: 21px;
+        font-size: clamp(16px, 4.27vw, 21px);
         line-height: 32px;
         color: #0979fd;
         margin-left: 37px;
@@ -384,7 +390,7 @@
 
   .container {
     max-width: 1180px;
-    width: 100%;
+    width: clamp(355px, 100vw - 40px, 1180px);
     min-height: 440px;
     border-radius: 16px;
     background-color: white;
