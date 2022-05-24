@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Data } from "@data/tableData.js";
 
-import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { BusinessStateContext } from "../../../context/businessContext";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 const buttonList = [
   {
