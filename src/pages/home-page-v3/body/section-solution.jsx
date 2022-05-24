@@ -12,8 +12,9 @@ import iconSecurity from "@images/icon/icon-security-color.svg";
 import iconRemote from "@images/icon/icon-remote.svg";
 import iconCurtain from "@images/icon/icon-curtain.svg";
 import imgAboutTop from "@images/home-page-v3/png/about-sliving-top.png";
-// import imgAboutBottom from "@images/home-page-v3/png/about-sliving-bottom.png";
 import imgSolution from "@images/home-page-v3/png/solution-sliving.png";
+import imgSolution1 from "@images/home-page-v3/png/img-solution-1.png";
+import imgSolution2 from "@images/home-page-v3/png/img-solution-2.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
 export const Divider = styled("div")`
@@ -143,15 +144,15 @@ const SectionSolution = () => {
             </Row>
 
             <span className="detail-v3">
-              Bộ sưu tập các Sản phẩm Nhà thông minh đặt riêng của Sliving được
-              thiết kế để bổ sung một cách hiệu quả cho lối sống của bạn với sự
-              Thuận tiện, An toàn và Thoải mái.
+              Bộ sưu tập các sản phẩm Nhà thông minh đặt riêng của Sliving được
+              thiết kế để mang tới sự tiện nghi, an toàn và hiện đại, giúp nâng
+              cao chất lượng cuộc sống của bạn.
             </span>
             <Row className="">
               {arrProd.map((prod) => (
                 <Col
                   key={prod.id}
-                  className="gx-4 gy-3 col-4"
+                  className="px-0 gy-3 col-4"
                   lg={4}
                   md={4}
                   sm={4}

@@ -65,7 +65,7 @@ span.detail-v3 {
 
 .btn-gradient-blue {
   width: fit-content;
-  height: 50px;
+  height: 40px;
   background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
   border-radius: 68px;
   border: none;
@@ -223,11 +223,12 @@ span.detail-v3 {
     line-height: 48px;
     // text-align: center;
     color: #2c2d2e;
+    text-transform: capitalize;
   }
 
   .img-line-center {
     padding-top: 16px;
-    padding-bottom: 36px;
+    padding-bottom: 60px;
     display: flex;
     justify-content: center;
   }
@@ -249,6 +250,7 @@ span.detail-v3 {
     .title-line-center {
       // text-align: start;
       font-size: 28px;
+      line-height: 32px;
     }
     .title-eng-line-center {
       font-size: 14px;
@@ -430,6 +432,9 @@ span.detail-v3 {
     // height: auto;
     .card-sub-tag-icon {
       margin: 0 auto;
+      height: 24px;
+      // font-size: 24px;
+      width: 24px;
     }
     .card-sub-tag-title {
       text-align: center;
@@ -490,10 +495,6 @@ span.detail-v3 {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    .solution-sliving-img {
-      margin-left: -95px;
-    }
-
     .solution-sliving-card {
       height: 100px;
       width: 100px;
@@ -549,6 +550,7 @@ span.detail-v3 {
     text-align: start !important;
     .img-line-center {
       justify-content: normal !important;
+      // padding-bottom: 18px !important;
     }
   }
 }
@@ -561,6 +563,7 @@ span.detail-v3 {
       text-align: center !important;
       .img-line-center {
         justify-content: center !important;
+        padding-bottom: 32px;
       }
     }
     h3.detail-v3 {
@@ -586,7 +589,9 @@ span.detail-v3 {
       // padding-top: 32px;
       width: 100%;
     }
-
+    .solution-about-img-mobile {
+      padding-top: 32px;
+    }
     .solution-about-cap {
       margin-top: 32px;
       margin-bottom: 32px;
@@ -603,7 +608,8 @@ span.detail-v3 {
     }
 
     .section-solution-sliving {
-      // padding-top: 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       background-color: #ffffff !important;
       .solution-sliving-img {
         display: none;
@@ -638,6 +644,7 @@ span.detail-v3 {
       font-size: 28px;
       line-height: 32px;
       color: #0979fd;
+      text-transform: capitalize;
     }
     .card-product-subtitle {
       font-family: "SVN-Gilroy";
@@ -682,6 +689,8 @@ span.detail-v3 {
     left: 50%;
     transform: translate(-50%, -50%);
     gap: 26px;
+    width: 400px;
+    padding: 0 20px;
     .download-app-item {
       cursor: pointer;
       box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
@@ -694,9 +703,9 @@ span.detail-v3 {
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .section-product-home-page-v3 {
-    background: #f3f9ff;
+    background: #f3f9ff !important;
     padding-top: 40px;
-
+    padding-bottom: 0px;
     .card-product-item {
       padding-top: 24px;
     }
@@ -735,6 +744,11 @@ span.detail-v3 {
       width: 100%;
       justify-content: space-between;
     }
+    .download-app-list {
+      width: 388px;
+      height: 57px;
+      bottom: -35px;
+    }
   }
 }
 // =======End Responsive=======
@@ -757,7 +771,7 @@ span.detail-v3 {
   }
   .smart-parking-group-img {
     margin: 0 auto;
-    margin-top: 60px;
+    // margin-top: 60px;
   }
   .smart-parking-group-img-mobile {
     display: none;
@@ -871,7 +885,9 @@ span.detail-v3 {
 .bg-ground-smart-lighting {
   padding-top: 60px;
   padding-bottom: 120px;
-
+  .smart-lighting-row {
+    align-items: flex-end;
+  }
   .smart-lighting-des {
     font-weight: 500;
     font-size: 16px;
@@ -907,6 +923,8 @@ span.detail-v3 {
       }
 
       .smart-lighting-bottom {
+        max-width: 105px;
+        margin: auto;
         .smart-lighting-content {
           font-style: normal;
           font-weight: 500;

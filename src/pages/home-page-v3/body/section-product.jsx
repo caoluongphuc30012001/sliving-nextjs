@@ -28,17 +28,17 @@ const SectionProduct = () => {
   const arrSmartTouch = [
     {
       id: 0,
-      title: "Công Tắc Thông Minh",
-      subTitle: "Smart Switch",
+      title: "Công Tắc cơ Thông Minh",
+      subTitle: "Smart Mechanical Switch",
       image: imgSwitch,
       downloadObjects: [],
 
       listItem: [
         {
           id: 0,
-          title: "Tính năng vượt trội",
+          title: "Trải nghiệm mới mẻ & hiện đại",
           subTitle:
-            "Với ngoại hình của dòng công tắc cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng những trải nghiệm mà sản phẩm mang đến lại hoàn toàn mới mẻ.",
+            "Với ngoại hình của dòng công tắc cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng  mang lại trải nghiệm hoàn toàn mới mẻ và tiện lợi.",
           icon: iconCheckOutline,
         },
         {
@@ -50,17 +50,17 @@ const SectionProduct = () => {
         },
         {
           id: 2,
-          title: "Trải nghiệm mới từ lớp vỏ truyền thống",
+          title: "Tính năng vượt trội",
           subTitle:
-            "Ngoài tính năng điều khiển bật tắt cục bộ như công tắc thường, sản phẩm còn có khả năng kết nối thông qua gateway để điều khiển trên internet. Chạy kịch bản bằng nhấn đơn và nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên gateway.",
+            "Ngoài tính năng điều khiển bật/ tắt cục bộ như công tắc thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị.",
           icon: iconCheckOutline,
         },
       ],
     },
     {
       id: 1,
-      title: "Công Tắc Cảm Ứng",
-      subTitle: "Touch switch",
+      title: "Công Tắc Cảm Ứng thông minh",
+      subTitle: "Smart Touch Switch",
       image: imgTouch,
       downloadObjects: [],
 
@@ -83,15 +83,15 @@ const SectionProduct = () => {
           id: 2,
           title: "Tính năng vượt trội",
           subTitle:
-            "Ngoài tính năng điều khiển bật tắt cục bộ như công tắc thường, sản phẩm còn có khả năng kết nối thông qua gateway để điều khiển trên internet. Chạy kịch bản bằng nhấn đơn và nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên gateway.",
+            "Với tính năng bật/tắt cục bộ bằng cảm ứng điện dung, sản phẩm còn có khả năng chạy kịch bản thông qua thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái online lên Gateway.",
           icon: iconCheckOutline,
         },
       ],
     },
     {
       id: 2,
-      title: "Ứng Dụng Di Động Sliving",
-      subTitle: "App Sliving",
+      title: "Quản lý thông minh với Sliving app",
+      subTitle: "Sliving App",
       image: imgApp,
       downloadObjects: [
         {
@@ -108,22 +108,23 @@ const SectionProduct = () => {
       listItem: [
         {
           id: 0,
-          title: "Tạo các kịch bản tự động",
+          title: "Dễ dàng thao tác",
           subTitle:
-            "Công tắc mini không dây, công tắc điều khiển không dây và khối Cube được tùy chỉnh để tự động hóa một loạt các tác vụ công việc trong nhà Thiết lập công tắc mini không dây để bật chế độ đọc. Chẳng hạn như, chỉ với một nút bấm duy nhất bạn có thể thực hiện 2 tác vụ cùng một lúc như đóng rèm cửa và tự động điều chỉnh ánh sáng đèn theo ý muốn:",
-
-          listChild: [
-            "Bật và điều chỉnh độ sáng của đèn",
-            "Đóng và mở rèm tự động",
-            " Điều khiển từ xa các thiết bị kết nối với phích cắm thông minh",
-          ],
+            "Với thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF.",
           icon: iconCheckOutline,
         },
         {
           id: 1,
+          title: "Điều khiển thông minh",
+          subTitle:
+            "Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
+          icon: iconCheckOutline,
+        },
+        {
+          id: 2,
           title: "Giám sát & cảnh báo",
           subTitle:
-            "Kiểm tra lượng điện nước tiêu thụ mỗi tháng sẽ không còn khó khăn, mất nhiều thời gian và thủ công như trước nữa. Thiết bị cho phép giám sát lượng điện tiêu thụ điện và nước trực tiếp 24/24, đồng thời cho phép thiết lập các ngưỡng tiêu thụ tối đa và gửi các thông tin cảnh báo khi vượt ngưỡng. ",
+            "Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
           icon: iconCheckOutline,
         },
       ],
@@ -138,23 +139,23 @@ const SectionProduct = () => {
       listItem: [
         {
           id: 0,
-          title: "Dễ dàng chia sẻ thiết bị - Điều khiển từ xa",
+          title: "Hỗ trợ điều khiển từ xa",
           subTitle:
-            "Thông qua ứng dụng Sliving - có thể chia sẻ thiết bị cho nhiều người dùng khác nhau. Hỗ trợ điều khiển từ xa tương thích với tỷ lệ mở rèm được cài đặt sẵn.",
+            "Với động cơ rèm thông minh, người dùng dễ dàng điều khiển từ xa thông qua ứng dụng hoặc chạy kịch bản mở/đóng theo nhu cầu sử dụng.",
           icon: iconCheckOutline,
         },
         {
           id: 1,
-          title: "Thiết kế dễ dàng lắp đặt và sử dụng",
+          title: "Thiết kế chắc chắn & bền bỉ  ",
           subTitle:
-            "Với kích thước nhỏ gọn, phù hợp với nhiều loại hình không gian khác nhau. Toàn bộ phần vỏ bên ngoài đều được làm bằng nhôm cao cấp, có khả năng chịu được lực va chạm mạnh, chịu nhiệt và chống ăn mòn tốt.",
+            "Toàn bộ sản phẩm bên ngoài được làm bằng nhôm cao cấp, khả năng chịu lực va chạm mạnh, chịu nhiệt và chống ăn mòn cùng với kích thước nhỏ gọn nên phù hợp với nhiều loại hình không gian khác nhau.",
           icon: iconCheckOutline,
         },
         {
           id: 2,
-          title: "Hoạt động dựa trên tương tác vật lý",
+          title: "Hoạt động dễ dàng",
           subTitle:
-            "Khi có sự cố về điện, vẫn có thể dễ dàng mở và đóng rèm một cách nhẹ nhàng. Người tiêu dùng không cần phải quá lo lắng về việc thiết bị ngưng hoạt động và không sử dụng được.",
+            "Khi gặp sự cố về điện, thiết bị vẫn có thể hoạt động bình thường thông qua mở và đóng vật lý dễ dàng.",
           icon: iconCheckOutline,
         },
       ],
@@ -165,7 +166,7 @@ const SectionProduct = () => {
     <section className="section-product-home-page-v3">
       <div className="container-1220">
         <Row className="row-line-center">
-          <span className="title-eng-line-center">ABOUT SLIVING</span>
+          <span className="title-eng-line-center">SMART HOME PRODUCTS</span>
           <h2 className="title-line-center">Sản Phẩm Smart Home</h2>
           <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -181,29 +182,32 @@ const SectionProduct = () => {
                   : "card-product flex-row-reverse"
               } `}
             >
-              <Col lg={7} className="p-relative">
-                {smart?.downloadObjects?.length > 0 && (
-                  <div className="d-flex p-absolute download-app-list download-app-list-desktop ">
-                    {smart?.downloadObjects.map((object) => (
-                      <div className="download-app-item" key={object.id}>
-                        <Link to={object.linkDownload}>
-                          <img
-                            src={object.img}
-                            alt=""
-                            className="download-app-img"
-                          ></img>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                <img
-                  src={smart.image}
-                  alt=""
-                  className="card-product-img"
-                  style={{ float: `${smart.id % 2 === 0 ? "left" : "right"}` }}
-                />
+              <Col lg={7}>
+                <div className="p-relative h-100">
+                  <img
+                    src={smart.image}
+                    alt=""
+                    className="card-product-img"
+                    style={{
+                      float: `${smart.id % 2 === 0 ? "left" : "right"}`,
+                    }}
+                  />
+                  {smart?.downloadObjects?.length > 0 && (
+                    <div className="d-flex p-absolute download-app-list download-app-list-desktop ">
+                      {smart?.downloadObjects.map((object) => (
+                        <div className="download-app-item" key={object.id}>
+                          <Link to={object.linkDownload}>
+                            <img
+                              src={object.img}
+                              alt=""
+                              className="download-app-img"
+                            ></img>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </Col>
               <Col lg={5} className="">
                 <h3 className="card-product-title">{smart.title}</h3>

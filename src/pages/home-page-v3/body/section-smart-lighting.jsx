@@ -46,19 +46,17 @@ function SectionSmartLighting() {
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
                 Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
-                nhằm đạt hai mục tiêu: Nâng cao chất lượng chiếu sáng (thay đổi
-                các chỉ tiêu ánh sáng của môi trường được chiếu sáng về độ rọi,
-                độ chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Việc tích hợp
-                phần cứng và xây dựng phần mềm điều khiển các dự án chiếu sáng
-                công nghiệp, thương mại, cơ quan công quyền, công trình công
-                cộng, nhà ở... được chú trọng.
+                nhằm đạt hai mục tiêu: nâng cao chất lượng chiếu sáng (về độ
+                rọi, độ chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Vì thế, hệ
+                thống sản phẩm chiếu sáng của Sliving không chỉ đáp ứng nhu cầu
+                chiếu sáng mà còn đáp ứng được nhu cầu hoạt động thông minh.
               </p>
               <br />
               <p className="smart-lighting-des">
                 Tích hợp, thử nghiệm thành công và đưa ra thị trường bộ điều
-                khiển panel LED, LED downlight cho phép bật tắt, dimming, đổi
-                màu từ xa bằng công nghệ RF. Điều khiển trên smartphone bằng
-                công nghệ không dây nhằm mục đích điều khiển chiếu sáng hội
+                khiển panel LED, LED Downlight cho phép bật tắt, Dimming, đổi
+                màu từ xa bằng công nghệ RF. Điều khiển trên Smartphone bằng
+                công nghệ không dây, nhằm mục đích điều khiển chiếu sáng hội
                 trường, phòng trưng bày sản phẩm, bộ điều khiển tòa nhà có nhiều
                 kịch bản chiếu sáng theo yêu cầu của khách hàng.
               </p>
@@ -89,7 +87,7 @@ function SectionSmartLighting() {
             </div>
             <Image
               src={imgSmartLightingLeft}
-              className="smart-lighting-img-left"
+              className="smart-lighting-img-left w-100"
             />
           </Col>
           <Col lg={5} md={12} className="smart-lighting-col-right">
