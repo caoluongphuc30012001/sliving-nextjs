@@ -51,37 +51,45 @@
       .quick-support-content {
         max-width: 600px;
         padding: 0 20px;
-      }
-      .quick-support-content-row {
-        margin-bottom: 48px;
-        // margin-right: 60px;
-        .quick-support-icon {
-          min-width: 24px;
-        }
-        .quick-support-body {
-          margin-left: 16px;
-          h5 {
+        .quick-support-content-row {
+          margin-bottom: 48px;
+          // margin-right: 60px;
+          .quick-support-icon {
+            min-width: 24px;
+          }
+          .quick-support-content-title {
             font-family: "SVN-Gilroy";
             font-style: normal;
             font-weight: 700;
-            font-size: 21px;
-            line-height: 32px;
+            font-size: 36px;
+            line-height: 48px;
+            color: #ffffff;
           }
-          p {
-            font-family: "SVN-Gilroy";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 24px;
-            padding: 8px 0;
-          }
-          span {
-            font-family: "SVN-Gilroy";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            margin-top: 8px;
+          .quick-support-body {
+            margin-left: 16px;
+            h5 {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 21px;
+              line-height: 32px;
+            }
+            p {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              padding: 8px 0;
+            }
+            span {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              margin-top: 8px;
+            }
           }
         }
       }
@@ -125,17 +133,39 @@
           padding-top: 40px;
           .quick-support-content-row {
             margin-bottom: 32px;
-            h3 {
+            .quick-support-content-title {
               font-family: "SVN-Gilroy";
               font-style: normal;
               font-weight: 700;
-              font-size: 21px;
-              line-height: 32px;
+              font-size: 21px !important;
+              line-height: 32px !important;
               text-transform: capitalize;
-              color: #2c2d2e;
+              color: #2c2d2e !important;
+            }
+            .quick-support-icon {
+              .icon-desktop {
+                display: none !important;
+              }
+              .icon-mobile {
+                display: block !important;
+              }
+            }
+            .quick-support-body {
+              h5 {
+                font-family: "SVN-Gilroy";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 21px;
+                line-height: 32px;
+                color: #2391fd;
+              }
             }
           }
         }
+      }
+      .col-right {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
       }
     }
   }
