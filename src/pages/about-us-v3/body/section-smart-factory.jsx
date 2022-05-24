@@ -1,72 +1,49 @@
 import React, { useState } from "react";
-import arrowLeft from "../../../images/about-us-v3/svg/arrow-left.svg";
-import arrowRight from "../../../images/about-us-v3/svg/arrow-right.svg";
 import styled from "styled-components";
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-// import required modules
 import "swiper/css/navigation";
 import { Pagination, Navigation, EffectCoverflow } from "swiper";
-// swiper bundle styles
 import "swiper/css/bundle";
 
-// swiper core styles
 import "swiper/css";
-// import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
 import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
-
-// import iconLicense from "@images/about-us-v3/svg/icon-license.svg";
-// import iconPCCC from "@images/about-us-v3/svg/icon-pccc.svg";
-// import iconSmartFactory from "@images/about-us-v3/svg/icon-smart-factory.svg";
 
 import iconLicense from "../../../images/about-us-v3/svg/icon-license.svg";
 import iconPCCC from "../../../images/about-us-v3/svg/icon-pccc.svg";
 import iconSmartFactory from "../../../images/about-us-v3/svg/icon-smart-factory.svg";
 
-// import slideSmartFactory1 from "@images/about-us-v3/jpg/.jpg";
 import slideSmartFactory1 from "../../../images/about-us-v3/jpg/img-1.jpg";
 
-// import slideSmartFactory2 from "@images/about-us-v3/jpg/.jpg";
 import slideSmartFactory2 from "../../../images/about-us-v3/jpg/img-2.jpg";
 
-// import slideSmartFactory3 from "@images/about-us-v3/jpg/.jpg";
 import slideSmartFactory3 from "../../../images/about-us-v3/jpg/img-3.jpg";
 
-// import slideSmartFactory4 from "@images/about-us-v3/jpg/.jpg";
 import slideSmartFactory4 from "../../../images/about-us-v3/jpg/img-4.jpg";
 
-// import slideSmartFactory5 from "@images/about-us-v3/jpg/.jpg";
 import slideSmartFactory5 from "../../../images/about-us-v3/jpg/img-5.jpg";
 
-// import layoutSmartFactory1 from "@images/about-us-v3/png/layout1.png";
 import layoutSmartFactory1 from "../../../images/about-us-v3/png/layout1.png";
 
-// import layoutSmartFactory2 from "@images/about-us-v3/png/layout2.png";
 import layoutSmartFactory2 from "../../../images/about-us-v3/png/layout2.png";
 
-// import layoutSmartFactory3 from "@images/about-us-v3/png/layout3.png";
 import layoutSmartFactory3 from "../../../images/about-us-v3/png/layout3.png";
 
-// import layoutSmartFactory4 from "@images/about-us-v3/png/layout4.png";
 import layoutSmartFactory4 from "../../../images/about-us-v3/png/layout4.png";
 
-// import layoutSmartFactory5 from "@images/about-us-v3/png/layout5.png";
 import layoutSmartFactory5 from "../../../images/about-us-v3/png/layout5.png";
 
-// import layoutSmartFactory6 from "@images/about-us-v3/png/layout6.png";
 import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
 
-// import layoutSmartFactory7 from "@images/about-us-v3/png/layout7.png";
 import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
 
 import smart_factory_image from "../../../images/about-us-v3/png/img-smart-factory.png";
+
 export const Divider = styled("div")`
   width: 88px;
   height: 4px;

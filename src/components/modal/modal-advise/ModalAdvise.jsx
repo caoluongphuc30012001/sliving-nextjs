@@ -6,7 +6,6 @@ import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
 
 function ModalAdvise(props) {
-  console.log("prop", props);
   const { onHide } = props;
 
   const [modalShow, setModalShow] = React.useState(false);
