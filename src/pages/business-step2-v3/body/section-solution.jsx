@@ -346,14 +346,16 @@ const SectionSolution = () => {
 
         <Link
           to={`${
-            activeStep2Cards?.length > 0 && sum > 0 ? "/business-step3-v3" : "#"
+            activeStep2Cards?.length > 0 && sum > 99
+              ? "/business-step3-v3"
+              : "#"
           }`}
           state={{ total: sum }}
         >
           <button
             className="advise-now-btn"
             type="button"
-            disabled={activeStep2Cards.length > 0 && sum > 0 ? false : true}
+            disabled={activeStep2Cards.length > 0 && sum > 99 ? false : true}
             onClick={() =>
               dispatch({ type: "GET_TOTAL_HOUSES", payload: { total: sum } })
             }

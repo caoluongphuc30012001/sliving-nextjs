@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Data } from "@data/tableData.js";
 
 import { BusinessStateContext } from "../../../context/businessContext";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 const buttonList = [
   {
@@ -67,6 +68,7 @@ const Table = ({ table, sorting, quantity }) => {
 };
 
 const SectionProductList = () => {
+  const [modalShow, setModalShow] = React.useState(false);
   let activeTable = 0;
   const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
@@ -77,10 +79,11 @@ const SectionProductList = () => {
 
   useEffect(() => {
     if (state["total"]) {
-      setQuantity(state["total"]);
+      if (state["total"] < 500) setQuantity(500);
+      else if (state["total"] >= 5000) setQuantity(4999);
+      else setQuantity(state["total"]);
     }
     setTableData(Data);
-    ``;
   }, [tableData]);
 
   const sorting = (col) => {
@@ -165,7 +168,11 @@ const SectionProductList = () => {
             )
           );
         })}
+        <div className="advise-now-btn" onClick={() => setModalShow(true)}>
+          <span>Tư Vấn Ngay</span>
+        </div>
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 };

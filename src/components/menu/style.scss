@@ -81,6 +81,7 @@ body {
           height: 48px;
           cursor: pointer;
           background-color: white;
+          color: #454647;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -223,7 +224,7 @@ body {
             font-size: 16px;
             padding: 0 16px;
             height: 40px;
-            display: flex;
+            display: flex;color: #454647;
             align-items: center;
             cursor: pointer;
           }
@@ -247,7 +248,7 @@ body {
         color: #0979fd;
       }
       .item-menu:last-child {
-        border-bottom: none;
+        // border-bottom: none;
       }
     }
     .is-mobile {
@@ -279,10 +280,45 @@ body {
       margin-top: 90px;
     }
   }
+  #business-step1-v3 {
+    .section-business-header-v3 {
+      margin-top: 90px;
+    }
+  }
+  #business-step2-v3 {
+    .section-solution-box {
+      margin-top: 90px;
+    }
+  }
+  #business-step3-v3 {
+    .section-business-product-list{
+      margin-top: 90px;
+    }
+  }
 }
 @media (max-width: 1200px) {
   #smart_home_page {
     .section-product-slider {
+      margin-top: 64px;
+    }
+  }
+  #business-step1-v3 {
+    .section-business-header-v3 {
+      margin-top: 64px;
+    }
+  }
+  #business-step2-v3 {
+    .section-business-header-v3 {
+      margin-top: 64px;
+    }
+  }
+  #business-step3-v3 {
+    .section-business-product-list{
+      margin-top: 64px;
+    }
+  }
+  #smart_lighting_page {
+    .section-smart-lighting-header {
       margin-top: 64px;
     }
   }

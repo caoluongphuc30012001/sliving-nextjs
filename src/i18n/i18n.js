@@ -19,7 +19,7 @@ const options = {
       translations: require("../i18n/locales/en/translations.json"),
     },
   },
-  debug: false,
+  debug: true,
 
   // react: {
   //   bindI18n: "languageChanged loaded",
