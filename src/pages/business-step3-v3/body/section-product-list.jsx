@@ -77,10 +77,11 @@ const SectionProductList = () => {
 
   useEffect(() => {
     if (state["total"]) {
-      setQuantity(state["total"]);
+      if (state["total"] < 500) setQuantity(500);
+      else if (state["total"] >= 5000) setQuantity(4999);
+      else setQuantity(state["total"]);
     }
     setTableData(Data);
-    ``;
   }, [tableData]);
 
   const sorting = (col) => {

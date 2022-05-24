@@ -279,10 +279,45 @@ body {
       margin-top: 90px;
     }
   }
+  #business-step1-v3 {
+    .section-business-header-v3 {
+      margin-top: 90px;
+    }
+  }
+  #business-step2-v3 {
+    .section-solution-box {
+      margin-top: 90px;
+    }
+  }
+  #business-step3-v3 {
+    .section-business-product-list{
+      margin-top: 90px;
+    }
+  }
 }
 @media (max-width: 1200px) {
   #smart_home_page {
     .section-product-slider {
+      margin-top: 64px;
+    }
+  }
+  #business-step1-v3 {
+    .section-business-header-v3 {
+      margin-top: 64px;
+    }
+  }
+  #business-step2-v3 {
+    .section-business-header-v3 {
+      margin-top: 64px;
+    }
+  }
+  #business-step3-v3 {
+    .section-business-product-list{
+      margin-top: 64px;
+    }
+  }
+  #smart_lighting_page {
+    .section-smart-lighting-header {
       margin-top: 64px;
     }
   }
