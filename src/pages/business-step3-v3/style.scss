@@ -14,6 +14,32 @@
         justify-content: center;
         gap: 60px;
         padding: 20px;
+        .advise-now-btn{
+            height: 40px;
+            padding: 8px 32px;
+            background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+            border-radius: 68px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            &:hover {
+                box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
+                    0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+            }
+            span {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            }   
+        }
         .content-title{
             display: flex;
             flex-direction: column;
@@ -61,7 +87,7 @@
                 font-family: 'SVN-Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 16px;
+                font-size: clamp(14px, 3.74vw, 16px);
                 line-height: 24px;
                 text-align: center;
                 text-transform: uppercase;
@@ -72,14 +98,14 @@
                 cursor: pointer;
                 align-items: center;
                 justify-content: center;
-                width: clamp(190px, 10.375vw, 190px);
+                width: clamp(170px, 45.375vw, 190px);
             }
             .active{
                 transition: all 0.8s;
                 color: #2391FD;
             }
             .effect{
-                width: clamp(190px, 10.375vw, 190px);
+                width: clamp(170px, 10.375vw, 190px);
                 position: absolute;
                 height: calc(100% - 8px);
                 background-color: #0979FD;
@@ -105,6 +131,7 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+                overflow: hidden;
                 .center{
                     border-right: 2px solid #A7D8FE;
                     border-left: 2px solid #A7D8FE;
@@ -129,19 +156,21 @@
                         font-family: 'SVN-Gilroy';
                         font-style: normal;
                         font-weight: 500;
-                        font-size: clamp(8px, 3vw, 16px);
+                        font-size: clamp(8px, 2.13vw, 16px);
                         text-align: center;
                         color: #454647;
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
+                        text-align: left;
                         height: 100%;
-                        padding: 0px clamp(10px, 1.67vw, 32px)
+                        padding: 0px clamp(10px, 0.8vw, 32px);
                     }
                     .table-data.header{
                         color: #0979FD;
                         font-weight: 700;
                         background: #DDEFFF;
+                        text-transform: uppercase;
                     }
                 }
             }
@@ -153,17 +182,28 @@
             justify-content: center;
             align-items: center;
             gap: 16px;
+            .smallNote{
+                font-family: 'SVN-Gilroy';
+                font-style: italic;
+                font-weight: 500;
+                font-size: 16px;
+                text-align: center;
+                color: #454647;
+            }
             .sumary-container{
                 display: flex;
-                width: 80%;
-                gap: 16px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 600px;
+                gap: clamp(10px, 3vw, 16px);
                 .sumary-text{
                     width: 100%;
                     font-family: 'SVN-Gilroy';
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 21px;
-                    text-align: center;
+                    font-size: clamp(14px, 3.73vw, 16px);
+                    text-align: left;
                     color: #454647;
                     display: flex;
                 }
@@ -172,18 +212,9 @@
                     font-family: 'SVN-Gilroy';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 21px;
+                    font-size: clamp(16px, 4.26vw, 21px);
                     color: #0979FD;
                     display: flex;
-                }
-                .smallNote{
-                    font-family: 'SVN-Gilroy';
-                    font-style: italic;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 24px;
-                    text-align: center;
-                    color: #454647;
                 }
             }
         }
