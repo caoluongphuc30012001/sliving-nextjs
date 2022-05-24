@@ -5,7 +5,8 @@
 image: node:14
 
 stages:
-  - build-and-deploy
+  - build
+  - deploy
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ee/ci/yaml/README.html#cache
@@ -21,10 +22,12 @@ before_script:
   - chmod 600 ~/.ssh/id_rsa
   - git submodule update --init --recursive
 
-build-and-deploy:
-  stage: build-and-deploy
+build:
+  stage: build
   before_script:
     - export AWS_S3_BUCKET=$AWS_S3_BUCKET_BETA
+  rules:
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop-v2"
   script:
     - npm install
     - npm install -g gatsby-cli
@@ -34,8 +37,15 @@ build-and-deploy:
     # Chưa xử lý phần xóa các file cũ của folder /var/www/html/docs.sliving/. Hiện tại chỉ ghi đè các file cùng tên
     # - scp -i ~/.ssh/id_rsa -P 22006 -r public/* sst-ci@sst-ci.vm.sunshinetech.ai:/var/www/html/docs.sliving/
     - npm run build
-    - npm run deploy
-  only:
-    - develop-v2
+  tags:
+    - hcm-share-docker-runner-1
+
+deploy:
+  stage: deploy
+  extends:
+    - build
+  script:
+    - echo "Not deploy yet..."
+    #  npm run deploy
   tags:
     - hcm-share-docker-runner-1
