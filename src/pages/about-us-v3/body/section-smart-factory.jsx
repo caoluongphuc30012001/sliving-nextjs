@@ -172,7 +172,7 @@ const SectionSmartFactory = () => {
             <img
               src={imgSmartFactory}
               alt=""
-              className="smart-factory-img"
+              className="smart-factory-img img-factory"
             ></img>
           </div>
         </div>
