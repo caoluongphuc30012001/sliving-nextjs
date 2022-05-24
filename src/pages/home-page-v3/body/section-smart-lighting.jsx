@@ -7,6 +7,7 @@ import imgSmartRemoteControl from "@images/home-page-v3/svg/icon-remote-control.
 import imgSmartBrightnessControl from "@images/home-page-v3/svg/icon-brightness-control.svg";
 import imgSmartEnergy from "@images/home-page-v3/svg/icon-energy.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { Link } from "gatsby";
 
 function SectionSmartLighting() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -80,9 +81,11 @@ function SectionSmartLighting() {
               >
                 <span>Tư vấn ngay</span>
               </button>
-              <button className="learn-more-btn">
-                <span>Tìm hiểu thêm</span>
-              </button>
+              <Link to="/smart-lighting-v3">
+                <button className="learn-more-btn">
+                  <span>Tìm hiểu thêm</span>
+                </button>
+              </Link>
             </div>
             <Image
               src={imgSmartLightingLeft}
