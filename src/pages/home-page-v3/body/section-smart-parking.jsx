@@ -8,6 +8,7 @@ import imgItemCart4 from "@images/home-page-v3/svg/icon-smart-parking-item4.svg"
 import imgSmartParking from "@images/home-page-v3/png/img-smart-parking.png";
 import imgSmartParkingMobile from "@images/home-page-v3/png/img-smart-parking-mobile.png";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { Link } from "gatsby";
 
 function SectionSmartParking() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -82,9 +83,11 @@ function SectionSmartParking() {
           <button className="advise-now-btn" onClick={() => setModalShow(true)}>
             <span>Tư vấn ngay</span>
           </button>
-          <button className="learn-more-btn">
-            <span>Tìm hiểu thêm</span>
-          </button>
+          <Link to="/smart-parking-v3">
+            <button className="learn-more-btn">
+              <span>Tìm hiểu thêm</span>
+            </button>
+          </Link>
         </div>
       </div>
       <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />

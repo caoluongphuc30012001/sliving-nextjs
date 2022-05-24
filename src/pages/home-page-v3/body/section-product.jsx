@@ -6,9 +6,12 @@ import imgSwitch from "@images/home-page-v3/img-switch.png";
 import imgApp from "@images/home-page-v3/img-app.png";
 import imgTouch from "@images/home-page-v3/img-touch.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
+import imgAppStore from "@images/home-page-v3/png/img-button-app-store.png";
+import imgGooglePlay from "@images/home-page-v3/png/img-button-google-play.png";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import { Col, Image, Row } from "react-bootstrap";
+import { Link } from "gatsby";
 
 export const Divider = styled("div")`
   width: 56px;
@@ -28,6 +31,8 @@ const SectionProduct = () => {
       title: "Công Tắc Thông Minh",
       subTitle: "Smart Switch",
       image: imgSwitch,
+      downloadObjects: [],
+
       listItem: [
         {
           id: 0,
@@ -57,6 +62,8 @@ const SectionProduct = () => {
       title: "Công Tắc Cảm Ứng",
       subTitle: "Touch switch",
       image: imgTouch,
+      downloadObjects: [],
+
       listItem: [
         {
           id: 0,
@@ -86,6 +93,18 @@ const SectionProduct = () => {
       title: "Ứng Dụng Di Động Sliving",
       subTitle: "App Sliving",
       image: imgApp,
+      downloadObjects: [
+        {
+          id: 0,
+          img: imgAppStore,
+          linkDownload: "https://rgl.mobi/RHQSK",
+        },
+        {
+          id: 1,
+          img: imgGooglePlay,
+          linkDownload: "https://rgl.mobi/Rqccu",
+        },
+      ],
       listItem: [
         {
           id: 0,
@@ -114,6 +133,8 @@ const SectionProduct = () => {
       title: "Động Cơ Rèm Thông Minh",
       subTitle: "Smart Curtain",
       image: imgCurtain,
+      downloadObjects: [],
+
       listItem: [
         {
           id: 0,
@@ -160,7 +181,23 @@ const SectionProduct = () => {
                   : "card-product flex-row-reverse"
               } `}
             >
-              <Col lg={7} className="">
+              <Col lg={7} className="p-relative">
+                {smart?.downloadObjects?.length > 0 && (
+                  <div className="d-flex p-absolute download-app-list">
+                    {smart?.downloadObjects.map((object) => (
+                      <div className="download-app-item" key={object.id}>
+                        <Link to={object.linkDownload}>
+                          <img
+                            src={object.img}
+                            alt=""
+                            className="download-app-img"
+                          ></img>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 <img
                   src={smart.image}
                   alt=""
@@ -204,9 +241,11 @@ const SectionProduct = () => {
                   >
                     <span>Tư vấn ngay</span>
                   </button>
-                  <button className="learn-more-btn">
-                    <span>Tìm hiểu thêm</span>
-                  </button>
+                  <Link to="/smart-home-v3">
+                    <button className="learn-more-btn">
+                      <span>Tìm hiểu thêm</span>
+                    </button>
+                  </Link>
                 </div>
               </Col>
             </Row>
