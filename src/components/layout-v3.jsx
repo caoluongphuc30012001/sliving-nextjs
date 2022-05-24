@@ -55,7 +55,7 @@ function LayoutV3({ children }) {
     {
       id: 3,
       nameRoute: "GÓI GIẢI PHÁP",
-      href: "/#",
+      href: "/business-step1-v3",
     },
 
     {

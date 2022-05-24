@@ -6,7 +6,6 @@ import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
 
 function ModalAdvise(props) {
-  console.log("prop", props);
   const { onHide } = props;
 
   const [modalShow, setModalShow] = React.useState(false);
@@ -24,14 +23,14 @@ function ModalAdvise(props) {
   const onSubmit = (data) => {
     console.log("data", data);
 
-    // const formData = new FormData();
-    // formData.append("name", data.fullName);
-    // formData.append("phone", data.telephone);
-    // formData.append("email", data.email);
-    // formData.append("content", data.content);
-    // formData.append("boolean", "true");
-    // formData.append("list", "6xdCd892x7gSZoG7768926aeLA");
-    // formData.append('subform', 'yes');
+    const formData = new FormData();
+    formData.append("name", data.fullName);
+    formData.append("phone", data.telephone);
+    formData.append("email", data.email);
+    formData.append("content", data.content);
+    formData.append("boolean", "true");
+    formData.append("list", "6xdCd892x7gSZoG7768926aeLA");
+    formData.append("subform", "yes");
 
     const googleSheetFormData = new FormData();
     googleSheetFormData.append("fullName", data.fullName);
@@ -42,16 +41,16 @@ function ModalAdvise(props) {
       "timestamp",
       new Date().toLocaleDateString().substring(0, 10)
     );
-    googleSheetFormData.append("linkedBy", "slving");
+    googleSheetFormData.append("linkedBy", "sliving");
 
-    // axios
-    //   .post('/subscribe', formData)
-    //   .then(() => {
-    //     // console.log('response: ', response.data);
-    //     // console.log('response.status: ', response.status);
-    //     // console.log('response.data: ', response.data);
-    //   })
-    //   .catch(() => {});
+    axios
+      .post("/subscribe", formData)
+      .then(() => {
+        // console.log('response: ', response.data);
+        // console.log('response.status: ', response.status);
+        // console.log('response.data: ', response.data);
+      })
+      .catch(() => {});
 
     axios
       .post(

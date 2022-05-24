@@ -11,6 +11,7 @@ import {
 import { Controller, useForm } from "react-hook-form";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 import ModalThanks from "../../../components/modal/modal-thanks/ModalThanks";
+import axios from "axios";
 
 function SectionFormContact() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -22,11 +23,55 @@ function SectionFormContact() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
+  const googleSheetAPI =
+    "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
+
   const onSubmit = (data) => {
     console.log("data", data);
 
-    setModalShow(true);
+    const googleSheetFormData = new FormData();
+    googleSheetFormData.append("fullName", data.fullName);
+    googleSheetFormData.append("email", data.email);
+    googleSheetFormData.append("telephone", `'${data.telephone}`);
+    googleSheetFormData.append("content", data.content);
+    googleSheetFormData.append(
+      "timestamp",
+      new Date().toLocaleDateString().substring(0, 10)
+    );
+    googleSheetFormData.append("linkedBy", "sliving");
+    axios
+      .post(
+        "https://sheet.best/api/sheets/db2c6577-b6f0-4ad7-b78d-d45c7034faaa",
+        googleSheetFormData
+      )
+      .then((response) => {
+        if (response.status === 200) {
+          //   onHide(false);
+          setModalShow(true);
+        }
+      })
+      .catch(() => {});
+
+    const formData = new FormData();
+    formData.append("name", data.fullName);
+    formData.append("phone", data.telephone);
+    formData.append("email", data.email);
+    formData.append("content", data.content);
+    formData.append("boolean", "true");
+    formData.append("list", "6xdCd892x7gSZoG7768926aeLA");
+    formData.append("subform", "yes");
+
+    axios
+      .post("/subscribe", formData)
+      .then((response) => {
+        // console.log("response: ", response);
+        // console.log("response.status: ", response.status);
+        // console.log("response.data: ", response.data);
+      })
+      .catch(() => {});
     reset();
+
+    // setModalShow(true);
   };
   return (
     <div
@@ -99,7 +144,7 @@ function SectionFormContact() {
                   isValid={isDirty && !invalid}
                   className="email"
                   placeholder="Nhập email của bạn ở đây"
-                  autoComplete="nope"
+                  autoComplete="off"
                 />
               );
             }}
