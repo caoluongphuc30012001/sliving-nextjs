@@ -34,7 +34,7 @@ import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
 const listSlide = [
   {
     id: 0,
-    title: "Thông Minh",
+    title: "Công Tắc Cơ Thông Minh",
     subTitle: "SMART SWITCH",
     contents: [
       {
@@ -78,7 +78,7 @@ const listSlide = [
   },
   {
     id: 1,
-    title: "Cảm Ứng",
+    title: "Công Tắc Cảm Ứng Thông Minh",
     subTitle: "TOUCH SWITCH",
     contents: [
       {
@@ -118,7 +118,7 @@ const listSlide = [
   },
   {
     id: 2,
-    title: "Động Cơ Rèm",
+    title: "Động Cơ Rèm Thông Minh",
     subTitle: "SMART CURTAIN",
     contents: [
       {
@@ -183,7 +183,7 @@ const listSlide = [
   },
   {
     id: 4,
-    title: "Ứng Dụng Sliving Điều Khiển Từ Xa",
+    title: "Quản Lý Thông Minh Với Sliving App",
     subTitle: "SLIVING APP",
     contents: [
       {
@@ -206,10 +206,12 @@ const listSlide = [
       {
         id: 0,
         img: appStoreItem,
+        link: "https://rgl.mobi/RHQSK",
       },
       {
         id: 1,
         img: ggPlayItem,
+        link: "https://rgl.mobi/Rqccu",
       },
     ],
   },

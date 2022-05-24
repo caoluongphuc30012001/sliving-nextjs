@@ -2,13 +2,13 @@ import React, { useCallback, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import iconPhone from "@images/contact-page-v3/svg/icon-phone.svg";
 import iconEmail from "@images/contact-page-v3/svg/icon-email.svg";
-import iconMap from "@images/contact-page-v3/svg/icon-map-2.svg";
+import iconMap from "@images/contact-page-v3/svg/icon-map.svg";
+import iconPhoneMobile from "@images/contact-page-v3/svg/icon-phone-blue.svg";
+import iconEmailMobile from "@images/contact-page-v3/svg/icon-email-blue.svg";
+import iconMapMobile from "@images/contact-page-v3/svg/icon-map-blue.svg";
 // import AddressAndMap from "../../../components/footer/footer-v3/AddressAndMap";
 import SectionMap from "../../../components/footer/footer-v3/map";
 import { useMemo } from "react";
-import iconBgPin from "/assets/image/svg/icon-bg-pin.svg";
-import iconBgEmail from "/assets/image/svg/icon-bg-mail.svg";
-import iconBgPhone from "/assets/image/svg/icon-bg-phone.svg";
 
 const listContact = [
   {
@@ -62,7 +62,16 @@ function SectionQuickSupport() {
             </div>
             <div className="quick-support-content-row d-flex">
               <div className="quick-support-icon">
-                <img src={iconPhone} alt="" />
+                <img
+                  src={iconPhone}
+                  alt="icon-phone"
+                  className="icon-desktop"
+                />
+                <img
+                  src={iconPhoneMobile}
+                  alt="icon-phone-mobile"
+                  className="d-none icon-mobile"
+                />
               </div>
               <div className="quick-support-body">
                 <h5>Phone</h5>
@@ -71,7 +80,16 @@ function SectionQuickSupport() {
             </div>
             <div className="quick-support-content-row d-flex">
               <div className="quick-support-icon">
-                <img src={iconEmail} alt="" />
+                <img
+                  src={iconEmail}
+                  alt="icon-email"
+                  className="icon-desktop"
+                />
+                <img
+                  src={iconEmailMobile}
+                  alt="icon-email-mobile"
+                  className="d-none icon-mobile"
+                />
               </div>
               <div className="quick-support-body">
                 <h5>Email</h5>
@@ -80,7 +98,12 @@ function SectionQuickSupport() {
             </div>
             <div className="quick-support-content-row d-flex">
               <div className="quick-support-icon">
-                <img src={iconMap} alt="" />
+                <img src={iconMap} alt="icon-map" className="icon-desktop" />
+                <img
+                  src={iconMapMobile}
+                  alt="icon-map-mobile"
+                  className="d-none icon-mobile"
+                />
               </div>
               <div className="quick-support-body">
                 <h5>Address</h5>
@@ -97,7 +120,7 @@ function SectionQuickSupport() {
             </div>
           </div>
         </Col>
-        <Col md={6} className="px-0">
+        <Col md={6} className="px-0 col-right">
           <Row className="menu-map mx-0">
             {listContact.map((contact, index) => (
               <Col

@@ -32,16 +32,16 @@ const ProductItemSwiper = ({ slide }) => {
             setSwiperIndex(s.realIndex);
           }}
         >
-          {slide?.listItem.map((slideItem,index) => (
-              <SwiperSlide key={slideItem.id}>
-                <img className="swiper-image" src={slideItem.img} alt="" />
-              </SwiperSlide>
+          {slide?.listItem.map((slideItem, index) => (
+            <SwiperSlide key={slideItem.id}>
+              <img className="swiper-image" src={slideItem.img} alt="" />
+            </SwiperSlide>
           ))}
         </Swiper>
       )}
       {slide?.titles && slide?.titles.length > 0 && (
         <div className="banner-products-btn-group">
-          {slide?.titles.map((btnItem,index) => {
+          {slide?.titles.map((btnItem, index) => {
             return (
               <div
                 key={btnItem.id}
@@ -64,7 +64,7 @@ const ProductItemSwiper = ({ slide }) => {
   );
 };
 
-const   SectionProductsSlider = ({ listSlide }) => {
+const SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
 
   const increaseToggleTab = () => {
@@ -123,14 +123,14 @@ const   SectionProductsSlider = ({ listSlide }) => {
                   {slide?.downloadObjects?.length > 0 && (
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
-                        <div className="download-app-item"
-                          key={object.id}
-                        >
-                          <img
-                            src={object.img}
-                            alt=""
-                            className="download-app-img"
-                          ></img>
+                        <div className="download-app-item" key={object.id}>
+                          <a href={object.link} target="_blank">
+                            <img
+                              src={object.img}
+                              alt=""
+                              className="download-app-img"
+                            ></img>
+                          </a>
                         </div>
                       ))}
                     </div>
@@ -146,7 +146,8 @@ const   SectionProductsSlider = ({ listSlide }) => {
                 <div className="product-right-all-contents">
                   {slide?.contents &&
                     slide?.contents.map((content) => (
-                      <p className="product-right-desc-container"
+                      <p
+                        className="product-right-desc-container"
                         key={content.id}
                       >
                         <span className="product-right-main-title">

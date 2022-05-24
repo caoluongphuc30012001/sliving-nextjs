@@ -28,18 +28,18 @@ function BuildInformation() {
         Kết nối với chúng tôi
       </h4>
       <div className="group-icon-social d-flex justify-content-center align-items-center">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src={iconFb} alt="facebook" />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src={iconYtn} alt="youtube" />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src={iconPhone} alt="phone" />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src={iconEmail} alt="email" />
-        </a>
+        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        <img src={iconFb} alt="facebook" />
+        {/* </a> */}
+        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        <img src={iconYtn} alt="youtube" />
+        {/* </a> */}
+        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        <img src={iconPhone} alt="phone" />
+        {/* </a> */}
+        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+        <img src={iconEmail} alt="email" />
+        {/* </a> */}
       </div>
     </div>
   );

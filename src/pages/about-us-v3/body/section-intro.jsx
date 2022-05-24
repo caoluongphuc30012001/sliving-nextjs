@@ -18,14 +18,6 @@ export const Divider = styled("div")`
   border-radius: 200px;
 `;
 
-export const SmallDivider = styled("div")`
-  width: 100%;
-  max-width: 1180px;
-  height: 0px;
-  border: 1px solid #e1e3e6;
-  margin: 40px 0px;
-`;
-
 const SectionIntro = () => {
   const introItems = [
     {
@@ -142,7 +134,6 @@ const SectionIntro = () => {
                     </div>
                   </div>
                 </div>
-                {intro.id !== introItems.length - 1 && <SmallDivider />}
               </div>
             );
           })}
