@@ -41,7 +41,7 @@ function ModalAdvise(props) {
       "timestamp",
       new Date().toLocaleDateString().substring(0, 10)
     );
-    googleSheetFormData.append("linkedBy", "slving");
+    googleSheetFormData.append("linkedBy", "sliving");
 
     axios
       .post("/subscribe", formData)

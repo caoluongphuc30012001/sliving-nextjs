@@ -38,7 +38,7 @@ function SectionFormContact() {
       "timestamp",
       new Date().toLocaleDateString().substring(0, 10)
     );
-    googleSheetFormData.append("linkedBy", "slving");
+    googleSheetFormData.append("linkedBy", "sliving");
     axios
       .post(
         "https://sheet.best/api/sheets/db2c6577-b6f0-4ad7-b78d-d45c7034faaa",
@@ -64,14 +64,14 @@ function SectionFormContact() {
     axios
       .post("/subscribe", formData)
       .then((response) => {
-        console.log("response: ", response);
-        console.log("response.status: ", response.status);
-        console.log("response.data: ", response.data);
+        // console.log("response: ", response);
+        // console.log("response.status: ", response.status);
+        // console.log("response.data: ", response.data);
       })
       .catch(() => {});
+    reset();
 
     // setModalShow(true);
-    reset();
   };
   return (
     <div
@@ -144,7 +144,7 @@ function SectionFormContact() {
                   isValid={isDirty && !invalid}
                   className="email"
                   placeholder="Nhập email của bạn ở đây"
-                  autoComplete="nope"
+                  autoComplete="off"
                 />
               );
             }}
