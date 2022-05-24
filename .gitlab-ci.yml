@@ -49,3 +49,5 @@ deploy:
     - npm run deploy
   tags:
     - hcm-share-docker-runner-1
+  only:
+    - develop
