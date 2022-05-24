@@ -89,7 +89,7 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
               );
             })}
           </div>
-          <div className="footer">
+          <div className="popup-footer">
             <button className="popup-advise-now-btn" onClick={handleSubmit}>
               <span>Xác nhận</span>
             </button>
