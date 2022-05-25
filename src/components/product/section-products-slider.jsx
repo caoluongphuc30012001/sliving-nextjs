@@ -120,11 +120,13 @@ const SectionProductsSlider = ({ listSlide }) => {
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
                         <div className="download-app-item">
-                          <img
-                            src={object.img}
-                            alt=""
-                            className="download-app-img"
-                          ></img>
+                          <a href={object.link} target="_blank">
+                            <img
+                              src={object.img}
+                              alt=""
+                              className="download-app-img"
+                            ></img>
+                          </a>
                         </div>
                       ))}
                     </div>
