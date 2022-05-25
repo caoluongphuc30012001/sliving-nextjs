@@ -8,7 +8,7 @@ function SectionSmartTurnstile() {
     <section className="bg-smart-door-locks" id="smart-turnstile">
       <Container className="max-width-1180 padding-left-right-smart-door">
         <h3 className="sub-title-smart-secuirity">SMART TURNSTILE</h3>
-        <h2 className="title-smart-secuirity">Hệ Thống Cửa Xoay Thông Minh</h2>
+        <h2 className="title-smart-secuirity">Hệ Thống Cửa Quay Thông Minh</h2>
         <div>
           <div className="div-under-smart-security"></div>
         </div>
@@ -28,7 +28,7 @@ function SectionSmartTurnstile() {
               <span>Tích hợp công nghệ định danh eKYC </span>
             </p>
             <p className="sub-title-smart-door">
-              Thiết bị nhận diện khuôn mặt 4.0 eKYC ở cửa xoay giúp việc nhận
+              Thiết bị nhận diện khuôn mặt 4.0 eKYC ở cửa quay giúp việc nhận
               diện, phân biệt và theo dấu người ra vào khu vực chính xác.
             </p>
             <p className="title-smart-door-2">

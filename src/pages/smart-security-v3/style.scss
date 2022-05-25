@@ -92,7 +92,7 @@
     max-width: 90% !important;
   }
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   .title-top-smart-security {
     font-size: 32px;
     line-height: 40px;
@@ -105,6 +105,13 @@
   }
   .detail-top-smart-security {
     margin-bottom: 12px !important;
+    text-align: center;
+    margin: auto;
+  }
+  .title-smart-parking-security {
+    text-align: center;
+  }
+  .sub-title-smart-parking-security {
     text-align: center;
   }
   .row-main-top-security {

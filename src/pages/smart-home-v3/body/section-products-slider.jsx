@@ -206,12 +206,12 @@ const listSlide = [
       {
         id: 0,
         img: appStoreItem,
-        link: "https://rgl.mobi/RHQSK",
+        link: "https://1p.io/AppSlivingApple",
       },
       {
         id: 1,
         img: ggPlayItem,
-        link: "https://rgl.mobi/Rqccu",
+        link: "https://1p.io/AppSlivingApple",
       },
     ],
   },

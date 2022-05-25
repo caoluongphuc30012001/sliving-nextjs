@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 
 import { packagesData } from "@data/business-packages.js";
 
+import selectedIcon from "../../../images/business-step1-v3/svg/icon-add.svg";
+
 const CheckOutsideClick = ({ onClickOutside, children }) => {
   const ref = useRef(null);
 
@@ -25,6 +27,18 @@ const CheckOutsideClick = ({ onClickOutside, children }) => {
       {children}
     </div>
   );
+};
+
+const SPEC = ({ text }) => {
+  {
+    text = text.replace("Giải pháp", "");
+    return (
+      <div className="solution-item-desc">
+        <p className="desc-p">Giải Pháp</p>
+        <span className="desc-span">{text}</span>
+      </div>
+    );
+  }
 };
 
 const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
@@ -60,6 +74,7 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
     <div className="solution-popup-bg">
       <CheckOutsideClick onClickOutside={() => setOpenPopup(false)}>
         <div className="wrapper">
+          <div className="wrapper-title">Chọn Giải Pháp</div>
           <div className="body">
             {packagesData.map((item) => {
               let checkItem = activePopupCards.find(
@@ -82,9 +97,12 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
                     alt=""
                     className="solution-item-img"
                   ></img>
-                  <div className="solution-item-desc">
-                    <span>{item.title}</span>
-                  </div>
+                  <SPEC text={item.title} />
+                  <img
+                    className="solution-item-icon"
+                    src={selectedIcon}
+                    alt=""
+                  />
                 </div>
               );
             })}

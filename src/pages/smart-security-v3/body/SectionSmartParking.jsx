@@ -12,7 +12,7 @@ function SectionSmartParking() {
       <Container className="max-width-1180 padding-left-right">
         <h3 className="sub-title-smart-secuirity">SMART PARKING</h3>
         <h2 className="title-smart-secuirity">
-          Hệ Thống Trong Giải Pháp Smart Security
+          Hệ Thống Trong Giải Pháp Smart Building
         </h2>
         <div>
           <div className="div-under-smart-security"></div>
@@ -68,7 +68,7 @@ function SectionSmartParking() {
                       SMART TURNSTILE
                     </h3>
                     <p className="sub-title-smart-parking-security">
-                      Hệ Thống Cửa Xoay Thông Minh
+                      Hệ Thống Cửa Quay Thông Minh
                     </p>
                   </Col>
                 </Row>

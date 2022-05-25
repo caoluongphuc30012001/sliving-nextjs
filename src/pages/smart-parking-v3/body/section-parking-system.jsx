@@ -48,7 +48,7 @@ const softwareContentList = [
         },
         {
           id: 3,
-          text: "Luôn cập nhật số lượng chỗ trống, hiển thị trên cả biển báo và bảng báo",
+          text: "Cập nhật số lượng chỗ trống và hiển thị trên bảng chỉ dẫn",
         },
       ],
     },
@@ -359,19 +359,11 @@ const appMapContent = [
     content: [
       {
         id: 0,
-        content: "Cho phép người dùng đặt chỗ trước",
+        content: "Bản đồ được tích hợp vào ứng dụng (app) trên điện thoại",
       },
       {
         id: 1,
-        content: "Xác định đúng vị trí còn trống",
-      },
-      {
-        id: 2,
-        content: "Nhập trước biển số xe",
-      },
-      {
-        id: 3,
-        content: "Dò bản đồ (map) và định vị hướng đi của xe",
+        content: "để dễ dàng định vị và dò tìm vị trí cần thiết",
       },
     ],
   },
@@ -476,26 +468,26 @@ const SectionParkingSystem = () => {
                   Chức năng
                   <img src={icon_ellipse} className="content-img" alt=""></img>
                 </div>
-                <div className="content-text">
+                <ul className="content-text">
                   {softwareContentList[`${seclection}`].content.feature.map(
                     (item) => {
-                      return <div key={item.id}>{item.text}</div>;
+                      return <li key={item.id}>{item.text}</li>;
                     }
                   )}
-                </div>
+                </ul>
               </div>
               <div className="content">
                 <div className="content-title">
                   Mô tả chi tiết
                   <img src={icon_ellipse} className="content-img" alt=""></img>
                 </div>
-                <div className="content-text">
+                <ul className="content-text">
                   {softwareContentList[`${seclection}`].content.desc.map(
                     (item) => {
-                      return <div key={item.id}>{item.text}</div>;
+                      return <li key={item.id}>{item.text}</li>;
                     }
                   )}
-                </div>
+                </ul>
               </div>
             </div>
           </div>

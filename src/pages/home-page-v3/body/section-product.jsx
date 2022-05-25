@@ -97,12 +97,12 @@ const SectionProduct = () => {
         {
           id: 0,
           img: imgAppStore,
-          linkDownload: "https://rgl.mobi/RHQSK",
+          linkDownload: "https://1p.io/AppSlivingApple",
         },
         {
           id: 1,
           img: imgGooglePlay,
-          linkDownload: "https://rgl.mobi/Rqccu",
+          linkDownload: "https://1p.io/SlivingAppChplay",
         },
       ],
       listItem: [
@@ -183,16 +183,16 @@ const SectionProduct = () => {
             >
               <Col lg={7} className="p-relative">
                 {smart?.downloadObjects?.length > 0 && (
-                  <div className="d-flex p-absolute download-app-list">
+                  <div className="d-flex p-absolute download-app-list download-app-list-desktop ">
                     {smart?.downloadObjects.map((object) => (
                       <div className="download-app-item" key={object.id}>
-                        <Link to={object.linkDownload}>
+                        <a href={object.linkDownload} target="_blank">
                           <img
                             src={object.img}
                             alt=""
                             className="download-app-img"
                           ></img>
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>
@@ -208,7 +208,22 @@ const SectionProduct = () => {
               <Col lg={5} className="">
                 <h3 className="card-product-title">{smart.title}</h3>
                 <h4 className="card-product-subtitle">{smart.subTitle}</h4>
-                <div className="card-product-img-mobile d-none">
+                <div className="card-product-img-mobile d-none p-relative">
+                  {smart?.downloadObjects?.length > 0 && (
+                    <div className="d-flex p-absolute download-app-list">
+                      {smart?.downloadObjects.map((object) => (
+                        <div className="download-app-item" key={object.id}>
+                          <Link to={object.linkDownload}>
+                            <img
+                              src={object.img}
+                              alt=""
+                              className="download-app-img"
+                            ></img>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <img src={smart.image} alt="" class="float-none" />
                 </div>
                 <ul className="card-product-content">

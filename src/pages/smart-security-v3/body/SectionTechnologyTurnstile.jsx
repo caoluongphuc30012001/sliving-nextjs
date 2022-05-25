@@ -47,7 +47,7 @@ function SectionTechnologyTurnstile() {
               </h3>
               <p className="detail-partnership-security">
                 Hệ thống phần mềm và phần cứng của Unicloud có thể tích hợp với
-                mọi sản phẩm cửa xoay có Trigger.
+                mọi sản phẩm cửa quay có Trigger.
               </p>
               <div className="div-wrapper-icon-security">
                 <Image src={iconPartnership} className="img-fluid" />

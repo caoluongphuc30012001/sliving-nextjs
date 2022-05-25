@@ -28,7 +28,6 @@
             font-style: normal;
             font-weight: 700;
             font-size: 36px;
-            line-height: 48px;
             text-align: center;
             color: #2C2D2E;
         }
@@ -94,7 +93,6 @@
                 font-family: 'SVN Gilroy';
                 font-weight: 700;
                 font-size: 21px;
-                line-height: 32px;
                 color: #0979FD;
             }
             &:focus{
@@ -251,7 +249,6 @@
             font-style: normal;
             font-weight: 700;
             font-size: 36px;
-            line-height: 48px;
             text-align: center;
             color: #2C2D2E;
         }
@@ -521,6 +518,61 @@
   
       .right-content {
         display: flex;
+        .btn-group {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            .advise-now-btn,
+            .learn-more-btn {
+              height: 40px;
+              padding: 8px 34px;
+              width: 184px;
+            }
+          
+            .advise-now-btn {
+              margin-right: 34px;
+              background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+              border-radius: 68px;
+              border: none;
+              &:hover {
+                box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
+                  0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+              }
+          
+              span {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                color: #ffffff;
+              }
+            }
+            .learn-more-btn {
+              border-radius: 68px;
+              display: flex;
+              align-items: center;
+              border: 2px solid transparent;
+              background: linear-gradient(to right, white, white),
+                linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+              background-clip: padding-box, border-box;
+              background-origin: padding-box, border-box;
+              &:hover {
+                background: linear-gradient(to right, #ddefff, #ddefff),
+                  linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+                background-clip: padding-box, border-box;
+                background-origin: padding-box, border-box;
+              }
+              span {
+                margin: 0 auto;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+          }
   
         .right-content-container {
           height: fit-content;
@@ -682,4 +734,7 @@
             display: block;
         }
     }
+}
+.btn-advise,.btn-find-more{
+    white-space: nowrap;
 }

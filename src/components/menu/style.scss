@@ -224,7 +224,8 @@ body {
             font-size: 16px;
             padding: 0 16px;
             height: 40px;
-            display: flex;color: #454647;
+            display: flex;
+            color: #454647;
             align-items: center;
             cursor: pointer;
           }
@@ -271,7 +272,11 @@ body {
       margin-top: 90px;
     }
   }
-
+  #smart_parking_page {
+    .section-smart-parking-v3-header {
+      margin-top: 90px;
+    }
+  }
   .home-page-v3 {
     margin-top: 90px;
   }

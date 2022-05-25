@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "gatsby";
 const ContentLeft = ({ listProduct, current, setCurrent }) => {
   return (
     <div className="content-left">
@@ -39,10 +40,14 @@ const ContentRight = ({ listProduct }) => {
           return listProduct.listProduct.map((item) => {
             return (
               <SwiperSlide key={item.id} className="list-product">
-                <div className="item-box">
-                  <img src={item.image} alt="" />
-                  <div className="description">{item.description}</div>
-                </div>
+                <Link to={`/product-detail/${item.type}`}>
+                  <div className="item-box">
+                    <div className="img-box">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="description">{item.description}</div>
+                  </div>
+                </Link>
               </SwiperSlide>
             );
           });

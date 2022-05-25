@@ -9,22 +9,22 @@ import Footer from "./footer/footer-v3/footer-v3";
 const listRoute = [
   {
     id: 0,
-    nameRoute: "SMART SECURITY",
+    nameRoute: "SMART BUILDING",
     listRoute: [
       {
         id: 0,
         nameRoute: "SMART LIGHTING",
-        href: "/smart-lighting-v3",
+        href: "/smart-lighting",
       },
       {
         id: 1,
         nameRoute: "SMART PARKING",
-        href: "/smart-parking-v3",
+        href: "/smart-parking",
       },
       {
         id: 2,
         nameRoute: "SMART HOME",
-        href: "/smart-home-v3",
+        href: "/smart-home",
       },
     ],
   },
@@ -42,7 +42,7 @@ const listRoute = [
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/contact-us-v3",
+    href: "/contact-us",
   },
 ];
 function LayoutSecurity({ children }) {

@@ -13,25 +13,25 @@ const listRoute = [
       {
         id: 0,
         nameRoute: "SMART PARKING",
-        href: "/smart-parking-v3",
+        href: "/smart-parking",
       },
       {
         id: 1,
-        nameRoute: "SMART SECURITY",
-        href: "/smart-security-v3",
+        nameRoute: "SMART BUILDING",
+        href: "/smart-building",
       },
 
       {
         id: 2,
         nameRoute: "SMART HOME",
-        href: "/smart-home-v3",
+        href: "/smart-home",
       },
     ],
   },
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/business-step1-v3",
+    href: "/business-step1",
     active: true,
   },
   {
@@ -42,7 +42,7 @@ const listRoute = [
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/contact-us-v3",
+    href: "/contact-us",
   },
 ];
 
