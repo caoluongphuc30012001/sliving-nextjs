@@ -182,15 +182,15 @@ const SectionProduct = () => {
                   : "card-product flex-row-reverse"
               } `}
             >
-              <Col lg={7}>
-                <div className="p-relative h-100">
+              <Col lg={7} md={6}>
+                <div className="p-relative">
                   <img
                     src={smart.image}
                     alt=""
                     className="card-product-img"
-                    style={{
-                      float: `${smart.id % 2 === 0 ? "left" : "right"}`,
-                    }}
+                    // style={{
+                    //   float: `${smart.id % 2 === 0 ? "left" : "right"}`,
+                    // }}
                   />
                   {smart?.downloadObjects?.length > 0 && (
                     <div className="d-flex p-absolute download-app-list download-app-list-desktop ">
@@ -209,7 +209,7 @@ const SectionProduct = () => {
                   )}
                 </div>
               </Col>
-              <Col lg={5} className="">
+              <Col lg={5} md={6} className="">
                 <h3 className="card-product-title">{smart.title}</h3>
                 <h4 className="card-product-subtitle">{smart.subTitle}</h4>
                 <div className="card-product-img-mobile d-none p-relative">

@@ -42,7 +42,7 @@ function SectionSmartLighting() {
           </div>
         </div>
         <Row className="smart-lighting-row gx-5">
-          <Col lg={7} md={12} className="smart-lighting-col-left">
+          <Col lg={7} md={6} sm={12} className="smart-lighting-col-left">
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
                 Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
@@ -90,7 +90,7 @@ function SectionSmartLighting() {
               className="smart-lighting-img-left w-100"
             />
           </Col>
-          <Col lg={5} md={12} className="smart-lighting-col-right">
+          <Col lg={5} md={6} sm={12} className="smart-lighting-col-right">
             <Row className="smart-lighting-group">
               {listItemCard.map((itemCard) => (
                 <Col className="smart-lighting-card" key={itemCard.id}>

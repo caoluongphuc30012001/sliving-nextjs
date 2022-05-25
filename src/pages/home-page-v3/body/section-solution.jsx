@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import imgRight from "@images/home-page-v3/img-solution-smart.png";
+import imgRight from "@images/home-page-v3/png/img-solution-best.png";
 import imgLeft from "@images/home-page-v3/img-smart-life.png";
 
 import iconBulb from "@images/icon/icon-bulb.svg";
@@ -81,7 +81,7 @@ const SectionSolution = () => {
     <section className="section-solution">
       <div className="container-1220 section-solution-about">
         <Row className="justify-content-around">
-          <Col lg={6} className="">
+          <Col lg={6} md={6} sm={12}>
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
@@ -122,17 +122,26 @@ const SectionSolution = () => {
               </button>
             </Link>
           </Col>
-          <Col lg={6} className="">
-            <img src={imgRight} alt="" className="solution-about-img" />
+          <Col lg={6} md={6} sm={12}>
+            <div className="p-relative">
+              <img src={imgRight} alt="" className="solution-about-img" />
+              <div className="solution-about-cap-desktop d-flex p-absolute">
+                <div className="solution-about-cap-line"></div>
+                <span className="solution-about-cap-content d-flex align-items-center">
+                  "The light is what guides you home, the warmth is what keeps
+                  you there." - Ellie Rodriguez
+                </span>
+              </div>
+            </div>
           </Col>
         </Row>
       </div>
       <div className="container-1220 section-solution-sliving">
         <Row className="justify-content-between">
-          <Col lg={6} className="solution-sliving-img">
+          <Col lg={6} md={6} sm={12} xs className="solution-sliving-img">
             <img src={imgLeft} alt="" />
           </Col>
-          <Col lg={6} className=" solution-sliving-col-right ">
+          <Col lg={6} md={6} sm={12} className=" solution-sliving-col-right ">
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">
@@ -152,7 +161,7 @@ const SectionSolution = () => {
               {arrProd.map((prod) => (
                 <Col
                   key={prod.id}
-                  className="px-0 gy-3 col-4"
+                  className="gx-3 gy-3 col-4"
                   lg={4}
                   md={4}
                   sm={4}
@@ -169,6 +178,7 @@ const SectionSolution = () => {
               src={imgSolution}
               alt=""
               className="solution-about-img-mobile"
+              style={{ paddingTop: "32px" }}
             />
           </Col>
         </Row>

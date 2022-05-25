@@ -93,13 +93,32 @@ function SectionFeaturedProject() {
         </div>
       </div>
       <Swiper
-        slidesPerView={"auto"}
+        slidesPerView={3}
         spaceBetween={20}
-        // pagination={{
-        //   clickable: true,
-        // }}
         modules={[Pagination]}
         className="mySwiper options-mobile d-none"
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          375: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          425: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
       >
         {listItemCard.map((itemCard) => (
           <SwiperSlide key={itemCard.id}>
