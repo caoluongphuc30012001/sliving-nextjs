@@ -18,15 +18,15 @@ import iconLicense from "../../../images/about-us-v3/svg/icon-license.svg";
 import iconPCCC from "../../../images/about-us-v3/svg/icon-pccc.svg";
 import iconSmartFactory from "../../../images/about-us-v3/svg/icon-smart-factory.svg";
 
-import slideSmartFactory1 from "../../../images/about-us-v3/jpg/img-1.jpg";
+import slideSmartFactory1 from "../../../images/about-us-v3/png/1.png";
 
-import slideSmartFactory2 from "../../../images/about-us-v3/jpg/img-2.jpg";
+import slideSmartFactory2 from "../../../images/about-us-v3/png/2.png";
 
-import slideSmartFactory3 from "../../../images/about-us-v3/jpg/img-3.jpg";
+import slideSmartFactory3 from "../../../images/about-us-v3/png/3.png";
 
-import slideSmartFactory4 from "../../../images/about-us-v3/jpg/img-4.jpg";
+import slideSmartFactory4 from "../../../images/about-us-v3/png/4.png";
 
-import slideSmartFactory5 from "../../../images/about-us-v3/jpg/img-5.jpg";
+import slideSmartFactory5 from "../../../images/about-us-v3/png/5.png";
 
 import layoutSmartFactory1 from "../../../images/about-us-v3/png/layout1.png";
 
