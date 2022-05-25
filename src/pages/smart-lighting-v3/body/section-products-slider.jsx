@@ -31,7 +31,7 @@ const listSlide = [
       {
         id: 0,
         title: "",
-        desc: "LED Driver điều chỉnh dòng điện xoay chiều điện áp cao, thành dòng điện một chiều điện áp thấp",
+        desc: "LED Driver điều chỉnh dòng điện quay chiều điện áp cao, thành dòng điện một chiều điện áp thấp",
       },
       {
         id: 1,
@@ -215,7 +215,7 @@ const listSlide = [
     ],
     phoneImg: null,
     downloadObjects: [],
-  }
+  },
 ];
 
 const SectionProductsSlider = () => {

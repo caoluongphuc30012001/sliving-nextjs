@@ -41,7 +41,7 @@ const SectionSolution = () => {
     },
     {
       id: 3,
-      desc: "Smart Security",
+      desc: "Smart Building",
     },
   ];
 

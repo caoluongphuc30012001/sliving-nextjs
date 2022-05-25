@@ -12,7 +12,7 @@ function SectionTopSmartSecurity() {
             <Image src={imgSecurity} className="img-fluid img-top-security" />
           </Col>
           <Col md={6} className="order-first order-md-last">
-            <h2 className="title-top-smart-security">SMART SECURITY</h2>
+            <h2 className="title-top-smart-security">SMART BUILDING</h2>
             <p className="detail-top-smart-security">
               Chúng tôi tự hào khi mang đến cho khách hàng một hàng rào an ninh
               ứng dụng công nghệ số kiên cố, hiện đại, vững chắc và an toàn cho

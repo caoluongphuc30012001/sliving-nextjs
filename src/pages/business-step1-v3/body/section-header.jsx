@@ -18,10 +18,9 @@ function SectionHeader() {
               Dành Cho Doanh Nghiệp
             </h4>
             <p className="text-white business-header-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos.
+              Cung cấp các giải pháp chiếu sáng, điều khiển thông minh, giải
+              pháp an ninh cho tòa nhà, căn hộ, văn phòng, trung tâm thương
+              mại... với đa dạng lựa chọn và chi phí hợp lý nhất.
             </p>
           </Col>
           <Col md={7}></Col>

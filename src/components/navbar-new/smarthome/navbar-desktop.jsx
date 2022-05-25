@@ -12,7 +12,6 @@ import LanguageSwitcher from "@components/navbar/switterLanguage";
 import Link from "@components/gatsby-link";
 
 export default function NavbarSmartHomeDesktop() {
-  
   const dataProductMenu = DataProductMenu();
   const { i18n } = useTranslation();
   const { t } = useTranslation();
@@ -57,7 +56,7 @@ export default function NavbarSmartHomeDesktop() {
   const arrMenuSolution = [
     { id: 0, title: "Smart Home", path: "/solutions/smart-home/" },
     { id: 1, title: "Smart Parking", path: "/solutions/smart-parking/" },
-    { id: 2, title: "Smart Security", path: "/solutions/smart-security/" },
+    { id: 2, title: "Smart Building", path: "/solutions/smart-building/" },
     { id: 3, title: "Smart Lighting", path: "/smart-lighting/" },
   ];
   // const arrMenuSupport = [
@@ -105,7 +104,6 @@ export default function NavbarSmartHomeDesktop() {
                     to="/smart-home/"
                     className="item-menu item-menu-child link fs-16 1"
                     id="item-menu-parent"
-                  
                     activeClassName={"is-active"}
                   >
                     Smart Home

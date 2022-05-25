@@ -15,7 +15,6 @@ import iconSolving from "../../../images/smart-lighting-v3/svg/icon-solving.svg"
 const SectionDefinition = () => {
   const infoItem = {
     title: "Smart Lighting Là Gì ?",
-
     webContents: [
       {
         id: 0,

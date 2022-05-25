@@ -25,7 +25,7 @@ export default function NavbarChild() {
   const arrMenuSolution = [
     { id: 0, title: "Smarthome" },
     { id: 1, title: "Smart Parking" },
-    { id: 2, title: "Smart Security" },
+    { id: 2, title: "Smart Building" },
     { id: 3, title: "Energy Saving" },
   ];
 
@@ -82,7 +82,7 @@ export default function NavbarChild() {
   //     arrCurrent
   //       .concat({ id: 0, products: arrSmartHome, title: "Smarthome" })
   //       .concat({ id: 1, products: [], title: "Smart Parking" })
-  //       .concat({ id: 2, products: [], title: "Smart Security" })
+  //       .concat({ id: 2, products: [], title: "Smart Building" })
   //       .concat({ id: 3, products: [], title: "Energy Saving" })
   //   );
   // }, []);
@@ -112,8 +112,9 @@ export default function NavbarChild() {
                         <Link
                           key={index}
                           to={nav.path}
-                          className={`item-menu item-menu-child link fs-16  ${nav.isActive ? "is-active" : ""
-                            }`}
+                          className={`item-menu item-menu-child link fs-16  ${
+                            nav.isActive ? "is-active" : ""
+                          }`}
                           id="item-menu"
                         >
                           {nav.title}
