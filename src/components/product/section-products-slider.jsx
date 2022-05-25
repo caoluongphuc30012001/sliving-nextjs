@@ -138,17 +138,17 @@ const SectionProductsSlider = ({ listSlide }) => {
                   <h4 className="product-right-subtitle">{slide.subTitle}</h4>
                   <h1 className="product-right-title">{slide.title}</h1>
                   <div className="product-right-divider"></div>
-                  <div className="product-right-all-contents">
+                  <ul className="product-right-all-contents">
                     {slide?.contents &&
                       slide?.contents.map((content) => (
-                        <p className="product-right-desc-container">
+                        <li className="product-right-desc-container">
                           <span className="product-right-main-title">
                             {content.title}
                           </span>
                           {content.desc}
-                        </p>
+                        </li>
                       ))}
-                  </div>
+                  </ul>
                   <div className="right-content-btn-group">
                     <button className="advise-now-btn">
                       <span>Tư vấn ngay</span>
