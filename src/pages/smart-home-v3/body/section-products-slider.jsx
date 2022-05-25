@@ -45,7 +45,7 @@ const listSlide = [
       {
         id: 1,
         title: "Tính năng vượt trội:",
-        desc: "Kết nối các thiết bị khác qua mạng Wifi/Zigbee và chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
+        desc: " Kết nối các thiết bị khác qua mạng Wifi/Zigbee và chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
       },
       {
         id: 2,
@@ -189,12 +189,12 @@ const listSlide = [
       {
         id: 0,
         title: "Tính năng vượt trội:",
-        desc: " Thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF. Hỗ trợ điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
+        desc: " Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
       },
       {
         id: 1,
         title: "Giám sát & cảnh báo:",
-        desc: " Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời đến người dùng.",
+        desc: " Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
       },
     ],
     listItem: [],
