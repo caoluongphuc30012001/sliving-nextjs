@@ -83,7 +83,7 @@ function SectionSmartParking() {
           <button className="advise-now-btn" onClick={() => setModalShow(true)}>
             <span>Tư vấn ngay</span>
           </button>
-          <Link to="/smart-parking-v3">
+          <Link to="/smart-parking">
             <button className="learn-more-btn">
               <span>Tìm hiểu thêm</span>
             </button>
