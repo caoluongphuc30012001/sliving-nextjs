@@ -967,11 +967,10 @@ p.factory-bottom-left-content {
       border-bottom: 1px solid #e1e3e6;
     }
     .customer-centric-icon {
-      height: 64px;
-      width: 64px;
+      min-height: 64px;
+      min-width: 64px;
     }
     .customer-centric-content {
-      max-width: 425px;
       margin-left: 18px;
       margin-bottom: 16px;
       .customer-centric-title {
@@ -1054,27 +1053,27 @@ p.factory-bottom-left-content {
   }
 }
 //==========================Section Custumer Centric
-// @media (max-width: 1130px) {
-//   .section-customer-centric {
-//     .customer-centric-row {
-//       display: flex;
-//       row-gap: 32px;
-//       // flex-direction: column-reverse;
-//       align-items: center;
-//       justify-content: center;
-//       width: 100%;
-//       & > * {
-//         width: 100% !important;
-//         align-items: center;
-//         img {
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: 1130px) {
+  .section-customer-centric {
+    .customer-centric-row {
+      display: flex;
+      row-gap: 32px;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      & > * {
+        width: 100% !important;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 //==========================Section Smart Factory
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .factory-bottom-content {
     display: flex;
     flex-direction: column-reverse;
