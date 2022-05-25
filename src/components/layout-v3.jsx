@@ -17,6 +17,7 @@ function LayoutV3({ children }) {
       active:
         !url.includes("about-us") &&
         !url.includes("implementation-process") &&
+        !url.includes("business-step1") &&
         !url.includes("news"),
     },
     {
@@ -56,6 +57,7 @@ function LayoutV3({ children }) {
       id: 3,
       nameRoute: "GÓI GIẢI PHÁP",
       href: "/business-step1",
+      active: url.includes("business-step1"),
     },
 
     {
