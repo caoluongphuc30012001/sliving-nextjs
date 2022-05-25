@@ -1,6 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
-// const { QueryProductPage } = require("./src/query/await/ProductPage");
+const { QueryDataProductV3 } = require("./src/query/product-group-v3");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -51,8 +51,195 @@ async function getLng() {
 
 exports.createPages = async function ({ actions, graphql }) {
   const { createPage } = actions;
-  // const productPage = await graphql(`${QueryProductPage()}`);
-  // const productDetailComponent = require.resolve("./src/pages/product-detail-v2/index.js");
+
+  await graphql(
+    `
+      {
+        allFile(filter: { absolutePath: { regex: "/(images/product-v2/)/" } }) {
+          edges {
+            node {
+              publicURL
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const productPage = await graphql(
+    `
+      query ProductGroup {
+        ProductGroups: allMarkdownRemark(
+          filter: {
+            frontmatter: { lgn: { eq: "vn" } }
+            fileAbsolutePath: { regex: "/(contents/product-v2/)/" }
+          }
+        ) {
+          group(field: frontmatter___type) {
+            group(field: frontmatter___typeParent) {
+              distinct(field: frontmatter___title)
+              nodes {
+                frontmatter {
+                  id
+                  title
+                  subtitle
+                  slug
+                  lgn
+                  type
+                  version
+                  isZigbee
+                  isSensorLight
+                  isLedDriver
+                  button
+                  date
+                  description
+                  details
+                  imgSrcThumbs {
+                    publicURL
+                    childImageSharp {
+                      gatsbyImageData(layout: FULL_WIDTH)
+                    }
+                  }
+                  imgSrcProduct {
+                    publicURL
+                    childImageSharp {
+                      gatsbyImageData(layout: FULL_WIDTH)
+                    }
+                  }
+                  mechanical_1 {
+                    imgSrcProduct {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    withNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    nonNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                  mechanical_2 {
+                    imgSrcProduct {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    withNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    nonNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                  mechanical_3 {
+                    imgSrcProduct {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    withNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    nonNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                  mechanical_4 {
+                    imgSrcProduct {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    withNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    nonNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                  mechanical_5 {
+                    imgSrcProduct {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    withNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    nonNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                  mechanical_6 {
+                    imgSrcProduct {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    withNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                    nonNeutral {
+                      publicURL
+                      childImageSharp {
+                        gatsbyImageData
+                      }
+                    }
+                  }
+                }
+                html
+              }
+              fieldValue
+            }
+            fieldValue
+          }
+        }
+      }
+    `
+  );
+  const productDetailComponent = require.resolve(
+    "./src/pages/product-detail-v2/index.js"
+  );
   // const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
   // const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
   // const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
@@ -67,17 +254,6 @@ exports.createPages = async function ({ actions, graphql }) {
   // const solutionSmartSecurity  = require.resolve("./src/pages/solution/security/index.jsx");
   // const reasonPage  = require.resolve("./src/pages/reason/index.jsx");
 
-  //   await graphql(
-  //     `{
-  //     allFile(filter: {absolutePath: {regex: "/(images/product-v2/)/"}}) {
-  //       edges {
-  //         node {
-  //           publicURL
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
   const querySupportPage = [];
   // const querySupportPage = await graphql(
   //   `
@@ -208,10 +384,27 @@ exports.createPages = async function ({ actions, graphql }) {
     path: `/policy`,
     component: policy,
   });
+  createPage({
+    path: `/product-detail`,
+    component: productDetailComponent,
+    context: {
+      data: productPage,
+    },
+  });
+  productPage["data"].ProductGroups.group.forEach(async (prod) => {
+    await createPage({
+      path: `/product-detail/${prod.fieldValue}`,
+      component: productDetailComponent,
+      context: {
+        data: prod.group,
+      },
+    });
+  });
 };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    devtool: false,
     resolve: {
       alias: {
         "@components": path.resolve(__dirname, "./src/components"),
