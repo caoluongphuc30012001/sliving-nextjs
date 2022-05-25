@@ -874,6 +874,10 @@
         align-items: center;
       .product-right-content{
         align-items: center;
+        .btn-group{
+          width: 100%;
+          max-width: 600px;
+        }
         .product-right-title{
           text-align: center; 
         }
