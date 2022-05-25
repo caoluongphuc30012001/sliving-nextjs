@@ -615,7 +615,7 @@
 
   .btn-big-arrow-right-mobie{
     position: absolute;
-    top: calc(50% - 20px);
+    top: calc(20% - 20px);
     z-index: 1;
     width: fit-content;
     display: none;
@@ -863,6 +863,11 @@
 }
 ///=========Responsive==========//
 @media(max-width:1200px){
+  #smart_home_page {
+    .section-product-slider {
+      margin-top: 60px;
+    }
+  }
   .section-product-slider {
       height: fit-content;
         flex-direction: column;
@@ -887,15 +892,16 @@
         top: 40%;
       }
       .btn-big-arrow-left{
-        left: 0px;
+        left: 10px;
+        top: calc(20% - 20px);
       }
       .btn-big-arrow-right {
         display: none;
       }
       .btn-big-arrow-right-mobie{
         display: block;
-        position: absolute;
-        left: calc(100% - 41px);
+        right: 10px;
+        top: calc(20% - 20px);
         transform: rotate(180deg);
       }
       .swiper-image{
