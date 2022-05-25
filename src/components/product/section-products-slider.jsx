@@ -32,19 +32,20 @@ const ProductItemSwiper = ({ slide }) => {
             setSwiperIndex(s.realIndex);
           }}
         >
-          {slide?.listItem.map((slideItem, index) => (
-            <SwiperSlide key={slideItem.id}>
-              <img className="swiper-image" src={slideItem.img} alt="" />
-            </SwiperSlide>
+          {slide?.listItem.map((slideItem) => (
+            <>
+              <SwiperSlide key={slideItem.id}>
+                <img className="swiper-image" src={slideItem.img} alt="" />
+              </SwiperSlide>
+            </>
           ))}
         </Swiper>
       )}
       {slide?.titles && slide?.titles.length > 0 && (
         <div className="banner-products-btn-group">
-          {slide?.titles.map((btnItem, index) => {
+          {slide?.titles.map((btnItem) => {
             return (
               <div
-                key={btnItem.id}
                 className={`${
                   swiperIndex === btnItem.id
                     ? "products-btn-item active"
@@ -77,32 +78,27 @@ const SectionProductsSlider = ({ listSlide }) => {
 
   return (
     <section className="section-product-slider">
-      <div className="smart-home-bg-left">
-        <div
-          className="btn-big-arrow-left"
-          onClick={() => {
-            decreaseToggleTab();
-          }}
-        >
-          <img src={BigArrowLeft} alt=""></img>
-        </div>
-        <div
-          className="btn-big-arrow-right-mobie"
-          onClick={() => {
-            increaseToggleTab();
-          }}
-        >
-          <img src={BigArrowLeft} alt=""></img>
-        </div>
+      <div
+        className="btn-big-arrow-left"
+        onClick={() => {
+          decreaseToggleTab();
+        }}
+      >
+        <img src={BigArrowLeft} alt=""></img>
       </div>
-      <div className="smart-home-bg-right">
-        <div
-          className="btn-big-arrow-right"
-          onClick={() => increaseToggleTab()}
-        >
-          <img src={BigArrowRight} alt=""></img>
-        </div>
+      {/* <div
+        className="btn-big-arrow-right-mobie"
+        onClick={() => {
+          increaseToggleTab();
+        }}
+      >
+        <img src={BigArrowLeft} alt=""></img>
+      </div> */}
+      <div className="btn-big-arrow-right" onClick={() => increaseToggleTab()}>
+        <img src={BigArrowRight} alt=""></img>
       </div>
+      <div className="smart-home-bg-left"></div>
+      <div className="smart-home-bg-right"></div>
       <div className="products-slider">
         {listSlide.map((slide) => (
           <div
@@ -123,14 +119,12 @@ const SectionProductsSlider = ({ listSlide }) => {
                   {slide?.downloadObjects?.length > 0 && (
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
-                        <div className="download-app-item" key={object.id}>
-                          <a href={object.link} target="_blank">
-                            <img
-                              src={object.img}
-                              alt=""
-                              className="download-app-img"
-                            ></img>
-                          </a>
+                        <div className="download-app-item">
+                          <img
+                            src={object.img}
+                            alt=""
+                            className="download-app-img"
+                          ></img>
                         </div>
                       ))}
                     </div>
@@ -139,31 +133,30 @@ const SectionProductsSlider = ({ listSlide }) => {
               )}
             </div>
             <div className="right-content-container animate fadeUp">
-              <div className="product-right-content">
-                <h4 className="product-right-subtitle">{slide.subTitle}</h4>
-                <h1 className="product-right-title">{slide.title}</h1>
-                <div className="product-right-divider"></div>
-                <div className="product-right-all-contents">
-                  {slide?.contents &&
-                    slide?.contents.map((content) => (
-                      <p
-                        className="product-right-desc-container"
-                        key={content.id}
-                      >
-                        <span className="product-right-main-title">
-                          {content.title}
-                        </span>
-                        {content.desc}
-                      </p>
-                    ))}
-                </div>
-                <div className="btn-group">
-                  <button className="advise-now-btn">
-                    <span>Tư vấn ngay</span>
-                  </button>
-                  <button type="button" className="learn-more-btn">
-                    <span>Tìm hiểu thêm</span>
-                  </button>
+              <div className="content-container">
+                <div className="product-right-content">
+                  <h4 className="product-right-subtitle">{slide.subTitle}</h4>
+                  <h1 className="product-right-title">{slide.title}</h1>
+                  <div className="product-right-divider"></div>
+                  <div className="product-right-all-contents">
+                    {slide?.contents &&
+                      slide?.contents.map((content) => (
+                        <p className="product-right-desc-container">
+                          <span className="product-right-main-title">
+                            {content.title}
+                          </span>
+                          {content.desc}
+                        </p>
+                      ))}
+                  </div>
+                  <div className="btn-group">
+                    <button className="advise-now-btn">
+                      <span>Tư vấn ngay</span>
+                    </button>
+                    <button type="button" className="learn-more-btn">
+                      <span>Tìm hiểu thêm</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
