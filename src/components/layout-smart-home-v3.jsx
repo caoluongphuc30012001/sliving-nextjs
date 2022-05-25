@@ -14,12 +14,12 @@ const listRoute = [
       {
         id: 0,
         nameRoute: "SMART LIGHTING",
-        href: "/smart-lighting-v3",
+        href: "/smart-lighting",
       },
       {
         id: 1,
         nameRoute: "SMART PARKING",
-        href: "/smart-parking-v3",
+        href: "/smart-parking",
       },
       {
         id: 2,
@@ -31,7 +31,7 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/business-step1-v3",
+    href: "/business-step1",
     active: true,
   },
   {
@@ -42,7 +42,7 @@ const listRoute = [
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/contact-us-v3",
+    href: "/contact-us",
   },
 ];
 function LayoutSmartHome({ children }) {
