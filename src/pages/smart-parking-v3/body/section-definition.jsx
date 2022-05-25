@@ -19,16 +19,12 @@ const SectionDefinition = () => {
       {
         id: 0,
         content:
-          "Giải pháp quản lý bãi đỗ xe Smart Parking đáp ứng tiêu chí hiện đại và tiện lợi trong việc kiểm soát," +
-          " quản lý tình trạng xe ra/vào và cho phép người dùng chủ động lựa chọn được chỗ đỗ xe phù hợp thông qua" +
-          " Smart Parking App. Giải pháp bãi đỗ xe thông minh không chỉ đáp ứng được tiêu chí đảm bảo an toàn - an ninh," +
-          " kiểm soát nguồn xe ra/ vào hiệu quả mà còn giúp giải quyết tốt các hạn chế của việc giữ xe truyền thống.",
+          "Giải pháp quản lý bãi đỗ xe Smart Parking đáp ứng tiêu chí hiện đại và tiện lợi trong việc kiểm soát, quản lý tình trạng xe ra/vào và cho phép người dùng chủ động lựa chọn được chỗ đỗ xe phù hợp thông qua Smart Parking App. Giải pháp bãi đỗ xe thông minh không chỉ đáp ứng được tiêu chí đảm bảo an toàn - an ninh, kiểm soát nguồn xe ra/ vào hiệu quả mà còn giúp giải quyết tốt các hạn chế của việc giữ xe truyền thống.",
       },
       {
         id: 1,
         content:
-          "Với giải pháp Smart Parking của Tập đoàn Unicloud sẽ giúp doanh nghiệp tiết kiệm được nhiều chi phí và nhân lực," +
-          " tăng cường trải nghiệm hữu ích và tiện lợi cho cư dân trong việc dò tìm vị trí bãi đỗ xe hay linh hoạt thanh toán qua ứng dụng.",
+          "Smart Parking sẽ giúp doanh nghiệp tiết kiệm được nhiều chi phí và nhân lực, tăng cường trải nghiệm hữu ích và tiện lợi cho cư dân trong việc dò tìm vị trí bãi đỗ xe hay linh hoạt thanh toán qua ứng dụng.",
       },
     ],
     mobileContents: [

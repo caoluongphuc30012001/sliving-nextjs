@@ -1,17 +1,17 @@
 import React from "react";
 import { Container, Image, Row } from "react-bootstrap";
-import imgUnderLine from "../../../images/home-page-v3/svg/title-line-under.svg";
+import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 import imgBrandStory from "../../../images/about-us-v3/png/img-brand-story.png";
 
 function SectionBrandStory() {
   return (
     <section className="bg-section-brand-story">
-      <div className="max-width-1180 brand-story-container">
+      <div className="container-1220">
         <Row className="row-line-center">
           <span className="title-eng-line-center">BRAND STORY</span>
           <h2 className="title-line-center">Câu chuyện thương hiệu</h2>
           <div className="img-line-center d-flex justify-content-center">
-            <img src={imgUnderLine} className="underline-img" />
+            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
           <p className="description-line-center">
             Unicloud là một tập đoàn công nghệ quốc tế có trụ sở tại Hà Nội, nhà
@@ -23,7 +23,7 @@ function SectionBrandStory() {
           </p>
         </Row>
         <div className="brand-story-img">
-          <img src={imgBrandStory} />
+          <img src={imgBrandStory} style={{ marginTop: "60px" }} />
         </div>
       </div>
     </section>

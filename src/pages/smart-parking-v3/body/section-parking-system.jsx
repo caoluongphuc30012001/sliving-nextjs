@@ -228,8 +228,8 @@ const hardwareItemList = [
         img: machine1,
         title: "Máy dò đỗ xe video thông minh _ ITC314-PH3A-TF SERIES",
         descList: [
-          "Giám sát trong thời gian thực hiện",
-          "Phát hiện 6 điểm đỗ, đèn chỉ báo 7 màu",
+          "Giám sát trong thời gian thực",
+          "Phát hiện 3 điểm đỗ, đèn chỉ báo 7 màu",
           "Nhận diện biển số xe ",
           "Hỗ trợ bảo vệ phương tiện",
           "Tốc độ chuyển trạng thái < 5s",
@@ -263,7 +263,7 @@ const hardwareItemList = [
           {
             id: 5,
             title: "Giảm nhiễu",
-            value: "3D DNR",
+            value: "3DNR",
           },
         ],
       },

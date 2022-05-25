@@ -218,11 +218,14 @@ const SectionParkingSolution = () => {
         </div>
         {ListItem.map((item) => {
           return (
-            <SolutionItem
-              item={item}
-              key={item.id}
-              setModalShow={setModalShow}
-            />
+            <>
+              <SolutionItem
+                item={item}
+                key={item.id}
+                setModalShow={setModalShow}
+              />
+              <div className="underline2"></div>
+            </>
           );
         })}
       </div>

@@ -79,7 +79,7 @@
         }
         .active {
           .label {
-            font-family: "SVN-Gilroy";
+            font-family: "SVN Gilroy";
             font-style: normal;
             font-weight: 700;
             font-size: 28px;
@@ -107,7 +107,7 @@
             flex-direction: row;
             justify-content: space-between;
             .title {
-              font-family: "SVN-Gilroy";
+              font-family: "SVN Gilroy";
               font-style: normal;
               font-weight: 700;
               font-size: 21px;
@@ -290,7 +290,7 @@
           flex-direction: row;
           justify-content: space-between;
           .title {
-            font-family: "SVN-Gilroy";
+            font-family: "SVN Gilroy";
             font-style: normal;
             font-weight: 700;
             font-size: 21px;
@@ -476,7 +476,7 @@
       color: #0979fd;
     }
     .title {
-      font-family: "SVN-Gilroy";
+      font-family: "SVN Gilroy";
       font-weight: 700;
       font-size: 36px;
       text-align: center;
@@ -500,7 +500,7 @@
       .description-box {
         margin-top: 30px;
         .sub-title {
-          font-family: "SVN-Gilroy";
+          font-family: "SVN Gilroy";
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
@@ -701,7 +701,7 @@
       display: flex;
       background: #f3f9ff;
       align-items: center;
-      padding: clamp(40px, 9.35vw, 140px) clamp(20px, 4.675vw, 70px);
+      padding: clamp(40px, 9.35vw, 100px) clamp(20px, 4.675vw, 60px);
       justify-content: center;
     }
   }
@@ -824,7 +824,7 @@
     font-family: "SVN Gilroy";
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(12px, 3.2vw, 16px);
     line-height: 24px;
     color: #ffffff;
     cursor: pointer;
@@ -896,6 +896,7 @@
       .product-right-content{
         align-items: center;
         .btn-group{
+          gap: 12px;
           width: 100%;
           max-width: 600px;
         }
@@ -1027,13 +1028,15 @@
 @media (max-width: 570px) {
   .section-product-slider {
     .product-right-desc-container {
-      text-align: center;
+      text-align: left;
     }
     .left-content-container {
       width: 100%;
       min-width: 350px;
       align-items: center;
       justify-content: center;
+      padding-left: 0px;
+      padding-right: 0px;
     }
     .product-right-content {
       height: auto;

@@ -216,11 +216,14 @@ img {
   }
 
   .intro-bottom-content {
-    padding-top: 60px;
+    // padding-top: 60px;
     padding-bottom: clamp(40px, 7vw, 120px);
     display: grid;
     .intro-content-container:not(:last-child) {
       border-bottom: 1px solid #e1e3e6;
+    }
+    .intro-content-container:first-child {
+      padding-top: 0 !important;
     }
   }
 
@@ -605,7 +608,7 @@ img {
   justify-content: center;
   align-items: flex-start;
   gap: 60px;
-  margin-top: 60px;
+  // margin-top: 60px;
 }
 
 .factory-bottom-left-content {
@@ -881,6 +884,19 @@ img {
 .factory-produce-content {
   min-height: 312px;
   width: 100%;
+  .factory-first-desc,
+  .factory-second-desc {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    text-align: justify;
+
+    color: #2c2d2e;
+  }
 }
 
 .factory-second-produce-content {
@@ -932,6 +948,7 @@ p.factory-bottom-left-content {
   color: #2c2d2e;
   margin: 16px 0px;
   text-align: center;
+  text-transform: capitalize;
 }
 //-------------End Section Activity-------------------------------------------------
 
@@ -940,9 +957,7 @@ p.factory-bottom-left-content {
   background-color: white;
   padding-top: clamp(40px, 7vw, 120px);
   padding-bottom: clamp(40px, 7vw, 120px);
-  .customer-centric-row {
-    margin: 60px 0 0 0;
-  }
+
   .customer-centric-card {
     display: flex;
     margin-bottom: 16px;
@@ -952,11 +967,10 @@ p.factory-bottom-left-content {
       border-bottom: 1px solid #e1e3e6;
     }
     .customer-centric-icon {
-      height: 64px;
-      width: 64px;
+      min-height: 64px;
+      min-width: 64px;
     }
     .customer-centric-content {
-      // max-width: 442px;
       margin-left: 18px;
       margin-bottom: 16px;
       .customer-centric-title {
@@ -1059,10 +1073,10 @@ p.factory-bottom-left-content {
   }
 }
 //==========================Section Smart Factory
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .factory-bottom-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     .factory-bottom-left-content {
       max-width: 100%;
