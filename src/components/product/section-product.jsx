@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
 import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
+import { Link } from "gatsby";
 const ContentLeft = ({ listProduct, current, setCurrent }) => {
   return (
     <div className="content-left">
@@ -69,14 +70,17 @@ const ItemProduct = ({ listProduct, itemId }) => {
       modules={[Pagination, Navigation]}
     >
       {listProduct.map((item) => {
+        console.log("item", item);
         return (
           <SwiperSlide key={item.id} className="list-product">
-            <div className="item-box">
-              <div className="img-box">
-                <img src={item.image} alt="" />
+            <Link to={`/product-detail/${item.type}`}>
+              <div className="item-box">
+                <div className="img-box">
+                  <img src={item.image} alt="" />
+                </div>
+                <div className="description">{item.description}</div>
               </div>
-              <div className="description">{item.description}</div>
-            </div>
+            </Link>
           </SwiperSlide>
         );
       })}

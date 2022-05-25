@@ -8,122 +8,146 @@ import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
 import "@fancyapps/ui/dist/fancybox.css";
 import Fancybox from "@hook/fancybox";
-import {GatsbyImage} from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const NextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block" }}
-            onClick={onClick}
-            onKeyPress={onClick}
-            role={"button"}
-            tabIndex={0}
-        >
-            <img src={iconArrowRight} alt="" />
-        </div>
-    );
-}
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+      onKeyPress={onClick}
+      role={"button"}
+      tabIndex={0}
+    >
+      <img src={iconArrowRight} alt="" />
+    </div>
+  );
+};
 
 const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block" }}
-            onClick={onClick}
-            onKeyPress={onClick}
-            role={"button"}
-            tabIndex={0}
-        >
-            <img src={iconArrowLeft} alt="" />
-        </div>
-    );
-}
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+      onKeyPress={onClick}
+      role={"button"}
+      tabIndex={0}
+    >
+      <img src={iconArrowLeft} alt="" />
+    </div>
+  );
+};
 export default class CenterMode extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            nav1: null,
-            nav2: null,
-            arrImg: [
-                { id: 0, src: img1, isActive: true },
-                { id: 1, src: img2, isActive: false },
-                { id: 2, src: img3, isActive: false },
-                { id: 3, src: img3, isActive: false },
-            ],
-            arrThumbs: []
-        };
-        this.listRef1 = React.createRef();
-        this.listRef2 = React.createRef();
-        this.getData = this.getData.bind(this);
-    }
-    componentDidMount() {
-        this.setState({
-            nav1: this.slider1,
-            nav2: this.slider2
-        });
-        this.getData();
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      nav1: null,
+      nav2: null,
+      arrImg: [
+        { id: 0, src: img1, isActive: true },
+        { id: 1, src: img2, isActive: false },
+        { id: 2, src: img3, isActive: false },
+        { id: 3, src: img3, isActive: false },
+      ],
+      arrThumbs: [],
+    };
+    this.listRef1 = React.createRef();
+    this.listRef2 = React.createRef();
+    this.getData = this.getData.bind(this);
+  }
+  componentDidMount() {
+    this.setState({
+      nav1: this.slider1,
+      nav2: this.slider2,
+    });
+    this.getData();
+  }
 
-    getData = () => {
-        const dataProduct = this.props?.dataProduct || [];
-        if (dataProduct) {
-            this.setState(state => {
-                state.arrThumbs = dataProduct;
-            })
-        }
+  getData = () => {
+    const dataProduct = this.props?.dataProduct || [];
+    if (dataProduct) {
+      this.setState((state) => {
+        state.arrThumbs = dataProduct;
+      });
     }
+  };
 
-    render() {
-        const settings = {
-            dots: false,
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            swipeToSlide: true,
-            focusOnSelect: true,
-            nextArrow: <NextArrow />,
-            prevArrow: <PrevArrow />,
-        };
-        return (
-            <div className="thumb-wrap" >
-                <Fancybox options={{ infinite: false }}>
-                    <Slider
-                        asNavFor={this.state.nav2}
-                        infinite={false}
-                        ref={slider => (this.slider1 = slider)} dotsClass={"slick-dots slick-thumb"}
-                    >
+  render() {
+    const settings = {
+      dots: false,
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      focusOnSelect: true,
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />,
+    };
+    return (
+      <div className="thumb-wrap">
+        <Fancybox options={{ infinite: false }}>
+          <Slider
+            asNavFor={this.state.nav2}
+            infinite={false}
+            ref={(slider) => (this.slider1 = slider)}
+            dotsClass={"slick-dots slick-thumb"}
+          >
+            {this.state.arrThumbs &&
+              this.state.arrThumbs?.map((element, index) => {
+                return (
+                  <div
+                    className="thumb-center"
+                    data-fancybox="gallery"
+                    data-src={element?.publicURL}
+                    key={index.toString()}
+                  >
+                    <GatsbyImage
+                      image={
+                        element?.childImageSharp?.gatsbyImageData ||
+                        element?.publicURL
+                      }
+                      alt=""
+                      style={{ width: "100%", margin: "auto" }}
+                    />
+                  </div>
+                );
+              })}
+          </Slider>
+        </Fancybox>
 
-                        {this.state.arrThumbs && this.state.arrThumbs?.map((element, index) => {
-                            return (
-                                <div className="thumb-center" data-fancybox="gallery" data-src={element?.publicURL} key={index}>
-                                <GatsbyImage image={element?.childImageSharp?.gatsbyImageData || element?.publicURL} alt="" style={{width:"100%",margin:"auto"}} />
-                            </div>
-                            );
-                        })}
-                    </Slider>
-                </Fancybox>
-
-                <Slider
-                    asNavFor={this.state.nav1}
-                    ref={slider => (this.slider2 = slider)}
-                    {...settings}
-                >
-                    {this.state.arrThumbs.map((element, index) => {
-                        return (
-                            <>
-                            {element?.childImageSharp !== undefined && (<div key={index} className="thumb-bottom">
-                            <div className=""  key={index}>
-                                    <GatsbyImage image={element.childImageSharp.gatsbyImageData} alt="" />
-                                </div>
-                            </div>)}
-                            </>
-                        );
-                    })}
-                </Slider>
-            </div >
-        );
-    }
+        <Slider
+          asNavFor={this.state.nav1}
+          ref={(slider) => (this.slider2 = slider)}
+          {...settings}
+          className="thumb-bottom-slide"
+        >
+          {this.state.arrThumbs.map((element, index) => {
+            return (
+              <React.Fragment key={index.toString()}>
+                {element?.childImageSharp !== undefined && (
+                  <>
+                    <div key={index} className="thumb-bottom">
+                      <div className="" key={index}>
+                        {element.childImageSharp.gatsbyImageData && (
+                          <GatsbyImage
+                            image={element.childImageSharp.gatsbyImageData}
+                            alt=""
+                          />
+                        )}
+                      </div>
+                    </div>
+                    <div className="divider-prod" />
+                  </>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </Slider>
+      </div>
+    );
+  }
 }
