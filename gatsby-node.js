@@ -39,7 +39,17 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/smart-light-v2") === true ||
     checkDetectPage(page, "/contact-page-v2") === true ||
     checkDetectPage(page, "/policy") === true ||
-    checkDetectPage(page, "/support-page-v2") === true
+    checkDetectPage(page, "/support-page-v2") === true ||
+    checkDetectPage(page, "/about-us-v3") === true ||
+    checkDetectPage(page, "/business-step1-v3") === true ||
+    checkDetectPage(page, "/business-step2-v3") === true ||
+    checkDetectPage(page, "/business-step3-v3") === true ||
+    checkDetectPage(page, "/contact-us-v3") === true ||
+    checkDetectPage(page, "/news-v3") === true ||
+    checkDetectPage(page, "/smart-home-v3") === true ||
+    checkDetectPage(page, "/smart-lighting-v3") === true ||
+    checkDetectPage(page, "/smart-security-v3") === true ||
+    checkDetectPage(page, "/smart-parking-v3") === true
   ) {
     deletePage(page);
   }
@@ -61,7 +71,22 @@ exports.createPages = async function ({ actions, graphql }) {
   // const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
   const homePage = require.resolve("./src/pages/index.js");
   const policy = require.resolve("./src/pages/policy/index.jsx");
-
+  const aboutUS = require.resolve("./src/pages/about-us-v3/index.jsx");
+  const business1 = require.resolve("./src/pages/business-step1-v3/index.jsx");
+  const business2 = require.resolve("./src/pages/business-step2-v3/index.jsx");
+  const business3 = require.resolve("./src/pages/business-step3-v3/index.jsx");
+  const contact = require.resolve("./src/pages/contact-us-v3/index.jsx");
+  const news = require.resolve("./src/pages/news-v3/index.jsx");
+  const smartHome = require.resolve("./src/pages/smart-home-v3/index.jsx");
+  const smartLighting = require.resolve(
+    "./src/pages/smart-lighting-v3/index.jsx"
+  );
+  const smartSecurity = require.resolve(
+    "./src/pages/smart-security-v3/index.jsx"
+  );
+  const smartParking = require.resolve(
+    "./src/pages/smart-parking-v3/index.jsx"
+  );
   // const solutionSmartHome  = require.resolve("./src/pages/solution/smart-home/index.jsx");
   // const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
   // const solutionSmartSecurity  = require.resolve("./src/pages/solution/security/index.jsx");
@@ -207,6 +232,48 @@ exports.createPages = async function ({ actions, graphql }) {
   createPage({
     path: `/policy`,
     component: policy,
+  });
+  createPage({
+    path: `/about-us`,
+    component: aboutUS,
+  });
+  createPage({
+    path: `/business-step1`,
+    component: business1,
+  });
+
+  createPage({
+    path: `/business-step2`,
+    component: business2,
+  });
+
+  createPage({
+    path: `/business-step3`,
+    component: business3,
+  });
+  createPage({
+    path: `/contact-us`,
+    component: contact,
+  });
+  createPage({
+    path: `/news`,
+    component: news,
+  });
+  createPage({
+    path: `/smart-home`,
+    component: smartHome,
+  });
+  createPage({
+    path: `/smart-lighting`,
+    component: smartLighting,
+  });
+  createPage({
+    path: `/smart-security`,
+    component: smartSecurity,
+  });
+  createPage({
+    path: `/smart-parking`,
+    component: smartParking,
   });
 };
 

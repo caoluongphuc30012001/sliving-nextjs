@@ -149,7 +149,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                         </p>
                       ))}
                   </div>
-                  <div className="btn-group">
+                  <div className="right-content-btn-group">
                     <button className="advise-now-btn">
                       <span>Tư vấn ngay</span>
                     </button>
