@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useState } from "react";
 
 import SwiperCore, { Navigation } from "swiper";
@@ -13,6 +14,7 @@ import BigArrowRight from "../../images/smart-home-v3/svg/big-arrow-right.svg";
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide }) => {
+  console.log("slide", slide);
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
   return (
@@ -153,9 +155,11 @@ const SectionProductsSlider = ({ listSlide }) => {
                     <button className="advise-now-btn">
                       <span>Tư vấn ngay</span>
                     </button>
-                    <button type="button" className="learn-more-btn">
-                      <span>Tìm hiểu thêm</span>
-                    </button>
+                    <Link to={`/product-detail/${slide.type}`}>
+                      <button type="button" className="learn-more-btn">
+                        <span>Tìm hiểu thêm</span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
