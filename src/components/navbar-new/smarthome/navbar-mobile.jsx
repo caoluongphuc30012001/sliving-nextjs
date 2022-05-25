@@ -32,7 +32,7 @@ export default function NavbarSmartHomeMobile() {
   const arrMenuSolution = [
     { id: 0, title: "Smart Home", path: "/solution/smart-home" },
     { id: 1, title: "Smart Parking", path: "/solution/parking" },
-    { id: 2, title: "Smart Security", path: "/solution/security" },
+    { id: 2, title: "Smart Building ", path: "/solution/security" },
     { id: 3, title: "Energy Saving" },
   ];
   const arrMenuSupport = [

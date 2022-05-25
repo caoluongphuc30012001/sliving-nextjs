@@ -76,7 +76,7 @@ function BuildApps() {
       <a href="https://rgl.mobi/RHQSK" target="_blank">
         <img className="my-3" src={iconApple} alt="" />
       </a>
-      <a href="https://rgl.mobi/Rqccu">
+      <a href="https://rgl.mobi/Rqccu" target="_blank">
         <img className="my-3" src={iconChPlay} alt="" />
       </a>
       {/* <img src={qrCode} alt="" /> */}
