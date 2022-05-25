@@ -10,18 +10,21 @@ const SectionPopularProductSliving = () => {
       image: popular1,
       title: "Công tắc cơ - Phiên bản Wifi - Loại chữ nhật",
       description: "Switch Mechanical",
+      type: "Switch%20Mechanical/",
     },
     {
       id: 1,
       image: popular2,
       title: "Công tắc cảm ứng thông minh",
       description: "Switch Touch",
+      type: "Smart%20Touch%20Group/",
     },
     {
       id: 2,
       image: popular3,
       title: "Động cơ rèm thông minh",
       description: "Smart Curtain",
+      type: "Smart%20Curtain/",
     },
   ];
   return <SectionPopularProduct listProduct={listProduct} />;

@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import { Link } from "gatsby";
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   return (
@@ -35,6 +36,7 @@ const SectionPopularProduct = ({ listProduct }) => {
               className="container-cover"
             >
               {listProduct.map((item) => {
+                console.log("item", item);
                 return (
                   <SwiperSlide key={item.id} className="list-product">
                     <div className="item-box">
@@ -45,9 +47,11 @@ const SectionPopularProduct = ({ listProduct }) => {
                         <button className="advise-now-btn">
                           <span>Tư vấn ngay</span>
                         </button>
-                        <button type="button" className="learn-more-btn">
-                          <span>Tìm hiểu thêm</span>
-                        </button>
+                        <Link to={`/product-detail/${item.type}`}>
+                          <button type="button" className="learn-more-btn">
+                            <span>Tìm hiểu thêm</span>
+                          </button>
+                        </Link>
                       </div>
                       <div className="description-box">
                         <p className="sub-title">{item.description}</p>

@@ -36,6 +36,7 @@ const listSlide = [
     id: 0,
     title: "Công Tắc Cảm Ứng Thông Minh",
     subTitle: "TOUCH SWITCH",
+    type: "Smart%20Touch%20Group/",
     contents: [
       {
         id: 0,
@@ -76,6 +77,7 @@ const listSlide = [
     id: 1,
     title: "Công Tắc Cơ Thông Minh",
     subTitle: "SMART SWITCH",
+    type: "Switch%20Mechanical/",
     contents: [
       {
         id: 0,
@@ -120,6 +122,7 @@ const listSlide = [
     id: 2,
     title: "Động Cơ Rèm Thông Minh",
     subTitle: "SMART CURTAIN",
+    type: "Smart%20Curtain/",
     contents: [
       {
         id: 0,
@@ -146,6 +149,7 @@ const listSlide = [
     id: 3,
     title: "Gateway",
     subTitle: "GATEWAY",
+    type: "Zigbee%20Kit/",
     contents: [
       {
         id: 0,
