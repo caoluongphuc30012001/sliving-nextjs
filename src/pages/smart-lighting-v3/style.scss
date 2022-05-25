@@ -1,7 +1,6 @@
 .section-drop-down{
     overflow: hidden;
     position: relative;
-    padding: 60px 0;
     .container-dropdown{
         max-width:1550px ;
         margin-left: auto;
@@ -42,7 +41,7 @@
     .drop-down-wrap{
         margin-top: 100px;
         max-width: 1560px;
-        padding:0 20px;
+        padding:0px 0px 0px 20px;
         display: flex;
         justify-content: space-between;
     }
@@ -225,8 +224,7 @@
 }
 .section-title-box{
     width: 100%;
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: clamp(40px, 6.25vw, 120px);
     .title-box{
         width: fit-content;
         margin: 0 auto;

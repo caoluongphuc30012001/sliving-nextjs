@@ -34,6 +34,46 @@ import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
 const listSlide = [
   {
     id: 0,
+    title: "Công Tắc Cảm Ứng Thông Minh",
+    subTitle: "TOUCH SWITCH",
+    contents: [
+      {
+        id: 0,
+        title: "Thiết kế sang trọng:",
+        desc: " Sản phẩm có mặt kính cường lực chống trầy, thiết kế đơn giản cùng viền nhôm mạ vàng 18k cao cấp, các góc bo tròn an toàn. được thiết kế tương thích với loại đế âm tường tạo cho người dùng thuận tiện lắp đặt và sử dụng.",
+      },
+      {
+        id: 1,
+        title: "Tính năng vượt trội:",
+        desc: " Với tính năng bật/tắt cục bộ bằng cảm ứng điện dung, sản phẩm còn có khả năng chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên Gateway.",
+      },
+    ],
+
+    listItem: [
+      {
+        id: 0,
+        img: switchItem3,
+      },
+      {
+        id: 1,
+        img: switchItem4,
+      },
+    ],
+    titles: [
+      {
+        id: 0,
+        title: "cảm ứng",
+      },
+      {
+        id: 1,
+        title: "kịch bản",
+      },
+    ],
+    phoneImg: null,
+    downloadObjects: [],
+  },
+  {
+    id: 1,
     title: "Công Tắc Cơ Thông Minh",
     subTitle: "SMART SWITCH",
     contents: [
@@ -71,46 +111,6 @@ const listSlide = [
       {
         id: 1,
         title: "hình vuông",
-      },
-    ],
-    phoneImg: null,
-    downloadObjects: [],
-  },
-  {
-    id: 1,
-    title: "Công Tắc Cảm Ứng Thông Minh",
-    subTitle: "TOUCH SWITCH",
-    contents: [
-      {
-        id: 0,
-        title: "Thiết kế sang trọng:",
-        desc: " Sản phẩm có mặt kính cường lực chống trầy, thiết kế đơn giản cùng viền nhôm mạ vàng 18k cao cấp, các góc bo tròn an toàn. được thiết kế tương thích với loại đế âm tường tạo cho người dùng thuận tiện lắp đặt và sử dụng.",
-      },
-      {
-        id: 1,
-        title: "Tính năng vượt trội:",
-        desc: " Với tính năng bật/tắt cục bộ bằng cảm ứng điện dung, sản phẩm còn có khả năng chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy độ sáng, thông báo trạng thái online lên Gateway.",
-      },
-    ],
-
-    listItem: [
-      {
-        id: 0,
-        img: switchItem3,
-      },
-      {
-        id: 1,
-        img: switchItem4,
-      },
-    ],
-    titles: [
-      {
-        id: 0,
-        title: "cảm ứng",
-      },
-      {
-        id: 1,
-        title: "kịch bản",
       },
     ],
     phoneImg: null,
