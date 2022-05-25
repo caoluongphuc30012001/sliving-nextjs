@@ -36,8 +36,8 @@ const SectionHelpMore = () => {
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
           <p className="description-line-center">
-            Truy vấn, khiếu nại và phản hồi. Chúng tôi sẽ rất vui khi được phục
-            vụ bạn
+            Sẵn sàng tư vấn và giải đáp mọi thắc mắc của bạn vào tất cả các ngày
+            trong tuần.
           </p>
         </Row>
         <Row lg={3} md={3} xs={1} className="help-more-cards m-left-right-12">

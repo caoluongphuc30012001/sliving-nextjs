@@ -73,10 +73,10 @@ function BuildApps() {
   return (
     <div className="footer-apps">
       <h4 className="text-white fw-bold fs-4">Kho ứng dụng</h4>
-      <a href="https://rgl.mobi/RHQSK" target="_blank">
+      <a href="https://1p.io/AppSlivingApple" target="_blank">
         <img className="my-3" src={iconApple} alt="" />
       </a>
-      <a href="https://rgl.mobi/Rqccu">
+      <a href="https://1p.io/SlivingAppChplay" target="_blank">
         <img className="my-3" src={iconChPlay} alt="" />
       </a>
       {/* <img src={qrCode} alt="" /> */}

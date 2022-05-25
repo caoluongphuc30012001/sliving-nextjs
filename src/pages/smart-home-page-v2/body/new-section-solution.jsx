@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 import GatsbyLink from "@components/gatsby-link.jsx";
 
 export default function NewSectionSolution() {
-
   const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
@@ -35,12 +34,10 @@ export default function NewSectionSolution() {
                   <div className="item-detail-2 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Lighting</p>
-                    <p className="p2">
-                      {t(`smart_home_v2.solution_lighting`)}
-                    </p>
+                    <p className="p2">{t(`smart_home_v2.solution_lighting`)}</p>
                     <div className="btn-read-more">
                       <GatsbyLink to="/solutions/smart-lighting/">
-                        <p className="p3">{t(`read_more`)}</p>{' '}
+                        <p className="p3">{t(`read_more`)}</p>{" "}
                       </GatsbyLink>
                       <img
                         src={arrowSolution}
@@ -54,12 +51,10 @@ export default function NewSectionSolution() {
                   <div className="item-detail item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Parking</p>
-                    <p className="p2">
-                      {t(`smart_home_v2.solution_parking`)}
-                    </p>
+                    <p className="p2">{t(`smart_home_v2.solution_parking`)}</p>
                     <div className="btn-read-more">
                       <GatsbyLink to="/solutions/smart-parking/">
-                        {' '}
+                        {" "}
                         <p className="p3">{t(`read_more`)}</p>
                       </GatsbyLink>
                       <img
@@ -73,14 +68,12 @@ export default function NewSectionSolution() {
                 <div className="item4">
                   <div className="item-detail-4 item-detail-wrap">
                     <span className="item-detail-bg"></span>
-                    <p className="p1">Smart Security</p>
-                    <p className="p2">
-                      {t(`smart_home_v2.solution_security`)}
-                    </p>
+                    <p className="p1">Smart Building</p>
+                    <p className="p2">{t(`smart_home_v2.solution_security`)}</p>
                     <div className="btn-read-more">
-                      <GatsbyLink to="/solutions/smart-security/" >
+                      <GatsbyLink to="/solutions/smart-security/">
                         <p className="p3">{t(`read_more`)}</p>
-                      </GatsbyLink>{' '}
+                      </GatsbyLink>{" "}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"
@@ -93,13 +86,11 @@ export default function NewSectionSolution() {
                   <div className="item-detail-5 item-detail-wrap">
                     <span className="item-detail-bg"></span>
                     <p className="p1">Smart Home</p>
-                    <p className="p2">
-                      {t(`smart_home_v2.solution_home`)}
-                    </p>
+                    <p className="p2">{t(`smart_home_v2.solution_home`)}</p>
                     <div className="btn-read-more">
                       <GatsbyLink to="/solutions/smart-home/">
                         <p className="p3">{t(`read_more`)}</p>
-                      </GatsbyLink>{' '}
+                      </GatsbyLink>{" "}
                       <img
                         src={arrowSolution}
                         className="icon-read-more"

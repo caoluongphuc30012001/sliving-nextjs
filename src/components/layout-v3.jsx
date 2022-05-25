@@ -47,8 +47,8 @@ function LayoutV3({ children }) {
         },
         {
           id: 3,
-          nameRoute: "SMART SECURITY",
-          href: "/smart-security",
+          nameRoute: "SMART BUILDING",
+          href: "/smart-building",
         },
       ],
     },

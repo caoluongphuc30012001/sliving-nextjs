@@ -23,8 +23,8 @@ const listRoute = [
       },
       {
         id: 2,
-        nameRoute: "SMART SECURITY",
-        href: "/smart-security",
+        nameRoute: "SMART BUILDING",
+        href: "/smart-building",
       },
     ],
   },
