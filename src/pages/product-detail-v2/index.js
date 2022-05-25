@@ -196,8 +196,9 @@ const IndexPage = ({ pageContext }) => {
   };
 
   const handleSetTypeProduct = (index) => {
+    console.log("index", data[0].nodes);
+
     const dataNew = data[0].nodes[index];
-    console.log("data", data);
     getDataMechanical(dataNew.frontmatter);
     setVersionActive(index);
     if (!dataNew.frontmatter.mechanical_1) {
@@ -221,47 +222,53 @@ const IndexPage = ({ pageContext }) => {
                         <span>{des}</span>
                       </li>
                     ))
-                  : "I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. "}
+                  : ""}
               </p>
               <div className="divider" />
-              {!dataCurrent?.frontmatter?.isLedDriver &&
-                data[0].nodes?.length >= 2 && (
-                  <Col xs={12} md={12}>
-                    <Row className="version">
-                      <span>Phiên bản</span>
-                    </Row>
-                    <Row className="group-btn-version group-2-btn">
-                      <button
-                        className={`btn-version ${
-                          versionActive === 0 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(0)}
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway Plug"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến ánh sáng"
-                            : "Công tắc vuông"}
-                        </span>
-                      </button>
-                      <button
-                        className={`btn-version ${
-                          versionActive === 1 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(1)}
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến chuyển động"
-                            : "Công tắc chữ nhật"}
-                        </span>
-                      </button>
-                    </Row>
-                  </Col>
-                )}
+              {!dataCurrent?.frontmatter?.isLedDriver && (
+                <Col xs={12} md={12}>
+                  <Row className="version">
+                    <span>Phiên bản</span>
+                  </Row>
+                  <Row className="group-btn-version group-2-btn">
+                    <button
+                      className={`btn-version ${
+                        versionActive === 0 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(0)}
+                    >
+                      <span>
+                        {dataCurrent?.frontmatter?.version === 1
+                          ? "Gateway"
+                          : dataCurrent?.frontmatter?.isSensorLight
+                          ? "Cảm biến ánh sáng"
+                          : "Công tắc vuông"}
+                      </span>
+                    </button>
+                    <button
+                      className={`btn-version ${
+                        versionActive === 1 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(1)}
+                      disabled={
+                        dataCurrent?.frontmatter?.type.indexOf(
+                          "Smart Touch Group"
+                        ) > -1
+                          ? true
+                          : false
+                      }
+                    >
+                      <span>
+                        {dataCurrent?.frontmatter?.version === 1
+                          ? "Gateway Plug"
+                          : dataCurrent?.frontmatter?.isSensorLight
+                          ? "Cảm biến chuyển động"
+                          : "Công tắc chữ nhật"}
+                      </span>
+                    </button>
+                  </Row>
+                </Col>
+              )}
               {dataCurrent?.frontmatter?.isLedDriver && (
                 <Col xs={12} md={12}>
                   <Row className="version">
