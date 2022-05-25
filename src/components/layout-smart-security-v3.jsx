@@ -9,7 +9,7 @@ import Footer from "./footer/footer-v3/footer-v3";
 const listRoute = [
   {
     id: 0,
-    nameRoute: "SMART SECURITY",
+    nameRoute: "SMART BUILDING",
     listRoute: [
       {
         id: 0,
