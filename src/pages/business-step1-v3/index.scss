@@ -34,6 +34,61 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .section-business-header-v3 {
+    height: 428px !important;
+    .img-building {
+      display: none !important;
+    }
+    .img-building-mobile {
+      display: block !important;
+    }
+    .container-header {
+      text-align: center;
+      margin-top: -180px;
+      .business-header-title {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        /* identical to box height, or 125% */
+
+        text-align: center;
+
+        /* Light mode/Gray/White */
+
+        color: #ffffff;
+      }
+      .business-header-subtitle {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 32px;
+        /* identical to box height, or 152% */
+
+        text-align: center;
+
+        /* Light mode/Gray/White */
+
+        color: #ffffff;
+      }
+      .business-header-desc {
+        font-family: "SVN-Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 10px;
+
+        text-align: center;
+
+        color: #ffffff;
+      }
+    }
+  }
+}
 
 // package section
 .business-step1-container {

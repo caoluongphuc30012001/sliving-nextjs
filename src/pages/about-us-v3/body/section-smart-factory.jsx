@@ -43,6 +43,7 @@ import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
 import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
 
 import smart_factory_image from "../../../images/about-us-v3/png/img-smart-factory.png";
+import { Image, Row } from "react-bootstrap";
 
 export const Divider = styled("div")`
   width: 88px;
@@ -78,7 +79,7 @@ const SectionSmartFactory = () => {
   const [swip, setSwip] = useState(null);
 
   const factoryItems = [
-    { id: 0, icon: iconLicense, title: "Được khu Công nghệ cao cấp phép" },
+    { id: 0, icon: iconLicense, title: "Khu Công Nghệ Cao cấp phép" },
     { id: 1, icon: iconSmartFactory, title: "Nhà máy thông minh 4.0" },
     { id: 2, icon: iconPCCC, title: "Chứng nhận Phòng cháy chữa cháy" },
   ];
@@ -109,11 +110,14 @@ const SectionSmartFactory = () => {
   return (
     <section className="section-smart-factory-v3">
       <div className="smart-factory-container-v3">
-        <div className="factory-top-content">
-          <h5 className="factory-title-v3 text-uppercase">SMART FACTORY</h5>
-          <h3 className="factory-subtitle-v3">Nhà máy thông minh</h3>
-          <Divider />
-        </div>
+        <Row className="row-line-center m-left-right-12">
+          <span className="title-eng-line-center">SMART FACTORY</span>
+          <h2 className="title-line-center">Nhà máy thông minh</h2>
+          <div className="img-line-center">
+            <Divider />
+          </div>
+        </Row>
+
         <div className="factory-bottom-content">
           <div className="factory-bottom-left-content">
             <div className="factory-produce-content">
