@@ -34,52 +34,9 @@ import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
 const listSlide = [
   {
     id: 0,
-    title: "Công Tắc Cơ Thông Minh",
-    subTitle: "Smart Mechanical Switch",
-    contents: [
-      {
-        id: 0,
-        title: "Trải nghiệm mới mẻ & tối ưu:",
-        desc: " Công tắc thông minh được tích hợp công nghệ hiện đại giúp bật/ tắt thiết bị điện nhanh chóng chỉ với thao tác chạm bề mặt cảm ứng hoặc điều khiển từ xa thông qua ứng dụng di động.",
-      },
-      {
-        id: 1,
-        title: "Tính năng vượt trội:",
-        desc: " Kết nối các thiết bị khác qua mạng Wifi/Zigbee và chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
-      },
-      {
-        id: 2,
-        title: "Tính năng vượt trội:",
-        desc: " Ngoài tính năng điều khiển bật/ tắt cục bộ như thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
-      },
-    ],
-    listItem: [
-      {
-        id: 0,
-        img: switchItem1,
-      },
-      {
-        id: 1,
-        img: switchItem2,
-      },
-    ],
-    titles: [
-      {
-        id: 0,
-        title: "Hình chữ nhật",
-      },
-      {
-        id: 1,
-        title: "Hình vuông",
-      },
-    ],
-    phoneImg: null,
-    downloadObjects: [],
-  },
-  {
-    id: 1,
     title: "Công Tắc Cảm Ứng Thông Minh",
-    subTitle: "Smart Touch Switch",
+    subTitle: "TOUCH SWITCH",
+    type: "Smart%20Touch%20Group/",
     contents: [
       {
         id: 0,
@@ -106,11 +63,56 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "Cảm ứng",
+        title: "cảm ứng",
       },
       {
         id: 1,
-        title: "Kịch bản",
+        title: "kịch bản",
+      },
+    ],
+    phoneImg: null,
+    downloadObjects: [],
+  },
+  {
+    id: 1,
+    title: "Công Tắc Cơ Thông Minh",
+    subTitle: "SMART SWITCH",
+    type: "Switch%20Mechanical/",
+    contents: [
+      {
+        id: 0,
+        title: "Trải nghiệm mới từ lớp vỏ truyền thống:",
+        desc: " Với ngoại hình của dòng cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng mang lại trải nghiệm hoàn toàn mới mẻ và tiện lợi.",
+      },
+      {
+        id: 1,
+        title: "Dễ sử dụng:",
+        desc: " Thông qua mạng Wifi/ Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
+      },
+      {
+        id: 2,
+        title: "Tính năng vượt trội:",
+        desc: " Ngoài tính năng điều khiển bật/ tắt cục bộ như thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
+      },
+    ],
+    listItem: [
+      {
+        id: 0,
+        img: switchItem1,
+      },
+      {
+        id: 1,
+        img: switchItem2,
+      },
+    ],
+    titles: [
+      {
+        id: 0,
+        title: "hình chữ nhật",
+      },
+      {
+        id: 1,
+        title: "hình vuông",
       },
     ],
     phoneImg: null,
@@ -120,6 +122,7 @@ const listSlide = [
     id: 2,
     title: "Động Cơ Rèm Thông Minh",
     subTitle: "SMART CURTAIN",
+    type: "Smart%20Curtain/",
     contents: [
       {
         id: 0,
@@ -146,6 +149,7 @@ const listSlide = [
     id: 3,
     title: "Gateway",
     subTitle: "GATEWAY",
+    type: "Zigbee%20Kit/",
     contents: [
       {
         id: 0,

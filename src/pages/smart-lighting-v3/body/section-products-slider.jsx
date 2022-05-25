@@ -25,7 +25,7 @@ import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
 const listSlide = [
   {
     id: 0,
-    title: "Bộ Điều Khiển Đèn LED",
+    title: "Led",
     subTitle: "",
     contents: [
       {
@@ -61,15 +61,15 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "LED Driver 1 kênh",
+        title: "1 kênh",
       },
       {
         id: 1,
-        title: "LED Driver 8 kênh",
+        title: "8 kênh",
       },
       {
         id: 2,
-        title: "LED Driver 10 kênh",
+        title: "10 kênh",
       },
     ],
     phoneImg: null,
@@ -158,15 +158,15 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "LED Downlight",
+        title: "Downlight",
       },
       {
         id: 1,
-        title: "LED Spotlight",
+        title: "Spotlight",
       },
       {
         id: 2,
-        title: "LED Panel 600 x 600",
+        title: "Panel 600 x 600",
       },
     ],
     phoneImg: null,

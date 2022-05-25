@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
+import { Link } from "gatsby";
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [modalShow, setModalShow] = React.useState(false);
@@ -39,6 +40,7 @@ const SectionPopularProduct = ({ listProduct }) => {
               className="container-cover"
             >
               {listProduct.map((item) => {
+                console.log("item", item);
                 return (
                   <SwiperSlide key={item.id} className="list-product">
                     <div className="item-box">
@@ -52,9 +54,11 @@ const SectionPopularProduct = ({ listProduct }) => {
                         >
                           <span>Tư vấn ngay</span>
                         </button>
-                        <button type="button" className="learn-more-btn">
-                          <span>Tìm hiểu thêm</span>
-                        </button>
+                        <Link to={`/product-detail/${item.type}`}>
+                          <button type="button" className="learn-more-btn">
+                            <span>Tìm hiểu thêm</span>
+                          </button>
+                        </Link>
                       </div>
                       <div className="description-box">
                         <p className="sub-title">{item.description}</p>

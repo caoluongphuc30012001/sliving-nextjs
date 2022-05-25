@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useState } from "react";
 
 import SwiperCore, { Navigation } from "swiper";
@@ -14,6 +15,7 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide }) => {
+  console.log("slide", slide);
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
 
@@ -122,11 +124,13 @@ const SectionProductsSlider = ({ listSlide }) => {
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
                         <div className="download-app-item">
-                          <img
-                            src={object.img}
-                            alt=""
-                            className="download-app-img"
-                          ></img>
+                          <a href={object.link} target="_blank">
+                            <img
+                              src={object.img}
+                              alt=""
+                              className="download-app-img"
+                            ></img>
+                          </a>
                         </div>
                       ))}
                     </div>
@@ -134,23 +138,23 @@ const SectionProductsSlider = ({ listSlide }) => {
                 </div>
               )}
             </div>
-            <div className="right-content-container animate fadeUp">
+            <div className="right-content-container animate fadeUp ">
               <div className="content-container">
                 <div className="product-right-content">
                   <h4 className="product-right-subtitle">{slide.subTitle}</h4>
                   <h1 className="product-right-title">{slide.title}</h1>
                   <div className="product-right-divider"></div>
-                  <div className="product-right-all-contents">
+                  <ul className="product-right-all-contents">
                     {slide?.contents &&
                       slide?.contents.map((content) => (
-                        <p className="product-right-desc-container">
+                        <li className="product-right-desc-container">
                           <span className="product-right-main-title">
                             {content.title}
                           </span>
                           {content.desc}
-                        </p>
+                        </li>
                       ))}
-                  </div>
+                  </ul>
                   <div className="btn-group">
                     <button
                       className="advise-now-btn"
@@ -158,9 +162,11 @@ const SectionProductsSlider = ({ listSlide }) => {
                     >
                       <span>Tư vấn ngay</span>
                     </button>
-                    <button type="button" className="learn-more-btn">
-                      <span>Tìm hiểu thêm</span>
-                    </button>
+                    <Link to={`/product-detail/${slide.type}`}>
+                      <button type="button" className="learn-more-btn">
+                        <span>Tìm hiểu thêm</span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

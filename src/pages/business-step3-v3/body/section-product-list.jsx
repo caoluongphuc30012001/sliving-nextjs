@@ -75,6 +75,7 @@ const SectionProductList = () => {
   const [tableData, setTableData] = useState("");
 
   const state = useContext(BusinessStateContext);
+
   console.log("state", state);
 
   useEffect(() => {

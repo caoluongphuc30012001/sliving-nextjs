@@ -29,9 +29,9 @@ const CheckOutsideClick = ({ onClickOutside, children }) => {
   );
 };
 
-const SPEC = ({ text }) => {
+const TEXT = ({ text, target }) => {
   {
-    text = text.replace("Giải pháp", "");
+    text = text.replace({ target }, "");
     return (
       <div className="solution-item-desc">
         <p className="desc-p">Giải Pháp</p>
@@ -97,7 +97,7 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
                     alt=""
                     className="solution-item-img"
                   ></img>
-                  <SPEC text={item.title} />
+                  <TEXT text={item.title} target="Giải pháp" />
                   <img
                     className="solution-item-icon"
                     src={selectedIcon}
