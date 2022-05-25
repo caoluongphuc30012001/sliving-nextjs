@@ -110,7 +110,7 @@ const SectionProduct = () => {
           id: 0,
           title: "Dễ dàng thao tác",
           subTitle:
-            "Với thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF.",
+            "Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF.",
           icon: iconCheckOutline,
         },
         {

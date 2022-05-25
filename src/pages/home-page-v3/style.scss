@@ -662,58 +662,57 @@ span.detail-v3 {
 .section-product-home-page-v3 {
   padding: 120px 0 60px;
   background: #fff !important;
-  .card-product {
+  .container-1220 > .card-product:not(:first-child) {
     padding-top: 120px;
-    // img {
-    //   float: right;
-    // }
-    .card-product-title {
+  }
+
+  .card-product-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #0979fd;
+    text-transform: capitalize;
+  }
+  .card-product-subtitle {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    color: #454647;
+    padding-top: 4px;
+  }
+  .card-product-content {
+    padding: 0;
+    margin: 0;
+  }
+  .card-product-item {
+    list-style: none;
+    padding-top: 32px;
+
+    .card-product-item-title {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 700;
-      font-size: 28px;
-      line-height: 32px;
-      color: #0979fd;
-      text-transform: capitalize;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 10px;
+      color: #2c2d2e;
     }
-    .card-product-subtitle {
+
+    .card-product-item-des {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 500;
-      font-size: 21px;
-      line-height: 32px;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 16px;
       color: #454647;
-      padding-top: 4px;
-    }
-    .card-product-content {
-      padding: 0;
-      margin: 0;
-    }
-    .card-product-item {
-      list-style: none;
-      padding-top: 32px;
-
-      .card-product-item-title {
-        font-family: "SVN-Gilroy";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        padding-left: 10px;
-        color: #2c2d2e;
-      }
-
-      .card-product-item-des {
-        font-family: "SVN-Gilroy";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-        padding-top: 16px;
-        color: #454647;
-      }
     }
   }
+
   .download-app-list {
     bottom: 0;
     left: 50%;
