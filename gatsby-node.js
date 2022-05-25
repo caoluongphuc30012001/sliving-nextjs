@@ -268,7 +268,7 @@ exports.createPages = async function ({ actions, graphql }) {
     component: smartLighting,
   });
   createPage({
-    path: `/smart-security`,
+    path: `/smart-building`,
     component: smartSecurity,
   });
   createPage({
