@@ -15,11 +15,11 @@ const SectionHeader = () => {
           <h1 className="content-title">SMART LIGHTING</h1>
           <div className="content-subtitle-container">
             <p className="content-subtitle">
-              Smart Lighting đem đến giải pháp chiếu sáng thông minh, tiện lợi
-              cho các không gian như: trung tâm thương mại, tòa nhà, văn phòng,
-              căn hộ,.. mang lại cảm giác thoải mái và hiện đại. Unicloud hướng
-              tới xây dựng hệ thống Smart Lighting không chỉ đáp ứng nhu cầu
-              chiếu sáng mà còn đáp ứng được nhu cầu hoạt động thông minh.
+              Smart Lighting - giải pháp chiếu sáng thông minh, tiện lợi cho các
+              không gian như: trung tâm thương mại, tòa nhà, văn phòng, căn
+              hộ,... mang lại cảm giác thoải mái và hiện đại. Unicloud hướng tới
+              xây dựng hệ thống Smart Lighting không chỉ đáp ứng nhu cầu chiếu
+              sáng mà còn đáp ứng được nhu cầu hoạt động thông minh.
             </p>
           </div>
         </div>
