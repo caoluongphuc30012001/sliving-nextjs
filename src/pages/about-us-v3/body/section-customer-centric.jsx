@@ -22,10 +22,10 @@ function SectionCustomerCentric() {
       title: "Sản phẩm",
       linkImg: imgProduct,
       content: [
-        "Hệ sinh thái sản phẩm đa dạng, liên kết cao, made in Vietnam.",
-        "Hệ các sản phẩm có thể điều chỉnh theo nhu cầu từng khách hàng",
-        "Hệ thống sản phẩm mở cho phép kết nối với các đối tác dịch vụ",
-        "Qui trình thiết kế, thử nghiệm khép kín được kiểm soát chất lượng chặt chẽ.",
+        "Hệ sinh thái sản phẩm đa dạng, tích hợp nhanh chóng.",
+        "Hệ các sản phẩm có thể điều chỉnh theo nhu cầu từng khách hàng/ doanh nghiệp.",
+        "Hệ thống sản phẩm mở cho phép kết nối đa dạng với các đối tác dịch vụ.",
+        "Quy trình thiết kế, thử nghiệm khép kín được kiểm soát chất lượng chặt chẽ.",
       ],
     },
     {
@@ -33,8 +33,8 @@ function SectionCustomerCentric() {
       title: "Sản xuất",
       linkImg: imgProduce,
       content: [
-        "Hệ thống máy móc hiện đại cùng tiêu chuẩn phòng sạch đáp ứng tiêu chuẩn khắt khe của lắp ráp. ",
-        "Qui trình sản xuất áp dụng ISO xxx",
+        "Hệ thống máy móc hiện đại cùng tiêu chuẩn phòng sạch đáp ứng tiêu chuẩn khắt khe của lắp ráp.",
+        "Công nghệ khép kín hiện đại.",
       ],
     },
   ];

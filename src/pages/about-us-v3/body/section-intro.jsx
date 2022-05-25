@@ -85,11 +85,14 @@ const SectionIntro = () => {
   return (
     <section className="section-intro-v3">
       <div className="intro-container-v3">
-        <div className="intro-top-content">
-          <h5 className="intro-title-v3 text-uppercase">ABOUT US</h5>
-          <h3 className="intro-subtitle-v3">Giới Thiệu Tổng Quan</h3>
-          <Divider />
-        </div>
+        <Row className="row-line-center m-left-right-12">
+          <span className="title-eng-line-center">ABOUT US</span>
+          <h2 className="title-line-center">Giới Thiệu Tổng Quan</h2>
+          <div className="img-line-center">
+            <Divider />
+          </div>
+        </Row>
+
         <div className="intro-bottom-content">
           {introItems.map((intro) => {
             return (
