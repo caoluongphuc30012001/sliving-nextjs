@@ -134,7 +134,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                 </div>
               )}
             </div>
-            <div className="right-content-container animate fadeUp">
+            <div className="right-content-container animate fadeUp ">
               <div className="content-container">
                 <div className="product-right-content">
                   <h4 className="product-right-subtitle">{slide.subTitle}</h4>
