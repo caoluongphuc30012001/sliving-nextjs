@@ -39,7 +39,8 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/smart-light-v2") === true ||
     checkDetectPage(page, "/contact-page-v2") === true ||
     checkDetectPage(page, "/policy") === true ||
-    checkDetectPage(page, "/support-page-v2") === true
+    checkDetectPage(page, "/support-page-v2") === true ||
+    checkDetectPage(page, "/smart-security-v3") === true
   ) {
     deletePage(page);
   }
@@ -61,6 +62,9 @@ exports.createPages = async function ({ actions, graphql }) {
   // const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
   const homePage = require.resolve("./src/pages/index.js");
   const policy = require.resolve("./src/pages/policy/index.jsx");
+  const smartBuilding = require.resolve(
+    "./src/pages/smart-security-v3/index.jsx"
+  );
 
   // const solutionSmartHome  = require.resolve("./src/pages/solution/smart-home/index.jsx");
   // const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
@@ -208,10 +212,15 @@ exports.createPages = async function ({ actions, graphql }) {
     path: `/policy`,
     component: policy,
   });
+  createPage({
+    path: `/smart-building`,
+    component: smartBuilding,
+  });
 };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    devtool: false,
     resolve: {
       alias: {
         "@components": path.resolve(__dirname, "./src/components"),
