@@ -97,12 +97,12 @@ const SectionProduct = () => {
         {
           id: 0,
           img: imgAppStore,
-          linkDownload: "https://rgl.mobi/RHQSK",
+          linkDownload: "https://1p.io/AppSlivingApple",
         },
         {
           id: 1,
           img: imgGooglePlay,
-          linkDownload: "https://rgl.mobi/Rqccu",
+          linkDownload: "https://1p.io/SlivingAppChplay",
         },
       ],
       listItem: [

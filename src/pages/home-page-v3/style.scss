@@ -662,10 +662,12 @@ span.detail-v3 {
 .section-product-home-page-v3 {
   padding: 120px 0 60px;
   background: #fff !important;
-  .container-1220 > .card-product:not(:first-child) {
+  // .container-1220 > .card-product:not(:first-child) {
+  //   padding-top: 120px;
+  // }
+  .card-product {
     padding-top: 120px;
   }
-
   .card-product-title {
     font-family: "SVN-Gilroy";
     font-style: normal;
