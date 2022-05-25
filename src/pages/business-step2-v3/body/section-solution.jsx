@@ -158,7 +158,6 @@ const SectionSolution = () => {
   const [list, setList] = useState([]);
   const [validOption, setValidOption] = useState(true);
   const [validCount, setValidCount] = useState(true);
-  const [validSum, setValidSum] = useState(true);
 
   const [activeStep2Cards, setActiveStep2Cards] = useState([]);
 
@@ -167,7 +166,6 @@ const SectionSolution = () => {
   const handleAdd = () => {
     checkOption();
     checkCount();
-    checkSum();
     if (
       Number(count) > 0 &&
       Number.isInteger(Number(count)) &&
@@ -209,12 +207,6 @@ const SectionSolution = () => {
     if (Number(count) > 0 && Number.isInteger(Number(count))) {
       setValidCount(true);
     } else setValidCount(false);
-  };
-
-  const checkSum = () => {
-    if (Number(sum) >= 100 && activeStep2Cards.length > 0) {
-      setValidSum(true);
-    } else setValidSum(false);
   };
 
   useEffect(() => {
@@ -351,6 +343,7 @@ const SectionSolution = () => {
             <p className="sum">{sum + " căn hộ"}</p>
           </div>
         </div>
+
         <Link
           to={`${
             activeStep2Cards?.length > 0 && sum > 99 ? "/business-step3" : "#"
@@ -358,22 +351,14 @@ const SectionSolution = () => {
           state={{ total: sum }}
         >
           <button
-            className={
-              Number(sum) >= 100 && activeStep2Cards.length > 0
-                ? "advise-now-btn"
-                : "advise-now-btn disable"
-            }
+            className="advise-now-btn"
             type="button"
             onClick={() =>
-              validSum &&
-              dispatch({ type: "GET_TOTAL_HOUSES", payload: { total: sum } })
+              dispatch({ type: "GET_TOTAL_HOUSES", payload: { total: 1000 } })
             }
           >
             <span>Xác nhận</span>
           </button>
-          {/* <p className={`check-valid ${!validSum ? "invalid" : ""}`}>
-            Số lượng phải lớn hơn hoặc bằng 100
-          </p> */}
         </Link>
       </div>
     </section>
