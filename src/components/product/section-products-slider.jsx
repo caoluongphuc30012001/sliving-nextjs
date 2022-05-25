@@ -86,14 +86,14 @@ const SectionProductsSlider = ({ listSlide }) => {
       >
         <img src={BigArrowLeft} alt=""></img>
       </div>
-      {/* <div
+      <div
         className="btn-big-arrow-right-mobie"
         onClick={() => {
           increaseToggleTab();
         }}
       >
         <img src={BigArrowLeft} alt=""></img>
-      </div> */}
+      </div>
       <div className="btn-big-arrow-right" onClick={() => increaseToggleTab()}>
         <img src={BigArrowRight} alt=""></img>
       </div>
@@ -149,7 +149,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                         </p>
                       ))}
                   </div>
-                  <div className="btn-group">
+                  <div className="right-content-btn-group">
                     <button className="advise-now-btn">
                       <span>Tư vấn ngay</span>
                     </button>

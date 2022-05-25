@@ -156,7 +156,7 @@
               }
               .img-box {
                 width: 260px;
-                height: 260px;
+                height: 200px;
                 overflow: hidden;
                 display: flex;
                 align-items: center;
@@ -316,6 +316,17 @@
         }
         .list-product {
           .item-box {
+            .img-box {
+              width: 260px;
+              height: 200px;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              img {
+                margin: 0 auto;
+                transition: 0.5s;
+              }
+            }
             margin-bottom: 16px;
             border-radius: 8px;
             overflow: hidden;
@@ -434,6 +445,19 @@
 }
 .section-popular-product-v3 {
   padding: 120px 0;
+  .btn-group{
+    gap: 10px;
+    display: flex !important;
+    
+    max-width: 375px;
+    button{
+      // width: 100%;
+      padding:0;
+      white-space: nowrap;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
 }
 .popular-product-container {
   max-width: 1180px;
@@ -465,9 +489,6 @@
       height: 4px;
       left: 546px;
       top: 101px;
-
-      /* Light mode/Gradient/1 */
-
       background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
       border-radius: 200px;
     }
@@ -500,8 +521,9 @@
         position: absolute;
         opacity: 0;
         bottom: -10px;
-        left: 15px;
+        left: 2px;
         transition: 0.2s;
+        top:250px;
       }
       .img-box {
         position: relative;
@@ -614,7 +636,7 @@
 
   .btn-big-arrow-right-mobie {
     position: absolute;
-    top: calc(50% - 20px);
+    top: calc(20% - 20px);
     z-index: 1;
     width: fit-content;
     display: none;
@@ -861,76 +883,145 @@
   }
 }
 ///=========Responsive==========//
-@media (max-width: 1200px) {
+@media(max-width:1200px){
+  #smart_home_page {
+    .section-product-slider {
+      margin-top: 60px;
+    }
+  }
   .section-product-slider {
-    height: fit-content;
+      height: fit-content;
+        flex-direction: column;
+        align-items: center;
+      .product-right-content{
+        align-items: center;
+        .btn-group{
+          width: 100%;
+          max-width: 600px;
+        }
+        .product-right-title{
+          text-align: center; 
+        }
+      }
+      .product-slide-wrapper{
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .smart-home-bg-left {
+        width: 100%;
+        height: 40%;
+      }
+      .smart-home-bg-right {
+        width: 100%;
+        height: 60%;
+        top: 40%;
+      }
+      .btn-big-arrow-left{
+        left: 10px;
+        top: calc(20% - 20px);
+      }
+      .btn-big-arrow-right {
+        display: none;
+      }
+      .btn-big-arrow-right-mobie{
+        display: block;
+        right: 10px;
+        top: calc(20% - 20px);
+        transform: rotate(180deg);
+      }
+      .swiper-image{
+        width: 320px;
+        object-fit: cover;
+      }
+      .product-left-content {
+        margin: 0px;
+        width: 100%;
+        .swiper{
+          height: 200px;
+        }
+      }
+      .left-content-container{
+        height: clamp(400px, 41.7vw, 500px);
+        min-width: 510px;
+        align-items: center;
+        justify-content: center;
+      }
+      .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right-content-container {
+        max-width: 100%;
+        width: 100%;
+        height: 60%;
+      }
+      .banner-products-btn-group {
+        margin: 2rem auto 0 auto;
+        max-width: 510px;
+      }
+      .product-phone-wrapper{
+        max-width: 300px;
+      }
+    }
+  .product-slide-wrapper {
     flex-direction: column;
+    justify-content: flex-start;
+  }
+  .smart-home-bg-left {
+    width: 100%;
+    height: 40%;
+  }
+  .smart-home-bg-right {
+    width: 100%;
+    height: 60%;
+    top: 40%;
+  }
+  .btn-big-arrow-left {
+    left: 0px;
+  }
+  .btn-big-arrow-right {
+    display: none;
+  }
+  .btn-big-arrow-right-mobie {
+    display: block;
+    position: absolute;
+    left: calc(100% - 41px);
+    transform: rotate(180deg);
+  }
+  .swiper-image {
+    width: 320px;
+    object-fit: cover;
+  }
+  .product-left-content {
+    margin: 0px;
+    width: 100%;
+    .swiper {
+      height: 200px;
+    }
+  }
+  .left-content-container {
+    height: clamp(400px, 41.7vw, 500px);
+    min-width: 510px;
     align-items: center;
-    .product-right-content {
-      align-items: center;
-      .product-right-title {
-        text-align: center;
-      }
-    }
-    .product-slide-wrapper {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .smart-home-bg-left {
-      width: 100%;
-      height: 40%;
-    }
-    .smart-home-bg-right {
-      width: 100%;
-      height: 60%;
-      top: 40%;
-    }
-    .btn-big-arrow-left {
-      left: 0px;
-    }
-    .btn-big-arrow-right {
-      display: none;
-    }
-    .btn-big-arrow-right-mobie {
-      display: block;
-      position: absolute;
-      left: calc(100% - 41px);
-      transform: rotate(180deg);
-    }
-    .swiper-image {
-      width: 320px;
-      object-fit: cover;
-    }
-    .product-left-content {
-      margin: 0px;
-      width: 100%;
-      .swiper {
-        height: 200px;
-      }
-    }
-    .left-content-container {
-      height: clamp(400px, 41.7vw, 500px);
-      min-width: 510px;
-      align-items: center;
-      justify-content: center;
-    }
-    .swiper-slide {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .right-content-container {
-      max-width: 100%;
-      width: 100%;
-      height: 60%;
-    }
-    .banner-products-btn-group {
-      margin: 2rem auto 0 auto;
-      max-width: 510px;
-    }
-    .product-phone-wrapper {
-      max-width: 300px;
-    }
+    justify-content: center;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .right-content-container {
+    max-width: 100%;
+    width: 100%;
+    height: 60%;
+  }
+  .banner-products-btn-group {
+    margin: 2rem auto 0 auto;
+    max-width: 510px;
+  }
+  .product-phone-wrapper {
+    max-width: 300px;
   }
 }
 @media (max-width: 570px) {

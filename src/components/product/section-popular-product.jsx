@@ -40,6 +40,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                     <div className="item-box">
                       <div className="img-box">
                         <img src={item.image} alt="" />
+                      </div>
                       <div className="btn-group">
                         <button className="advise-now-btn">
                           <span>Tư vấn ngay</span>
@@ -47,7 +48,6 @@ const SectionPopularProduct = ({ listProduct }) => {
                         <button type="button" className="learn-more-btn">
                           <span>Tìm hiểu thêm</span>
                         </button>
-                      </div>
                       </div>
                       <div className="description-box">
                         <p className="sub-title">{item.description}</p>

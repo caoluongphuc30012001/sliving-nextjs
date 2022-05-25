@@ -87,21 +87,21 @@ const SectionProductList = () => {
   }, [tableData]);
 
   const sorting = (col) => {
-    if (order === "ASC") {
-      const sorted = tableData;
-      sorted.content[`${activeTable}`].content.sort((a, b) =>
-        b[col].localeCompare(a[col])
-      );
-      setTableData(sorted);
-      setOrder("DESC");
-    } else {
-      const sorted = tableData;
-      sorted.content[`${activeTable}`].content.sort((a, b) =>
-        a[col].localeCompare(b[col])
-      );
-      setTableData(sorted);
-      setOrder("ASC");
-    }
+    // if (order === "ASC") {
+    //   const sorted = tableData;
+    //   sorted.content[`${activeTable}`].content.sort((a, b) =>
+    //     b[col].localeCompare(a[col])
+    //   );
+    //   setTableData(sorted);
+    //   setOrder("DESC");
+    // } else {
+    //   const sorted = tableData;
+    //   sorted.content[`${activeTable}`].content.sort((a, b) =>
+    //     a[col].localeCompare(b[col])
+    //   );
+    //   setTableData(sorted);
+    //   setOrder("ASC");
+    // }
   };
 
   const [toggle, setToggle] = useState(0);
