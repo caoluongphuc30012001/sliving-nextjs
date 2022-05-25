@@ -35,17 +35,17 @@ const listSlide = [
   {
     id: 0,
     title: "Công Tắc Cơ Thông Minh",
-    subTitle: "SMART SWITCH",
+    subTitle: "Smart Mechanical Switch",
     contents: [
       {
         id: 0,
-        title: "Trải nghiệm mới từ lớp vỏ truyền thống:",
-        desc: " Với ngoại hình của dòng cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng mang lại trải nghiệm hoàn toàn mới mẻ và tiện lợi.",
+        title: "Trải nghiệm mới mẻ & tối ưu:",
+        desc: " Công tắc thông minh được tích hợp công nghệ hiện đại giúp bật/ tắt thiết bị điện nhanh chóng chỉ với thao tác chạm bề mặt cảm ứng hoặc điều khiển từ xa thông qua ứng dụng di động.",
       },
       {
         id: 1,
-        title: "Dễ sử dụng:",
-        desc: " Thông qua mạng Wifi/ Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
+        title: "Tính năng vượt trội:",
+        desc: " Kết nối các thiết bị khác qua mạng Wifi/Zigbee và chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
       },
       {
         id: 2,
@@ -66,11 +66,11 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "hình chữ nhật",
+        title: "Hình chữ nhật",
       },
       {
         id: 1,
-        title: "hình vuông",
+        title: "Hình vuông",
       },
     ],
     phoneImg: null,
@@ -79,7 +79,7 @@ const listSlide = [
   {
     id: 1,
     title: "Công Tắc Cảm Ứng Thông Minh",
-    subTitle: "TOUCH SWITCH",
+    subTitle: "Smart Touch Switch",
     contents: [
       {
         id: 0,
@@ -106,11 +106,11 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "cảm ứng",
+        title: "Cảm ứng",
       },
       {
         id: 1,
-        title: "kịch bản",
+        title: "Kịch bản",
       },
     ],
     phoneImg: null,
@@ -189,12 +189,12 @@ const listSlide = [
       {
         id: 0,
         title: "Tính năng vượt trội:",
-        desc: " Thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF. Hỗ trợ điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
+        desc: " Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
       },
       {
         id: 1,
         title: "Giám sát & cảnh báo:",
-        desc: " Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời đến người dùng.",
+        desc: " Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
       },
     ],
     listItem: [],
