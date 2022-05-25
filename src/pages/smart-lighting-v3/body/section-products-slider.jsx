@@ -25,7 +25,7 @@ import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
 const listSlide = [
   {
     id: 0,
-    title: "Led Driver",
+    title: "Led",
     subTitle: "",
     contents: [
       {
