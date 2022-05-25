@@ -9,12 +9,14 @@ import BigArrowLeft from "../../images/smart-home-v3/svg/big-arrow-left.svg";
 
 // import BigArrowRight from "@images/smart-home-v3/svg/big-arrow-right.svg";
 import BigArrowRight from "../../images/smart-home-v3/svg/big-arrow-right.svg";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide }) => {
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
+
   return (
     <div className="product-left-content">
       {slide?.listItem && slide?.listItem.length > 0 && (
@@ -75,7 +77,7 @@ const SectionProductsSlider = ({ listSlide }) => {
   const decreaseToggleTab = () => {
     setToggleState((prev) => (prev === 0 ? prev : prev - 1));
   };
-
+  const [modalShow, setModalShow] = React.useState(false);
   return (
     <section className="section-product-slider">
       <div
@@ -150,7 +152,10 @@ const SectionProductsSlider = ({ listSlide }) => {
                       ))}
                   </div>
                   <div className="btn-group">
-                    <button className="advise-now-btn">
+                    <button
+                      className="advise-now-btn"
+                      onClick={() => setModalShow(true)}
+                    >
                       <span>Tư vấn ngay</span>
                     </button>
                     <button type="button" className="learn-more-btn">
@@ -163,6 +168,7 @@ const SectionProductsSlider = ({ listSlide }) => {
           </div>
         ))}
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 };

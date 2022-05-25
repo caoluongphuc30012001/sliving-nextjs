@@ -6,8 +6,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <section className="section-popular-product-v3">
       <div className="popular-product-container">
@@ -42,7 +46,10 @@ const SectionPopularProduct = ({ listProduct }) => {
                         <img src={item.image} alt="" />
                       </div>
                       <div className="btn-group">
-                        <button className="advise-now-btn">
+                        <button
+                          className="advise-now-btn"
+                          onClick={() => setModalShow(true)}
+                        >
                           <span>Tư vấn ngay</span>
                         </button>
                         <button type="button" className="learn-more-btn">
@@ -66,6 +73,7 @@ const SectionPopularProduct = ({ listProduct }) => {
           </div>
         </div>
       </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
   );
 };

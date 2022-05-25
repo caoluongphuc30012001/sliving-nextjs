@@ -196,13 +196,17 @@ const SectionProduct = () => {
                     <div className="d-flex p-absolute download-app-list download-app-list-desktop ">
                       {smart?.downloadObjects.map((object) => (
                         <div className="download-app-item" key={object.id}>
-                          <Link to={object.linkDownload}>
+                          <a
+                            href={object.linkDownload}
+                            target="_blank"
+                            rel="noopener"
+                          >
                             <img
                               src={object.img}
                               alt=""
                               className="download-app-img"
                             ></img>
-                          </Link>
+                          </a>
                         </div>
                       ))}
                     </div>
@@ -217,13 +221,17 @@ const SectionProduct = () => {
                     <div className="d-flex p-absolute download-app-list">
                       {smart?.downloadObjects.map((object) => (
                         <div className="download-app-item" key={object.id}>
-                          <Link to={object.linkDownload}>
+                          <a
+                            href={object.linkDownload}
+                            target="_blank"
+                            rel="noopener"
+                          >
                             <img
                               src={object.img}
                               alt=""
                               className="download-app-img"
                             ></img>
-                          </Link>
+                          </a>
                         </div>
                       ))}
                     </div>
@@ -260,7 +268,7 @@ const SectionProduct = () => {
                   >
                     <span>Tư vấn ngay</span>
                   </button>
-                  <Link to="/smart-home-v3">
+                  <Link to="/smart-home">
                     <button className="learn-more-btn">
                       <span>Tìm hiểu thêm</span>
                     </button>

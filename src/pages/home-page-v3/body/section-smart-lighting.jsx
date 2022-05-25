@@ -79,7 +79,7 @@ function SectionSmartLighting() {
               >
                 <span>Tư vấn ngay</span>
               </button>
-              <Link to="/smart-lighting-v3">
+              <Link to="/smart-lighting">
                 <button className="learn-more-btn">
                   <span>Tìm hiểu thêm</span>
                 </button>
