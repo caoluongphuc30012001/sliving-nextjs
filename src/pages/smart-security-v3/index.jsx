@@ -22,6 +22,8 @@ const SmartSecurity = () => {
         title="Smart Building"
         description="Chúng tôi tự hào khi mang đến cho khách hàng một hàng rào an ninh 
         ứng dụng công nghệ số kiên cố, hiện đại, vững chắc và an toàn cho các khu dân cư, dự án và tòa nhà."
+        url="/smart-building/"
+        metaImage="/thumbnail.png"
       />
       <main>
         <Container className="max-width-100 px-0" fluid>

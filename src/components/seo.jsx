@@ -25,11 +25,11 @@ function Seo({ url, description, title, metaImage }) {
   );
   const lang = i18next.language;
   const metaDescription = description || site.siteMetadata.description;
-  const metaUrl = url || site.siteMetadata.siteUrl;
+  const metaUrl = site.siteMetadata.siteUrl + url || site.siteMetadata.siteUrl;
   const titleMeta = title || site.siteMetadata.title;
   const image = metaImage
     ? `${site.siteMetadata.siteUrl}${metaImage}`
-    : `${site.siteMetadata.siteUrl}/sliving-banner.jpg`;
+    : `${site.siteMetadata.siteUrl}/thumbnail.png`;
   return (
     <Helmet
       htmlAttributes={{
