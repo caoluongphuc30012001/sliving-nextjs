@@ -49,6 +49,9 @@ const ProductItemSwiper = ({ slide }) => {
           {slide?.titles.map((btnItem) => {
             return (
               <div
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
                 className={`${
                   swiperIndex === btnItem.id
                     ? "products-btn-item active"
@@ -82,6 +85,9 @@ const SectionProductsSlider = ({ listSlide }) => {
   return (
     <section className="section-product-slider">
       <div
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
         className="btn-big-arrow-left"
         onClick={() => {
           decreaseToggleTab();
@@ -90,6 +96,9 @@ const SectionProductsSlider = ({ listSlide }) => {
         <img src={BigArrowLeft} alt=""></img>
       </div>
       <div
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
         className="btn-big-arrow-right-mobie"
         onClick={() => {
           increaseToggleTab();
@@ -97,7 +106,13 @@ const SectionProductsSlider = ({ listSlide }) => {
       >
         <img src={BigArrowLeft} alt=""></img>
       </div>
-      <div className="btn-big-arrow-right" onClick={() => increaseToggleTab()}>
+      <div
+        className="btn-big-arrow-right"
+        onClick={() => increaseToggleTab()}
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
+      >
         <img src={BigArrowRight} alt=""></img>
       </div>
       <div className="smart-home-bg-left"></div>

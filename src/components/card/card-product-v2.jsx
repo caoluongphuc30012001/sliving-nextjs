@@ -1,7 +1,5 @@
 import React from "react";
-import ButtonShop from "../button/button-shop";
 import "../style.scss";
-import IconHeart from "../svg/heart";
 import styled from "styled-components";
 import { GatsbyImage } from "gatsby-plugin-image";
 

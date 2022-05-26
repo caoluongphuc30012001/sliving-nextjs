@@ -7,6 +7,7 @@ import iconPhone from "@images/footer-v3/svg/icon-phone.svg";
 import iconEmail from "@images/footer-v3/svg/icon-email.svg";
 import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
+
 import "./footer.scss";
 
 const BuildLogo = () => (
@@ -151,16 +152,6 @@ function Footer() {
           </section>
         </div>
       </footer>
-      {/* {isMobile && (
-        <button
-          type="button"
-          onClick={scrollTop}
-          className="div-icon-up-top"
-          id="div-icon-up-top"
-        >
-          <Image src={iconUpTop} className="img-fluid img-icon-up-top" />
-        </button>
-      )} */}
     </section>
   );
 }

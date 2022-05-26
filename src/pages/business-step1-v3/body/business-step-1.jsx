@@ -62,6 +62,9 @@ const BusinessStep1 = () => {
                 onClick={() => {
                   handleClickCardItem(item);
                 }}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
               >
                 <img
                   src={item.image}

@@ -15,8 +15,8 @@ function SectionFormContact() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const googleSheetAPI =
-    "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
+  // const googleSheetAPI =
+  //   "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
 
   const onSubmit = (data) => {
     const googleSheetFormData = new FormData();
@@ -54,9 +54,9 @@ function SectionFormContact() {
     axios
       .post("/subscribe", formData)
       .then((response) => {
-        // console.log("response: ", response);
-        // console.log("response.status: ", response.status);
-        // console.log("response.data: ", response.data);
+        console.log("response: ", response);
+        console.log("response.status: ", response.status);
+        console.log("response.data: ", response.data);
       })
       .catch(() => {});
     reset();

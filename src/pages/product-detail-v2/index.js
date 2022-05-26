@@ -58,7 +58,7 @@ const IndexPage = ({ pageContext }) => {
   const [mechanical_4, setMechanical_4] = useState();
   const [mechanical_5, setMechanical_5] = useState();
   const [mechanical_6, setMechanical_6] = useState();
-  const [mechanicalActive, setMechanicalActive] = useState();
+  // // const [mechanicalActive, setMechanicalActive] = useState();
 
   const getDataMechanical = (dataSwitch) => {
     var dataNew = [];
@@ -110,7 +110,7 @@ const IndexPage = ({ pageContext }) => {
       setDataThumbs(dataNew?.nonNeutral);
       setVersionActive(1);
     }
-    setMechanicalActive(dataNew);
+    // setMechanicalActive(dataNew);
     setButtonActive(btnActive);
   };
 
@@ -124,7 +124,7 @@ const IndexPage = ({ pageContext }) => {
           setDataThumbs(mechanical_1?.nonNeutral);
         }
         setButtonActive(1);
-        setMechanicalActive(mechanical_1);
+        // setMechanicalActive(mechanical_1);
         break;
       case 2:
         if (mechanical_2?.withNeutral && versionActive === 0) {
@@ -133,7 +133,7 @@ const IndexPage = ({ pageContext }) => {
           setDataThumbs(mechanical_2.nonNeutral);
         }
         setButtonActive(2);
-        setMechanicalActive(mechanical_2);
+        // setMechanicalActive(mechanical_2);
         break;
       case 3:
         if (mechanical_3?.withNeutral && versionActive === 0) {
@@ -142,7 +142,7 @@ const IndexPage = ({ pageContext }) => {
           setDataThumbs(mechanical_3.nonNeutral);
         }
         setButtonActive(3);
-        setMechanicalActive(mechanical_3);
+        // setMechanicalActive(mechanical_3);
         break;
       case 4:
         if (mechanical_4?.withNeutral && versionActive === 0) {
@@ -151,7 +151,7 @@ const IndexPage = ({ pageContext }) => {
           setDataThumbs(mechanical_4.nonNeutral);
         }
         setButtonActive(4);
-        setMechanicalActive(mechanical_4);
+        // setMechanicalActive(mechanical_4);
         break;
       case 5:
         if (mechanical_5?.withNeutral && versionActive === 0) {
@@ -160,7 +160,7 @@ const IndexPage = ({ pageContext }) => {
           setDataThumbs(mechanical_5.nonNeutral);
         }
         setButtonActive(5);
-        setMechanicalActive(mechanical_5);
+        // setMechanicalActive(mechanical_5);
         break;
       case 6:
         if (mechanical_6?.withNeutral && versionActive === 0) {
@@ -169,7 +169,7 @@ const IndexPage = ({ pageContext }) => {
           setDataThumbs(mechanical_6.nonNeutral);
         }
         setButtonActive(6);
-        setMechanicalActive(mechanical_6);
+        // setMechanicalActive(mechanical_6);
         break;
       default:
         break;
@@ -177,15 +177,15 @@ const IndexPage = ({ pageContext }) => {
   };
 
   const [versionActive, setVersionActive] = useState(0);
-  const handleActiveNeutral = (versionId) => {
-    if (versionId === 0) {
-      setDataThumbs(mechanicalActive.withNeutral);
-      setVersionActive(0);
-    } else if (versionId === 1) {
-      setDataThumbs(mechanicalActive.nonNeutral);
-      setVersionActive(1);
-    }
-  };
+  // const handleActiveNeutral = (versionId) => {
+  //   if (versionId === 0) {
+  //     setDataThumbs(mechanicalActive.withNeutral);
+  //     setVersionActive(0);
+  //   } else if (versionId === 1) {
+  //     setDataThumbs(mechanicalActive.nonNeutral);
+  //     setVersionActive(1);
+  //   }
+  // };
 
   const handleSetTypeProduct = (index) => {
     const dataNew = data[0].nodes[index];

@@ -5,8 +5,6 @@ import imgLine from "@images/new-home-page/app-img/line.png";
 
 import Link from "@components/gatsby-link";
 
-import { navigate } from "gatsby";
-
 import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
@@ -21,17 +19,17 @@ import "../style.scss";
  * @readonly
  * @enum {{name: string, value: int}}
  */
-const Products = Object.freeze({
-  switch: 0,
-  led: 1,
-  socket: 2,
-  sensor: 3,
-  zigbee: 4,
-  button: 5,
-  curtain: 6,
-  meter: 7,
-  motor: 8,
-});
+// const Products = Object.freeze({
+//   switch: 0,
+//   led: 1,
+//   socket: 2,
+//   sensor: 3,
+//   zigbee: 4,
+//   button: 5,
+//   curtain: 6,
+//   meter: 7,
+//   motor: 8,
+// });
 
 const SlideProduct = ({ data, noTitle, noNavbar, indexProduct }) => {
   const location = useLocation();
@@ -128,11 +126,11 @@ const SlideProduct = ({ data, noTitle, noNavbar, indexProduct }) => {
     }
   };
 
-  const gotoElement = (elementId) => {
-    document
-      .getElementById(elementId)
-      .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-  };
+  // const gotoElement = (elementId) => {
+  //   document
+  //     .getElementById(elementId)
+  //     .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  // };
 
   /* filter data first  time load page */
   const filterData = (filter) => {
@@ -143,18 +141,18 @@ const SlideProduct = ({ data, noTitle, noNavbar, indexProduct }) => {
   };
 
   /* filter data first  time load page by query search params */
-  const filterDataBySearchParam = (filter) => {
-    arrProduct.forEach(
-      (prod) => (prod.isActive = filter.id === prod.id ? true : false)
-    );
-    filterProduct(filter.filterName);
-    searchParams.delete("productname");
-    searchParams.append("productname", filter.searchParam);
-    navigate(
-      `${location.pathname}?productname=${searchParams.get("productname")}`
-    );
-    gotoElement("sliving-products")
-  };
+  // const filterDataBySearchParam = (filter) => {
+  //   arrProduct.forEach(
+  //     (prod) => (prod.isActive = filter.id === prod.id ? true : false)
+  //   );
+  //   filterProduct(filter.filterName);
+  //   searchParams.delete("productname");
+  //   searchParams.append("productname", filter.searchParam);
+  //   navigate(
+  //     `${location.pathname}?productname=${searchParams.get("productname")}`
+  //   );
+  //   gotoElement("sliving-products")
+  // };
 
   useEffect(() => {
     // if (search) {

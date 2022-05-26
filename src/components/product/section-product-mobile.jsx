@@ -11,6 +11,9 @@ const ContentLeft = ({ listProduct, current, setCurrent }) => {
         {listProduct.map((item) => {
           return (
             <div
+              onKeyDown={() => {}}
+              role="button"
+              tabIndex={0}
               className={`item-box ${item.id === current ? "active" : ""}`}
               key={item.id}
               onClick={() => {

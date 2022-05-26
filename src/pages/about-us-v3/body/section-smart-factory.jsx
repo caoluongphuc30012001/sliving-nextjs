@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -43,7 +43,7 @@ import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
 import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
 
 import smart_factory_image from "../../../images/about-us-v3/png/img-smart-factory.png";
-import { Image, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 export const Divider = styled("div")`
   width: 88px;
@@ -75,8 +75,8 @@ export const Divider = styled("div")`
 // };
 
 const SectionSmartFactory = () => {
-  const [current, setCurrent] = useState(1);
-  const [swip, setSwip] = useState(null);
+  // const [current, setCurrent] = useState(1);
+  // const [swip, setSwip] = useState(null);
 
   const factoryItems = [
     { id: 0, icon: iconLicense, title: "Khu Công Nghệ Cao cấp phép" },
@@ -222,7 +222,7 @@ const SectionSmartFactory = () => {
               </p>
             </div>
             <div className="factory-second-produce-content">
-              <img src={smart_factory_image} />
+              <img src={smart_factory_image} alt="" />
             </div>
           </div>
         </div>
@@ -230,8 +230,7 @@ const SectionSmartFactory = () => {
       <div className="swiper-wrapper-container">
         <div className="smart-factory-swiper-container">
           <Swiper
-            onSwiper={setSwip}
-            onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
+            // onSlideChange={(swiper) => setCurrent(swiper.realIndex + 1)}
             effect={"coverflow"}
             grabCursor={true}
             slidesPerView={1}
