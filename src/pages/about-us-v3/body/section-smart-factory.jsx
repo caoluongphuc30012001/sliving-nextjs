@@ -43,7 +43,7 @@ import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
 import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
 
 import smart_factory_image from "../../../images/about-us-v3/png/img-smart-factory.png";
-import { Image, Row } from "react-bootstrap";
+import { Image, Row, Col } from "react-bootstrap";
 
 export const Divider = styled("div")`
   width: 88px;
@@ -118,8 +118,8 @@ const SectionSmartFactory = () => {
           </div>
         </Row>
 
-        <div className="factory-bottom-content">
-          <div className="factory-bottom-left-content">
+        <Row className="factory-bottom-content">
+          <Col lg={6} md={12} sm={12} className="factory-bottom-left-content">
             <div className="factory-produce-content">
               <h1 className="factory-title-paragraph">
                 Đầu tư nhà máy hiện đại
@@ -132,6 +132,7 @@ const SectionSmartFactory = () => {
                 toàn bộ nhà máy còn được điều khiển bởi hệ thống kết nối IoT
                 thông minh được chính Unicloud thiết kế và lắp đặt.
               </p>
+              <br />
               <p className="factory-second-desc">
                 Với mong muốn mang tới những sản phẩm có chất lượng cao nhất tới
                 khách hàng, ngoài quy trình thiết kế khép kín, mỗi sản phẩm điện
@@ -148,15 +149,15 @@ const SectionSmartFactory = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="factory-bottom-right-content">
+          </Col>
+          <Col lg={6} md={12} sm={12} className="factory-bottom-right-content">
             <img
               src={imgSmartFactory}
               alt=""
               className="smart-factory-img img-factory"
             ></img>
-          </div>
-        </div>
+          </Col>
+        </Row>
 
         <div className="factory-second-bottom-content">
           <div className="content-wrap">
@@ -210,7 +211,7 @@ const SectionSmartFactory = () => {
               ></img>
             </div>
           </div>
-          <div className="mobile-content">
+          <div className="mobile-content d-none">
             <div className="factory-second-produce-content">
               <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
               <p className="factory-first-desc">

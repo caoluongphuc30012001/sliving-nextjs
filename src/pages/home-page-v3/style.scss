@@ -228,8 +228,8 @@ span.detail-v3 {
   }
 
   .img-line-center {
-    padding-top: 16px;
-    padding-bottom: 60px;
+    margin-top: 16px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
   }
@@ -240,7 +240,7 @@ span.detail-v3 {
     line-height: 24px;
     text-align: center;
     color: #454647;
-    margin-top: -16px;
+    // margin-top: -16px;
   }
 }
 
@@ -257,8 +257,8 @@ span.detail-v3 {
       font-size: 14px;
     }
     .img-line-center {
-      padding-top: 16px;
-      padding-bottom: 32px;
+      margin-top: 16px;
+      margin-bottom: 32px;
     }
     .description-line-center {
       display: none;

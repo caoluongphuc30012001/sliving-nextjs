@@ -48,8 +48,8 @@ function SectionCustomerCentric() {
             <img className="underline-img" src={imgUnderLine} />
           </div>
         </Row>
-        <Row md={2} xs={1} className="customer-centric-row">
-          <Col>
+        <Row className="customer-centric-row">
+          <Col lg={6} md={12} sm={12}>
             {listCertification.map((item) => (
               <div className="customer-centric-card" key={item.id}>
                 <div className="customer-centric-icon">
@@ -64,7 +64,7 @@ function SectionCustomerCentric() {
               </div>
             ))}
           </Col>
-          <Col>
+          <Col lg={6} md={12} sm={12}>
             <img src={imgCustomerCentric} className="img-customer-centric" />
           </Col>
         </Row>

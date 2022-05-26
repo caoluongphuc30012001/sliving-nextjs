@@ -47,7 +47,7 @@ function SectionActivity() {
     {
       id: 3,
       linkIconLogo: iconActivity3,
-      title: "Digital Tranformation",
+      title: "Digital Transformation",
     },
     {
       id: 4,
