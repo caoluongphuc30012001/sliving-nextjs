@@ -81,18 +81,13 @@ const listSlide = [
     contents: [
       {
         id: 0,
-        title: "Trải nghiệm mới từ lớp vỏ truyền thống:",
-        desc: " Với ngoại hình của dòng cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng mang lại trải nghiệm hoàn toàn mới mẻ và tiện lợi.",
+        title: "Trải nghiệm mới mẻ & tối ưu:",
+        desc: " Công tắc thông minh được tích hợp công nghệ hiện đại giúp bật/ tắt thiết bị điện nhanh chóng chỉ với thao tác chạm bề mặt cảm ứng hoặc điều khiển từ xa thông qua ứng dụng di động.",
       },
       {
         id: 1,
-        title: "Dễ sử dụng:",
-        desc: " Thông qua mạng Wifi/ Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
-      },
-      {
-        id: 2,
         title: "Tính năng vượt trội:",
-        desc: " Ngoài tính năng điều khiển bật/ tắt cục bộ như thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
+        desc: " Kết nối các thiết bị khác qua mạng Wifi/Zigbee và chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
       },
     ],
     listItem: [
@@ -126,12 +121,12 @@ const listSlide = [
     contents: [
       {
         id: 0,
-        title: "Thiết kế dễ dàng lắp đặt và sử dụng:",
+        title: "Thiết kế chắc chắn & bền bỉ:",
         desc: " Toàn bộ sản phẩm bên ngoài được làm bằng nhôm cao cấp, khả năng chịu lực va chạm mạnh, chịu nhiệt và chống ăn mòn cùng với kích thước nhỏ gọn nên phù hợp với nhiều loại hình không gian khác nhau.",
       },
       {
         id: 1,
-        title: "Hoạt động dựa trên tương tác vật lý:",
+        title: "Hỗ trợ điều khiển từ xa:",
         desc: " Với động cơ rèm thông minh, người dùng dễ dàng điều khiển từ xa thông qua ứng dụng hoặc chạy kịch bản mở/đóng theo nhu cầu sử dụng. Khi gặp sự cố về điện, thiết bị vẫn có thể hoạt động bình thường thông qua mở và đóng vật lý dễ dàng.",
       },
     ],
@@ -154,7 +149,7 @@ const listSlide = [
       {
         id: 0,
         title: "Kết nối ổn định & tương thích đa dạng:",
-        desc: " Ngoài tính năng điều khiển bật/ tắt cục bộ như thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị trên Gateway.",
+        desc: " Kết nối với các sản phẩm trong hệ sinh thái Sliving thông qua giao thức không dây Zigbee, giao tiếp tốt với các thiết bị bên thứ 3 như Aqara, SmartThings,...",
       },
       {
         id: 1,

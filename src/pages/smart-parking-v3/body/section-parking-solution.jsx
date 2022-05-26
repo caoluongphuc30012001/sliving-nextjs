@@ -73,7 +73,7 @@ const ListItem = [
   },
   {
     id: 1,
-    title: "Bãi Đỗ Xe Ngoài Trời",
+    title: "Giải Pháp Bãi Đỗ Xe Ngoài Trời",
     secondTitle: "Sơ Đồ Bãi Đỗ Xe Ngoài Trời",
     mainImg: item2Img,
     iconList: [
