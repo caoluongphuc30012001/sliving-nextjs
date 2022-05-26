@@ -4,10 +4,12 @@ import SectionSwiperVideoSliving from "./body/section-swiper-video-sliving";
 import SectionPopularProductSliving from "./body/section-popular-product-sliving";
 import LayoutSmartHome from "../../components/layout-smart-home-v3";
 import SectionProductsSlider from "./body/section-products-slider";
+import Seo from "../../components/seo";
 import SectionProductMain from "../../components/product/section-product-main";
 const SmartHomePage = () => {
   return (
     <LayoutSmartHome>
+      <Seo title={"Smart Home"} />
       <main id="smart_home_page">
         <SectionProductsSlider />
         <SectionPopularProductSliving />

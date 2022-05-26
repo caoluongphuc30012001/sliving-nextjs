@@ -360,7 +360,7 @@ const SectionSolution = () => {
 
         <Link
           to={`${
-            activeStep2Cards?.length > 0 && sum > 99 ? "/business-step3" : "#"
+            activeStep2Cards?.length > 0 && sum > 99 ? "/business-step3/" : "#"
           }`}
           state={{ total: sum }}
         >

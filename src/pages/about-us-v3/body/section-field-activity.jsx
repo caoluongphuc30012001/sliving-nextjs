@@ -81,8 +81,8 @@ function SectionActivity() {
             xs={2}
             className="max-width-1180 d-flex justify-content-center"
           >
-            {listCertification.map((item) => (
-              <Col>
+            {listCertification.map((item, index) => (
+              <Col key={index.toString()}>
                 <div className="certification-card">
                   <div className="certification-card-img">
                     <Image src={item.linkIconLogo} />

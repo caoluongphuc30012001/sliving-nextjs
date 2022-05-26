@@ -438,10 +438,10 @@ const IndexPage = ({ pageContext }) => {
     return (
       <section className="container-wrap product-header-page">
         <Row className="header-page-wrap">
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={12}>
             {buildThumbsProduct}
           </Col>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={12}>
             <BuildProductInfos />
           </Col>
         </Row>

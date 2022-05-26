@@ -38,24 +38,24 @@ function LayoutV3({ children }) {
         {
           id: 1,
           nameRoute: "SMART LIGHTING",
-          href: "/smart-lighting",
+          href: "/smart-lighting/",
         },
         {
           id: 2,
           nameRoute: "SMART PARKING",
-          href: "/smart-parking",
+          href: "/smart-parking/",
         },
         {
           id: 3,
           nameRoute: "SMART BUILDING",
-          href: "/smart-building",
+          href: "/smart-building/",
         },
       ],
     },
     {
       id: 3,
       nameRoute: "GÓI GIẢI PHÁP",
-      href: "/business-step1",
+      href: "/business-step1/",
     },
 
     {
@@ -67,7 +67,7 @@ function LayoutV3({ children }) {
     {
       id: 5,
       nameRoute: "QUY TRÌNH",
-      href: "/implementation-process",
+      href: "/implementation-process/",
       active: url.includes("implementation-process"),
     },
   ];

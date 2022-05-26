@@ -2,8 +2,8 @@ import icon24Line from "@images/icon/icon-24h-line.svg";
 import iconPhone from "@images/home-page-v3/svg/icon-phone.svg";
 import iconSettings from "@images/icon/icon-setting.svg";
 import iconSupport from "@images/icon/icon-support.svg";
-import imgBg from "@images/home-page-v3/bg-home-page.png";
-import imgBg2 from "@images/home-page-v3/bg-home-page2.png";
+import imgBg from "@images/home-page-v3/bg-home-page.jpg";
+import imgBg2 from "@images/home-page-v3/bg-home-page2.jpg";
 import imgBgMobile from "@images/home-page-v3/bg-home-page-mobile.png";
 import imgBgMobile2 from "@images/home-page-v3/bg-home-page2-mobile.png";
 import iconEarth from "@images/home-page-v3/svg/icon-earth.svg";
@@ -62,7 +62,17 @@ const SectionHeader = () => {
         className="mySwiper slider-desktop"
       >
         {imgBackground.map((item) => (
-          <SwiperSlide key={item.id} className="back-ground-desktop">
+          <SwiperSlide
+            key={item.id}
+            className="back-ground-desktop"
+            style={{
+              backgroundImage: `url(${item.imgUrl})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              marginRight: "30px",
+            }}
+          >
             <div className="view-360">
               <button>
                 <span>
@@ -71,7 +81,7 @@ const SectionHeader = () => {
                 <img src={iconEarth} alt="" />
               </button>
             </div>
-            <img src={item.imgUrl} alt="" className="bg-img" />
+            {/* <img src={item.imgUrl} alt="" className="bg-img" /> */}
           </SwiperSlide>
         ))}
       </Swiper>
@@ -103,10 +113,7 @@ const SectionHeader = () => {
 
       <div className="home-page-tag">
         <div className="container-1220">
-          <Row
-            noGutters={true}
-            className="d-flex justify-content-center align-items-center"
-          >
+          <Row className="d-flex justify-content-center align-items-center">
             <Col lg={3} className="gy-3">
               <div className="group-contact-header">
                 <img

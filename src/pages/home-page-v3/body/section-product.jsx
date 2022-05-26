@@ -226,7 +226,7 @@ const SectionProduct = () => {
                       ))}
                     </div>
                   )}
-                  <img src={smart.image} alt="" class="float-none" />
+                  <img src={smart.image} alt="" className="float-none" />
                 </div>
                 <ul className="card-product-content">
                   {smart.listItem.map((item) => (
@@ -238,15 +238,13 @@ const SectionProduct = () => {
                         </h4>
                       </div>
                       <div>
-                        <p className="card-product-item-des">
-                          {item.subTitle}
-                          <ul>
-                            {item?.listChild &&
-                              item?.listChild.map((child) => (
-                                <li key={child}>{child}</li>
-                              ))}
-                          </ul>
-                        </p>
+                        <p className="card-product-item-des">{item.subTitle}</p>
+                        <ul>
+                          {item?.listChild &&
+                            item?.listChild.map((child) => {
+                              <li key={child}>{child}</li>;
+                            })}
+                        </ul>
                       </div>
                     </li>
                   ))}

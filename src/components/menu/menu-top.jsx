@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "@components/gatsby-link";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import ModalAdvise from "../modal/modal-advise/ModalAdvise";
 import backIcon from "../../images/menu/back.svg";
@@ -41,7 +41,12 @@ const MenuTop = ({ logo, listRoute, back }) => {
                 </div>
               </div>
             ) : (
-              <Link to={item.href} key={item.id} target="_blank">
+              <Link
+                to={item.href}
+                key={item.id}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className={`item-menu ${item.active ? "active" : ""}`}>
                   {item.nameRoute}
                 </div>

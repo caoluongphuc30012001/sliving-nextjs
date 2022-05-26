@@ -21,8 +21,6 @@ function ModalAdvise(props) {
   //   "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
 
   const onSubmit = (data) => {
-    console.log("data", data);
-
     const formData = new FormData();
     formData.append("name", data.fullName);
     formData.append("phone", data.telephone);

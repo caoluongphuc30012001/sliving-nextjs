@@ -57,8 +57,13 @@ function SectionCustomerCentric() {
                 </div>
                 <div className="customer-centric-content">
                   <h4 className="customer-centric-title">{item.title}</h4>
-                  {item.content.map((itemChild) => (
-                    <span className="customer-centric-item">- {itemChild}</span>
+                  {item.content.map((itemChild, index) => (
+                    <span
+                      className="customer-centric-item"
+                      key={index.toString()}
+                    >
+                      - {itemChild}
+                    </span>
                   ))}
                 </div>
               </div>
