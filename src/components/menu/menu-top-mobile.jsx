@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import menuIcon from "../../images/smart-home-v3/png/menu-icon.png";
 import close from "../../images/smart-home-v3/png/close.png";
+// import { Link } from "gatsby";
 import Link from "@components/gatsby-link";
 import "./style.scss";
 
@@ -17,26 +18,30 @@ const MenuTopMobile = ({ logo, listRoute }) => {
             </div>
           </Link>
           {mobile && (
-            <img
-              src={menuIcon}
-              alt=""
+            <div
+              role="button"
               className="icon-menu"
               onClick={() => {
                 setMobile(!mobile);
               }}
               onKeyDown={() => {}}
-            />
+              tabIndex={0}
+            >
+              <img src={menuIcon} alt="" />
+            </div>
           )}
           {!mobile && (
-            <img
-              src={close}
-              alt=""
+            <div
               className="icon-menu"
               onClick={() => {
                 setMobile(!mobile);
               }}
               onKeyDown={() => {}}
-            />
+              role="button"
+              tabIndex={0}
+            >
+              <img src={close} alt="" />
+            </div>
           )}
         </div>
         <div className={`list-item-menu ${!mobile ? "is-mobile" : ""}`}>

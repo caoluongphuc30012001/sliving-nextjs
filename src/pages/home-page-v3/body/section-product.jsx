@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import iconCheckOutline from "@images/icon/icon-check-circle-outline.svg";
 import imgCurtain from "@images/home-page-v3/img-curtain.png";
 import imgSwitch from "@images/home-page-v3/img-switch.png";
@@ -12,15 +11,6 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import { Col, Image, Row } from "react-bootstrap";
 import { Link } from "gatsby";
-
-export const Divider = styled("div")`
-  width: 56px;
-  height: 4px;
-  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
-  margin: 20px auto;
-  border-radius: 200px;
-  padding-bottom: 60px;
-`;
 
 const SectionProduct = () => {
   const [modalShow, setModalShow] = React.useState(false);

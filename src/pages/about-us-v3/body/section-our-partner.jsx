@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 import imgUnderLine from "../../../images/home-page-v3/svg/title-line-under.svg";
 import iconPartner1 from "../../../images/about-us-v3/svg/icon-partner1.svg";
 import iconPartner2 from "../../../images/about-us-v3/svg/icon-partner2.svg";

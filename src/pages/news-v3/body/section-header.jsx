@@ -1,5 +1,4 @@
 import React from "react";
-import background from "../../../images/about-us-v3/png/about-us-banner.png";
 
 const SectionHeader = () => {
   return (

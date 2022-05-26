@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import MenuTop from "./menu-top";
 import MenuTopMobile from "./menu-top-mobile";
 
-export default function({logo, listRoute,back}){
-    return (
-        <>
-            <MenuTop listRoute={listRoute} logo={logo} back={back} />
-            <MenuTopMobile listRoute={listRoute} logo={logo} back={back} />
-        </>
-    )
+export default function Menu({ logo, listRoute, back }) {
+  return (
+    <>
+      <MenuTop listRoute={listRoute} logo={logo} back={back} />
+      <MenuTopMobile listRoute={listRoute} logo={logo} back={back} />
+    </>
+  );
 }

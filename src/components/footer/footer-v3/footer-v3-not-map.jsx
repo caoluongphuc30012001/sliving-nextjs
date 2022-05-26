@@ -1,6 +1,5 @@
-import React, { useMemo, useEffect } from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
-import AddressAndMap from "./AddressAndMap";
+import React, { useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 // import useWindowSize from "@src/hook/useWindowSize";
 import logoSliving from "@images/footer-v3/png/logo-sliving.png";
 import iconFb from "@images/footer-v3/svg/icon-fb.svg";
@@ -9,7 +8,6 @@ import iconPhone from "@images/footer-v3/svg/icon-phone.svg";
 import iconEmail from "@images/footer-v3/svg/icon-email.svg";
 import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
-import iconUpTop from "@images/footer-v3/svg/icon-up-top-main.svg";
 
 import "./footer.scss";
 
@@ -85,9 +83,9 @@ function BuildApps() {
     </div>
   );
 }
-const scrollTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+// const scrollTop = () => {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// };
 function Footer() {
   //   const { t } = useTranslation();
 

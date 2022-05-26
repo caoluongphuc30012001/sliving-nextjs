@@ -1,5 +1,4 @@
 import React from "react";
-import SectionHelpMore from "../../components/help-more/section-help-more";
 import LayoutV3 from "../../components/layout-v3-not-map";
 import Seo from "@components/seo";
 

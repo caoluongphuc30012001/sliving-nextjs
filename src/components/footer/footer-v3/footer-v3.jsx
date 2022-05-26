@@ -9,7 +9,6 @@ import iconPhone from "@images/footer-v3/svg/icon-phone.svg";
 import iconEmail from "@images/footer-v3/svg/icon-email.svg";
 import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
-import iconUpTop from "@images/footer-v3/svg/icon-up-top-main.svg";
 
 import "./footer.scss";
 
@@ -73,19 +72,19 @@ function BuildApps() {
   return (
     <div className="footer-apps">
       <h4 className="text-white fw-bold fs-4">Kho ứng dụng</h4>
-      <a href="https://1p.io/AppSlivingApple" target="_blank">
+      <a href="https://1p.io/AppSlivingApple" target="_blank" rel="noreferrer">
         <img className="my-3" src={iconApple} alt="" />
       </a>
-      <a href="https://1p.io/SlivingAppChplay" target="_blank">
+      <a href="https://1p.io/SlivingAppChplay" target="_blank" rel="noreferrer">
         <img className="my-3" src={iconChPlay} alt="" />
       </a>
       {/* <img src={qrCode} alt="" /> */}
     </div>
   );
 }
-const scrollTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+// const scrollTop = () => {
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// };
 function Footer() {
   //   const { t } = useTranslation();
 

@@ -14,7 +14,6 @@ const LanguageSwitcher = () => {
     en: "en",
     vn: "vn",
   };
-  const urlDefault = "/";
 
   function replaceUrlByI18n(fromLng, toLng) {
     i18n.changeLanguage(toLng);
@@ -38,23 +37,17 @@ const LanguageSwitcher = () => {
 
   useEffect(() => {
     const changeDetectLanguage = () => {
-      if (
-        pathname.includes(typeLng.vn) &&
-        i18n.language === typeLng.en
-      ) {
+      if (pathname.includes(typeLng.vn) && i18n.language === typeLng.en) {
         i18n.changeLanguage(typeLng.vn);
         return;
       }
 
-      if (
-        pathname.includes(typeLng.en) &&
-        i18n.language === typeLng.vn
-      ) {
+      if (pathname.includes(typeLng.en) && i18n.language === typeLng.vn) {
         i18n.changeLanguage(typeLng.en);
         return;
       }
     };
-   changeDetectLanguage();
+    changeDetectLanguage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
