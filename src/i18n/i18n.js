@@ -1,12 +1,13 @@
 import i18n from "i18next";
 import Backend from "i18next-http-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
+// import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 const options = {
   fallbackLng: "vn",
   supportedLngs: ["vn", "en"],
   preload: true,
+  lng: "vn",
   load: "all", // we only provide en, de -> no region specific locals like en-US, de-DE
   // have a common namespace used around the full app
   ns: ["translations"],
@@ -19,8 +20,8 @@ const options = {
       translations: require("../i18n/locales/en/translations.json"),
     },
   },
-  debug: true,
-  
+  debug: false,
+
   // react: {
   //   bindI18n: "languageChanged loaded",
   //   bindStore: "added removed",
@@ -67,7 +68,7 @@ const options = {
 // for browser use http backend to load translations and browser lng detector
 
 if (!i18n.isInitialized) {
-  i18n.use(Backend).use(initReactI18next).use(LanguageDetector).init(options);
+  i18n.use(Backend).use(initReactI18next).init(options);
 }
 
 export default i18n;

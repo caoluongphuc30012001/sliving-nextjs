@@ -1,0 +1,343 @@
+body {
+  padding-right: 0px !important;
+}
+.section-menu-top {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  z-index: 20;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  .menu-top-container {
+    max-width: 1600px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    .logo-box {
+      min-width: 206px;
+    }
+    .list-item-menu {
+      display: flex;
+      align-items: center;
+      max-width: 700px;
+      width: 100%;
+      height: 48px;
+      justify-content: space-between;
+      padding: 0 10px;
+      .item-menu {
+        font-family: "SVN Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #2c2d2e;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 36px;
+        transition: 0.25s;
+        cursor: pointer;
+        .drop-box {
+          border-radius: 0px 0px 4px 4px;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+          overflow: hidden;
+          position: absolute;
+          left: -20px;
+          width: 200px;
+          top: 36px;
+          height: 0px;
+          opacity: 0;
+          padding-top: 22px;
+          .item-select {
+            padding-left: 16px;
+            height: 48px;
+            cursor: pointer;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e1e3e6;
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #2c2d2e;
+            &:hover {
+              font-weight: 600;
+              color: #0979fd;
+            }
+          }
+          .item-select:last-child {
+            border-bottom: none;
+          }
+        }
+        .item-select {
+          height: 48px;
+          cursor: pointer;
+          background-color: white;
+          color: #454647;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        &:hover {
+          font-weight: 500;
+          color: #0979fd;
+          .drop-box {
+            height: fit-content;
+            opacity: 1;
+            transition: 0.25s;
+          }
+        }
+      }
+      .active {
+        font-family: "SVN Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+
+        color: #0979fd;
+      }
+      .select-menu-top {
+        // width: 200px;
+        .main-item-select {
+          margin-left: auto;
+          .non-active {
+            font-weight: 500;
+          }
+        }
+        p {
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          color: #2c2d2e;
+        }
+      }
+    }
+    .support-box {
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      width: 250px;
+      justify-content: space-between;
+      // .search{
+      //     margin-left: 28px;
+      // }
+      .btn-advise {
+        border-radius: 68px;
+        width: 229px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        border: 2px solid transparent;
+        background: linear-gradient(to right, white, white),
+          linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+        .content {
+          font-family: "SVN-Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          display: inline;
+          align-items: center;
+          background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.section-menu-top-mobile {
+  .logo {
+    position: static;
+  }
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  z-index: 20;
+  .menu-top-container {
+    width: 100%;
+    .title-box {
+      padding: 0 20px;
+      width: 100%;
+      height: 64px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .list-item-menu {
+      // margin-top:10px;
+      width: 100%;
+      height: 0;
+      background-color: white;
+      transition: 0.25s;
+      overflow: hidden;
+      opacity: 0;
+      padding: 0 16px;
+      .item-menu {
+        cursor: pointer;
+        min-height: 52px;
+        padding: 14px 16px;
+        gap: 10px;
+        width: 100%;
+        border-bottom: 2px solid #e1e3e6;
+        font-family: "SVN Gilroy";
+        font-weight: 500;
+        font-size: 16px;
+        color: #2c2d2e;
+        .main-item-select {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .drop-box {
+          height: 0px;
+          overflow: hidden;
+          transition: 0.25s;
+          // margin-top: 10px;
+          .item-select {
+            font-family: "SVN Gilroy";
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0 16px;
+            height: 40px;
+            display: flex;
+            color: #454647;
+            align-items: center;
+            cursor: pointer;
+          }
+          .item-select:first-child {
+            margin-top: 10px;
+          }
+        }
+        &:hover {
+          .drop-box {
+            height: 100%;
+            transition: 0.25s;
+          }
+        }
+      }
+      .active {
+        font-family: "SVN Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0979fd;
+      }
+      .item-menu:last-child {
+        // border-bottom: none;
+      }
+    }
+    .is-mobile {
+      height: 100vh;
+      opacity: 1;
+      margin-top: 10px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .section-menu-top {
+    display: block;
+  }
+  .section-menu-top-mobile {
+    display: none;
+  }
+
+  #smart_lighting_page {
+    .section-smart-lighting-header {
+      margin-top: 90px;
+    }
+  }
+  #smart_parking_page {
+    .section-smart-parking-v3-header {
+      margin-top: 90px;
+    }
+  }
+  .home-page-v3 {
+    margin-top: 90px;
+  }
+  #about_us_page {
+    .section-about-us-header {
+      margin-top: 90px;
+    }
+  }
+  #business-step1-v3 {
+    .section-business-header-v3 {
+      margin-top: 90px;
+    }
+  }
+  #business-step2-v3 {
+    .section-solution-box {
+      margin-top: 90px;
+    }
+  }
+  #business-step3-v3 {
+    .section-business-product-list{
+      margin-top: 90px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  #smart_home_page {
+    .section-product-slider {
+      margin-top: 64px;
+    }
+  }
+  #business-step1-v3 {
+    .section-business-header-v3 {
+      margin-top: 64px;
+    }
+  }
+  #business-step2-v3 {
+    .section-business-header-v3 {
+      margin-top: 64px;
+    }
+  }
+  #business-step3-v3 {
+    .section-business-product-list{
+      margin-top: 64px;
+    }
+  }
+  #smart_lighting_page {
+    .section-smart-lighting-header {
+      margin-top: 64px;
+    }
+  }
+  #smart_lighting_page {
+    .section-smart-lighting-header {
+      margin-top: 64px;
+    }
+  }
+  .home-page-v3 {
+    margin-top: 64px;
+  }
+  #about_us_page {
+    .section-about-us-header {
+      margin-top: 64px;
+    }
+  }
+}
