@@ -27,7 +27,7 @@ function SectionFormContact() {
     "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
 
   const onSubmit = (data) => {
-    console.log("data", data);
+    // console.log("data", data);
 
     const googleSheetFormData = new FormData();
     googleSheetFormData.append("fullName", data.fullName);

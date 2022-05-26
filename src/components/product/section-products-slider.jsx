@@ -15,7 +15,6 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide }) => {
-  console.log("slide", slide);
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
 

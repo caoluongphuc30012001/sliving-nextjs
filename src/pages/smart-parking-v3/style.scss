@@ -222,7 +222,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 36px;
+                font-size: clamp(28px, 7.47vw, 36px);
                 text-align: center;
                 color: #2C2D2E;
             }
@@ -434,7 +434,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 36px;
+                font-size: clamp(28px, 7.47vw, 36px);
                 text-align: center;
                 color: #2C2D2E;
             }
@@ -1056,7 +1056,6 @@
             justify-content: center;
             align-items: center;
             gap: clamp(40px, 3.125vw, 60px);
-            margin-bottom: 800px;
             .hardware{
                 .item-container{
                     max-width: 600px;

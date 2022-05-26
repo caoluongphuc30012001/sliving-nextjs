@@ -40,7 +40,6 @@ const SectionPopularProduct = ({ listProduct }) => {
               className="container-cover"
             >
               {listProduct.map((item) => {
-                console.log("item", item);
                 return (
                   <SwiperSlide key={item.id} className="list-product">
                     <div className="item-box">

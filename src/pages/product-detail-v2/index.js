@@ -196,8 +196,6 @@ const IndexPage = ({ pageContext }) => {
   };
 
   const handleSetTypeProduct = (index) => {
-    console.log("index", data[0].nodes);
-
     const dataNew = data[0].nodes[index];
     getDataMechanical(dataNew.frontmatter);
     setVersionActive(index);

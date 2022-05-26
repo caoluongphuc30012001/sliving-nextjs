@@ -34,7 +34,6 @@ function ListSolution({
     const newListActiveCards = activeStep2Cards.filter(
       (item) => item.id !== index
     );
-    console.log("newahahahah", newListActiveCards);
     setActiveStep2Cards([...newListActiveCards]);
   };
   return (

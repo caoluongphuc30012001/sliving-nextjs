@@ -76,8 +76,6 @@ const SectionProductList = () => {
 
   const state = useContext(BusinessStateContext);
 
-  console.log("state", state);
-
   useEffect(() => {
     if (state["total"]) {
       if (state["total"] < 500) setQuantity(500);
@@ -122,7 +120,6 @@ const SectionProductList = () => {
                 key={item.id}
                 onClick={() => {
                   setToggle(item.id);
-                  console.log(quantity);
                 }}
                 className={toggle === item.id ? "button" : "button active"}
               >
