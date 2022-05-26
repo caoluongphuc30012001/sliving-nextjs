@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import menuIcon from "../../images/smart-home-v3/png/menu-icon.png";
 import close from "../../images/smart-home-v3/png/close.png";
-import {Link} from 'gatsby'
+import Link from "@components/gatsby-link";
 import "./style.scss";
+
 const MenuTopMobile = ({ logo, listRoute }) => {
   const [mobile, setMobile] = useState(true);
   return (
@@ -23,7 +24,7 @@ const MenuTopMobile = ({ logo, listRoute }) => {
               onClick={() => {
                 setMobile(!mobile);
               }}
-              onKeyDown={()=>{}}
+              onKeyDown={() => {}}
             />
           )}
           {!mobile && (
@@ -34,7 +35,7 @@ const MenuTopMobile = ({ logo, listRoute }) => {
               onClick={() => {
                 setMobile(!mobile);
               }}
-              onKeyDown={()=>{}}
+              onKeyDown={() => {}}
             />
           )}
         </div>
@@ -55,9 +56,7 @@ const MenuTopMobile = ({ logo, listRoute }) => {
                   {item.listRoute.map((item) => {
                     return (
                       <Link to={item.href} key={item.id}>
-                        <div className="item-select">
-                          {item.nameRoute}
-                        </div>
+                        <div className="item-select">{item.nameRoute}</div>
                       </Link>
                     );
                   })}

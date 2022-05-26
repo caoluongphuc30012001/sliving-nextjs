@@ -15,7 +15,6 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide }) => {
-  console.log("slide", slide);
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
 
@@ -124,7 +123,11 @@ const SectionProductsSlider = ({ listSlide }) => {
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
                         <div className="download-app-item">
-                          <a href={object.link} target="_blank">
+                          <a
+                            href={object.link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <img
                               src={object.img}
                               alt=""

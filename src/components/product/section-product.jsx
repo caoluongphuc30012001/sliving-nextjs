@@ -70,7 +70,6 @@ const ItemProduct = ({ listProduct, itemId }) => {
       modules={[Pagination, Navigation]}
     >
       {listProduct.map((item) => {
-        console.log("item", item);
         return (
           <SwiperSlide key={item.id} className="list-product">
             <Link to={`/product-detail/${item.type}`}>

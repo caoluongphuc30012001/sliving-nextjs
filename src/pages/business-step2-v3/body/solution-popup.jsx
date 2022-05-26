@@ -54,7 +54,6 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
     });
 
     if (check) {
-      console.log([...activePopupCards, { ...cardItem }]);
       setActivePopupCards([...activePopupCards, { ...cardItem }]);
     } else {
       const newActivePopupCards = activePopupCards.filter((item) => {

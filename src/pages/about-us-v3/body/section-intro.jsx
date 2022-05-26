@@ -94,9 +94,9 @@ const SectionIntro = () => {
         </Row>
 
         <div className="intro-bottom-content">
-          {introItems.map((intro) => {
+          {introItems.map((intro, index) => {
             return (
-              <div className="intro-content-container">
+              <div className="intro-content-container" key={index.toString()}>
                 <div
                   key={intro.id}
                   className={`intro-content-wrapper ${

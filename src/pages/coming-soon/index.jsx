@@ -4,10 +4,12 @@ import { Link } from "gatsby";
 import imgComingSoon from "@images/coming-soon/img-coming-soon.png";
 
 import "./style.scss";
+import Seo from "../../components/seo";
 
 function ComingSoon() {
   return (
     <LayoutV3>
+      <Seo title="Coming soon | Sliving" />
       <section className="container-child not-found">
         <img src={imgComingSoon} alt="not found" className="img-not-found" />
         <h3>Sắp ra mắt !!!</h3>

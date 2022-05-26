@@ -116,7 +116,7 @@ const SectionSolution = () => {
                 <li key={solution.id}>{solution.desc}</li>
               ))}
             </ul>
-            <Link to="/about-us-v3">
+            <Link to="/about-us/">
               <button type="button" className="btn-gradient-blue">
                 <span>Khám phá ngay</span>
               </button>

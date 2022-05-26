@@ -14,12 +14,12 @@ const listRoute = [
       {
         id: 0,
         nameRoute: "SMART LIGHTING",
-        href: "/smart-lighting",
+        href: "/smart-lighting/",
       },
       {
         id: 1,
         nameRoute: "SMART PARKING",
-        href: "/smart-parking",
+        href: "/smart-parking/",
       },
       {
         id: 2,
@@ -31,18 +31,18 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/business-step1",
+    href: "/business-step1/",
     active: true,
   },
   {
     id: 2,
     nameRoute: "QUY TRÌNH",
-    href: "/implementation-process",
+    href: "/implementation-process/",
   },
   {
     id: 3,
     nameRoute: "LIÊN HỆ",
-    href: "/contact-us",
+    href: "/contact-us/",
   },
 ];
 function LayoutSecurity({ children }) {

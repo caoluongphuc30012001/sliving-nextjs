@@ -57,12 +57,18 @@ const SectionDefinition = () => {
           <h1 className="left-content-title">{infoItem.title}</h1>
           <div className="left-all-description-container">
             <div className="left-all-description">
-              {infoItem.webContents.map((descItem) => {
-                return <p className="web-content-desc">{descItem.content}</p>;
-              })}
-              {infoItem.mobileContents.map((descItem) => {
+              {infoItem.webContents.map((descItem, index) => {
                 return (
-                  <p className="mobile-content-desc">{descItem.content}</p>
+                  <p className="web-content-desc" key={index.toString()}>
+                    {descItem.content}
+                  </p>
+                );
+              })}
+              {infoItem.mobileContents.map((descItem, index) => {
+                return (
+                  <p className="mobile-content-desc" key={index.toString()}>
+                    {descItem.content}
+                  </p>
                 );
               })}
             </div>
@@ -70,9 +76,9 @@ const SectionDefinition = () => {
         </div>
         <div className="right-content">
           <div className="right-content-container">
-            {infoItem.listIcon.map((iconItem) => {
+            {infoItem.listIcon.map((iconItem, index) => {
               return (
-                <div className="right-icon-item">
+                <div className="right-icon-item" key={index.toString()}>
                   <img
                     src={iconItem.icon}
                     alt=""
