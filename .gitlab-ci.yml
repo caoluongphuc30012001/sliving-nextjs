@@ -27,13 +27,12 @@ test:
   variables:
     AWS_S3_PREFIX: $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
   script:
-    - export AWS_S3_BUCKET=$AWS_S3_BUCKET_REVIEW
+    - export AWS_S3_BUCKET=$AWS_S3_BUCKET_BETA
     - echo "$AWS_S3_PREFIX"
     - echo "$AWS_S3_BUCKET"
     - echo "$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
     - npm install
     - npm run build --prefix-paths
-    - npm run deploy
   only:
     - merge_requests
   except:
@@ -42,18 +41,27 @@ test:
   tags:
     - hcm-share-docker-runner-1
 
+
+build-and-deploy-beta:
+  stage: build-and-deploy
+  script:
+    - export AWS_S3_BUCKET=$AWS_S3_BUCKET_BETA
+    - npm install
+    - npm run build
+    - npm run deploy
+  only:
+    - develop
+  tags:
+    - hcm-share-docker-runner-1
+
 build-and-deploy:
   stage: build-and-deploy
   script:
     - npm install
-    # - ./node_modules/.bin/gatsby build --prefix-paths
-    # - cp -rf src/images public/images
-    # - ls public/
-    # Chưa xử lý phần xóa các file cũ của folder /var/www/html/docs.sliving/. Hiện tại chỉ ghi đè các file cùng tên
-    # - scp -i ~/.ssh/id_rsa -P 22006 -r public/* sst-ci@sst-ci.vm.sunshinetech.ai:/var/www/html/docs.sliving/
     - npm run build
     - npm run deploy
   only:
     - master
   tags:
     - hcm-share-docker-runner-1
+

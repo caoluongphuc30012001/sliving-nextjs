@@ -6,6 +6,7 @@ import LayoutSmartHome from "@components/layout-smart-home";
 import ButtonShop from "@components/button/button-shop";
 import SectionFeatureProduct from "@components/section/section-feature-product";
 import IconHeart from "@components/svg/heart";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import DataProductNew from "@query/product-hot";
 
@@ -19,38 +20,40 @@ import i18next from "i18next";
 import { useLocation } from "@reach/router";
 
 import Seo from "@components/seo";
+import LayoutSmartLighting from "../../components/layout-smart-lighting-v3";
 
 const handelFilter = (dataCurrent) => {
-  if (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) {
+  if (
+    (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) ||
+    (dataCurrent && dataCurrent.frontmatter.type.indexOf("Touch") > -1)
+  ) {
     return true;
   }
   return false;
 };
 
 const IndexPage = ({ pageContext }) => {
+  const [modalShow, setModalShow] = useState(false);
+
   const lngCurrent = i18next.language;
   const [dataCurrent, setDataCurrent] = useState();
   const { data } = pageContext;
-
   const filterPostByLgn = (data) => {
     if (data?.length > 0) {
       for (const item in data) {
         const itemPost = data[item];
-        const lngPost = itemPost.distinct[0];
-        if (lngPost === lngCurrent) {
-          setDataCurrent(itemPost.nodes[0]);
-          if (handelFilter(itemPost.nodes[0]) === true) {
-            getDataMechanical(itemPost.nodes[0].frontmatter);
-          } else {
-            setDataThumbs(itemPost.nodes[0].frontmatter?.imgSrcThumbs);
-          }
+        setDataCurrent(itemPost.nodes[0]);
+
+        if (handelFilter(itemPost.nodes[0]) === true) {
+          getDataMechanical(itemPost.nodes[0].frontmatter);
+        } else {
+          setDataThumbs(itemPost.nodes[0].frontmatter?.imgSrcThumbs);
         }
       }
     }
   };
   useEffect(() => {
     filterPostByLgn(data);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, lngCurrent]);
 
   const [dataThumbs, setDataThumbs] = useState();
@@ -61,6 +64,7 @@ const IndexPage = ({ pageContext }) => {
   const [mechanical_2, setMechanical_2] = useState();
   const [mechanical_3, setMechanical_3] = useState();
   const [mechanical_4, setMechanical_4] = useState();
+  const [mechanical_5, setMechanical_5] = useState();
   const [mechanical_6, setMechanical_6] = useState();
   const [mechanicalActive, setMechanicalActive] = useState();
 
@@ -93,6 +97,13 @@ const IndexPage = ({ pageContext }) => {
         btnActive = 4;
       }
     }
+    if (dataSwitch && dataSwitch?.mechanical_5) {
+      setMechanical_5(dataSwitch.mechanical_5);
+      if (dataNew.length === 0 && btnActive === 0) {
+        dataNew = dataSwitch.mechanical_5;
+        btnActive = 5;
+      }
+    }
     if (dataSwitch && dataSwitch?.mechanical_6) {
       setMechanical_6(dataSwitch.mechanical_6);
       if (dataNew.length === 0 && btnActive === 0) {
@@ -104,7 +115,7 @@ const IndexPage = ({ pageContext }) => {
       setDataThumbs(dataNew.withNeutral);
       setVersionActive(0);
     } else {
-      setDataThumbs(dataNew.nonNeutral);
+      setDataThumbs(dataNew?.nonNeutral);
       setVersionActive(1);
     }
     setMechanicalActive(dataNew);
@@ -150,6 +161,15 @@ const IndexPage = ({ pageContext }) => {
         setButtonActive(4);
         setMechanicalActive(mechanical_4);
         break;
+      case 5:
+        if (mechanical_5?.withNeutral && versionActive === 0) {
+          setDataThumbs(mechanical_5.withNeutral);
+        } else {
+          setDataThumbs(mechanical_5.nonNeutral);
+        }
+        setButtonActive(5);
+        setMechanicalActive(mechanical_5);
+        break;
       case 6:
         if (mechanical_6?.withNeutral && versionActive === 0) {
           setDataThumbs(mechanical_6.withNeutral);
@@ -175,6 +195,16 @@ const IndexPage = ({ pageContext }) => {
     }
   };
 
+  const handleSetTypeProduct = (index) => {
+    const dataNew = data[0].nodes[index];
+    getDataMechanical(dataNew.frontmatter);
+    setVersionActive(index);
+    if (!dataNew.frontmatter.mechanical_1) {
+      setDataThumbs(dataNew.frontmatter.imgSrcThumbs);
+      setDataCurrent(dataNew);
+    }
+  };
+
   const BuildProductInfos = () => {
     return (
       <>
@@ -183,57 +213,104 @@ const IndexPage = ({ pageContext }) => {
             <article className="product-info-detail">
               <h6>{dataCurrent?.frontmatter?.type || "Smart Control"}</h6>
               <h2>{dataCurrent?.frontmatter?.title || "Thermostat"}</h2>
-              <div className="product-star">
-                <img src={star} alt="" /> <span>15 reviews</span>
-              </div>
               <p>
                 {dataCurrent?.frontmatter?.details?.length > 0
                   ? dataCurrent.frontmatter.details.map((des, index) => (
-                      <li key={index}>
+                      <li key={index.toString()}>
                         <span>{des}</span>
                       </li>
                     ))
-                  : "I have detailed below the most cost effective forms of internet marketing to advertising your business using your company website. "}
+                  : ""}
               </p>
+              <div className="divider" />
+              {!dataCurrent?.frontmatter?.isLedDriver && (
+                <Col xs={12} md={12}>
+                  <Row className="version">
+                    <span>Phiên bản</span>
+                  </Row>
+                  <Row className="group-btn-version group-2-btn">
+                    <button
+                      className={`btn-version ${
+                        versionActive === 0 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(0)}
+                    >
+                      <span>
+                        {dataCurrent?.frontmatter?.version === 1
+                          ? "Gateway"
+                          : dataCurrent?.frontmatter?.isSensorLight
+                          ? "Cảm biến ánh sáng"
+                          : "Công tắc vuông"}
+                      </span>
+                    </button>
+                    <button
+                      className={`btn-version ${
+                        versionActive === 1 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(1)}
+                      disabled={
+                        dataCurrent?.frontmatter?.type.indexOf(
+                          "Smart Touch Group"
+                        ) > -1
+                          ? true
+                          : false
+                      }
+                    >
+                      <span>
+                        {dataCurrent?.frontmatter?.version === 1
+                          ? "Gateway Plug"
+                          : dataCurrent?.frontmatter?.isSensorLight
+                          ? "Cảm biến chuyển động"
+                          : "Công tắc chữ nhật"}
+                      </span>
+                    </button>
+                  </Row>
+                </Col>
+              )}
+              {dataCurrent?.frontmatter?.isLedDriver && (
+                <Col xs={12} md={12}>
+                  <Row className="version">
+                    <span>Phiên bản</span>
+                  </Row>
+                  <Row className="group-btn-version group-2-btn">
+                    <button
+                      className={`btn-version ${
+                        versionActive === 0 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(0)}
+                    >
+                      <span>1 kênh</span>
+                    </button>
+                    <button
+                      className={`btn-version ${
+                        versionActive === 1 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(1)}
+                    >
+                      <span>8 kênh</span>
+                    </button>
+                    <button
+                      className={`btn-version ${
+                        versionActive === 2 ? "is-active-btn" : null
+                      }`}
+                      onClick={() => handleSetTypeProduct(2)}
+                    >
+                      <span>10 kênh</span>
+                    </button>
+                  </Row>
+                </Col>
+              )}
               {handelFilter(dataCurrent) === true && (
-                <Row className="group-option">
-                  <Col xs={12} md={6}>
-                    <Row className="version">
-                      <span>Version:</span>
-                    </Row>
-                    <Row className="group-btn-version">
-                      <button
-                        className={`btn-version ${
-                          versionActive === 0 ? "is-active-btn" : null
+                <div className="group-option">
+                  {
+                    <Col xs={12} md={12}>
+                      <Row
+                        className={`group-btn-version ${
+                          dataCurrent?.frontmatter?.mechanical_6
+                            ? "group-6-btn"
+                            : ""
                         }`}
-                        onClick={() => handleActiveNeutral(0)}
-                        disabled={mechanicalActive?.withNeutral ? false : true}
                       >
-                        {!dataCurrent?.frontmatter?.mechanical_6 ||
-                        !dataCurrent?.frontmatter?.mechanical_4
-                          ? "With neutral"
-                          : "Zigbee"}
-                      </button>
-                      <button
-                        className={`btn-version ${
-                          versionActive === 1 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleActiveNeutral(1)}
-                        disabled={mechanicalActive?.nonNeutral ? false : true}
-                      >
-                        {!dataCurrent?.frontmatter?.mechanical_6 ||
-                        !dataCurrent?.frontmatter?.mechanical_4
-                          ? "Non neutral"
-                          : "Wifi"}
-                      </button>
-                    </Row>
-                  </Col>
-                  {!dataCurrent?.frontmatter?.mechanical_6 && (
-                    <Col xs={12} md={6}>
-                      <Row className="version">
-                        <span>Button:</span>
-                      </Row>
-                      <Row className="group-btn-version">
                         {dataCurrent?.frontmatter?.mechanical_1 && (
                           <button
                             className={`btn-version ${
@@ -302,25 +379,55 @@ const IndexPage = ({ pageContext }) => {
                             {4} button
                           </button>
                         )}
-                        {/* {dataCurrent?.frontmatter?.mechanical_6 && (<button className={`btn-version ${buttonActive === 6 ? 'is-active-btn' : null}`} onClick={() => handleActiveButton(6)} disabled={((versionActive === 0 && mechanical_6?.withNeutral) || (versionActive === 1 && mechanical_6?.nonNeutral)) ? false : true}>
-                                        {6} button
-                                    </button>)} */}
+                        {dataCurrent?.frontmatter?.mechanical_5 && (
+                          <button
+                            className={`btn-version ${
+                              buttonActive === 5 ? "is-active-btn" : null
+                            }`}
+                            onClick={() => handleActiveButton(5)}
+                            disabled={
+                              (versionActive === 0 &&
+                                mechanical_5?.withNeutral) ||
+                              (versionActive === 1 && mechanical_5?.nonNeutral)
+                                ? false
+                                : true
+                            }
+                          >
+                            Kịch bản
+                          </button>
+                        )}
+                        {dataCurrent?.frontmatter?.mechanical_6 && (
+                          <button
+                            className={`btn-version ${
+                              buttonActive === 6 ? "is-active-btn" : null
+                            }`}
+                            onClick={() => handleActiveButton(6)}
+                            disabled={
+                              (versionActive === 0 &&
+                                mechanical_6?.withNeutral) ||
+                              (versionActive === 1 && mechanical_6?.nonNeutral)
+                                ? false
+                                : true
+                            }
+                          >
+                            Nóng lạnh
+                          </button>
+                        )}
                       </Row>
                     </Col>
-                  )}
-                </Row>
+                  }
+                </div>
               )}
             </article>
-            <section className="group-shopping-wrap">
-              <hr />
-              <div className="group-shopping">
-                {" "}
-                <ButtonShop content={"Shop Now"} />
-                <div className="heart-animation">
-                  <IconHeart />
-                </div>
-              </div>
-            </section>
+            <div className="btn-group">
+              <button
+                className="btn-contact-form"
+                onClick={() => setModalShow(true)}
+              >
+                <span>TƯ VẤN NGAY</span>
+              </button>
+            </div>
+            <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
           </section>
         )}
       </>
@@ -335,10 +442,10 @@ const IndexPage = ({ pageContext }) => {
     return (
       <section className="container-wrap product-header-page">
         <Row className="header-page-wrap">
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={12}>
             {buildThumbsProduct}
           </Col>
-          <Col xs={12} lg={6}>
+          <Col xs={12} lg={6} md={12}>
             <BuildProductInfos />
           </Col>
         </Row>
@@ -348,7 +455,7 @@ const IndexPage = ({ pageContext }) => {
   const location = useLocation();
   const { href } = location;
   return (
-    <LayoutSmartHome>
+    <LayoutSmartLighting>
       <Seo
         title={dataCurrent?.frontmatter?.title}
         description={dataCurrent?.frontmatter?.details
@@ -365,7 +472,7 @@ const IndexPage = ({ pageContext }) => {
       {dataProductFeature && (
         <SectionFeatureProduct dataProductHot={dataProductFeature} />
       )}
-    </LayoutSmartHome>
+    </LayoutSmartLighting>
   );
 };
 
