@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import imgUnderLine from "../../../images/home-page-v3/svg/title-line-under.svg";
 import imgCustomerCentric from "../../../images/about-us-v3/png/img-customer-centric.png";
 import imgService from "../../../images/about-us-v3/svg/icon-service-customer-centric.svg";
@@ -45,7 +45,7 @@ function SectionCustomerCentric() {
           <span className="title-eng-line-center">CUSTOMER CENTRIC</span>
           <h2 className="title-line-center">Lấy khách hàng làm trung tâm</h2>
           <div className="img-line-center d-flex justify-content-center">
-            <img className="underline-img" src={imgUnderLine} />
+            <img className="underline-img" src={imgUnderLine} alt="" />
           </div>
         </Row>
         <Row md={2} xs={1} className="customer-centric-row">
@@ -53,7 +53,7 @@ function SectionCustomerCentric() {
             {listCertification.map((item) => (
               <div className="customer-centric-card" key={item.id}>
                 <div className="customer-centric-icon">
-                  <img src={item.linkImg} />
+                  <img src={item.linkImg} alt="" />
                 </div>
                 <div className="customer-centric-content">
                   <h4 className="customer-centric-title">{item.title}</h4>
@@ -65,7 +65,11 @@ function SectionCustomerCentric() {
             ))}
           </Col>
           <Col>
-            <img src={imgCustomerCentric} className="img-customer-centric" />
+            <img
+              src={imgCustomerCentric}
+              className="img-customer-centric"
+              alt=""
+            />
           </Col>
         </Row>
       </div>

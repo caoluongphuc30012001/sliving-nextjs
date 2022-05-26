@@ -2,16 +2,12 @@ import React, { useEffect, useState, useMemo } from "react";
 
 import "@i18n/i18n";
 
-import LayoutSmartHome from "@components/layout-smart-home";
-import ButtonShop from "@components/button/button-shop";
 import SectionFeatureProduct from "@components/section/section-feature-product";
-import IconHeart from "@components/svg/heart";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import DataProductNew from "@query/product-hot";
 
 import { Row, Col } from "react-bootstrap";
-import star from "@images/product-v2/star.png";
 
 import BuildThumbs from "./thumb";
 
@@ -66,7 +62,7 @@ const IndexPage = ({ pageContext }) => {
   const [mechanical_4, setMechanical_4] = useState();
   const [mechanical_5, setMechanical_5] = useState();
   const [mechanical_6, setMechanical_6] = useState();
-  const [mechanicalActive, setMechanicalActive] = useState();
+  // const [mechanicalActive, setMechanicalActive] = useState();
 
   const getDataMechanical = (dataSwitch) => {
     var dataNew = [];

@@ -146,6 +146,9 @@ const IconActive = ({ item, isActive, setActive, id }) => {
   return (
     <div
       onClick={() => setActive(id)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={() => {}}
       className={isActive ? "icon-active" : "icon-active deactive"}
     >
       {isActive && (
@@ -198,7 +201,13 @@ const SolutionItem = ({ item, setModalShow }) => {
           })}
         </div>
       </div>
-      <div onClick={() => setModalShow(true)} className="solution-button">
+      <div
+        role="button"
+        tabIndex={0}
+        onKeyDown={() => {}}
+        onClick={() => setModalShow(true)}
+        className="solution-button"
+      >
         <p className="button-text">Tư vấn ngay</p>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import styled from "styled-components";
 
 // import iconVision from "@images/about-us-v3/svg/icon-vision.svg";

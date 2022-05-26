@@ -1,7 +1,7 @@
 import React from "react";
 
 import ButtonRounded from "@components/button/button-card-rounded";
-import FooterV2 from "./footer/footer-home-page";
+// import FooterV2 from "./footer/footer-home-page";
 import NavbarLighting from "@components/menu/index";
 import logo from "../images/smart-home-v3/png/logo.png";
 import Footer from "./footer/footer-v3/footer-v3";

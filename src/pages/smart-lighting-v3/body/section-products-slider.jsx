@@ -13,15 +13,6 @@ import product8 from "../../../images/smart-lighting-v3/png/product8.png";
 import product9 from "../../../images/smart-lighting-v3/png/product9.png";
 import product10 from "../../../images/smart-lighting-v3/png/product10.png";
 
-// import switchItemTelephone from "@images/smart-home-v3/png/telephone-switch.png";
-import switchItemTelephone from "../../../images/smart-home-v3/png/telephone-switch.png";
-
-// import appStoreItem from "@images/smart-home-v3/png/download-app-store.png";
-import appStoreItem from "../../../images/smart-home-v3/png/download-app-store.png";
-
-// import ggPlayItem from "@images/smart-home-v3/png/download-gg-play.png";
-import ggPlayItem from "../../../images/smart-home-v3/png/download-gg-play.png";
-
 const listSlide = [
   {
     id: 0,
