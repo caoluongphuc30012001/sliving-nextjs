@@ -42,7 +42,7 @@
             }
         }
         .smart-parking-header{
-            width: clamp( 420px, 100%, 1180px);
+            width: clamp( 375px, 100%, 1180px);
             padding: 40px 20px;
             .smart-parking-content{
                 width: 100%;
@@ -63,7 +63,6 @@
                         font-style: normal;
                         font-weight: 800;
                         font-size: clamp( 32px, 4vw, 62px);
-                        line-height: 72px;
                         letter-spacing: 1px;
                         color: #FFFFFF;
                     }
@@ -787,6 +786,9 @@
 @media(max-width:900px){
     .section-smart-parking-v3-header{
         .smart-parking-v3-header{
+            .smart-parking-header{
+                height: 100%;
+            }
             background-image: linear-gradient(180deg, #32D7D4 0%, rgba(8, 156, 234, 0.65) 55.41%, rgba(8, 156, 234, 0.1) 85.6%, rgba(255, 255, 255, 0) 100%);
             .back-ground{   
                 .back-ground__img{
@@ -801,7 +803,7 @@
             .smart-parking-header{
                 .smart-parking-content{
                     flex-direction: column;
-                    gap: 32px;
+                    gap: clamp(16px, 4.27vw, 32px);;
                     .content-left{
                         display: flex;
                         flex-direction: column;
@@ -865,7 +867,6 @@
         flex-direction: column;
         align-items: center;
         gap: 43px;
-  
         .left-content {
           align-items: center;
           height: 100%;
@@ -874,7 +875,6 @@
             .web-content-desc {
               display: none;
             }
-  
             .mobile-content-desc {
               display: flex;
             }
