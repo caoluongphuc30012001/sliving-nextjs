@@ -1,26 +1,18 @@
 import React, { useEffect, useState, useMemo } from "react";
-
+import { Row, Col } from "react-bootstrap";
+import { useLocation } from "@reach/router";
 import "@i18n/i18n";
+import i18next from "i18next";
 
-import LayoutSmartHome from "@components/layout-smart-home";
-import ButtonShop from "@components/button/button-shop";
 import SectionFeatureProduct from "@components/section/section-feature-product";
-import IconHeart from "@components/svg/heart";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import DataProductNew from "@query/product-hot";
 
-import { Row, Col } from "react-bootstrap";
-import star from "@images/product-v2/star.png";
-
 import BuildThumbs from "./thumb";
 
-import i18next from "i18next";
-
-import { useLocation } from "@reach/router";
-
 import Seo from "@components/seo";
-import LayoutSmartLighting from "../../components/layout-smart-lighting-v3";
+import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
 
 const handelFilter = (dataCurrent) => {
   if (
@@ -204,7 +196,6 @@ const IndexPage = ({ pageContext }) => {
       setDataCurrent(dataNew);
     }
   };
-
   const BuildProductInfos = () => {
     return (
       <>
@@ -223,56 +214,57 @@ const IndexPage = ({ pageContext }) => {
                   : ""}
               </p>
               <div className="divider" />
-              {!dataCurrent?.frontmatter?.isLedDriver && (
-                <Col xs={12} md={12}>
-                  <Row className="version">
-                    <span>Phiên bản</span>
-                  </Row>
-                  <Row className="group-btn-version group-2-btn">
-                    <button
-                      className={`btn-version ${
-                        versionActive === 0 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(0)}
-                    >
-                      <span>
-                        {dataCurrent?.frontmatter?.version === 1
-                          ? "Gateway"
-                          : dataCurrent?.frontmatter?.isSensorLight
-                          ? "Cảm biến ánh sáng"
-                          : "Công tắc vuông"}
-                      </span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 1 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(1)}
-                      disabled={
-                        dataCurrent?.frontmatter?.type.indexOf(
-                          "Smart Touch Group"
-                        ) > -1
-                          ? true
-                          : false
-                      }
-                    >
-                      <span>
-                        {dataCurrent?.frontmatter?.version === 1
-                          ? "Gateway Plug"
-                          : dataCurrent?.frontmatter?.isSensorLight
-                          ? "Cảm biến chuyển động"
-                          : "Công tắc chữ nhật"}
-                      </span>
-                    </button>
-                  </Row>
-                </Col>
-              )}
+              {!dataCurrent?.frontmatter?.isLedDriver &&
+                data[0]?.nodes?.length > 1 && (
+                  <Col xs={12} md={12}>
+                    <Row className="version">
+                      <span>Phiên bản</span>
+                    </Row>
+                    <Row className="group-btn-version group-2-btn">
+                      <button
+                        className={`btn-version ${
+                          versionActive === 0 ? "is-active-btn" : null
+                        }`}
+                        onClick={() => handleSetTypeProduct(0)}
+                      >
+                        <span>
+                          {dataCurrent?.frontmatter?.version === 1
+                            ? "Gateway"
+                            : dataCurrent?.frontmatter?.isSensorLight
+                            ? "Cảm biến ánh sáng"
+                            : "Công tắc vuông"}
+                        </span>
+                      </button>
+                      <button
+                        className={`btn-version ${
+                          versionActive === 1 ? "is-active-btn" : null
+                        }`}
+                        onClick={() => handleSetTypeProduct(1)}
+                        disabled={
+                          dataCurrent?.frontmatter?.type.indexOf(
+                            "Smart Touch Group"
+                          ) > -1
+                            ? true
+                            : false
+                        }
+                      >
+                        <span>
+                          {dataCurrent?.frontmatter?.version === 1
+                            ? "Gateway Plug"
+                            : dataCurrent?.frontmatter?.isSensorLight
+                            ? "Cảm biến chuyển động"
+                            : "Công tắc chữ nhật"}
+                        </span>
+                      </button>
+                    </Row>
+                  </Col>
+                )}
               {dataCurrent?.frontmatter?.isLedDriver && (
                 <Col xs={12} md={12}>
                   <Row className="version">
                     <span>Phiên bản</span>
                   </Row>
-                  <Row className="group-btn-version group-2-btn">
+                  <Row className="group-btn-version group-3-btn">
                     <button
                       className={`btn-version ${
                         versionActive === 0 ? "is-active-btn" : null
@@ -308,7 +300,7 @@ const IndexPage = ({ pageContext }) => {
                         className={`group-btn-version ${
                           dataCurrent?.frontmatter?.mechanical_6
                             ? "group-6-btn"
-                            : ""
+                            : "group-3-btn"
                         }`}
                       >
                         {dataCurrent?.frontmatter?.mechanical_1 && (
@@ -457,11 +449,11 @@ const IndexPage = ({ pageContext }) => {
   return (
     <LayoutSmartLighting>
       <Seo
-        title={dataCurrent?.frontmatter?.title}
-        description={dataCurrent?.frontmatter?.details
+        title={data[0]?.nodes[0].frontmatter?.title}
+        description={data[0]?.nodes[0].frontmatter?.details
           ?.toString()
           .slice(0, 120)}
-        metaImage={dataCurrent?.frontmatter?.imgSrcProduct?.publicURL}
+        metaImage={data[0]?.nodes[0].frontmatter?.imgSrcProduct?.publicURL}
         url={href}
       />
 

@@ -61,6 +61,7 @@
     "sass": "^1.45.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
-    "swiper": "^7.3.4"
+    "swiper": "^7.3.4",
+    "webpack-filter-warnings-plugin": "^1.2.1"
   }
 }
