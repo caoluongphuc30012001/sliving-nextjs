@@ -24,13 +24,13 @@ const SectionHeader = () => {
           </div>
         </div>
       </div>
-      <img src={background1} className="header-background" />
-      <img src={background2} className="header-background" />
-      <img src={background3} className="header-background" />
+      <img src={background1} className="header-background" alt="" />
+      <img src={background2} className="header-background" alt="" />
+      <img src={background3} className="header-background" alt="" />
 
-      <img src={background1_1} className="header-background mobile" />
-      <img src={background2_1} className="header-background mobile" />
-      <img src={background3_1} className="header-background mobile" />
+      <img src={background1_1} className="header-background mobile" alt="" />
+      <img src={background2_1} className="header-background mobile" alt="" />
+      <img src={background3_1} className="header-background mobile" alt="" />
     </header>
   );
 };

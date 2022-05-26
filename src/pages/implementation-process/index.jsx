@@ -9,12 +9,17 @@ import iconQuestion from "@images/icon/icon-question-process.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import "./style.scss";
+import Seo from "../../components/seo";
 
 const ImplementationProcess = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <LayoutV3>
+      <Seo
+        title="Quy Trình Triển Khai Gói Giải Pháp"
+        description="Quy Trình Triển Khai Gói Giải Pháp | Sliving"
+      />
       <main>
         <section className="section-process">
           <Container

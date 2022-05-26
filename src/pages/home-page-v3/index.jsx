@@ -16,7 +16,11 @@ import LayoutV3 from "../../components/layout-v3";
 const IndexPage = () => {
   return (
     <LayoutV3>
-      <Seo title="Sliving" description="Sliving" url="https://sliving.vn" />
+      <Seo
+        title="Sliving - Giải Pháp Nhà Thông Minh"
+        description="Sliving cung cấp giải pháp nhà thông minh với thuật toán AI để thực hiện giám sát từ xa an toàn và an ninh."
+        url="https://sliving.vn"
+      />
       <SectionHeader />
       <main id="main_page">
         <SectionSolution />

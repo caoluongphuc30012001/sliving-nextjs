@@ -8,10 +8,6 @@ import favicon from "@images/logo/logo-small.svg";
 
 import i18next from "i18next";
 function Seo({ url, description, title }) {
-  console.log("url", url);
-  console.log("description", description);
-  console.log("title", title);
-
   const { site } = useStaticQuery(
     graphql`
       query {

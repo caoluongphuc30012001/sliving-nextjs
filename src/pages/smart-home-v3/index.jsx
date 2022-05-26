@@ -9,6 +9,7 @@ import SectionProductMain from "../../components/product/section-product-main";
 const SmartHomePage = () => {
   return (
     <LayoutSmartHome>
+      <Seo title={"Smart Home"} />
       <main id="smart_home_page">
         <SectionProductsSlider />
         <SectionPopularProductSliving />

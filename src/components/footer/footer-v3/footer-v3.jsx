@@ -1,5 +1,5 @@
-import React, { useMemo, useEffect } from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import AddressAndMap from "./AddressAndMap";
 // import useWindowSize from "@src/hook/useWindowSize";
 import logoSliving from "@images/footer-v3/png/logo-sliving.png";
@@ -90,11 +90,11 @@ function Footer() {
   //   const { t } = useTranslation();
 
   const listAbout = [
-    { id: 0, title: "Giới thiệu", url: "/about-us-v3" },
+    { id: 0, title: "Giới thiệu", url: "/about-us" },
     { id: 1, title: "Giải pháp", url: "/coming-soon" },
     { id: 2, title: "Bản tin", url: "https://unicloud.com.vn/news" },
     // { id: 3, title: "Tuyển dụng", url: "https://career.unicloud.com.vn/" },
-    { id: 3, title: "Liên hệ", url: "/contact-us-v3" },
+    { id: 3, title: "Liên hệ", url: "/contact-us/" },
   ];
 
   const listHref = [

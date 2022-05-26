@@ -76,6 +76,7 @@ function BuildApps() {
       <a
         href="https://apps.apple.com/us/app/sliving/id1621276530"
         target="_blank"
+        rel="noreferrer"
       >
         <img className="my-3" src={iconApple} alt="" />
       </a>

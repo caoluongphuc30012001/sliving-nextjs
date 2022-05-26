@@ -1,14 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useMemo } from "react";
 import { Col, Row, Container } from "react-bootstrap";
-import { LatLngExpression, Map } from "leaflet";
-import { useTranslation } from "react-i18next";
 
 import SectionMap from "./map";
 
-import iconBgPin from "/assets/image/svg/icon-bg-pin.svg";
-import iconBgEmail from "/assets/image/svg/icon-bg-mail.svg";
-import iconBgPhone from "/assets/image/svg/icon-bg-phone.svg";
-import { useMemo } from "react";
+import iconBgPin from "@images/icon/icon-bg-pin.svg";
+import iconBgEmail from "@images/icon/icon-bg-mail.svg";
+import iconBgPhone from "@images/icon/icon-bg-phone.svg";
+
 const isBrowser = typeof window !== "undefined";
 
 const listContact = [
@@ -45,14 +43,13 @@ const listContact = [
   },
 ];
 export default function AddressAndMap() {
-  const { t } = useTranslation();
-  const [position, setPosition] = useState<LatLngExpression>();
-  const [map, setMap] = useState<Map>();
+  const [position, setPosition] = useState(listContact[0].position);
+  const [map, setMap] = useState();
 
   const MAP_ZOOM = 15;
 
   const onSelectContact = useCallback(
-    (contact: typeof listContact[0]) => {
+    (contact) => {
       if (contact.position && map) {
         setPosition(contact.position);
         map.setView(contact.position, map.getZoom());
@@ -62,9 +59,9 @@ export default function AddressAndMap() {
   );
 
   const onMapCreated = useCallback(
-    (_map: Map) => {
+    (_map) => {
       setMap(_map);
-      _map.setView(listContact[0].position!, MAP_ZOOM);
+      _map.setView(listContact[0].position, MAP_ZOOM);
     },
     [map]
   );
@@ -72,12 +69,11 @@ export default function AddressAndMap() {
     if (isBrowser)
       return <SectionMap position={position} whenCreated={onMapCreated} />;
     else return [];
-  }, [isBrowser]);
+  }, [isBrowser, position]);
   return (
     <Container className="map-detail container-child">
       <Row className="g-lg-5 g-sm-3">
         <Col sm={12} lg={6}>
-          {/* <SectionMap position={position} whenCreated={onMapCreated} /> */}
           {checkBrowser}
         </Col>
         <Col sm={12} lg={6}>

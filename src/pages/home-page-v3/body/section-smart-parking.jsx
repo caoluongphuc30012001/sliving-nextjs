@@ -63,8 +63,8 @@ function SectionSmartParking() {
         </Row>
 
         <Row lg={4} md={4} xs={1} className="smart-parking-cards">
-          {listItemCard.map((itemCard) => (
-            <Col className="gx-5 smart-parking-card-col">
+          {listItemCard.map((itemCard, index) => (
+            <Col className="gx-5 smart-parking-card-col" key={index.toString()}>
               <div className="smart-parking-card">
                 <div className="smart-parking-card-top">
                   <Image
