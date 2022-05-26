@@ -442,6 +442,11 @@ img {
     float: right;
     margin-right: 5%;
     transition: 0.4s;
+    .icon-hover {
+      right: -60px;
+      bottom: -1px;
+      z-index: 5;
+    }
   }
   .smart-factory-layout-6 {
     opacity: 0;
@@ -809,7 +814,8 @@ img {
     }
     .factory-second-bottom-content {
       margin-top: 32px !important;
-      .content-wrap {
+      .content-wrap,
+      .icon-hover {
         display: none;
       }
       .mobile-content {

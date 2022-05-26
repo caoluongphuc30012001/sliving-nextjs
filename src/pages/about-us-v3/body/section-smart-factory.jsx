@@ -10,39 +10,25 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, EffectCoverflow } from "swiper";
 import "swiper/css/bundle";
-
 import "swiper/css";
-import imgSmartFactory from "../../../images/about-us-v3/png/smart-factory.png";
-
-import iconLicense from "../../../images/about-us-v3/svg/icon-license.svg";
-import iconPCCC from "../../../images/about-us-v3/svg/icon-pccc.svg";
-import iconSmartFactory from "../../../images/about-us-v3/svg/icon-smart-factory.svg";
-
-import slideSmartFactory1 from "../../../images/about-us-v3/png/1.png";
-
-import slideSmartFactory2 from "../../../images/about-us-v3/png/2.png";
-
-import slideSmartFactory3 from "../../../images/about-us-v3/png/3.png";
-
-import slideSmartFactory4 from "../../../images/about-us-v3/png/4.png";
-
-import slideSmartFactory5 from "../../../images/about-us-v3/png/5.png";
-
-import layoutSmartFactory1 from "../../../images/about-us-v3/png/layout1.png";
-
-import layoutSmartFactory2 from "../../../images/about-us-v3/png/layout2.png";
-
-import layoutSmartFactory3 from "../../../images/about-us-v3/png/layout3.png";
-
-import layoutSmartFactory4 from "../../../images/about-us-v3/png/layout4.png";
-
-import layoutSmartFactory5 from "../../../images/about-us-v3/png/layout5.png";
-
-import layoutSmartFactory6 from "../../../images/about-us-v3/png/layout6.png";
-
-import layoutSmartFactory7 from "../../../images/about-us-v3/png/layout7.png";
-
-import smart_factory_image from "../../../images/about-us-v3/png/img-smart-factory.png";
+import imgSmartFactory from "@images/about-us-v3/png/smart-factory.png";
+import iconLicense from "@images/about-us-v3/svg/icon-license.svg";
+import iconHover from "@images/about-us-v3/svg/icon-hover.svg";
+import iconPCCC from "@images/about-us-v3/svg/icon-pccc.svg";
+import iconSmartFactory from "@images/about-us-v3/svg/icon-smart-factory.svg";
+import slideSmartFactory1 from "@images/about-us-v3/png/1.png";
+import slideSmartFactory2 from "@images/about-us-v3/png/2.png";
+import slideSmartFactory3 from "@images/about-us-v3/png/3.png";
+import slideSmartFactory4 from "@images/about-us-v3/png/4.png";
+import slideSmartFactory5 from "@images/about-us-v3/png/5.png";
+import layoutSmartFactory1 from "@images/about-us-v3/png/layout1.png";
+import layoutSmartFactory2 from "@images/about-us-v3/png/layout2.png";
+import layoutSmartFactory3 from "@images/about-us-v3/png/layout3.png";
+import layoutSmartFactory4 from "@images/about-us-v3/png/layout4.png";
+import layoutSmartFactory5 from "@images/about-us-v3/png/layout5.png";
+import layoutSmartFactory6 from "@images/about-us-v3/png/layout6.png";
+import layoutSmartFactory7 from "@images/about-us-v3/png/layout7.png";
+import smart_factory_image from "@images/about-us-v3/png/img-smart-factory.png";
 import { Image, Row, Col } from "react-bootstrap";
 
 export const Divider = styled("div")`
@@ -160,7 +146,7 @@ const SectionSmartFactory = () => {
         </Row>
 
         <div className="factory-second-bottom-content">
-          <div className="content-wrap">
+          <div className="content-wrap p-relative">
             <div className="factory-second-bottom-left-content">
               <div className="factory-second-produce-content">
                 <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
@@ -210,6 +196,7 @@ const SectionSmartFactory = () => {
                 className="smart-factory-img smart-factory-layout-7"
               ></img>
             </div>
+            <img src={iconHover} alt="" className="icon-hover p-absolute" />
           </div>
           <div className="mobile-content d-none">
             <div className="factory-second-produce-content">
