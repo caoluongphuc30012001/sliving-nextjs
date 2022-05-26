@@ -115,7 +115,7 @@
           font-family: "SVN Gilroy";
           font-style: normal;
           font-weight: 700;
-          font-size: 28px;
+          font-size: clamp(21px, 5.6vw, 28px);
           line-height: 32px;
           color: #0979fd;
         }
@@ -254,7 +254,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 28px;
+                font-size: clamp(21px, 5.6vw, 28px);
                 line-height: 32px;
                 color: #0979FD;
             }
@@ -473,7 +473,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: clamp(22px, 1.46vw, 28px);
+                font-size: clamp(21px, 1.46vw, 28px);
                 text-align: center;
                 color: #0979FD;
             }
@@ -545,7 +545,7 @@
                             font-family: 'SVN Gilroy';
                             font-style: normal;
                             font-weight: 700;
-                            font-size: 28px;
+                            font-size: clamp(21px, 5.6vw, 28px);
                             line-height: 32px;
                             display: flex;
                             align-items: center;
@@ -593,7 +593,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: clamp(22px, 1.46vw, 28px);
+                font-size: clamp(21px, 1.46vw, 28px);
                 text-align: center;
                 color: #0979FD;
             }
@@ -615,7 +615,7 @@
                         font-family: 'SVN Gilroy';
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 28px;
+                        font-size: clamp(21px, 5.6vw, 28px);
                         display: flex;
                         align-items: center;
                         color: #2C2D2E;
@@ -1173,6 +1173,7 @@
                                     }
                                     .appNmap-right-text{
                                         align-items: center;
+                                        text-align: center;
                                     }
                                 }
                             }
