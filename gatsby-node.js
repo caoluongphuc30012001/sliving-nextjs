@@ -1,6 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
-const { QueryDataProductV3 } = require("./src/query/product-group-v3");
+const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -31,15 +31,8 @@ function checkDetectPage(page, namePage) {
 exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
   if (
-    checkDetectPage(page, "/main-page-v2") === true ||
     checkDetectPage(page, "/product-detail-v2") === true ||
-    checkDetectPage(page, "/support-page-v2") === true ||
-    checkDetectPage(page, "/product-page-v2") === true ||
-    checkDetectPage(page, "/smart-home-page-v2") === true ||
-    checkDetectPage(page, "/smart-light-v2") === true ||
-    checkDetectPage(page, "/contact-page-v2") === true ||
     checkDetectPage(page, "/policy") === true ||
-    checkDetectPage(page, "/support-page-v2") === true ||
     checkDetectPage(page, "/about-us-v3") === true ||
     checkDetectPage(page, "/business-step1-v3") === true ||
     checkDetectPage(page, "/business-step2-v3") === true ||
@@ -54,10 +47,6 @@ exports.onCreatePage = ({ page, actions }) => {
     deletePage(page);
   }
 };
-async function getLng() {
-  const lngValue = ["en", "vn"];
-  return lngValue;
-}
 
 exports.createPages = async function ({ actions, graphql }) {
   const { createPage } = actions;
@@ -250,7 +239,6 @@ exports.createPages = async function ({ actions, graphql }) {
   const productDetailComponent = require.resolve(
     "./src/pages/product-detail-v2/index.js"
   );
-  const homePage = require.resolve("./src/pages/index.js");
   const policy = require.resolve("./src/pages/policy/index.jsx");
   const aboutUS = require.resolve("./src/pages/about-us-v3/index.jsx");
   const business1 = require.resolve("./src/pages/business-step1-v3/index.jsx");
@@ -268,25 +256,16 @@ exports.createPages = async function ({ actions, graphql }) {
   const smartParking = require.resolve(
     "./src/pages/smart-parking-v3/index.jsx"
   );
-  const arrLng = await getLng();
-  arrLng.map((lng) => {
-    createPage({
-      path: `/${lng}/`,
-      component: homePage,
-      defer: true,
-    });
-  });
+
   createPage({
     path: `/policy/`,
     component: policy,
-    defer: true,
   });
   createPage({
     path: `/product-detail/`,
     component: productDetailComponent,
     context: {
       data: productPage,
-      defer: true,
     },
   });
   productPage["data"].ProductGroups.group.forEach(async (prod) => {
@@ -302,34 +281,28 @@ exports.createPages = async function ({ actions, graphql }) {
   createPage({
     path: `/about-us/`,
     component: aboutUS,
-    defer: true,
   });
   createPage({
     path: `/business-step1/`,
     component: business1,
-    defer: true,
   });
 
   createPage({
     path: `/business-step2/`,
     component: business2,
-    defer: true,
   });
 
   createPage({
     path: `/business-step3/`,
     component: business3,
-    defer: true,
   });
   createPage({
     path: `/contact-us/`,
     component: contact,
-    defer: true,
   });
   createPage({
     path: `/news/`,
     component: news,
-    defer: true,
   });
   createPage({
     path: `/smart-home/`,
@@ -369,5 +342,11 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         util: false,
       },
     },
+    plugins: [
+      new FilterWarningsPlugin({
+        exclude:
+          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
+      }),
+    ],
   });
 };

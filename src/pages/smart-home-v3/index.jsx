@@ -6,6 +6,8 @@ import LayoutSmartHome from "../../components/layout-smart-home-v3";
 import Seo from "@components/seo";
 import SectionProductsSlider from "./body/section-products-slider";
 import SectionProductMain from "../../components/product/section-product-main";
+import "./style.scss";
+
 const SmartHomePage = () => {
   return (
     <LayoutSmartHome>
