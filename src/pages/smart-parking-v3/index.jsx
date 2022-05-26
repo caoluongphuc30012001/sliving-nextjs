@@ -1,7 +1,4 @@
 import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-import "./style.scss";
-
 import SectionHeader from "./body/section-header";
 import SectionDefinition from "./body/section-definition";
 import SectionParkingSolution from "./body/section-parking-solution";
@@ -9,6 +6,7 @@ import SectionParkingSystem from "./body/section-parking-system";
 import LayoutSmartParking from "@components/layout-smart-parking-v3";
 import SectionHelpMore from "@components/help-more/section-help-more";
 import Seo from "@components/seo";
+import "./style.scss";
 
 const SmartParking = () => {
   return (

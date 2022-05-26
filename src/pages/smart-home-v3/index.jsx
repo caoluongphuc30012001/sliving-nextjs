@@ -11,7 +11,13 @@ import "./style.scss";
 const SmartHomePage = () => {
   return (
     <LayoutSmartHome>
-      <Seo title={"Smart Home"} />
+      <Seo
+        title={"Smart Home"}
+        description="Nâng cao chất lượng cuộc sống với giải pháp Sliving Smart Home, 
+        điều khiển thiết bị từ xa, giám sát an ninh hiệu quả."
+        url="/smart-home/"
+        metaImage="/thumbnail.png"
+      />
       <main id="smart_home_page">
         <SectionProductsSlider />
         <SectionPopularProductSliving />

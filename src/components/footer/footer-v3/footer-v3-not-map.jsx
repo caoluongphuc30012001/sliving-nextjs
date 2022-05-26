@@ -1,7 +1,5 @@
-import React, { useMemo, useEffect } from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
-import AddressAndMap from "./AddressAndMap";
-// import useWindowSize from "@src/hook/useWindowSize";
+import React, { useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import logoSliving from "@images/footer-v3/png/logo-sliving.png";
 import iconFb from "@images/footer-v3/svg/icon-fb.svg";
 import iconYtn from "@images/footer-v3/svg/icon-youtube.svg";
@@ -9,8 +7,6 @@ import iconPhone from "@images/footer-v3/svg/icon-phone.svg";
 import iconEmail from "@images/footer-v3/svg/icon-email.svg";
 import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
-import iconUpTop from "@images/footer-v3/svg/icon-up-top-main.svg";
-
 import "./footer.scss";
 
 const BuildLogo = () => (
@@ -39,7 +35,6 @@ function BuildInformation() {
         {/* </a> */}
         {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
         <img src={iconEmail} alt="email" />
-        {/* </a> */}
       </div>
     </div>
   );
@@ -69,7 +64,6 @@ function BuildAboutUs(props) {
 }
 
 function BuildApps() {
-  //   const { t } = useTranslation();
   return (
     <div className="footer-apps">
       <h4 className="text-white fw-bold fs-4">Kho ứng dụng</h4>
@@ -81,43 +75,23 @@ function BuildApps() {
         <img className="my-3" src={iconApple} alt="" />
       </a>
       <img className="my-3" src={iconChPlay} alt="" />
-      {/* <img src={qrCode} alt="" /> */}
     </div>
   );
 }
-const scrollTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-function Footer() {
-  //   const { t } = useTranslation();
 
+function Footer() {
   const listAbout = [
-    { id: 0, title: "Giới thiệu", url: "/home-page-v3" },
-    { id: 1, title: "Hệ sinh thái", url: "/home-page-v3" },
-    { id: 2, title: "Bản tin công nghệ", url: "/home-page-v3" },
-    { id: 3, title: "Tuyển dụng", url: "/home-page-v3" },
-    { id: 4, title: "Liên hệ", url: "/home-page-v3" },
+    { id: 0, title: "Giới thiệu", url: "/about-us" },
+    { id: 1, title: "Giải pháp", url: "/coming-soon" },
+    { id: 2, title: "Bản tin", url: "https://unicloud.com.vn/news" },
+    { id: 3, title: "Liên hệ", url: "/contact-us/" },
   ];
 
   const listHref = [
-    { id: 0, title: "Điều khoản sử dụng", url: "/home-page-v3" },
-    { id: 1, title: "Điều khoản sử dụng", url: "/home-page-v3" },
-    { id: 2, title: "Cam kết bảo mật", url: "/home-page-v3" },
-    { id: 3, title: "Chính sách bảo vệ dữ liệu", url: "/home-page-v3" },
-    { id: 4, title: "Báo cáo rủi ro & vi phạm", url: "/home-page-v3" },
-    // { id: 1, title: t('footer.link.privacy'), url: '#' },
-    // { id: 2, title: t('footer.link.nda'), url: '#' },
-    // { id: 3, title: t('footer.link.personalPolicy'), url: '#' },
-    // { id: 4, title: t('footer.link.report'), url: '#' },
+    { id: 0, title: "Điều khoản sử dụng", url: "/policy" },
+    { id: 1, title: "Chính sách bảo hành", url: "/coming-soon" },
+    { id: 2, title: "Chính sách bán hàng", url: "/coming-soon" },
   ];
-
-  //   const size = useWindowSize();
-  //   const isMobile = useMemo(() => {
-  //     if (size.width && size.width >= 992) {
-  //       return false;
-  //     }
-  //     return true;
-  //   }, [size.width]);
 
   useEffect(() => {
     const funcScroll = () => {

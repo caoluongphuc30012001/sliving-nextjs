@@ -9,7 +9,13 @@ import Seo from "../../components/seo";
 const IndexPage = () => {
   return (
     <LayoutV3>
-      <Seo title="Sliving - Giải pháp dành cho doanh nghiệp " />
+      <Seo
+        title="Sliving - Giải pháp dành cho doanh nghiệp"
+        description="Cung cấp các giải pháp chiếu sáng, điều khiển thông minh, giải pháp an ninh cho tòa nhà, 
+        căn hộ, văn phòng, trung tâm thương mại... với đa dạng lựa chọn và chi phí hợp lý nhất."
+        url="/business-step1/"
+        metaImage="/thumbnail.png"
+      />
       <main id="business-step1-v3">
         <SectionHeader />
         <BusinessStep1 />
