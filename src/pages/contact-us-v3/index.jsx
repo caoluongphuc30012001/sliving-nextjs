@@ -12,7 +12,7 @@ function ContactPage() {
   return (
     <LayoutV3>
       <Seo title="Sliving" description="Sliving" url="https://sliving.vn" />
-      <main id="contact-page-v3" style={{ marginTop: "90px" }}>
+      <main id="contact-page-v3">
         <Row>
           <Col md={12}>
             <SectionQuickSupport />

@@ -17,7 +17,9 @@ function LayoutV3({ children }) {
       active:
         !url.includes("about-us") &&
         !url.includes("implementation-process") &&
-        !url.includes("news"),
+        !url.includes("business-step1") &&
+        !url.includes("news") &&
+        !url.includes("contact-us"),
     },
     {
       id: 1,
@@ -56,6 +58,7 @@ function LayoutV3({ children }) {
       id: 3,
       nameRoute: "GÓI GIẢI PHÁP",
       href: "/business-step1",
+      active: url.includes("business-step1"),
     },
 
     {
@@ -69,6 +72,12 @@ function LayoutV3({ children }) {
       nameRoute: "QUY TRÌNH",
       href: "/implementation-process",
       active: url.includes("implementation-process"),
+    },
+    {
+      id: 6,
+      nameRoute: "LIÊN HỆ",
+      href: "/contact-us",
+      active: url.includes("contact-us"),
     },
   ];
   return (

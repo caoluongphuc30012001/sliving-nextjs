@@ -73,9 +73,9 @@ const ImplementationProcess = () => {
                 <p className="detail-process-sliving">
                   Hai bên thoả thuận và tiến hành ký kết hợp đồng sau khi đã
                   chốt phương án cuối cùng. Khách hàng sẽ cọc một khoản chi phí
-                  hợp lý để giúp đội ngũ Sliving triển khai bản vẽ chi tiết,
-                  điều phối kỹ thuật và tiến hành phương án thi công thuận lợi,
-                  nhanh chóng hơn.
+                  và đội ngũ Sliving sẽ tiến hành triển khai bản vẽ chi tiết,
+                  điều phối kỹ thuật và tiến hành phương án thi công nhanh
+                  chóng.
                 </p>
               </Col>
               <Col md={6}>
