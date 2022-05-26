@@ -222,9 +222,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   .btn-version {
+    width: 100% !important;
     max-width: 100%;
     &:nth-child(1) {
       border-right: 1px;
+    }
+  }
+}
+.group-3-btn.group-btn-version {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .btn-version {
+    width: 100% !important;
+    max-width: 100%;
+    &:nth-child(2) {
+      border-right: 1px;
+      border-left: 1px;
     }
   }
 }
@@ -234,6 +247,8 @@
   column-gap: 0px;
   row-gap: 0px;
   .btn-version {
+    width: 100% !important;
+    max-width: 100%;
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
