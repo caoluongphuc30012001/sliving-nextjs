@@ -33,7 +33,6 @@ test:
     - echo "$CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
     - npm install
     - npm run build --prefix-paths
-    - npm run deploy
   only:
     - merge_requests
   except:
@@ -46,12 +45,12 @@ test:
 build-and-deploy-beta:
   stage: build-and-deploy
   script:
-    # - export AWS_S3_BUCKET=$AWS_S3_BUCKET_BETA
+    - export AWS_S3_BUCKET=$AWS_S3_BUCKET_BETA
     - npm install
     - npm run build
     - npm run deploy
   only:
-    - develop-v2
+    - develop
   tags:
     - hcm-share-docker-runner-1
 
