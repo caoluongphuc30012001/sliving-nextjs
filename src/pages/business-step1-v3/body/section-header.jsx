@@ -8,8 +8,6 @@ import bgBuildingMobile from "../../../images/business-step1-v3/png/building-mob
 function SectionHeader() {
   return (
     <header className="section-business-header-v3 ">
-      <img src={bgCloud} alt="" />
-      <img src={bgLinear} alt="" />
       <img src={bgBuilding} alt="" className="img-building" />
       <img
         src={bgBuildingMobile}
