@@ -15,6 +15,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    .container-header {
+      max-width: 440px;
+    }
     .business-header-title {
       font-weight: 800;
       font-size: 62px;
@@ -46,6 +49,7 @@
     }
     .container-header {
       text-align: center;
+      margin: 0 auto;
       margin-top: -180px;
       .business-header-title {
         font-family: "SVN-Gilroy";
@@ -249,12 +253,12 @@
     .business-step1-wrapper {
       max-width: 1180px;
       width: 100%;
-      margin: 120px auto;
+      margin: 40px auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      row-gap: 60px;
+      row-gap: 32px;
 
       .top-content {
         display: flex;
@@ -262,14 +266,20 @@
         justify-content: center;
         align-items: center;
         max-height: 80px;
-
+        padding-left: 20px;
+        padding-right: 20px;
         .main-title {
-          font-family: "SVN Gilroy";
+          font-family: "SVN-Gilroy";
           font-style: normal;
           font-weight: 700;
-          font-size: 36px;
-          line-height: 48px;
+          font-size: 21px;
+          line-height: 32px;
+          /* identical to box height, or 152% */
+
           text-align: center;
+
+          /* Light mode/Gray/gray_800 */
+
           color: #2c2d2e;
         }
 

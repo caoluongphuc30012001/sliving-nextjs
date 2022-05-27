@@ -60,9 +60,14 @@ function SectionActivity() {
         <div className="content-container ">
           <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
           <div className="max-width-1390 p-relative">
-            <Row md={4} xs={2} className="activity-row max-width-1180 ">
+            <Row
+              md={4}
+              sm={2}
+              xs={2}
+              className="activity-row max-width-1180 gy-4"
+            >
               {listActivity.map((item) => (
-                <Col key={item.id} className="col-mw-200">
+                <Col key={item.id}>
                   <div className="activity-card">
                     <div className="activity-card-img">
                       <Image src={item.linkIconLogo} />
@@ -78,6 +83,7 @@ function SectionActivity() {
           <h3 className="section-activity-title">Chứng Nhận</h3>
           <Row
             md={4}
+            sm={2}
             xs={2}
             className="max-width-1180 d-flex justify-content-center"
           >

@@ -19,7 +19,7 @@ function SectionMap({ position, whenCreated }) {
         center={position}
         zoom={15}
         scrollWheelZoom={false}
-        style={{ width: "100%", height: 362 }}
+        style={{ width: "100%", height: 362, zIndex: "1" }}
         preferCanvas
         whenCreated={whenCreated}
       >
