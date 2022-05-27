@@ -13,6 +13,9 @@ const ContentLeft = ({ listProduct, current, setCurrent }) => {
       {listProduct.map((item) => {
         return (
           <div
+            onKeyDown={() => {}}
+            role="button"
+            tabIndex={0}
             className={`item-box ${item.id === current ? "active" : ""}`}
             key={item.id}
             onClick={() => {
@@ -70,7 +73,6 @@ const ItemProduct = ({ listProduct, itemId }) => {
       modules={[Pagination, Navigation]}
     >
       {listProduct.map((item) => {
-        console.log("item", item);
         return (
           <SwiperSlide key={item.id} className="list-product">
             <Link to={`/product-detail/${item.type}`}>

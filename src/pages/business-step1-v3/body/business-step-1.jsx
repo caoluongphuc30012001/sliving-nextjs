@@ -62,6 +62,9 @@ const BusinessStep1 = () => {
                 onClick={() => {
                   handleClickCardItem(item);
                 }}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
               >
                 <img
                   src={item.image}
@@ -76,7 +79,7 @@ const BusinessStep1 = () => {
           })}
         </div>
 
-        <Link to={`${activeCards.length > 0 ? "/business-step2" : "#"}`}>
+        <Link to={`${activeCards.length > 0 ? "/business-step2/" : "#"}`}>
           <button
             className="advise-now-btn"
             type="button"

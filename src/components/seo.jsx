@@ -7,11 +7,7 @@ import favicon from "@images/logo/logo-small.svg";
 //import banner from "@images/main-page-v2/header-top-4.jpg";
 
 import i18next from "i18next";
-function Seo({ url, description, title }) {
-  console.log("url", url);
-  console.log("description", description);
-  console.log("title", title);
-
+function Seo({ url, description, title, metaImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,9 +25,11 @@ function Seo({ url, description, title }) {
   );
   const lang = i18next.language;
   const metaDescription = description || site.siteMetadata.description;
-  const metaUrl = url || site.siteMetadata.siteUrl;
+  const metaUrl = site.siteMetadata.siteUrl + url || site.siteMetadata.siteUrl;
   const titleMeta = title || site.siteMetadata.title;
-  const image = `${site.siteMetadata.siteUrl}/sliving-banner.jpg`;
+  const image = metaImage
+    ? `${site.siteMetadata.siteUrl}${metaImage}`
+    : `${site.siteMetadata.siteUrl}/thumbnail.png`;
   return (
     <Helmet
       htmlAttributes={{
@@ -95,11 +93,8 @@ Seo.propTypes = {
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
+  metaImage: PropTypes.string,
+  url: PropTypes.string,
 };
 
 export default Seo;

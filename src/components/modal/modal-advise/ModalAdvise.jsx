@@ -21,8 +21,6 @@ function ModalAdvise(props) {
     "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
 
   const onSubmit = (data) => {
-    console.log("data", data);
-
     const formData = new FormData();
     formData.append("name", data.fullName);
     formData.append("phone", data.telephone);
@@ -53,10 +51,7 @@ function ModalAdvise(props) {
       .catch(() => {});
 
     axios
-      .post(
-        "https://sheet.best/api/sheets/db2c6577-b6f0-4ad7-b78d-d45c7034faaa",
-        googleSheetFormData
-      )
+      .post(googleSheetAPI, googleSheetFormData)
       .then((response) => {
         if (response.status === 200) {
           onHide(false);

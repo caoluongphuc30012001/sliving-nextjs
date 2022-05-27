@@ -68,15 +68,13 @@ const Table = ({ table, sorting, quantity }) => {
 };
 
 const SectionProductList = () => {
-  const [modalShow, setModalShow] = React.useState(false);
-  let activeTable = 0;
-  const [order, setOrder] = useState("ASC");
+  const [modalShow, setModalShow] = useState(false);
+  // const [activeTable, setActiveTable] = useState(false);
+  // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
   const [tableData, setTableData] = useState("");
 
   const state = useContext(BusinessStateContext);
-
-  console.log("state", state);
 
   useEffect(() => {
     if (state["total"]) {
@@ -122,9 +120,11 @@ const SectionProductList = () => {
                 key={item.id}
                 onClick={() => {
                   setToggle(item.id);
-                  console.log(quantity);
                 }}
                 className={toggle === item.id ? "button" : "button active"}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
               >
                 {item.content}
               </div>
@@ -134,9 +134,9 @@ const SectionProductList = () => {
         </div>
         <div className="table">
           {tableData.content?.map((table) => {
-            table.range.min <= quantity &&
-              table.range.max > quantity &&
-              (activeTable = table.id);
+            // table.range.min <= quantity &&
+            //   table.range.max > quantity &&
+            //   setActiveTable(table.id);
             return (
               table.range.min <= quantity &&
               table.range.max > quantity && (
@@ -169,7 +169,13 @@ const SectionProductList = () => {
             )
           );
         })}
-        <div className="advise-now-btn" onClick={() => setModalShow(true)}>
+        <div
+          className="advise-now-btn"
+          onClick={() => setModalShow(true)}
+          onKeyDown={() => {}}
+          role="button"
+          tabIndex={0}
+        >
           <span>Tư Vấn Ngay</span>
         </div>
       </div>

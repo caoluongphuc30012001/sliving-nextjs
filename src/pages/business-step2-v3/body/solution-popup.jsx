@@ -29,7 +29,7 @@ const CheckOutsideClick = ({ onClickOutside, children }) => {
   );
 };
 
-const TEXT = ({ text, target }) => {
+const Div = ({ text, target }) => {
   {
     text = text.replace({ target }, "");
     return (
@@ -54,7 +54,6 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
     });
 
     if (check) {
-      console.log([...activePopupCards, { ...cardItem }]);
       setActivePopupCards([...activePopupCards, { ...cardItem }]);
     } else {
       const newActivePopupCards = activePopupCards.filter((item) => {
@@ -91,13 +90,16 @@ const SolutionPopup = ({ activeCards, setOpenPopup, dispatch }) => {
                   onClick={() => {
                     handleClick(item);
                   }}
+                  onKeyDown={() => {}}
+                  role="button"
+                  tabIndex={0}
                 >
                   <img
                     src={item.image}
                     alt=""
                     className="solution-item-img"
                   ></img>
-                  <TEXT text={item.title} target="Giải pháp" />
+                  <Div text={item.title} target="Giải pháp" />
                   <img
                     className="solution-item-icon"
                     src={selectedIcon}

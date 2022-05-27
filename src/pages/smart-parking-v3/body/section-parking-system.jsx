@@ -442,6 +442,9 @@ const SectionParkingSystem = () => {
                   <div
                     key={item.id}
                     onClick={() => setSeclection(item.id)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={() => {}}
                     className="option"
                   >
                     <div

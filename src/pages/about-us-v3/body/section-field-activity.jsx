@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 import iconCertification1 from "../../../images/about-us-v3/svg/icon-certification1.svg";
 import iconCertification2 from "../../../images/about-us-v3/svg/icon-certification2.svg";
 import iconCertification3 from "../../../images/about-us-v3/svg/icon-certification3.svg";
@@ -8,7 +8,6 @@ import iconActivity1 from "../../../images/about-us-v3/png/img-activity1.png";
 import iconActivity2 from "../../../images/about-us-v3/png/img-activity2.png";
 import iconActivity3 from "../../../images/about-us-v3/png/img-activity3.png";
 import iconActivity4 from "../../../images/about-us-v3/png/img-activity4.png";
-import a from "../../../images/about-us-v3/png/bg-activity.png";
 
 function SectionActivity() {
   const listCertification = [
@@ -82,8 +81,8 @@ function SectionActivity() {
             xs={2}
             className="max-width-1180 d-flex justify-content-center"
           >
-            {listCertification.map((item) => (
-              <Col>
+            {listCertification.map((item, index) => (
+              <Col key={index.toString()}>
                 <div className="certification-card">
                   <div className="certification-card-img">
                     <Image src={item.linkIconLogo} />

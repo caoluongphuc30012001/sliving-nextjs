@@ -1,10 +1,8 @@
 import React from "react";
 import { Col, Row, Image } from "react-bootstrap";
 import { Link } from "gatsby";
-import styled from "styled-components";
 import imgRight from "@images/home-page-v3/png/img-solution-best.png";
 import imgLeft from "@images/home-page-v3/img-smart-life.png";
-
 import iconBulb from "@images/icon/icon-bulb.svg";
 import iconTouch from "@images/icon/icon-touch.svg";
 import iconLight from "@images/icon/icon-light.svg";
@@ -13,17 +11,7 @@ import iconRemote from "@images/icon/icon-remote.svg";
 import iconCurtain from "@images/icon/icon-curtain.svg";
 import imgAboutTop from "@images/home-page-v3/png/about-sliving-top.png";
 import imgSolution from "@images/home-page-v3/png/solution-sliving.png";
-import imgSolution1 from "@images/home-page-v3/png/img-solution-1.png";
-import imgSolution2 from "@images/home-page-v3/png/img-solution-2.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
-
-export const Divider = styled("div")`
-  width: 56px;
-  height: 4px;
-  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
-  margin: 18px 0;
-  border-radius: 200px;
-`;
 
 const SectionSolution = () => {
   const arrSolution = [
@@ -116,7 +104,7 @@ const SectionSolution = () => {
                 <li key={solution.id}>{solution.desc}</li>
               ))}
             </ul>
-            <Link to="/about-us-v3">
+            <Link to="/about-us/">
               <button type="button" className="btn-gradient-blue">
                 <span>Khám phá ngay</span>
               </button>

@@ -1,6 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
-const { QueryDataProductV3 } = require("./src/query/product-group-v3");
+const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -31,15 +31,8 @@ function checkDetectPage(page, namePage) {
 exports.onCreatePage = ({ page, actions }) => {
   const { deletePage } = actions;
   if (
-    checkDetectPage(page, "/main-page-v2") === true ||
     checkDetectPage(page, "/product-detail-v2") === true ||
-    checkDetectPage(page, "/support-page-v2") === true ||
-    checkDetectPage(page, "/product-page-v2") === true ||
-    checkDetectPage(page, "/smart-home-page-v2") === true ||
-    checkDetectPage(page, "/smart-light-v2") === true ||
-    checkDetectPage(page, "/contact-page-v2") === true ||
     checkDetectPage(page, "/policy") === true ||
-    checkDetectPage(page, "/support-page-v2") === true ||
     checkDetectPage(page, "/about-us-v3") === true ||
     checkDetectPage(page, "/business-step1-v3") === true ||
     checkDetectPage(page, "/business-step2-v3") === true ||
@@ -54,10 +47,6 @@ exports.onCreatePage = ({ page, actions }) => {
     deletePage(page);
   }
 };
-async function getLng() {
-  const lngValue = ["en", "vn"];
-  return lngValue;
-}
 
 exports.createPages = async function ({ actions, graphql }) {
   const { createPage } = actions;
@@ -250,13 +239,6 @@ exports.createPages = async function ({ actions, graphql }) {
   const productDetailComponent = require.resolve(
     "./src/pages/product-detail-v2/index.js"
   );
-  // const productComponent = require.resolve("./src/pages/product-page-v2/index.js");
-  // const smartHomeComponent = require.resolve("./src/pages/smart-home-page-v2/index.js");
-  // const pagesSupport = require.resolve("./src/pages/support-page-v2/index.js");
-  // const detailSupport = require.resolve("./src/pages/content-detail-v2/index.js");
-  // const smartLightingComponent = require.resolve("./src/pages/smart-lighting-v2/index.js");
-  // const contactComponent = require.resolve("./src/pages/contact-page-v2/index.js");
-  const homePage = require.resolve("./src/pages/index.js");
   const policy = require.resolve("./src/pages/policy/index.jsx");
   const aboutUS = require.resolve("./src/pages/about-us-v3/index.jsx");
   const business1 = require.resolve("./src/pages/business-step1-v3/index.jsx");
@@ -274,143 +256,13 @@ exports.createPages = async function ({ actions, graphql }) {
   const smartParking = require.resolve(
     "./src/pages/smart-parking-v3/index.jsx"
   );
-  // const solutionSmartHome  = require.resolve("./src/pages/solution/smart-home/index.jsx");
-  // const solutionSmartParking = require.resolve("./src/pages/solution/parking/index.jsx");
-  // const solutionSmartSecurity  = require.resolve("./src/pages/solution/security/index.jsx");
-  // const reasonPage  = require.resolve("./src/pages/reason/index.jsx");
 
-  const querySupportPage = [];
-  // const querySupportPage = await graphql(
-  //   `
-  // {
-  //   dataTechnicalAnswer: allMarkdownRemark(
-  //     filter: {fileAbsolutePath: {regex: "/(/contents/support-page/)/"}}
-  //   ) {
-  //     edges {
-  //       node {
-  //         frontmatter {
-  //           description
-  //           details
-  //           title
-  //           type
-  //           date
-  //           subtitle
-  //           slug
-  //         }
-  //         html
-  //       }
-  //     }
-  //   }
-  // }
-  // `
-  // );
-  const arrLng = await getLng();
-  arrLng.map((lng) => {
-    createPage({
-      path: `/${lng}/`,
-      component: homePage,
-    });
-    //   createPage({
-    //     path: `/${lng}/support/`,
-    //     component: pagesSupport,
-    //     context: {
-    //       data: querySupportPage
-    //     }
-    //   });
-    //   if(querySupportPage.length > 0){
-
-    //     createPage({
-    //       path: `/${lng}/support/detail`,
-    //       component: detailSupport,
-    //       context: {
-    //         data: querySupportPage
-    //       }
-
-    //     });
-
-    //   }
-    //   createPage({
-    //     path: `/${lng}/contact-page`,
-    //     component: contactComponent,
-    //     context: {
-    //       data: querySupportPage
-    //     }
-    //   });
-    // createPage({
-    //   path: `/${lng}/smart-home/`,
-    //   component: smartHomeComponent,
-    //   context: {
-    //     data: productPage.data.ProductPage,
-    //   },
-    // });
-    // createPage({
-    //   path: `/${lng}/smart-lighting/`,
-    //   component: smartLightingComponent,
-    //   context: {
-    //     data: productPage.data.ProductPage,
-    //     isSmartLighting: true
-    //   },
-    // });
-    // createPage({
-    //   path: `/${lng}/smart-lighting/contact/`,
-    //   component: contactComponent,
-    //   context: {
-    //     data: productPage.data.ProductPage,
-    //     isNavbarContact: { isSmartLighting: true }
-    //   },
-    // });
-    // createPage({
-    //   path: `/${lng}/smart-home/products/`,
-    //   component: productComponent,
-    //   context: {
-    //     data: productPage.data.ProductPage,
-    //     lng:lng
-    //   },
-    // });
-    // createPage({
-    //   path: `/${lng}/smart-home/contact/`,
-    //   component: contactComponent,
-    //   context: {
-    //     data: productPage.data.ProductPage,
-    //     isNavbarContact: { isSmartHome: true }
-    //   },
-    // });
-
-    // createPage({
-    //   path: `/${lng}/solutions/smart-home/`,
-    //   component: solutionSmartHome,
-    // });
-    // createPage({
-    //   path: `/${lng}/solutions/smart-parking/`,
-    //   component: solutionSmartParking,
-    // });
-    // createPage({
-    //   path: `/${lng}/solutions/smart-security/`,
-    //   component: solutionSmartSecurity,
-    // });
-
-    // createPage({
-    //   path: `/${lng}/reason/`,
-    //   component: reasonPage,
-    // });
-
-    // productPage.data.ProductPage.group.forEach((product) => {
-    //   createPage({
-    //     path: `/${lng}/smart-home/products/${product.distinct[0]}`,
-    //     component: productDetailComponent,
-    //     context: {
-    //       data: product.group,
-    //       dataMeta: product.group
-    //     },
-    //   });
-    // });
-  });
   createPage({
-    path: `/policy`,
+    path: `/policy/`,
     component: policy,
   });
   createPage({
-    path: `/product-detail`,
+    path: `/product-detail/`,
     component: productDetailComponent,
     context: {
       data: productPage,
@@ -418,7 +270,7 @@ exports.createPages = async function ({ actions, graphql }) {
   });
   productPage["data"].ProductGroups.group.forEach(async (prod) => {
     await createPage({
-      path: `/product-detail/${prod.fieldValue}`,
+      path: `/product-detail/${prod.fieldValue}/`,
       component: productDetailComponent,
       context: {
         data: prod.group,
@@ -427,45 +279,45 @@ exports.createPages = async function ({ actions, graphql }) {
   });
 
   createPage({
-    path: `/about-us`,
+    path: `/about-us/`,
     component: aboutUS,
   });
   createPage({
-    path: `/business-step1`,
+    path: `/business-step1/`,
     component: business1,
   });
 
   createPage({
-    path: `/business-step2`,
+    path: `/business-step2/`,
     component: business2,
   });
 
   createPage({
-    path: `/business-step3`,
+    path: `/business-step3/`,
     component: business3,
   });
   createPage({
-    path: `/contact-us`,
+    path: `/contact-us/`,
     component: contact,
   });
   createPage({
-    path: `/news`,
+    path: `/news/`,
     component: news,
   });
   createPage({
-    path: `/smart-home`,
+    path: `/smart-home/`,
     component: smartHome,
   });
   createPage({
-    path: `/smart-lighting`,
+    path: `/smart-lighting/`,
     component: smartLighting,
   });
   createPage({
-    path: `/smart-building`,
+    path: `/smart-building/`,
     component: smartSecurity,
   });
   createPage({
-    path: `/smart-parking`,
+    path: `/smart-parking/`,
     component: smartParking,
   });
 };
@@ -490,5 +342,11 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         util: false,
       },
     },
+    plugins: [
+      new FilterWarningsPlugin({
+        exclude:
+          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
+      }),
+    ],
   });
 };

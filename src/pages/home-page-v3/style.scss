@@ -244,6 +244,11 @@ span.detail-v3 {
   }
 }
 
+.slider-desktop {
+  max-height: 844px;
+  height: 100vh;
+}
+
 // =======Begin Responsive=======
 @media only screen and (max-width: 992px) {
   .row-line-center {
@@ -325,6 +330,10 @@ span.detail-v3 {
 }
 .bg-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
 }
 
 .home-page-tag {

@@ -15,7 +15,6 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide }) => {
-  console.log("slide", slide);
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
 
@@ -50,6 +49,9 @@ const ProductItemSwiper = ({ slide }) => {
           {slide?.titles.map((btnItem) => {
             return (
               <div
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
                 className={`${
                   swiperIndex === btnItem.id
                     ? "products-btn-item active"
@@ -83,6 +85,9 @@ const SectionProductsSlider = ({ listSlide }) => {
   return (
     <section className="section-product-slider">
       <div
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
         className="btn-big-arrow-left"
         onClick={() => {
           decreaseToggleTab();
@@ -91,6 +96,9 @@ const SectionProductsSlider = ({ listSlide }) => {
         <img src={BigArrowLeft} alt=""></img>
       </div>
       <div
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
         className="btn-big-arrow-right-mobie"
         onClick={() => {
           increaseToggleTab();
@@ -98,7 +106,13 @@ const SectionProductsSlider = ({ listSlide }) => {
       >
         <img src={BigArrowLeft} alt=""></img>
       </div>
-      <div className="btn-big-arrow-right" onClick={() => increaseToggleTab()}>
+      <div
+        className="btn-big-arrow-right"
+        onClick={() => increaseToggleTab()}
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
+      >
         <img src={BigArrowRight} alt=""></img>
       </div>
       <div className="smart-home-bg-left"></div>
@@ -124,7 +138,11 @@ const SectionProductsSlider = ({ listSlide }) => {
                     <div className="download-apps-container">
                       {slide?.downloadObjects.map((object) => (
                         <div className="download-app-item">
-                          <a href={object.link} target="_blank">
+                          <a
+                            href={object.link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <img
                               src={object.img}
                               alt=""

@@ -1,6 +1,4 @@
 import React from "react";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
 import { Col, Container, Row, Image } from "react-bootstrap";
 import LayoutV3 from "../../components/layout-v3";
 import SectionHelpMore from "../../components/help-more/section-help-more";
@@ -9,12 +7,19 @@ import iconQuestion from "@images/icon/icon-question-process.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import "./style.scss";
+import Seo from "@components/seo";
 
 const ImplementationProcess = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <LayoutV3>
+      <Seo
+        title="Quy Trình Triển Khai Gói Giải Pháp"
+        description="Quy Trình Triển Khai Gói Giải Pháp | Sliving"
+        url="/implementation-process/"
+        metaImage="/thumbnail.png"
+      />
       <main>
         <section className="section-process">
           <Container

@@ -34,7 +34,6 @@ function ListSolution({
     const newListActiveCards = activeStep2Cards.filter(
       (item) => item.id !== index
     );
-    console.log("newahahahah", newListActiveCards);
     setActiveStep2Cards([...newListActiveCards]);
   };
   return (
@@ -48,19 +47,28 @@ function ListSolution({
                 <div className="item-container" key={item.id}>
                   <img src={item.icon} alt="" className="icon-box" />
                   <p className="description">{item.title}</p>
-                  <img
-                    src={cancel}
-                    alt=""
+                  <div
                     className="cancel-icon"
                     onClick={() => {
                       handleDeleteSolution(item.id);
                     }}
-                  />
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={() => {}}
+                  >
+                    <img src={cancel} alt="" />
+                  </div>
                 </div>
               );
             })}
           {activeStep2Cards.length < packagesData.length && (
-            <div className="item-container plus-box" onClick={handleShow}>
+            <div
+              className="item-container plus-box"
+              onClick={handleShow}
+              onKeyDown={() => {}}
+              role="button"
+              tabIndex={0}
+            >
               <img src={plus} alt="" className="icon-box" />
               <p className="description">Thêm giải pháp</p>
             </div>
@@ -260,6 +268,9 @@ const SectionSolution = () => {
               onClick={() => {
                 setDrop(!drop);
               }}
+              onKeyDown={() => {}}
+              role="button"
+              tabIndex={0}
             >
               <div
                 className={`main-selection ${
@@ -284,6 +295,9 @@ const SectionSolution = () => {
                           setOption(item);
                           setValidOption(true);
                         }}
+                        onKeyDown={() => {}}
+                        role="button"
+                        tabIndex={0}
                       >
                         {item.label}
                       </div>
@@ -346,7 +360,7 @@ const SectionSolution = () => {
 
         <Link
           to={`${
-            activeStep2Cards?.length > 0 && sum > 99 ? "/business-step3" : "#"
+            activeStep2Cards?.length > 0 && sum > 99 ? "/business-step3/" : "#"
           }`}
           state={{ total: sum }}
         >

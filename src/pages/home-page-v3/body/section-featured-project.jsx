@@ -70,6 +70,9 @@ function SectionFeaturedProject() {
               }
               style={{ backgroundImage: `url(${itemCard.linkImg})` }}
               key={itemCard.id}
+              onKeyDown={() => {}}
+              role="button"
+              tabIndex={0}
             >
               <div className="shadow" />
               <div className="label">

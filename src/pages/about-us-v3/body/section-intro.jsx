@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import styled from "styled-components";
 
 // import iconVision from "@images/about-us-v3/svg/icon-vision.svg";
@@ -94,9 +94,9 @@ const SectionIntro = () => {
         </Row>
 
         <div className="intro-bottom-content">
-          {introItems.map((intro) => {
+          {introItems.map((intro, index) => {
             return (
-              <div className="intro-content-container">
+              <div className="intro-content-container" key={index.toString()}>
                 <div
                   key={intro.id}
                   className={`intro-content-wrapper ${

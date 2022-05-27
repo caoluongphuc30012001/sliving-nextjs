@@ -1,8 +1,8 @@
 .privacy-title-number {
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
+  font-size: 22px;
+  line-height: 150%;
   display: flex;
   align-items: center;
   letter-spacing: -0.019em;
@@ -12,9 +12,7 @@
 .ul-privacy {
   padding-left: 12px;
 }
-.ul-privacy {
-  list-style-type: '\2022';
-}
+
 .ul-privacy li {
   padding-left: 8px;
 }
@@ -39,4 +37,22 @@
   margin-top: 81px !important;
   margin-bottom: 60px !important;
   padding: 60px 20px;
+}
+
+ul {
+  list-style-type: none;
+  li {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+}
+
+h4.sub-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+p.description-policy {
+  font-size: 18px;
 }

@@ -11,7 +11,6 @@ i18next.changeLanguage("vn");
 const isBrowser = typeof window !== "undefined";
 const SectionProductMain = () => {
   let data = DataProductNew();
-  console.log("data", data);
   const lngCurrent = i18next.language;
   const titles = {
     productLed: "LED",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Image, Row } from "react-bootstrap";
+import { Image, Row } from "react-bootstrap";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 import imgBrandStory from "../../../images/about-us-v3/png/img-brand-story.png";
 
@@ -23,7 +23,7 @@ function SectionBrandStory() {
           </p>
         </Row>
         <div className="brand-story-img">
-          <img src={imgBrandStory} style={{ marginTop: "60px" }} />
+          <img src={imgBrandStory} style={{ marginTop: "60px" }} alt="" />
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@ function LayoutV3({ children }) {
     {
       id: 1,
       nameRoute: "VỀ CHÚNG TÔI",
-      href: "/about-us",
+      href: "/about-us/",
       active: url.includes("about-us"),
     },
     {
@@ -35,29 +35,29 @@ function LayoutV3({ children }) {
         {
           id: 0,
           nameRoute: "SMART HOME",
-          href: "/smart-home",
+          href: "/smart-home/",
         },
         {
           id: 1,
           nameRoute: "SMART LIGHTING",
-          href: "/smart-lighting",
+          href: "/smart-lighting/",
         },
         {
           id: 2,
           nameRoute: "SMART PARKING",
-          href: "/smart-parking",
+          href: "/smart-parking/",
         },
         {
           id: 3,
           nameRoute: "SMART BUILDING",
-          href: "/smart-building",
+          href: "/smart-building/",
         },
       ],
     },
     {
       id: 3,
       nameRoute: "GÓI GIẢI PHÁP",
-      href: "/business-step1",
+      href: "/business-step1/",
       active: url.includes("business-step1"),
     },
 
@@ -70,7 +70,7 @@ function LayoutV3({ children }) {
     {
       id: 5,
       nameRoute: "QUY TRÌNH",
-      href: "/implementation-process",
+      href: "/implementation-process/",
       active: url.includes("implementation-process"),
     },
     {
