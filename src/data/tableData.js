@@ -147,7 +147,7 @@ export const Data = {
         },
       ],
       lastContent: {
-        position: "Tầng hầm/Ngoài trời",
+        position: "Tầng hầm / Ngoài trời",
         device: "Giải pháp bãi đỗ xe thông minh",
         quantity: "Liên hệ",
       },
@@ -281,7 +281,7 @@ export const Data = {
         },
       ],
       lastContent: {
-        position: "Tầng hầm/Ngoài trời",
+        position: "Tầng hầm / Ngoài trời",
         device: "Giải pháp bãi đỗ xe thông minh",
         quantity: "Liên hệ",
       },
@@ -425,7 +425,7 @@ export const Data = {
         },
       ],
       lastContent: {
-        position: "Tầng hầm/Ngoài trời",
+        position: "Tầng hầm / Ngoài trời",
         device: "Giải pháp bãi đỗ xe thông minh",
         quantity: "Liên hệ",
       },
@@ -569,7 +569,7 @@ export const Data = {
         },
       ],
       lastContent: {
-        position: "Tầng hầm/Ngoài trời",
+        position: "Tầng hầm / Ngoài trời",
         device: "Giải pháp bãi đỗ xe thông minh",
         quantity: "Liên hệ",
       },

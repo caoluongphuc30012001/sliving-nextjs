@@ -233,7 +233,6 @@ const SectionParkingSolution = () => {
                 key={item.id}
                 setModalShow={setModalShow}
               />
-              <div className="underline2"></div>
             </>
           );
         })}

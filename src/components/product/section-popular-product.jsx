@@ -39,29 +39,29 @@ const SectionPopularProduct = ({ listProduct }) => {
               }}
               className="container-cover"
             >
-              {listProduct.map((item) => {
+              {listProduct.length>0&&listProduct.map((item) => {
                 return (
                   <SwiperSlide key={item.id} className="list-product">
                     <div className="item-box">
                       <div className="img-box">
                         <img src={item.image} alt="" />
                       </div>
-                      <div className="btn-group">
-                        <button
-                          className="advise-now-btn"
-                          onClick={() => setModalShow(true)}
-                        >
-                          <span>Tư vấn ngay</span>
-                        </button>
-                        <Link to={`/product-detail/${item.type}`}>
-                          <button type="button" className="learn-more-btn">
-                            <span>Tìm hiểu thêm</span>
-                          </button>
-                        </Link>
-                      </div>
                       <div className="description-box">
                         <p className="sub-title">{item.description}</p>
                         <p className="title">{item.title}</p>
+                        <div className="btn-group">
+                          <button
+                            className="advise-now-btn"
+                            onClick={() => setModalShow(true)}
+                          >
+                            <span>Tư vấn ngay</span>
+                          </button>
+                          <Link to={`/product-detail/${item.type}`}>
+                            <button type="button" className="learn-more-btn">
+                              <span>Tìm hiểu thêm</span>
+                            </button>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </SwiperSlide>

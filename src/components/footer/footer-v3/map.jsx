@@ -1,11 +1,16 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useRef, useEffect } from "react";
 import iconLocation from "@images/footer-v3/svg/icon-location.svg";
 
 function SectionMap({ position, whenCreated }) {
   const BuildMap = useMemo(() => {
-    const { MapContainer, TileLayer, Marker, Popup } = require("react-leaflet");
+    const {
+      MapContainer,
+      TileLayer,
+      Marker,
+      Popup,
+      Tooltip,
+    } = require("react-leaflet");
     const L = require("leaflet");
-
     const iconMap = L.icon({
       iconUrl: iconLocation,
       iconSize: [50, 40], // size of the icon
@@ -14,6 +19,7 @@ function SectionMap({ position, whenCreated }) {
       shadowSize: [68, 95], // the same for the shadow
       shadowAnchor: [22, 94],
     });
+
     return (
       <MapContainer
         center={position}
@@ -29,7 +35,9 @@ function SectionMap({ position, whenCreated }) {
         />
         {position && (
           <Marker position={position} icon={iconMap}>
-            <Popup>Sunshine Center</Popup>
+            <Tooltip direction="top" offset={[0, -20]} opacity={1} permanent>
+              Sunshine Center
+            </Tooltip>
           </Marker>
         )}
       </MapContainer>

@@ -93,7 +93,7 @@ function SectionQuickSupport() {
               </div>
               <div className="quick-support-body">
                 <h5>Email</h5>
-                <span>email@unicloud.com.vn</span>
+                <span>info@unicloud.com.vn</span>
               </div>
             </div>
             <div className="quick-support-content-row d-flex">
