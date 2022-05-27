@@ -40,7 +40,7 @@
 .section-quick-support {
   // margin-top: 90px;
   .section-quick-support-row {
-    height: 800px;
+    min-height: 800px;
     overflow: hidden;
     .col-left {
       color: #fff;
@@ -99,7 +99,7 @@
     height: 44px;
   }
   .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
-    height: 800px !important;
+    height: 756px !important;
     z-index: 19;
   }
   .menu-map-title {
@@ -121,7 +121,7 @@
   border-top: 4px solid #0979fd;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .section-quick-support {
     .section-quick-support-row {
       .col-left {
@@ -167,6 +167,10 @@
         padding-left: 20px !important;
         padding-right: 20px !important;
       }
+    }
+    .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+      height: 440px !important;
+      z-index: 19;
     }
   }
   .section-form-contact {

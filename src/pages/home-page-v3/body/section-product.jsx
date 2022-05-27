@@ -178,9 +178,9 @@ const SectionProduct = () => {
                     src={smart.image}
                     alt=""
                     className="card-product-img"
-                    // style={{
-                    //   float: `${smart.id % 2 === 0 ? "left" : "right"}`,
-                    // }}
+                    style={{
+                      float: `${smart.id % 2 === 0 ? "" : "right"}`,
+                    }}
                   />
                   {smart?.downloadObjects?.length > 0 && (
                     <div className="d-flex p-absolute download-app-list download-app-list-desktop ">

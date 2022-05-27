@@ -10,13 +10,8 @@ import { Col, Row } from "react-bootstrap";
 function ContactPage() {
   return (
     <LayoutV3>
-      <Seo
-        title="Sliving"
-        description="Sliving"
-        url="/contact-us/"
-        metaImage="/thumbnail.png"
-      />
-      <main id="contact-page-v3" style={{ marginTop: "90px" }}>
+      <Seo title="Sliving" description="Sliving" url="https://sliving.vn" />
+      <main id="contact-page-v3">
         <Row>
           <Col md={12}>
             <SectionQuickSupport />
