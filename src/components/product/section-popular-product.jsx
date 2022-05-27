@@ -39,7 +39,7 @@ const SectionPopularProduct = ({ listProduct }) => {
               }}
               className="container-cover"
             >
-              {listProduct.map((item) => {
+              {listProduct.length>0&&listProduct.map((item) => {
                 return (
                   <SwiperSlide key={item.id} className="list-product">
                     <div className="item-box">

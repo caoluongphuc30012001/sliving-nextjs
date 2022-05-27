@@ -13,6 +13,7 @@ import BuildThumbs from "./thumb";
 
 import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
+import SectionPopularProduct from "../../components/product/section-popular-product";
 
 const handelFilter = (dataCurrent) => {
   if (
@@ -446,6 +447,7 @@ const IndexPage = ({ pageContext }) => {
   };
   const location = useLocation();
   const { href } = location;
+  
   return (
     <LayoutSmartLighting>
       <Seo
@@ -462,7 +464,9 @@ const IndexPage = ({ pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} />
       </section>
       {dataProductFeature && (
-        <SectionFeatureProduct dataProductHot={dataProductFeature} />
+        <>
+          <SectionFeatureProduct dataProductHot={dataProductFeature} />
+        </>
       )}
     </LayoutSmartLighting>
   );

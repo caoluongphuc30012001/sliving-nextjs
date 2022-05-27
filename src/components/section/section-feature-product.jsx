@@ -9,6 +9,7 @@ import i18next from "i18next";
 
 import { useTranslation } from "react-i18next";
 import "../style.scss";
+import SectionPopularProduct from "../product/section-popular-product";
 const SectionFeatureProduct = ({ dataProductHot }) => {
   const lngCurrent = i18next.language;
   const { t } = useTranslation();
@@ -96,46 +97,25 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+  let listProduct=[];
+  if(arrProductHot.length>0)
+  listProduct=arrProductHot.map(item=>{
+    return{
+      id: 0,
+      image: item.node.frontmatter.imgSrcProduct.publicURL,
+      title: item.node.frontmatter.title,
+      description: item.node.frontmatter.title,
+      type: item.node.frontmatter.type,
+    }
+  })
+  console.log(arrProductHot);
   return (
     <section className="container-wrap section-prod-feature">
       <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>
       <div className="prod-line">
         <img src={lineImg} alt="" />
       </div>
-      <Slider
-        {...settings}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          375: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          425: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
-      >
-        {arrProductHot &&
-          arrProductHot.map((prod, index) => (
-            <div key={index}>
-              <Link to={`/product-detail/${prod?.node?.frontmatter?.type}`}>
-                <CardProductV2 props={prod.node.frontmatter} isButton={true} />
-              </Link>
-            </div>
-          ))}
-      </Slider>
+        {listProduct.length > 0 &&<SectionPopularProduct listProduct={listProduct}/>}
     </section>
   );
 };
