@@ -12,6 +12,10 @@
   .invalid {
     opacity: 1;
   }
+  .invalid.self-right{
+    right: 0px;
+    left: auto;
+  }
   .solution-container {
     max-width: 920px;
     padding: 0 20px;
@@ -86,7 +90,6 @@
     flex-direction: column;
     gap: 20px;
   }
-
   .add-house {
     width: 100%;
     display: flex;
@@ -126,6 +129,7 @@
         border-radius: 8px;
         width: 100%;
         justify-content: space-between;
+        z-index: 2;
         .option {
           width: 100%;
           display: flex;
@@ -243,7 +247,7 @@
       font-family: "SVN Gilroy";
       font-style: normal;
       font-weight: 500;
-      font-size: clamp(10px, 2.73vw, 16px);
+      font-size: clamp(14px, 2.73vw, 16px);
       line-height: 24px;
       color: #454647;
     }
@@ -292,16 +296,17 @@
     max-width: 880px;
     height: 56px;
     border-top: 1px solid #e1e3e6;
-    margin-top: 25px;
+    position: relative;
     .total {
       width: 100%;
       display: flex;
+      padding: 20px 0px;
       align-items: center;
       justify-content: flex-end;
       .name {
         font-family: "SVN Gilroy";
         font-weight: 700;
-        font-size: clamp(10px, 2.73vw, 16px);
+        font-size: clamp(14px, 2.73vw, 16px);
         line-height: 24px;
         color: #2c2d2e;
       }
@@ -466,7 +471,6 @@
               font-style: normal;
               font-weight: 600;
               font-size: clamp(14px, 3.73vw, 16px);
-              color: #454647;
             }
             .desc-p{
               display: block;
@@ -475,8 +479,10 @@
               font-style: normal;
               font-weight: 600;
               font-size: clamp(14px, 3.73vw, 16px);
-              color: #454647;
             }
+          }
+          .solution-item-desc > *{
+            color: #454647;
           }
         }
 
@@ -506,7 +512,6 @@
         //   background-image: url("../../images/business-step1-v3/svg/icon-add.svg");
         // }
       }
-
       .popup-footer {
         flex: 20%;
         display: flex;
@@ -562,7 +567,6 @@
                 font-style: normal;
                 font-weight: 600;
                 font-size: clamp(14px, 3.73vw, 16px);
-                color: #454647;
               }
               .desc-p{
                 display: none;
@@ -571,7 +575,6 @@
                 font-style: normal;
                 font-weight: 600;
                 font-size: clamp(14px, 3.73vw, 16px);
-                color: #454647;
               }
             }
           }

@@ -94,7 +94,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 0 clamp(40px, 3vw, 60px) 0;
+    padding: clamp(20px, 5.37vw, 60px) 0px;
     .content {
       max-width: 1180px;
       width: 100%;
@@ -198,13 +198,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: clamp(40px, 9.34vw, 60px) 0px;
+    padding: clamp(20px, 5.37vw, 60px) 0px;
+    border-bottom: 1px solid #F2F3F5;
     .parking-solution-container{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: clamp(20px, 1.6125vw, 30px);
+        gap: clamp(20px, 5.37vw, 30px);
         max-width: 1180px;
         .underline2{
             width: 100%;
@@ -250,7 +251,7 @@
             width: 100%;
             max-width: 1180px;
             gap: clamp(40px, 3.125vw, 60px);
-            padding: 20px;
+            padding: 0px 20px;
             .solution-title{
                 font-family: 'SVN Gilroy';
                 font-style: normal;
@@ -416,6 +417,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: clamp(20px, 5.37vw, 60px) 0px;
     .parking-system-container{
         padding: 0px 20px;
         width: clamp(0px, 100%, 1180px);
