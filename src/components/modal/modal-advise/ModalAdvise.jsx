@@ -17,8 +17,8 @@ function ModalAdvise(props) {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  // const googleSheetAPI =
-  //   "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
+  const googleSheetAPI =
+    "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
 
   const onSubmit = (data) => {
     const formData = new FormData();
@@ -51,10 +51,7 @@ function ModalAdvise(props) {
       .catch(() => {});
 
     axios
-      .post(
-        "https://sheet.best/api/sheets/db2c6577-b6f0-4ad7-b78d-d45c7034faaa",
-        googleSheetFormData
-      )
+      .post(googleSheetAPI, googleSheetFormData)
       .then((response) => {
         if (response.status === 200) {
           onHide(false);
