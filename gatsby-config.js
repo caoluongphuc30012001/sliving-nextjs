@@ -1,19 +1,20 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   flags: {
     PARALLEL_QUERY_RUNNING: true,
-    PARALLEL_SOURCING : true ,
-    DETECT_NODE_MUTATIONS: true
+    PARALLEL_SOURCING: true,
+    DETECT_NODE_MUTATIONS: false,
   },
   siteMetadata: {
     title: "Sliving - Cung cấp giải pháp toàn diện về IoT Platform",
-    description:"Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi",
-    author:"Sliving",
-    keywords:"Sliving, san pham smarthome, sản phẩm IoT",
-    siteUrl:"https://sliving.vn"
+    description:
+      "Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi",
+    author: "Sliving",
+    keywords: "Sliving, san pham smarthome, sản phẩm IoT",
+    siteUrl: "https://sliving.vn",
   },
   pathPrefix: process.env.AWS_S3_PREFIX ? `/${process.env.AWS_S3_PREFIX}` : "/",
   plugins: [
@@ -24,7 +25,7 @@ module.exports = {
         // Add any options here
       },
     },
-   
+
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -117,6 +118,7 @@ module.exports = {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
         bucketPrefix: process.env.AWS_S3_PREFIX,
         removeNonexistentObjects: process.env.AWS_S3_PREFIX ? false : true,
+        removeNonexistentObjects: false
       },
     },
     {
@@ -151,19 +153,15 @@ module.exports = {
     //     showSpinner: false,
     //   },
     // },
+
     {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/`, `/en/`,`/vn/`],
-      },
-    },{
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Sliving`,
         short_name: `Sliving`,
         start_url: `/`,
         background_color: `#ffffff`,
-        lang:`vn`,
+        lang: `vn`,
         theme_color: `#ffffff`,
         display: `standalone`,
         icon: `static/apple-touch-icon.png`,
@@ -174,10 +172,10 @@ module.exports = {
             lang: `vn`,
             name: `Sliving - Cung cấp giải pháp toàn diện về IoT Platform`,
             short_name: `Sliving`,
-            description: `Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi`
+            description: `Chuyên về giải pháp thông minh và công nghệ tiên tiến giúp người dùng có thể trải nghiệm một cuộc sống tiện nghi, thoải mái và tiện lợi`,
           },
         ],
       },
-    }
+    },
   ],
 };

@@ -1,0 +1,1190 @@
+///=========================Section Header
+.section-smart-parking-v3-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .smart-parking-v3-header{
+        margin-bottom: 60px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: clamp( 560px, 60vw, 844px);
+        overflow: hidden;
+        .back-ground{
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            .back-ground__img{
+                width: 100%;
+                mask-image: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 1) 0%,
+                    rgba(0, 0, 0, 0) 65%,
+                );
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(180deg, #32D7D4 0%, rgba(8, 156, 234, 0.75) 25.41%, rgba(8, 156, 234, 0.5) 55.6%, rgba(255, 255, 255, 0) 100%);
+                opacity: 1;
+            }
+        }
+        .smart-parking-header{
+            width: clamp( 420px, 100%, 1180px);
+            padding: 40px 20px;
+            .smart-parking-content{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                & > *{
+                    max-height: 343px;
+                }
+                .content-left{
+                    width: 100%;
+                    max-width: 600px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    .content-left-title{
+                        font-family: 'SVN Gilroy';
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: clamp( 32px, 4vw, 62px);
+                        line-height: 72px;
+                        letter-spacing: 1px;
+                        color: #FFFFFF;
+                    }
+                    .content-left-text{
+                        font-family: 'SVN Gilroy';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: clamp( 14px, 1vw, 16px);
+                        padding: 0px 20px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                    }
+                }
+                .content-right{
+                    width: clamp(180px, 25vw, 400px);
+                    .content-right__img{
+                        color: #C4C4C4;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+///=========================End Section Header
+///=========================Begin Section Smart Parking
+.smart-parking-definition-v3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(20px, 5.37vw, 60px) 0px;
+    .content {
+      max-width: 1180px;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+  
+      .left-content {
+        max-width: 590px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 16px;
+  
+        .left-content-title {
+          height: 100%;
+          max-height: 32px;
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: clamp(21px, 5.6vw, 28px);
+          line-height: 32px;
+          color: #0979fd;
+        }
+  
+        .left-all-description-container {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid #6fc0fe;
+          border-radius: 16px;
+          width: 100%;
+        }
+  
+        .left-all-description {
+          padding: 20px 32px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 16px;
+  
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: justify;
+          color: #454647;
+  
+          .web-content-desc {
+            display: flex;
+          }
+  
+          .mobile-content-desc {
+            display: none;
+          }
+        }
+      }
+  
+      .right-content {
+        display: flex;
+  
+        .right-content-container {
+          height: fit-content;
+          width: 100%;
+          max-width: 558px;
+          align-self: flex-end;
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: 94px;
+          justify-content: space-around;
+        }
+  
+        .right-icon-item {
+          max-width: 186px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          row-gap: 16px;
+          align-items: center;
+  
+          .icon-item-title {
+            font-family: "SVN Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #454647;
+          }
+        }
+      }
+    }
+}
+///=========================End Section Smart Parking
+///=========================Section Solution
+.section-parking-solution{
+    border-top: 1px solid #F2F3F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(20px, 5.37vw, 60px) 0px;
+    border-bottom: 1px solid #F2F3F5;
+    .parking-solution-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(20px, 5.37vw, 30px);
+        max-width: 1180px;
+        .underline2{
+            width: 100%;
+            height: 1px;
+            background:#F2F3F5;
+        }
+        .content{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 14px;
+            .title{
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: clamp(28px, 7.47vw, 36px);
+                text-align: center;
+                color: #2C2D2E;
+            }
+            .sub-title{
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+                letter-spacing: 0.22em;
+                color: #0979FD;
+            }
+            .underline{
+                width: 88px;
+                height: 4px;
+                background: linear-gradient(90deg, #5A20FF 0%, #00E0C5 100%);
+                border-radius: 200px;
+            }
+        }
+        .solution-item-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1180px;
+            gap: clamp(40px, 3.125vw, 60px);
+            padding: 0px 20px;
+            .solution-title{
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: clamp(21px, 5.6vw, 28px);
+                line-height: 32px;
+                color: #0979FD;
+            }
+            .solution-content{
+                height: 184px;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                gap: clamp(38px, 2.7vw, 50px);
+                .content-container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    .icon-active{
+                        width: 34%;
+                        transition: 0.4s all;
+                        height: 80%;
+                        position: relative;
+                        display: flex;
+                        .content{
+                            gap: clamp(8px, 0.84vw, 16px);
+                            overflow: hidden;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: clamp(250px, 30vw, 360px);
+                            padding: clamp(24px, 1.25vw, calc(48px + clamp(60px, 3.65vw, 70px)/2 - 10px)) clamp(24px, 2.1vw, 40px) 0px clamp(24px, 2.1vw, 40px);
+                            background: #FFFFFF;
+                            box-shadow: 0px 2px 7px 1px rgba(112, 144, 176, 0.25);
+                            border-radius: 16px;
+                            position: relative;
+                            top: clamp(35px, 2.2vw, 40px);
+                            left: clamp(35px, 2.2vw, 40px);
+                            max-height: 312px;
+                            .content-title{
+                                width: clamp(250px, 30vw, 360px);
+                                font-family: 'SVN Gilroy';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: clamp(18px, 1.1vw, 21px);
+                                text-align: center;
+                                color: #0979FD;
+                            }
+                            .content-text{
+                                width: clamp(250px, 30vw, 360px);
+                                font-family: 'SVN Gilroy';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: clamp(14px, 0.84vw, 16px);
+                                padding: 0px clamp(28px, 2.1vw, 40px);
+                                align-items: center;
+                                text-align: center;
+                                color: #454647;
+                            }
+                        }
+                        .icon{
+                            width: clamp(70px, 4.4vw, 80px);
+                            height: clamp(70px, 4.4vw, 80px);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    .icon-active.deactive{
+                        padding: 0px;
+                        width: clamp(80px, 4.4vw, 80px);
+                        height: 80%;
+                        transition: 0.4s all;
+                        position: relative;
+                        display: flex;
+                        .icon{
+                            width: clamp(70px, 4.4vw, 80px);
+                            height: clamp(70px, 4.4vw, 80px);
+                        }
+                    }
+                    .mobile-item{
+                        display: flex;
+                        flex-direction: column;
+                        .img{
+                            width: clamp(80px, 4.4vw, 80px);
+                            height: clamp(80px, 4.4vw, 80px);
+                        }
+                    }
+                }
+                .content-container.mobile{
+                    display: none;
+                    .content{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 24px 40px;
+                        gap: 16px;
+                        background: #FFFFFF;
+                        max-width: 500px;
+                        .content-title{
+                            font-family: 'SVN Gilroy';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: clamp(21px, 4.9vw, 28px);
+                            line-height: 32px;
+                            text-align: center;
+                            color: #0979FD;
+                        }
+                        .content-text{
+                            font-family: 'SVN Gilroy';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            color: #454647;
+                        }
+                    }
+                }
+            }
+            .solution-button{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 34px;
+                gap: 10px;
+                width: 184px;
+                height: 40px;
+                background: linear-gradient(91.86deg, #0091EF 1.57%, #32D7D4 104.54%);
+                border-radius: 68px;
+                cursor: pointer;
+                .button-text{
+                    width: 91px;
+                    height: 24px;
+                    font-family: 'SVN Gilroy';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+///=========================End Section Solution
+///=========================
+.section-parking-system{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: clamp(20px, 5.37vw, 60px) 0px;
+    .parking-system-container{
+        padding: 0px 20px;
+        width: clamp(0px, 100%, 1180px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(40px, 3.125vw, 60px);
+        .header{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 14px;
+            .title{
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: clamp(28px, 7.47vw, 36px);
+                text-align: center;
+                color: #2C2D2E;
+            }
+            .sub-title{
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+                letter-spacing: 0.22em;
+                color: #0979FD;
+            }
+            .underline{
+                width: 88px;
+                height: 4px;
+                background: linear-gradient(90deg, #5A20FF 0%, #00E0C5 100%);
+                border-radius: 200px;
+            }
+        }
+        .software{
+            width: 100%;
+            gap: clamp(18px, 1.25vw, 24px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .software-title{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 24px;
+                background: #F3F9FF;
+                border-radius: 16px;
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: clamp(21px, 1.46vw, 28px);
+                text-align: center;
+                color: #0979FD;
+            }
+            .software-content{
+                gap: clamp(40px, 3.125vw, 60px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                .option-list{
+                    height: 58px;
+                    display: flex;
+                    width: 100%;
+                    gap: 60px;
+                    width: 100%;
+                    .option{
+                        height: 100%;
+                        display: flex;
+                        width: 100%;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .text{
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-family: 'SVN Gilroy';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: clamp(16px, 4.26vw, 21px);
+                            color: #76787A;
+                        }
+                        .text.active{
+                            color: #0979FD;
+                        }
+                        .underline{
+                            height: 4px;
+                            width: 0%;
+                            background: #0979FD;
+                            border-radius: 100px;
+                            transition: 0.4s all;
+                        }
+                        .underline.active{
+                            width: 100%;
+                            display: block;
+                            transition: 0.4s all;
+                        }
+                    }
+                }
+                .content-container{
+                    gap: clamp(40px, 3.125vw, 60px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .content{
+                        width: 100%;
+                        height: 312px;
+                        padding: clamp(20px, 2.45vw, 47px) calc(clamp(20px, 2.45vw, 47px) + clamp(30px, 1.825vw, 35px));
+                        border: 1px solid #6FC0FE;
+                        box-shadow: 0px 3px 8px 1px rgba(112, 144, 176, 0.15);
+                        border-radius: 16px;
+                        align-items: center;
+                        justify-content: center;
+                        .content-title{
+                            position: relative;
+                            font-family: 'SVN Gilroy';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: clamp(21px, 5.6vw, 28px);
+                            line-height: 32px;
+                            display: flex;
+                            align-items: center;
+                            color: #2C2D2E;
+                            height: 30%;
+                        }
+                        .content-text{
+                            height: 70%;
+                            font-family: 'SVN Gilroy';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #454647;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1px;
+                        }
+                        .content-img{
+                            position: absolute;
+                            width: clamp(60px, 3.65vw, 70px);
+                            right: calc(100% - clamp(30px, 1.825vw, 35px));
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+        .hardware{
+            width: 100%;
+            gap: clamp(18px, 1.25vw, 24px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .hardware-title{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 24px;
+                background: #F3F9FF;
+                border-radius: 16px;
+                font-family: 'SVN Gilroy';
+                font-style: normal;
+                font-weight: 700;
+                font-size: clamp(21px, 1.46vw, 28px);
+                text-align: center;
+                color: #0979FD;
+            }
+            .item-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: clamp(40px, 3.125vw, 60px);
+                width: 100%;
+                .title{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: clamp(14px, 0.84vw, 16px);
+                    .text{
+                        font-family: 'SVN Gilroy';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: clamp(21px, 5.6vw, 28px);
+                        display: flex;
+                        align-items: center;
+                        color: #2C2D2E;
+                    }
+                    .underline{
+                        width: 120px;
+                        height: 4px;
+                        background: #0979FD;
+                        border-radius: 10px;
+                    }
+                }
+                .item-sub-container{
+                    width: 100%;
+                    .item-content{
+                        width: 100%;
+                        gap: clamp(40px, 3.125vw, 60px);
+                        display: flex;
+                        justify-content: center;
+                        height: 360px;
+                        align-items: center;
+                        .content-left{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+                            border-radius: 16px;
+                        }
+                        .content-right{
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            align-items: center;
+                            // .underline{
+                            //     width: 100%;
+                            //     background-color: #E1E3E6;
+                            //     height: 1px;
+                            // }
+                            .content-right-title{
+                                width: 100%;
+                                display: flex;
+                                font-family: 'SVN Gilroy';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 21px;
+                                display: flex;
+                                align-items: center;
+                                color: #0979FD;
+                            }
+                            .content-right-desc{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                .desc-text{
+                                    font-family: 'SVN Gilroy';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: clamp(14px, 0.83vw, 16px);
+                                    color: #454647;
+                                }
+                            }
+                            .attribute-list{
+                                border-top: 1px solid #E1E3E6 ;
+                                width: 100%;
+                                display: flex;
+                                padding: 8px 0px;
+                                .attribute-left{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 4px;
+                                    .attribute-left-title{
+                                        font-family: 'SVN Gilroy';
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: clamp(14px, 0.83vw, 16px);
+                                        line-height: 24px;
+                                        display: flex;
+                                        align-items: center;
+                                        color: #454647;
+                                    }
+                                }
+                                .middle-text{
+                                    padding: 0px 16px;
+                                }
+                                .attribute-right{
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 4px;
+                                    .attribute-right-content{
+                                        display: flex;
+                                        padding: 0px 16px;
+                                        gap: 16px;
+                                        .text{
+                                            font-family: 'SVN Gilroy';
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: clamp(14px, 0.83vw, 16px);
+                                            line-height: 24px;
+                                            display: flex;
+                                            align-items: center;
+                                            color: #454647;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .appNmap-container{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .appNmap-img{
+                        width: 50%;
+                        object-fit: cover;
+                    }
+                    .appNmap-content-container{
+                        height: 100%;
+                        gap: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: 40px;
+                        .appNmap-content{
+                            gap: 40px;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding: 24px;
+                            border: 1px solid #6FC0FE;
+                            border-radius: 16px;
+                            width: 100%;
+                            .appNmap-right{
+                                .appNmap-right-title{
+                                    font-family: 'SVN Gilroy';
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 21px;
+                                    line-height: 32px;
+                                    display: flex;
+                                    align-items: center;
+                                    color: #0979FD;
+                                }
+                                .appNmap-right-text{
+                                    font-family: 'SVN Gilroy';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    color: #454647;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+///=========================Responsive
+///Section Header
+@media(max-width:900px){
+    .section-smart-parking-v3-header{
+        .smart-parking-v3-header{
+            background-image: linear-gradient(180deg, #32D7D4 0%, rgba(8, 156, 234, 0.65) 55.41%, rgba(8, 156, 234, 0.1) 85.6%, rgba(255, 255, 255, 0) 100%);
+            .back-ground{   
+                .back-ground__img{
+                    position: absolute;
+                    min-height: 360px;
+                    top:35%;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+            .smart-parking-header{
+                .smart-parking-content{
+                    flex-direction: column;
+                    gap: clamp(16px, 4.27vw, 32px);;
+                    .content-left{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+                        .content-left-title{
+                            text-align: center;
+                            align-items: center;
+                        }
+                        .content-left-text{
+                            text-align: center;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:1200px){
+    .section-smart-parking-v3-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .smart-parking-v3-header{
+            margin-bottom: 60px;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: clamp( 560px, 60vw, 844px);
+            overflow: hidden;
+            .smart-parking-header{
+                height: 100%;
+            }
+            .back-ground{
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                max-height: 844px;
+                min-height: 560px;
+                .back-ground__img{
+                    width: 100%;
+                    mask-image: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 1) 0%,
+                        rgba(0, 0, 0, 0) 80%,
+                    );
+                }
+            }
+        }
+    }
+}
+///Section definition
+@media only screen and (max-width: 1200px) {
+    .smart-parking-definition-v3 {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 43px;
+        .left-content {
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          .left-all-description {
+            .web-content-desc {
+              display: none;
+            }
+            .mobile-content-desc {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+}
+  
+@media only screen and (max-width: 620px) {
+.smart-parking-definition-v3 {
+    padding: 40px 20px;
+    .content {
+    .left-content {
+        max-width: 388px;
+    }
+
+    .right-content {
+        .right-content-container {
+        max-width: 388px;
+        }
+    }
+    }
+}
+}
+
+@media only screen and (max-width: 412px) {
+.smart-parking-definition-v3 {
+    .content {
+    .left-content {
+        max-width: 388px;
+    }
+
+    .right-content {
+        .right-content-container {
+        max-width: 388px;
+        }
+
+        .right-icon-item {
+        max-width: 120px;
+        }
+    }
+    }
+}
+}
+
+@media only screen and (max-width: 400px) {
+.smart-parking-definition-v3 {
+    .content {
+    .left-content {
+        max-width: 388px;
+    }
+
+    .right-content {
+        .right-content-container {
+        max-width: 388px;
+        gap: 50px;
+        justify-content: space-around;
+        }
+
+        .right-icon-item {
+        max-width: 120px;
+        }
+    }
+    }
+}
+}
+//Section Solution
+@media(max-width: 1000px){
+    .section-parking-solution{
+        .parking-solution-container{
+            .solution-item-container{
+                .solution-title{
+                    text-align: center;
+                }
+                .solution-content{
+                    height: fit-content;
+                    .content-container{
+                        display: none;
+                    }
+                    .content-container.mobile{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .solution-button{
+                    width: 100%;
+                    height: 48px;
+                    .button-text{
+                        width: 91px;
+                        height: 24px;
+                        font-family: 'SVN Gilroy';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        display: flex;
+                        align-items: center;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+//Section System
+@media(max-width: 850px){
+    .section-parking-system{
+        .parking-system-container{
+            .software{
+                .software-content{
+                    .option-list{
+                        .option{
+                            .underline{
+                                height: 2px;
+                            }
+                        }
+                    }
+                    .content-container{
+                        height: 721px;
+                        flex-direction: column;
+                        .content{
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            .content-title{
+                                width: 100%;
+                                .content-img{
+                                    position: absolute;
+                                    width: clamp(60px, 3.65vw, 70px);
+                                    right: calc(100% - clamp(30px, 1.825vw, 35px));
+                                    z-index: -1;
+                                }
+                            }
+                            .content-text{
+                                width: 100%;
+                                height: fit-content;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1200px){
+    .section-parking-system{
+        .parking-system-container{
+            .hardware{
+                .item-container{
+                    .item-sub-container{
+                        width: 100%;
+                        .item-content{
+                            .content-left{
+                                width: clamp(354px, 46.7vw, 560px);
+                            }
+                            .content-right{
+                                gap: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1000px){
+    .section-parking-system{
+        .parking-system-container{
+            padding: 0px 20px;
+            width: clamp(0px, 100%, 1180px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(40px, 3.125vw, 60px);
+            .hardware{
+                .item-container{
+                    max-width: 600px;
+                    gap: 30px;
+                    width: 100%;
+                    .item-sub-container{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 30px;
+                        width: 100%;
+                        .item-content{
+                            gap: 24px;
+                            flex-direction: column;
+                            height: fit-content;//
+                            .content-left{
+                                height: 30%;
+                                width: 100%;
+                                object-fit: cover;
+                                box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+                                border-radius: 16px;
+                            }
+                            .content-right{
+                                gap: 4px;
+                                align-items: flex-start;
+                                .attribute-list{
+                                    border: none;
+                                    max-width: 400px;
+                                    padding: 12px 0px;
+                                }
+                            }
+                        }
+                        .underline{
+                            width: 100%;
+                            background-color: #E1E3E6;
+                            height: 1px;
+                        }
+                    }
+                    .appNmap-container{
+                        width: 100%;
+                        gap: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        .appNmap-img{
+                            position: relative;
+                            left: 25vw;
+                            width: 100vw;
+                            object-fit: cover;
+                        }
+                        .appNmap-content-container{
+                            height: 100%;
+                            gap: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            gap: 40px;
+                            .appNmap-content{
+                                gap: 40px;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                padding: 24px;
+                                border: 1px solid #6FC0FE;
+                                border-radius: 16px;
+                                .appNmap-right{
+                                    .appNmap-right-title{
+                                        font-family: 'SVN Gilroy';
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: 21px;
+                                        line-height: 32px;
+                                        display: flex;
+                                        align-items: center;
+                                        color: #0979FD;
+                                    }
+                                    .appNmap-right-text{
+                                        font-family: 'SVN Gilroy';
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        color: #454647;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 520px){
+    .section-parking-system{
+        .parking-system-container{
+            .hardware{
+                .item-container{
+                    .appNmap-container{
+                        .appNmap-content-container{
+                            .appNmap-content{
+                                display: flex;
+                                gap: 24px;
+                                flex-direction: column;
+                                .appNmap-right{
+                                    .appNmap-right-title{
+                                        justify-content: center;
+                                    }
+                                    .appNmap-right-text{
+                                        align-items: center;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

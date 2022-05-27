@@ -1,0 +1,186 @@
+.section-form-contact {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  .contact-us-form {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .contact-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2c2d2e;
+    margin-right: 3px;
+    display: flex;
+    padding: 16px 0;
+  }
+
+  .btn-advise-now {
+    margin-top: 40px;
+    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    border-radius: 68px;
+    border: none;
+    max-width: 219px;
+    padding: 8px 64px;
+    &:hover {
+      box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
+        0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
+}
+
+.section-quick-support {
+  // margin-top: 90px;
+  .section-quick-support-row {
+    min-height: 800px;
+    overflow: hidden;
+    .col-left {
+      color: #fff;
+      background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      .quick-support-content {
+        max-width: 600px;
+        padding: 0 20px;
+        .quick-support-content-row {
+          margin-bottom: 48px;
+          // margin-right: 60px;
+          .quick-support-icon {
+            min-width: 24px;
+          }
+          .quick-support-content-title {
+            font-family: "SVN-Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
+            color: #ffffff;
+          }
+          .quick-support-body {
+            margin-left: 16px;
+            h5 {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 21px;
+              line-height: 32px;
+            }
+            p {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              padding: 8px 0;
+            }
+            span {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-map {
+    height: 44px;
+  }
+  .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+    min-height: 756px !important;
+    z-index: 19;
+  }
+  .menu-map-title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 32px;
+    cursor: pointer;
+    &__active {
+      color: #0979fd;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 32px;
+      cursor: pointer;
+    }
+  }
+}
+
+.map-active {
+  border-top: 4px solid #0979fd;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-quick-support {
+    .section-quick-support-row {
+      .col-left {
+        justify-content: left;
+        background: none !important;
+        color: #333;
+        .quick-support-content {
+          max-width: 100%;
+          padding-top: 40px;
+          .quick-support-content-row {
+            margin-bottom: 32px;
+            .quick-support-content-title {
+              font-family: "SVN-Gilroy";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 21px !important;
+              line-height: 32px !important;
+              text-transform: capitalize;
+              color: #2c2d2e !important;
+            }
+            .quick-support-icon {
+              .icon-desktop {
+                display: none !important;
+              }
+              .icon-mobile {
+                display: block !important;
+              }
+            }
+            .quick-support-body {
+              h5 {
+                font-family: "SVN-Gilroy";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 21px;
+                line-height: 32px;
+                color: #2391fd;
+              }
+            }
+          }
+        }
+      }
+      .col-right {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+    .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+      min-height: 440px !important;
+      z-index: 19;
+    }
+  }
+  .section-form-contact {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #ccc;
+    .btn-advise-now {
+      margin-top: 16px;
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+  }
+}

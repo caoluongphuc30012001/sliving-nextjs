@@ -1,0 +1,1382 @@
+// Home Page Version 3
+/*
+* 0.======================Begin Core CSS======================
+*/
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  margin-bottom: 0px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h3.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #2b2b33;
+}
+
+h4.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+h5.detail-sub-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 133%;
+  letter-spacing: 0.22em;
+  color: #0979fd;
+}
+
+span.detail-v3 {
+  font-family: "SVN-Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 133%;
+  color: #212633;
+  margin-bottom: 18px;
+}
+
+.btn-gradient-blue {
+  width: fit-content;
+  height: 40px;
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+  border-radius: 68px;
+  border: none;
+  padding: 8px 64px;
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 133%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container-1220 {
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.m-left-right-12 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.m-left-right-24 {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.max-width-1180 {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+/*
+* ======================End Core CSS======================
+*/
+
+/*
+* ======================Begin Button Group CSS======================
+*/
+.btn-group {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  .advise-now-btn,
+  .learn-more-btn {
+    height: 40px;
+    padding: 8px 34px;
+    width: 184px;
+  }
+
+  .advise-now-btn {
+    margin-right: 34px;
+    background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    border-radius: 68px;
+    border: none;
+    &:hover {
+      box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
+        0px 8px 8px -4px rgba(24, 39, 75, 0.08);
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+  }
+  .learn-more-btn {
+    border-radius: 68px;
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, white, white),
+      linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    &:hover {
+      background: linear-gradient(to right, #ddefff, #ddefff),
+        linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+      background-clip: padding-box, border-box;
+      background-origin: padding-box, border-box;
+    }
+    span {
+      margin: 0 auto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .btn-group {
+    display: flex;
+    // justify-content: space-around;
+    align-items: center;
+    .advise-now-btn {
+      margin-right: 2px;
+    }
+  }
+}
+
+//   .advise-now-btn span,
+//   .learn-more-btn span {
+//     font-size: 12px !important;
+//   }
+// }
+
+@media only screen and (max-width: 390px) {
+  .btn-group {
+    display: block !important;
+  }
+
+  .advise-now-btn,
+  .learn-more-btn {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+}
+// =======End Responsive=======
+/*
+* ======================End Button Group CSS======================
+*/
+
+/*
+* ======================Begin CSS Row Center======================
+*/
+.row-line-center {
+  text-align: center;
+  .title-eng-line-center {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 133%;
+    // text-align: center;
+    letter-spacing: 0.22em;
+    color: #0979fd;
+  }
+
+  .title-line-center {
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    // text-align: center;
+    color: #2c2d2e;
+    text-transform: capitalize;
+  }
+
+  .img-line-center {
+    margin-top: 16px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .description-line-center {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #454647;
+    // margin-top: -16px;
+  }
+}
+
+.slider-desktop {
+  max-height: 844px;
+  height: 100vh;
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .row-line-center {
+    .title-eng-line-center,
+    .title-line-center {
+      // text-align: start;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .title-eng-line-center {
+      font-size: 14px;
+    }
+    .img-line-center {
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+    .description-line-center {
+      display: none;
+    }
+  }
+}
+// =======End Responsive=======
+/*
+* ======================End CSS Row Center======================
+*/
+
+/* 
+* 1.======================Begin Header Page======================
+*/
+.home-page-v3 {
+  // =======Begin Custom swiper=======
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 60px !important;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next,
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    display: none !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+  }
+  // =======End Custom swiper=======
+}
+.mySwiper {
+  position: relative;
+  .view-360 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    button {
+      border-radius: 68px;
+      padding: 8px 49px;
+      background-color: transparent;
+      font-size: 12px;
+      color: #fff;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        margin-right: 16px;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+}
+
+.home-page-tag {
+  background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+}
+
+.group-contact-header {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  span {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 40px;
+    color: #ffffff;
+    &.hotline {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+
+.group-service-tag {
+  padding: 40px 0;
+}
+
+.card-sub-tag {
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  height: 100%;
+  .card-sub-tag-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 32px;
+    color: #ffffff;
+    padding-top: 10px;
+  }
+  .card-sub-tag-des {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .home-page-v3 .swiper-horizontal > .swiper-pagination-bullets,
+  .home-page-v3 .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .home-page-v3 .swiper-pagination-custom,
+  .home-page-v3 .swiper-pagination-fraction {
+    bottom: 8px !important;
+  }
+
+  .home-page-tag {
+    // padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .home-page-v3 {
+    .back-ground-mobile,
+    .back-ground-mobile {
+      display: block !important;
+    }
+    .back-ground-desktop,
+    .slider-desktop {
+      display: none !important;
+    }
+  }
+
+  .group-contact-header {
+    justify-content: center;
+    img {
+      height: 24px;
+      width: 24px;
+    }
+    .contact-header-wrap {
+      display: flex;
+      span {
+        font-size: 14px;
+        &.hotline {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .group-service-tag {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+    padding: 0;
+  }
+  // .card-sub-tag-col {
+  //   padding-top: 10px;
+  // }
+  .card-sub-tag {
+    padding: 8px;
+    // height: auto;
+    .card-sub-tag-icon {
+      margin: 0 auto;
+      height: 24px;
+      // font-size: 24px;
+      width: 24px;
+    }
+    .card-sub-tag-title {
+      text-align: center;
+      font-size: 14px;
+    }
+    .card-sub-tag-des {
+      display: none;
+    }
+  }
+}
+// =======End Responsive=======
+/* 
+* ======================End Header Page======================
+*/
+
+/* 
+* 2.======================Begin Section Solution======================
+*/
+.section-solution {
+  padding-top: 120px;
+  background-color: #f2f6ff;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 16px;
+    li {
+      &::marker {
+        display: none;
+      }
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 4px;
+      font-family: "SVN Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #454647;
+
+      &::before {
+        content: "";
+        background-image: url("../../images/icon/icon-done-check.svg");
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .section-solution-about {
+    padding-bottom: 40px;
+  }
+
+  .section-solution-sliving {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .solution-sliving-card {
+      height: 100px;
+      width: 100px;
+      align-items: center;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .solution-sliving-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #454647;
+      padding: 0 24px;
+    }
+  }
+
+  .solution-about-img-mobile,
+  .solution-about-cap {
+    display: none !important;
+  }
+
+  .solution-about-cap {
+    padding: 15px;
+    background: #f3f9ff;
+    box-shadow: 0px 6px 8px -6px rgb(24 39 75 / 12%),
+      0px 8px 16px -6px rgb(24 39 75 / 8%);
+    border-radius: 8px;
+    min-height: 100px;
+
+    .solution-about-cap-line {
+      background: #0979fd;
+      border-radius: 44.5833px;
+      // height: 100%;
+      width: 5px;
+      margin-right: 16px;
+    }
+
+    .solution-about-cap-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454647;
+    }
+  }
+  .solution-about-cap-desktop {
+    padding: 15px;
+    background: #f3f9ff;
+    box-shadow: 0px 6px 8px -6px rgb(24 39 75 / 12%),
+      0px 8px 16px -6px rgb(24 39 75 / 8%);
+    border-radius: 8px;
+    max-height: 100px;
+    max-width: 400px;
+    bottom: -5%;
+    left: -6%;
+    .solution-about-cap-line {
+      background: #0979fd;
+      border-radius: 44.5833px;
+      // height: 100%;
+      width: 5px;
+      margin-right: 16px;
+    }
+
+    .solution-about-cap-content {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454647;
+    }
+  }
+  .row-line-center {
+    text-align: start !important;
+    .img-line-center {
+      justify-content: normal !important;
+      // padding-bottom: 18px !important;
+    }
+  }
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .section-solution .section-solution-sliving .solution-sliving-content {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section-solution {
+    padding-top: 40px !important;
+    .row-line-center {
+      text-align: center !important;
+      .img-line-center {
+        justify-content: center !important;
+        // padding-bottom: 32px;
+      }
+    }
+    h3.detail-v3 {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 32px;
+      color: #2c2d2e;
+    }
+
+    span.detail-v3 {
+      margin-bottom: 0;
+    }
+
+    .solution-about-img,
+    .solution-about-cap-desktop {
+      display: none !important;
+    }
+
+    .solution-about-img-mobile,
+    .solution-about-cap {
+      display: flex !important;
+      // padding-top: 32px;
+      width: 100%;
+    }
+    .solution-about-img-mobile {
+      // padding-top: 32px;
+    }
+    .solution-about-cap {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    .btn-gradient-blue {
+      width: 100%;
+    }
+
+    .list-ul-li {
+      li {
+        margin-bottom: 4px;
+      }
+    }
+
+    .section-solution-sliving {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #ffffff !important;
+      .solution-sliving-img {
+        display: none;
+      }
+    }
+  }
+}
+// =======End Responsive=======
+/* 
+* ======================End Section Solution======================
+*/
+
+/* 
+* 3.======================Begin Section Product======================
+*/
+.section-product-home-page-v3 {
+  padding: 120px 0 60px;
+  background: #fff !important;
+  // .container-1220 > .card-product:not(:first-child) {
+  //   padding-top: 120px;
+  // }
+  .card-product {
+    padding-top: 120px;
+  }
+  .container-1220 .card-product:nth-child(2) {
+    padding-top: 0px;
+  }
+  .card-product-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: #0979fd;
+    text-transform: capitalize;
+  }
+  .card-product-subtitle {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 32px;
+    color: #454647;
+    padding-top: 4px;
+  }
+  .card-product-content {
+    padding: 0;
+    margin: 0;
+  }
+  .card-product-item {
+    list-style: none;
+    padding-top: 32px;
+
+    .card-product-item-title {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 10px;
+      color: #2c2d2e;
+    }
+
+    .card-product-item-des {
+      font-family: "SVN-Gilroy";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 16px;
+      color: #454647;
+    }
+  }
+
+  .download-app-list {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 26px;
+    width: 400px;
+    padding: 0 20px;
+    .download-app-img {
+      cursor: pointer;
+      box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+        0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+      border-radius: 6px;
+    }
+  }
+}
+
+// =======Begin Responsive=======
+@media only screen and (max-width: 767px) {
+  .section-product-home-page-v3 {
+    background: #f3f9ff !important;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    .card-product-item {
+      padding-top: 24px;
+    }
+    .card-product-img,
+    .download-app-list-desktop {
+      display: none !important;
+    }
+    .card-product-img-mobile {
+      display: flex !important;
+      justify-content: center;
+    }
+
+    .card-product-item-des {
+      padding-top: 12px !important;
+    }
+
+    .card-product {
+      padding-top: 0px;
+
+      .card-product-title {
+        font-size: 21px;
+        text-align: center;
+        // padding-top: 32px;
+      }
+
+      .card-product-subtitle {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 12px;
+      }
+    }
+    .card-product:not(:last-child) {
+      border-bottom: 1px solid #e1e3e6;
+      margin-bottom: 32px;
+    }
+    .btn-group {
+      width: 100%;
+      justify-content: space-between;
+    }
+    .download-app-list {
+      width: 388px;
+      // height: 57px;
+      bottom: -35px;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .section-product-home-page-v3 .download-app-list {
+    width: 350px;
+    height: 40px;
+    bottom: -15px;
+  }
+}
+// =======End Responsive=======
+/* 
+* ======================End Section Product======================
+*/
+
+/* 
+* 4.======================Begin Section Smart Parking======================
+*/
+.bg-ground-smart-parking {
+  border: 1px solid #e1e3e6;
+  padding: 60px 0;
+  .btn-group {
+    display: flex;
+    justify-content: center;
+  }
+  .smart-parking-cards {
+    margin-top: 32px;
+  }
+  .smart-parking-group-img {
+    margin: 0 auto;
+    // margin-top: 60px;
+  }
+  .smart-parking-group-img-mobile {
+    display: none;
+  }
+  .smart-parking-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0979fd;
+    margin-top: 36px;
+  }
+  .smart-parking-des {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    color: #454647;
+    max-width: 765px;
+    margin-top: 14px;
+  }
+
+  .smart-parking-card {
+    text-align: center;
+    // margin-top: 32px;
+    .smart-parking-card-top {
+      height: 100px;
+    }
+    .smart-parking-card-img {
+      margin: 0 auto;
+    }
+    .smart-parking-card-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #454647;
+      margin-top: 25px;
+    }
+  }
+}
+// =======Begin Responsive=======
+@media only screen and (max-width: 992px) {
+  .btn-group {
+    display: flex;
+    justify-content: space-around !important;
+  }
+  .bg-ground-smart-parking {
+    padding-top: 40px;
+    padding-bottom: 40px 0 8px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mySwiper {
+    .view-360 {
+      button {
+        padding: 8px 24px;
+      }
+    }
+  }
+  .bg-ground-smart-parking {
+    padding: 40px 0 8px;
+  }
+
+  .bg-ground-smart-parking {
+    border: none;
+
+    .smart-parking-group-img {
+      display: none;
+    }
+
+    .smart-parking-group-img-mobile {
+      display: block !important;
+    }
+
+    .smart-parking-title {
+      font-size: 21px;
+      margin-top: 32px;
+    }
+
+    .smart-parking-des {
+      text-align: justify;
+    }
+
+    .smart-parking-card {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e1e3e6;
+      .smart-parking-card-top {
+        height: 100px;
+        width: 100px;
+        margin-right: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .smart-parking-card-title {
+        text-align: start;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .bg-ground-smart-lighting
+    .smart-lighting-group
+    .smart-lighting-card
+    .smart-lighting-bottom
+    .smart-lighting-content {
+    padding: 0 !important;
+  }
+}
+// =======End Responsive=======
+/* 
+* ======================End Section Smart Parking======================
+*/
+
+/* 
+* 5.======================Begin Section Smart Lighting======================
+*/
+.bg-ground-smart-lighting {
+  padding-top: 60px;
+  padding-bottom: 120px;
+  .smart-lighting-row {
+    align-items: flex-end;
+  }
+  .smart-lighting-des {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    color: #454647;
+  }
+
+  .smart-lighting-title {
+    font-family: "SVN-Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #454647;
+  }
+
+  .smart-lighting-group {
+    // display: flex;
+    // justify-content: space-between;
+    margin-bottom: 25px;
+
+    .smart-lighting-card {
+      //   max-width: 100px;
+
+      .smart-lighting-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // height: 100px;
+        // width: 100px;
+      }
+
+      .smart-lighting-bottom {
+        max-width: 105px;
+        margin: auto;
+        .smart-lighting-content {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          color: #454647;
+          padding: 8px 8px 0px;
+        }
+      }
+    }
+    .smart-lighting-icon {
+      height: 100px;
+      width: 100px;
+
+      .smart-lighting-img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .smart-lighting-img-right {
+    min-height: 625px;
+  }
+}
+// =======Begin Responsive=======
+@media only screen and (max-width: 767px) {
+  .bg-ground-smart-lighting {
+    padding: 40px 0 8px;
+    background: #f3f9ff;
+
+    .smart-lighting-row {
+      // margin-top: 32px;
+      flex-direction: column-reverse;
+    }
+    .smart-lighting-group {
+      margin-bottom: 0;
+    }
+    .smart-lighting-img-right,
+    .smart-lighting-img-left,
+    .smart-lighting-des-desktop {
+      display: none;
+    }
+
+    .smart-lighting-img-left-mobile,
+    .smart-lighting-des-mobile {
+      display: block !important;
+      margin: 0 auto;
+    }
+
+    .smart-lighting-img-left-mobile {
+      padding: 32px 0;
+    }
+  }
+}
+// =======End Responsive=======
+/* 
+* ======================End Section Smart Lighting======================
+*/
+
+// ======================Begin Section Feature Project======================
+.bg-ground-feature-project {
+  background: #f3f9ff;
+  .feature-project-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    // margin-top: 60px;
+    min-width: 600px;
+    height: 532px;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    @for $i from 1 through 4 {
+      @media screen and (max-width: (798px - $i * 80)) {
+        min-width: 600px - $i * 80;
+        .option:nth-child(#{6-$i}) {
+          display: none;
+        }
+      }
+    }
+
+    .option {
+      position: relative;
+      overflow: hidden;
+      min-width: 90px;
+      //   margin: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-size: auto 120%;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+      &.active {
+        flex-grow: 10000;
+        transform: scale(1);
+        max-width: 764px;
+        margin: 0px 10px;
+        border-radius: 56px;
+
+        .shadow {
+          background: linear-gradient(
+            180deg,
+            rgba(33, 33, 33, 0) 0%,
+            #242424 100%
+          );
+        }
+        .label {
+          bottom: 20px;
+          left: 20px;
+          .info > div {
+            left: 0px;
+            opacity: 1;
+          }
+        }
+      }
+      &:not(.active) {
+        flex-grow: 1;
+        border-radius: 30px;
+        .shadow {
+          bottom: -40px;
+          box-shadow: inset 0 -120px 0px -120px black,
+            inset 0 -120px 0px -100px black;
+        }
+        .label {
+          bottom: 10px;
+          left: 15px;
+          .info > div {
+            left: 20px;
+            opacity: 0;
+          }
+        }
+      }
+      .shadow {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 120px;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+      .label {
+        display: flex;
+        position: absolute;
+        right: 0px;
+        height: 60px;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        .icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          min-width: 60px;
+          max-width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          background-color: white;
+
+          .number {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            color: #0979fd;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+          color: white;
+          white-space: pre;
+          > div {
+            position: relative;
+            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+              opacity 0.5s ease-out;
+          }
+          .main {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 32px;
+            text-align: center;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .options-mobile {
+    height: 290px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    .feature-card {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      border-radius: 16px;
+
+      .shadow {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 120px;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        background: linear-gradient(
+          180deg,
+          rgba(33, 33, 33, 0) 0%,
+          #242424 100%
+        );
+      }
+
+      .label {
+        display: flex;
+        position: absolute;
+        bottom: 30px;
+        left: 16px;
+        height: 60px;
+        right: 16px;
+
+        .icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          min-width: 48px;
+          max-width: 48px;
+          height: 48px;
+          border-radius: 100%;
+          background-color: white;
+
+          .number {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 32px;
+            text-align: center;
+            color: #0979fd;
+          }
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+          color: white;
+          > div {
+            position: relative;
+            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+              opacity 0.5s ease-out;
+          }
+
+          .main {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    // =======Begin Custom swiper=======
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide {
+      width: 80%;
+    }
+    // =======End Custom swiper=======
+  }
+  @media only screen and (max-width: 992px) {
+    background: #ffffff;
+    .feature-project-container {
+      padding-top: 40px;
+      padding-bottom: 0px;
+    }
+    .options {
+      display: none;
+    }
+    .options-mobile {
+      display: block !important;
+      padding-left: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .options-mobile {
+      display: block !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+  }
+}
+// ======================End Section Feature Project======================
+
+/* 
+* ======================Begin Section Help More======================
+*/
+.bg-ground-help-more {
+  background: #fff;
+}
+.help-more-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.help-more-cards {
+  margin-top: 36px !important;
+}
+
+.help-more-card {
+  text-align: center;
+  border: 1px solid #6fc0fe;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 34px 0;
+  // margin-top: 28.5px;
+}
+
+.help-more-card-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.help-more-card-title {
+  margin: 16px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 133%;
+  text-align: center;
+  text-transform: capitalize;
+
+  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.help-more-card-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  text-align: center;
+  color: #59637e;
+  margin-bottom: 12px;
+  max-width: 366px;
+  margin: auto;
+  // padding-bottom: 34px;
+}
+@media only screen and (max-width: 992px) {
+  .help-more-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .help-more-cards {
+    margin-top: 0 !important;
+  }
+}
+/* 
+* ======================End Section Help More======================
+*/

@@ -7,7 +7,7 @@ import favicon from "@images/logo/logo-small.svg";
 //import banner from "@images/main-page-v2/header-top-4.jpg";
 
 import i18next from "i18next";
-function Seo({ url,description,  title }) {
+function Seo({ url, description, title, metaImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,29 +23,31 @@ function Seo({ url,description,  title }) {
       }
     `
   );
-  const lang = i18next.language; 
+  const lang = i18next.language;
   const metaDescription = description || site.siteMetadata.description;
-  const metaUrl = url || site.siteMetadata.siteUrl;
+  const metaUrl = site.siteMetadata.siteUrl + url || site.siteMetadata.siteUrl;
   const titleMeta = title || site.siteMetadata.title;
-  const image = `${site.siteMetadata.siteUrl}/sliving-banner.jpg`;
+  const image = metaImage
+    ? `${site.siteMetadata.siteUrl}${metaImage}`
+    : `${site.siteMetadata.siteUrl}/thumbnail.png`;
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
     >
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
       <link href={favicon} rel="shortcut icon"></link>
       <title>{titleMeta}</title>
       <link rel="canonical" href={site.siteMetadata.siteUrl} />
@@ -67,10 +69,7 @@ function Seo({ url,description,  title }) {
       <meta property="og:description" content={metaDescription} />
 
       <meta property="og:image" content={image} />
-      <meta
-          property="og:image:alt"
-          content={metaDescription}
-        />
+      <meta property="og:image:alt" content={metaDescription} />
 
       <meta property="og:image:with" content="1280" />
       <meta property="og:image:height" content="686" />
@@ -81,7 +80,6 @@ function Seo({ url,description,  title }) {
       <meta property="twitter:image" content={image} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={metaUrl} />
-
     </Helmet>
   );
 }
@@ -95,11 +93,8 @@ Seo.propTypes = {
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
+  metaImage: PropTypes.string,
+  url: PropTypes.string,
 };
 
 export default Seo;

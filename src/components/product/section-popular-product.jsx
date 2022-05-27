@@ -1,0 +1,84 @@
+import React, { useState } from "react";
+import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
+import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+
+import { Link } from "gatsby";
+const SectionPopularProduct = ({ listProduct }) => {
+  const [current, setCurrent] = useState(1);
+  const [modalShow, setModalShow] = React.useState(false);
+
+  return (
+    <section className="section-popular-product-v3">
+      <div className="popular-product-container">
+        <div className="title-box">
+          <p className="sub-title">FEATURED PRODUCTS</p>
+          <p className="title">Sản Phẩm Nổi Bật</p>
+          <div className="item-border"></div>
+        </div>
+        <div className="content-container">
+          <div className="swiper-container-v3">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={20}
+              centeredSlides={true}
+              grabCursor={true}
+              loop={true}
+              navigation={{
+                nextEl: ".button-next-slider",
+                prevEl: ".button-prev-slider",
+              }}
+              modules={[Pagination, Navigation]}
+              onSlideChange={(swiper) => {
+                setCurrent((swiper.activeIndex % listProduct.length) + 1);
+              }}
+              className="container-cover"
+            >
+              {listProduct.length>0&&listProduct.map((item) => {
+                return (
+                  <SwiperSlide key={item.id} className="list-product">
+                    <div className="item-box">
+                      <div className="img-box">
+                        <img src={item.image} alt="" />
+                      </div>
+                      <div className="description-box">
+                        <p className="sub-title">{item.description}</p>
+                        <p className="title">{item.title}</p>
+                        <div className="btn-group">
+                          <button
+                            className="advise-now-btn"
+                            onClick={() => setModalShow(true)}
+                          >
+                            <span>Tư vấn ngay</span>
+                          </button>
+                          <Link to={`/product-detail/${item.type}`}>
+                            <button type="button" className="learn-more-btn">
+                              <span>Tìm hiểu thêm</span>
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+          <div className="nav-swiper-box">
+            <img src={arrowLeft} alt="" className="button-prev-slider" />
+            <p className="page-current">{`${current}/${listProduct.length}`}</p>
+            <img src={arrowRight} alt="" className="button-next-slider" />
+          </div>
+        </div>
+      </div>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+    </section>
+  );
+};
+
+export default SectionPopularProduct;

@@ -1,5 +1,5 @@
 const QueryProductPage = () => {
-  const query = ` 
+  ` 
   query Product {
     ProductPage: allMarkdownRemark(
       sort: {fields: frontmatter___date}
@@ -147,8 +147,6 @@ const QueryProductPage = () => {
   }
   
   `;
-
-  return (query);
 };
 
 module.exports.QueryProductPage = QueryProductPage;
