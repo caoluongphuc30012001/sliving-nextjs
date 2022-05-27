@@ -105,6 +105,9 @@ img {
         }
       }
     }
+    .header-content.hide{
+      position: static;
+    }
   }
 }
 @media (max-width: 576px) {

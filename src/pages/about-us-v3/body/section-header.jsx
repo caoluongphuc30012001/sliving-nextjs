@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SectionHeader = () => {
+  const [headerToggle, setheaderToggle] = useState(false);
+  const isBrowser = typeof window !== "undefined";
+
+  useEffect(() => {
+    if (isBrowser) {
+      window.addEventListener("scroll", OnScroll);
+    }
+    return () => {
+      window.removeEventListener("scroll", OnScroll);
+    };
+  }, []);
+
+  function OnScroll() {
+    if (
+      document.body.scrollTop > 1000 ||
+      document.documentElement.scrollTop > 1000
+    ) {
+      setheaderToggle(true);
+    } else {
+      setheaderToggle(false);
+    }
+  }
   return (
     <header className="section-about-us-header">
       <div className="header-container">
-        <div className="header-content">
+        <div
+          className={headerToggle ? "header-content hide" : "header-content"}
+        >
           <h2 className="content-title">VỀ CHÚNG TÔI</h2>
           <div className="content-subtitle-container">
             <p className="content-subtitle-desktop">
