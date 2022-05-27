@@ -24,7 +24,7 @@ const listContact = [
 ];
 
 function SectionQuickSupport() {
-  const [position, setPosition] = useState();
+  const [position, setPosition] = useState(listContact[0].position);
   const [activeContact, setActiveContact] = useState(listContact[0]);
   const [map, setMap] = useState();
   const isBrowser = typeof window !== "undefined";
@@ -40,7 +40,7 @@ function SectionQuickSupport() {
     if (isBrowser)
       return <SectionMap position={position} whenCreated={onMapCreated} />;
     else return [];
-  }, [isBrowser]);
+  }, [isBrowser, position]);
 
   const handleOnClick = useCallback(
     (contact) => {
@@ -74,8 +74,8 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Phone</h5>
-                <span>19006054</span>
+                <h5>Số điện thoại</h5>
+                <span>1900 999 999</span>
               </div>
             </div>
             <div className="quick-support-content-row d-flex">
@@ -106,7 +106,7 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Address</h5>
+                <h5>Địa chỉ</h5>
                 <p>Trụ sở chính Hà Nội</p>
                 <span>
                   Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội
