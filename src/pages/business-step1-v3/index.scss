@@ -201,6 +201,11 @@
       .bottom-content-container.active {
         box-shadow: 0px 0px 0px 5px #0979fd;
         position: relative;
+        .solution-item-desc{
+          span {
+            color: #0979fd;
+          }
+        }
       }
 
       .bottom-content-container.active::after {

@@ -63,11 +63,11 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "cảm ứng",
+        title: "Cảm ứng",
       },
       {
         id: 1,
-        title: "kịch bản",
+        title: "Kịch bản",
       },
     ],
     phoneImg: null,
@@ -103,11 +103,11 @@ const listSlide = [
     titles: [
       {
         id: 0,
-        title: "hình chữ nhật",
+        title: "Hình chữ nhật",
       },
       {
         id: 1,
-        title: "hình vuông",
+        title: "Hình vuông",
       },
     ],
     phoneImg: null,
@@ -174,7 +174,7 @@ const listSlide = [
       },
       {
         id: 1,
-        title: "Gateway Slug",
+        title: "Gateway plug",
       },
     ],
     phoneImg: null,

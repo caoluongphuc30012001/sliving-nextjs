@@ -21,7 +21,7 @@ const SectionSwiperVideo = ({ listVideo }) => {
       <div className="swiper-video-container">
         <div className="title-box">
           <p className="sub-title">VIDEO SLIVING</p>
-          <p className="title">Trải Nghiệm Smart Home - Sliving</p>
+          <p className="title">Trải Nghiệm Smart Home</p>
           <div className="item-border"></div>
         </div>
         <Swiper

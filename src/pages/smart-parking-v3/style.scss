@@ -72,6 +72,7 @@
                         font-style: normal;
                         font-weight: 700;
                         font-size: clamp( 14px, 1vw, 16px);
+                        padding: 0px 20px;
                         line-height: 24px;
                         color: #FFFFFF;
                     }
@@ -115,7 +116,7 @@
           font-family: "SVN Gilroy";
           font-style: normal;
           font-weight: 700;
-          font-size: 28px;
+          font-size: clamp(21px, 5.6vw, 28px);
           line-height: 32px;
           color: #0979fd;
         }
@@ -254,7 +255,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 28px;
+                font-size: clamp(21px, 5.6vw, 28px);
                 line-height: 32px;
                 color: #0979FD;
             }
@@ -473,7 +474,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: clamp(22px, 1.46vw, 28px);
+                font-size: clamp(21px, 1.46vw, 28px);
                 text-align: center;
                 color: #0979FD;
             }
@@ -545,7 +546,7 @@
                             font-family: 'SVN Gilroy';
                             font-style: normal;
                             font-weight: 700;
-                            font-size: 28px;
+                            font-size: clamp(21px, 5.6vw, 28px);
                             line-height: 32px;
                             display: flex;
                             align-items: center;
@@ -593,7 +594,7 @@
                 font-family: 'SVN Gilroy';
                 font-style: normal;
                 font-weight: 700;
-                font-size: clamp(22px, 1.46vw, 28px);
+                font-size: clamp(21px, 1.46vw, 28px);
                 text-align: center;
                 color: #0979FD;
             }
@@ -615,7 +616,7 @@
                         font-family: 'SVN Gilroy';
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 28px;
+                        font-size: clamp(21px, 5.6vw, 28px);
                         display: flex;
                         align-items: center;
                         color: #2C2D2E;
@@ -801,7 +802,7 @@
             .smart-parking-header{
                 .smart-parking-content{
                     flex-direction: column;
-                    gap: 32px;
+                    gap: clamp(16px, 4.27vw, 32px);;
                     .content-left{
                         display: flex;
                         flex-direction: column;
@@ -837,6 +838,9 @@
             justify-content: center;
             height: clamp( 560px, 60vw, 844px);
             overflow: hidden;
+            .smart-parking-header{
+                height: 100%;
+            }
             .back-ground{
                 object-fit: cover;
                 position: absolute;
@@ -865,7 +869,6 @@
         flex-direction: column;
         align-items: center;
         gap: 43px;
-  
         .left-content {
           align-items: center;
           height: 100%;
@@ -874,7 +877,6 @@
             .web-content-desc {
               display: none;
             }
-  
             .mobile-content-desc {
               display: flex;
             }
@@ -1173,6 +1175,7 @@
                                     }
                                     .appNmap-right-text{
                                         align-items: center;
+                                        text-align: center;
                                     }
                                 }
                             }

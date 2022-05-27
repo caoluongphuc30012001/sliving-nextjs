@@ -528,6 +528,7 @@ const SectionParkingSystem = () => {
                   );
                 })}
               </div>
+              <div className="underline"></div>
             </div>
           </div>
         </div>
