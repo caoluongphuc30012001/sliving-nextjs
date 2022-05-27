@@ -210,7 +210,7 @@ const listSlide = [
       {
         id: 1,
         img: ggPlayItem,
-        link: "https://1p.io/AppSlivingApple",
+        link: "https://1p.io/SlivingAppChplay",
       },
     ],
   },
