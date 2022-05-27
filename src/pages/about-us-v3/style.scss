@@ -934,10 +934,10 @@ img {
     padding-bottom: clamp(40px, 7vw, 120px);
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    // gap: 60px;
     .content-container {
       padding: 40px 0;
-      row-gap: 32px;
+      // row-gap: 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1011,11 +1011,6 @@ img {
 }
 @media (max-width: 992px) {
   .bg-section-activity {
-    .activity-card {
-      .activity-card-title {
-        font-size: 16px;
-      }
-    }
     .section-activity-title {
       font-family: "SVN-Gilroy";
       font-style: normal;
@@ -1023,7 +1018,8 @@ img {
       font-size: 21px;
       line-height: 32px;
     }
-    .certification-card .certification-card-title {
+    .certification-card .certification-card-title,
+    .activity-card .activity-card-title {
       font-family: "SVN-Gilroy";
       font-style: normal;
       font-weight: 700;
@@ -1037,7 +1033,6 @@ img {
   background: #f3f9ff;
   .description-line-center {
     display: block !important;
-    text-align: justify !important;
   }
   .our-partner-container {
     padding: clamp(40px, 7vw, 120px) 20px;
@@ -1061,5 +1056,10 @@ img {
         object-fit: cover;
       }
     }
+  }
+}
+@media (max-width: 375px) {
+  .bg-section-our-partner .description-line-center {
+    text-align: justify !important;
   }
 }

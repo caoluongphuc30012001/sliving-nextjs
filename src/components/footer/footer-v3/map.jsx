@@ -1,15 +1,15 @@
 import React, { useMemo } from "react";
-import iconLocation from "/assets/image/svg/icon-pin.svg";
+import iconLocation from "@images/footer-v3/svg/icon-location.svg";
 
 function SectionMap({ position, whenCreated }) {
   const BuildMap = useMemo(() => {
-    const { MapContainer, TileLayer, Marker } = require("react-leaflet");
+    const { MapContainer, TileLayer, Marker, Popup } = require("react-leaflet");
     const L = require("leaflet");
 
     const iconMap = L.icon({
       iconUrl: iconLocation,
-      iconSize: [25, 40], // size of the icon
-      iconAnchor: [0, 35], // point of the icon which will correspond to marker's location
+      iconSize: [50, 40], // size of the icon
+      iconAnchor: [22, 35], // point of the icon which will correspond to marker's location
       popupAnchor: [-3, -76],
       shadowSize: [68, 95], // the same for the shadow
       shadowAnchor: [22, 94],
@@ -17,7 +17,7 @@ function SectionMap({ position, whenCreated }) {
     return (
       <MapContainer
         center={position}
-        zoom={15}
+        zoom={20}
         scrollWheelZoom={false}
         style={{ width: "100%", height: 362, zIndex: "1" }}
         preferCanvas
@@ -27,7 +27,11 @@ function SectionMap({ position, whenCreated }) {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {position && <Marker position={position} icon={iconMap} />}
+        {position && (
+          <Marker position={position} icon={iconMap}>
+            <Popup>Sunshine Center</Popup>
+          </Marker>
+        )}
       </MapContainer>
     );
   }, [position]);
