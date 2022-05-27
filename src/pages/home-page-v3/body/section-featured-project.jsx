@@ -29,34 +29,26 @@ function SectionFeaturedProject() {
       id: 1,
       linkImg: imgFeature1,
       title: "Dự án 1000 căn hộ thông minh cao cấp Sunshine City",
-      desc: "supports@unicloud.com.vn",
     },
     {
       id: 2,
       linkImg: imgFeature2,
-      title: "Dự án 1000 căn hộ thông minh cao cấp Sunshine City",
-
-      desc: "media@unicloud.com.vn",
+      title: "Dự án 1300 căn hộ thuộc không gian nghỉ dưỡng - giải trí cao cấp",
     },
     {
       id: 3,
       linkImg: imgFeature3,
-      title: "Dự án 1000 căn hộ thông minh cao cấp Sunshine City",
-
-      desc: "media@unicloud.com.vn",
+      title: "Dự án 1200 thuộc hệ thống chuỗi văn phòng hạng A+",
     },
     {
       id: 4,
       linkImg: imgFeature4,
-      title: "Dự án 1000 căn hộ thông minh cao cấp Sunshine City",
-
-      desc: "media@unicloud.com.vn",
+      title: "Dự án 1400 căn hộ lưu trú xa hoa thuộc Sunshine Finance Hub ",
     },
     {
       id: 5,
       linkImg: imgFeature5,
-      title: "Dự án 1000 căn hộ thông minh cao cấp Sunshine City",
-      desc: "sales@unicloud.com.vn",
+      title: "Dự án 2100 khách sạn 5 sao siêu sang thuộc Sunshine Finance Hub ",
     },
   ];
   return (

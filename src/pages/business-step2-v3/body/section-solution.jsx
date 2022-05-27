@@ -107,7 +107,6 @@ function Item({ item, handleUpdate, index, handleDelete }) {
             setItemValue(e.target.value);
           }}
         />
-        {/* <div className="unit">căn hộ</div> */}
         <button
           className="delete-btn"
           onClick={() => {
@@ -166,6 +165,7 @@ const SectionSolution = () => {
   const [list, setList] = useState([]);
   const [validOption, setValidOption] = useState(true);
   const [validCount, setValidCount] = useState(true);
+  const [validSum, setValidSum] = useState(true);
 
   const [activeStep2Cards, setActiveStep2Cards] = useState([]);
 
@@ -215,6 +215,11 @@ const SectionSolution = () => {
     if (Number(count) > 0 && Number.isInteger(Number(count))) {
       setValidCount(true);
     } else setValidCount(false);
+  };
+  const checkSum = () => {
+    if (Number(sum) > 99) {
+      setValidSum(true);
+    } else setValidSum(false);
   };
 
   useEffect(() => {
@@ -306,7 +311,11 @@ const SectionSolution = () => {
                 })}
               </div>
             </div>
-            <p className={`check-valid ${!validOption ? "invalid" : ""}`}>
+            <p
+              className={`check-valid ${
+                !validOption && !drop ? "invalid" : ""
+              }`}
+            >
               Không để trống
             </p>
           </div>
@@ -356,6 +365,9 @@ const SectionSolution = () => {
             <p className="name">Tổng cộng:</p>
             <p className="sum">{sum + " căn hộ"}</p>
           </div>
+          <p className={`check-valid ${!validSum ? "invalid self-right" : ""}`}>
+            Số lượng căn hộ nhỏ nhất là 100
+          </p>
         </div>
 
         <Link
@@ -367,9 +379,12 @@ const SectionSolution = () => {
           <button
             className="advise-now-btn"
             type="button"
-            onClick={() =>
-              dispatch({ type: "GET_TOTAL_HOUSES", payload: { total: 1000 } })
-            }
+            onClick={() => {
+              checkSum();
+              activeStep2Cards?.length > 0 &&
+                sum > 99 &&
+                dispatch({ type: "GET_TOTAL_HOUSES", payload: { total: sum } });
+            }}
           >
             <span>Xác nhận</span>
           </button>
