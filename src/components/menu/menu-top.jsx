@@ -11,7 +11,7 @@ const MenuTop = ({ logo, listRoute, back }) => {
     <nav className="section-menu-top">
       <div className="menu-top-container">
         {back && (
-          <Link to="/">
+          <Link className="icon-back" to="/">
             <img src={backIcon} alt="" />
           </Link>
         )}
