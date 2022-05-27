@@ -199,12 +199,13 @@
     justify-content: center;
     align-items: center;
     padding: clamp(20px, 5.37vw, 60px) 0px;
+    border-bottom: 1px solid #F2F3F5;
     .parking-solution-container{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: clamp(20px, 1.6125vw, 30px);
+        gap: clamp(20px, 5.37vw, 30px);
         max-width: 1180px;
         .underline2{
             width: 100%;
@@ -250,7 +251,7 @@
             width: 100%;
             max-width: 1180px;
             gap: clamp(40px, 3.125vw, 60px);
-            padding: 20px;
+            padding: 0px 20px;
             .solution-title{
                 font-family: 'SVN Gilroy';
                 font-style: normal;

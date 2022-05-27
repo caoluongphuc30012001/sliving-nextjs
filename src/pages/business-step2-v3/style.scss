@@ -12,6 +12,10 @@
   .invalid {
     opacity: 1;
   }
+  .invalid.self-right{
+    right: 0px;
+    left: auto;
+  }
   .solution-container {
     max-width: 920px;
     padding: 0 20px;
@@ -125,6 +129,7 @@
         border-radius: 8px;
         width: 100%;
         justify-content: space-between;
+        z-index: 2;
         .option {
           width: 100%;
           display: flex;
@@ -291,6 +296,7 @@
     max-width: 880px;
     height: 56px;
     border-top: 1px solid #e1e3e6;
+    position: relative;
     .total {
       width: 100%;
       display: flex;
