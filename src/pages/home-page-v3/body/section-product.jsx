@@ -241,9 +241,9 @@ const SectionProduct = () => {
                         <p className="card-product-item-des">{item.subTitle}</p>
                         <ul>
                           {item?.listChild &&
-                            item?.listChild.map((child) => {
-                              <li key={child}>{child}</li>;
-                            })}
+                            item?.listChild.map((child) => (
+                              <li key={child}>{child}</li>
+                            ))}
                         </ul>
                       </div>
                     </li>

@@ -9,7 +9,11 @@ import Seo from "../../components/seo";
 function ComingSoon() {
   return (
     <LayoutV3>
-      <Seo title="Coming soon | Sliving" />
+      <Seo
+        title="Coming soon | Sliving"
+        url="/coming-soon/"
+        metaImage="/thumbnail.png"
+      />
       <section className="container-child not-found">
         <img src={imgComingSoon} alt="not found" className="img-not-found" />
         <h3>Sắp ra mắt !!!</h3>

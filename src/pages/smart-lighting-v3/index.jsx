@@ -18,6 +18,8 @@ const SmartLightingPage = () => {
         description="Smart Lighting - giải pháp chiếu sáng thông minh, 
           tiện lợi cho các không gian như: trung tâm thương mại,
           tòa nhà, văn phòng, căn hộ,... mang lại cảm giác thoải mái và hiện đại"
+        url="/smart-lighting/"
+        metaImage="/thumbnail.png"
       />
       <main id="smart_lighting_page">
         <SectionHeader />
