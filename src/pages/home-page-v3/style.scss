@@ -605,7 +605,7 @@ span.detail-v3 {
       text-align: center !important;
       .img-line-center {
         justify-content: center !important;
-        padding-bottom: 32px;
+        // padding-bottom: 32px;
       }
     }
     h3.detail-v3 {
@@ -1315,6 +1315,9 @@ span.detail-v3 {
 /* 
 * ======================Begin Section Help More======================
 */
+.bg-ground-help-more {
+  background: #fff;
+}
 .help-more-container {
   padding-top: 120px;
   padding-bottom: 120px;

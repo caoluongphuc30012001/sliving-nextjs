@@ -23,7 +23,7 @@ function SectionBrandStory() {
           </p>
         </Row>
         <div className="brand-story-img">
-          <img src={imgBrandStory} style={{ marginTop: "60px" }} alt="" />
+          <img src={imgBrandStory} alt="" />
         </div>
       </div>
     </section>
