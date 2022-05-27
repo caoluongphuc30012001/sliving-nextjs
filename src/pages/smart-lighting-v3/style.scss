@@ -1,4 +1,5 @@
 .section-drop-down{
+    padding: clamp(20px, 5.37vw, 60px) 0px;
     overflow: hidden;
     position: relative;
     .container-dropdown{
@@ -107,7 +108,6 @@
             }
         }
         .accordion-body{
-            // padding: 24px 24px 24px 48px;
             background: #F3F9FF;
             border-radius: 0px 0px 8px 8px;
             .content{
@@ -134,6 +134,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding: 0px 20px;
         .left-part{
             min-width: 300px;
             width: 100%;
@@ -216,7 +217,6 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
-                    text-fill-color: transparent;
                 }
             }
         }
@@ -317,6 +317,7 @@
             position: relative;
             overflow: hidden;
             margin-top: 40px;
+            padding:0px 20px;
         }
         .left-part{
             height: 790px;
@@ -449,169 +450,111 @@
 ///=========================Begin Section Smart Parking
 
 .smart-lighting-definition-v3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 5.37vw, 60px) 0px;
+  .content {
+    max-width: 1180px;
     width: 100%;
-    height: 624px;
+    margin: auto;
     display: flex;
-    flex-direction: column;
-  
-    .content {
-      max-width: 1180px;
-      width: 100%;
-      margin: auto;
+    justify-content: space-between;
+
+    .left-content {
+      max-width: 590px;
       display: flex;
-      justify-content: space-between;
-  
-      .left-content {
-        max-width: 590px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 16px;
+
+      .left-content-title {
+        height: 100%;
+        max-height: 32px;
+        font-family: "SVN Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(21px, 5.6vw, 28px);
+        line-height: 32px;
+        color: #0979fd;
+      }
+
+      .left-all-description-container {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        border: 1px solid #6fc0fe;
+        border-radius: 16px;
+        width: 100%;
+      }
+
+      .left-all-description {
+        padding: 20px 32px;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         row-gap: 16px;
-  
-        .left-content-title {
-          height: 100%;
-          max-height: 32px;
-          font-family: "SVN Gilroy";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 28px;
-          line-height: 32px;
-          color: #0979fd;
-        }
-  
-        .left-all-description-container {
+
+        font-family: "SVN Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        color: #454647;
+
+        .web-content-desc {
           display: flex;
-          flex-direction: column;
-          border: 1px solid #6fc0fe;
-          border-radius: 16px;
-          width: 100%;
         }
-  
-        .left-all-description {
-          max-height: 288px;
-          padding: 32px 40px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          row-gap: 16px;
-  
+
+        .mobile-content-desc {
+          display: none;
+        }
+      }
+    }
+
+    .right-content {
+      display: flex;
+
+      .right-content-container {
+        height: fit-content;
+        width: 100%;
+        max-width: 558px;
+        align-self: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 94px;
+        justify-content: space-around;
+      }
+
+      .right-icon-item {
+        max-width: 186px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 16px;
+        align-items: center;
+
+        .icon-item-title {
           font-family: "SVN Gilroy";
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
           line-height: 24px;
-          text-align: justify;
+          text-align: center;
           color: #454647;
-  
-          .web-content-desc {
-            display: flex;
-          }
-  
-          .mobile-content-desc {
-            display: none;
-          }
-        }
-      }
-  
-      .right-content {
-        display: flex;
-        .btn-group {
-            padding-top: 32px;
-            padding-bottom: 32px;
-            .advise-now-btn,
-            .learn-more-btn {
-              height: 40px;
-              padding: 8px 34px;
-              width: 184px;
-            }
-          
-            .advise-now-btn {
-              margin-right: 34px;
-              background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-              border-radius: 68px;
-              border: none;
-              &:hover {
-                box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
-                  0px 8px 8px -4px rgba(24, 39, 75, 0.08);
-              }
-          
-              span {
-                font-style: normal;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 24px;
-                color: #ffffff;
-              }
-            }
-            .learn-more-btn {
-              border-radius: 68px;
-              display: flex;
-              align-items: center;
-              border: 2px solid transparent;
-              background: linear-gradient(to right, white, white),
-                linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-              background-clip: padding-box, border-box;
-              background-origin: padding-box, border-box;
-              &:hover {
-                background: linear-gradient(to right, #ddefff, #ddefff),
-                  linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-                background-clip: padding-box, border-box;
-                background-origin: padding-box, border-box;
-              }
-              span {
-                margin: 0 auto;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 24px;
-                background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-              }
-            }
-          }
-  
-        .right-content-container {
-          height: fit-content;
-          width: 100%;
-          max-width: 558px;
-          align-self: flex-end;
-          display: flex;
-          flex-wrap: wrap;
-          row-gap: 115px;
-        }
-  
-        .right-icon-item {
-            align-items: center;
-          max-width: 186px;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          row-gap: 16px;
-          .icon-item-title {
-            font-family: "SVN Gilroy";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;
-            text-align: center;
-            color: #454647;
-          }
         }
       }
     }
   }
-  
-  ///=========================End Section Smart Parking
-
+}
+///=========================End Section Smart Parking
 ///=========================Responsive
-// Section Smart Parking
+// Section Smart Lighting
 
 @media only screen and (max-width: 1200px) {
     .smart-lighting-definition-v3 {
-      height: 824px;
       .content {
         flex-direction: column;
         align-items: center;
@@ -633,66 +576,63 @@
         }
       }
     }
-  }
-  
-  @media only screen and (max-width: 620px) {
-    .smart-lighting-definition-v3 {
-      padding: 40px 20px;
-      .content {
-        .left-content {
+}
+
+@media only screen and (max-width: 620px) {
+  .smart-lighting-definition-v3 {
+    .content {
+      .left-content {
+        max-width: 388px;
+      }
+
+      .right-content {
+        .right-content-container {
           max-width: 388px;
-        }
-  
-        .right-content {
-          .right-content-container {
-            max-width: 388px;
-          }
         }
       }
     }
   }
-  
-  @media only screen and (max-width: 412px) {
-    .smart-lighting-definition-v3 {
-      .content {
-        .left-content {
+}
+@media only screen and (max-width: 412px) {
+  .smart-lighting-definition-v3 {
+    .content {
+      .left-content {
+        max-width: 388px;
+      }
+
+      .right-content {
+        .right-content-container {
           max-width: 388px;
         }
-  
-        .right-content {
-          .right-content-container {
-            max-width: 388px;
-          }
-  
-          .right-icon-item {
-            max-width: 120px;
-          }
+
+        .right-icon-item {
+          max-width: 120px;
         }
       }
     }
   }
-  
-  @media only screen and (max-width: 400px) {
-    .smart-lighting-definition-v3 {
-      .content {
-        .left-content {
+}
+@media only screen and (max-width: 400px) {
+  .smart-lighting-definition-v3 {
+    .content {
+      .left-content {
+        max-width: 388px;
+      }
+
+      .right-content {
+        .right-content-container {
           max-width: 388px;
+          gap: 50px;
+          justify-content: center;
         }
-  
-        .right-content {
-          .right-content-container {
-            max-width: 388px;
-            gap: 50px;
-            justify-content: center;
-          }
-  
-          .right-icon-item {
-            max-width: 120px;
-          }
+
+        .right-icon-item {
+          max-width: 120px;
         }
       }
     }
   }
+}
 @media(max-width:1200px){
     .section-smart-lighting-header{
         padding: clamp(20px, 18vw, 216px) clamp(20px, 20vw, 240px);

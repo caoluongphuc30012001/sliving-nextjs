@@ -499,6 +499,14 @@
       overflow: hidden;
       .description-box {
         margin-top: 30px;
+        position: relative;
+        .btn-group {
+          position: absolute;
+          opacity: 0;
+          bottom: calc(100%);
+          left: 2px;
+          transition: 0.2s;
+        }
         .sub-title {
           font-family: "SVN Gilroy";
           font-style: normal;
@@ -516,14 +524,6 @@
           align-items: center;
           color: #0979fd;
         }
-      }
-      .btn-group {
-        position: absolute;
-        opacity: 0;
-        bottom: -10px;
-        left: 2px;
-        transition: 0.2s;
-        top:250px;
       }
       .img-box {
         position: relative;
@@ -723,6 +723,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #454647;
+    list-style: disc;
   }
 
   .product-right-all-contents > p:not(:last-child) {
