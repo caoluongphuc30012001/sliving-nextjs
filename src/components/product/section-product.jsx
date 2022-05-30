@@ -96,7 +96,7 @@ const SectionProduct = ({ listProduct }) => {
       <div className="product-container ">
         <div className="title-box">
           <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">Sản phẩm Sliving</div>
+          <div className="title">Sản Phẩm Sliving</div>
           <div className="item-border"></div>
         </div>
         <div className="content">
