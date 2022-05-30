@@ -7,7 +7,7 @@ import iconPhoneMobile from "@images/contact-page-v3/svg/icon-phone-blue.svg";
 import iconEmailMobile from "@images/contact-page-v3/svg/icon-email-blue.svg";
 import iconMapMobile from "@images/contact-page-v3/svg/icon-map-blue.svg";
 // import AddressAndMap from "../../../components/footer/footer-v3/AddressAndMap";
-import SectionMap from "../../../components/footer/footer-v3/map";
+import SectionMap from "../../../components/footer/footer-v3/map-contact";
 import { useMemo } from "react";
 
 const listContact = [
@@ -58,7 +58,9 @@ function SectionQuickSupport() {
         <Col md={6} className="col-left">
           <div className="quick-support-content">
             <div className="quick-support-content-row">
-              <h3 className="quick-support-content-title">Hỗ trợ nhanh</h3>
+              <h3 className="quick-support-content-title text-capitalize">
+                Hỗ trợ nhanh
+              </h3>
             </div>
             <div className="quick-support-content-row d-flex">
               <div className="quick-support-icon">
@@ -74,7 +76,7 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Số điện thoại</h5>
+                <h5>Điện thoại</h5>
                 <span>1900 999 999</span>
               </div>
             </div>

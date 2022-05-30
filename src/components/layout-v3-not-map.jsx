@@ -83,7 +83,7 @@ function LayoutV3({ children }) {
   return (
     <>
       <Navbar listRoute={listRoute} logo={logo} />
-      <main>{children}</main>
+      {children}
       {/* <FooterV3 /> */}
       <Footer />
       <ButtonRounded />

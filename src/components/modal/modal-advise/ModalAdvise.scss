@@ -87,3 +87,16 @@
     min-height: 200px;
   }
 }
+
+@media only screen and(max-height: 700px) {
+  .modal-advise-sliving .modal-header {
+    background: none;
+    min-height: auto;
+    margin: 0;
+    border: none;
+    padding: 16px 16px 0px;
+  }
+  .modal-advise-sliving .modal-body {
+    padding-top: 0;
+  }
+}
