@@ -25,7 +25,11 @@ function SectionMap({ position, whenCreated }) {
         center={position}
         zoom={20}
         scrollWheelZoom={false}
-        style={{ width: "100%", height: "800px", zIndex: "1" }}
+        style={{
+          width: "100%",
+          height: "calc(100vh - 90px - 44px)",
+          zIndex: "1",
+        }}
         preferCanvas
         whenCreated={whenCreated}
       >
@@ -43,6 +47,7 @@ function SectionMap({ position, whenCreated }) {
       </MapContainer>
     );
   }, [position]);
+
   return (
     <article>
       <div className="map">{BuildMap}</div>
