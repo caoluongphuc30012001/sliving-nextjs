@@ -77,7 +77,7 @@ function SectionQuickSupport() {
               </div>
               <div className="quick-support-body">
                 <h5>Điện thoại</h5>
-                <span>1900 999 999</span>
+                <span>19006054</span>
               </div>
             </div>
             <div className="quick-support-content-row d-flex">
