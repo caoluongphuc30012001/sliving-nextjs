@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useMemo } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 
-import SectionMap from "./map-contact";
+import SectionMap from "./map";
 
 import iconBgPin from "@images/icon/icon-bg-pin.svg";
 import iconBgEmail from "@images/icon/icon-bg-mail.svg";
