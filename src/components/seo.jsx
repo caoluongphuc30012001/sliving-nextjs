@@ -50,36 +50,76 @@ function Seo({ url, description, title, metaImage }) {
       />
       <link href={favicon} rel="shortcut icon"></link>
       <title>{titleMeta}</title>
-      <link rel="canonical" href={site.siteMetadata.siteUrl} />
-      <meta name="description" content={metaDescription} />
+      <link
+        rel="canonical"
+        href={site.siteMetadata.siteUrl}
+        data-react-helmet="true"
+      />
+      <meta
+        name="description"
+        content={metaDescription}
+        data-react-helmet="true"
+      />
       <meta name="image" content={image} />
-      <meta name="keywords" content={site.siteMetadata.keywords} />
+      <meta
+        name="keywords"
+        content={site.siteMetadata.keywords}
+        data-react-helmet="true"
+      />
 
       {/* <!-- Google / Search Engine Tags --> */}
-      <meta itemprop="name" content="Sliving - IoT" />
-      <meta itemprop="description" content={metaDescription} />
-      <meta itemprop="image" content={image} />
+      <meta itemprop="name" content="Sliving - IoT" data-react-helmet="true" />
+      <meta
+        itemprop="description"
+        content={metaDescription}
+        data-react-helmet="true"
+      />
+      <meta itemprop="image" content={image} data-react-helmet="true" />
 
       {/* <!-- Facebook Meta Tags --> */}
-      <meta property="og:url" content={metaUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content={lang} />
-      <meta property="og:title" content={titleMeta} />
-      <meta property="og:site_name" content={titleMeta} />
-      <meta property="og:description" content={metaDescription} />
+      <meta property="og:url" content={metaUrl} data-react-helmet="true" />
+      <meta property="og:type" content="website" data-react-helmet="true" />
+      <meta property="og:locale" content={lang} data-react-helmet="true" />
+      <meta property="og:title" content={titleMeta} data-react-helmet="true" />
+      <meta
+        property="og:site_name"
+        content={titleMeta}
+        data-react-helmet="true"
+      />
+      <meta
+        property="og:description"
+        content={metaDescription}
+        data-react-helmet="true"
+      />
 
-      <meta property="og:image" content={image} />
-      <meta property="og:image:alt" content={metaDescription} />
+      <meta property="og:image" content={image} data-react-helmet="true" />
+      <meta
+        property="og:image:alt"
+        content={metaDescription}
+        data-react-helmet="true"
+      />
 
-      <meta property="og:image:with" content="1280" />
-      <meta property="og:image:height" content="686" />
+      <meta property="og:image:with" content="1280" data-react-helmet="true" />
+      <meta property="og:image:height" content="686" data-react-helmet="true" />
 
       {/* <!-- Twitter Meta Tags --> */}
-      <meta property="twitter:title" content={metaDescription} />
-      <meta property="twitter:description" content={metaDescription} />
-      <meta property="twitter:image" content={image} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={metaUrl} />
+      <meta
+        property="twitter:title"
+        content={metaDescription}
+        data-react-helmet="true"
+      />
+      <meta
+        property="twitter:description"
+        content={metaDescription}
+        data-react-helmet="true"
+      />
+      <meta property="twitter:image" content={image} data-react-helmet="true" />
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+        data-react-helmet="true"
+      />
+      <meta property="twitter:url" content={metaUrl} data-react-helmet="true" />
     </Helmet>
   );
 }

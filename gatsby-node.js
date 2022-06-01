@@ -1,6 +1,5 @@
 const fs = require("fs-extra");
 const path = require("path");
-const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
 
 exports.onPostBuild = () => {
   fs.copySync(
@@ -342,11 +341,5 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         util: false,
       },
     },
-    plugins: [
-      new FilterWarningsPlugin({
-        exclude:
-          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
-      }),
-    ],
   });
 };

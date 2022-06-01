@@ -7,6 +7,7 @@ module.exports = {
     PARALLEL_QUERY_RUNNING: true,
     PARALLEL_SOURCING: true,
     DETECT_NODE_MUTATIONS: false,
+    FAST_DEV: true,
   },
   siteMetadata: {
     title: "Sliving - Cung cấp giải pháp toàn diện về IoT Platform",
@@ -118,7 +119,7 @@ module.exports = {
         bucketName: `${process.env.AWS_S3_BUCKET}`,
         bucketPrefix: process.env.AWS_S3_PREFIX,
         removeNonexistentObjects: process.env.AWS_S3_PREFIX ? false : true,
-        removeNonexistentObjects: false
+        removeNonexistentObjects: false,
       },
     },
     {
@@ -144,16 +145,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-nprogress`,
-    //   options: {
-    //     // Setting a color is optional.
-    //     color: `tomato`,
-    //     // Disable the loading spinner.
-    //     showSpinner: false,
-    //   },
-    // },
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

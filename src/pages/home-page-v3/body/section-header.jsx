@@ -11,13 +11,13 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
+
 const SectionHeader = () => {
   const arrService = [
     {
@@ -53,7 +53,6 @@ const SectionHeader = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        loop={true}
         pagination={{
           clickable: true,
         }}
