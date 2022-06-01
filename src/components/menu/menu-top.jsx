@@ -44,8 +44,7 @@ const MenuTop = ({ logo, listRoute, back }) => {
               <Link
                 to={item.href}
                 key={item.id}
-                target="_blank"
-                rel="noreferrer"
+                activeClassName="active-parent-menu"
               >
                 <div className={`item-menu ${item.active ? "active" : ""}`}>
                   {item.nameRoute}
