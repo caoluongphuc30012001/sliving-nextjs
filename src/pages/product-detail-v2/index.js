@@ -17,8 +17,8 @@ import SectionPopularProduct from "../../components/product/section-popular-prod
 
 const handelFilter = (dataCurrent) => {
   if (
-    (dataCurrent && dataCurrent.frontmatter.type.indexOf("Switch") > -1) ||
-    (dataCurrent && dataCurrent.frontmatter.type.indexOf("Touch") > -1)
+    (dataCurrent && dataCurrent.frontmatter.type.includes("Switch") > -1) ||
+    (dataCurrent && dataCurrent.frontmatter.type.includes("Touch") > -1)
   ) {
     return true;
   }
@@ -242,7 +242,7 @@ const IndexPage = ({ pageContext }) => {
                         }`}
                         onClick={() => handleSetTypeProduct(1)}
                         disabled={
-                          dataCurrent?.frontmatter?.type.indexOf(
+                          dataCurrent?.frontmatter?.type.includes(
                             "Smart Touch Group"
                           ) > -1
                             ? true
@@ -447,7 +447,7 @@ const IndexPage = ({ pageContext }) => {
   };
   const location = useLocation();
   const { href } = location;
-  
+
   return (
     <LayoutSmartLighting>
       <Seo
