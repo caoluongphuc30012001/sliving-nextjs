@@ -1,24 +1,26 @@
 import React, { useState } from "react";
-import item1Img from "../../../images/smart-parking-v3/png/img-solution1.png";
-import item2Img from "../../../images/smart-parking-v3/png/img-solution2.png";
+import item1Img from "@images/smart-parking-v3/png/img-solution1.png";
+import item2Img from "@images/smart-parking-v3/png/img-solution2.png";
 
-import connector from "../../../images/smart-parking-v3/svg/icon-connector.svg";
-import tv from "../../../images/smart-parking-v3/svg/icon-tv.svg";
-import phone from "../../../images/smart-parking-v3/svg/icon-phone.svg";
-import dualrect from "../../../images/smart-parking-v3/svg/icon-dual-rect.svg";
-import wifi from "../../../images/smart-parking-v3/svg/icon-wifi.svg";
-import unicloud_b from "../../../images/smart-parking-v3/svg/icon-unicloud.svg";
-import security from "../../../images/smart-parking-v3/svg/icon-security.svg";
+import connector from "@images/smart-parking-v3/svg/icon-connector.svg";
+import tv from "@images/smart-parking-v3/svg/icon-tv.svg";
+import phone from "@images/smart-parking-v3/svg/icon-phone.svg";
+import dualrect from "@images/smart-parking-v3/svg/icon-dual-rect.svg";
+import wifi from "@images/smart-parking-v3/svg/icon-wifi.svg";
+import unicloud_b from "@images/smart-parking-v3/svg/icon-unicloud.svg";
+import security from "@images/smart-parking-v3/svg/icon-security.svg";
 
-import unicloud from "../../../images/smart-parking-v3/png/icon-cloud-w.png";
-import connector_b from "../../../images/smart-parking-v3/png/icon-connector-b.png";
-import tv_b from "../../../images/smart-parking-v3/png/icon-tv-b.png";
-import phone_b from "../../../images/smart-parking-v3/png/icon-phone-b.png";
-import dualrect_b from "../../../images/smart-parking-v3/png/icon-dual-rect-b.png";
-import wifi_b from "../../../images/smart-parking-v3/png/icon-wifi-b.png";
-import security_b from "../../../images/smart-parking-v3/png/icon-security-b.png";
+import unicloud from "@images/smart-parking-v3/png/icon-cloud-w.png";
+import connector_b from "@images/smart-parking-v3/png/icon-connector-b.png";
+import tv_b from "@images/smart-parking-v3/png/icon-tv-b.png";
+import phone_b from "@images/smart-parking-v3/png/icon-phone-b.png";
+import dualrect_b from "@images/smart-parking-v3/png/icon-dual-rect-b.png";
+import wifi_b from "@images/smart-parking-v3/png/icon-wifi-b.png";
+import security_b from "@images/smart-parking-v3/png/icon-security-b.png";
+import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { Image, Row } from "react-bootstrap";
 
 const ListItem = [
   {
@@ -74,7 +76,7 @@ const ListItem = [
   {
     id: 1,
     title: "Giải Pháp Bãi Đỗ Xe Ngoài Trời",
-    secondTitle: "Sơ Đồ Bãi Đỗ Xe Ngoài Trời",
+    secondTitle: "Sơ Đồ Giải Pháp Bãi Đỗ Xe Ngoài Trời",
     mainImg: item2Img,
     iconList: [
       {
@@ -220,11 +222,18 @@ const SectionParkingSolution = () => {
   return (
     <section className="section-parking-solution">
       <div className="parking-solution-container">
-        <div className="content">
+        {/* <div className="content">
           <h2 className="sub-title">SMART PARKING</h2>
           <span className="title">Giải Pháp Smart Parking</span>
           <div className="underline"></div>
-        </div>
+        </div> */}
+        <Row className="row-line-center">
+          <span className="title-eng-line-center">SMART PARKING</span>
+          <h2 className="title-line-center">Giải Pháp Smart Parking</h2>
+          <div className="img-line-center">
+            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+          </div>
+        </Row>
         {ListItem.map((item) => {
           return (
             <>

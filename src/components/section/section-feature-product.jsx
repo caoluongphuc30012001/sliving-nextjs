@@ -97,25 +97,27 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
-  let listProduct=[];
-  if(arrProductHot.length>0)
-  listProduct=arrProductHot.map(item=>{
-    return{
-      id: 0,
-      image: item.node.frontmatter.imgSrcProduct.publicURL,
-      title: item.node.frontmatter.title,
-      description: item.node.frontmatter.title,
-      type: item.node.frontmatter.type,
-    }
-  })
+  let listProduct = [];
+  if (arrProductHot.length > 0)
+    listProduct = arrProductHot.map((item) => {
+      return {
+        id: 0,
+        image: item.node.frontmatter.imgSrcProduct.publicURL,
+        title: item.node.frontmatter.title,
+        description: item.node.frontmatter.title,
+        type: item.node.frontmatter.type,
+      };
+    });
   console.log(arrProductHot);
   return (
     <section className="container-wrap section-prod-feature">
-      <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>
+      {/* <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>
       <div className="prod-line">
         <img src={lineImg} alt="" />
-      </div>
-        {listProduct.length > 0 &&<SectionPopularProduct listProduct={listProduct}/>}
+      </div> */}
+      {listProduct.length > 0 && (
+        <SectionPopularProduct listProduct={listProduct} />
+      )}
     </section>
   );
 };

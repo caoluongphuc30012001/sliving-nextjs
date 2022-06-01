@@ -12,7 +12,7 @@ const isBrowser = typeof window !== "undefined";
 const listContact = [
   {
     key: {
-      title: "Trụ sở chính",
+      title: "Trụ sở chính Hà Nội",
       description: "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
     },
     urlIcon: iconBgPin,

@@ -41,9 +41,7 @@ const SectionDefinition = () => {
       {
         id: 0,
         content:
-          "Smart Parking được thiết kế và lắp đặt theo một chu trình khép kín, bao gồm các thiết bị thông minh như: cảm biến," +
-          " bảng đèn Led điều hướng, camera thông minh.... Tích hợp vào ứng dụng Smart Parking (App) giúp kiểm soát và quản lý" +
-          " xe ra vào, người dùng có thể chủ động đặt chỗ và có sự lựa chọn đỗ xe phù hợp nhất.",
+          "Hiểu được vai trò quan trọng của yếu tố ánh sáng trong các tòa nhà, căn hộ... Unicloud đã cho ra đời giải pháp chiếu sáng thông minh Smart Lighting: ứng dụng công nghệ hiện đại để điều khiển và tác động vào nguồn sáng nhằm nâng cao chất lượng chiếu sáng và tiết kiệm năng lượng.",
       },
     ],
     listIcon: [
