@@ -8,7 +8,7 @@ import Seo from "../components/seo";
 const NotFoundPage = () => {
   return (
     <LayoutV3>
-      <Seo title="Page not Found | Sliving" />
+      <Seo title="Page not Found | Sliving" url="/404" />
       <section className="container-child not-found">
         <img src={img404} alt="not found" className="img-not-found" />
         <h3>Rất tiếc, không thể tìm thấy trang này</h3>

@@ -6,7 +6,7 @@ import { initReactI18next } from "react-i18next";
 const options = {
   fallbackLng: "vn",
   supportedLngs: ["vn", "en"],
-  preload: true,
+  // preload: true,
   lng: "vn",
   load: "all", // we only provide en, de -> no region specific locals like en-US, de-DE
   // have a common namespace used around the full app

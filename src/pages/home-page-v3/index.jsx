@@ -19,7 +19,7 @@ const IndexPage = () => {
       <Seo
         title="Sliving - Giải Pháp Nhà Thông Minh"
         description="Sliving cung cấp giải pháp nhà thông minh với thuật toán AI để thực hiện giám sát từ xa an toàn và an ninh."
-        url="https://sliving.vn"
+        url="/"
       />
       <SectionHeader />
       <main id="main_page">

@@ -21,6 +21,7 @@ const AboutPage = ({ location }) => {
         title="Về Unicloud"
         description="Unicloud là một tập đoàn công nghệ quốc tế có trụ sở tại Hà Nội,
          nhà máy và bộ phận nghiên cứu R&D tại Khu công nghệ cao Tp. Hồ Chí Minh"
+        url="/about-us"
         metaImage="/thumbnail.png"
       />
       <main id="about_us_page">
