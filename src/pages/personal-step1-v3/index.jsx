@@ -1,5 +1,5 @@
 import React from "react";
-import BusinessStep1 from "./body/business-step-1";
+import PersonalStep1 from "./body/personal-step-1";
 import SectionHeader from "./body/section-header";
 import LayoutV3 from "../../components/layout-v3";
 import SectionHelpMore from "../../components/help-more/section-help-more";
@@ -18,7 +18,7 @@ const IndexPage = () => {
       />
       <main id="business-step1-v3">
         <SectionHeader />
-        <BusinessStep1 />
+        <PersonalStep1 />
         <SectionHelpMore />
       </main>
     </LayoutV3>

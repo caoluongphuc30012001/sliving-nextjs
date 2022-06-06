@@ -74,7 +74,7 @@ function LayoutV3({ children }) {
         }
       : {
           id: 3,
-          nameRoute: url.includes("business")
+          nameRoute: url.includes("personal")
             ? "GÓI CÁ NHÂN"
             : "GÓI DOANH NGHIỆP",
           active: url.includes("step"),

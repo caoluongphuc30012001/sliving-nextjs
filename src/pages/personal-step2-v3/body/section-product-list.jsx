@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Data } from "@data/tableData.js";
-
+import React, { useState, useEffect, useContext, useLayoutEffect } from "react";
+import { navigate } from "gatsby";
 import axios from "axios";
 
 import {
@@ -14,7 +13,10 @@ const Table = ({ table, handlePlus, handleSub }) => {
     <tbody className="content-container">
       {table.listDevice.map((item) => {
         return (
-          <tr className="table-row">
+          <tr
+            className="table-row"
+            //key={}
+          >
             <td className="table-data">{table.room.roomValue.nameVi}</td>
             <td className="table-data center">{item.deviceValues.nameVi}</td>
             <td className="table-data">
@@ -43,11 +45,6 @@ const Table = ({ table, handlePlus, handleSub }) => {
           </tr>
         );
       })}
-      {/* <tr className="table-row">
-          <td className="table-data">{table.lastContent.position}</td>
-          <td className="table-data center">{table.lastContent.device}</td>
-          <td className="table-data">{table.lastContent.quantity}</td>
-        </tr> */}
     </tbody>
   );
 };
@@ -56,6 +53,7 @@ const SectionProductList = () => {
   const [modalShow, setModalShow] = useState(false);
   const [total, setTotal] = useState(0);
   const [totalDevice, setTotalDevice] = useState(0);
+  const [currentHouse, setCurrentHouse] = useState("");
   // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
   const state = useContext(BusinessStateContext);
@@ -66,7 +64,9 @@ const SectionProductList = () => {
   const [buttonList, setButtonList] = useState([]);
 
   const [toggle, setToggle] = useState(0);
-
+  useLayoutEffect(() => {
+    if (!state["houseID"]) navigate("/personal-step1");
+  }, []);
   useEffect(() => {
     const getServices = async () => {
       try {
@@ -88,7 +88,25 @@ const SectionProductList = () => {
 
     getServices();
   }, []);
-
+  useEffect(() => {
+    const getListHouse = async () => {
+      try {
+        const response = await axios.get(
+          "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
+        );
+        console.log(
+          response.data.Items.find((item) => item.id === state["houseID"])
+        );
+        setCurrentHouse(
+          response.data.Items.find((item) => item.id === state["houseID"])
+            .nameVi
+        );
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    if (state["houseID"]) getListHouse();
+  }, []);
   useEffect(() => {
     const getDevice = async (houseID, isBasic) => {
       try {
@@ -224,12 +242,17 @@ const SectionProductList = () => {
         <div className="sumary-container">
           <div className="sumary-text">Tổng giá tiền dự tính</div>
           <div>:</div>
-          <div className="sumary-quantity">{total}</div>
+          <div className="sumary-quantity">
+            {total.toLocaleString("vi-VN", {
+              style: "currency",
+              currency: "VND",
+            })}
+          </div>
         </div>
         <div className="sumary-container">
           <div className="sumary-text">Số lượng thiết bị cho gói giải pháp</div>
           <div>:</div>
-          <div className="sumary-quantity">{totalDevice}</div>
+          <div className="sumary-quantity">{totalDevice + " Thiết bị"}</div>
         </div>
         <div
           className="advise-now-btn"
@@ -241,7 +264,12 @@ const SectionProductList = () => {
           <span>Tư Vấn Ngay</span>
         </div>
       </div>
-      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      <ModalAdvise
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        houseName={currentHouse}
+        serviceName={isBasic ? "Cơ Bản" : "Nâng Cao"}
+      />
     </section>
   );
 };

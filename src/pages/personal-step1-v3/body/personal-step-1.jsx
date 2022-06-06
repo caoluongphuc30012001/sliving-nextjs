@@ -10,7 +10,7 @@ import {
   BusinessStateContext,
 } from "../../../context/businessContext";
 
-const BusinessStep1 = () => {
+const PersonalStep1 = () => {
   const dispatch = useContext(BusinessDispatchContext);
 
   const [activeCard, setActiveCard] = useState({});
@@ -87,4 +87,4 @@ const BusinessStep1 = () => {
     </section>
   );
 };
-export default BusinessStep1;
+export default PersonalStep1;

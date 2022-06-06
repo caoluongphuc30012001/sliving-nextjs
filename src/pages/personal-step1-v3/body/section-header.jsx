@@ -14,7 +14,7 @@ function SectionHeader() {
           <Col md={10} lg={7} xl={5}>
             <div className="container-header">
               <h2 className="text-top-solution-1">Gói Giải Pháp</h2>
-              <h4 className="text-top-solution-2">Dành Cho Doanh Nghiệp</h4>
+              <h4 className="text-top-solution-2">Dành Cho Cá Nhân</h4>
               <p className="text-top-solution-3">
                 Cung cấp các giải pháp chiếu sáng, điều khiển thông minh, giải
                 pháp an ninh cho tòa nhà, căn hộ, văn phòng, trung tâm thương

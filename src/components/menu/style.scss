@@ -110,6 +110,14 @@ body {
         font-size: 16px;
         line-height: 24px;
         color: #0979fd;
+        &:hover {
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: #0979fd;
+        }
       }
 
       .select-menu-top {
