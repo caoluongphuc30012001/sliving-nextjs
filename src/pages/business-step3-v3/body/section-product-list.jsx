@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useLayoutEffect, useContext, useEffect } from "react";
 import { Data } from "@data/tableData.js";
 
 import { BusinessStateContext } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { navigate } from "gatsby";
 
 const buttonList = [
   {
@@ -75,6 +76,9 @@ const SectionProductList = () => {
   const [tableData, setTableData] = useState("");
 
   const state = useContext(BusinessStateContext);
+  useLayoutEffect(() => {
+    if (!state["total"]) navigate("/business-step1");
+  }, []);
 
   useEffect(() => {
     if (state["total"]) {
@@ -84,7 +88,6 @@ const SectionProductList = () => {
     }
     setTableData(Data);
   }, [tableData]);
-
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;

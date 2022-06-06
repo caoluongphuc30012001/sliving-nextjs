@@ -17,7 +17,7 @@ function LayoutV3({ children }) {
       active:
         !url.includes("about-us") &&
         !url.includes("implementation-process") &&
-        !url.includes("business-step1") &&
+        !url.includes("step") &&
         !url.includes("news") &&
         !url.includes("contact-us"),
     },
@@ -54,13 +54,34 @@ function LayoutV3({ children }) {
         },
       ],
     },
-    {
-      id: 3,
-      nameRoute: "GÓI GIẢI PHÁP",
-      href: "/business-step1/",
-      active: url.includes("business-step1"),
-    },
-
+    !url.includes("step")
+      ? {
+          id: 3,
+          nameRoute: "GÓI GIẢI PHÁP",
+          nonActive: true,
+          listRoute: [
+            {
+              id: 0,
+              nameRoute: "GÓI DOANH NGHIỆP",
+              href: "/business-step1/",
+            },
+            {
+              id: 1,
+              nameRoute: "GÓI CÁ NHÂN",
+              href: "/personal-step1/",
+            },
+          ],
+        }
+      : {
+          id: 3,
+          nameRoute: url.includes("personal")
+            ? "GÓI CÁ NHÂN"
+            : "GÓI DOANH NGHIỆP",
+          active: url.includes("step"),
+          href: url.includes("personal")
+            ? "/business-step1/"
+            : "/personal-step1/",
+        },
     {
       id: 4,
       nameRoute: "TIN TỨC",

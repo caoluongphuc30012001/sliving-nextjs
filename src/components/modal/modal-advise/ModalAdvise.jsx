@@ -5,9 +5,11 @@ import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
 
-function ModalAdvise(props) {
+function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
   const { onHide } = props;
 
+  console.log(props.serviceName);
+  console.log(props.houseName);
   const [modalShow, setModalShow] = React.useState(false);
 
   const {
@@ -18,7 +20,7 @@ function ModalAdvise(props) {
   } = useForm({ mode: "onChange" });
 
   const googleSheetAPI =
-    "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
+    "https://script.google.com/macros/s/AKfycbzBXBn9hPRVMvstSnUNmQRXpZ_kTothqkts6LHbtfq-yeIEYy4KCPwQ6ouCOBCYjEbx/exec";
 
   const onSubmit = (data) => {
     const formData = new FormData();
@@ -40,6 +42,8 @@ function ModalAdvise(props) {
       new Date().toLocaleDateString().substring(0, 10)
     );
     googleSheetFormData.append("linkedBy", "sliving");
+    googleSheetFormData.append("serviceName", serviceName);
+    googleSheetFormData.append("houseName", houseName);
 
     axios
       .post("/subscribe", formData)
@@ -228,5 +232,4 @@ function ModalAdvise(props) {
     </>
   );
 }
-
 export default ModalAdvise;

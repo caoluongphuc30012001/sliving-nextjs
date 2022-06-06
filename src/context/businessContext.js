@@ -6,6 +6,7 @@ export const BusinessDispatchContext = createContext();
 const initialState = {
   userChoices: [],
   total: 0,
+  houseID: "",
 };
 
 function reducer(state, action) {
@@ -28,6 +29,12 @@ function reducer(state, action) {
       return {
         ...state,
         total: action.payload.total,
+      };
+    }
+    case "GET_HOUSE_ID": {
+      return {
+        ...state,
+        houseID: action.payload,
       };
     }
     default:

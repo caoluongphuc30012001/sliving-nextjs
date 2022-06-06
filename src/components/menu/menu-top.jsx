@@ -41,14 +41,10 @@ const MenuTop = ({ logo, listRoute, back }) => {
                 </div>
               </div>
             ) : (
-              <Link
-                to={item.href}
-                key={item.id}
-                activeClassName="active-parent-menu"
-              >
-                <div className={`item-menu ${item.active ? "active" : ""}`}>
+              <Link to={item.href} key={item.id}>
+                <p className={`item-menu ${item.active ? "active" : ""}`}>
                   {item.nameRoute}
-                </div>
+                </p>
               </Link>
             );
           })}
