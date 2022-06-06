@@ -12,7 +12,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 60px;
+        gap: 30px;
         padding: 20px;
         .advise-now-btn{
             height: 40px;
@@ -182,6 +182,9 @@
                                 font-size: 20px;
                                 color: black;
                                 font-weight: 700;
+                                opacity: 0;
+                                overflow:hidden;
+                                transition: 0.25s;
                                 &:hover{
                                     cursor: pointer;
                                 }
@@ -193,13 +196,17 @@
                                     border-radius: 0px 8px 8px 0px;
                                     background-color: #04AA6D;
                                 }
-                                .table-data-text{
-                                    width: calc(100% - 6px);
-                                    height: calc(100% - 3px);
-                                    display: flex;
-                                    text-align: center;
-                                    align-items: center;
-                                    justify-content: center;
+                            }
+                            .table-data-text{
+                                width: 100%;
+                                display: flex;
+                                text-align: center;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            &:hover{
+                                .table-data-button{
+                                    opacity: 1;
                                 }
                             }
                         }
