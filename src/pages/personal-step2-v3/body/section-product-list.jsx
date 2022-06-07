@@ -10,16 +10,40 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
   return (
-    <tbody className="content-container">
-      {table.listDevice.map((item) => {
-        return (
-          <tr
-            className="table-row"
-            //key={}
-          >
-            <td className="table-data">{table.room.roomValue.nameVi}</td>
-            <td className="table-data center">{item.deviceValues.nameVi}</td>
-            <td className="table-data">
+    <tbody className="body-content-container border-b">
+      <tr className="body-table-row">{table.room.roomValue.nameVi}</tr>
+      <tr className="body-table-row border-lr">
+        {table.listDevice.map((item, index) => {
+          return (
+            <td
+              className={
+                Number(index) < Number(table.listDevice.length - 1)
+                  ? "table-data border-b"
+                  : "table-data"
+              }
+            >
+              {item.deviceValues.nameVi}
+            </td>
+          );
+        })}
+      </tr>
+      <tr className="body-table-row">
+        {table.listDevice.map((item, index) => {
+          console.log(
+            index,
+            "      ",
+            table.listDevice.length - 1,
+            "   ",
+            Number(index) < Number(table.listDevice.length - 1)
+          );
+          return (
+            <td
+              className={
+                Number(index) < Number(table.listDevice.length - 1)
+                  ? "table-data border-b"
+                  : "table-data"
+              }
+            >
               <div className="quantity-data">
                 <div
                   className="table-data-sub table-data-button"
@@ -52,10 +76,56 @@ const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
                 </div>
               </div>
             </td>
-          </tr>
-        );
-      })}
+          );
+        })}
+      </tr>
     </tbody>
+    // <tbody className="content-container">
+    //   {table.listDevice.map((item) => {
+    //     return (
+    //       <tr
+    //         className="table-row"
+    //         //key={}
+    //       >
+    //         <td className="table-data">{table.room.roomValue.nameVi}</td>
+    //         <td className="table-data center">{item.deviceValues.nameVi}</td>
+    //         <td className="table-data">
+    //           <div className="quantity-data">
+    //             <div
+    //               className="table-data-sub table-data-button"
+    //               onClick={() =>
+    //                 handleSub(item.deviceValues.id, table.room.roomValue.id)
+    //               }
+    //             >
+    //               -
+    //             </div>
+    //             <input
+    //               type="number"
+    //               name="name"
+    //               onChange={(e) =>
+    //                 onInputChange(
+    //                   item.deviceValues.id,
+    //                   table.room.roomValue.id,
+    //                   e.target.value
+    //                 )
+    //               }
+    //               value={item.deviceValues.total}
+    //               className="table-data-input"
+    //             />
+    //             <div
+    //               className="table-data-plus table-data-button"
+    //               onClick={() =>
+    //                 handlePlus(item.deviceValues.id, table.room.roomValue.id)
+    //               }
+    //             >
+    //               +
+    //             </div>
+    //           </div>
+    //         </td>
+    //       </tr>
+    //     );
+    //   })}
+    // </tbody>
   );
 };
 
