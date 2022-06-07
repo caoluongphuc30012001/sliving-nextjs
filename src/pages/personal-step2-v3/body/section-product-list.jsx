@@ -8,7 +8,7 @@ import {
 } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
-const Table = ({ table, handlePlus, handleSub }) => {
+const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
   return (
     <tbody className="content-container">
       {table.listDevice.map((item) => {
@@ -29,9 +29,19 @@ const Table = ({ table, handlePlus, handleSub }) => {
                 >
                   -
                 </div>
-                <div className="table-data-text">
-                  {item.quantityDevice * table.room.quantityRoom}
-                </div>
+                <input
+                  type="number"
+                  name="name"
+                  onChange={(e) =>
+                    onInputChange(
+                      item.deviceValues.id,
+                      table.room.roomValue.id,
+                      e.target.value
+                    )
+                  }
+                  value={item.deviceValues.total}
+                  className="table-data-input"
+                />
                 <div
                   className="table-data-plus table-data-button"
                   onClick={() =>
@@ -122,6 +132,12 @@ const SectionProductList = () => {
             a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
           );
         });
+        rs.forEach((item) => {
+          item.listDevice.forEach((device) => {
+            device.deviceValues.total =
+              device.quantityDevice * item.room.quantityRoom;
+          });
+        });
         setTableData(rs);
       } catch (err) {
         console.error(err);
@@ -133,14 +149,14 @@ const SectionProductList = () => {
 
   const sumCalculation = (list) => {
     const sum = list.listDevice.reduce((prev, item) => {
-      return prev + item.quantityDevice * item.deviceValues.price;
+      return prev + item.deviceValues.total * item.deviceValues.price;
     }, 0);
     return sum;
   };
 
   const sumDeviceCalculation = (list) => {
     const sum = list.listDevice.reduce((prev, item) => {
-      return prev + item.quantityDevice;
+      return prev + item.deviceValues.total;
     }, 0);
     return sum;
   };
@@ -148,7 +164,7 @@ const SectionProductList = () => {
   useEffect(() => {
     const getTotal = () => {
       const total = tableData.reduce((prev, item) => {
-        return prev + sumCalculation(item) * item.room.quantityRoom;
+        return prev + sumCalculation(item);
       }, 0);
       setTotal(total);
     };
@@ -158,7 +174,7 @@ const SectionProductList = () => {
   useEffect(() => {
     const getTotal = () => {
       const total = tableData.reduce((prev, item) => {
-        return prev + sumDeviceCalculation(item) * item.room.quantityRoom;
+        return prev + sumDeviceCalculation(item);
       }, 0);
       setTotalDevice(total);
     };
@@ -169,7 +185,7 @@ const SectionProductList = () => {
     tableData.forEach((table) => {
       if (table.room.roomValue.id === roomId)
         table.listDevice.forEach((item) => {
-          if (item.deviceValues.id === deviceId) item.quantityDevice += 1;
+          if (item.deviceValues.id === deviceId) item.deviceValues.total += 1;
         });
     });
     setTableData([...tableData]);
@@ -179,8 +195,21 @@ const SectionProductList = () => {
     tableData.forEach((table) => {
       if (table.room.roomValue.id === roomId)
         table.listDevice.forEach((item) => {
-          if (item.deviceValues.id === deviceId && item.quantityDevice > 0)
-            item.quantityDevice -= 1;
+          if (item.deviceValues.id === deviceId && item.deviceValues.total > 0)
+            item.deviceValues.total -= 1;
+        });
+    });
+    setTableData([...tableData]);
+  };
+
+  const onInputChange = (deviceId, roomId, value) => {
+    value = Number(value).toFixed(0);
+    console.log(value, "this is Value");
+    tableData.forEach((table) => {
+      if (table.room.roomValue.id === roomId)
+        table.listDevice.forEach((item) => {
+          if (item.deviceValues.id === deviceId && Number(value) >= 0)
+            item.deviceValues.total = Number(value);
         });
     });
     setTableData([...tableData]);
@@ -236,6 +265,7 @@ const SectionProductList = () => {
                     quantity={quantity}
                     handlePlus={handlePlus}
                     handleSub={handleSub}
+                    onInputChange={onInputChange}
                   />
                 );
               })}

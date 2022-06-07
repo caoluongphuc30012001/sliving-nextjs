@@ -169,10 +169,10 @@
                             display: flex;
                             height: 100%;
                             width: 100%;
-                            max-width: 100px;
+                            max-width: 190px;
                             max-height: 60px;
                             align-items: center;
-                            justify-content: space-between;
+                            justify-content: space-around;
                             .table-data-button{
                                 display: flex;
                                 text-align: center;
@@ -203,6 +203,46 @@
                                 text-align: center;
                                 align-items: center;
                                 justify-content: center;
+                            }
+                            .table-data-input{
+                                width: 50%;
+                                display: flex;
+                                text-align: center;
+                                align-items: center;
+                                justify-content: center;
+                                border: none;
+                            }
+                            input:-webkit-autofill,
+                            input:-webkit-autofill:hover,
+                            input:-webkit-autofill:focus,
+                            input:-webkit-autofill:active {
+                            -webkit-transition-delay: 9999s;
+                            transition-delay: 9999s;
+                            }
+
+                            @keyframes autofill {
+                                100% {
+                                    background: transparent;
+                                    color: inherit;
+                                }
+                            }
+
+                            @-webkit-keyframes autofill {
+                                100% {
+                                    background: transparent;
+                                    color: inherit;
+                                }
+                            }
+
+                            /* Chrome, Safari, Edge, Opera */
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                            }
+                            /* Firefox */
+                            input[type=number] {
+                            -moz-appearance: textfield;
                             }
                             &:hover{
                                 .table-data-button{
