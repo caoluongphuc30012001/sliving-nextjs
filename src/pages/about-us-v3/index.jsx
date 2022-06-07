@@ -14,7 +14,6 @@ import LayoutV3 from "../../components/layout-v3";
 import Seo from "../../components/seo";
 
 const AboutPage = ({ location }) => {
-  console.log("location", location);
   return (
     <LayoutV3>
       <Seo

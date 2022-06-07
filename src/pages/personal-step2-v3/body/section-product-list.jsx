@@ -73,7 +73,6 @@ const SectionProductList = () => {
         const res = await axios.get(
           "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
         );
-        console.log(res.data.Items);
         const list = res.data.Items.map((item, index) => {
           return {
             ...item,
@@ -93,9 +92,6 @@ const SectionProductList = () => {
       try {
         const response = await axios.get(
           "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
-        );
-        console.log(
-          response.data.Items.find((item) => item.id === state["houseID"])
         );
         setCurrentHouse(
           response.data.Items.find((item) => item.id === state["houseID"])
@@ -118,14 +114,21 @@ const SectionProductList = () => {
           }
         );
         console.log(res.data);
-        setTableData(res.data);
+        let rs = res.data.sort((a, b) =>
+          a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
+        );
+        res.data.forEach((item) => {
+          item.listDevice = item.listDevice.sort((a, b) =>
+            a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
+          );
+        });
+        setTableData(rs);
       } catch (err) {
         console.error(err);
       }
     };
 
     if (state["houseID"]) getDevice(state["houseID"], isBasic);
-    console.log(state);
   }, [isBasic, state]);
 
   const sumCalculation = (list) => {
@@ -169,7 +172,6 @@ const SectionProductList = () => {
           if (item.deviceValues.id === deviceId) item.quantityDevice += 1;
         });
     });
-    console.log(tableData);
     setTableData([...tableData]);
   };
 
@@ -177,7 +179,7 @@ const SectionProductList = () => {
     tableData.forEach((table) => {
       if (table.room.roomValue.id === roomId)
         table.listDevice.forEach((item) => {
-          if (item.deviceValues.id === deviceId && item.quantityDevice > 1)
+          if (item.deviceValues.id === deviceId && item.quantityDevice > 0)
             item.quantityDevice -= 1;
         });
     });
@@ -243,7 +245,7 @@ const SectionProductList = () => {
           <div className="sumary-text">Tổng giá tiền dự tính</div>
           <div>:</div>
           <div className="sumary-quantity">
-            {total.toLocaleString("vi-VN", {
+            {(Math.round(total / 1000000) * 1000000).toLocaleString("vi-VN", {
               style: "currency",
               currency: "VND",
             })}
