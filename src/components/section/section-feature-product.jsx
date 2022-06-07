@@ -108,7 +108,6 @@ const SectionFeatureProduct = ({ dataProductHot }) => {
         type: item.node.frontmatter.type,
       };
     });
-  console.log(arrProductHot);
   return (
     <section className="container-wrap section-prod-feature">
       {/* <h2 className="prod-title-v2">{t(`products_v2.Featured_Product`)}</h2>

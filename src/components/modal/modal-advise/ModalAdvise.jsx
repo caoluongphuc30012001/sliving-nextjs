@@ -8,8 +8,6 @@ import "./ModalAdvise.scss";
 function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
   const { onHide } = props;
 
-  console.log(props.serviceName);
-  console.log(props.houseName);
   const [modalShow, setModalShow] = React.useState(false);
 
   const {
