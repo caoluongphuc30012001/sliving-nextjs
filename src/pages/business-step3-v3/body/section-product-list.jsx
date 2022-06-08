@@ -196,7 +196,7 @@ const SectionProductList = () => {
                   <th className="table-data header">Số lượng</th>
                 </tr>
               </thead>
-              {Data.subContent.solutionList?.map((table) => {
+              {tableData?.subContent?.solutionList?.map((table) => {
                 return (
                   <SubTable
                     sorting={sorting}
