@@ -3,12 +3,36 @@ import { Link } from "gatsby";
 
 import imageStep from "../../../images/business-step1-v3/jpg/control-solution.jpg";
 
+import item_3 from "../../../images/personal-step1-v3/jpg/item-1.jpg";
+import item_2 from "../../../images/personal-step1-v3/jpg/item-2.jpg";
+import item_v from "../../../images/personal-step1-v3/jpg/item-3.jpg";
+import item_1 from "../../../images/personal-step1-v3/jpg/item-5.jpg";
+
 import axios from "axios";
 
 import {
   BusinessDispatchContext,
   BusinessStateContext,
 } from "../../../context/businessContext";
+
+const imgList = [
+  {
+    id: 0,
+    img: item_1,
+  },
+  {
+    id: 1,
+    img: item_2,
+  },
+  {
+    id: 2,
+    img: item_3,
+  },
+  {
+    id: 3,
+    img: item_v,
+  },
+];
 
 const PersonalStep1 = () => {
   const dispatch = useContext(BusinessDispatchContext);
@@ -29,6 +53,7 @@ const PersonalStep1 = () => {
         const data = response.data.Items.sort((a, b) =>
           a.nameVi.localeCompare(b.nameVi)
         );
+        console.log(data);
         setListOption(data);
         setActiveCard(data[0]);
       } catch (err) {
@@ -53,7 +78,7 @@ const PersonalStep1 = () => {
           </h4>
         </div>
         <div className="bottom-content">
-          {listOption.map((item) => {
+          {listOption.map((item, index) => {
             return (
               <div
                 className={`${
@@ -69,7 +94,11 @@ const PersonalStep1 = () => {
                 role="button"
                 tabIndex={0}
               >
-                <img src={imageStep} alt="" className="solution-item-img"></img>
+                <img
+                  src={imgList[index].img}
+                  alt=""
+                  className="solution-item-img"
+                ></img>
                 <div className="solution-item-desc">
                   <span>{item.nameVi}</span>
                 </div>
