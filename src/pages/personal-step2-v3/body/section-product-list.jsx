@@ -15,15 +15,7 @@ const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
       <tr className="body-table-row border-lr">
         {table.listDevice.map((item, index) => {
           return (
-            <td
-              className={
-                Number(index) < Number(table.listDevice.length - 1)
-                  ? "table-data border-b"
-                  : "table-data"
-              }
-            >
-              {item.deviceValues.nameVi}
-            </td>
+            <td className="table-data border-b">{item.deviceValues.nameVi}</td>
           );
         })}
       </tr>
@@ -286,7 +278,7 @@ const SectionProductList = () => {
   };
 
   return (
-    <section className="section-business-product-list">
+    <section className="section-personal-product-list">
       <div className="section-container">
         <div className="content-title">
           <div className="sub-title">PRODUCT LIST</div>
