@@ -384,6 +384,14 @@ const SectionSolution = () => {
               activeStep2Cards?.length > 0 &&
                 sum > 99 &&
                 dispatch({ type: "GET_TOTAL_HOUSES", payload: { total: sum } });
+              const checkParking = activeStep2Cards.find(
+                (element) => element.id === 3
+              );
+              if (checkParking) {
+                dispatch({ type: "SET_PARKING", payload: true });
+              } else {
+                dispatch({ type: "SET_PARKING", payload: false });
+              }
             }}
           >
             <span>Xác nhận</span>

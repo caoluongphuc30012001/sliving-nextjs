@@ -15,7 +15,7 @@ const BusinessStep3 = () => {
         url="/business-step3/"
         metaImage="/thumbnail.png"
       />
-      <main id="business-step3-v3">
+      <main id="personal-step2-v3">
         <SectionProductList />
         <SectionHelpMore />
       </main>

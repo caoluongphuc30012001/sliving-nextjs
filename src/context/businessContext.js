@@ -7,6 +7,7 @@ const initialState = {
   userChoices: [],
   total: 0,
   houseID: "",
+  checkParking: false,
 };
 
 function reducer(state, action) {
@@ -35,6 +36,12 @@ function reducer(state, action) {
       return {
         ...state,
         houseID: action.payload,
+      };
+    }
+    case "SET_PARKING": {
+      return {
+        ...state,
+        checkParking: action.payload,
       };
     }
     default:

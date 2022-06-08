@@ -68,13 +68,41 @@ const Table = ({ table, sorting, quantity }) => {
   );
 };
 
+const SubTable = ({ table }) => {
+  return (
+    <tbody className="body-content-container border-b">
+      <tr className="body-table-row">{table.solutionName}</tr>
+      <tr className="body-table-row border-lr">
+        <td className="table-data border-b">{table.softwareName}</td>
+        {table.deviceList.content.length > 0 && (
+          <td className="table-data-center">
+            <div className="data-col border-r">{table.deviceList.listName}</div>
+            <td className="data-col">
+              {table.deviceList.content?.map((item, index) => {
+                return (
+                  <td className="table-data border-b">{item.deviceName}</td>
+                );
+              })}
+            </td>
+          </td>
+        )}
+      </tr>
+      <tr className="body-table-row">
+        <td className="table-data">
+          <div className="quantity-data">liên hệ</div>
+        </td>
+      </tr>
+    </tbody>
+  );
+};
+
 const SectionProductList = () => {
   const [modalShow, setModalShow] = useState(false);
   // const [activeTable, setActiveTable] = useState(false);
   // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
   const [tableData, setTableData] = useState("");
-
+  const [isSubtable, setIsSubtable] = useState("false");
   const state = useContext(BusinessStateContext);
   useLayoutEffect(() => {
     if (!state["total"]) navigate("/business-step1");
@@ -88,6 +116,11 @@ const SectionProductList = () => {
     }
     setTableData(Data);
   }, [tableData]);
+  useEffect(() => {
+    if (state["checkParking"]) {
+      setIsSubtable(state["checkParking"]);
+    }
+  }, [isSubtable]);
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
@@ -153,6 +186,29 @@ const SectionProductList = () => {
             );
           })}
         </div>
+        {isSubtable && (
+          <div className="table">
+            <table className="table-container">
+              <thead className="content-container">
+                <tr className="table-row">
+                  <th className="table-data header">Giải pháp</th>
+                  <th className="table-data header center">Tên thiết bị</th>
+                  <th className="table-data header">Số lượng</th>
+                </tr>
+              </thead>
+              {Data.subContent.solutionList?.map((table) => {
+                return (
+                  <SubTable
+                    sorting={sorting}
+                    key={table.id}
+                    table={table}
+                    quantity={quantity}
+                  />
+                );
+              })}
+            </table>
+          </div>
+        )}
         {tableData.content?.map((table) => {
           return (
             table.range.min <= quantity &&
