@@ -102,7 +102,7 @@ const SectionProductList = () => {
   // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
   const [tableData, setTableData] = useState("");
-
+  const [isSubtable, setIsSubtable] = useState("false");
   const state = useContext(BusinessStateContext);
   useLayoutEffect(() => {
     if (!state["total"]) navigate("/business-step1");
@@ -116,6 +116,11 @@ const SectionProductList = () => {
     }
     setTableData(Data);
   }, [tableData]);
+  useEffect(() => {
+    if (state["checkParking"]) {
+      setIsSubtable(state["checkParking"]);
+    }
+  }, [isSubtable]);
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
@@ -181,7 +186,7 @@ const SectionProductList = () => {
             );
           })}
         </div>
-        {state["checkParking"] && (
+        {isSubtable && (
           <div className="table">
             <table className="table-container">
               <thead className="content-container">
