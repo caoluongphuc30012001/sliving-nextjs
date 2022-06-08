@@ -93,52 +93,6 @@ const SubTable = ({ table }) => {
         </td>
       </tr>
     </tbody>
-    // <tbody className="content-container">
-    //   {table.listDevice.map((item) => {
-    //     return (
-    //       <tr
-    //         className="table-row"
-    //         //key={}
-    //       >
-    //         <td className="table-data">{table.room.roomValue.nameVi}</td>
-    //         <td className="table-data center">{item.deviceValues.nameVi}</td>
-    //         <td className="table-data">
-    //           <div className="quantity-data">
-    //             <div
-    //               className="table-data-sub table-data-button"
-    //               onClick={() =>
-    //                 handleSub(item.deviceValues.id, table.room.roomValue.id)
-    //               }
-    //             >
-    //               -
-    //             </div>
-    //             <input
-    //               type="number"
-    //               name="name"
-    //               onChange={(e) =>
-    //                 onInputChange(
-    //                   item.deviceValues.id,
-    //                   table.room.roomValue.id,
-    //                   e.target.value
-    //                 )
-    //               }
-    //               value={item.deviceValues.total}
-    //               className="table-data-input"
-    //             />
-    //             <div
-    //               className="table-data-plus table-data-button"
-    //               onClick={() =>
-    //                 handlePlus(item.deviceValues.id, table.room.roomValue.id)
-    //               }
-    //             >
-    //               +
-    //             </div>
-    //           </div>
-    //         </td>
-    //       </tr>
-    //     );
-    //   })}
-    // </tbody>
   );
 };
 
@@ -227,28 +181,48 @@ const SectionProductList = () => {
             );
           })}
         </div>
-        <div className="table">
-          <table className="table-container">
-            <thead className="content-container">
-              <tr className="table-row">
-                <th className="table-data header">Giải pháp</th>
-                <th className="table-data header center">Tên thiết bị</th>
-                <th className="table-data header">Số lượng</th>
-              </tr>
-            </thead>
-            {Data.subContent.solutionList?.map((table) => {
-              return (
-                <SubTable
-                  sorting={sorting}
-                  key={table.id}
-                  table={table}
-                  quantity={quantity}
-                />
-              );
-            })}
-          </table>
-        </div>
-
+        {state["checkParking"] && (
+          <div className="table">
+            <table className="table-container">
+              <thead className="content-container">
+                <tr className="table-row">
+                  <th className="table-data header">Giải pháp</th>
+                  <th className="table-data header center">Tên thiết bị</th>
+                  <th className="table-data header">Số lượng</th>
+                </tr>
+              </thead>
+              {Data.subContent.solutionList?.map((table) => {
+                return (
+                  <SubTable
+                    sorting={sorting}
+                    key={table.id}
+                    table={table}
+                    quantity={quantity}
+                  />
+                );
+              })}
+            </table>
+          </div>
+        )}
+        {tableData.content?.map((table) => {
+          return (
+            table.range.min <= quantity &&
+            table.range.max > quantity && (
+              <div key={table.id} className="sumary">
+                {table.sumary.content.map((item) => {
+                  return (
+                    <div key={item.id} className="sumary-container">
+                      <div className="sumary-text">{item.text}</div>
+                      <div>:</div>
+                      <div className="sumary-quantity">{item.quantity}</div>
+                    </div>
+                  );
+                })}
+                <div className="smallNote">{tableData.smallNote}</div>
+              </div>
+            )
+          );
+        })}
         <div
           className="advise-now-btn"
           onClick={() => setModalShow(true)}

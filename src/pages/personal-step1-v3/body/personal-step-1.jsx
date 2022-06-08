@@ -23,8 +23,14 @@ const PersonalStep1 = () => {
         const response = await axios.get(
           "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
         );
-        setListOption(response.data.Items);
-        setActiveCard(response.data.Items[0]);
+        // item.listDevice = item.listDevice.sort((a, b) =>
+        //     a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
+        //   );
+        const data = response.data.Items.sort((a, b) =>
+          a.nameVi.localeCompare(b.nameVi)
+        );
+        setListOption(data);
+        setActiveCard(data[0]);
       } catch (err) {
         console.error(err);
       }
