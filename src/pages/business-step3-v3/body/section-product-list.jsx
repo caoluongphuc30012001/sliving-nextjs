@@ -45,7 +45,7 @@ const Table2 = ({ table }) => {
           <tr className="body-table-row">
             {table.deviceList.map((item, index) => {
               return (
-                <td className="table-data border-b">
+                <td id={item.id} className="table-data border-b">
                   {item.inBasic && (
                     <img className="table-data-icon" src={icon}></img>
                   )}
@@ -56,7 +56,7 @@ const Table2 = ({ table }) => {
           <tr className="body-table-row  border-lr">
             {table.deviceList.map((item, index) => {
               return (
-                <td className="table-data border-b">
+                <td id={item.id} className="table-data border-b">
                   {item.inAdvanced && (
                     <img className="table-data-icon" src={icon}></img>
                   )}
@@ -82,7 +82,9 @@ const SubTable = ({ table }) => {
             <td className="data-col">
               {table.deviceList.content?.map((item, index) => {
                 return (
-                  <td className="table-data border-b">{item.deviceName}</td>
+                  <td id={item.id} className="table-data border-b">
+                    {item.deviceName}
+                  </td>
                 );
               })}
             </td>
