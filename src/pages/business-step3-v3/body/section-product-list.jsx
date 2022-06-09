@@ -79,8 +79,11 @@ const SubTable = ({ table }) => {
             <div className="data-col border-r">{table.deviceList.listName}</div>
             <td className="data-col">
               {table.deviceList.content?.map((item, index) => {
+                const id = index + 1;
                 return (
-                  <td className="table-data border-b">{item.deviceName}</td>
+                  <td key={id} className="table-data border-b">
+                    {item.deviceName}
+                  </td>
                 );
               })}
             </td>
@@ -214,9 +217,10 @@ const SectionProductList = () => {
             table.range.min <= quantity &&
             table.range.max > quantity && (
               <div key={table.id} className="sumary">
-                {table.sumary.content.map((item) => {
+                {table.sumary.content.map((item, index) => {
+                  const id = index + 1;
                   return (
-                    <div key={item.id} className="sumary-container">
+                    <div key={id} className="sumary-container">
                       <div className="sumary-text">{item.text}</div>
                       <div>:</div>
                       <div className="sumary-quantity">{item.quantity}</div>

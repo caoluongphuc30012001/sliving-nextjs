@@ -53,7 +53,6 @@ const PersonalStep1 = () => {
         const data = response.data.Items.sort((a, b) =>
           a.nameVi.localeCompare(b.nameVi)
         );
-        console.log(data);
         setListOption(data);
         setActiveCard(data[0]);
       } catch (err) {
