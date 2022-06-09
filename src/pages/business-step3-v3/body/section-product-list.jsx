@@ -153,25 +153,6 @@ const SectionProductList = () => {
           <div className="title">Danh Sách Thiết Bị Sử Dụng Cho Dự Án</div>
           <div className="underline"></div>
         </div>
-        <div className="button-container">
-          {buttonList.map((item) => {
-            return (
-              <div
-                key={item.id}
-                onClick={() => {
-                  setToggle(item.id);
-                }}
-                className={toggle === item.id ? "button" : "button active"}
-                onKeyDown={() => {}}
-                role="button"
-                tabIndex={0}
-              >
-                {item.content}
-              </div>
-            );
-          })}
-          <div className={buttonList[`${toggle}`].className}></div>
-        </div>
         {tableData.content?.map((table) => {
           return <Table2 key={table.id} table={table} />;
         })}
