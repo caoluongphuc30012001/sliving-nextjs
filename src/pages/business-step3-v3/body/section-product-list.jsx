@@ -198,22 +198,9 @@ const SectionProductList = () => {
             </table>
           </div>
         )}
-        {/* {tableData.content?.map((table) => {
-          return (
-            <div key={table.id} className="sumary">
-              {table.sumary.content.map((item) => {
-                return (
-                  <div key={item.id} className="sumary-container">
-                    <div className="sumary-text">{item.text}</div>
-                    <div>:</div>
-                    <div className="sumary-quantity">{item.quantity}</div>
-                  </div>
-                );
-              })}
-              <div className="smallNote">{tableData.smallNote}</div>
-            </div>
-          );
-        })} */}
+        <div key={table.id} className="sumary">
+          <div className="smallNote">{tableData.smallNote}</div>
+        </div>
         <div
           className="advise-now-btn"
           onClick={() => setModalShow(true)}
