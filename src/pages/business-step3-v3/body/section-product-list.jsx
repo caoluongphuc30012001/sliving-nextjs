@@ -1,9 +1,10 @@
 import React, { useState, useLayoutEffect, useContext, useEffect } from "react";
-import { Data } from "@data/tableData.js";
+import { Data } from "@data/tableData2.js";
 
 import { BusinessStateContext } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { navigate } from "gatsby";
+import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
 const buttonList = [
   {
@@ -18,53 +19,54 @@ const buttonList = [
   },
 ];
 
-const Table = ({ table, sorting, quantity }) => {
+const Table2 = ({ table }) => {
   return (
-    <table className="table-container">
-      <thead className="content-container">
-        <tr className="table-row">
-          <th
-            className="table-data header"
-            onClick={() => {
-              sorting("position");
-            }}
-          >
-            Vị trí lắp đặt
-          </th>
-          <th
-            className="table-data header center"
-            onClick={() => {
-              sorting("device");
-            }}
-          >
-            Tên thiết bị
-          </th>
-          <th className="table-data header">SỐ LƯỢNG</th>
-        </tr>
-      </thead>
-      <tbody className="content-container">
-        {table.content.map((item) => {
-          return (
-            <tr key={item.id} className="table-row">
-              <td className="table-data">{item.position}</td>
-              <td className="table-data center">{item.device}</td>
-              <td className="table-data">
-                {item.quantityMultiplier
-                  ? item.quantityMultiplier * table.range.min +
-                    " - " +
-                    item.quantityMultiplier * table.range.max
-                  : table.range.min + " - " + table.range.max}
-              </td>
-            </tr>
-          );
-        })}
-        <tr className="table-row">
-          <td className="table-data">{table.lastContent.position}</td>
-          <td className="table-data center">{table.lastContent.device}</td>
-          <td className="table-data">{table.lastContent.quantity}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="table">
+      <table className="table-container">
+        <thead className="content-container">
+          <tr className="table-row">
+            <th className="table-data header">Vị trí lắp đặt</th>
+            <th className="table-data header center">Tên thiết bị</th>
+            <th className="table-data header">Cơ Bản</th>
+            <th className="table-data header">Nâng Cao</th>
+          </tr>
+        </thead>
+        <tbody className="body-content-container border-b">
+          <tr className="body-table-row">{table.solutionName}</tr>
+          <tr className="body-table-row border-lr">
+            {table.deviceList.map((item) => {
+              return (
+                <td key={item.id} className="table-data border-b">
+                  {item.deviceName}
+                </td>
+              );
+            })}
+          </tr>
+          <tr className="body-table-row">
+            {table.deviceList.map((item, index) => {
+              return (
+                <td className="table-data border-b">
+                  {item.inBasic && (
+                    <img className="table-data-icon" src={icon}></img>
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+          <tr className="body-table-row  border-lr">
+            {table.deviceList.map((item, index) => {
+              return (
+                <td className="table-data border-b">
+                  {item.inAdvanced && (
+                    <img className="table-data-icon" src={icon}></img>
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
@@ -168,26 +170,11 @@ const SectionProductList = () => {
           })}
           <div className={buttonList[`${toggle}`].className}></div>
         </div>
-        <div className="table">
-          {tableData.content?.map((table) => {
-            // table.range.min <= quantity &&
-            //   table.range.max > quantity &&
-            //   setActiveTable(table.id);
-            return (
-              table.range.min <= quantity &&
-              table.range.max > quantity && (
-                <Table
-                  sorting={sorting}
-                  key={table.id}
-                  table={table}
-                  quantity={quantity}
-                />
-              )
-            );
-          })}
-        </div>
+        {tableData.content?.map((table) => {
+          return <Table2 key={table.id} table={table} />;
+        })}
         {isSubtable && (
-          <div className="table">
+          <div className="sub-table">
             <table className="table-container">
               <thead className="content-container">
                 <tr className="table-row">
@@ -209,25 +196,22 @@ const SectionProductList = () => {
             </table>
           </div>
         )}
-        {tableData.content?.map((table) => {
+        {/* {tableData.content?.map((table) => {
           return (
-            table.range.min <= quantity &&
-            table.range.max > quantity && (
-              <div key={table.id} className="sumary">
-                {table.sumary.content.map((item) => {
-                  return (
-                    <div key={item.id} className="sumary-container">
-                      <div className="sumary-text">{item.text}</div>
-                      <div>:</div>
-                      <div className="sumary-quantity">{item.quantity}</div>
-                    </div>
-                  );
-                })}
-                <div className="smallNote">{tableData.smallNote}</div>
-              </div>
-            )
+            <div key={table.id} className="sumary">
+              {table.sumary.content.map((item) => {
+                return (
+                  <div key={item.id} className="sumary-container">
+                    <div className="sumary-text">{item.text}</div>
+                    <div>:</div>
+                    <div className="sumary-quantity">{item.quantity}</div>
+                  </div>
+                );
+              })}
+              <div className="smallNote">{tableData.smallNote}</div>
+            </div>
           );
-        })}
+        })} */}
         <div
           className="advise-now-btn"
           onClick={() => setModalShow(true)}
