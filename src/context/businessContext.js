@@ -8,6 +8,7 @@ const initialState = {
   total: 0,
   houseID: "",
   checkParking: false,
+  allSolutions: "",
 };
 
 function reducer(state, action) {
@@ -42,6 +43,12 @@ function reducer(state, action) {
       return {
         ...state,
         checkParking: action.payload,
+      };
+    }
+    case "SET_ALL_SOLUTIONS": {
+      return {
+        ...state,
+        allSolutions: action.payload.allSolutions,
       };
     }
     default:

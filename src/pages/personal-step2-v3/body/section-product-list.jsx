@@ -124,7 +124,7 @@ const SectionProductList = () => {
   const [total, setTotal] = useState(0);
   const [totalDevice, setTotalDevice] = useState(0);
   const [currentHouse, setCurrentHouse] = useState("");
-  const [display, setDisplay] = useState(true);
+  const [display, setDisplay] = useState(false);
   // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
   const state = useContext(BusinessStateContext);
@@ -153,7 +153,7 @@ const SectionProductList = () => {
     return () => {
       document.removeEventListener("scroll", scrollEvent);
     };
-  }, []);
+  }, [tableData]);
   useEffect(() => {
     const getServices = async () => {
       try {

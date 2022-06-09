@@ -1,7 +1,7 @@
 export const Data = {
   id: 0,
   smallNote:
-    "Bảng số lượng thiết bị chỉ để tham khảo, để biết thêm thông tin về giải pháp vui lòng liên hệ với chúng tôi để được phục vụ chính xác và nhanh chóng nhất.",
+    "Bảng thiết bị chỉ để tham khảo, để biết thêm thông tin về giải pháp vui lòng liên hệ với chúng tôi để được phục vụ chính xác và nhanh chóng nhất.",
   content: [
     {
       id: 0,
