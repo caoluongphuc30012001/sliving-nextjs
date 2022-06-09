@@ -198,7 +198,7 @@ const SectionProductList = () => {
             </table>
           </div>
         )}
-        <div key={table.id} className="sumary">
+        <div className="sumary">
           <div className="smallNote">{tableData.smallNote}</div>
         </div>
         <div
