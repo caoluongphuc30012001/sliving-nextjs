@@ -163,7 +163,7 @@
 }
 
 // package section
-.business-step1-container {
+.personal-step1-container {
   width: 100%;
   display: block;
   max-width: 100%;
@@ -172,7 +172,7 @@
   align-items: center;
   border-bottom: 1px solid #e1e3e6;
 
-  .business-step1-wrapper {
+  .personal-step1-wrapper {
     max-width: 1180px;
     width: 100%;
     margin: 120px auto;
@@ -313,7 +313,7 @@
 }
 
 @media (max-width: 750px) {
-  .business-step1-container {
+  .personal-step1-container {
     width: 100%;
     display: block;
     max-width: 100%;
@@ -322,7 +322,7 @@
     align-items: center;
     border-bottom: 1px solid #e1e3e6;
 
-    .business-step1-wrapper {
+    .personal-step1-wrapper {
       max-width: 1180px;
       width: 100%;
       margin: 40px auto;
@@ -446,7 +446,6 @@
           box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
             0px 8px 8px -4px rgba(24, 39, 75, 0.08);
         }
-
         span {
           font-style: normal;
           font-weight: 700;

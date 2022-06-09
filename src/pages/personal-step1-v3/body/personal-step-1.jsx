@@ -68,8 +68,8 @@ const PersonalStep1 = () => {
   };
 
   return (
-    <section className="business-step1-container">
-      <div className="business-step1-wrapper">
+    <section className="personal-step1-container">
+      <div className="personal-step1-wrapper">
         <div className="top-content">
           <h1 className="main-title">Chọn Loại Căn Hộ Bạn Đang Sở Hữu</h1>
           <h4 className="sub-title">

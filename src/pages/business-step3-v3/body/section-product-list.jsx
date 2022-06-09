@@ -6,19 +6,6 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { navigate } from "gatsby";
 import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
-const buttonList = [
-  {
-    id: 0,
-    content: "cơ bản",
-    className: "effect left",
-  },
-  {
-    id: 1,
-    content: "nâng cao",
-    className: "effect right",
-  },
-];
-
 const Table2 = ({ table }) => {
   return (
     <div className="table">
@@ -104,27 +91,16 @@ const SectionProductList = () => {
   const [modalShow, setModalShow] = useState(false);
   // const [activeTable, setActiveTable] = useState(false);
   // const [order, setOrder] = useState("ASC");
-  const [quantity, setQuantity] = useState(0);
   const [tableData, setTableData] = useState("");
-  const [isSubtable, setIsSubtable] = useState("false");
   const state = useContext(BusinessStateContext);
-  useLayoutEffect(() => {
-    if (!state["total"]) navigate("/business-step1");
-  }, []);
+  // useLayoutEffect(() => {
+  //   if (!state["total"]) navigate("/business-step1");
+  // }, []);
 
   useEffect(() => {
-    if (state["total"]) {
-      if (state["total"] < 500) setQuantity(500);
-      else if (state["total"] >= 5000) setQuantity(4999);
-      else setQuantity(state["total"]);
-    }
     setTableData(Data);
   }, [tableData]);
-  useEffect(() => {
-    if (state["checkParking"]) {
-      setIsSubtable(state["checkParking"]);
-    }
-  }, [isSubtable]);
+
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
@@ -142,9 +118,6 @@ const SectionProductList = () => {
     //   setOrder("ASC");
     // }
   };
-
-  const [toggle, setToggle] = useState(0);
-
   return (
     <section className="section-business-product-list">
       <div className="section-container">
@@ -156,29 +129,22 @@ const SectionProductList = () => {
         {tableData.content?.map((table) => {
           return <Table2 key={table.id} table={table} />;
         })}
-        {isSubtable && (
-          <div className="sub-table">
-            <table className="table-container">
-              <thead className="content-container">
-                <tr className="table-row">
-                  <th className="table-data header">Giải pháp</th>
-                  <th className="table-data header center">Tên thiết bị</th>
-                  <th className="table-data header">Số lượng</th>
-                </tr>
-              </thead>
-              {tableData?.subContent?.solutionList?.map((table) => {
-                return (
-                  <SubTable
-                    sorting={sorting}
-                    key={table.id}
-                    table={table}
-                    quantity={quantity}
-                  />
-                );
-              })}
-            </table>
-          </div>
-        )}
+        <div className="sub-table">
+          <table className="table-container">
+            <thead className="content-container">
+              <tr className="table-row">
+                <th className="table-data header">Giải pháp</th>
+                <th className="table-data header center">Tên thiết bị</th>
+                <th className="table-data header">Số lượng</th>
+              </tr>
+            </thead>
+            {tableData?.subContent?.solutionList?.map((table) => {
+              return (
+                <SubTable sorting={sorting} key={table.id} table={table} />
+              );
+            })}
+          </table>
+        </div>
         <div className="sumary">
           <div className="smallNote">{tableData.smallNote}</div>
         </div>
