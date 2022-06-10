@@ -20,6 +20,9 @@ const BusinessStep1 = () => {
     }
   }, [state]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleClickCardItem = (cardItem) => {
     const check = activeCards.every((item) => {
       return item.id !== cardItem.id;

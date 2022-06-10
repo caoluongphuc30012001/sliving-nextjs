@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "gatsby";
 
 import imageStep from "../../../images/business-step1-v3/jpg/control-solution.jpg";
@@ -40,8 +40,9 @@ const PersonalStep1 = () => {
   const [activeCard, setActiveCard] = useState({});
 
   const [listOption, setListOption] = useState([]);
-
-  useEffect(() => {
+  const checkList = [{}, {}, {}, {}];
+  const [skeleton, setSkeleton] = useState(true);
+  useLayoutEffect(() => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
@@ -60,12 +61,20 @@ const PersonalStep1 = () => {
       }
     };
     getListHouse();
+    const time = setTimeout(() => {
+      setSkeleton(false);
+    }, 1000);
+    return () => {
+      clearTimeout(time);
+    };
   }, []);
 
   const handleClickCardItem = (cardItem) => {
     setActiveCard({ ...cardItem });
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="personal-step1-container">
       <div className="personal-step1-wrapper">
@@ -76,7 +85,15 @@ const PersonalStep1 = () => {
             giải pháp thông minh phù hợp với căn hộ của bạn.
           </h4>
         </div>
-        <div className="bottom-content">
+        <div
+          className={`bottom-content ${
+            listOption.length > 0
+              ? !skeleton
+                ? ""
+                : "non-display"
+              : "non-display"
+          }`}
+        >
           {listOption.map((item, index) => {
             return (
               <div
@@ -93,11 +110,13 @@ const PersonalStep1 = () => {
                 role="button"
                 tabIndex={0}
               >
-                <img
-                  src={imgList[index].img}
-                  alt=""
-                  className="solution-item-img"
-                ></img>
+                <div className="image-box">
+                  <img
+                    src={imgList[index].img}
+                    alt=""
+                    className="solution-item-img"
+                  ></img>
+                </div>
                 <div className="solution-item-desc">
                   <span>{item.nameVi}</span>
                 </div>
@@ -105,7 +124,37 @@ const PersonalStep1 = () => {
             );
           })}
         </div>
-
+        <div
+          className={`bottom-content ${
+            listOption.length > 0
+              ? skeleton
+                ? ""
+                : "non-display"
+              : ""
+          }`}
+        >
+          {checkList.map((item, index) => {
+            const id = index + 1;
+            return (
+              // <div
+              //   className= "skeleton-item"
+              //   key={id}
+              // >
+              // </div>
+              <div id="card">
+                <div className="card-image">
+                  <div className="block pulsate"></div>
+                </div>
+                <div className="card-content">
+                  <div className="block2 pulsate"></div>
+                  <div className="block3 pulsate"></div>
+                  <div className="circle pulsate"></div>
+                  <div></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
         <Link to="/personal-step2">
           <button
             className="advise-now-btn"
