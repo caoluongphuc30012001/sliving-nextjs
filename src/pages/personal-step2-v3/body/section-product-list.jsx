@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useLayoutEffect } from "react";
 import { navigate } from "gatsby";
 import axios from "axios";
-
+import { Spinner } from "react-bootstrap";
 import {
   BusinessDispatchContext,
   BusinessStateContext,
@@ -134,6 +134,7 @@ const SectionProductList = () => {
 
   const [buttonList, setButtonList] = useState([]);
 
+  const [loading,setLoading] = useState(true)
   const [toggle, setToggle] = useState(0);
   useLayoutEffect(() => {
     if (!state["houseID"]) navigate("/personal-step1");
@@ -153,7 +154,7 @@ const SectionProductList = () => {
     return () => {
       document.removeEventListener("scroll", scrollEvent);
     };
-  }, [tableData]);
+  }, []);
   useEffect(() => {
     const getServices = async () => {
       try {
@@ -200,6 +201,7 @@ const SectionProductList = () => {
             isBasic,
           }
         );
+        setLoading(false)
         let rs = res.data.sort((a, b) =>
           a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
         );
@@ -334,7 +336,8 @@ const SectionProductList = () => {
                 <th className="table-data header">SỐ LƯỢNG</th>
               </tr>
             </thead>
-            {tableData &&
+            {loading&&<Spinner animation="border" className="spiner-animation"/>}
+            {!loading &&
               tableData.map((table, index) => {
                 const id = index + 1;
                 return (
@@ -345,12 +348,13 @@ const SectionProductList = () => {
                     handlePlus={handlePlus}
                     handleSub={handleSub}
                     onInputChange={onInputChange}
+                    loading={loading}
                   />
                 );
               })}
           </table>
         </div>
-        <div className={` ${display ? "active-menu" : "section-menu-bottom"}`}>
+        {!loading&&<div className={` ${display ? "active-menu" : "section-menu-bottom"}`}>
           <div className="bottom-menu">
             <div className="sumary-container">
               <div className="sumary-text">Tổng giá tiền dự tính</div>
@@ -375,8 +379,8 @@ const SectionProductList = () => {
               <span>Tư Vấn Ngay</span>
             </div>
           </div>
-        </div>
-        <div className={`section-bottom`}>
+        </div>}
+        {!loading&&<div className={`section-bottom`}>
           <div className="bottom-menu">
             <div className="sumary-container">
               <div className="sumary-text">Tổng giá tiền dự tính</div>
@@ -399,8 +403,8 @@ const SectionProductList = () => {
               <div className="sumary-quantity">{totalDevice + " Thiết bị"}</div>
             </div>
           </div>
-        </div>
-        <div
+        </div>}
+        {!loading&&<div
           className="advise-now-btn"
           onClick={() => setModalShow(true)}
           onKeyDown={() => {}}
@@ -408,7 +412,7 @@ const SectionProductList = () => {
           tabIndex={0}
         >
           <span>Tư Vấn Ngay</span>
-        </div>
+        </div>}
       </div>
       <ModalAdvise
         show={modalShow}
