@@ -1,70 +1,59 @@
 import React, { useState, useLayoutEffect, useContext, useEffect } from "react";
-import { Data } from "@data/tableData.js";
+import { Data } from "@data/tableData2.js";
 
 import { BusinessStateContext } from "../../../context/businessContext";
-import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import ModalAdvise from "@components/modal/modal-advise/ModalAdvise-business";
 import { navigate } from "gatsby";
+import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
-const buttonList = [
-  {
-    id: 0,
-    content: "cơ bản",
-    className: "effect left",
-  },
-  {
-    id: 1,
-    content: "nâng cao",
-    className: "effect right",
-  },
-];
-
-const Table = ({ table, sorting, quantity }) => {
+const Table2 = ({ table }) => {
   return (
-    <table className="table-container">
-      <thead className="content-container">
-        <tr className="table-row">
-          <th
-            className="table-data header"
-            onClick={() => {
-              sorting("position");
-            }}
-          >
-            Vị trí lắp đặt
-          </th>
-          <th
-            className="table-data header center"
-            onClick={() => {
-              sorting("device");
-            }}
-          >
-            Tên thiết bị
-          </th>
-          <th className="table-data header">SỐ LƯỢNG</th>
-        </tr>
-      </thead>
-      <tbody className="content-container">
-        {table.content.map((item) => {
-          return (
-            <tr key={item.id} className="table-row">
-              <td className="table-data">{item.position}</td>
-              <td className="table-data center">{item.device}</td>
-              <td className="table-data">
-                {item.quantityMultiplier
-                  ? item.quantityMultiplier * table.range.min +
-                    " - " +
-                    item.quantityMultiplier * table.range.max
-                  : table.range.min + " - " + table.range.max}
-              </td>
-            </tr>
-          );
-        })}
-        <tr className="table-row">
-          <td className="table-data">{table.lastContent.position}</td>
-          <td className="table-data center">{table.lastContent.device}</td>
-          <td className="table-data">{table.lastContent.quantity}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="table">
+      <table className="table-container">
+        <thead className="content-container">
+          <tr className="table-row">
+            <th className="table-data header">GIẢI PHÁP</th>
+            <th className="table-data header center">Tên thiết bị</th>
+            <th className="table-data header">Cơ Bản</th>
+            <th className="table-data header">Nâng Cao</th>
+          </tr>
+        </thead>
+        <tbody className="body-content-container border-b">
+          <tr className="body-table-row">{table.solutionName}</tr>
+          <tr className="body-table-row border-lr">
+            {table.deviceList.map((item) => {
+              return (
+                <td key={item.id} className="table-data border-b">
+                  {item.deviceName}
+                </td>
+              );
+            })}
+          </tr>
+          <tr className="body-table-row">
+            {table.deviceList.map((item, index) => {
+              return (
+                <td id={item.id} className="table-data border-b">
+                  {item.inBasic && (
+                    <img className="table-data-icon" src={icon}></img>
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+          <tr className="body-table-row  border-lr">
+            {table.deviceList.map((item, index) => {
+              return (
+                <td id={item.id} className="table-data border-b">
+                  {item.inAdvanced && (
+                    <img className="table-data-icon" src={icon}></img>
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
@@ -79,8 +68,11 @@ const SubTable = ({ table }) => {
             <div className="data-col border-r">{table.deviceList.listName}</div>
             <td className="data-col">
               {table.deviceList.content?.map((item, index) => {
+                const id = index + 1;
                 return (
-                  <td className="table-data border-b">{item.deviceName}</td>
+                  <td key={id} className="table-data border-b">
+                    {item.deviceName}
+                  </td>
                 );
               })}
             </td>
@@ -100,27 +92,19 @@ const SectionProductList = () => {
   const [modalShow, setModalShow] = useState(false);
   // const [activeTable, setActiveTable] = useState(false);
   // const [order, setOrder] = useState("ASC");
-  const [quantity, setQuantity] = useState(0);
   const [tableData, setTableData] = useState("");
-  const [isSubtable, setIsSubtable] = useState("false");
   const state = useContext(BusinessStateContext);
-  useLayoutEffect(() => {
-    if (!state["total"]) navigate("/business-step1");
-  }, []);
+  // useLayoutEffect(() => {
+  //   if (!state["total"]) navigate("/business-step1");
+  // }, []);
+  const [solutionNames, setSolutionNames] = useState("");
 
   useEffect(() => {
-    if (state["total"]) {
-      if (state["total"] < 500) setQuantity(500);
-      else if (state["total"] >= 5000) setQuantity(4999);
-      else setQuantity(state["total"]);
-    }
     setTableData(Data);
+
+    state["allSolutions"] && setSolutionNames(state["allSolutions"]);
   }, [tableData]);
-  useEffect(() => {
-    if (state["checkParking"]) {
-      setIsSubtable(state["checkParking"]);
-    }
-  }, [isSubtable]);
+
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
@@ -138,9 +122,6 @@ const SectionProductList = () => {
     //   setOrder("ASC");
     // }
   };
-
-  const [toggle, setToggle] = useState(0);
-
   return (
     <section className="section-business-product-list">
       <div className="section-container">
@@ -149,85 +130,28 @@ const SectionProductList = () => {
           <div className="title">Danh Sách Thiết Bị Sử Dụng Cho Dự Án</div>
           <div className="underline"></div>
         </div>
-        <div className="button-container">
-          {buttonList.map((item) => {
-            return (
-              <div
-                key={item.id}
-                onClick={() => {
-                  setToggle(item.id);
-                }}
-                className={toggle === item.id ? "button" : "button active"}
-                onKeyDown={() => {}}
-                role="button"
-                tabIndex={0}
-              >
-                {item.content}
-              </div>
-            );
-          })}
-          <div className={buttonList[`${toggle}`].className}></div>
-        </div>
-        <div className="table">
-          {tableData.content?.map((table) => {
-            // table.range.min <= quantity &&
-            //   table.range.max > quantity &&
-            //   setActiveTable(table.id);
-            return (
-              table.range.min <= quantity &&
-              table.range.max > quantity && (
-                <Table
-                  sorting={sorting}
-                  key={table.id}
-                  table={table}
-                  quantity={quantity}
-                />
-              )
-            );
-          })}
-        </div>
-        {isSubtable && (
-          <div className="table">
-            <table className="table-container">
-              <thead className="content-container">
-                <tr className="table-row">
-                  <th className="table-data header">Giải pháp</th>
-                  <th className="table-data header center">Tên thiết bị</th>
-                  <th className="table-data header">Số lượng</th>
-                </tr>
-              </thead>
-              {tableData?.subContent?.solutionList?.map((table) => {
-                return (
-                  <SubTable
-                    sorting={sorting}
-                    key={table.id}
-                    table={table}
-                    quantity={quantity}
-                  />
-                );
-              })}
-            </table>
-          </div>
-        )}
         {tableData.content?.map((table) => {
-          return (
-            table.range.min <= quantity &&
-            table.range.max > quantity && (
-              <div key={table.id} className="sumary">
-                {table.sumary.content.map((item) => {
-                  return (
-                    <div key={item.id} className="sumary-container">
-                      <div className="sumary-text">{item.text}</div>
-                      <div>:</div>
-                      <div className="sumary-quantity">{item.quantity}</div>
-                    </div>
-                  );
-                })}
-                <div className="smallNote">{tableData.smallNote}</div>
-              </div>
-            )
-          );
+          return <Table2 key={table.id} table={table} />;
         })}
+        <div className="sub-table">
+          <table className="table-container">
+            <thead className="content-container">
+              <tr className="table-row">
+                <th className="table-data header">Giải pháp</th>
+                <th className="table-data header center">Tên thiết bị</th>
+                <th className="table-data header">Số lượng</th>
+              </tr>
+            </thead>
+            {tableData?.subContent?.solutionList?.map((table) => {
+              return (
+                <SubTable sorting={sorting} key={table.id} table={table} />
+              );
+            })}
+          </table>
+        </div>
+        <div className="sumary">
+          <div className="smallNote">{tableData.smallNote}</div>
+        </div>
         <div
           className="advise-now-btn"
           onClick={() => setModalShow(true)}
@@ -238,7 +162,11 @@ const SectionProductList = () => {
           <span>Tư Vấn Ngay</span>
         </div>
       </div>
-      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      <ModalAdvise
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        solutionNames={solutionNames}
+      />
     </section>
   );
 };

@@ -34,7 +34,13 @@ const MenuTop = ({ logo, listRoute, back }) => {
                   {item.listRoute.map((item) => {
                     return (
                       <Link to={item.href} key={item.id}>
-                        <div className="item-select">{item.nameRoute}</div>
+                        <div
+                          className={`item-select ${
+                            item.active ? "active" : ""
+                          }`}
+                        >
+                          {item.nameRoute}
+                        </div>
                       </Link>
                     );
                   })}

@@ -7,29 +7,27 @@ import {
   BusinessStateContext,
 } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
-
+const isBrowser = typeof window !== "undefined";
 const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
   return (
     <tbody className="body-content-container border-b">
       <tr className="body-table-row">{table.room.roomValue.nameVi}</tr>
       <tr className="body-table-row border-lr">
         {table.listDevice.map((item, index) => {
+          const id = index + 1;
           return (
-            <td className="table-data border-b">{item.deviceValues.nameVi}</td>
+            <td key={id} className="table-data border-b">
+              {item.deviceValues.nameVi}
+            </td>
           );
         })}
       </tr>
       <tr className="body-table-row">
         {table.listDevice.map((item, index) => {
-          console.log(
-            index,
-            "      ",
-            table.listDevice.length - 1,
-            "   ",
-            Number(index) < Number(table.listDevice.length - 1)
-          );
+          const id = index + 1;
           return (
             <td
+              key={id}
               className={
                 Number(index) < Number(table.listDevice.length - 1)
                   ? "table-data border-b"
@@ -126,6 +124,7 @@ const SectionProductList = () => {
   const [total, setTotal] = useState(0);
   const [totalDevice, setTotalDevice] = useState(0);
   const [currentHouse, setCurrentHouse] = useState("");
+  const [display, setDisplay] = useState(false);
   // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
   const state = useContext(BusinessStateContext);
@@ -139,6 +138,22 @@ const SectionProductList = () => {
   useLayoutEffect(() => {
     if (!state["houseID"]) navigate("/personal-step1");
   }, []);
+  useEffect(() => {
+    const scrollEvent = () => {
+      if (isBrowser) {
+        const section = document.getElementById(
+          "section-personal-product-list"
+        );
+        if (window.pageYOffset > section.clientHeight - window.innerHeight)
+          setDisplay(false);
+        else setDisplay(true);
+      }
+    };
+    document.addEventListener("scroll", scrollEvent);
+    return () => {
+      document.removeEventListener("scroll", scrollEvent);
+    };
+  }, [tableData]);
   useEffect(() => {
     const getServices = async () => {
       try {
@@ -185,7 +200,6 @@ const SectionProductList = () => {
             isBasic,
           }
         );
-        console.log(res.data);
         let rs = res.data.sort((a, b) =>
           a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
         );
@@ -266,7 +280,6 @@ const SectionProductList = () => {
 
   const onInputChange = (deviceId, roomId, value) => {
     value = Number(value).toFixed(0);
-    console.log(value, "this is Value");
     tableData.forEach((table) => {
       if (table.room.roomValue.id === roomId)
         table.listDevice.forEach((item) => {
@@ -278,7 +291,10 @@ const SectionProductList = () => {
   };
 
   return (
-    <section className="section-personal-product-list">
+    <section
+      className="section-personal-product-list"
+      id="section-personal-product-list"
+    >
       <div className="section-container">
         <div className="content-title">
           <div className="sub-title">PRODUCT LIST</div>
@@ -319,10 +335,11 @@ const SectionProductList = () => {
               </tr>
             </thead>
             {tableData &&
-              tableData.map((table) => {
+              tableData.map((table, index) => {
+                const id = index + 1;
                 return (
                   <Table
-                    key={table.id}
+                    key={id}
                     table={table}
                     quantity={quantity}
                     handlePlus={handlePlus}
@@ -333,20 +350,55 @@ const SectionProductList = () => {
               })}
           </table>
         </div>
-        <div className="sumary-container">
-          <div className="sumary-text">Tổng giá tiền dự tính</div>
-          <div>:</div>
-          <div className="sumary-quantity">
-            {(Math.round(total / 1000000) * 1000000).toLocaleString("vi-VN", {
-              style: "currency",
-              currency: "VND",
-            })}
+        <div className={` ${display ? "active-menu" : "section-menu-bottom"}`}>
+          <div className="bottom-menu">
+            <div className="sumary-container">
+              <div className="sumary-text">Tổng giá tiền dự tính</div>
+              <div>:</div>
+              <div className="sumary-quantity">
+                {(Math.round(total / 1000000) * 1000000).toLocaleString(
+                  "vi-VN",
+                  {
+                    style: "currency",
+                    currency: "VND",
+                  }
+                )}
+              </div>
+            </div>
+            <div
+              className="advise-now-btn"
+              onClick={() => setModalShow(true)}
+              onKeyDown={() => {}}
+              role="button"
+              tabIndex={0}
+            >
+              <span>Tư Vấn Ngay</span>
+            </div>
           </div>
         </div>
-        <div className="sumary-container">
-          <div className="sumary-text">Số lượng thiết bị cho gói giải pháp</div>
-          <div>:</div>
-          <div className="sumary-quantity">{totalDevice + " Thiết bị"}</div>
+        <div className={`section-bottom`}>
+          <div className="bottom-menu">
+            <div className="sumary-container">
+              <div className="sumary-text">Tổng giá tiền dự tính</div>
+              <div>:</div>
+              <div className="sumary-quantity">
+                {(Math.round(total / 1000000) * 1000000).toLocaleString(
+                  "vi-VN",
+                  {
+                    style: "currency",
+                    currency: "VND",
+                  }
+                )}
+              </div>
+            </div>
+            <div className="sumary-container">
+              <div className="sumary-text">
+                Số lượng thiết bị cho gói giải pháp
+              </div>
+              <div>:</div>
+              <div className="sumary-quantity">{totalDevice + " Thiết bị"}</div>
+            </div>
+          </div>
         </div>
         <div
           className="advise-now-btn"

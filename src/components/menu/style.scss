@@ -76,9 +76,13 @@ body {
             line-height: 24px;
             color: #2c2d2e;
             &:hover {
-              font-weight: 600;
+              font-weight: 500;
               color: #0979fd;
             }
+          }
+          .item-select.active{
+            font-weight: 600;
+            color: #0979fd;
           }
           .item-select:last-child {
             border-bottom: none;

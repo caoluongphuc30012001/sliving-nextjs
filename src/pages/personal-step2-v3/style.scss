@@ -14,6 +14,7 @@
     justify-content: center;
     gap: 30px;
     padding: 20px;
+    position: relative;
     .advise-now-btn {
       height: 40px;
       padding: 8px 32px;
@@ -387,47 +388,92 @@
         }
       }
     }
-    .sumary {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      .smallNote {
-        font-family: "SVN-Gilroy";
-        font-style: italic;
+    .bottom-menu{
+      justify-content: space-between;
+    }
+    .sumary-container{
+      .sumary-text{
+        font-family: 'SVN Gilroy';
         font-weight: 500;
-        font-size: 16px;
+        font-size: 24px;
         text-align: center;
         color: #454647;
       }
-    }
-    .sumary-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      max-width: 600px;
-      gap: clamp(10px, 3vw, 16px);
-      .sumary-text {
-        width: 100%;
-        font-family: "SVN-Gilroy";
-        font-style: normal;
-        font-weight: 500;
-        font-size: clamp(14px, 3.73vw, 16px);
-        text-align: left;
-        color: #454647;
-        display: flex;
-      }
-      .sumary-quantity {
-        width: 100%;
-        font-family: "SVN-Gilroy";
-        font-style: normal;
+      .sumary-quantity{
+        font-family: 'SVN Gilroy';
         font-weight: 700;
-        font-size: clamp(16px, 4.26vw, 21px);
-        color: #0979fd;
+        font-size: 24px;
+        text-align: center;
+        color: #0979FD;
+        margin-left: 5px;
+      }
+    }
+    .section-bottom{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 92px;
+      align-items: center;
+      .bottom-menu{
+        background-color: white;
+        max-width: 600px;
         display: flex;
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+        .sumary-container{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          justify-content: center;
+          .sumary-text{
+            width: 100%;
+            font-family: 'SVN-Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: clamp(14px, 3.73vw, 16px);
+            text-align: left;
+            color: #454647;
+            display: flex;
+          }
+          .sumary-quantity{
+              width: 100%;
+              font-family: 'SVN-Gilroy';
+              font-style: normal;
+              font-weight: 700;
+              font-size: clamp(16px, 4.26vw, 21px);
+              color: #0979FD;
+              display: flex;
+          }
+        }
+      }
+    }
+    .section-menu-bottom{
+      display:none;
+    }
+    .active-menu{
+      position: fixed;
+      bottom: -2px;
+      left: 0;
+      background-color: white;
+      display:flex;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: 92px;
+      align-items: center;
+      .bottom-menu{
+        width: 100%;
+        background-color: white;
+        max-width: 1180px;
+        align-items: center;
+        display: flex;
+        padding:0 20px;
+        height: 100%;
+        .sumary-container{
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }

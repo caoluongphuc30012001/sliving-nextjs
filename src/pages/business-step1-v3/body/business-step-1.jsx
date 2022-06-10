@@ -46,6 +46,28 @@ const BusinessStep1 = () => {
             doanh nghiệp bạn
           </h4>
         </div>
+        <Link to={`${activeCards.length > 0 ? "/business-step3/" : "#"}`}>
+          <button
+            className="advise-now-btn"
+            type="button"
+            disabled={activeCards.length > 0 ? false : true}
+            onClick={() => {
+              dispatch({ type: "GET_USER_CHOICES", payload: activeCards });
+              let allSolutions = "";
+              activeCards?.length > 0 &&
+                activeCards.forEach((item) => {
+                  allSolutions += `${item.title}, `;
+                });
+
+              dispatch({
+                type: "SET_ALL_SOLUTIONS",
+                payload: { allSolutions },
+              });
+            }}
+          >
+            <span>Xem nhà mẫu</span>
+          </button>
+        </Link>
         <div className="bottom-content">
           {packagesData.map((item) => {
             let checkItem = activeCards.find(
@@ -74,23 +96,13 @@ const BusinessStep1 = () => {
                 <div className="solution-item-desc">
                   <span>{item.title}</span>
                 </div>
+                <Link className="detail-button" to={item.link}>
+                  <div>Chi tiết</div>
+                </Link>
               </div>
             );
           })}
         </div>
-
-        <Link to={`${activeCards.length > 0 ? "/business-step2/" : "#"}`}>
-          <button
-            className="advise-now-btn"
-            type="button"
-            disabled={activeCards.length > 0 ? false : true}
-            onClick={() => {
-              dispatch({ type: "GET_USER_CHOICES", payload: activeCards });
-            }}
-          >
-            <span>Xác nhận</span>
-          </button>
-        </Link>
       </div>
     </section>
   );
