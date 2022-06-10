@@ -156,9 +156,6 @@ const SectionProductList = () => {
     };
   }, []);
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [tableData]);
-  useEffect(() => {
     const getServices = async () => {
       try {
         const res = await axios.get(

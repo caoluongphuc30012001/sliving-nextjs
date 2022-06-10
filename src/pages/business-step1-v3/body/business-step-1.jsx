@@ -19,10 +19,6 @@ const BusinessStep1 = () => {
       setActiveCards([...state["userChoices"]]);
     }
   }, [state]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const handleClickCardItem = (cardItem) => {
     const check = activeCards.every((item) => {
       return item.id !== cardItem.id;
@@ -99,9 +95,9 @@ const BusinessStep1 = () => {
                 <div className="solution-item-desc">
                   <span>{item.title}</span>
                 </div>
-                <Link className="detail-button" to={item.link}>
+                <a className="detail-button" href={item.link} target="_blank">
                   <div>Chi tiết</div>
-                </Link>
+                </a>
               </div>
             );
           })}

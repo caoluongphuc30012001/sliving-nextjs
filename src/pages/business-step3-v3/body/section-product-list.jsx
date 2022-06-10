@@ -104,10 +104,6 @@ const SectionProductList = () => {
 
     state["allSolutions"] && setSolutionNames(state["allSolutions"]);
   }, [tableData]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;

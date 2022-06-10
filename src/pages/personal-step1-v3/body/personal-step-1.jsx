@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "gatsby";
-
 import imageStep from "../../../images/business-step1-v3/jpg/control-solution.jpg";
 
 import item_3 from "../../../images/personal-step1-v3/jpg/item-1.jpg";
@@ -72,9 +71,6 @@ const PersonalStep1 = () => {
   const handleClickCardItem = (cardItem) => {
     setActiveCard({ ...cardItem });
   };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <section className="personal-step1-container">
       <div className="personal-step1-wrapper">
