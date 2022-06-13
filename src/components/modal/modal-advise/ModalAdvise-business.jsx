@@ -1,14 +1,58 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { Form, Modal, FormControl } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
-
-function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
+import swapIcon from "../../../images/business-step2-v3/png/swap.png";
+function ModalAdvise({
+  houseName = "",
+  serviceName = "",
+  solutionNames = "",
+  ...props
+}) {
   const { onHide } = props;
 
+  const listOption = [
+    {
+      id: 0,
+      label: "Quy mô nhỏ",
+      value: "Quy mô nhỏ",
+    },
+    {
+      id: 1,
+      label: "Quy mô vừa",
+      value: "Quy mô vừa",
+    },
+    {
+      id: 2,
+      label: "Quy mô lớn",
+      value: "Quy mô lớn",
+    },
+    {
+      id: 3,
+      label: "Chọn quy mô",
+      value: "Chọn quy mô",
+    },
+  ];
   const [modalShow, setModalShow] = React.useState(false);
+  const [drop, setDrop] = useState(false);
+  const [option, setOption] = useState(listOption[0]);
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (
+        event.target.className !== "selection-box" &&
+        event.target.parentNode?.className !== "selection-box"
+      ) {
+        setDrop(false);
+      }
+    };
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   const {
     handleSubmit,
@@ -18,7 +62,7 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
   } = useForm({ mode: "onChange" });
 
   const googleSheetAPI =
-    "https://script.google.com/macros/s/AKfycbzBXBn9hPRVMvstSnUNmQRXpZ_kTothqkts6LHbtfq-yeIEYy4KCPwQ6ouCOBCYjEbx/exec";
+    "https://script.google.com/macros/s/AKfycbxUm-yjyyvuJsHRJG2frhEWRkbabmeDMGoHOnAr0-t3MY6DqYt26oW5pXv0hIfhz4z2/exec";
 
   const onSubmit = (data) => {
     const formData = new FormData();
@@ -34,14 +78,13 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
     googleSheetFormData.append("fullName", data.fullName);
     googleSheetFormData.append("email", data.email);
     googleSheetFormData.append("telephone", `'${data.telephone}`);
-    googleSheetFormData.append("content", data.content);
+    googleSheetFormData.append("scope", option.value);
+    googleSheetFormData.append("solutions", solutionNames);
     googleSheetFormData.append(
       "timestamp",
       new Date().toLocaleDateString().substring(0, 10)
     );
     googleSheetFormData.append("linkedBy", "sliving");
-    googleSheetFormData.append("serviceName", serviceName);
-    googleSheetFormData.append("houseName", houseName);
 
     axios
       .post("/subscribe", formData)
@@ -83,24 +126,24 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
             {/* <p>Hãy để chúng tôi tư vấn đến bạn</p> */}
             <Form.Group className="mb-4" controlId="ControlFullName">
               <Form.Label>
-                Họ và tên<span style={{ color: "red" }}> *</span>
+                Tên Công Ty<span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="text" placeholder="Nhập tên của bạn" /> */}
               <Controller
                 control={control}
                 name="fullName"
                 defaultValue=""
-                rules={{ required: "Chưa nhập họ tên" }}
+                rules={{ required: "Chưa nhập tên công ty của bạn" }}
                 render={({ field: { onChange, value, ref } }) => (
                   <FormControl
                     onChange={onChange}
                     value={value}
                     ref={ref}
                     isInvalid={errors.fullName}
-                    aria-describedby="Nhập tên của bạn"
+                    aria-describedby="Nhập tên"
                     autoComplete="off"
                     type="text"
-                    placeholder="Nhập tên của bạn ở đây"
+                    placeholder="Nhập tên"
                     // required
                   />
                 )}
@@ -198,9 +241,105 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
                   )}
               </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group className="mb-4" controlId="ControlContent">
+            <Form.Group className="mb-4" controlId="select-group">
+              <Form.Label>
+                <div className="title-sub">
+                  <p className="title">{"Quy mô "}</p>
+                  <p className="title-star">*</p>
+                </div>
+              </Form.Label>
+              <div
+                className="selection-box"
+                onClick={() => {
+                  setDrop(!drop);
+                }}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className={`main-selection ${
+                    option.value !== listOption[listOption?.length - 1].value
+                      ? "done"
+                      : ""
+                  }`}
+                >
+                  {option.label}
+                </div>
+                <img src={swapIcon} alt="" className="icon-drop-down" />
+                <div className={`drop-box ${drop ? "drop" : ""}`}>
+                  {listOption.map((item, index) => {
+                    return (
+                      index !== listOption?.length - 1 && (
+                        <div
+                          key={item.id}
+                          className={`option ${
+                            item.label === option.label ? "active" : ""
+                          }`}
+                          onClick={() => {
+                            setOption(item);
+                          }}
+                          onKeyDown={() => {}}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          {item.label}
+                        </div>
+                      )
+                    );
+                  })}
+                </div>
+              </div>
+            </Form.Group>
+            {/* <div className="title-sub">
+              <p className="title">{"Quy mô "}</p>
+              <p className="title-star">*</p>
+            </div>
+            <div
+              className="selection-box"
+              onClick={() => {
+                setDrop(!drop);
+              }}
+              onKeyDown={() => {}}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className={`main-selection ${
+                  option.value !== listOption[listOption?.length - 1].value
+                    ? "done"
+                    : ""
+                }`}
+              >
+                {option.label}
+              </div>
+              <img src={swapIcon} alt="" className="icon-drop-down" />
+              <div className={`drop-box ${drop ? "drop" : ""}`}>
+                {listOption.map((item, index) => {
+                  return (
+                    index !== listOption?.length - 1 && (
+                      <div
+                        key={item.id}
+                        className={`option ${
+                          item.label === option.label ? "active" : ""
+                        }`}
+                        onClick={() => {
+                          setOption(item);
+                        }}
+                        onKeyDown={() => {}}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        {item.label}
+                      </div>
+                    )
+                  );
+                })}
+              </div>
+            </div> */}
+            {/* <Form.Group className="mb-4" controlId="ControlContent">
               <Form.Label>Lời nhắn/ Thắc mắc</Form.Label>
-              {/* <Form.Control as="textarea" rows={3} placeholder="name@example.com" /> */}
+              <Form.Control as="textarea" rows={3} placeholder="name@example.com" />
               <Controller
                 control={control}
                 name="content"
@@ -219,7 +358,7 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
                   />
                 )}
               />
-            </Form.Group>
+            </Form.Group> */}
             <button type="submit">
               <span>Nhận tư vấn</span>
             </button>

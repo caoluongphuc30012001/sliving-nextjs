@@ -1,7 +1,7 @@
 export const Data = {
   id: 0,
   smallNote:
-    "Bảng số lượng thiết bị chỉ để tham khảo, để biết thêm thông tin về giải pháp vui lòng liên hệ với chúng tôi để được phục vụ chính xác và nhanh chóng nhất.",
+    "Bảng thiết bị chỉ để tham khảo, để biết thêm thông tin về giải pháp vui lòng liên hệ với chúng tôi để được phục vụ chính xác và nhanh chóng nhất.",
   content: [
     {
       id: 0,
@@ -575,4 +575,70 @@ export const Data = {
       },
     },
   ],
+  subContent: {
+    solutionList: [
+      {
+        id: 0,
+        solutionName: "Quản lý bãi đỗ",
+        softwareName: "Phần mềm quản lý bãi đỗ",
+        deviceList: {
+          listName: "Thiết bị quản lý bãi đỗ xe",
+          content: [
+            {
+              id: 0,
+              deviceName: "Barrier (Thanh chắn)",
+            },
+            {
+              id: 1,
+              deviceName: "Camera_ITC215 - PW6M - IRL2F",
+            },
+            {
+              id: 2,
+              deviceName: "Camera IPC-HDBW5442H - ZE",
+            },
+          ],
+        },
+      },
+      {
+        id: 1,
+        solutionName: "Quản lý chỗ trống",
+        softwareName: "Phần mềm quản lý chỗ trống",
+        deviceList: {
+          listName: "Thiết bị quản lý chỗ trống",
+          content: [
+            {
+              id: 0,
+              deviceName: "Máy dò đỗ xe video thông minh ITC314-PH3A-TF SERIES",
+            },
+            {
+              id: 1,
+              deviceName: "Máy dò đỗ xe video thông minh ITC314-PH3A-F SERIES",
+            },
+            {
+              id: 2,
+              deviceName: "Bảng thế hiện số chỗ trống",
+            },
+            {
+              id: 3,
+              deviceName: "Cảm biến siêu âm từ dưới lên",
+            },
+            {
+              id: 4,
+              deviceName: "Cảm biến siêu âm từ trên xuống",
+            },
+          ],
+        },
+      },
+      {
+        id: 2,
+        solutionName: "App & Map",
+        softwareName:
+          "Ứng dụng quản lý bãi đỗ xe thông minh tích hợp bản đồ chỉ đường",
+        deviceList: {
+          listName: "",
+          content: [],
+        },
+      },
+    ],
+  },
 };

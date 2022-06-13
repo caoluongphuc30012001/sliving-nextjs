@@ -1,6 +1,10 @@
 // header section
 
 .section-top-solution-package {
+  .image-box{
+    width: 100%;
+    height: 100%;
+  }
   margin-top: 90px;
   background-image: url("../../images/business-step1-v3/png/img-top-solution.png");
   background-size: cover;
@@ -163,7 +167,7 @@
 }
 
 // package section
-.business-step1-container {
+.personal-step1-container {
   width: 100%;
   display: block;
   max-width: 100%;
@@ -172,7 +176,7 @@
   align-items: center;
   border-bottom: 1px solid #e1e3e6;
 
-  .business-step1-wrapper {
+  .personal-step1-wrapper {
     max-width: 1180px;
     width: 100%;
     margin: 120px auto;
@@ -229,9 +233,7 @@
         position: relative;
         box-shadow: 0px 2px 7px 1px rgba(112, 144, 176, 0.25);
         border-radius: 16px;
-        .detail-button {
-          display: none;
-        }
+
         .solution-item-img {
           z-index: 1;
           width: 100%;
@@ -240,6 +242,7 @@
           display: block;
           border-radius: 16px;
         }
+
         .solution-item-desc {
           position: absolute;
           bottom: 0;
@@ -274,27 +277,16 @@
             color: #0979fd;
           }
         }
-        .detail-button{
-          z-index: 3;
-          position: absolute;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          width: 134px;
-          height: 42px;
-          top: calc(100% - 21px);
-          background: #0979FD;
-          border-radius: 99px;
-          font-family: 'SVN-Gilroy';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 16px;
-          line-height: 24px;
-          text-align: center;
-          color: white;
-        }
+      }
+
+      .bottom-content-container.active::after {
+        z-index: 3;
+        content: "";
+        position: absolute;
+        width: 37px;
+        height: 37px;
+        bottom: -18px;
+        background-image: url("../../images/business-step1-v3/svg/icon-add.svg");
       }
     }
 
@@ -325,7 +317,7 @@
 }
 
 @media (max-width: 750px) {
-  .business-step1-container {
+  .personal-step1-container {
     width: 100%;
     display: block;
     max-width: 100%;
@@ -334,7 +326,7 @@
     align-items: center;
     border-bottom: 1px solid #e1e3e6;
 
-    .business-step1-wrapper {
+    .personal-step1-wrapper {
       max-width: 1180px;
       width: 100%;
       margin: 40px auto;
@@ -437,15 +429,15 @@
           position: relative;
         }
 
-        // .bottom-content-container.active::after {
-        //   z-index: 3;
-        //   content: "Chi Tiết";
-        //   position: absolute;
-        //   width: 37px;
-        //   height: 37px;
-        //   bottom: -18px;
-        //   background-color: #0979fd;
-        // }
+        .bottom-content-container.active::after {
+          z-index: 3;
+          content: "";
+          position: absolute;
+          width: 37px;
+          height: 37px;
+          bottom: -18px;
+          background-image: url("../../images/business-step1-v3/svg/icon-add.svg");
+        }
       }
 
       .advise-now-btn {
@@ -458,7 +450,6 @@
           box-shadow: 0px 9px 6px -4px rgba(44, 207, 215, 0.2),
             0px 8px 8px -4px rgba(24, 39, 75, 0.08);
         }
-
         span {
           font-style: normal;
           font-weight: 700;
@@ -473,4 +464,97 @@
       }
     }
   }
+  
+
+}
+.fpo {
+  position: relative;
+  margin: 25% auto;
+  display: block;
+}
+.pulsate{
+background: linear-gradient(-45deg, #DDDDDD, #F0F0F0, #DDDDDD, #F0F0F0);
+background-size: 400% 400%;
+-webkit-animation: Gradient 2.25s ease infinite;
+-moz-animation: Gradient 2.25s ease infinite;
+animation: Gradient 2.25s ease infinite;
+}
+.block {
+display:block;
+width:271px;
+height:16px;
+color:black;
+}
+.block2 {
+width:78px;
+height:8px;
+margin-bottom:8px;
+}
+.block3 {
+width:131px;
+height:8px;
+margin-bottom:16px;
+}
+.circle {
+width:28px;
+height:28px;
+border-radius:50%;
+float:right;
+
+}
+#card {
+box-sizing: border-box;
+max-width: 360px;
+width: 100%;
+background: #fff;
+position: relative;
+top:25%;
+}
+.card-image {
+box-sizing: border-box;
+display:block;
+width:100%;
+height:243px;
+background:#FAFAFA;
+padding:16px;
+}
+.card-content {
+clear:both;
+box-sizing: border-box;
+padding:16px;
+background:#fff;
+}
+@-webkit-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
+}
+@keyframes Gradient {
+0% {
+  background-position: 0% 50%
+}
+50% {
+  background-position: 100% 50%
+}
+100% {
+  background-position: 0% 50%
+}
 }

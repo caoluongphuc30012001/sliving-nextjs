@@ -76,9 +76,13 @@ body {
             line-height: 24px;
             color: #2c2d2e;
             &:hover {
-              font-weight: 600;
+              font-weight: 500;
               color: #0979fd;
             }
+          }
+          .item-select.active{
+            font-weight: 600;
+            color: #0979fd;
           }
           .item-select:last-child {
             border-bottom: none;
@@ -103,17 +107,19 @@ body {
           }
         }
       }
-      .active-parent-menu {
-        .item-menu {
+      .active{
+        font-family: "SVN Gilroy";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0979fd;
+        &:hover {
           font-family: "SVN Gilroy";
           font-style: normal;
           font-weight: 700;
           font-size: 16px;
           line-height: 24px;
-          /* identical to box height, or 150% */
-
-          text-align: center;
-
           color: #0979fd;
         }
       }
@@ -310,6 +316,11 @@ body {
       margin-top: 90px;
     }
   }
+  #personal-step2-v3 {
+    .section-personal-product-list {
+      margin-top: 90px;
+    }
+  }
 }
 @media (max-width: 1200px) {
   #smart_home_page {
@@ -329,6 +340,11 @@ body {
   }
   #business-step3-v3 {
     .section-business-product-list {
+      margin-top: 64px;
+    }
+  }
+  #personal-step2-v3 {
+    .section-personal-product-list {
       margin-top: 64px;
     }
   }

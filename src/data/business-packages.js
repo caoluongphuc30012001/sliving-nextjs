@@ -12,24 +12,28 @@ export const packagesData = [
   {
     id: 0,
     title: "Giải pháp chiếu sáng",
+    link: "/smart-lighting/",
     image: lightingSolutionImg,
     icon: bulbIcon,
   },
   {
     id: 1,
     title: "Giải pháp điều khiển",
+    link: "/smart-home/",
     image: controlSolutionImg,
     icon: controlIcon,
   },
   {
     id: 2,
     title: "Giải pháp an ninh",
+    link: "/smart-building/",
     image: securitySolutionImg,
     icon: safetyIcon,
   },
   {
     id: 3,
     title: "Giải pháp bãi đỗ xe",
+    link: "/smart-parking/",
     image: parkingSolutionImg,
     icon: carIcon,
   },

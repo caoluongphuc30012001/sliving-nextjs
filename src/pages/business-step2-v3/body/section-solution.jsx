@@ -160,6 +160,7 @@ const SectionSolution = () => {
   //   const { userChoices } = state;
 
   const [drop, setDrop] = useState(false);
+  const [option, setOption] = useState(listOption[listOption.length - 1]);
   const [count, setCount] = useState("");
   const [sum, setSum] = useState(0);
   const [list, setList] = useState([]);
@@ -168,8 +169,6 @@ const SectionSolution = () => {
   const [validSum, setValidSum] = useState(true);
 
   const [activeStep2Cards, setActiveStep2Cards] = useState([]);
-
-  const [option, setOption] = useState(listOption[listOption.length - 1]);
 
   const handleAdd = () => {
     checkOption();

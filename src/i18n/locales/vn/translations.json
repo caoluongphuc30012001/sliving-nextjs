@@ -1,4 +1,12 @@
 {
+  "SLIVING_PAGES" : {
+    "ABOUT_US_V3" : {
+      "SectionBrandStory" : {
+        "BRAND_STORY" : "Câu chuyện thương hiệu",
+        "BRAND_STORY_CONTENT" : "Unicloud là một tập đoàn công nghệ quốc tế có trụ sở tại Hà Nội, nhà máy và bộ phận nghiên cứu R&D tại Khu công nghệ cao Tp. Hồ Chí Minh. Mỗi sản phẩm từ phần cứng tới phần mềm điều khiển trong từng hệ sinh thái của Unicloud được đội ngũ kỹ sư thiết kế, thử nghiệm và sản xuất theo một chu trình khép kín và được kiểm soát chặt chẽ nhằm hướng tới cung cấp cho khách hàng các sản phẩm chất lượng nhất."
+      }
+    }
+  },
   "HEADER": {
     "HOMEPAGE": {
       "HOME": "Trang Chủ",

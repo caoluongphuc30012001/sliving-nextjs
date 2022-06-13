@@ -14,13 +14,13 @@ exports.shouldUpdateScroll = ({
   routerProps: { location },
   prevRouterProps,
 }) => {
-  const locationPrev = prevRouterProps?.location;
-  if (
-    locationPrev &&
-    location?.pathname.length === locationPrev.pathname.length
-  ) {
-    return false;
-  }
+  // const locationPrev = prevRouterProps?.location;
+  // if (
+  //   locationPrev &&
+  //   location?.pathname.length === locationPrev.pathname.length
+  // ) {
+  //   return false;
+  // }
   window.scrollTo([0, 0]);
   return true;
 };

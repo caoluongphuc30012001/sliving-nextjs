@@ -16,8 +16,7 @@ function SectionFormContact() {
   } = useForm({ mode: "onChange" });
 
   const googleSheetAPI =
-    "https://script.google.com/macros/s/AKfycbxTlQD1WgGBuFKoKVjf6tiUGERX6DHHhxJfywGZ6R4xuNEurMdCdW4fbRoZwBW4jK6M/exec";
-
+    "https://script.google.com/macros/s/AKfycbzBXBn9hPRVMvstSnUNmQRXpZ_kTothqkts6LHbtfq-yeIEYy4KCPwQ6ouCOBCYjEbx/exec";
   const onSubmit = (data) => {
     const googleSheetFormData = new FormData();
     googleSheetFormData.append("fullName", data.fullName);

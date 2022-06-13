@@ -6,6 +6,96 @@
   //   right: 0;
   //   margin: auto;
   //   url("../../images/smart-security-v3/bg-top-security.png");
+  
+.drop-box {
+  transition: 0.2s;
+  position: absolute;
+  opacity: 0;
+  left: 0px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #aaaeb3;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 2;
+  .option {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 0px 4px 12px;
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    font-family: "SVN Gilroy";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #454647;
+  }
+  .active {
+    color: #2391fd;
+    background: #f3f9ff;
+  }
+}
+.drop {
+  padding: 12px;
+  height: 150px;
+  opacity: 1;
+  transition: 0.2s;
+}
+.selection-box {
+  z-index: 10;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 14px;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #aaaeb3;
+  border-radius: 8px;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  .main-selection {
+    font-family: "SVN Gilroy";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #aaaeb3;
+  }
+  .done {
+    color: #454647;
+  }}
+
+
+  .title-sub{
+    display: flex;
+    align-items: center;
+    .title{
+      font-family: 'SVN Gilroy';
+      font-weight: 700;
+      font-size: 16px;
+      color: #2C2D2E;
+    }
+    .title-star{
+      color: red;
+    }
+  }
   max-width: 600px;
   max-height: unset;
   padding: 0px !important;

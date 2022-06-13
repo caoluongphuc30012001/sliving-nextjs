@@ -39,7 +39,7 @@ test:
     - develop
     - master
   tags:
-    - hcm-share-docker-runner-1
+    - sliving
 
 
 build-and-deploy-beta:
@@ -52,7 +52,7 @@ build-and-deploy-beta:
   only:
     - develop
   tags:
-    - hcm-share-docker-runner-1
+    - sliving
 
 build-and-deploy:
   stage: build-and-deploy
@@ -63,5 +63,5 @@ build-and-deploy:
   only:
     - master
   tags:
-    - hcm-share-docker-runner-1
+    - sliving
 

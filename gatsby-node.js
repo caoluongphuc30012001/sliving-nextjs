@@ -41,7 +41,9 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/smart-home-v3") === true ||
     checkDetectPage(page, "/smart-lighting-v3") === true ||
     checkDetectPage(page, "/smart-security-v3") === true ||
-    checkDetectPage(page, "/smart-parking-v3") === true
+    checkDetectPage(page, "/smart-parking-v3") === true ||
+    checkDetectPage(page, "/personal-step1-v3") === true ||
+    checkDetectPage(page, "/personal-step2-v3") === true
   ) {
     deletePage(page);
   }
@@ -255,7 +257,8 @@ exports.createPages = async function ({ actions, graphql }) {
   const smartParking = require.resolve(
     "./src/pages/smart-parking-v3/index.jsx"
   );
-
+  const personal1 = require.resolve("./src/pages/personal-step1-v3/index.jsx");
+  const personal2 = require.resolve("./src/pages/personal-step2-v3/index.jsx");
   createPage({
     path: `/policy/`,
     component: policy,
@@ -290,7 +293,15 @@ exports.createPages = async function ({ actions, graphql }) {
     path: `/business-step2/`,
     component: business2,
   });
+  createPage({
+    path: `/personal-step1/`,
+    component: personal1,
+  });
 
+  createPage({
+    path: `/personal-step2/`,
+    component: personal2,
+  });
   createPage({
     path: `/business-step3/`,
     component: business3,
