@@ -163,7 +163,7 @@
                     font-family: "SVN-Gilroy";
                     font-style: normal;
                     font-weight: 500;
-                    font-size: clamp(12px, 2.13vw, 16px);
+                    font-size: clamp(10px, 2.13vw, 16px);
                     color: #454647;
                     text-align: left;
                     .table-data-center{
@@ -184,7 +184,7 @@
                             font-family: "SVN-Gilroy";
                             font-style: normal;
                             font-weight: 500;
-                            font-size: clamp(12px, 2.13vw, 16px);
+                            font-size: clamp(10px, 2.13vw, 16px);
                             color: #454647;
                             text-align: center;
                         }
@@ -197,10 +197,9 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        min-height: 56px;
-                        height: 100%;
+                        height: clamp(56px, 200px - 5vw, 80px);
                         width: 100%;
-                        padding: 0px clamp(10px, 0.8vw, 32px);
+                        padding: 0px clamp(9px, 0.8vw, 32px);
                     }
                 }
                 .border-lr {
@@ -220,12 +219,12 @@
                     justify-content: center;
                     grid-template-columns: 1.4fr 4fr 1.2fr;
                     width: 100%;
-                    min-height: 56px;
+                    height: clamp(56px, 200px - 5vw, 80px);
                     .table-data{
                         font-family: 'SVN-Gilroy';
                         font-style: normal;
                         font-weight: 500;
-                        font-size: clamp(12px, 2.13vw, 16px);
+                        font-size: clamp(10px, 2.13vw, 16px);
                         text-align: center;
                         color: #454647;
                         display: flex;
@@ -233,7 +232,7 @@
                         justify-content: center;
                         text-align: left;
                         height: 100%;
-                        padding: 0px clamp(10px, 0.8vw, 32px);
+                        padding: 0px clamp(9px, 0.8vw, 32px);
                     }
                     .table-data.header{
                         color: #0979FD;
@@ -269,7 +268,7 @@
                 display: grid;
                 align-items: center;
                 justify-content: center;
-                grid-template-columns: 1.2fr 3.5fr 1fr 1fr;
+                grid-template-columns: 1.2fr 3fr 1fr 1fr;
                 width: 100%;
               }
               .table-row {
@@ -277,14 +276,14 @@
                 display: grid;
                 align-items: center;
                 justify-content: center;
-                grid-template-columns: 1.2fr 3.5fr 1fr 1fr;
+                grid-template-columns: 1.2fr 3fr 1fr 1fr;
                 width: 100%;
-                min-height: 56px;
+                height: clamp(56px, 200px - 5vw, 80px);
                 .table-data {
                   font-family: "SVN-Gilroy";
                   font-style: normal;
                   font-weight: 500;
-                  font-size: clamp(12px, 2.13vw, 16px);
+                  font-size: clamp(10px, 2.13vw, 16px);
                   text-align: center;
                   color: #454647;
                   display: flex;
@@ -292,7 +291,7 @@
                   justify-content: center; //attention
                   text-align: left;
                   height: 100%;
-                  padding: 0px clamp(10px, 0.8vw, 32px);
+                  padding: 0px clamp(9px, 0.8vw, 32px);
                 }
                 .table-data.header {
                   color: #0979fd;
@@ -313,7 +312,7 @@
                 font-family: "SVN-Gilroy";
                 font-style: normal;
                 font-weight: 500;
-                font-size: clamp(12px, 2.13vw, 16px);
+                font-size: clamp(10px, 2.13vw, 16px);
                 color: #454647;
                 text-align: left;
                 .table-data {
@@ -321,9 +320,9 @@
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  min-height: 56px;
+                  height: clamp(56px, 200px - 5vw, 80px);
                   width: 100%;
-                  padding: 0px clamp(10px, 0.8vw, 32px);
+                  padding: 0px clamp(9px, 0.8vw, 32px);
                   .table-data-icon{
                     width: clamp(11.5px, 1.597222222vw, 23px);
                     height: clamp(9px, 1.25vw, 18px);
@@ -368,7 +367,7 @@
                 justify-content: center;
                 width: 100%;
                 max-width: 600px;
-                gap: clamp(10px, 3vw, 16px);
+                gap: clamp(9px, 3vw, 16px);
                 .sumary-text{
                     width: 100%;
                     font-family: 'SVN-Gilroy';
