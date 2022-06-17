@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PortfolioProvider } from "./../context/context";
 import { navData, addressData, aboutData } from "./../mock/data";
-import "../i18n3/i18n";
+import "../i18n/i18n";
 import "./style.scss";
 import NavBar from "./navbar/navbar";
 import Footer from "./footer/footer";

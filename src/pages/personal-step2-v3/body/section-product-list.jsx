@@ -12,7 +12,7 @@ const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
   return (
     <tbody className="body-content-container border-b">
       <tr className="body-table-row">{table.room.roomValue.nameVi}</tr>
-      <tr className="body-table-row border-lr">
+      <tr className="body-table-row border-l">
         {table.listDevice.map((item, index) => {
           const id = index + 1;
           return (
@@ -22,106 +22,45 @@ const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
           );
         })}
       </tr>
-      <tr className="body-table-row">
+      <tr className="body-table-row border-l">
         {table.listDevice.map((item, index) => {
           const id = index + 1;
           return (
-            <td
-              key={id}
-              className={
-                Number(index) < Number(table.listDevice.length - 1)
-                  ? "table-data border-b"
-                  : "table-data"
-              }
-            >
-              <div className="quantity-data">
-                <div
-                  className="table-data-sub table-data-button"
-                  onClick={() =>
-                    handleSub(item.deviceValues.id, table.room.roomValue.id)
-                  }
-                >
-                  -
-                </div>
-                <input
-                  type="number"
-                  name="name"
-                  onChange={(e) =>
-                    onInputChange(
-                      item.deviceValues.id,
-                      table.room.roomValue.id,
-                      e.target.value
-                    )
-                  }
-                  value={item.deviceValues.total}
-                  className="table-data-input"
-                />
-                <div
-                  className="table-data-plus table-data-button"
-                  onClick={() =>
-                    handlePlus(item.deviceValues.id, table.room.roomValue.id)
-                  }
-                >
-                  +
-                </div>
-              </div>
+            <td key={id} className="table-data border-b">
+              {item.basicCount * table.room.quantityRoom}
+            </td>
+          );
+        })}
+      </tr>
+      <tr className="body-table-row border-l">
+        {table.listDevice.map((item, index) => {
+          const id = index + 1;
+          return (
+            <td key={id} className="table-data border-b">
+              {item.normalCount * table.room.quantityRoom}
+            </td>
+          );
+        })}
+      </tr>
+      <tr className="body-table-row border-l">
+        {table.listDevice.map((item, index) => {
+          const id = index + 1;
+          return (
+            <td key={id} className="table-data border-b">
+              {item.advancedCount * table.room.quantityRoom}
             </td>
           );
         })}
       </tr>
     </tbody>
-    // <tbody className="content-container">
-    //   {table.listDevice.map((item) => {
-    //     return (
-    //       <tr
-    //         className="table-row"
-    //         //key={}
-    //       >
-    //         <td className="table-data">{table.room.roomValue.nameVi}</td>
-    //         <td className="table-data center">{item.deviceValues.nameVi}</td>
-    //         <td className="table-data">
-    //           <div className="quantity-data">
-    //             <div
-    //               className="table-data-sub table-data-button"
-    //               onClick={() =>
-    //                 handleSub(item.deviceValues.id, table.room.roomValue.id)
-    //               }
-    //             >
-    //               -
-    //             </div>
-    //             <input
-    //               type="number"
-    //               name="name"
-    //               onChange={(e) =>
-    //                 onInputChange(
-    //                   item.deviceValues.id,
-    //                   table.room.roomValue.id,
-    //                   e.target.value
-    //                 )
-    //               }
-    //               value={item.deviceValues.total}
-    //               className="table-data-input"
-    //             />
-    //             <div
-    //               className="table-data-plus table-data-button"
-    //               onClick={() =>
-    //                 handlePlus(item.deviceValues.id, table.room.roomValue.id)
-    //               }
-    //             >
-    //               +
-    //             </div>
-    //           </div>
-    //         </td>
-    //       </tr>
-    //     );
-    //   })}
-    // </tbody>
   );
 };
 
 const SectionProductList = () => {
   const [modalShow, setModalShow] = useState(false);
-  const [total, setTotal] = useState(0);
+  const [totalBasic, setTotalBasic] = useState(0);
+  const [totalNormal, setTotalNormal] = useState(0);
+  const [totalAdvanced, setTotalAdvanced] = useState(0);
   const [totalDevice, setTotalDevice] = useState(0);
   const [currentHouse, setCurrentHouse] = useState("");
   const [display, setDisplay] = useState(false);
@@ -134,7 +73,7 @@ const SectionProductList = () => {
 
   const [buttonList, setButtonList] = useState([]);
 
-  const [loading,setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [toggle, setToggle] = useState(0);
   useLayoutEffect(() => {
     if (!state["houseID"]) navigate("/personal-step1");
@@ -159,7 +98,7 @@ const SectionProductList = () => {
     const getServices = async () => {
       try {
         const res = await axios.get(
-          "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
         );
         const list = res.data.Items.map((item, index) => {
           return {
@@ -179,7 +118,7 @@ const SectionProductList = () => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
-          "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
         );
         setCurrentHouse(
           response.data.Items.find((item) => item.id === state["houseID"])
@@ -195,13 +134,13 @@ const SectionProductList = () => {
     const getDevice = async (houseID, isBasic) => {
       try {
         const res = await axios.post(
-          "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/devices",
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/devices",
           {
             houseID,
             isBasic,
           }
         );
-        setLoading(false)
+        setLoading(false);
         let rs = res.data.sort((a, b) =>
           a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
         );
@@ -212,11 +151,16 @@ const SectionProductList = () => {
         });
         rs.forEach((item) => {
           item.listDevice.forEach((device) => {
-            device.deviceValues.total =
-              device.quantityDevice * item.room.quantityRoom;
+            device.deviceValues.totalBasic =
+              device.basicCount * item.room.quantityRoom;
+            device.deviceValues.totalNormal =
+              device.normalCount * item.room.quantityRoom;
+            device.deviceValues.totalAdvanced =
+              device.advancedCount * item.room.quantityRoom;
           });
         });
         setTableData(rs);
+        console.log(rs);
       } catch (err) {
         console.error(err);
       }
@@ -225,28 +169,31 @@ const SectionProductList = () => {
     if (state["houseID"]) getDevice(state["houseID"], isBasic);
   }, [isBasic, state]);
 
-  const sumCalculation = (list) => {
+  const sumCalculation = (list, property) => {
     const sum = list.listDevice.reduce((prev, item) => {
-      return prev + item.deviceValues.total * item.deviceValues.price;
+      console.log(item[property], "  haha");
+      return prev + item[property] * item.deviceValues.price;
     }, 0);
     return sum;
   };
 
   const sumDeviceCalculation = (list) => {
     const sum = list.listDevice.reduce((prev, item) => {
-      return prev + item.deviceValues.total;
+      return prev + item.deviceValues.totalBasic;
     }, 0);
     return sum;
   };
 
   useEffect(() => {
-    const getTotal = () => {
+    const getTotal = (SetData, property) => {
       const total = tableData.reduce((prev, item) => {
-        return prev + sumCalculation(item);
+        return prev + sumCalculation(item, property);
       }, 0);
-      setTotal(total);
+      SetData(total);
     };
-    getTotal();
+    getTotal(setTotalBasic, "basicCount");
+    getTotal(setTotalNormal, "normalCount");
+    getTotal(setTotalAdvanced, "advancedCount");
   }, [tableData]);
 
   useEffect(() => {
@@ -259,38 +206,38 @@ const SectionProductList = () => {
     getTotal();
   }, [tableData]);
 
-  const handlePlus = (deviceId, roomId) => {
-    tableData.forEach((table) => {
-      if (table.room.roomValue.id === roomId)
-        table.listDevice.forEach((item) => {
-          if (item.deviceValues.id === deviceId) item.deviceValues.total += 1;
-        });
-    });
-    setTableData([...tableData]);
-  };
+  // const handlePlus = (deviceId, roomId) => {
+  //   tableData.forEach((table) => {
+  //     if (table.room.roomValue.id === roomId)
+  //       table.listDevice.forEach((item) => {
+  //         if (item.deviceValues.id === deviceId) item.deviceValues.total += 1;
+  //       });
+  //   });
+  //   setTableData([...tableData]);
+  // };
 
-  const handleSub = (deviceId, roomId) => {
-    tableData.forEach((table) => {
-      if (table.room.roomValue.id === roomId)
-        table.listDevice.forEach((item) => {
-          if (item.deviceValues.id === deviceId && item.deviceValues.total > 0)
-            item.deviceValues.total -= 1;
-        });
-    });
-    setTableData([...tableData]);
-  };
+  // const handleSub = (deviceId, roomId) => {
+  //   tableData.forEach((table) => {
+  //     if (table.room.roomValue.id === roomId)
+  //       table.listDevice.forEach((item) => {
+  //         if (item.deviceValues.id === deviceId && item.deviceValues.total > 0)
+  //           item.deviceValues.total -= 1;
+  //       });
+  //   });
+  //   setTableData([...tableData]);
+  // };
 
-  const onInputChange = (deviceId, roomId, value) => {
-    value = Number(value).toFixed(0);
-    tableData.forEach((table) => {
-      if (table.room.roomValue.id === roomId)
-        table.listDevice.forEach((item) => {
-          if (item.deviceValues.id === deviceId && Number(value) >= 0)
-            item.deviceValues.total = Number(value);
-        });
-    });
-    setTableData([...tableData]);
-  };
+  // const onInputChange = (deviceId, roomId, value) => {
+  //   value = Number(value).toFixed(0);
+  //   tableData.forEach((table) => {
+  //     if (table.room.roomValue.id === roomId)
+  //       table.listDevice.forEach((item) => {
+  //         if (item.deviceValues.id === deviceId && Number(value) >= 0)
+  //           item.deviceValues.total = Number(value);
+  //       });
+  //   });
+  //   setTableData([...tableData]);
+  // };
 
   return (
     <section
@@ -303,40 +250,20 @@ const SectionProductList = () => {
           <div className="title">Danh Sách Thiết Bị Sử Dụng Cho Dự Án</div>
           <div className="underline"></div>
         </div>
-        <div className="button-container">
-          {buttonList.length > 0 &&
-            buttonList.map((item, index) => {
-              return (
-                <div
-                  key={item.id}
-                  onClick={() => {
-                    setToggle(index);
-                    if (buttonList[index].nameEn === "Basic") setBasic(true);
-                    else setBasic(false);
-                  }}
-                  className={`${toggle === index ? "button" : "button active"}`}
-                  onKeyDown={() => {}}
-                  role="button"
-                  tabIndex={0}
-                >
-                  {item.nameVi}
-                </div>
-              );
-            })}
-          {buttonList.length > 0 && (
-            <div className={buttonList[toggle].className}></div>
-          )}
-        </div>
         <div className="table">
           <table className="table-container">
             <thead className="content-container">
               <tr className="table-row">
                 <th className="table-data header">Vị trí lắp đặt</th>
-                <th className="table-data header center">Tên thiết bị</th>
-                <th className="table-data header">SỐ LƯỢNG</th>
+                <th className="table-data header border-l">Tên thiết bị</th>
+                <th className="table-data header border-l">Cơ Bản</th>
+                <th className="table-data header border-l">Tiện Nghi</th>
+                <th className="table-data header border-l">Cao Cấp</th>
               </tr>
             </thead>
-            {loading&&<Spinner animation="border" className="spiner-animation"/>}
+            {loading && (
+              <Spinner animation="border" className="spiner-animation" />
+            )}
             {!loading &&
               tableData.map((table, index) => {
                 const id = index + 1;
@@ -345,74 +272,106 @@ const SectionProductList = () => {
                     key={id}
                     table={table}
                     quantity={quantity}
-                    handlePlus={handlePlus}
-                    handleSub={handleSub}
-                    onInputChange={onInputChange}
-                    loading={loading}
+                    // handlePlus={handlePlus}
+                    // handleSub={handleSub}
+                    // onInputChange={onInputChange}
                   />
                 );
               })}
+            <thead className="content-container">
+              <tr className="table-row">
+                <th className="table-data header"></th>
+                <th className="table-data header border-l"></th>
+                <th className="table-data header border-l">
+                  {(Math.round(totalBasic / 1000000) * 1000000).toLocaleString(
+                    "vi-VN",
+                    {
+                      style: "currency",
+                      currency: "VND",
+                    }
+                  )}
+                </th>
+                <th className="table-data header border-l">
+                  {(Math.round(totalNormal / 1000000) * 1000000).toLocaleString(
+                    "vi-VN",
+                    {
+                      style: "currency",
+                      currency: "VND",
+                    }
+                  )}
+                </th>
+                <th className="table-data header border-l">
+                  {(
+                    Math.round(totalAdvanced / 1000000) * 1000000
+                  ).toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
+                </th>
+              </tr>
+            </thead>
           </table>
         </div>
-        {!loading&&<div className={` ${display ? "active-menu" : "section-menu-bottom"}`}>
-          <div className="bottom-menu">
-            <div className="sumary-container">
-              <div className="sumary-text">Tổng giá tiền dự tính</div>
-              <div>:</div>
-              <div className="sumary-quantity">
-                {(Math.round(total / 1000000) * 1000000).toLocaleString(
-                  "vi-VN",
-                  {
-                    style: "currency",
-                    currency: "VND",
-                  }
-                )}
+        {!loading && (
+          <div
+            className={` ${display ? "active-menu" : "section-menu-bottom"}`}
+          >
+            <div className="bottom-menu">
+              <div
+                className="advise-now-btn"
+                onClick={() => setModalShow(true)}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
+              >
+                <span>Tư Vấn Ngay</span>
               </div>
             </div>
-            <div
-              className="advise-now-btn"
-              onClick={() => setModalShow(true)}
-              onKeyDown={() => {}}
-              role="button"
-              tabIndex={0}
-            >
-              <span>Tư Vấn Ngay</span>
+            <div className="table">
+              <table className="table-container">
+                <thead className="content-container">
+                  <tr className="table-row">
+                    <th className="table-data header border-l">
+                      {(
+                        Math.round(totalBasic / 1000000) * 1000000
+                      ).toLocaleString("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </th>
+                    <th className="table-data header border-l">
+                      {(
+                        Math.round(totalNormal / 1000000) * 1000000
+                      ).toLocaleString("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </th>
+                    <th className="table-data header border-l">
+                      {(
+                        Math.round(totalAdvanced / 1000000) * 1000000
+                      ).toLocaleString("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </th>
+                  </tr>
+                </thead>
+              </table>
             </div>
           </div>
-        </div>}
-        {!loading&&<div className={`section-bottom`}>
-          <div className="bottom-menu">
-            <div className="sumary-container">
-              <div className="sumary-text">Tổng giá tiền dự tính</div>
-              <div>:</div>
-              <div className="sumary-quantity">
-                {(Math.round(total / 1000000) * 1000000).toLocaleString(
-                  "vi-VN",
-                  {
-                    style: "currency",
-                    currency: "VND",
-                  }
-                )}
-              </div>
-            </div>
-            <div className="sumary-container">
-              <div className="sumary-text">
-                Số lượng thiết bị cho gói giải pháp
-              </div>
-              <div>:</div>
-              <div className="sumary-quantity">{totalDevice + " Thiết bị"}</div>
-            </div>
+        )}
+        {!loading && (
+          <div
+            className="advise-now-btn"
+            onClick={() => setModalShow(true)}
+            onKeyDown={() => {}}
+            role="button"
+            tabIndex={0}
+          >
+            <span>Tư Vấn Ngay</span>
           </div>
-        </div>}
-        {!loading&&<div
-          className="advise-now-btn"
-          onClick={() => setModalShow(true)}
-          onKeyDown={() => {}}
-          role="button"
-          tabIndex={0}
-        >
-          <span>Tư Vấn Ngay</span>
-        </div>}
+        )}
       </div>
       <ModalAdvise
         show={modalShow}
