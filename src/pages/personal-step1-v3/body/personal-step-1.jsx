@@ -45,7 +45,7 @@ const PersonalStep1 = () => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
-          "https://2b2kcrs18g.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
         );
         // item.listDevice = item.listDevice.sort((a, b) =>
         //     a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
@@ -122,11 +122,7 @@ const PersonalStep1 = () => {
         </div>
         <div
           className={`bottom-content ${
-            listOption.length > 0
-              ? skeleton
-                ? ""
-                : "non-display"
-              : ""
+            listOption.length > 0 ? (skeleton ? "" : "non-display") : ""
           }`}
         >
           {checkList.map((item, index) => {
