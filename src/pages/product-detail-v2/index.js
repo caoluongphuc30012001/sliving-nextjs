@@ -14,6 +14,7 @@ import BuildThumbs from "./thumb";
 import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
 import SectionPopularProduct from "../../components/product/section-popular-product";
+import axios from "axios";
 
 const handelFilter = (dataCurrent) => {
   if (
@@ -27,6 +28,26 @@ const handelFilter = (dataCurrent) => {
 
 const IndexPage = ({ pageContext }) => {
   const [modalShow, setModalShow] = useState(false);
+
+  const location = useLocation();
+  const { href } = location;
+
+  const deviceTypeId = location.search.split("?").pop();
+
+  const [deviceShapes, setDeviceShapes] = useState([]);
+
+  const [currentIndexShape, setCurrentIndexShape] = useState(0);
+
+  deviceShapes[currentIndexShape].useEffect(() => {
+    const getDeviceTypeDetail = async () => {
+      const res = await axios.get(
+        `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`
+      );
+      const result = res.data;
+      setDeviceShapes(result);
+    };
+    if (deviceTypeId) getDeviceTypeDetail();
+  }, [deviceTypeId]);
 
   const lngCurrent = i18next.language;
   const [dataCurrent, setDataCurrent] = useState();
@@ -260,6 +281,7 @@ const IndexPage = ({ pageContext }) => {
                     </Row>
                   </Col>
                 )}
+
               {dataCurrent?.frontmatter?.isLedDriver && (
                 <Col xs={12} md={12}>
                   <Row className="version">
@@ -445,9 +467,6 @@ const IndexPage = ({ pageContext }) => {
       </section>
     );
   };
-  const location = useLocation();
-  const { href } = location;
-
   return (
     <LayoutSmartLighting>
       <Seo
