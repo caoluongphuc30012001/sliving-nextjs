@@ -126,24 +126,24 @@ function ModalAdvise({
             {/* <p>Hãy để chúng tôi tư vấn đến bạn</p> */}
             <Form.Group className="mb-4" controlId="ControlFullName">
               <Form.Label>
-                Họ và tên<span style={{ color: "red" }}> *</span>
+                Tên Công Ty<span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="text" placeholder="Nhập tên của bạn" /> */}
               <Controller
                 control={control}
                 name="fullName"
                 defaultValue=""
-                rules={{ required: "Chưa nhập họ tên" }}
+                rules={{ required: "Chưa nhập tên công ty của bạn" }}
                 render={({ field: { onChange, value, ref } }) => (
                   <FormControl
                     onChange={onChange}
                     value={value}
                     ref={ref}
                     isInvalid={errors.fullName}
-                    aria-describedby="Nhập tên của bạn"
+                    aria-describedby="Nhập tên"
                     autoComplete="off"
                     type="text"
-                    placeholder="Nhập tên của bạn ở đây"
+                    placeholder="Nhập tên"
                     // required
                   />
                 )}
@@ -241,7 +241,57 @@ function ModalAdvise({
                   )}
               </Form.Control.Feedback>
             </Form.Group>
-            <div className="title-sub">
+            <Form.Group className="mb-4" controlId="select-group">
+              <Form.Label>
+                <div className="title-sub">
+                  <p className="title">{"Quy mô "}</p>
+                  <p className="title-star">*</p>
+                </div>
+              </Form.Label>
+              <div
+                className="selection-box"
+                onClick={() => {
+                  setDrop(!drop);
+                }}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
+              >
+                <div
+                  className={`main-selection ${
+                    option.value !== listOption[listOption?.length - 1].value
+                      ? "done"
+                      : ""
+                  }`}
+                >
+                  {option.label}
+                </div>
+                <img src={swapIcon} alt="" className="icon-drop-down" />
+                <div className={`drop-box ${drop ? "drop" : ""}`}>
+                  {listOption.map((item, index) => {
+                    return (
+                      index !== listOption?.length - 1 && (
+                        <div
+                          key={item.id}
+                          className={`option ${
+                            item.label === option.label ? "active" : ""
+                          }`}
+                          onClick={() => {
+                            setOption(item);
+                          }}
+                          onKeyDown={() => {}}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          {item.label}
+                        </div>
+                      )
+                    );
+                  })}
+                </div>
+              </div>
+            </Form.Group>
+            {/* <div className="title-sub">
               <p className="title">{"Quy mô "}</p>
               <p className="title-star">*</p>
             </div>
@@ -286,7 +336,7 @@ function ModalAdvise({
                   );
                 })}
               </div>
-            </div>
+            </div> */}
             {/* <Form.Group className="mb-4" controlId="ControlContent">
               <Form.Label>Lời nhắn/ Thắc mắc</Form.Label>
               <Form.Control as="textarea" rows={3} placeholder="name@example.com" />

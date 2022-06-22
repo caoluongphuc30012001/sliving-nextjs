@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext, useLayoutEffect } from "react";
 import { navigate } from "gatsby";
 import axios from "axios";
-
+import { Spinner } from "react-bootstrap";
 import {
   BusinessDispatchContext,
   BusinessStateContext,
@@ -73,6 +73,7 @@ const SectionProductList = () => {
 
   const [buttonList, setButtonList] = useState([]);
 
+  const [loading, setLoading] = useState(true);
   const [toggle, setToggle] = useState(0);
   useLayoutEffect(() => {
     if (!state["houseID"]) navigate("/personal-step1");
@@ -92,7 +93,7 @@ const SectionProductList = () => {
     return () => {
       document.removeEventListener("scroll", scrollEvent);
     };
-  }, [tableData]);
+  }, []);
   useEffect(() => {
     const getServices = async () => {
       try {
@@ -139,6 +140,7 @@ const SectionProductList = () => {
             isBasic,
           }
         );
+        setLoading(false);
         let rs = res.data.sort((a, b) =>
           a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
         );
@@ -259,7 +261,10 @@ const SectionProductList = () => {
                 <th className="table-data header border-l">Cao Cấp</th>
               </tr>
             </thead>
-            {tableData &&
+            {loading && (
+              <Spinner animation="border" className="spiner-animation" />
+            )}
+            {!loading &&
               tableData.map((table, index) => {
                 const id = index + 1;
                 return (
@@ -307,60 +312,66 @@ const SectionProductList = () => {
             </thead>
           </table>
         </div>
-        <div className={` ${display ? "active-menu" : "section-menu-bottom"}`}>
-          <div className="bottom-menu">
-            <div
-              className="advise-now-btn"
-              onClick={() => setModalShow(true)}
-              onKeyDown={() => {}}
-              role="button"
-              tabIndex={0}
-            >
-              <span>Tư Vấn Ngay</span>
+        {!loading && (
+          <div
+            className={` ${display ? "active-menu" : "section-menu-bottom"}`}
+          >
+            <div className="bottom-menu">
+              <div
+                className="advise-now-btn"
+                onClick={() => setModalShow(true)}
+                onKeyDown={() => {}}
+                role="button"
+                tabIndex={0}
+              >
+                <span>Tư Vấn Ngay</span>
+              </div>
+            </div>
+            <div className="table">
+              <table className="table-container">
+                <thead className="content-container">
+                  <tr className="table-row">
+                    <th className="table-data header border-l">
+                      {(
+                        Math.round(totalBasic / 1000000) * 1000000
+                      ).toLocaleString("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </th>
+                    <th className="table-data header border-l">
+                      {(
+                        Math.round(totalNormal / 1000000) * 1000000
+                      ).toLocaleString("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </th>
+                    <th className="table-data header border-l">
+                      {(
+                        Math.round(totalAdvanced / 1000000) * 1000000
+                      ).toLocaleString("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      })}
+                    </th>
+                  </tr>
+                </thead>
+              </table>
             </div>
           </div>
-          <div className="table">
-            <table className="table-container">
-              <thead className="content-container">
-                <tr className="table-row">
-                  <th className="table-data header border-l">
-                    {(
-                      Math.round(totalBasic / 1000000) * 1000000
-                    ).toLocaleString("vi-VN", {
-                      style: "currency",
-                      currency: "VND",
-                    })}
-                  </th>
-                  <th className="table-data header border-l">
-                    {(
-                      Math.round(totalNormal / 1000000) * 1000000
-                    ).toLocaleString("vi-VN", {
-                      style: "currency",
-                      currency: "VND",
-                    })}
-                  </th>
-                  <th className="table-data header border-l">
-                    {(
-                      Math.round(totalAdvanced / 1000000) * 1000000
-                    ).toLocaleString("vi-VN", {
-                      style: "currency",
-                      currency: "VND",
-                    })}
-                  </th>
-                </tr>
-              </thead>
-            </table>
+        )}
+        {!loading && (
+          <div
+            className="advise-now-btn"
+            onClick={() => setModalShow(true)}
+            onKeyDown={() => {}}
+            role="button"
+            tabIndex={0}
+          >
+            <span>Tư Vấn Ngay</span>
           </div>
-        </div>
-        <div
-          className="advise-now-btn"
-          onClick={() => setModalShow(true)}
-          onKeyDown={() => {}}
-          role="button"
-          tabIndex={0}
-        >
-          <span>Tư Vấn Ngay</span>
-        </div>
+        )}
       </div>
       <ModalAdvise
         show={modalShow}

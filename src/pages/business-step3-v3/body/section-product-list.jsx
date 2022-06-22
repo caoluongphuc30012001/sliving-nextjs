@@ -104,7 +104,6 @@ const SectionProductList = () => {
 
     state["allSolutions"] && setSolutionNames(state["allSolutions"]);
   }, [tableData]);
-
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
