@@ -1,4 +1,6 @@
 import React from "react";
+import "@i18n/i18n";
+import i18next from "i18next";
 
 const convertLngData = (deviceType) => {
   if (!deviceType) return null;
@@ -18,17 +20,18 @@ const convertLngData = (deviceType) => {
 };
 
 function BuildTopProductInfor({ deviceType }) {
-  const lngCurrent = i18next.language;
+  // const lngCurrent = i18next.language;
+  const lngCurrent = "vi";
 
   const data = convertLngData(deviceType);
 
   return (
-    deviceType && (
+    data && (
       <>
-        <h6>{data["en"].name}</h6>
-        <h2>{data[lngCurrent].name}</h2>
+        <h6>{data["en"]?.name}</h6>
+        <h2>{data[lngCurrent]?.name}</h2>
         <p>
-          {data[lngCurrent].listDescription.map((des, index) => (
+          {data[lngCurrent]?.listDescription.map((des, index) => (
             <li key={index.toString()}>
               <span>{des}</span>
             </li>

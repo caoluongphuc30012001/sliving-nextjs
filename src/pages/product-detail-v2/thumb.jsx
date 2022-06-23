@@ -1,15 +1,14 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import "./style.scss";
+import "@fancyapps/ui/dist/fancybox.css";
+import Fancybox from "@hook/fancybox";
+import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
+import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
 import img1 from "@images/product/prod-about.svg";
 import img2 from "@images/product/prod-spec.svg";
 import img3 from "@images/product/prod.svg";
-import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
-import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
-import "@fancyapps/ui/dist/fancybox.css";
-import Fancybox from "@hook/fancybox";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React, { Component } from "react";
 import { Image } from "react-bootstrap";
+import Slider from "react-slick";
+import "./style.scss";
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -78,7 +77,6 @@ export default class CenterMode extends Component {
   };
 
   render() {
-    console.log("arrThumbs: ", this.state.arrThumbs);
     const settings = {
       dots: false,
       infinite: false,
