@@ -38,7 +38,7 @@ const IndexPage = ({ pageContext }) => {
 
   const [currentIndexShape, setCurrentIndexShape] = useState(0);
 
-  deviceShapes[currentIndexShape].useEffect(() => {
+  useEffect(() => {
     const getDeviceTypeDetail = async () => {
       const res = await axios.get(
         `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`
@@ -437,7 +437,9 @@ const IndexPage = ({ pageContext }) => {
             <div className="btn-group">
               <button
                 className="btn-contact-form"
-                onClick={() => setModalShow(true)}
+                onClick={() => {
+                  setModalShow(true);
+                }}
               >
                 <span>TƯ VẤN NGAY</span>
               </button>
