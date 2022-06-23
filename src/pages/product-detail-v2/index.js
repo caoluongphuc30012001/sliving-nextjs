@@ -391,7 +391,11 @@ const IndexPage = ({ pageContext }) => {
             <span>TƯ VẤN NGAY</span>
           </button>
         </div>
-        <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+        <ModalAdvise
+          productName={dataCurrent?.frontmatter?.title}
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
       </section>
     );
   };
