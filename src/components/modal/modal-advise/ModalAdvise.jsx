@@ -47,7 +47,7 @@ function ModalAdvise({
     googleSheetFormData.append("linkedBy", "sliving");
     googleSheetFormData.append("serviceName", serviceName);
     {
-      productName && googleSheetFormData.append("deviceName", productName);
+      productName && googleSheetFormData.append("productName", productName);
     }
     googleSheetFormData.append("houseName", houseName);
 
