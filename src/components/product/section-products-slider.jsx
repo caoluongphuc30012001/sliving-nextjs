@@ -73,6 +73,7 @@ const ProductItemSwiper = ({ slide }) => {
 
 const SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
+  const [productName, setProductName] = useState("");
 
   const increaseToggleTab = () => {
     setToggleState((prev) => (prev === listSlide.length - 1 ? prev : prev + 1));
@@ -176,7 +177,10 @@ const SectionProductsSlider = ({ listSlide }) => {
                   <div className="btn-group">
                     <button
                       className="advise-now-btn"
-                      onClick={() => setModalShow(true)}
+                      onClick={() => {
+                        setProductName(slide.title);
+                        setModalShow(true);
+                      }}
                     >
                       <span>Tư vấn ngay</span>
                     </button>
@@ -192,7 +196,11 @@ const SectionProductsSlider = ({ listSlide }) => {
           </div>
         ))}
       </div>
-      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      <ModalAdvise
+        productName={productName}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </section>
   );
 };
