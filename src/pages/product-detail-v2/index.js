@@ -15,6 +15,48 @@ import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
 import SectionPopularProduct from "../../components/product/section-popular-product";
 import axios from "axios";
+import BuildTopProductInfor from "./body/BuildTopProductInfor";
+
+const testContent = {
+  ViProductDetail: {
+    listDescription: [
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+    ],
+    imageURL: [
+      "https://sliving.vn/static/e41195e23bb3f81279fccfefeb2bdfa7/198b2/t1-1.webp",
+      "https://sliving.vn/static/e41195e23bb3f81279fccfefeb2bdfa7/198b2/t1-1.webp",
+      "https://sliving.vn/static/e41195e23bb3f81279fccfefeb2bdfa7/198b2/t1-1.webp",
+    ],
+    listFeature: [
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+    ],
+    listSpecification: [
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+    ],
+  },
+  EnProductDetail: {
+    listDescription: [
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+    ],
+    imageURL: [
+      "https://sliving.vn/static/e41195e23bb3f81279fccfefeb2bdfa7/198b2/t1-1.webp",
+      "https://sliving.vn/static/e41195e23bb3f81279fccfefeb2bdfa7/198b2/t1-1.webp",
+      "https://sliving.vn/static/e41195e23bb3f81279fccfefeb2bdfa7/198b2/t1-1.webp",
+    ],
+    listFeature: [
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+    ],
+    listSpecification: [
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+      "Mẫu công tắc cảm ứng được thiết kế 2 kiểu dáng cơ bản: chữ nhật/vuông.",
+    ],
+  },
+};
 
 const handelFilter = (dataCurrent) => {
   if (
@@ -26,6 +68,14 @@ const handelFilter = (dataCurrent) => {
   return false;
 };
 
+/**
+ * @param length of array
+ * @returns number of button in group
+ */
+const numberGroupButton = (lengthArr) => {
+  return lengthArr;
+};
+
 const IndexPage = ({ pageContext }) => {
   const [modalShow, setModalShow] = useState(false);
 
@@ -33,23 +83,62 @@ const IndexPage = ({ pageContext }) => {
   const { href } = location;
 
   const deviceTypeId = location.search.split("?").pop();
+  const [deviceType, setDeviceType] = useState(null);
+  const [deviceShapeList, setDeviceShapeList] = useState([]);
+  const [currentData, setCurrentData] = useState(null);
 
-  const [deviceShapes, setDeviceShapes] = useState([]);
+  console.log("deviceTypeId: ", deviceTypeId);
+  console.log("deviceType: ", deviceType);
+  console.log("deviceShapeList: ", deviceShapeList);
+  console.log("currentData: ", currentData);
 
-  const [currentIndexShape, setCurrentIndexShape] = useState(0);
-
-  deviceShapes[currentIndexShape].useEffect(() => {
-    const getDeviceTypeDetail = async () => {
-      const res = await axios.get(
-        `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`
-      );
-      const result = res.data;
-      setDeviceShapes(result);
+  useEffect(() => {
+    const getTopProductInfo = async () => {
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/device-type-detail?deviceTypeId=${deviceTypeId}`;
+      const res = await axios.get(url);
+      setDeviceType(res.data);
     };
+
+    if (deviceTypeId) getTopProductInfo();
+  }, [deviceTypeId]);
+
+  useEffect(() => {
+    const getDeviceTypeDetail = async () => {
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`;
+      const url2 =
+        "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=12b01a07-5133-4500-9dd2-8a26c1f458dd&ViId=cbd66251-15c6-4e7a-8d42-f71cf3ab81e2";
+      const res = await axios.get(url);
+      setDeviceShapeList(res.data);
+      setCurrentData({
+        idShape: res.data[0]?.deviceShape?.id,
+        idDevice: res.data[0]?.listDevices[0]?.id,
+      });
+    };
+
     if (deviceTypeId) getDeviceTypeDetail();
   }, [deviceTypeId]);
 
+  useEffect(() => {
+    const getDeviceThumbs = async () => {
+      const foundDevice = deviceShapeList
+        .find((item) => item.deviceShape.id === currentData?.idShape)
+        .listDevices.find((item) => item.id === currentData?.idDevice);
+
+      console.log("foundDevice: ", foundDevice);
+
+      // const url =
+      //   "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=12b01a07-5133-4500-9dd2-8a26c1f458dd&ViId=cbd66251-15c6-4e7a-8d42-f71cf3ab81e2";
+      // const res = await axios.get(url);
+      // setDataThumbs(res.data);
+    };
+
+    if (currentData?.idDevice) getDeviceThumbs();
+  }, [currentData?.idShape, currentData?.idDevice]);
+
   const lngCurrent = i18next.language;
+
+  console.log("lngCurrent: ", lngCurrent);
+
   const [dataCurrent, setDataCurrent] = useState();
   const { data } = pageContext;
   const filterPostByLgn = (data) => {
@@ -209,249 +298,107 @@ const IndexPage = ({ pageContext }) => {
   //   }
   // };
 
-  const handleSetTypeProduct = (index) => {
-    const dataNew = data[0].nodes[index];
-    getDataMechanical(dataNew.frontmatter);
-    setVersionActive(index);
-    if (!dataNew.frontmatter.mechanical_1) {
-      setDataThumbs(dataNew.frontmatter.imgSrcThumbs);
-      setDataCurrent(dataNew);
-    }
-  };
-  const BuildProductInfos = () => {
-    return (
-      <>
-        {dataCurrent && (
-          <section className="section-product-info">
-            <article className="product-info-detail">
-              <h6>{dataCurrent?.frontmatter?.type || "Smart Control"}</h6>
-              <h2>{dataCurrent?.frontmatter?.title || "Thermostat"}</h2>
-              <p>
-                {dataCurrent?.frontmatter?.details?.length > 0
-                  ? dataCurrent.frontmatter.details.map((des, index) => (
-                      <li key={index.toString()}>
-                        <span>{des}</span>
-                      </li>
-                    ))
-                  : ""}
-              </p>
-              <div className="divider" />
-              {!dataCurrent?.frontmatter?.isLedDriver &&
-                data[0]?.nodes?.length > 1 && (
-                  <Col xs={12} md={12}>
-                    <Row className="version">
-                      <span>Phiên bản</span>
-                    </Row>
-                    <Row className="group-btn-version group-2-btn">
-                      <button
-                        className={`btn-version ${
-                          versionActive === 0 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(0)}
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến ánh sáng"
-                            : "Công tắc vuông"}
-                        </span>
-                      </button>
-                      <button
-                        className={`btn-version ${
-                          versionActive === 1 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(1)}
-                        disabled={
-                          dataCurrent?.frontmatter?.type.includes(
-                            "Smart Touch Group"
-                          ) > -1
-                            ? true
-                            : false
-                        }
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway Plug"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến chuyển động"
-                            : "Công tắc chữ nhật"}
-                        </span>
-                      </button>
-                    </Row>
-                  </Col>
-                )}
+  // const handleSetTypeProduct = (index) => {
+  //   const dataNew = data[0].nodes[index];
+  //   getDataMechanical(dataNew.frontmatter);
+  //   setVersionActive(index);
+  //   if (!dataNew.frontmatter.mechanical_1) {
+  //     setDataThumbs(dataNew.frontmatter.imgSrcThumbs);
+  //     setDataCurrent(dataNew);
+  //   }
+  // };
 
-              {dataCurrent?.frontmatter?.isLedDriver && (
-                <Col xs={12} md={12}>
-                  <Row className="version">
-                    <span>Phiên bản</span>
-                  </Row>
-                  <Row className="group-btn-version group-3-btn">
-                    <button
-                      className={`btn-version ${
-                        versionActive === 0 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(0)}
-                    >
-                      <span>1 kênh</span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 1 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(1)}
-                    >
-                      <span>8 kênh</span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 2 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(2)}
-                    >
-                      <span>10 kênh</span>
-                    </button>
-                  </Row>
-                </Col>
-              )}
-              {handelFilter(dataCurrent) === true && (
-                <div className="group-option">
-                  {
-                    <Col xs={12} md={12}>
-                      <Row
-                        className={`group-btn-version ${
-                          dataCurrent?.frontmatter?.mechanical_6
-                            ? "group-6-btn"
-                            : "group-3-btn"
-                        }`}
-                      >
-                        {dataCurrent?.frontmatter?.mechanical_1 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 1 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(1)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_1?.withNeutral) ||
-                              (versionActive === 1 && mechanical_1?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {1} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_2 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 2 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(2)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_2?.withNeutral) ||
-                              (versionActive === 1 && mechanical_2?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {2} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_3 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 3 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(3)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_3?.withNeutral) ||
-                              (versionActive === 1 && mechanical_3?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {3} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_4 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 4 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(4)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_4?.withNeutral) ||
-                              (versionActive === 1 && mechanical_4?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {4} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_5 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 5 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(5)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_5?.withNeutral) ||
-                              (versionActive === 1 && mechanical_5?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            Kịch bản
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_6 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 6 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(6)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_6?.withNeutral) ||
-                              (versionActive === 1 && mechanical_6?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            Nóng lạnh
-                          </button>
-                        )}
-                      </Row>
-                    </Col>
-                  }
-                </div>
-              )}
-            </article>
-            <div className="btn-group">
-              <button
-                className="btn-contact-form"
-                onClick={() => setModalShow(true)}
-              >
-                <span>TƯ VẤN NGAY</span>
-              </button>
-            </div>
-            <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
-          </section>
-        )}
-      </>
+  const handleSetTypeShape = (id) => {
+    console.log("click shape: ", id);
+    setCurrentData({
+      ...currentData,
+      idShape: id,
+    });
+  };
+
+  const handleSetTypeDevice = (id) => {
+    console.log("click device: ", id);
+    setCurrentData({
+      ...currentData,
+      idDevice: id,
+    });
+  };
+
+  const BuildProductInfor = () => {
+    return (
+      <section className="section-product-info">
+        <article className="product-info-detail">
+          <BuildTopProductInfor deviceType={deviceType} />
+          <div className="divider" />
+          {deviceShapeList.length !== 0 && (
+            <Col>
+              <Row className="version">
+                <span>Phiên bản</span>
+              </Row>
+            </Col>
+          )}
+          <Col xs={12} md={12}>
+            <Row
+              className={`group-btn-version group-${numberGroupButton(
+                deviceShapeList.length
+              )}-btn`}
+            >
+              {deviceShapeList.map((item) => (
+                <button
+                  key={item.deviceShape.id}
+                  className={`btn-version ${
+                    currentData?.idShape === item.deviceShape.id
+                      ? "is-active-btn"
+                      : ""
+                  }`}
+                  onClick={() => handleSetTypeShape(item.deviceShape.id)}
+                >
+                  <span>{item.deviceShape.nameVi}</span>
+                </button>
+              ))}
+            </Row>
+          </Col>
+
+          <Col xs={12} md={12}>
+            <Row
+              className={`group-btn-version group-${numberGroupButton(
+                deviceShapeList.find(
+                  (item) => item.deviceShape.id === currentData?.idShape
+                )?.listDevices.length
+              )}-btn`}
+            >
+              {deviceShapeList
+                .find((item) => item.deviceShape.id === currentData?.idShape)
+                ?.listDevices.map((item) => (
+                  <button
+                    key={item.id}
+                    className={`btn-version ${
+                      currentData?.idDevice === item.id ? "is-active-btn" : ""
+                    }`}
+                    onClick={() => handleSetTypeDevice(item.id)}
+                  >
+                    <span>{item.nameVi}</span>
+                  </button>
+                ))}
+            </Row>
+          </Col>
+        </article>
+        <div className="btn-group">
+          <button
+            className="btn-contact-form"
+            onClick={() => setModalShow(true)}
+          >
+            <span>TƯ VẤN NGAY</span>
+          </button>
+        </div>
+        <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      </section>
     );
   };
 
   const buildThumbsProduct = useMemo(() => {
-    return <BuildThumbs dataProduct={dataThumbs} />;
-  }, [dataThumbs]);
+    return <BuildThumbs dataProduct={testContent.ViProductDetail.imageURL} />;
+  }, [testContent.ViProductDetail.imageURL]);
 
   const BuildHeader = () => {
     return (
@@ -461,7 +408,7 @@ const IndexPage = ({ pageContext }) => {
             {buildThumbsProduct}
           </Col>
           <Col xs={12} lg={6} md={12}>
-            <BuildProductInfos />
+            <BuildProductInfor />
           </Col>
         </Row>
       </section>

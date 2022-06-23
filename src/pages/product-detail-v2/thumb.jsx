@@ -8,7 +8,8 @@ import iconArrowLeft from "@images/icon/arrow-down-left-v2.svg";
 import iconArrowRight from "@images/icon/arrow-down-right-v2.svg";
 import "@fancyapps/ui/dist/fancybox.css";
 import Fancybox from "@hook/fancybox";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Image } from "react-bootstrap";
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -77,6 +78,7 @@ export default class CenterMode extends Component {
   };
 
   render() {
+    console.log("arrThumbs: ", this.state.arrThumbs);
     const settings = {
       dots: false,
       infinite: false,
@@ -97,19 +99,16 @@ export default class CenterMode extends Component {
             dotsClass={"slick-dots slick-thumb"}
           >
             {this.state.arrThumbs &&
-              this.state.arrThumbs?.map((element, index) => {
+              this.state.arrThumbs?.map((image, index) => {
                 return (
                   <div
                     className="thumb-center"
                     data-fancybox="gallery"
-                    data-src={element?.publicURL}
+                    data-src={image}
                     key={index.toString()}
                   >
-                    <GatsbyImage
-                      image={
-                        element?.childImageSharp?.gatsbyImageData ||
-                        element?.publicURL
-                      }
+                    <Image
+                      src={image}
                       alt=""
                       style={{ width: "100%", margin: "auto" }}
                     />
@@ -125,19 +124,14 @@ export default class CenterMode extends Component {
           {...settings}
           className="thumb-bottom-slide"
         >
-          {this.state.arrThumbs.map((element, index) => {
+          {this.state.arrThumbs.map((image, index) => {
             return (
               <React.Fragment key={index.toString()}>
-                {element?.childImageSharp !== undefined && (
+                {image !== undefined && (
                   <>
                     <div key={index} className="thumb-bottom">
                       <div className="" key={index}>
-                        {element.childImageSharp.gatsbyImageData && (
-                          <GatsbyImage
-                            image={element.childImageSharp.gatsbyImageData}
-                            alt=""
-                          />
-                        )}
+                        {image && <Image src={image} alt="" />}
                       </div>
                     </div>
                     <div className="divider-prod" />
