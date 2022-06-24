@@ -11,11 +11,12 @@ import DataProductNew from "@query/product-hot";
 
 import BuildThumbs from "./thumb";
 
-// import Seo from "@components/seo";
+import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
 // import SectionPopularProduct from "../../components/product/section-popular-product";
 import axios from "axios";
 import BuildTopProductInfor from "./body/BuildTopProductInfor";
+import BuildProductDetail from "./body/BuildProductDetail";
 
 /**
  * @param length of array
@@ -68,13 +69,15 @@ const IndexPage = ({ pageContext }) => {
 
   useEffect(() => {
     const getDeviceDetail = async () => {
-      // const { deviceProductDetailViId, deviceProductDetailEnId } =
-      //   deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice];
-      // const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
-      const url2 =
-        "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=12b01a07-5133-4500-9dd2-8a26c1f458dd&ViId=cbd66251-15c6-4e7a-8d42-f71cf3ab81e2";
-      const res = await axios.get(url2);
-      setDeviceDetail(res.data);
+      if (deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice]) {
+        const { deviceProductDetailViId, deviceProductDetailEnId } =
+          deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice];
+        const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
+        // const url2 =
+        //   "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=12b01a07-5133-4500-9dd2-8a26c1f458dd&ViId=cbd66251-15c6-4e7a-8d42-f71cf3ab81e2";
+        const res = await axios.get(url);
+        setDeviceDetail(res.data);
+      }
     };
 
     if (deviceTypeId) getDeviceDetail();
@@ -105,11 +108,9 @@ const IndexPage = ({ pageContext }) => {
             deviceShapeList.length <= 1 &&
             deviceShapeList[0]?.listDevices.length <= 1
           ) && (
-            <Col>
-              <Row className="version">
-                <span>Phiên bản</span>
-              </Row>
-            </Col>
+            <Row className="version">
+              <span>Phiên bản</span>
+            </Row>
           )}
           <Col>
             {!(deviceShapeList.length <= 1) && (
@@ -155,6 +156,41 @@ const IndexPage = ({ pageContext }) => {
               </Row>
             )}
           </Col>
+          {/* {!(deviceShapeList.length <= 1) && (
+            <div
+              className={`group-btn-version-v2`}
+              style={{ marginBottom: "16px" }}
+            >
+              {deviceShapeList.map((item, index) => (
+                <button
+                  key={index.toString()}
+                  className={`btn-version ${
+                    activeIndexShape === index ? "is-active-btn" : ""
+                  }`}
+                  onClick={() => handleSetTypeShape(index)}
+                >
+                  <span>{item.deviceShape.nameVi}</span>
+                </button>
+              ))}
+            </div>
+          )}
+          {!(deviceShapeList[activeIndexShape]?.listDevices.length <= 1) && (
+            <div className={`group-btn-version-v2`}>
+              {deviceShapeList[activeIndexShape]?.listDevices.map(
+                (item, index) => (
+                  <button
+                    key={index.toString()}
+                    className={`btn-version ${
+                      activeIndexDevice === index ? "is-active-btn" : ""
+                    }`}
+                    onClick={() => handleSetTypeDevice(index)}
+                  >
+                    <span>{item.nameVi}</span>
+                  </button>
+                )
+              )}
+            </div>
+          )} */}
         </article>
         <div className="btn-group">
           <button
@@ -174,8 +210,10 @@ const IndexPage = ({ pageContext }) => {
   };
 
   const buildThumbsProduct = useMemo(() => {
-    return <BuildThumbs dataProduct={deviceDetail?.ViProductDetail.imageURL} />;
-  }, [deviceDetail?.ViProductDetail.imageURL]);
+    return (
+      <BuildThumbs dataProduct={deviceDetail?.ViProductDetail?.imageURL} />
+    );
+  }, [deviceDetail?.ViProductDetail?.imageURL]);
 
   const BuildHeader = () => {
     return (
@@ -194,19 +232,14 @@ const IndexPage = ({ pageContext }) => {
 
   return (
     <LayoutSmartLighting>
-      {/* <Seo
-        title={data[0]?.nodes[0].frontmatter?.title}
-        description={data[0]?.nodes[0].frontmatter?.details
-          ?.toString()
-          .slice(0, 120)}
-        metaImage={data[0]?.nodes[0].frontmatter?.imgSrcProduct?.publicURL}
+      <Seo
+        title={deviceType?.nameVi}
+        description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
+        metaImage={deviceDetail?.ViProductDetail?.imageURL[0]}
         url={href}
-      /> */}
-
+      />
       <BuildHeader />
-      {/* <section className="container-wrap product-info-v2">
-        <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} />
-      </section> */}
+      <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />
       {dataProductFeature && (
         <>
           <SectionFeatureProduct dataProductHot={dataProductFeature} />
