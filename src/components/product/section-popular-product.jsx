@@ -11,6 +11,7 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { Link } from "gatsby";
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
+  const [productName, setProductName] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
@@ -26,9 +27,9 @@ const SectionPopularProduct = ({ listProduct }) => {
             <Swiper
               slidesPerView={3}
               spaceBetween={20}
-              centeredSlides={true}
+              // centeredSlides={true}
               grabCursor={true}
-              loop={true}
+              // loop={true}
               navigation={{
                 nextEl: ".button-next-slider",
                 prevEl: ".button-prev-slider",
@@ -39,44 +40,49 @@ const SectionPopularProduct = ({ listProduct }) => {
               }}
               className="container-cover"
             >
-              {listProduct.length>0&&listProduct.map((item) => {
-                return (
-                  <SwiperSlide key={item.id} className="list-product">
-                    <div className="item-box">
-                      <div className="img-box">
-                        <img src={item.image} alt="" />
-                      </div>
-                      <div className="description-box">
-                        <p className="sub-title">{item.description}</p>
-                        <p className="title">{item.title}</p>
-                        <div className="btn-group">
-                          <button
-                            className="advise-now-btn"
-                            onClick={() => setModalShow(true)}
-                          >
-                            <span>Tư vấn ngay</span>
-                          </button>
-                          <Link to={`/product-detail/${item.type}`}>
-                            <button type="button" className="learn-more-btn">
-                              <span>Tìm hiểu thêm</span>
+              {listProduct.length > 0 &&
+                listProduct.map((item) => {
+                  return (
+                    <SwiperSlide key={item.id} className="list-product">
+                      <div className="item-box">
+                        <Link to={`/product-detail/?${item.id}`}>
+                          <div className="img-box">
+                            <div className="box-shadow"></div>
+                            <img src={item.imageURL} alt="" />
+                          </div>
+                        </Link>
+                        <div className="description-box">
+                          <p className="sub-title">{item.nameEn}</p>
+                          <p className="title">{item.nameVi}</p>
+                          <div className="btn-group">
+                            <button
+                              className="advise-now-btn"
+                              onClick={() => {
+                                setModalShow(true);
+                                setProductName(item.title);
+                              }}
+                            >
+                              <span>Tư vấn ngay</span>
                             </button>
-                          </Link>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
+                    </SwiperSlide>
+                  );
+                })}
             </Swiper>
           </div>
           <div className="nav-swiper-box">
             <img src={arrowLeft} alt="" className="button-prev-slider" />
-            <p className="page-current">{`${current}/${listProduct.length}`}</p>
             <img src={arrowRight} alt="" className="button-next-slider" />
           </div>
         </div>
       </div>
-      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      <ModalAdvise
+        productName={productName}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </section>
   );
 };

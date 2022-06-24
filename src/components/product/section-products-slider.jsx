@@ -20,7 +20,7 @@ const ProductItemSwiper = ({ slide }) => {
 
   return (
     <div className="product-left-content">
-      {slide?.listItem && slide?.listItem.length > 0 && (
+      {slide?.listItem && slide?.listItem.length > 1 && (
         <Swiper
           navigation={{
             prevEl: ".prev",
@@ -38,30 +38,30 @@ const ProductItemSwiper = ({ slide }) => {
           {slide?.listItem.map((slideItem) => (
             <>
               <SwiperSlide key={slideItem.id}>
-                <img className="swiper-image" src={slideItem.img} alt="" />
+                <img className="swiper-image" src={slideItem.imageURL} alt="" />
               </SwiperSlide>
             </>
           ))}
         </Swiper>
       )}
-      {slide?.titles && slide?.titles.length > 0 && (
+      {slide?.listItem && slide?.listItem.length > 1 && (
         <div className="banner-products-btn-group">
-          {slide?.titles.map((btnItem) => {
+          {slide?.listItem.map((btnItem, index) => {
             return (
               <div
                 onKeyDown={() => {}}
                 role="button"
                 tabIndex={0}
                 className={`${
-                  swiperIndex === btnItem.id
+                  swiperIndex === index
                     ? "products-btn-item active"
                     : "products-btn-item"
                 } `}
                 onClick={() => {
-                  swiper.slideTo(btnItem.id);
+                  swiper.slideTo(index);
                 }}
               >
-                <span className="product-item-title">{btnItem.title}</span>
+                <span className="product-item-title">{btnItem.nameVi}</span>
               </div>
             );
           })}
@@ -73,7 +73,8 @@ const ProductItemSwiper = ({ slide }) => {
 
 const SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
-
+  const [productName, setProductName] = useState("");
+  console.log(listSlide);
   const increaseToggleTab = () => {
     setToggleState((prev) => (prev === listSlide.length - 1 ? prev : prev + 1));
   };
@@ -176,7 +177,10 @@ const SectionProductsSlider = ({ listSlide }) => {
                   <div className="btn-group">
                     <button
                       className="advise-now-btn"
-                      onClick={() => setModalShow(true)}
+                      onClick={() => {
+                        setProductName(slide.title);
+                        setModalShow(true);
+                      }}
                     >
                       <span>Tư vấn ngay</span>
                     </button>
@@ -192,7 +196,11 @@ const SectionProductsSlider = ({ listSlide }) => {
           </div>
         ))}
       </div>
-      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      <ModalAdvise
+        productName={productName}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </section>
   );
 };

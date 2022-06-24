@@ -1,29 +1,28 @@
-import React, { useEffect, useState, useMemo } from "react";
-import { Row, Col } from "react-bootstrap";
-import { useLocation } from "@reach/router";
 import "@i18n/i18n";
+import { useLocation } from "@reach/router";
 import i18next from "i18next";
+import React, { useEffect, useMemo, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 
-import SectionFeatureProduct from "@components/section/section-feature-product";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import SectionPopularProduct from "../../components/product/section-popular-product";
 
 import DataProductNew from "@query/product-hot";
 
 import BuildThumbs from "./thumb";
 
-import Seo from "@components/seo";
+// import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
-import SectionPopularProduct from "../../components/product/section-popular-product";
+// import SectionPopularProduct from "../../components/product/section-popular-product";
 import axios from "axios";
+import BuildTopProductInfor from "./body/BuildTopProductInfor";
 
-const handelFilter = (dataCurrent) => {
-  if (
-    (dataCurrent && dataCurrent.frontmatter.type.includes("Switch") > -1) ||
-    (dataCurrent && dataCurrent.frontmatter.type.includes("Touch") > -1)
-  ) {
-    return true;
-  }
-  return false;
+/**
+ * @param length of array
+ * @returns number of button in group
+ */
+const numberGroupButton = (lengthArr) => {
+  return lengthArr;
 };
 
 const IndexPage = ({ pageContext }) => {
@@ -33,427 +32,154 @@ const IndexPage = ({ pageContext }) => {
   const { href } = location;
 
   const deviceTypeId = location.search.split("?").pop();
+  const [deviceType, setDeviceType] = useState(null);
+  const [deviceShapeList, setDeviceShapeList] = useState([]);
+  const [activeIndexShape, setActiveIndexShape] = useState(0);
+  const [activeIndexDevice, setActiveIndexDevice] = useState(0);
+  const [deviceDetail, setDeviceDetail] = useState(null);
 
-  const [deviceShapes, setDeviceShapes] = useState([]);
+  const [listProduct, setListProduct] = useState([]);
 
-  const [currentIndexShape, setCurrentIndexShape] = useState(0);
+  // console.log("deviceTypeId: ", deviceTypeId);
+  // console.log("deviceType: ", deviceType);
+  // console.log("deviceShapeList: ", deviceShapeList);
+  // console.log("activeIndexShape: ", activeIndexShape);
+  // console.log("activeIndexDevice: ", activeIndexDevice);
+  console.log("deviceDetail: ", deviceDetail);
 
   useEffect(() => {
     const getDeviceTypeDetail = async () => {
-      const res = await axios.get(
-        `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`
-      );
-      const result = res.data;
-      setDeviceShapes(result);
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/device-type-detail?deviceTypeId=${deviceTypeId}`;
+      const res = await axios.get(url);
+      setDeviceType(res.data);
     };
+
     if (deviceTypeId) getDeviceTypeDetail();
   }, [deviceTypeId]);
 
-  const lngCurrent = i18next.language;
-  const [dataCurrent, setDataCurrent] = useState();
-  const { data } = pageContext;
-  const filterPostByLgn = (data) => {
-    if (data?.length > 0) {
-      for (const item in data) {
-        const itemPost = data[item];
-        setDataCurrent(itemPost.nodes[0]);
-
-        if (handelFilter(itemPost.nodes[0]) === true) {
-          getDataMechanical(itemPost.nodes[0].frontmatter);
-        } else {
-          setDataThumbs(itemPost.nodes[0].frontmatter?.imgSrcThumbs);
-        }
-      }
-    }
-  };
   useEffect(() => {
-    filterPostByLgn(data);
-  }, [data, lngCurrent]);
+    const getDeviceShapeList = async () => {
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`;
 
-  const [dataThumbs, setDataThumbs] = useState();
+      const res = await axios.get(url);
+      setDeviceShapeList(res.data);
+    };
+
+    if (deviceTypeId) getDeviceShapeList();
+  }, [deviceTypeId]);
+
+  useEffect(() => {
+    const getDeviceDetail = async () => {
+      if (deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice]) {
+        const { deviceProductDetailViId, deviceProductDetailEnId } =
+          deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice];
+        const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
+        // const url2 =
+        //   "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=12b01a07-5133-4500-9dd2-8a26c1f458dd&ViId=cbd66251-15c6-4e7a-8d42-f71cf3ab81e2";
+        const res = await axios.get(url);
+        setDeviceDetail(res.data);
+      }
+    };
+
+    if (deviceTypeId) getDeviceDetail();
+  }, [deviceShapeList, activeIndexShape, activeIndexDevice]);
+
+  const lngCurrent = i18next.language;
 
   const dataProductFeature = DataProductNew();
 
-  const [mechanical_1, setMechanical_1] = useState();
-  const [mechanical_2, setMechanical_2] = useState();
-  const [mechanical_3, setMechanical_3] = useState();
-  const [mechanical_4, setMechanical_4] = useState();
-  const [mechanical_5, setMechanical_5] = useState();
-  const [mechanical_6, setMechanical_6] = useState();
-  // // const [mechanicalActive, setMechanicalActive] = useState();
-
-  const getDataMechanical = (dataSwitch) => {
-    var dataNew = [];
-    var btnActive = 0;
-    if (dataSwitch && dataSwitch?.mechanical_1) {
-      setMechanical_1(dataSwitch.mechanical_1);
-      dataNew = dataSwitch.mechanical_1;
-      btnActive = 1;
-    }
-    if (dataSwitch && dataSwitch?.mechanical_2) {
-      setMechanical_2(dataSwitch.mechanical_2);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_2;
-        btnActive = 2;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_3) {
-      setMechanical_3(dataSwitch.mechanical_3);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_3;
-        btnActive = 3;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_4) {
-      setMechanical_4(dataSwitch.mechanical_4);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_4;
-        btnActive = 4;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_5) {
-      setMechanical_5(dataSwitch.mechanical_5);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_5;
-        btnActive = 5;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_6) {
-      setMechanical_6(dataSwitch.mechanical_6);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_6;
-        btnActive = 6;
-      }
-    }
-    if (dataNew?.withNeutral) {
-      setDataThumbs(dataNew.withNeutral);
-      setVersionActive(0);
-    } else {
-      setDataThumbs(dataNew?.nonNeutral);
-      setVersionActive(1);
-    }
-    // setMechanicalActive(dataNew);
-    setButtonActive(btnActive);
+  const handleSetTypeShape = (idx) => {
+    console.log("click shape: ", idx);
+    setActiveIndexShape(idx);
+    setActiveIndexDevice(0);
   };
 
-  const [buttonActive, setButtonActive] = useState(1);
-  const handleActiveButton = (btnId) => {
-    switch (btnId) {
-      case 1:
-        if (mechanical_1?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_1.withNeutral);
-        } else {
-          setDataThumbs(mechanical_1?.nonNeutral);
-        }
-        setButtonActive(1);
-        // setMechanicalActive(mechanical_1);
-        break;
-      case 2:
-        if (mechanical_2?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_2.withNeutral);
-        } else {
-          setDataThumbs(mechanical_2.nonNeutral);
-        }
-        setButtonActive(2);
-        // setMechanicalActive(mechanical_2);
-        break;
-      case 3:
-        if (mechanical_3?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_3.withNeutral);
-        } else {
-          setDataThumbs(mechanical_3.nonNeutral);
-        }
-        setButtonActive(3);
-        // setMechanicalActive(mechanical_3);
-        break;
-      case 4:
-        if (mechanical_4?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_4.withNeutral);
-        } else {
-          setDataThumbs(mechanical_4.nonNeutral);
-        }
-        setButtonActive(4);
-        // setMechanicalActive(mechanical_4);
-        break;
-      case 5:
-        if (mechanical_5?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_5.withNeutral);
-        } else {
-          setDataThumbs(mechanical_5.nonNeutral);
-        }
-        setButtonActive(5);
-        // setMechanicalActive(mechanical_5);
-        break;
-      case 6:
-        if (mechanical_6?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_6.withNeutral);
-        } else {
-          setDataThumbs(mechanical_6.nonNeutral);
-        }
-        setButtonActive(6);
-        // setMechanicalActive(mechanical_6);
-        break;
-      default:
-        break;
-    }
+  const handleSetTypeDevice = (idx) => {
+    console.log("click device: ", idx);
+    setActiveIndexDevice(idx);
   };
 
-  const [versionActive, setVersionActive] = useState(0);
-  // const handleActiveNeutral = (versionId) => {
-  //   if (versionId === 0) {
-  //     setDataThumbs(mechanicalActive.withNeutral);
-  //     setVersionActive(0);
-  //   } else if (versionId === 1) {
-  //     setDataThumbs(mechanicalActive.nonNeutral);
-  //     setVersionActive(1);
-  //   }
-  // };
-
-  const handleSetTypeProduct = (index) => {
-    const dataNew = data[0].nodes[index];
-    getDataMechanical(dataNew.frontmatter);
-    setVersionActive(index);
-    if (!dataNew.frontmatter.mechanical_1) {
-      setDataThumbs(dataNew.frontmatter.imgSrcThumbs);
-      setDataCurrent(dataNew);
-    }
-  };
-  const BuildProductInfos = () => {
+  const BuildProductInfor = () => {
     return (
-      <>
-        {dataCurrent && (
-          <section className="section-product-info">
-            <article className="product-info-detail">
-              <h6>{dataCurrent?.frontmatter?.type || "Smart Control"}</h6>
-              <h2>{dataCurrent?.frontmatter?.title || "Thermostat"}</h2>
-              <p>
-                {dataCurrent?.frontmatter?.details?.length > 0
-                  ? dataCurrent.frontmatter.details.map((des, index) => (
-                      <li key={index.toString()}>
-                        <span>{des}</span>
-                      </li>
-                    ))
-                  : ""}
-              </p>
-              <div className="divider" />
-              {!dataCurrent?.frontmatter?.isLedDriver &&
-                data[0]?.nodes?.length > 1 && (
-                  <Col xs={12} md={12}>
-                    <Row className="version">
-                      <span>Phiên bản</span>
-                    </Row>
-                    <Row className="group-btn-version group-2-btn">
-                      <button
-                        className={`btn-version ${
-                          versionActive === 0 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(0)}
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến ánh sáng"
-                            : "Công tắc vuông"}
-                        </span>
-                      </button>
-                      <button
-                        className={`btn-version ${
-                          versionActive === 1 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(1)}
-                        disabled={
-                          dataCurrent?.frontmatter?.type.includes(
-                            "Smart Touch Group"
-                          ) > -1
-                            ? true
-                            : false
-                        }
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway Plug"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến chuyển động"
-                            : "Công tắc chữ nhật"}
-                        </span>
-                      </button>
-                    </Row>
-                  </Col>
-                )}
-
-              {dataCurrent?.frontmatter?.isLedDriver && (
-                <Col xs={12} md={12}>
-                  <Row className="version">
-                    <span>Phiên bản</span>
-                  </Row>
-                  <Row className="group-btn-version group-3-btn">
-                    <button
-                      className={`btn-version ${
-                        versionActive === 0 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(0)}
-                    >
-                      <span>1 kênh</span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 1 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(1)}
-                    >
-                      <span>8 kênh</span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 2 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(2)}
-                    >
-                      <span>10 kênh</span>
-                    </button>
-                  </Row>
-                </Col>
-              )}
-              {handelFilter(dataCurrent) === true && (
-                <div className="group-option">
-                  {
-                    <Col xs={12} md={12}>
-                      <Row
-                        className={`group-btn-version ${
-                          dataCurrent?.frontmatter?.mechanical_6
-                            ? "group-6-btn"
-                            : "group-3-btn"
-                        }`}
-                      >
-                        {dataCurrent?.frontmatter?.mechanical_1 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 1 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(1)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_1?.withNeutral) ||
-                              (versionActive === 1 && mechanical_1?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {1} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_2 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 2 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(2)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_2?.withNeutral) ||
-                              (versionActive === 1 && mechanical_2?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {2} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_3 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 3 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(3)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_3?.withNeutral) ||
-                              (versionActive === 1 && mechanical_3?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {3} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_4 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 4 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(4)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_4?.withNeutral) ||
-                              (versionActive === 1 && mechanical_4?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {4} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_5 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 5 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(5)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_5?.withNeutral) ||
-                              (versionActive === 1 && mechanical_5?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            Kịch bản
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_6 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 6 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(6)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_6?.withNeutral) ||
-                              (versionActive === 1 && mechanical_6?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            Nóng lạnh
-                          </button>
-                        )}
-                      </Row>
-                    </Col>
-                  }
-                </div>
-              )}
-            </article>
-            <div className="btn-group">
-              <button
-                className="btn-contact-form"
-                onClick={() => {
-                  setModalShow(true);
-                }}
+      <section className="section-product-info">
+        <article className="product-info-detail">
+          <BuildTopProductInfor deviceType={deviceType} />
+          <div className="divider" />
+          {!(
+            deviceShapeList.length <= 1 &&
+            deviceShapeList[0]?.listDevices.length <= 1
+          ) && (
+            <Col>
+              <Row className="version">
+                <span>Phiên bản</span>
+              </Row>
+            </Col>
+          )}
+          <Col>
+            {!(deviceShapeList.length <= 1) && (
+              <Row
+                className={`group-btn-version group-${numberGroupButton(
+                  deviceShapeList.length
+                )}-btn`}
               >
-                <span>TƯ VẤN NGAY</span>
-              </button>
-            </div>
-            <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
-          </section>
-        )}
-      </>
+                {deviceShapeList.map((item, index) => (
+                  <button
+                    key={index.toString()}
+                    className={`btn-version ${
+                      activeIndexShape === index ? "is-active-btn" : ""
+                    }`}
+                    onClick={() => handleSetTypeShape(index)}
+                  >
+                    <span>{item.deviceShape.nameVi}</span>
+                  </button>
+                ))}
+              </Row>
+            )}
+          </Col>
+          <Col>
+            {!(deviceShapeList[activeIndexShape]?.listDevices.length <= 1) && (
+              <Row
+                className={`group-btn-version group-${numberGroupButton(
+                  deviceShapeList[activeIndexShape]?.listDevices.length
+                )}-btn`}
+              >
+                {deviceShapeList[activeIndexShape]?.listDevices.map(
+                  (item, index) => (
+                    <button
+                      key={index.toString()}
+                      className={`btn-version ${
+                        activeIndexDevice === index ? "is-active-btn" : ""
+                      }`}
+                      onClick={() => handleSetTypeDevice(index)}
+                    >
+                      <span>{item.nameVi}</span>
+                    </button>
+                  )
+                )}
+              </Row>
+            )}
+          </Col>
+        </article>
+        <div className="btn-group">
+          <button
+            className="btn-contact-form"
+            onClick={() => setModalShow(true)}
+          >
+            <span>TƯ VẤN NGAY</span>
+          </button>
+        </div>
+        <ModalAdvise
+          productName={deviceType?.nameVi}
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+      </section>
     );
   };
 
   const buildThumbsProduct = useMemo(() => {
-    return <BuildThumbs dataProduct={dataThumbs} />;
-  }, [dataThumbs]);
+    return <BuildThumbs dataProduct={deviceDetail?.ViProductDetail.imageURL} />;
+  }, [deviceDetail?.ViProductDetail.imageURL]);
 
   const BuildHeader = () => {
     return (
@@ -463,32 +189,39 @@ const IndexPage = ({ pageContext }) => {
             {buildThumbsProduct}
           </Col>
           <Col xs={12} lg={6} md={12}>
-            <BuildProductInfos />
+            <BuildProductInfor />
           </Col>
         </Row>
       </section>
     );
   };
+
+  useEffect(() => {
+    const getListProduct = async () => {
+      try {
+        const res = await axios.get(
+          "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-hot-product"
+        );
+        setListProduct(res.data.listDevice.Items);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getListProduct();
+  }, []);
   return (
     <LayoutSmartLighting>
-      <Seo
+      {/* <Seo
         title={data[0]?.nodes[0].frontmatter?.title}
         description={data[0]?.nodes[0].frontmatter?.details
           ?.toString()
           .slice(0, 120)}
         metaImage={data[0]?.nodes[0].frontmatter?.imgSrcProduct?.publicURL}
         url={href}
-      />
+      /> */}
 
       <BuildHeader />
-      <section className="container-wrap product-info-v2">
-        <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} />
-      </section>
-      {dataProductFeature && (
-        <>
-          <SectionFeatureProduct dataProductHot={dataProductFeature} />
-        </>
-      )}
+      <SectionPopularProduct listProduct={listProduct} />
     </LayoutSmartLighting>
   );
 };
