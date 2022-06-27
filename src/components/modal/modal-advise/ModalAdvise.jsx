@@ -73,8 +73,6 @@ function ModalAdvise({
     reset();
   };
 
-  console.log(productName);
-
   return (
     <>
       <Modal

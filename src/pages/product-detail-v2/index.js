@@ -13,18 +13,34 @@ import BuildThumbs from "./thumb";
 
 import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
-// import SectionPopularProduct from "../../components/product/section-popular-product";
 import axios from "axios";
 import BuildTopProductInfor from "./body/BuildTopProductInfor";
 import BuildProductDetail from "./body/BuildProductDetail";
+import Skeleton from "./body/Skeleton";
 
-/**
- * @param length of array
- * @returns number of button in group
- */
-const numberGroupButton = (lengthArr) => {
-  return lengthArr;
-};
+function SkeletonProductInfor() {
+  return (
+    <>
+      <div style={{ marginBottom: "2px" }}>
+        <Skeleton width="40%" height="24px" />
+      </div>
+      <div style={{ marginBottom: "16px" }}>
+        <Skeleton width="100%" height="48px" />
+      </div>
+      <div style={{ marginBottom: "2px" }}>
+        <Skeleton width="30%" height="24px" />
+      </div>
+      {[...Array(2)].map((item, i) => (
+        <div style={{ marginBottom: "16px" }}>
+          <Skeleton key={i} width="100%" height="44px" />
+        </div>
+      ))}
+      <div style={{ margin: "32px 0" }}>
+        <Skeleton width="30%" height="40px" />
+      </div>
+    </>
+  );
+}
 
 const IndexPage = ({ pageContext }) => {
   const [modalShow, setModalShow] = useState(false);
@@ -35,15 +51,16 @@ const IndexPage = ({ pageContext }) => {
   const deviceTypeId = location.search.split("?").pop();
   const [deviceType, setDeviceType] = useState(null);
   const [deviceShapeList, setDeviceShapeList] = useState([]);
-  const [activeIndexShape, setActiveIndexShape] = useState(0);
-  const [activeIndexDevice, setActiveIndexDevice] = useState(0);
   const [deviceDetail, setDeviceDetail] = useState(null);
+
+  const [activeShape, setActiveShape] = useState(0);
+  const [activeDevice, setActiveDevice] = useState(0);
 
   console.log("deviceTypeId: ", deviceTypeId);
   console.log("deviceType: ", deviceType);
   console.log("deviceShapeList: ", deviceShapeList);
-  console.log("activeIndexShape: ", activeIndexShape);
-  console.log("activeIndexDevice: ", activeIndexDevice);
+  console.log("activeShape: ", activeShape);
+  console.log("activeDevice: ", activeDevice);
   console.log("deviceDetail: ", deviceDetail);
 
   useEffect(() => {
@@ -61,49 +78,92 @@ const IndexPage = ({ pageContext }) => {
       const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`;
 
       const res = await axios.get(url);
-      setDeviceShapeList(res.data);
+
+      const sortData = (list) => {
+        const res = list.map((item) => {
+          return {
+            deviceShape: item.deviceShape,
+            listDevices: item.listDevices.sort((a, b) => {
+              return a.nameVi.localeCompare(b.nameVi);
+            }),
+          };
+        });
+
+        return res.sort((a, b) => {
+          return a.deviceShape.nameVi.localeCompare(b.deviceShape.nameVi);
+        });
+      };
+
+      setDeviceShapeList(sortData(res.data));
     };
 
     if (deviceTypeId) getDeviceShapeList();
   }, [deviceTypeId]);
 
   useEffect(() => {
-    const getDeviceDetail = async () => {
-      if (deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice]) {
+    const productDetail = deviceShapeList[0]?.listDevices[0];
+
+    const getFirstDevice = async () => {
+      try {
         const { deviceProductDetailViId, deviceProductDetailEnId } =
-          deviceShapeList[activeIndexShape]?.listDevices[activeIndexDevice];
+          productDetail;
         const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
-        // const url2 =
-        //   "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=12b01a07-5133-4500-9dd2-8a26c1f458dd&ViId=cbd66251-15c6-4e7a-8d42-f71cf3ab81e2";
         const res = await axios.get(url);
         setDeviceDetail(res.data);
+      } catch (err) {
+        console.log(err);
       }
     };
 
-    if (deviceTypeId) getDeviceDetail();
-  }, [deviceShapeList, activeIndexShape, activeIndexDevice]);
+    getFirstDevice();
+  }, [deviceShapeList]);
+
+  const handleChangeIndex = async (type, index) => {
+    if (type === "shape" && activeShape === index) return;
+    if (type === "device" && activeDevice === index) return;
+
+    let indexShape = type === "shape" ? index : activeShape;
+    let indexDevice = type === "device" ? index : activeDevice;
+
+    if (type === "shape") {
+      indexDevice = 0;
+    }
+
+    const productDetail = deviceShapeList[indexShape]?.listDevices[indexDevice];
+
+    if (type === "shape") {
+      setActiveShape(index);
+      setActiveDevice(0);
+    } else if (type === "device") {
+      setActiveDevice(index);
+    }
+
+    try {
+      const { deviceProductDetailViId, deviceProductDetailEnId } =
+        productDetail;
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
+      const res = await axios.get(url);
+      setDeviceDetail(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const lngCurrent = i18next.language;
 
   const dataProductFeature = DataProductNew();
 
-  const handleSetTypeShape = (idx) => {
-    console.log("click shape: ", idx);
-    setActiveIndexShape(idx);
-    setActiveIndexDevice(0);
-  };
-
-  const handleSetTypeDevice = (idx) => {
-    console.log("click device: ", idx);
-    setActiveIndexDevice(idx);
-  };
-
   const BuildProductInfor = () => {
-    return (
+    return !(deviceShapeList.length > 0 && deviceType) ? (
+      <section className="section-product-info">
+        <SkeletonProductInfor />
+      </section>
+    ) : (
       <section className="section-product-info">
         <article className="product-info-detail">
           <BuildTopProductInfor deviceType={deviceType} />
           <div className="divider" />
+
           {!(
             deviceShapeList.length <= 1 &&
             deviceShapeList[0]?.listDevices.length <= 1
@@ -115,17 +175,15 @@ const IndexPage = ({ pageContext }) => {
           <Col>
             {!(deviceShapeList.length <= 1) && (
               <Row
-                className={`group-btn-version group-${numberGroupButton(
-                  deviceShapeList.length
-                )}-btn`}
+                className={`group-btn-version group-${deviceShapeList.length}-btn`}
               >
                 {deviceShapeList.map((item, index) => (
                   <button
                     key={index.toString()}
                     className={`btn-version ${
-                      activeIndexShape === index ? "is-active-btn" : ""
+                      activeShape === index ? "is-active-btn" : ""
                     }`}
-                    onClick={() => handleSetTypeShape(index)}
+                    onClick={() => handleChangeIndex("shape", index)}
                   >
                     <span>{item.deviceShape.nameVi}</span>
                   </button>
@@ -134,20 +192,18 @@ const IndexPage = ({ pageContext }) => {
             )}
           </Col>
           <Col>
-            {!(deviceShapeList[activeIndexShape]?.listDevices.length <= 1) && (
+            {!(deviceShapeList[activeShape]?.listDevices.length <= 1) && (
               <Row
-                className={`group-btn-version group-${numberGroupButton(
-                  deviceShapeList[activeIndexShape]?.listDevices.length
-                )}-btn`}
+                className={`group-btn-version group-${deviceShapeList[activeShape]?.listDevices.length}-btn`}
               >
-                {deviceShapeList[activeIndexShape]?.listDevices.map(
+                {deviceShapeList[activeShape]?.listDevices.map(
                   (item, index) => (
                     <button
                       key={index.toString()}
                       className={`btn-version ${
-                        activeIndexDevice === index ? "is-active-btn" : ""
+                        activeDevice === index ? "is-active-btn" : ""
                       }`}
-                      onClick={() => handleSetTypeDevice(index)}
+                      onClick={() => handleChangeIndex("device", index)}
                     >
                       <span>{item.nameVi}</span>
                     </button>
@@ -210,10 +266,14 @@ const IndexPage = ({ pageContext }) => {
   };
 
   const buildThumbsProduct = useMemo(() => {
-    return (
-      <BuildThumbs dataProduct={deviceDetail?.ViProductDetail?.imageURL} />
+    return !deviceDetail ? (
+      <Skeleton width="100%" height="100%" />
+    ) : (
+      <BuildThumbs
+        dataProduct={deviceDetail?.ViProductDetail?.imageURL || []}
+      />
     );
-  }, [deviceDetail?.ViProductDetail?.imageURL]);
+  }, [deviceDetail]);
 
   const BuildHeader = () => {
     return (
@@ -235,7 +295,10 @@ const IndexPage = ({ pageContext }) => {
       <Seo
         title={deviceType?.nameVi}
         description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
-        metaImage={deviceDetail?.ViProductDetail?.imageURL[0]}
+        metaImage={
+          deviceDetail?.ViProductDetail?.imageURL &&
+          deviceDetail?.ViProductDetail?.imageURL[0]
+        }
         url={href}
       />
       <BuildHeader />

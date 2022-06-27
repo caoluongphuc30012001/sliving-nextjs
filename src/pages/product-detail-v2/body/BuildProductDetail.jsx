@@ -18,8 +18,8 @@ export default function BuildProductDetail({ deviceDetail = {} }) {
             <ul className="desc-list">
               {listDescription.map((item, index) => (
                 <li key={index.toString()} className="desc-item">
-                  <strong>{`${item.split(":")[0]}:`}</strong>
-                  {item.split(":")[1]}
+                  <strong>{`${item.split(":")[0].trim()}: `}</strong>
+                  {item.split(":")[1].trim()}
                 </li>
               ))}
             </ul>
@@ -57,12 +57,47 @@ export default function BuildProductDetail({ deviceDetail = {} }) {
         <table>
           <tbody>
             {listSpecification &&
-              listSpecification.map((item, i) => (
-                <tr key={i.toString()}>
-                  <td>{item.split(': ')[0]}</td>
-                  <td>{item.split(': ')[1]}</td>
-                </tr>
-              ))}
+              listSpecification.map((item, i) => {
+                const handleStringContainAtSign = (str) => {
+                  const splitData = str.split("@").map((item) => {
+                    if (!item.includes(":")) {
+                      return {
+                        left: `<b>${item}</b>`,
+                        right: "",
+                      };
+                    } else {
+                      return {
+                        left: `<br>&emsp;&emsp;${item.split(":")[0]}`,
+                        right: `<br>${item.split(":")[1]}`,
+                      };
+                    }
+                  });
+
+                  console.log(splitData);
+
+                  return `<td>${splitData
+                    .map((item) => item.left)
+                    .join("")}</td><td>${splitData
+                    .map((item) => item.right)
+                    .join("")}</td>`;
+                };
+
+                const result = item.includes("@")
+                  ? handleStringContainAtSign(item)
+                  : `<td>${item.split(":")[0]?.trim()}</td><td>${item
+                      .split(":")[1]
+                      ?.trim()}</td>`;
+
+                return (
+                  <tr
+                    key={i.toString()}
+                    dangerouslySetInnerHTML={{ __html: result }}
+                  >
+                    {/* <td>{item.split(":")[0].trim()}</td>
+                    <td>{item.split(":")[1].trim()}</td> */}
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
       </div>
