@@ -204,6 +204,12 @@
   align-items: center;
   justify-content: center;
   color: #0979fd;
+  text-transform: lowercase;
+
+  & span::first-letter {
+    text-transform: uppercase;
+  }
+
   white-space: nowrap;
   &:nth-child(1) {
     border-radius: 20px 0 0 20px;

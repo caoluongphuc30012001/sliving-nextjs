@@ -20,7 +20,7 @@ const ProductItemSwiper = ({ slide }) => {
 
   return (
     <div className="product-left-content">
-      {slide?.listItem && slide?.listItem.length > 1 && (
+      {slide?.listItem && slide?.listItem.length > 0 && (
         <Swiper
           navigation={{
             prevEl: ".prev",

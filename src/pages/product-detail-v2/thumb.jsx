@@ -105,7 +105,7 @@ export default class CenterMode extends Component {
                     data-src={image}
                     key={index.toString()}
                   >
-                    <Image
+                    <img
                       src={image}
                       alt=""
                       style={{ width: "100%", margin: "auto" }}
@@ -129,7 +129,7 @@ export default class CenterMode extends Component {
                   <>
                     <div key={index} className="thumb-bottom">
                       <div className="" key={index}>
-                        {image && <Image src={image} alt="" />}
+                        {image && <img src={image} alt="" />}
                       </div>
                     </div>
                     <div className="divider-prod" />
