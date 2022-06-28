@@ -35,7 +35,7 @@ const SectionProduct = () => {
           id: 1,
           title: "Dễ sử dụng",
           subTitle:
-            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian smart living đẳng cấp.",
+            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
           icon: iconCheckOutline,
         },
         {
@@ -66,7 +66,7 @@ const SectionProduct = () => {
           id: 1,
           title: "Dễ sử dụng",
           subTitle:
-            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian smart living đẳng cấp.",
+            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
           icon: iconCheckOutline,
         },
         {
