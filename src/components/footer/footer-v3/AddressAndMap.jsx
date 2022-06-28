@@ -25,7 +25,7 @@ const listContact = [
         "Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
     },
     urlIcon: iconBgPin,
-    position: { lat: 10.849997413384632, lng: 106.80553665690692 },
+    position: { lat: 10.85023, lng: 106.80562 },
   },
   {
     key: {

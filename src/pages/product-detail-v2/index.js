@@ -267,11 +267,9 @@ const IndexPage = ({ pageContext }) => {
 
   const buildThumbsProduct = useMemo(() => {
     return !deviceDetail ? (
-      <Skeleton width="100%" height="100%" />
+      <Skeleton width="100%" height="372px" />
     ) : (
-      <BuildThumbs
-        dataProduct={deviceDetail?.ViProductDetail?.imageURL || []}
-      />
+      <BuildThumbs dataProduct={deviceDetail?.imageURL || []} />
     );
   }, [deviceDetail]);
 
@@ -295,10 +293,7 @@ const IndexPage = ({ pageContext }) => {
       <Seo
         title={deviceType?.nameVi}
         description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
-        metaImage={
-          deviceDetail?.ViProductDetail?.imageURL &&
-          deviceDetail?.ViProductDetail?.imageURL[0]
-        }
+        metaImage={deviceDetail?.imageURL && deviceDetail?.imageURL[0]}
         url={href}
       />
       <BuildHeader />
