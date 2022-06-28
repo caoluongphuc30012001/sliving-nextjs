@@ -171,7 +171,6 @@ const SectionProductList = () => {
 
   const sumCalculation = (list, property) => {
     const sum = list.listDevice.reduce((prev, item) => {
-      console.log(item[property], "  haha");
       return prev + item[property] * item.deviceValues.price;
     }, 0);
     return sum;

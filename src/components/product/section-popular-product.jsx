@@ -27,9 +27,9 @@ const SectionPopularProduct = ({ listProduct }) => {
             <Swiper
               slidesPerView={3}
               spaceBetween={20}
-              centeredSlides={true}
+              // centeredSlides={true}
               grabCursor={true}
-              loop={true}
+              // loop={true}
               navigation={{
                 nextEl: ".button-next-slider",
                 prevEl: ".button-prev-slider",
@@ -45,15 +45,15 @@ const SectionPopularProduct = ({ listProduct }) => {
                   return (
                     <SwiperSlide key={item.id} className="list-product">
                       <div className="item-box">
-                        <Link to={`/product-detail/${item.type}`}>
+                        <Link to={`/product-detail/?${item.id}`}>
                           <div className="img-box">
                             <div className="box-shadow"></div>
-                            <img src={item.image} alt="" />
+                            <img src={item.imageURL} alt="" />
                           </div>
                         </Link>
                         <div className="description-box">
-                          <p className="sub-title">{item.description}</p>
-                          <p className="title">{item.title}</p>
+                          <p className="sub-title">{item.nameEn}</p>
+                          <p className="title">{item.nameVi}</p>
                           <div className="btn-group">
                             <button
                               className="advise-now-btn"
