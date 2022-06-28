@@ -38,30 +38,30 @@ const ProductItemSwiper = ({ slide }) => {
           {slide?.listItem.map((slideItem) => (
             <>
               <SwiperSlide key={slideItem.id}>
-                <img className="swiper-image" src={slideItem.img} alt="" />
+                <img className="swiper-image" src={slideItem.imageURL} alt="" />
               </SwiperSlide>
             </>
           ))}
         </Swiper>
       )}
-      {slide?.titles && slide?.titles.length > 0 && (
+      {slide?.listItem && slide?.listItem.length > 1 && (
         <div className="banner-products-btn-group">
-          {slide?.titles.map((btnItem) => {
+          {slide?.listItem.map((btnItem, index) => {
             return (
               <div
                 onKeyDown={() => {}}
                 role="button"
                 tabIndex={0}
                 className={`${
-                  swiperIndex === btnItem.id
+                  swiperIndex === index
                     ? "products-btn-item active"
                     : "products-btn-item"
                 } `}
                 onClick={() => {
-                  swiper.slideTo(btnItem.id);
+                  swiper.slideTo(index);
                 }}
               >
-                <span className="product-item-title">{btnItem.title}</span>
+                <span className="product-item-title">{btnItem.nameVi}</span>
               </div>
             );
           })}
@@ -74,7 +74,7 @@ const ProductItemSwiper = ({ slide }) => {
 const SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
   const [productName, setProductName] = useState("");
-
+  console.log(listSlide);
   const increaseToggleTab = () => {
     setToggleState((prev) => (prev === listSlide.length - 1 ? prev : prev + 1));
   };

@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useMemo } from "react";
-import { Row, Col } from "react-bootstrap";
-import { useLocation } from "@reach/router";
 import "@i18n/i18n";
+import { useLocation } from "@reach/router";
 import i18next from "i18next";
+import React, { useEffect, useMemo, useState } from "react";
+import { Col, Row } from "react-bootstrap";
 
-import SectionFeatureProduct from "@components/section/section-feature-product";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
 import DataProductNew from "@query/product-hot";
@@ -13,429 +12,266 @@ import BuildThumbs from "./thumb";
 
 import Seo from "@components/seo";
 import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
-import SectionPopularProduct from "../../components/product/section-popular-product";
+import axios from "axios";
+import BuildTopProductInfor from "./body/BuildTopProductInfor";
+import BuildProductDetail from "./body/BuildProductDetail";
+import Skeleton from "./body/Skeleton";
+import SectionPopularProductSliving from "./body/section-popular-product-sliving";
 
-const handelFilter = (dataCurrent) => {
-  if (
-    (dataCurrent && dataCurrent.frontmatter.type.includes("Switch") > -1) ||
-    (dataCurrent && dataCurrent.frontmatter.type.includes("Touch") > -1)
-  ) {
-    return true;
-  }
-  return false;
-};
+function SkeletonProductInfor() {
+  return (
+    <>
+      <div style={{ marginBottom: "2px" }}>
+        <Skeleton width="40%" height="24px" />
+      </div>
+      <div style={{ marginBottom: "16px" }}>
+        <Skeleton width="100%" height="48px" />
+      </div>
+      <div style={{ marginBottom: "2px" }}>
+        <Skeleton width="30%" height="24px" />
+      </div>
+      {[...Array(2)].map((item, i) => (
+        <div style={{ marginBottom: "16px" }}>
+          <Skeleton key={i} width="100%" height="44px" />
+        </div>
+      ))}
+      <div style={{ margin: "32px 0" }}>
+        <Skeleton width="30%" height="40px" />
+      </div>
+    </>
+  );
+}
 
 const IndexPage = ({ pageContext }) => {
   const [modalShow, setModalShow] = useState(false);
 
-  const lngCurrent = i18next.language;
-  const [dataCurrent, setDataCurrent] = useState();
-  const { data } = pageContext;
-  const filterPostByLgn = (data) => {
-    if (data?.length > 0) {
-      for (const item in data) {
-        const itemPost = data[item];
-        setDataCurrent(itemPost.nodes[0]);
+  const location = useLocation();
+  const { href } = location;
 
-        if (handelFilter(itemPost.nodes[0]) === true) {
-          getDataMechanical(itemPost.nodes[0].frontmatter);
-        } else {
-          setDataThumbs(itemPost.nodes[0].frontmatter?.imgSrcThumbs);
-        }
+  const deviceTypeId = location.search.split("?").pop();
+  const [deviceType, setDeviceType] = useState(null);
+  const [deviceShapeList, setDeviceShapeList] = useState([]);
+  const [deviceDetail, setDeviceDetail] = useState(null);
+
+  const [activeShape, setActiveShape] = useState(0);
+  const [activeDevice, setActiveDevice] = useState(0);
+
+  console.log("deviceTypeId: ", deviceTypeId);
+  console.log("deviceType: ", deviceType);
+  console.log("deviceShapeList: ", deviceShapeList);
+  console.log("activeShape: ", activeShape);
+  console.log("activeDevice: ", activeDevice);
+  console.log("deviceDetail: ", deviceDetail);
+
+  useEffect(() => {
+    const getDeviceTypeDetail = async () => {
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/device-type-detail?deviceTypeId=${deviceTypeId}`;
+      const res = await axios.get(url);
+      setDeviceType(res.data);
+    };
+
+    if (deviceTypeId) getDeviceTypeDetail();
+  }, [deviceTypeId]);
+
+  useEffect(() => {
+    const getDeviceShapeList = async () => {
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/get-device-shape/${deviceTypeId}`;
+
+      const res = await axios.get(url);
+
+      const sortData = (list) => {
+        const res = list.map((item) => {
+          return {
+            deviceShape: item.deviceShape,
+            listDevices: item.listDevices.sort((a, b) => {
+              return a.nameVi.localeCompare(b.nameVi);
+            }),
+          };
+        });
+
+        return res.sort((a, b) => {
+          return a.deviceShape.nameVi.localeCompare(b.deviceShape.nameVi);
+        });
+      };
+
+      setDeviceShapeList(sortData(res.data));
+    };
+
+    if (deviceTypeId) getDeviceShapeList();
+  }, [deviceTypeId]);
+
+  useEffect(() => {
+    const productDetail = deviceShapeList[0]?.listDevices[0];
+
+    const getFirstDevice = async () => {
+      try {
+        const { deviceProductDetailViId, deviceProductDetailEnId } =
+          productDetail;
+        const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
+        const res = await axios.get(url);
+        setDeviceDetail(res.data);
+      } catch (err) {
+        console.log(err);
       }
+    };
+
+    getFirstDevice();
+  }, [deviceShapeList]);
+
+  const handleChangeIndex = async (type, index) => {
+    if (type === "shape" && activeShape === index) return;
+    if (type === "device" && activeDevice === index) return;
+
+    let indexShape = type === "shape" ? index : activeShape;
+    let indexDevice = type === "device" ? index : activeDevice;
+
+    if (type === "shape") {
+      indexDevice = 0;
+    }
+
+    const productDetail = deviceShapeList[indexShape]?.listDevices[indexDevice];
+
+    if (type === "shape") {
+      setActiveShape(index);
+      setActiveDevice(0);
+    } else if (type === "device") {
+      setActiveDevice(index);
+    }
+
+    try {
+      const { deviceProductDetailViId, deviceProductDetailEnId } =
+        productDetail;
+      const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/product-detail?EnId=${deviceProductDetailEnId}&ViId=${deviceProductDetailViId}`;
+      const res = await axios.get(url);
+      setDeviceDetail(res.data);
+    } catch (err) {
+      console.log(err);
     }
   };
-  useEffect(() => {
-    filterPostByLgn(data);
-  }, [data, lngCurrent]);
 
-  const [dataThumbs, setDataThumbs] = useState();
+  const lngCurrent = i18next.language;
 
   const dataProductFeature = DataProductNew();
 
-  const [mechanical_1, setMechanical_1] = useState();
-  const [mechanical_2, setMechanical_2] = useState();
-  const [mechanical_3, setMechanical_3] = useState();
-  const [mechanical_4, setMechanical_4] = useState();
-  const [mechanical_5, setMechanical_5] = useState();
-  const [mechanical_6, setMechanical_6] = useState();
-  // // const [mechanicalActive, setMechanicalActive] = useState();
+  const BuildProductInfor = () => {
+    return !(deviceShapeList.length > 0 && deviceType) ? (
+      <section className="section-product-info">
+        <SkeletonProductInfor />
+      </section>
+    ) : (
+      <section className="section-product-info">
+        <article className="product-info-detail">
+          <BuildTopProductInfor deviceType={deviceType} />
+          <div className="divider" />
 
-  const getDataMechanical = (dataSwitch) => {
-    var dataNew = [];
-    var btnActive = 0;
-    if (dataSwitch && dataSwitch?.mechanical_1) {
-      setMechanical_1(dataSwitch.mechanical_1);
-      dataNew = dataSwitch.mechanical_1;
-      btnActive = 1;
-    }
-    if (dataSwitch && dataSwitch?.mechanical_2) {
-      setMechanical_2(dataSwitch.mechanical_2);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_2;
-        btnActive = 2;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_3) {
-      setMechanical_3(dataSwitch.mechanical_3);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_3;
-        btnActive = 3;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_4) {
-      setMechanical_4(dataSwitch.mechanical_4);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_4;
-        btnActive = 4;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_5) {
-      setMechanical_5(dataSwitch.mechanical_5);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_5;
-        btnActive = 5;
-      }
-    }
-    if (dataSwitch && dataSwitch?.mechanical_6) {
-      setMechanical_6(dataSwitch.mechanical_6);
-      if (dataNew.length === 0 && btnActive === 0) {
-        dataNew = dataSwitch.mechanical_6;
-        btnActive = 6;
-      }
-    }
-    if (dataNew?.withNeutral) {
-      setDataThumbs(dataNew.withNeutral);
-      setVersionActive(0);
-    } else {
-      setDataThumbs(dataNew?.nonNeutral);
-      setVersionActive(1);
-    }
-    // setMechanicalActive(dataNew);
-    setButtonActive(btnActive);
-  };
-
-  const [buttonActive, setButtonActive] = useState(1);
-  const handleActiveButton = (btnId) => {
-    switch (btnId) {
-      case 1:
-        if (mechanical_1?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_1.withNeutral);
-        } else {
-          setDataThumbs(mechanical_1?.nonNeutral);
-        }
-        setButtonActive(1);
-        // setMechanicalActive(mechanical_1);
-        break;
-      case 2:
-        if (mechanical_2?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_2.withNeutral);
-        } else {
-          setDataThumbs(mechanical_2.nonNeutral);
-        }
-        setButtonActive(2);
-        // setMechanicalActive(mechanical_2);
-        break;
-      case 3:
-        if (mechanical_3?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_3.withNeutral);
-        } else {
-          setDataThumbs(mechanical_3.nonNeutral);
-        }
-        setButtonActive(3);
-        // setMechanicalActive(mechanical_3);
-        break;
-      case 4:
-        if (mechanical_4?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_4.withNeutral);
-        } else {
-          setDataThumbs(mechanical_4.nonNeutral);
-        }
-        setButtonActive(4);
-        // setMechanicalActive(mechanical_4);
-        break;
-      case 5:
-        if (mechanical_5?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_5.withNeutral);
-        } else {
-          setDataThumbs(mechanical_5.nonNeutral);
-        }
-        setButtonActive(5);
-        // setMechanicalActive(mechanical_5);
-        break;
-      case 6:
-        if (mechanical_6?.withNeutral && versionActive === 0) {
-          setDataThumbs(mechanical_6.withNeutral);
-        } else {
-          setDataThumbs(mechanical_6.nonNeutral);
-        }
-        setButtonActive(6);
-        // setMechanicalActive(mechanical_6);
-        break;
-      default:
-        break;
-    }
-  };
-
-  const [versionActive, setVersionActive] = useState(0);
-  // const handleActiveNeutral = (versionId) => {
-  //   if (versionId === 0) {
-  //     setDataThumbs(mechanicalActive.withNeutral);
-  //     setVersionActive(0);
-  //   } else if (versionId === 1) {
-  //     setDataThumbs(mechanicalActive.nonNeutral);
-  //     setVersionActive(1);
-  //   }
-  // };
-
-  const handleSetTypeProduct = (index) => {
-    const dataNew = data[0].nodes[index];
-    getDataMechanical(dataNew.frontmatter);
-    setVersionActive(index);
-    if (!dataNew.frontmatter.mechanical_1) {
-      setDataThumbs(dataNew.frontmatter.imgSrcThumbs);
-      setDataCurrent(dataNew);
-    }
-  };
-  const BuildProductInfos = () => {
-    return (
-      <>
-        {dataCurrent && (
-          <section className="section-product-info">
-            <article className="product-info-detail">
-              <h6>{dataCurrent?.frontmatter?.type || "Smart Control"}</h6>
-              <h2>{dataCurrent?.frontmatter?.title || "Thermostat"}</h2>
-              <p>
-                {dataCurrent?.frontmatter?.details?.length > 0
-                  ? dataCurrent.frontmatter.details.map((des, index) => (
-                      <li key={index.toString()}>
-                        <span>{des}</span>
-                      </li>
-                    ))
-                  : ""}
-              </p>
-              <div className="divider" />
-              {!dataCurrent?.frontmatter?.isLedDriver &&
-                data[0]?.nodes?.length > 1 && (
-                  <Col xs={12} md={12}>
-                    <Row className="version">
-                      <span>Phiên bản</span>
-                    </Row>
-                    <Row className="group-btn-version group-2-btn">
-                      <button
-                        className={`btn-version ${
-                          versionActive === 0 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(0)}
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến ánh sáng"
-                            : "Công tắc vuông"}
-                        </span>
-                      </button>
-                      <button
-                        className={`btn-version ${
-                          versionActive === 1 ? "is-active-btn" : null
-                        }`}
-                        onClick={() => handleSetTypeProduct(1)}
-                        disabled={
-                          dataCurrent?.frontmatter?.type.includes(
-                            "Smart Touch Group"
-                          ) > -1
-                            ? true
-                            : false
-                        }
-                      >
-                        <span>
-                          {dataCurrent?.frontmatter?.version === 1
-                            ? "Gateway Plug"
-                            : dataCurrent?.frontmatter?.isSensorLight
-                            ? "Cảm biến chuyển động"
-                            : "Công tắc chữ nhật"}
-                        </span>
-                      </button>
-                    </Row>
-                  </Col>
-                )}
-              {dataCurrent?.frontmatter?.isLedDriver && (
-                <Col xs={12} md={12}>
-                  <Row className="version">
-                    <span>Phiên bản</span>
-                  </Row>
-                  <Row className="group-btn-version group-3-btn">
-                    <button
-                      className={`btn-version ${
-                        versionActive === 0 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(0)}
-                    >
-                      <span>1 kênh</span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 1 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(1)}
-                    >
-                      <span>8 kênh</span>
-                    </button>
-                    <button
-                      className={`btn-version ${
-                        versionActive === 2 ? "is-active-btn" : null
-                      }`}
-                      onClick={() => handleSetTypeProduct(2)}
-                    >
-                      <span>10 kênh</span>
-                    </button>
-                  </Row>
-                </Col>
-              )}
-              {handelFilter(dataCurrent) === true && (
-                <div className="group-option">
-                  {
-                    <Col xs={12} md={12}>
-                      <Row
-                        className={`group-btn-version ${
-                          dataCurrent?.frontmatter?.mechanical_6
-                            ? "group-6-btn"
-                            : "group-3-btn"
-                        }`}
-                      >
-                        {dataCurrent?.frontmatter?.mechanical_1 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 1 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(1)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_1?.withNeutral) ||
-                              (versionActive === 1 && mechanical_1?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {1} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_2 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 2 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(2)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_2?.withNeutral) ||
-                              (versionActive === 1 && mechanical_2?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {2} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_3 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 3 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(3)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_3?.withNeutral) ||
-                              (versionActive === 1 && mechanical_3?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {3} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_4 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 4 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(4)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_4?.withNeutral) ||
-                              (versionActive === 1 && mechanical_4?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            {4} button
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_5 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 5 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(5)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_5?.withNeutral) ||
-                              (versionActive === 1 && mechanical_5?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            Kịch bản
-                          </button>
-                        )}
-                        {dataCurrent?.frontmatter?.mechanical_6 && (
-                          <button
-                            className={`btn-version ${
-                              buttonActive === 6 ? "is-active-btn" : null
-                            }`}
-                            onClick={() => handleActiveButton(6)}
-                            disabled={
-                              (versionActive === 0 &&
-                                mechanical_6?.withNeutral) ||
-                              (versionActive === 1 && mechanical_6?.nonNeutral)
-                                ? false
-                                : true
-                            }
-                          >
-                            Nóng lạnh
-                          </button>
-                        )}
-                      </Row>
-                    </Col>
-                  }
-                </div>
-              )}
-            </article>
-            <div className="btn-group">
-              <button
-                className="btn-contact-form"
-                onClick={() => {
-                  setModalShow(true);
-                }}
+          {!(
+            deviceShapeList.length <= 1 &&
+            deviceShapeList[0]?.listDevices.length <= 1
+          ) && (
+            <Row className="version">
+              <span>Phiên bản</span>
+            </Row>
+          )}
+          <Col>
+            {!(deviceShapeList.length <= 1) && (
+              <Row
+                className={`group-btn-version group-${deviceShapeList.length}-btn`}
               >
-                <span>TƯ VẤN NGAY</span>
-              </button>
+                {deviceShapeList.map((item, index) => (
+                  <button
+                    key={index.toString()}
+                    className={`btn-version ${
+                      activeShape === index ? "is-active-btn" : ""
+                    }`}
+                    onClick={() => handleChangeIndex("shape", index)}
+                  >
+                    <span>{item.deviceShape.nameVi}</span>
+                  </button>
+                ))}
+              </Row>
+            )}
+          </Col>
+          <Col>
+            {!(deviceShapeList[activeShape]?.listDevices.length <= 1) && (
+              <Row
+                className={`group-btn-version group-${deviceShapeList[activeShape]?.listDevices.length}-btn`}
+              >
+                {deviceShapeList[activeShape]?.listDevices.map(
+                  (item, index) => (
+                    <button
+                      key={index.toString()}
+                      className={`btn-version ${
+                        activeDevice === index ? "is-active-btn" : ""
+                      }`}
+                      onClick={() => handleChangeIndex("device", index)}
+                    >
+                      <span>{item.nameVi}</span>
+                    </button>
+                  )
+                )}
+              </Row>
+            )}
+          </Col>
+          {/* {!(deviceShapeList.length <= 1) && (
+            <div
+              className={`group-btn-version-v2`}
+              style={{ marginBottom: "16px" }}
+            >
+              {deviceShapeList.map((item, index) => (
+                <button
+                  key={index.toString()}
+                  className={`btn-version ${
+                    activeIndexShape === index ? "is-active-btn" : ""
+                  }`}
+                  onClick={() => handleSetTypeShape(index)}
+                >
+                  <span>{item.deviceShape.nameVi}</span>
+                </button>
+              ))}
             </div>
-            <ModalAdvise
-              productName={dataCurrent?.frontmatter?.title}
-              show={modalShow}
-              onHide={() => setModalShow(false)}
-            />
-          </section>
-        )}
-      </>
+          )}
+          {!(deviceShapeList[activeIndexShape]?.listDevices.length <= 1) && (
+            <div className={`group-btn-version-v2`}>
+              {deviceShapeList[activeIndexShape]?.listDevices.map(
+                (item, index) => (
+                  <button
+                    key={index.toString()}
+                    className={`btn-version ${
+                      activeIndexDevice === index ? "is-active-btn" : ""
+                    }`}
+                    onClick={() => handleSetTypeDevice(index)}
+                  >
+                    <span>{item.nameVi}</span>
+                  </button>
+                )
+              )}
+            </div>
+          )} */}
+        </article>
+        <div className="btn-group">
+          <button
+            className="btn-contact-form"
+            onClick={() => setModalShow(true)}
+          >
+            <span>TƯ VẤN NGAY</span>
+          </button>
+        </div>
+        <ModalAdvise
+          productName={deviceType?.nameVi}
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+      </section>
     );
   };
 
   const buildThumbsProduct = useMemo(() => {
-    return <BuildThumbs dataProduct={dataThumbs} />;
-  }, [dataThumbs]);
+    return !deviceDetail ? (
+      <Skeleton width="100%" height="372px" />
+    ) : (
+      <BuildThumbs dataProduct={deviceDetail?.imageURL || []} />
+    );
+  }, [deviceDetail]);
 
   const BuildHeader = () => {
     return (
@@ -445,35 +281,24 @@ const IndexPage = ({ pageContext }) => {
             {buildThumbsProduct}
           </Col>
           <Col xs={12} lg={6} md={12}>
-            <BuildProductInfos />
+            <BuildProductInfor />
           </Col>
         </Row>
       </section>
     );
   };
-  const location = useLocation();
-  const { href } = location;
 
   return (
     <LayoutSmartLighting>
       <Seo
-        title={data[0]?.nodes[0].frontmatter?.title}
-        description={data[0]?.nodes[0].frontmatter?.details
-          ?.toString()
-          .slice(0, 120)}
-        metaImage={data[0]?.nodes[0].frontmatter?.imgSrcProduct?.publicURL}
+        title={deviceType?.nameVi}
+        description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
+        metaImage={deviceDetail?.imageURL && deviceDetail?.imageURL[0]}
         url={href}
       />
-
       <BuildHeader />
-      <section className="container-wrap product-info-v2">
-        <div dangerouslySetInnerHTML={{ __html: dataCurrent?.html }} />
-      </section>
-      {dataProductFeature && (
-        <>
-          <SectionFeatureProduct dataProductHot={dataProductFeature} />
-        </>
-      )}
+      <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />
+      <SectionPopularProductSliving/>
     </LayoutSmartLighting>
   );
 };

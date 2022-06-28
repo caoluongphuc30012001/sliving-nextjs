@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SectionProductMobile from "./section-product-mobile";
 import SectionProduct from "./section-product";
+import axios from "axios";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,6 +11,24 @@ import i18next from "i18next";
 i18next.changeLanguage("vn");
 const isBrowser = typeof window !== "undefined";
 const SectionProductMain = () => {
+  useEffect(() => {
+    const getProductTypes = async () => {
+      try {
+        const res = await axios.get(
+          "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/types"
+        );
+        const results = res.data.Items.sort((a, b) => a.priority - b.priority);
+
+        setProductTypes(results);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    getProductTypes();
+  }, []);
+
+  const [productTypes, setProductTypes] = useState([]);
+
   let data = DataProductNew();
   const lngCurrent = i18next.language;
   const titles = {
@@ -72,8 +91,8 @@ const SectionProductMain = () => {
   }, [isMobile, isDesktop]);
   return (
     <>
-      {isDesktop && <SectionProduct listProduct={listProduct} />}
-      {isMobile && <SectionProductMobile listProduct={listProduct} />}
+      {isDesktop && <SectionProduct productTypes={productTypes} />}
+      {isMobile && <SectionProductMobile productTypes={productTypes} />}
     </>
   );
 };
