@@ -29,14 +29,14 @@ const listContact = [
   },
   {
     key: {
-      title: "Email",
+      title: "",
       description: "info@unicloud.com.vn",
     },
     urlIcon: iconBgEmail,
   },
   {
     key: {
-      title: "Hotline",
+      title: "",
       description: "19006054",
     },
     urlIcon: iconBgPhone,
