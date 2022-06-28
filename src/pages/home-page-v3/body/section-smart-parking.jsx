@@ -52,12 +52,12 @@ function SectionSmartParking() {
             className="smart-parking-group-img-mobile"
           />
           <h2 className="smart-parking-title">
-            Ứng dụng công nghệ IoT và AI trong một giải pháp
+            Ứng dụng công nghệ IoT &amp; AI trong một giải pháp
           </h2>
           <p className="smart-parking-des">
             Giải pháp bãi đỗ xe thông minh Smart Parking sử dụng các thiết bị
             cũng như công nghệ tiên tiến giúp quản lý và vận hành bãi đỗ. Tất cả
-            được điều khiển thông qua một ứng dụng (Smart Parking App), do đội
+            được điều khiển thông qua một ứng dụng (Smart Parking App) do đội
             ngũ chuyên viên kỹ thuật cao của Unicloud xây dựng.
           </p>
         </Row>
