@@ -50,8 +50,8 @@
   background-position: center;
   background-size: cover;
 }
-  
-.non-display{
+
+.non-display {
   display: none !important;
 }
 .row-main-top-security {
@@ -136,6 +136,7 @@
   background: #ffffff;
   border: 1px solid #6fc0fe;
   border-radius: 16px;
+  height: 100%;
   &:hover {
     box-shadow: 0px 3px 20px 1px rgba(9, 121, 253, 0.2);
   }
@@ -241,14 +242,8 @@
     }
   }
 }
-@media only screen and (max-width: 767px) {
-  .bg-smart-door-locks {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
+@media only screen and (max-width: 991px) {
   .div-wrapper-img-smart-security {
-    margin-left: 0px;
-    position: relative;
     width: 100%;
     img {
       object-fit: unset;
@@ -256,6 +251,13 @@
       max-height: unset;
     }
   }
+}
+@media only screen and (max-width: 767px) {
+  .bg-smart-door-locks {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
   .padding-left-right-smart-door {
     padding-left: 0px;
     padding-right: 0px;
