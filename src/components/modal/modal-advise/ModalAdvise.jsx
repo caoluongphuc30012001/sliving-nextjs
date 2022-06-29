@@ -5,7 +5,12 @@ import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
 
-function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
+function ModalAdvise({
+  houseName = "",
+  serviceName = "",
+  productName = "",
+  ...props
+}) {
   const { onHide } = props;
 
   const [modalShow, setModalShow] = React.useState(false);
@@ -41,6 +46,9 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
     );
     googleSheetFormData.append("linkedBy", "sliving");
     googleSheetFormData.append("serviceName", serviceName);
+    {
+      productName && googleSheetFormData.append("productName", productName);
+    }
     googleSheetFormData.append("houseName", houseName);
 
     axios
@@ -64,6 +72,7 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
 
     reset();
   };
+
   return (
     <>
       <Modal
@@ -199,7 +208,9 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="mb-4" controlId="ControlContent">
-              <Form.Label>Lời nhắn/ Thắc mắc</Form.Label>
+              <Form.Label>
+                {!productName ? "Lời nhắn/ Thắc mắc" : "Tên sản phẩm"}
+              </Form.Label>
               {/* <Form.Control as="textarea" rows={3} placeholder="name@example.com" /> */}
               <Controller
                 control={control}
@@ -207,8 +218,9 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
                 defaultValue=""
                 render={({ field: { onChange, value, ref } }) => (
                   <Form.Control
+                    disabled={!productName ? false : true}
                     onChange={onChange}
-                    value={value}
+                    value={!productName ? value : productName}
                     ref={ref}
                     isInvalid={errors.content}
                     aria-label="Default select example"
@@ -220,6 +232,7 @@ function ModalAdvise({ houseName = "", serviceName = "", ...props }) {
                 )}
               />
             </Form.Group>
+
             <button type="submit">
               <span>Nhận tư vấn</span>
             </button>

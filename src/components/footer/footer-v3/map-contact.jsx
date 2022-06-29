@@ -1,6 +1,11 @@
 import React, { useMemo, useRef, useEffect } from "react";
 import iconLocation from "@images/footer-v3/svg/icon-location.svg";
 
+const positionList = {
+  headquarters: { lat: 21.0300541, lng: 105.7786784 },
+  factory: { lat: 10.85023, lng: 106.80562 },
+};
+
 function SectionMap({ position, whenCreated }) {
   const BuildMap = useMemo(() => {
     const {
@@ -40,7 +45,10 @@ function SectionMap({ position, whenCreated }) {
         {position && (
           <Marker position={position} icon={iconMap}>
             <Tooltip direction="top" offset={[0, -20]} opacity={1} permanent>
-              Sunshine Center
+              {position.lat === positionList.headquarters.lat &&
+              position.lng === positionList.headquarters.lng
+                ? "Sunshine Center"
+                : "Unicloud Smart Factory"}
             </Tooltip>
           </Marker>
         )}

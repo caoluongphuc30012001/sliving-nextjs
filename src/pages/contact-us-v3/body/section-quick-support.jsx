@@ -19,7 +19,7 @@ const listContact = [
   {
     id: 1,
     title: "Nhà máy",
-    position: { lat: 10.849997413384632, lng: 106.80553665690692 },
+    position: { lat: 10.85023, lng: 106.80562 },
   },
 ];
 

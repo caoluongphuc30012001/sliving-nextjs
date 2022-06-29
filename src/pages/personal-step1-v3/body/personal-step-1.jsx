@@ -45,7 +45,7 @@ const PersonalStep1 = () => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
-          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
+          "https://tc44lm2zk2.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
         );
         // item.listDevice = item.listDevice.sort((a, b) =>
         //     a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
