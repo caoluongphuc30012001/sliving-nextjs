@@ -263,14 +263,14 @@ const hardwareItemList = [
           {
             id: 5,
             title: "Giảm nhiễu",
-            value: "3DNR",
+            value: "3D DNR",
           },
         ],
       },
       {
         id: 1,
         img: machine2,
-        title: "Máy dò đỗ xe video thông minh _ ITC314-PH3A-TF SERIES",
+        title: "Máy dò đỗ xe video thông minh _ ITC314-PH3A-F SERIES",
         descList: [
           "Giám sát trong thời gian thực hiện",
           "Phát hiện 6 điểm đỗ, đèn chỉ báo 7 màu",
@@ -307,7 +307,7 @@ const hardwareItemList = [
           {
             id: 5,
             title: "Giảm nhiễu",
-            value: "3D DNR",
+            value: "3DNR",
           },
         ],
       },
