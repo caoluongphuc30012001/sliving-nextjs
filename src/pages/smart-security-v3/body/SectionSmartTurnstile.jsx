@@ -12,16 +12,21 @@ function SectionSmartTurnstile() {
         <div>
           <div className="div-under-smart-security"></div>
         </div>
-        <Row className="gx-md-4 gy-4 px-0 mt-3">
-          <Col md={6} className="px-0">
+        <Row className="gx-md-12 gx-lg-4 gy-4 mt-3">
+          <Col md={12} lg={6} className="px-0">
             <div className="div-wrapper-img-smart-security">
               <Image
                 src={imgLeft}
                 className="img-fluid img-left-smart-door-locks"
               />
             </div>
+            <Image
+              src={imgLeft}
+              className="img-fluid img-left-smart-door-locks"
+              style={{ opacity: "0" }}
+            />
           </Col>
-          <Col md={6} className="col-main-smart-door">
+          <Col md={12} lg={6} className="col-main-smart-door">
             <p className="title-smart-door-1">Tiện Ích</p>
             <p className="title-smart-door-2">
               <Image src={iconV} />
