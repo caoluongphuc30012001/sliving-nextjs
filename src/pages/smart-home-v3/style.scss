@@ -618,10 +618,21 @@
   .section-product-slider {
     margin-top: 90px;
   }
+
 }
 .section-product-slider {
+  @keyframes FadeUp {
+    from {
+      opacity: 0;
+      top: 20%;
+    }
+    to {
+      opacity: 1;
+      top: 0%;
+    }
+  }
   width: 100%;
-  height: 731px;
+  height: calc(100vh - 90px);
   margin-top: 80px;
   display: flex;
   flex-direction: column;
@@ -629,161 +640,223 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  max-height: 800px;
+  .products-slider{
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .slider{
+      display: none;
+      overflow: hidden;
+      position: relative;
+      .slider-left__content{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow: hidden;
+        z-index: 3;
+        .swiper__container{
+          width: 400px;
+          height: 300px;
+          .swiper{
+            .swiper__slide{
+              .slide__img{
+                width: 400px;
+                height: 300px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+        .banner-products-btn-group {
+          margin-top: 49px;
+          display: flex;
+          border: 2px solid #ffffff;
+          border-radius: 100px;
+          min-height: 40px;
+          width: 100%;
+          z-index: 2;
+          overflow: hidden;
+          .products-btn-item {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-family: "SVN Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: clamp(12px, 3.2vw, 16px);
+            line-height: 24px;
+            color: #ffffff;
+            background: none;
+            z-index: 2;
+            &:not(:last-child){
+              border-right: 2px solid white;
+            }
+            &:hover{
+              cursor: pointer;
+            }
+            .product-item-title {
+              padding: 8px 0px;
+            }
+          }            
+          .products-btn-item.active {
+            background: rgba(255, 255, 255, 0.4);
+          }
+        }
+      };
+      .slider-right__content{
+        background-color: #f3f9ff;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .right-content-container {
+          width: 50%;
+          height: 100%;
+          .content-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: clamp(40px, 9.35vw, 100px) clamp(20px, 4.675vw, 60px);
+            justify-content: center;
+          }
+        }
+        .product-right-content {
+          max-width: 510px;
+          margin: auto;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0px 20px;
+        }
+        .product-right-all-contents {
+          max-width: 100%;
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #454647;
+          list-style: disc;
+        }
+        .product-right-all-contents > p:not(:last-child) {
+          margin-bottom: 8px !important;
+        }
+        .product-right-desc-container {
+          font-weight: 500;
+        }
+        .product-right-main-title {
+          font-weight: 700;
+        }
+        .product-right-title {
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: clamp(28px, 7.47vw, 36px);
+          color: #2c2d2e;
+          margin-top: 16px;
+        }
+        .product-right-subtitle {
+          font-family: "SVN Gilroy";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 133%;
+          letter-spacing: 0.22em;
+          color: #0979fd;
+        }
+        .product-right-divider {
+          width: 88px;
+          min-height: 4px;
+          background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
+          border-radius: 200px;
+          margin: 16px 0px;
+        }
+        .product-right-main-title {
+          display: inline-block;
+        }
+      }
+    }
+    .slider.active{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 4;
+      .slider-left__content{
+        position: absolute;
+        left: 0;
+        top: 0px;
+        opacity: 1;
+        animation-name: FadeUp;
+        animation-duration: 0.75s;
+      };
+      .slider-right__content{
+        position: absolute;
+        right: 0;
+        top: 0px;
+        opacity: 1;
+        animation-name: FadeUp;
+        animation-duration: 0.75s;
+        z-index: 4;
+      }
+    }
+    .btn-big__arrow__right__mobie {
+      position: absolute;
+      top: calc(20% - 20px);
+      z-index: 1;
+      width: fit-content;
+      display: none;
+    }
+    .btn-big__arrow__left {
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 60px);
+      z-index: 5;
+      width: fit-content;
+    }
+    .btn-big__arrow__right {
+      position: absolute;
+      top: calc(50% - 20px);
+      right: calc(50% - 60px);
+      z-index: 5;
+      width: fit-content;
+    }
 
-  .smart-home-bg-left {
+  }
+
+  .smart__home__bg-left {
     width: 50%;
     background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
     position: absolute;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
   }
-
-  .smart-home-bg-right {
+  .smart__home__bg-right {
     width: 50%;
     background: #f3f9ff;
     position: absolute;
     height: 100%;
     top: 0;
+    z-index: 3;
     right: 0;
   }
 
-  .btn-big-arrow-right-mobie {
-    position: absolute;
-    top: calc(20% - 20px);
-    z-index: 1;
-    width: fit-content;
-    display: none;
-  }
-
-  .btn-big-arrow-left {
-    position: absolute;
-    top: calc(50% - 20px);
-    left: calc(50% - 60px);
-    z-index: 1;
-    width: fit-content;
-  }
-
-  .btn-big-arrow-right {
-    position: absolute;
-    top: calc(50% - 20px);
-    right: calc(50% - 60px);
-    z-index: 1;
-    width: fit-content;
-  }
-
-  .products-slider {
-    position: static;
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
-  }
-
-  .product-slide-wrapper {
-    width: 100%;
-    display: none;
-    height: 100%;
-  }
-
-  .product-slide-wrapper-active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .left-content-container {
-    width: 50%;
-    padding: 10px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .product-left-content {
-    max-width: 640px;
-    width: 100%;
-    margin: auto;
-    padding: 0px 20px;
-  }
-
-  .right-content-container {
-    width: 50%;
-    height: 100%;
-    .content-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      background: #f3f9ff;
-      align-items: center;
-      padding: clamp(40px, 9.35vw, 100px) clamp(20px, 4.675vw, 60px);
-      justify-content: center;
-    }
-  }
-
-  .product-right-content {
-    max-width: 510px;
-    margin: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 20px;
-  }
-
-  .product-right-all-contents {
-    max-width: 100%;
-    font-family: "SVN Gilroy";
-    font-style: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #454647;
-    list-style: disc;
-  }
-
-  .product-right-all-contents > p:not(:last-child) {
-    margin-bottom: 8px !important;
-  }
-
-  .product-right-desc-container {
-    font-weight: 500;
-  }
-
-  .product-right-main-title {
-    font-weight: 700;
-  }
-
-  .product-right-title {
-    font-family: "SVN Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: clamp(28px, 7.47vw, 36px);
-    color: #2c2d2e;
-    margin-top: 16px;
-  }
-
-  .product-right-subtitle {
-    font-family: "SVN Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 133%;
-    letter-spacing: 0.22em;
-    color: #0979fd;
-  }
-
-  .product-right-divider {
-    width: 88px;
-    height: 4px;
-    background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
-    border-radius: 200px;
-    margin: 16px 0px;
-  }
-
-  .product-right-main-title {
-    display: inline-block;
-  }
-
-  // phone img object
+  // // phone img object
   .product-phone-wrapper {
     position: relative;
     margin: auto;
@@ -800,6 +873,7 @@
     height: 139px;
     bottom: -5%;
     z-index: 2;
+    gap: 20px;
   }
 
   .download-app-item {
@@ -812,259 +886,97 @@
   .download-app-img {
     border-radius: 6px;
   }
-
-  // slider
-
-  .banner-products-slider {
-    .swiper-slide {
-      height: 360px;
-    }
-  }
-
-  .banner-products-btn-group {
-    margin-top: 49px;
-    display: flex;
-    border: 2px solid #ffffff;
-    border-radius: 100px;
-    min-height: 40px;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .products-btn-item {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: "SVN Gilroy";
-    font-style: normal;
-    font-weight: 700;
-    font-size: clamp(12px, 3.2vw, 16px);
-    line-height: 24px;
-    color: #ffffff;
-    cursor: pointer;
-    background: none;
-  }
-
-  .products-btn-item.active {
-    background: rgba(255, 255, 255, 0.4);
-  }
-
-  .product-item-title {
-    padding: 8px 0px;
-  }
 }
 
-// animation fade up
-// left-content-animate left-content-fadeUp
-
-.products-slider {
-  .animate {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
-
-  @-webkit-keyframes fadeUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 20%, 0);
-      transform: translate3d(0, 20%, 0);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 20%, 0);
-      transform: translate3d(0, 20%, 0);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-
-  .fadeUp {
-    -webkit-animation-name: fadeUp;
-    animation-name: fadeUp;
-  }
-}
 ///=========Responsive==========//
 @media(max-width:1200px){
   #smart_home_page {
     .section-product-slider {
       margin-top: 60px;
+      height: calc(100vh - 60px);
     }
   }
-  .section-product-slider {
-      height: fit-content;
-        flex-direction: column;
-        align-items: center;
-      .product-right-content{
-        align-items: center;
-        .btn-group{
-          gap: 12px;
+}
+@media(max-width:1000px){
+  @keyframes FadeUp2 {
+    from {
+      opacity: 0;
+      top: 100%;
+    }
+    to {
+      opacity: 1;
+      top: 50%;
+    }
+  }
+  #smart_home_page {
+    .section-product-slider {
+      margin-top: 60px;
+      height: calc(200vh - 60px);
+      max-height: 1600px;
+      position: relative;
+      .products-slider{
+        .slider{
+          .slider-left__content{
+            height: 50%;
+            width: 100%;
+            padding: 20px;
+          };
+          .slider-right__content{
+            top: 50%;
+            height: 50%;
+            width: 100%;
+            animation-name: FadeUp2;
+            .right-content-container {
+              width: 50%;
+              height: 100%;
+            }
+          }
+        }
+        .slider.active{
           width: 100%;
-          max-width: 600px;
-          padding: 24px 0px;
+          height: 100%;
+          top: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
-        .product-right-title{
-          text-align: center; 
+        .btn-big__arrow__right__mobie {
+          position: absolute;
+          top: calc(25% - 20px);
+          right: 5px;
+          width: fit-content;
+          display: inline;
+          transform: rotate(180deg);
+          z-index: 5;
         }
-      }
-      .product-slide-wrapper{
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .smart-home-bg-left {
-        width: 100%;
-        height: 40%;
-      }
-      .smart-home-bg-right {
-        width: 100%;
-        height: 60%;
-        top: 40%;
-      }
-      .btn-big-arrow-left{
-        left: 10px;
-        top: calc(20% - 20px);
-      }
-      .btn-big-arrow-right {
-        display: none;
-      }
-      .btn-big-arrow-right-mobie{
-        display: block;
-        right: 10px;
-        top: calc(20% - 20px);
-        transform: rotate(180deg);
-      }
-      .swiper-image{
-        width: 320px;
-        object-fit: cover;
-      }
-      .product-left-content {
-        margin: 0px;
-        width: 100%;
-        .swiper{
-          height: 200px;
+        .btn-big__arrow__left {
+          position: absolute;
+          top: calc(25% - 20px);
+          left: 5px;
+          width: fit-content;
         }
+        .btn-big__arrow__right {
+          position: absolute;
+          top: calc(50% - 20px);
+          right: calc(50% - 60px);
+          width: fit-content;
+          display: none;
+        }
+    
       }
-      .left-content-container{
-        height: clamp(400px, 41.7vw, 500px);
-        min-width: 510px;
-        align-items: center;
-        justify-content: center;
-      }
-      .swiper-slide{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .right-content-container {
-        max-width: 100%;
+      .smart__home__bg-left {
         width: 100%;
-        height: 60%;
+        height: 50%;
+        top: 0;
+        left: 0;
       }
-      .banner-products-btn-group {
-        margin: 2rem auto 0 auto;
-        max-width: 510px;
+      .smart__home__bg-right {
+        width: 100%;
+        height: 50%;
+        top: calc(50%);
+        right: 0;
       }
-      .product-phone-wrapper{
-        max-width: 300px;
-      }
-    }
-  .product-slide-wrapper {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .smart-home-bg-left {
-    width: 100%;
-    height: 40%;
-  }
-  .smart-home-bg-right {
-    width: 100%;
-    height: 60%;
-    top: 40%;
-  }
-  .btn-big-arrow-left {
-    left: 0px;
-  }
-  .btn-big-arrow-right {
-    display: none;
-  }
-  .btn-big-arrow-right-mobie {
-    display: block;
-    position: absolute;
-    left: calc(100% - 41px);
-    transform: rotate(180deg);
-  }
-  .swiper-image {
-    width: 320px;
-    object-fit: cover;
-  }
-  .product-left-content {
-    margin: 0px;
-    width: 100%;
-    .swiper {
-      height: 200px;
     }
   }
-  .left-content-container {
-    height: clamp(400px, 41.7vw, 500px);
-    min-width: 510px;
-    align-items: center;
-    justify-content: center;
-  }
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .right-content-container {
-    max-width: 100%;
-    width: 100%;
-    height: 60%;
-  }
-  .banner-products-btn-group {
-    margin: 2rem auto 0 auto;
-    max-width: 510px;
-  }
-  .product-phone-wrapper {
-    max-width: 300px;
-  }
-}
-@media (max-width: 570px) {
-  .section-product-slider {
-    .product-right-desc-container {
-      text-align: left;
-    }
-    .left-content-container {
-      width: 100%;
-      min-width: 350px;
-      align-items: center;
-      justify-content: center;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-    .product-right-content {
-      height: auto;
-      align-items: center;
-      justify-content: center;
-    }
-    .btn-group,
-    .btn-group-vertical {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-}
-@media(max-width: 375px){
-
 }
