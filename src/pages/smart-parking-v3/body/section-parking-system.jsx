@@ -359,11 +359,7 @@ const appMapContent = [
     content: [
       {
         id: 0,
-        content: "Bản đồ được tích hợp vào ứng dụng (app) trên điện thoại",
-      },
-      {
-        id: 1,
-        content: "để dễ dàng định vị và dò tìm vị trí cần thiết",
+        content: "Bản đồ được tích hợp vào ứng dụng (app) trên điện thoại để dễ dàng định vị và dò tìm vị trí cần thiết",
       },
     ],
   },
