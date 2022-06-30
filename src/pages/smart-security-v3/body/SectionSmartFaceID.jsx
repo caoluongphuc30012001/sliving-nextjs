@@ -6,7 +6,7 @@ import iconV from "../../../images/smart-security-v3/icon-tick-v-smart-security.
 function SectionSmartFaceID() {
   return (
     <section className="bg-smart-door-locks" id="face-id-attendance">
-      <Container className="max-width-1180 px-0">
+      <Container className="max-width-1180 padding-left-right-smart-door">
         <h3 className="sub-title-smart-secuirity">FACE ID TIME ATTENDANCE</h3>
         <h2 className="title-smart-secuirity">
           Hệ Thống Chấm Công Bằng Khuôn Mặt
@@ -14,16 +14,21 @@ function SectionSmartFaceID() {
         <div>
           <div className="div-under-smart-security"></div>
         </div>
-        <Row className="gx-md-4 gy-4 px-0 mt-3">
-          <Col md={6} className="px-0">
+        <Row className="gx-md-12 gx-lg-4 gy-4 mt-3">
+          <Col md={12} lg={6} className="px-0">
             <div className="div-wrapper-img-smart-security">
               <Image
                 src={imgLeft}
                 className="img-fluid img-left-smart-door-locks"
               />
             </div>
+            <Image
+              src={imgLeft}
+              className="img-fluid img-left-smart-door-locks"
+              style={{ opacity: "0" }}
+            />
           </Col>
-          <Col md={6} className="col-main-smart-door">
+          <Col md={12} lg={6} className="col-main-smart-door">
             <p className="title-smart-door-1">Tiện Ích</p>
             <p className="title-smart-door-2">
               <Image src={iconV} />

@@ -9,6 +9,8 @@ BuildProductDetail.propTypes = {
 export default function BuildProductDetail({ deviceDetail = {} }) {
   const { listDescription, listFeature, listSpecification } = deviceDetail;
 
+  if (listDescription?.length === 0 && listFeature?.length === 0) return null;
+
   return (
     <section className="container-wrap product-info-v3">
       <div className="wrapper-content-product-info">

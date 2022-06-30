@@ -9,7 +9,7 @@ const url = typeof window !== "undefined" ? window.location.href : "";
 const listRoute = [
   {
     id: 0,
-    nameRoute: "SMART LIGHTING",
+    nameRoute: "GIẢI PHÁP",
     listRoute: [
       {
         id: 0,
@@ -26,12 +26,17 @@ const listRoute = [
         nameRoute: "SMART BUILDING",
         href: "/smart-building/",
       },
+      {
+        id: 3,
+        nameRoute: "SMART LIGHTING",
+        href: "/smart-lighting/",
+      },
     ],
   },
   {
     id: 1,
-    nameRoute: "GIẢI PHÁP",
-    href: "/business-step1/",
+    nameRoute: "SẢN PHẨM",
+    // href: "/product-detail/",
     active: true,
   },
   {

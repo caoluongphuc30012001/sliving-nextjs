@@ -12,13 +12,13 @@ const SmartHeader = () => {
             <div className="content-left">
               <div className="content-left-title">SMART PARKING</div>
               <div className="content-left-text">
-                Smart Parking là giải pháp quản lý bãi giữ xe hiệu quả của
-                Unicloud được ứng dụng trong hệ thống chung cư, tòa nhà, trung
-                tâm thương mại. Người dùng có thể sử dụng Smart Parking App để
-                quản lý xe ra vào, phát hiện chỗ trống, hướng dẫn đến vị trí đỗ
-                xe giúp tiết kiệm thời gian, giảm nguồn nhân lực, góp phần tăng
-                hiệu quả sức chứa cho tòa nhà mang đến cho cư dân sự thoải mái
-                và tiện nghi.
+                Là giải pháp quản lý bãi giữ xe hiệu quả của Tập đoàn Unicloud
+                được ứng dụng trong hệ thống chung cư, tòa nhà, trung tâm thương
+                mại, trường học, bệnh viện,... Người dùng có thể sử dụng ứng
+                dụng "Smart Parking App "để quản lý xe ra vào, phát hiện chỗ
+                trống, hướng dẫn đến vị trí đỗ xe; giúp tiết kiệm thời gian, tối
+                ưu hóa chi phí và góp phần tăng hiệu suất bãi đỗ; mang đến cho
+                dân cư sự thoải mái và tiện nghi.
               </div>
             </div>
             <div className="content-right">

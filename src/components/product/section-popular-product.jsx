@@ -29,7 +29,7 @@ const SectionPopularProduct = ({ listProduct }) => {
               spaceBetween={20}
               // centeredSlides={true}
               grabCursor={true}
-              // loop={true}
+              loop={true}
               navigation={{
                 nextEl: ".button-next-slider",
                 prevEl: ".button-prev-slider",
@@ -58,8 +58,8 @@ const SectionPopularProduct = ({ listProduct }) => {
                             <button
                               className="advise-now-btn"
                               onClick={() => {
+                                setProductName(item.nameVi);
                                 setModalShow(true);
-                                setProductName(item.title);
                               }}
                             >
                               <span>Tư vấn ngay</span>
