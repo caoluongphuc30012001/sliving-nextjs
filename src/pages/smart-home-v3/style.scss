@@ -505,7 +505,6 @@
         margin-top: 30px;
         position: relative;
         .btn-group {
-          z-index: 2;
           position: absolute;
           opacity: 0;
           bottom: calc(100% + 20px);
@@ -556,6 +555,7 @@
       .item-box:hover {
         .btn-group {
           opacity: 1;
+          z-index: 2;
         }
         img {
           transform: scale(1.3, 1.3);
@@ -631,6 +631,9 @@
       top: 0%;
     }
   }
+  ul li {
+    font-size: clamp(12px, 3.75vw, 18px);
+  }
   width: 100%;
   height: calc(100vh - 90px);
   margin-top: 80px;
@@ -705,6 +708,7 @@
             }
             .product-item-title {
               padding: 8px 0px;
+              font-size: clamp(10px, 3.125vw, 16px);
             }
           }            
           .products-btn-item.active {
@@ -763,7 +767,7 @@
           font-family: "SVN Gilroy";
           font-style: normal;
           font-weight: 700;
-          font-size: clamp(28px, 7.47vw, 36px);
+          font-size: clamp(24px, 7.1875vw, 36px);
           color: #2c2d2e;
           margin-top: 16px;
         }
@@ -890,6 +894,9 @@
 
 ///=========Responsive==========//
 @media(max-width:1200px){
+  .section-product-slider {
+    height: 100vh;
+  }
   #smart_home_page {
     .section-product-slider {
       margin-top: 60px;
@@ -897,6 +904,7 @@
     }
   }
 }
+
 @media(max-width:1000px){
   @keyframes FadeUp2 {
     from {
@@ -914,7 +922,13 @@
     max-height: 1600px;
     position: relative;
     .products-slider{
-      .slider{
+      .slider.active{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .slider-left__content{
           height: 50%;
           width: 100%;
@@ -926,19 +940,10 @@
           width: 100%;
           animation-name: FadeUp2;
           .right-content-container {
-            width: 50%;
+            width: 100%;
             height: 100%;
           }
         }
-      }
-      .slider.active{
-        width: 100%;
-        height: 100%;
-        top: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
       }
       .btn-big__arrow__right__mobie {
         position: absolute;
@@ -982,6 +987,71 @@
     .section-product-slider {
       margin-top: 60px;
       height: calc(200vh - 60px);
+      max-height: 1600px;
+      position: relative;
+      // .products-slider{
+      //   .slider{
+      //     .slider-left__content{
+      //       height: 50%;
+      //       width: 100%;
+      //       padding: 20px;
+      //     };
+      //     .slider-right__content{
+      //       top: 50%;
+      //       height: 50%;
+      //       width: 100%;
+      //       animation-name: FadeUp2;
+      //       .right-content-container {
+      //         width: 50%;
+      //         height: 100%;
+      //       }
+      //     }
+      //   }
+      //   .slider.active{
+      //     width: 100%;
+      //     height: 100%;
+      //     top: auto;
+      //     display: flex;
+      //     flex-direction: column;
+      //     justify-content: center;
+      //     align-items: center;
+      //   }
+      //   .btn-big__arrow__right__mobie {
+      //     position: absolute;
+      //     top: calc(25% - 20px);
+      //     right: 5px;
+      //     width: fit-content;
+      //     display: inline;
+      //     transform: rotate(180deg);
+      //     z-index: 5;
+      //   }
+      //   .btn-big__arrow__left {
+      //     position: absolute;
+      //     top: calc(25% - 20px);
+      //     left: 5px;
+      //     width: fit-content;
+      //   }
+      //   .btn-big__arrow__right {
+      //     position: absolute;
+      //     top: calc(50% - 20px);
+      //     right: calc(50% - 60px);
+      //     width: fit-content;
+      //     display: none;
+      //   }
+    
+      // }
+      // .smart__home__bg-left {
+      //   width: 100%;
+      //   height: 50%;
+      //   top: 0;
+      //   left: 0;
+      // }
+      // .smart__home__bg-right {
+      //   width: 100%;
+      //   height: 50%;
+      //   top: calc(50%);
+      //   right: 0;
+      // }
     }
   }
 }
