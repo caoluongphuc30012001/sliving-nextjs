@@ -11,7 +11,7 @@ import DataProductNew from "@query/product-hot";
 import BuildThumbs from "./thumb";
 
 import Seo from "@components/seo";
-import LayoutSmartLighting from "@components/layout-smart-lighting-v3";
+import LayoutSmartLighting from "@components/layout-product-detail";
 import axios from "axios";
 import BuildTopProductInfor from "./body/BuildTopProductInfor";
 import BuildProductDetail from "./body/BuildProductDetail";
@@ -298,7 +298,7 @@ const IndexPage = ({ pageContext }) => {
       />
       <BuildHeader />
       <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />
-      <SectionPopularProductSliving/>
+      <SectionPopularProductSliving />
     </LayoutSmartLighting>
   );
 };

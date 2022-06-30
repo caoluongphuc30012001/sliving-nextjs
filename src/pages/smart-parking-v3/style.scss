@@ -211,7 +211,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: clamp(20px, 5.37vw, 30px);
+    gap: clamp(20px, 5.37vw, 60px);
     max-width: 1180px;
     .underline2 {
       width: 100%;
@@ -429,7 +429,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: clamp(20px, 5.37vw, 60px) 0px;
+  // padding: clamp(20px, 5.37vw, 60px) 0px;
   .parking-system-container {
     padding: 0px 20px;
     width: clamp(0px, 100%, 1180px);

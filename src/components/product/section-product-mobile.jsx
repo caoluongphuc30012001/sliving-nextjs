@@ -34,7 +34,20 @@ const ContentRight = ({ listProduct, current }) => {
   return (
     listProduct.length > 0 && (
       <div className="content-right">
-        <Swiper slidesPerView={3} spaceBetween={30} grabCursor={true}>
+        <Swiper spaceBetween={30} grabCursor={true} breakpoints={{
+          480: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          560: {
+            slidesPerView: 2,
+          },
+          760:{
+            slidesPerView:3
+          }
+        }} 
+        // centeredSlides={true}
+        >
           {listProduct.map((item) => {
             return (
               <SwiperSlide key={item.id} className="list-product">
