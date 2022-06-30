@@ -29,7 +29,7 @@ const SectionPopularProduct = ({ listProduct }) => {
               spaceBetween={20}
               // centeredSlides={true}
               grabCursor={true}
-              // loop={true}
+              loop={true}
               navigation={{
                 nextEl: ".button-next-slider",
                 prevEl: ".button-prev-slider",

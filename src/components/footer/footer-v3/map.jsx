@@ -40,7 +40,7 @@ function SectionMap({ position, whenCreated }) {
         />
         {position && (
           <Marker position={position} icon={iconMap}>
-            <Tooltip direction="top" offset={[0, -20]} opacity={1} permanent>
+            <Tooltip direction="top" offset={[3.25, -20]} opacity={1} permanent>
               {position.lat === positionList.headquarters.lat &&
               position.lng === positionList.headquarters.lng
                 ? "Sunshine Center"

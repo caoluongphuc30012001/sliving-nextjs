@@ -153,8 +153,11 @@
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 24px;
-                text-align: center;
                 color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
               }
               .img-box {
                 width: 260px;
@@ -227,7 +230,6 @@
       flex-direction: column;
       width: 100%;
       height: fit-content;
-      overflow: hidden;
       .content-left {
         width: 100%;
         margin: 0 auto;
@@ -283,7 +285,7 @@
         }
       }
       .content-right {
-        width: 796px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 40px;
         .title-box {
@@ -331,7 +333,6 @@
             }
             margin-bottom: 16px;
             border-radius: 8px;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -510,6 +511,7 @@
           bottom: calc(100% + 20px);
           left: 2px;
           transition: 0.2s;
+          z-index: 3;
         }
         .sub-title {
           font-family: "SVN Gilroy";
@@ -550,6 +552,7 @@
           margin: 0 auto;
           transition: 0.5s;
           z-index: 1;
+          object-fit: contain;
         }
       }
       .item-box:hover {
