@@ -298,7 +298,7 @@ const IndexPage = ({ pageContext }) => {
       />
       <BuildHeader />
       <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />
-      <SectionPopularProductSliving/>
+      <SectionPopularProductSliving />
     </LayoutSmartLighting>
   );
 };
