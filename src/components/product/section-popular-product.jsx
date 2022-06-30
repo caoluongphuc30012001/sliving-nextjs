@@ -58,8 +58,8 @@ const SectionPopularProduct = ({ listProduct }) => {
                             <button
                               className="advise-now-btn"
                               onClick={() => {
+                                setProductName(item.nameVi);
                                 setModalShow(true);
-                                setProductName(item.title);
                               }}
                             >
                               <span>Tư vấn ngay</span>
