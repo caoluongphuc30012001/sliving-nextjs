@@ -8,6 +8,7 @@ import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
 import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
+import { Spinner } from "react-bootstrap";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const handle = (item) => {
     setCurrent(item);
@@ -37,8 +38,8 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
 };
 const ContentRight = ({ listProduct, current }) => {
   return (
-    listProduct.length > 0 && (
-      <div className="content-right">
+    <div className="content-right">
+      {listProduct.length > 0 ? (
         <div className="item-product-box">
           <div className="title-box">
             <p className="title">{current.nameVi}</p>
@@ -57,8 +58,12 @@ const ContentRight = ({ listProduct, current }) => {
           </div>
           <ItemProduct listProduct={listProduct} itemId={current.id} />
         </div>
-      </div>
-    )
+      ) : (
+        <div className="spinner-box">
+          <Spinner size="lg" className="spinner" animation="border" />
+        </div>
+      )}
+    </div>
   );
 };
 const ItemProduct = ({ listProduct, itemId }) => {

@@ -55,7 +55,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                           <p className="sub-title">{item.nameEn}</p>
                           <p className="title">{item.nameVi}</p>
                           <div className="btn-group">
-                            <button
+                            {/* <button
                               className="advise-now-btn"
                               onClick={() => {
                                 setProductName(item.nameVi);
@@ -63,7 +63,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                               }}
                             >
                               <span>Tư vấn ngay</span>
-                            </button>
+                            </button> */}
                           </div>
                         </div>
                       </div>
