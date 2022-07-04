@@ -123,6 +123,10 @@
         margin-bottom: 0px;
       }
     }
+    &:nth-child(3),
+    &:nth-child(4) {
+      cursor: auto !important;
+    }
   }
 }
 
