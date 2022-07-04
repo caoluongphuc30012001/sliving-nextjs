@@ -98,7 +98,7 @@ const SectionProductList = () => {
     const getServices = async () => {
       try {
         const res = await axios.get(
-          "https://tc44lm2zk2.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
         );
         const list = res.data.Items.map((item, index) => {
           return {
@@ -118,7 +118,7 @@ const SectionProductList = () => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
-          "https://tc44lm2zk2.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
         );
         setCurrentHouse(
           response.data.Items.find((item) => item.id === state["houseID"])
@@ -134,7 +134,7 @@ const SectionProductList = () => {
     const getDevice = async (houseID, isBasic) => {
       try {
         const res = await axios.post(
-          "https://tc44lm2zk2.execute-api.ap-southeast-1.amazonaws.com/staging/business/devices",
+          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/devices",
           {
             houseID,
             isBasic,
