@@ -119,11 +119,10 @@ const SectionSmartFactory = () => {
               </p>
               <br />
               <p className="factory-second-desc">
-                Với mong muốn mang tới những sản phẩm có chất lượng cao nhất tới
-                khách hàng, ngoài quy trình thiết kế khép kín, mỗi sản phẩm điện
-                tử của Unicloud còn áp dụng quy trình sản xuất được thực hiện
-                một cách khép kín thông qua việc đầu tư vào nhà máy thông minh,
-                dây chuyền lắp ráp linh kiện hiện đại.
+                Với mong muốn mang lại những sản phẩm có chất lượng cao nhất tới
+                khách hàng, mỗi sản phẩm điện tử của Unicloud được sản xuất một
+                cách khép kín thông qua việc đầu tư nhà máy thông minh, dây
+                chuyền lắp ráp linh kiện hiện đại.
               </p>
             </div>
             <div className="factory-list-item">

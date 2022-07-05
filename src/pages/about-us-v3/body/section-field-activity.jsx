@@ -14,22 +14,39 @@ function SectionActivity() {
     {
       id: 1,
       linkIconLogo: iconCertification1,
-      title: "Chứng nhận Đầu tư Khu công nghệ cao",
+      title: (
+        <span>
+          Chứng nhận Đầu tư
+          <br /> Khu công nghệ cao
+        </span>
+      ),
     },
     {
       id: 2,
       linkIconLogo: iconCertification2,
-      title: "Chứng nhận Cleanroom Fiel - Phòng Sạch",
+      title: (
+        <span style={{ whiteSpace: "nowrap" }}>
+          Chứng nhận <br /> Cleanroom Fiel - Phòng Sạch
+        </span>
+      ),
     },
     {
       id: 3,
       linkIconLogo: iconCertification3,
-      title: "Chứng nhận EMV Level",
+      title: (
+        <span>
+          Chứng nhận <br /> EMV Level
+        </span>
+      ),
     },
     {
       id: 4,
       linkIconLogo: iconCertification4,
-      title: "Chứng nhận CE-FCC",
+      title: (
+        <span>
+          Chứng nhận <br /> CE-FCC
+        </span>
+      ),
     },
   ];
   const listActivity = [

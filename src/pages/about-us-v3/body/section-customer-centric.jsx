@@ -14,7 +14,7 @@ function SectionCustomerCentric() {
       linkImg: imgService,
       content: [
         "Kinh nghiệm triển khai lắp đặt tại các dự án lớn",
-        "Dịch vụ bảo hành, trainning và chuyển giao dự án cho đối tác chuyên nghiệp.",
+        "Dịch vụ bảo hành, đào tạo và chuyển giao dự án cho đối tác chuyên nghiệp.",
       ],
     },
     {
