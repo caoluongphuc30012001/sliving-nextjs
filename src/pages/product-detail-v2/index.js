@@ -293,7 +293,7 @@ const IndexPage = ({ pageContext }) => {
     <LayoutSmartLighting>
       <Seo
         title={data?.nameVi}
-        description={data?.descriptionVi}
+        description={"test nhé bro"}
         metaImage="/thumbnail.png"
         url={`/product-detail/${data.id}`}
       />
