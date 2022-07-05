@@ -9,6 +9,7 @@ import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
+const isBrowser = typeof window !== "undefined";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const handle = (item) => {
     setCurrent(item);
@@ -112,11 +113,24 @@ const SectionProduct = ({ productTypes }) => {
   useEffect(() => {
     const getDeviceTypes = async () => {
       try {
-        const res = await axios.get(
-          `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
-        );
+        if (isBrowser) {
+          let data = JSON.parse(window.sessionStorage.getItem(current.id));
+          console.log(data);
+          if (!data) {
+            const res = await axios.get(
+              `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
+            );
+            data = res.data.Items;
+            window.sessionStorage.setItem(current.id, JSON.stringify(data));
+          }
+          setListProduct(data);
+        } else {
+          const res = await axios.get(
+            `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
+          );
 
-        setListProduct(res.data.Items);
+          setListProduct(res.data.Items);
+        }
       } catch (error) {
         console.log(error);
       }
