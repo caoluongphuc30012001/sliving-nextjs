@@ -65,7 +65,9 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     `
   );
-  const res = await axios.get("https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-hot-product");
+  const res = await axios.get(
+    "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-hot-product"
+  );
 
   const productPage = res.data.listDevice.Items;
   const productDetailComponent = require.resolve(
@@ -94,16 +96,16 @@ exports.createPages = async function ({ actions, graphql }) {
     path: `/policy/`,
     component: policy,
   });
-  createPage({
-    path: `/product-detail/`,
-    component: productDetailComponent,
-    context: {
-      data: productPage,
-    },
-  });
+  // createPage({
+  //   path: `/product-detail/`,
+  //   component: productDetailComponent,
+  //   context: {
+  //     data: productPage,
+  //   },
+  // });
   productPage.forEach(async (prod) => {
     await createPage({
-      path: `/product-detail/${prod.id}/`,
+      path: `/product-detail/${prod.id}`,
       component: productDetailComponent,
       context: {
         data: prod,
