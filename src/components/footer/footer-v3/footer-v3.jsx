@@ -53,7 +53,7 @@ function BuildAboutUs(props) {
         {listArray?.map((about) => (
           <li key={about.id}>
             <Link className="item-about text-white " to={about.url}>
-              {about.title}
+              <div>{about.title}</div>
             </Link>
           </li>
         ))}

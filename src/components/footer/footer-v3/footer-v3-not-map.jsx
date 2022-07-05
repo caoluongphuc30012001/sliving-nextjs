@@ -9,7 +9,7 @@ import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
 
 import "./footer.scss";
-import { Link } from "gatsby";
+import {Link} from 'gatsby'
 
 const BuildLogo = () => (
   <img src={logoSliving} alt="logo Unicloud" width={283} height="auto" />

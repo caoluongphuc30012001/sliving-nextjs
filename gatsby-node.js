@@ -1,6 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
-
+const axios = require("axios");
 exports.onPostBuild = () => {
   fs.copySync(
     path.join(__dirname, "/src/i18n"),
@@ -65,178 +65,9 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     `
   );
+  const res = await axios.get("https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-hot-product");
 
-  const productPage = await graphql(
-    `
-      query ProductGroup {
-        ProductGroups: allMarkdownRemark(
-          filter: {
-            frontmatter: { lgn: { eq: "vn" } }
-            fileAbsolutePath: { regex: "/(contents/product-v2/)/" }
-          }
-        ) {
-          group(field: frontmatter___type) {
-            group(field: frontmatter___typeParent) {
-              distinct(field: frontmatter___title)
-              nodes {
-                frontmatter {
-                  id
-                  title
-                  subtitle
-                  slug
-                  lgn
-                  type
-                  version
-                  isZigbee
-                  isSensorLight
-                  isLedDriver
-                  button
-                  date
-                  description
-                  details
-                  imgSrcThumbs {
-                    publicURL
-                    childImageSharp {
-                      gatsbyImageData(layout: FULL_WIDTH)
-                    }
-                  }
-                  imgSrcProduct {
-                    publicURL
-                    childImageSharp {
-                      gatsbyImageData(layout: FULL_WIDTH)
-                    }
-                  }
-                  mechanical_1 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_2 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_3 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_4 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_5 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_6 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                }
-                html
-              }
-              fieldValue
-            }
-            fieldValue
-          }
-        }
-      }
-    `
-  );
+  const productPage = res.data.listDevice.Items;
   const productDetailComponent = require.resolve(
     "./src/pages/product-detail-v2/index.js"
   );
@@ -270,12 +101,12 @@ exports.createPages = async function ({ actions, graphql }) {
       data: productPage,
     },
   });
-  productPage["data"].ProductGroups.group.forEach(async (prod) => {
+  productPage.forEach(async (prod) => {
     await createPage({
-      path: `/product-detail/${prod.fieldValue}/`,
+      path: `/product-detail/${prod.id}/`,
       component: productDetailComponent,
       context: {
-        data: prod.group,
+        data: prod,
       },
     });
   });

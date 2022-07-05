@@ -45,7 +45,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                   return (
                     <SwiperSlide key={item.id} className="list-product">
                       <div className="item-box">
-                        <Link to={`/product-detail/?${item.id}`}>
+                        <Link to={`/product-detail/${item.id}`}>
                           <div className="img-box">
                             <div className="box-shadow"></div>
                             <img src={item.imageURL} alt="" />

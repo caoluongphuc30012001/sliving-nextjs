@@ -48,7 +48,7 @@ const IndexPage = ({ pageContext }) => {
   const location = useLocation();
   const { href } = location;
 
-  const deviceTypeId = location.search.split("?").pop();
+  const deviceTypeId = location.href.split("/").pop();
   const [deviceType, setDeviceType] = useState(null);
   const [deviceShapeList, setDeviceShapeList] = useState([]);
   const [deviceDetail, setDeviceDetail] = useState(null);
@@ -287,13 +287,14 @@ const IndexPage = ({ pageContext }) => {
       </section>
     );
   };
-
+  const { data } = pageContext;
+  console.log("data ", data);
   return (
     <LayoutSmartLighting>
       <Seo
-        title={deviceType?.nameVi}
-        description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
-        metaImage={deviceDetail?.imageURL && deviceDetail?.imageURL[0]}
+        title={data?.nameVi}
+        description={data?.descriptionVi}
+        metaImage="/thumbnail.png"
         url={href}
       />
       <BuildHeader />
