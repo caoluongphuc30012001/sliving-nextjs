@@ -72,6 +72,7 @@
             line-height: 72px;
             letter-spacing: 1px;
             color: #ffffff;
+            padding: 0px 20px;
           }
           .content-left-text {
             font-family: "SVN Gilroy";
@@ -994,6 +995,7 @@
         .solution-button {
           width: 100%;
           height: 48px;
+          max-width: 500px;
           .button-text {
             width: 91px;
             height: 24px;
