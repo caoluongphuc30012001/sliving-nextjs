@@ -118,15 +118,6 @@ exports.createPages = async function ({ actions, graphql }) {
     component: aboutUS,
   });
   createPage({
-    path: `/business-step1/`,
-    component: business1,
-  });
-
-  createPage({
-    path: `/business-step2/`,
-    component: business2,
-  });
-  createPage({
     path: `/personal-step1/`,
     component: personal1,
   });
@@ -136,7 +127,7 @@ exports.createPages = async function ({ actions, graphql }) {
     component: personal2,
   });
   createPage({
-    path: `/business-step3/`,
+    path: `/business/`,
     component: business3,
   });
   createPage({

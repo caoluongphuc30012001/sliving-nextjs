@@ -31,7 +31,7 @@ const listRoute = [
   {
     id: 1,
     nameRoute: "GIẢI PHÁP",
-    href: "/business-step1/",
+    href: "/business/",
     active: true,
   },
   {

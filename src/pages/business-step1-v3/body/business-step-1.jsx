@@ -45,7 +45,7 @@ const BusinessStep1 = () => {
             doanh nghiệp bạn
           </h4>
         </div>
-        <Link to={`${activeCards.length > 0 ? "/business-step3/" : "#"}`}>
+        <Link to={`${activeCards.length > 0 ? "/business/" : "#"}`}>
           <button
             className="advise-now-btn"
             type="button"
