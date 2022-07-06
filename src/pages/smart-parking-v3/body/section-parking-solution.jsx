@@ -26,7 +26,7 @@ const ListItem = [
   {
     id: 0,
     title: "Giải Pháp Bãi Đỗ Xe Trong Hầm",
-    secondTitle: "Sơ Đồ Giải Pháp Bãi Đỗ Xe Trong Hầm",
+    secondTitle: "Giải Pháp Sơ Đồ Bãi Đỗ Xe Trong Hầm",
     mainImg: item1Img,
     iconList: [
       {

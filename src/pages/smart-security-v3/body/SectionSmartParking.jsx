@@ -10,7 +10,7 @@ function SectionSmartParking() {
   return (
     <section className="bg-smart-parking-security">
       <Container className="max-width-1180 padding-left-right">
-        <h3 className="sub-title-smart-secuirity">SMART PARKING</h3>
+        <h3 className="sub-title-smart-secuirity">SMART BUILDING</h3>
         <h2 className="title-smart-secuirity">
           Hệ Thống Trong Giải Pháp Smart Parking
         </h2>
