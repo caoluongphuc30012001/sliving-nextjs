@@ -12,7 +12,7 @@ export default function BusinessStep2() {
         title="Sliving - Giải pháp dành cho doanh nghiệp"
         description="Cung cấp các giải pháp chiếu sáng, điều khiển thông minh, giải pháp an ninh cho tòa nhà, 
         căn hộ, văn phòng, trung tâm thương mại... với đa dạng lựa chọn và chi phí hợp lý nhất."
-        url="/business-step2/"
+        url="/business/"
         metaImage="/thumbnail.png"
       />
       <main id="business-step2-v3">

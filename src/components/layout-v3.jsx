@@ -18,6 +18,7 @@ function LayoutV3({ children }) {
         !url.includes("about-us") &&
         !url.includes("implementation-process") &&
         !url.includes("step") &&
+        !url.includes("business") &&        
         !url.includes("news") &&
         !url.includes("contact-us"),
     },
@@ -62,7 +63,7 @@ function LayoutV3({ children }) {
         {
           id: 0,
           nameRoute: "GÓI DOANH NGHIỆP",
-          href: "/business-step1/",
+          href: "/business/",
           active: url.includes("business"),
         },
         {
