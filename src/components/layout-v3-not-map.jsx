@@ -9,8 +9,9 @@ import Footer from "./footer/footer-v3/footer-v3-not-map";
 import { useLocation } from "@reach/router";
 function LayoutV3({ children }) {
   // const url = typeof window !== "undefined" ? window.location.href : "";
-  const url = useLocation().href;
-  console.log("href ", url);
+  const location = useLocation();
+  let url = location.href?location.href:"";
+  console.log("href ", typeof url);
   const listRoute = [
     {
       id: 0,
