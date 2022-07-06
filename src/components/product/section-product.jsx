@@ -154,7 +154,6 @@ const SectionProduct = ({ productTypes }) => {
             setCurrent={setCurrent}
             productTypes={productTypes}
           />
-          <div className="line-separate"></div>
           <ContentRight listProduct={listProduct} current={current} />
         </div>
       </div>
