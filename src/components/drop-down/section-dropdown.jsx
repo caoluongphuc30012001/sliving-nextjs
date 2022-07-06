@@ -37,10 +37,7 @@ const SectionDropdown = ({ listItem }) => {
           <div className="advise-box">
             <button className="btn-advise" onClick={() => setModalShow(true)}>
               <div className="content">Tư vấn ngay</div>
-            </button>
-            <button className="btn-find-more">
-              <div className="content">Tìm hiểu thêm</div>
-            </button>
+            </button> 
           </div>
         </div>
         <div className="right-part">

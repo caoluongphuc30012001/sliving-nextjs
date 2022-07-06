@@ -191,7 +191,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                         <Link
                           to={
                             slide?.listItem.length > 0
-                              ? `/product-detail/?${slide?.listItem[swiperIndex]?.id}`
+                              ? `/product-detail/${slide?.listItem[swiperIndex]?.id}`
                               : `/smart-home`
                           }
                         >

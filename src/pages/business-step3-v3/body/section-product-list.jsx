@@ -81,7 +81,7 @@ const SubTable = ({ table }) => {
       </tr>
       <tr className="body-table-row">
         <td className="table-data">
-          <div className="quantity-data">liên hệ</div>
+          <div className="quantity-data">Liên hệ</div>
         </td>
       </tr>
     </tbody>

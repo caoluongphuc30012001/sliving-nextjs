@@ -51,7 +51,7 @@ const ContentRight = ({ listProduct, current }) => {
           {listProduct.map((item) => {
             return (
               <SwiperSlide key={item.id} className="list-product">
-                <Link to={`/product-detail/?${item.id}`}>
+                <Link to={`/product-detail/${item.id}`}>
                   <div className="item-box">
                     <div className="img-box">
                       <img src={item.imageURL} alt="" />

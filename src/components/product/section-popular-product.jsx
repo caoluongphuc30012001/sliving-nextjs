@@ -45,7 +45,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                   return (
                     <SwiperSlide key={item.id} className="list-product">
                       <div className="item-box">
-                        <Link to={`/product-detail/?${item.id}`}>
+                        <Link to={`/product-detail/${item.id}`}>
                           <div className="img-box">
                             <div className="box-shadow"></div>
                             <img src={item.imageURL} alt="" />
@@ -55,7 +55,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                           <p className="sub-title">{item.nameEn}</p>
                           <p className="title">{item.nameVi}</p>
                           <div className="btn-group">
-                            <button
+                            {/* <button
                               className="advise-now-btn"
                               onClick={() => {
                                 setProductName(item.nameVi);
@@ -63,7 +63,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                               }}
                             >
                               <span>Tư vấn ngay</span>
-                            </button>
+                            </button> */}
                           </div>
                         </div>
                       </div>

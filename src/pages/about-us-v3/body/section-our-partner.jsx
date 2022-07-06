@@ -69,7 +69,7 @@ function SectionOurPartner() {
     <section className="bg-section-our-partner">
       <div className="max-width-1180  our-partner-container">
         <Row className="row-line-center">
-          <span className="title-eng-line-center">OUR PARTNER</span>
+          <span className="title-eng-line-center">OUR PARTNERS</span>
           <h2 className="title-line-center">Đối tác của chúng tôi</h2>
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />

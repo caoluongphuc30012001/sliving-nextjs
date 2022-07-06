@@ -33,7 +33,8 @@ function SectionFeaturedProject() {
     {
       id: 2,
       linkImg: imgFeature2,
-      title: "Dự án 1300 căn hộ thuộc không gian nghỉ dưỡng - giải trí cao cấp",
+      title:
+        "Dự án 1300 căn hộ trong nghỉ dưỡng – giải trí cao cấp thuộc Sunshine Metaland ",
     },
     {
       id: 3,

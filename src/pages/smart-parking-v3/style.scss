@@ -770,6 +770,9 @@
               border-radius: 16px;
               width: 100%;
               min-height: 178px;
+              .appNmap-left {
+                min-width: 96px;
+              }
               .appNmap-right {
                 .appNmap-right-title {
                   font-family: "SVN Gilroy";

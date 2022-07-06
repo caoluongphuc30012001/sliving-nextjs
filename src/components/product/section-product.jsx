@@ -8,6 +8,8 @@ import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
 import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
+import { Spinner } from "react-bootstrap";
+const isBrowser = typeof window !== "undefined";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const handle = (item) => {
     setCurrent(item);
@@ -37,8 +39,8 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
 };
 const ContentRight = ({ listProduct, current }) => {
   return (
-    listProduct.length > 0 && (
-      <div className="content-right">
+    <div className="content-right">
+      {listProduct.length > 0 ? (
         <div className="item-product-box">
           <div className="title-box">
             <p className="title">{current.nameVi}</p>
@@ -57,8 +59,12 @@ const ContentRight = ({ listProduct, current }) => {
           </div>
           <ItemProduct listProduct={listProduct} itemId={current.id} />
         </div>
-      </div>
-    )
+      ) : (
+        <div className="spinner-box">
+          <Spinner size="lg" className="spinner" animation="border" />
+        </div>
+      )}
+    </div>
   );
 };
 const ItemProduct = ({ listProduct, itemId }) => {
@@ -79,7 +85,7 @@ const ItemProduct = ({ listProduct, itemId }) => {
         listProduct.map((item) => {
           return (
             <SwiperSlide key={item.id} className="list-product">
-              <Link to={`/product-detail/?${item.id}`}>
+              <Link to={`/product-detail/${item.id}`}>
                 <div className="item-box">
                   <div className="img-box">
                     <img src={item.imageURL} alt="" />
@@ -107,11 +113,23 @@ const SectionProduct = ({ productTypes }) => {
   useEffect(() => {
     const getDeviceTypes = async () => {
       try {
-        const res = await axios.get(
-          `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
-        );
+        if (isBrowser) {
+          let data = JSON.parse(window.sessionStorage.getItem(current.id));
+          if (!data) {
+            const res = await axios.get(
+              `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
+            );
+            data = res.data.Items;
+            window.sessionStorage.setItem(current.id, JSON.stringify(data));
+          }
+          setListProduct(data);
+        } else {
+          const res = await axios.get(
+            `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
+          );
 
-        setListProduct(res.data.Items);
+          setListProduct(res.data.Items);
+        }
       } catch (error) {
         console.log(error);
       }

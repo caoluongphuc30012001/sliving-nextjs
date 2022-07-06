@@ -43,12 +43,13 @@ function SkeletonProductInfor() {
 }
 
 const IndexPage = ({ pageContext }) => {
+  const { data } = pageContext;
   const [modalShow, setModalShow] = useState(false);
 
   const location = useLocation();
   const { href } = location;
 
-  const deviceTypeId = location.search.split("?").pop();
+  const deviceTypeId = data.id;
   const [deviceType, setDeviceType] = useState(null);
   const [deviceShapeList, setDeviceShapeList] = useState([]);
   const [deviceDetail, setDeviceDetail] = useState(null);
@@ -287,14 +288,14 @@ const IndexPage = ({ pageContext }) => {
       </section>
     );
   };
-
+  console.log("data ", href);
   return (
     <LayoutSmartLighting>
       <Seo
-        title={deviceType?.nameVi}
-        description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
-        metaImage={deviceDetail?.imageURL && deviceDetail?.imageURL[0]}
-        url={href}
+        title={data?.nameVi}
+        description={"test nhé bro"}
+        metaImage="/thumbnail.png"
+        url={`/product-detail/${data.id}`}
       />
       <BuildHeader />
       <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />

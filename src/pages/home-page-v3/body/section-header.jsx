@@ -72,14 +72,14 @@ const SectionHeader = () => {
               marginRight: "30px",
             }}
           >
-            <div className="view-360">
+            {/* <div className="view-360">
               <button>
                 <span>
                   Xem 360 <sup>0</sup>
                 </span>
                 <img src={iconEarth} alt="" />
               </button>
-            </div>
+            </div> */}
             {/* <img src={item.imgUrl} alt="" className="bg-img" /> */}
           </SwiperSlide>
         ))}
@@ -97,14 +97,14 @@ const SectionHeader = () => {
       >
         {imgBackgroundMobile.map((item) => (
           <SwiperSlide key={item.id} className="back-ground-mobile d-none">
-            <div className="view-360">
+            {/* <div className="view-360">
               <button>
                 <span>
                   Xem 360 <sup>0</sup>
                 </span>
                 <img src={iconEarth} alt="" />
               </button>
-            </div>
+            </div> */}
             <img src={item.imgUrl} alt="" className="bg-img" />
           </SwiperSlide>
         ))}
