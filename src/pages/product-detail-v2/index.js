@@ -57,13 +57,6 @@ const IndexPage = ({ pageContext }) => {
   const [activeShape, setActiveShape] = useState(0);
   const [activeDevice, setActiveDevice] = useState(0);
 
-  console.log("deviceTypeId: ", deviceTypeId);
-  console.log("deviceType: ", deviceType);
-  console.log("deviceShapeList: ", deviceShapeList);
-  console.log("activeShape: ", activeShape);
-  console.log("activeDevice: ", activeDevice);
-  console.log("deviceDetail: ", deviceDetail);
-
   useEffect(() => {
     const getDeviceTypeDetail = async () => {
       const url = `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/product/device-type-detail?deviceTypeId=${deviceTypeId}`;
@@ -288,7 +281,6 @@ const IndexPage = ({ pageContext }) => {
       </section>
     );
   };
-  console.log("data ", href);
   return (
     <LayoutSmartLighting>
       <Seo
