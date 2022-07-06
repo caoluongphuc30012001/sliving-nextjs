@@ -30,7 +30,9 @@ function SectionTechnologyDoorLocks() {
                 <span>Cảm biến</span>
               </p>
               <p className="sub-title-smart-door">
-                Cảm biến vân tay điện dung Tỉ lệ sai &#60;0.0002
+                Cảm biến vân tay điện dung
+                <br />
+                Tỉ lệ sai &#60;0.0002
               </p>
               <p className="title-smart-door-2">
                 <Image src={iconV} />

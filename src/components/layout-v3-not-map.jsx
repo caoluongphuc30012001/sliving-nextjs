@@ -6,9 +6,12 @@ import Navbar from "@components/menu/index";
 
 import logo from "../images/smart-home-v3/png/logo.png";
 import Footer from "./footer/footer-v3/footer-v3-not-map";
-
+import { useLocation } from "@reach/router";
 function LayoutV3({ children }) {
-  const url = typeof window !== "undefined" ? window.location.href : "";
+  // const url = typeof window !== "undefined" ? window.location.href : "";
+  const location = useLocation();
+  let url = location.href?location.href:"";
+  console.log("href ", typeof url);
   const listRoute = [
     {
       id: 0,
@@ -18,6 +21,7 @@ function LayoutV3({ children }) {
         !url.includes("about-us") &&
         !url.includes("implementation-process") &&
         !url.includes("step") &&
+        !url.includes("business") &&
         !url.includes("news") &&
         !url.includes("contact-us"),
     },
@@ -62,7 +66,7 @@ function LayoutV3({ children }) {
         {
           id: 0,
           nameRoute: "GÓI DOANH NGHIỆP",
-          href: "/business-step1/",
+          href: "/business/",
           active: url.includes("business"),
         },
         {

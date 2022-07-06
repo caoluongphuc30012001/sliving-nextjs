@@ -25,10 +25,6 @@ function SectionTechnologyTurnstile() {
               </p>
               <p className="title-smart-door-2">
                 <Image src={iconV} />
-                <span>Mật khẩu</span>
-              </p>
-              <p className="title-smart-door-2">
-                <Image src={iconV} />
                 <span>Thẻ quét để mở cửa</span>
               </p>
               <p className="title-smart-door-2">

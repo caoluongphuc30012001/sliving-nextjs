@@ -77,7 +77,7 @@ function BuildApps() {
 function Footer() {
   const listAbout = [
     { id: 0, title: "Giới thiệu", url: "/about-us" },
-    { id: 1, title: "Giải pháp", url: "/business-step1" },
+    { id: 1, title: "Giải pháp", url: "/business" },
     { id: 2, title: "Bản tin", url: "https://unicloud.com.vn/news" },
     { id: 3, title: "Liên hệ", url: "/contact-us" },
   ];

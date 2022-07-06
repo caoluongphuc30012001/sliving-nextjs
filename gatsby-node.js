@@ -33,8 +33,6 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/product-detail-v2") === true ||
     checkDetectPage(page, "/policy") === true ||
     checkDetectPage(page, "/about-us-v3") === true ||
-    checkDetectPage(page, "/business-step1-v3") === true ||
-    checkDetectPage(page, "/business-step2-v3") === true ||
     checkDetectPage(page, "/business-step3-v3") === true ||
     checkDetectPage(page, "/contact-us-v3") === true ||
     checkDetectPage(page, "/news-v3") === true ||
@@ -75,8 +73,6 @@ exports.createPages = async function ({ actions, graphql }) {
   );
   const policy = require.resolve("./src/pages/policy/index.jsx");
   const aboutUS = require.resolve("./src/pages/about-us-v3/index.jsx");
-  const business1 = require.resolve("./src/pages/business-step1-v3/index.jsx");
-  const business2 = require.resolve("./src/pages/business-step2-v3/index.jsx");
   const business3 = require.resolve("./src/pages/business-step3-v3/index.jsx");
   const contact = require.resolve("./src/pages/contact-us-v3/index.jsx");
   const news = require.resolve("./src/pages/news-v3/index.jsx");
@@ -118,15 +114,6 @@ exports.createPages = async function ({ actions, graphql }) {
     component: aboutUS,
   });
   createPage({
-    path: `/business-step1/`,
-    component: business1,
-  });
-
-  createPage({
-    path: `/business-step2/`,
-    component: business2,
-  });
-  createPage({
     path: `/personal-step1/`,
     component: personal1,
   });
@@ -136,7 +123,7 @@ exports.createPages = async function ({ actions, graphql }) {
     component: personal2,
   });
   createPage({
-    path: `/business-step3/`,
+    path: `/business/`,
     component: business3,
   });
   createPage({

@@ -60,7 +60,17 @@
       .content-left {
         min-width: 320px;
         width: 320px;
+        position: relative;
         // width: 100%;
+        &:after{
+          content: "";
+          height: 600px;
+          width:1px;
+        border: 1px solid #e1e3e6;
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        }
         .item-box {
           display: flex;
           flex-direction: column;

@@ -49,9 +49,8 @@ function SectionSmartTurnstile() {
               <span>Tăng cường an ninh</span>
             </p>
             <p className="sub-title-smart-door">
-              Nhận diện khuôn mặt để gọi thang máy, mở rào chắn khu vực gửi xe,
-              tuỳ chọn chuông hình hoặc qua ứng dụng giúp chủ căn hộ có thể gọi
-              thang máy đến đúng căn hộ của mình cách chính xác.
+              Hệ thống camera có thể hoạt động offline đảm bảo an ninh ngay cả
+              khi mất điện, gửi cảnh báo khi phát hiện các xâm nhập bất thường.
             </p>
           </Col>
         </Row>

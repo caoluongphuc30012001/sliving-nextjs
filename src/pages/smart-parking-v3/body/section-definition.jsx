@@ -37,16 +37,62 @@ const SectionDefinition = () => {
       },
     ],
     listIcon: [
-      { id: 0, title: "Tiết kiệm thời gian, nguồn lực", icon: iconParkingTime },
-      { id: 1, title: "Đảm bảo an ninh, an toàn", icon: iconSafety },
+      {
+        id: 0,
+        title: (
+          <>
+            Tiết kiệm <br /> thời gian, nguồn lực
+          </>
+        ),
+        icon: iconParkingTime,
+      },
+      {
+        id: 1,
+        title: (
+          <>
+            Đảm bảo <br /> an ninh, an toàn
+          </>
+        ),
+        icon: iconSafety,
+      },
       {
         id: 2,
-        title: "Giải quyết hạn chế của gửi xe truyền thống",
+        title: (
+          <>
+            Giải quyết hạn chế <br />
+            của gửi xe truyền thống
+          </>
+        ),
         icon: iconSolving,
       },
-      { id: 3, title: "Lắp đặt, bảo trì nhanh chóng", icon: iconMaintain },
-      { id: 4, title: "Dễ dàng quản lý qua App", icon: iconParkingPhone },
-      { id: 5, title: "Kiểm soát ra/vào hiệu quả", icon: iconModernity },
+      {
+        id: 3,
+        title: (
+          <>
+            Lắp đặt, bảo trì <br /> nhanh chóng
+          </>
+        ),
+        icon: iconMaintain,
+      },
+      {
+        id: 4,
+        title: (
+          <>
+            Dễ dàng <br /> quản lý qua App
+          </>
+        ),
+        icon: iconParkingPhone,
+      },
+      {
+        id: 5,
+        title: (
+          <>
+            Kiểm soát <br />
+            ra/vào hiệu quả
+          </>
+        ),
+        icon: iconModernity,
+      },
     ],
   };
 
