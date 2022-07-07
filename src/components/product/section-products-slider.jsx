@@ -121,7 +121,6 @@ const SectionProductsSlider = ({ listSlide }) => {
           <img src={BigArrowRight} alt=""></img>
         </div>
         {listSlide.map((slide, index) => {
-          console.log(listSlide[toggleState]?.listItem[0]?.id);
           return (
             <div className={index == toggleState ? "slider active" : "slider"}>
               <div className="slider-left__content">

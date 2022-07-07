@@ -115,7 +115,6 @@ const SectionProduct = ({ productTypes }) => {
       try {
         if (isBrowser) {
           let data = JSON.parse(window.sessionStorage.getItem(current.id));
-          console.log(data);
           if (!data) {
             const res = await axios.get(
               `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
@@ -155,7 +154,6 @@ const SectionProduct = ({ productTypes }) => {
             setCurrent={setCurrent}
             productTypes={productTypes}
           />
-          <div className="line-separate"></div>
           <ContentRight listProduct={listProduct} current={current} />
         </div>
       </div>
