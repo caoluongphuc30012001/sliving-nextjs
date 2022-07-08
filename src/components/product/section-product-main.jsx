@@ -16,7 +16,7 @@ const SectionProductMain = () => {
         const res = await axios.get(
           "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/types"
         );
-        const results = res.data.Items.sort((a, b) => a.priority - b.priority);
+        const results = res.data?.Items.sort((a, b) => a.priority - b.priority);
 
         setProductTypes(results);
       } catch (e) {

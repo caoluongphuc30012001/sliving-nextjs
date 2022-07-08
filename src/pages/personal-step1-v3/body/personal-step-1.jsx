@@ -50,7 +50,7 @@ const PersonalStep1 = () => {
         // item.listDevice = item.listDevice.sort((a, b) =>
         //     a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
         //   );
-        const data = response.data.Items.sort((a, b) =>
+        const data = response.data?.Items.sort((a, b) =>
           a.nameVi.localeCompare(b.nameVi)
         );
         setListOption(data);

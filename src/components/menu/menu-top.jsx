@@ -9,18 +9,15 @@ import "./style.scss";
 const MenuTop = ({ logo, listRoute, back }) => {
   const [modalShow, setModalShow] = React.useState(false);
   const location = useLocation();
-  console.log(location.key);
+  const goBack = () => {
+    if (location.key !== "initial") navigate(-1);
+    else navigate("/");
+  };
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
         {back && (
-          <div
-            className="icon-back"
-            onClick={() => {
-              if (location.key !=="initial") navigate(-1);
-              else navigate("/");
-            }}
-          >
+          <div className="icon-back" onClick={goBack}>
             <img src={backIcon} alt="" />
           </div>
         )}

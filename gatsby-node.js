@@ -67,7 +67,7 @@ exports.createPages = async function ({ actions, graphql }) {
     "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-hot-product"
   );
 
-  const productPage = res.data.listDevice.Items;
+  const productPage = res.data?.listDevice?.Items;
   const productDetailComponent = require.resolve(
     "./src/pages/product-detail-v2/index.js"
   );

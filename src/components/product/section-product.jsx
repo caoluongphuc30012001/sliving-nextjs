@@ -9,7 +9,6 @@ import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
-const isBrowser = typeof window !== "undefined";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const handle = (item) => {
     setCurrent(item);
@@ -38,7 +37,6 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   );
 };
 const ContentRight = ({ listProduct, current }) => {
-  const sliderCount = Math.floor(listProduct.length / 6) + 1;
   return (
     <div className="content-right">
       {listProduct.length > 0 ? (
@@ -70,16 +68,18 @@ const ContentRight = ({ listProduct, current }) => {
 };
 const SliderComponent = ({ index, productCount, listProduct }) => {
   let sliders = [];
-  for (let j = 0; j < 6; j++) {
-    if (index * 6 + j < productCount) {
+  const itemsGrouped = 6;
+  for (let j = 0; j < itemsGrouped; j++) {
+    const currentIndex = index * itemsGrouped + j;
+    if (currentIndex < productCount) {
       const item = (
-        <Link to={`/product-detail/${listProduct[index * 6 + j].id}`}>
+        <Link to={`/product-detail/${listProduct[currentIndex].id}`}>
           <div className="item-box">
             <div className="img-box">
-              <img src={listProduct[index * 6 + j].imageURL} alt="" />
+              <img src={listProduct[currentIndex].imageURL} alt="" />
             </div>
             <div className="name-box">
-              <p className="name">{listProduct[index * 6 + j].nameVi}</p>
+              <p className="name">{listProduct[currentIndex].nameVi}</p>
             </div>
           </div>
         </Link>
@@ -92,11 +92,7 @@ const SliderComponent = ({ index, productCount, listProduct }) => {
 const ItemProduct = ({ listProduct, itemId }) => {
   const sliderCount = Math.floor(listProduct.length / 6) + 1;
   const productCount = listProduct.length;
-  let listSlider = new Array(sliderCount);
-  for (let i = 0; i < sliderCount; i++) {
-    listSlider[i] = {};
-  }
-  console.log(listSlider);
+  let listSlider = [...Array(sliderCount)];
   return (
     <Swiper
       slidesPerView={1}
@@ -140,7 +136,7 @@ const SectionProduct = ({ productTypes }) => {
           `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
         );
 
-        setListProduct(res.data.Items);
+        setListProduct(res.data?.Items);
       } catch (error) {
         console.log(error);
       }
