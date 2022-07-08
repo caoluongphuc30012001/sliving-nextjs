@@ -38,6 +38,7 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   );
 };
 const ContentRight = ({ listProduct, current }) => {
+  const sliderCount = Math.floor(listProduct.length / 6) + 1;
   return (
     <div className="content-right">
       {listProduct.length > 0 ? (
@@ -67,35 +68,57 @@ const ContentRight = ({ listProduct, current }) => {
     </div>
   );
 };
+const SliderComponent = ({ index, productCount, listProduct }) => {
+  let sliders = [];
+  for (let j = 0; j < 6; j++) {
+    if (index * 6 + j < productCount) {
+      const item = (
+        <Link to={`/product-detail/${listProduct[index * 6 + j].id}`}>
+          <div className="item-box">
+            <div className="img-box">
+              <img src={listProduct[index * 6 + j].imageURL} alt="" />
+            </div>
+            <div className="name-box">
+              <p className="name">{listProduct[index * 6 + j].nameVi}</p>
+            </div>
+          </div>
+        </Link>
+      );
+      sliders.push(item);
+    }
+  }
+  return <div className="slider-box">{sliders}</div>;
+};
 const ItemProduct = ({ listProduct, itemId }) => {
+  const sliderCount = Math.floor(listProduct.length / 6) + 1;
+  const productCount = listProduct.length;
+  let listSlider = new Array(sliderCount);
+  for (let i = 0; i < sliderCount; i++) {
+    listSlider[i] = {};
+  }
+  console.log(listSlider);
   return (
     <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
-      //   centeredSlides={true}
-      grabCursor={true}
-      //   loop={true}
+      slidesPerView={1}
+      centeredSlides={true}
       navigation={{
         nextEl: `.button-prev-${itemId}`,
         prevEl: `.button-next-${itemId}`,
       }}
+      width="820"
       modules={[Pagination, Navigation]}
     >
-      {listProduct.length > 0 &&
-        listProduct.map((item) => {
-          return (
-            <SwiperSlide key={item.id} className="list-product">
-              <Link to={`/product-detail/${item.id}`}>
-                <div className="item-box">
-                  <div className="img-box">
-                    <img src={item.imageURL} alt="" />
-                  </div>
-                  <div className="description">{item.nameVi}</div>
-                </div>
-              </Link>
-            </SwiperSlide>
-          );
-        })}
+      {listSlider.map((item, index) => {
+        return (
+          <SwiperSlide>
+            <SliderComponent
+              index={index}
+              listProduct={listProduct}
+              productCount={productCount}
+            />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
@@ -113,23 +136,11 @@ const SectionProduct = ({ productTypes }) => {
   useEffect(() => {
     const getDeviceTypes = async () => {
       try {
-        if (isBrowser) {
-          let data = JSON.parse(window.sessionStorage.getItem(current.id));
-          if (!data) {
-            const res = await axios.get(
-              `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
-            );
-            data = res.data.Items;
-            window.sessionStorage.setItem(current.id, JSON.stringify(data));
-          }
-          setListProduct(data);
-        } else {
-          const res = await axios.get(
-            `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
-          );
+        const res = await axios.get(
+          `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
+        );
 
-          setListProduct(res.data.Items);
-        }
+        setListProduct(res.data.Items);
       } catch (error) {
         console.log(error);
       }

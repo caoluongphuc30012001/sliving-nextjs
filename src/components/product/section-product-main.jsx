@@ -5,7 +5,6 @@ import axios from "axios";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import DataProductNew from "../../query/product-hot";
 import "../style.scss";
 import i18next from "i18next";
 i18next.changeLanguage("vn");
@@ -28,47 +27,6 @@ const SectionProductMain = () => {
   }, []);
 
   const [productTypes, setProductTypes] = useState([]);
-
-  let data = DataProductNew();
-  const lngCurrent = i18next.language;
-  const titles = {
-    productLed: "LED",
-    productMotor: "Động Cơ",
-    productSensor: "Cảm Biến",
-    productSmartButton: "Công Tắc Thông Minh",
-    productSmartCurtain: "Rèm Thông Minh",
-    productSmartMeter: "Đo Lường Thông Minh",
-    productSocket: "Ổ Cắm",
-    productSwitch: "Công tắc",
-    productZigbee: "Gateway",
-  };
-  data = Object.keys(data).map((item, index) => {
-    let arrProdNew = data[item].edges;
-    arrProdNew = arrProdNew.filter(
-      (item) => item.node.frontmatter.lgn === lngCurrent
-    );
-    return {
-      id: index,
-      title: titles[item],
-      listProduct: [
-        {
-          id: 0,
-          title: titles[item],
-          listProduct: arrProdNew.map((prod, index) => {
-            let frontmatter = prod.node.frontmatter;
-            return {
-              id: index,
-              type: frontmatter.type,
-              description: frontmatter.title,
-              image: frontmatter.imgSrcProduct.publicURL,
-            };
-          }),
-        },
-      ],
-    };
-  });
-
-  const listProduct = data;
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
