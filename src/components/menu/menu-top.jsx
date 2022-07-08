@@ -4,10 +4,12 @@ import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import ModalAdvise from "../modal/modal-advise/ModalAdvise";
 import backIcon from "../../images/menu/back.svg";
 import { navigate } from "gatsby";
+import { useLocation } from "@reach/router";
 import "./style.scss";
 const MenuTop = ({ logo, listRoute, back }) => {
   const [modalShow, setModalShow] = React.useState(false);
-
+  const location = useLocation();
+  console.log(location.key);
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
@@ -15,7 +17,8 @@ const MenuTop = ({ logo, listRoute, back }) => {
           <div
             className="icon-back"
             onClick={() => {
-              navigate(-1);
+              if (location.key !=="initial") navigate(-1);
+              else navigate("/");
             }}
           >
             <img src={backIcon} alt="" />
