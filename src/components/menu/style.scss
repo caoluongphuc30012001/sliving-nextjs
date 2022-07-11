@@ -287,15 +287,26 @@ body {
   #smart_lighting_page {
     .section-smart-lighting-header {
       margin-top: 90px;
+      height: calc(100vh - 90px);
     }
   }
   #smart_parking_page {
     .section-smart-parking-v3-header {
       margin-top: 90px;
+      .smart-parking-v3-header{
+        height: calc(100vh - 90px);
+      }
     }
   }
   .home-page-v3 {
     margin-top: 90px;
+    // .swiper{
+    //   .swiper-wrapper{
+    //     .swiper-slide {
+    //       height: calc(100vh - 90px);
+    //     }
+    //   }
+    // }
   }
   #about_us_page {
     .section-about-us-header {
@@ -352,15 +363,26 @@ body {
   #smart_lighting_page {
     .section-smart-lighting-header {
       margin-top: 64px;
+      height: calc(100vh - 64px);
     }
   }
   #smart_parking_page {
     .section-smart-parking-v3-header {
       margin-top: 64px;
+      .smart-parking-v3-header{
+        height: calc(100vh - 64px);
+      }
     }
   }
   .home-page-v3 {
     margin-top: 64px;
+    // .swiper{
+    //   .swiper-wrapper{
+    //     .swiper-slide {
+    //       height: calc(100vh - 64px);
+    //     }
+    //   }
+    // }
   }
   #about_us_page .section-about-us-header {
     margin-top: 64px;

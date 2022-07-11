@@ -90,7 +90,7 @@ const SliderComponent = ({ index, productCount, listProduct }) => {
   return <div className="slider-box">{sliders}</div>;
 };
 const ItemProduct = ({ listProduct, itemId }) => {
-  const sliderCount = Math.floor(listProduct.length / 6) + 1;
+  const sliderCount = Math.floor((listProduct.length - 1) / 6) + 1;
   const productCount = listProduct.length;
   let listSlider = [...Array(sliderCount)];
   return (

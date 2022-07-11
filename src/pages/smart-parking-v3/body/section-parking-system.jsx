@@ -13,7 +13,7 @@ import ip_map from "../../../images/smart-parking-v3/png/icon-iphone-map.png";
 const softwareContentList = [
   {
     id: 0,
-    title: "Phần mềm quản lý bãi đỗ",
+    title: "Quản lý bãi đỗ",
     content: {
       feature: [
         {
@@ -55,7 +55,7 @@ const softwareContentList = [
   },
   {
     id: 1,
-    title: "Phần mềm quản lý chỗ trống",
+    title: "Quản lý chỗ trống",
     content: {
       feature: [
         {
@@ -359,7 +359,8 @@ const appMapContent = [
     content: [
       {
         id: 0,
-        content: "Bản đồ được tích hợp vào ứng dụng (app) trên điện thoại để dễ dàng định vị và dò tìm vị trí cần thiết",
+        content:
+          "Bản đồ được tích hợp vào ứng dụng (app) trên điện thoại để dễ dàng định vị và dò tìm vị trí cần thiết",
       },
     ],
   },
@@ -526,6 +527,7 @@ const SectionParkingSystem = () => {
               </div>
               <div className="underline"></div>
             </div>
+            <div className="hardware-background"></div>
           </div>
         </div>
       </div>
