@@ -100,7 +100,7 @@ const SectionProductList = () => {
         const res = await axios.get(
           "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
         );
-        const list = res.data.Items.map((item, index) => {
+        const list = res.data?.Items.map((item, index) => {
           return {
             ...item,
             className: index === 1 ? "effect left" : "effect right",
@@ -121,7 +121,7 @@ const SectionProductList = () => {
           "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
         );
         setCurrentHouse(
-          response.data.Items.find((item) => item.id === state["houseID"])
+          response.data?.Items.find((item) => item.id === state["houseID"])
             .nameVi
         );
       } catch (err) {

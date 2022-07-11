@@ -85,7 +85,7 @@ const SectionProductMobile = ({ productTypes }) => {
           `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
         );
 
-        setListProduct(res.data.Items);
+        setListProduct(res.data?.Items);
       } catch (error) {
         console.log(error);
       }

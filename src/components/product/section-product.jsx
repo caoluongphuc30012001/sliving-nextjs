@@ -9,7 +9,6 @@ import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
-const isBrowser = typeof window !== "undefined";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const handle = (item) => {
     setCurrent(item);
@@ -67,35 +66,55 @@ const ContentRight = ({ listProduct, current }) => {
     </div>
   );
 };
+const SliderComponent = ({ index, productCount, listProduct }) => {
+  let sliders = [];
+  const itemsGrouped = 6;
+  for (let j = 0; j < itemsGrouped; j++) {
+    const currentIndex = index * itemsGrouped + j;
+    if (currentIndex < productCount) {
+      const item = (
+        <Link to={`/product-detail/${listProduct[currentIndex].id}`}>
+          <div className="item-box">
+            <div className="img-box">
+              <img src={listProduct[currentIndex].imageURL} alt="" />
+            </div>
+            <div className="name-box">
+              <p className="name">{listProduct[currentIndex].nameVi}</p>
+            </div>
+          </div>
+        </Link>
+      );
+      sliders.push(item);
+    }
+  }
+  return <div className="slider-box">{sliders}</div>;
+};
 const ItemProduct = ({ listProduct, itemId }) => {
+  const sliderCount = Math.floor(listProduct.length / 6) + 1;
+  const productCount = listProduct.length;
+  let listSlider = [...Array(sliderCount)];
   return (
     <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
-      //   centeredSlides={true}
-      grabCursor={true}
-      //   loop={true}
+      slidesPerView={1}
+      centeredSlides={true}
       navigation={{
         nextEl: `.button-prev-${itemId}`,
         prevEl: `.button-next-${itemId}`,
       }}
+      width="820"
       modules={[Pagination, Navigation]}
     >
-      {listProduct.length > 0 &&
-        listProduct.map((item) => {
-          return (
-            <SwiperSlide key={item.id} className="list-product">
-              <Link to={`/product-detail/${item.id}`}>
-                <div className="item-box">
-                  <div className="img-box">
-                    <img src={item.imageURL} alt="" />
-                  </div>
-                  <div className="description">{item.nameVi}</div>
-                </div>
-              </Link>
-            </SwiperSlide>
-          );
-        })}
+      {listSlider.map((item, index) => {
+        return (
+          <SwiperSlide>
+            <SliderComponent
+              index={index}
+              listProduct={listProduct}
+              productCount={productCount}
+            />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
@@ -113,23 +132,11 @@ const SectionProduct = ({ productTypes }) => {
   useEffect(() => {
     const getDeviceTypes = async () => {
       try {
-        if (isBrowser) {
-          let data = JSON.parse(window.sessionStorage.getItem(current.id));
-          if (!data) {
-            const res = await axios.get(
-              `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
-            );
-            data = res.data.Items;
-            window.sessionStorage.setItem(current.id, JSON.stringify(data));
-          }
-          setListProduct(data);
-        } else {
-          const res = await axios.get(
-            `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
-          );
+        const res = await axios.get(
+          `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
+        );
 
-          setListProduct(res.data.Items);
-        }
+        setListProduct(res.data?.Items);
       } catch (error) {
         console.log(error);
       }
