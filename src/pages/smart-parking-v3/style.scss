@@ -598,6 +598,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
       .hardware-title {
         display: flex;
         flex-direction: column;
@@ -621,6 +622,19 @@
         align-items: center;
         gap: clamp(40px, 3.125vw, 60px);
         width: 100%;
+        position: relative;
+        .hardware-background{
+          //1200px width => 600px 0 50vw
+          $size: clamp(600px, 50vw, 1029px);
+          position: absolute;
+          width: $size;
+          height: $size; 
+          bottom: calc(100% - ($size / 2));
+          right: calc(100% - ($size / 2) + (100vw - 100%)/2);
+          background: #F3F9FF;
+          border-radius:  clamp(600px/2, 50vw/2, 1029px/2);
+          z-index: -1;
+        }
         .title {
           width: 100%;
           display: flex;
@@ -659,6 +673,7 @@
               object-fit: cover;
               box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
               border-radius: 16px;
+              background-color: white;
             }
             .content-right {
               height: 100%;
@@ -748,6 +763,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          position: relative;
           .appNmap-img {
             width: 50%;
             object-fit: cover;
@@ -1058,6 +1074,9 @@
     .parking-system-container {
       .hardware {
         .item-container {
+          .hardware-background{
+            display: none;
+          }
           .item-sub-container {
             width: 100%;
             .item-content {
@@ -1089,6 +1108,18 @@
           max-width: 600px;
           gap: 30px;
           width: 100%;
+          position: relative;
+          .hardware-background{
+            $size: 1029px;
+            position: absolute;
+            width: $size;
+            height: $size; 
+            bottom: calc(100% - ($size / 2));
+            right: calc(100% - ($size / 2));
+            background: #F3F9FF;
+            border-radius:  calc($size/2);
+            z-index: -1;
+          }
           .item-sub-container {
             display: flex;
             flex-direction: column;

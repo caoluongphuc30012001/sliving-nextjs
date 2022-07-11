@@ -287,12 +287,15 @@ body {
   #smart_lighting_page {
     .section-smart-lighting-header {
       margin-top: 90px;
+      height: calc(100vh - 90px);
     }
   }
   #smart_parking_page {
     .section-smart-parking-v3-header {
       margin-top: 90px;
-      height: calc(100vh - 90px);
+      .smart-parking-v3-header{
+        height: calc(100vh - 90px);
+      }
     }
   }
   .home-page-v3 {
@@ -366,7 +369,9 @@ body {
   #smart_parking_page {
     .section-smart-parking-v3-header {
       margin-top: 64px;
-      height: calc(100vh - 64px);
+      .smart-parking-v3-header{
+        height: calc(100vh - 64px);
+      }
     }
   }
   .home-page-v3 {

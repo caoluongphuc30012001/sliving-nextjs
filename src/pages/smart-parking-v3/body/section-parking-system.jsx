@@ -527,6 +527,7 @@ const SectionParkingSystem = () => {
               </div>
               <div className="underline"></div>
             </div>
+            <div className="hardware-background"></div>
           </div>
         </div>
       </div>
