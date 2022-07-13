@@ -535,6 +535,10 @@
       }
 
       .right-icon-item {
+        img{
+          width: 48px;
+          height: 48px;
+        }
         max-width: 186px;
         width: 100%;
         display: flex;
