@@ -28,7 +28,7 @@ const SectionProduct = () => {
           id: 0,
           title: "Trải nghiệm mới mẻ & hiện đại",
           subTitle:
-            "Với ngoại hình của dòng công tắc cơ truyền thống đi kèm với các tính năng hiện đại, sản phẩm tạo cảm giác gần gũi, quen thuộc nhưng  mang lại trải nghiệm hoàn toàn mới mẻ và tiện lợi.",
+            "Mang kiểu dáng của dòng công tắc cơ truyền thống đi kèm với các tính năng hiện đại, dòng sản phẩm công tắc cơ thông minh vừa tạo cảm giác gần gũi, quen thuộc lại vừa mang tới những trải nghiệm mới mẻ và tiện lợi.",
           icon: iconCheckOutline,
         },
         {
@@ -114,7 +114,7 @@ const SectionProduct = () => {
           id: 2,
           title: "Giám sát & cảnh báo",
           subTitle:
-            "Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
+            "Kiểm soát năng lượng tiêu dùng thông minh nhờ vào tính năng kết nối hai chiều với dàn lạnh, khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm... và đưa ra các cảnh báo kịp thời",
           icon: iconCheckOutline,
         },
       ],
@@ -138,7 +138,7 @@ const SectionProduct = () => {
           id: 1,
           title: "Thiết kế chắc chắn & bền bỉ  ",
           subTitle:
-            "Toàn bộ sản phẩm bên ngoài được làm bằng nhôm cao cấp, khả năng chịu lực va chạm mạnh, chịu nhiệt và chống ăn mòn cùng với kích thước nhỏ gọn nên phù hợp với nhiều loại hình không gian khác nhau.",
+            "Bên ngoài của sản phẩm được làm bằng nhôm cao cấp, có khả năng chịu lực, chịu được va chạm mạnh, chịu nhiệt và chống ăn mòn. Kích thước nhỏ gọn nên  phù hợp với nhiều loại hình không gian khác nhau.",
           icon: iconCheckOutline,
         },
         {

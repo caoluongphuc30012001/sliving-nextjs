@@ -23,7 +23,7 @@ function SectionCustomerCentric() {
       linkImg: imgProduct,
       content: [
         "Hệ sinh thái sản phẩm đa dạng, tích hợp nhanh chóng.",
-        "Hệ các sản phẩm có thể điều chỉnh theo nhu cầu từng khách hàng/ doanh nghiệp.",
+        "Tất cả các sản phẩm đều có thể điều chỉnh theo nhu cầu của khách hàng/doanh nghiệp",
         "Hệ thống sản phẩm mở cho phép kết nối đa dạng với các đối tác dịch vụ.",
         "Quy trình thiết kế, thử nghiệm khép kín được kiểm soát chất lượng chặt chẽ.",
       ],
