@@ -1283,6 +1283,7 @@ span.detail-v3 {
 
     .swiper-slide {
       width: 80%;
+      height: calc(100vh - 64px);
     }
     // =======End Custom swiper=======
   }

@@ -2,18 +2,25 @@ import React from "react";
 import Link from "@components/gatsby-link";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import ModalAdvise from "../modal/modal-advise/ModalAdvise";
+import ModalAdviseBusiness from "../modal/modal-advise/ModalAdvise-business";
 import backIcon from "../../images/menu/back.svg";
+import { navigate } from "gatsby";
+import { useLocation } from "@reach/router";
 import "./style.scss";
-const MenuTop = ({ logo, listRoute, back }) => {
+const MenuTop = ({ logo, listRoute, back, business }) => {
   const [modalShow, setModalShow] = React.useState(false);
-
+  const location = useLocation();
+  const goBack = () => {
+    if (location.key !== "initial") navigate(-1);
+    else navigate("/");
+  };
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
         {back && (
-          <Link className="icon-back" to="/">
+          <div className="icon-back" onClick={goBack}>
             <img src={backIcon} alt="" />
-          </Link>
+          </div>
         )}
         <Link to="/">
           <div className="logo-box">
@@ -66,7 +73,9 @@ const MenuTop = ({ logo, listRoute, back }) => {
           </div>
         </div>
       </div>
-      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      {!business && <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />}
+      
+      {business&&<ModalAdviseBusiness show={modalShow} onHide={() => setModalShow(false)} />}
     </nav>
   );
 };

@@ -1,6 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
-
+const axios = require("axios");
 exports.onPostBuild = () => {
   fs.copySync(
     path.join(__dirname, "/src/i18n"),
@@ -33,8 +33,6 @@ exports.onCreatePage = ({ page, actions }) => {
     checkDetectPage(page, "/product-detail-v2") === true ||
     checkDetectPage(page, "/policy") === true ||
     checkDetectPage(page, "/about-us-v3") === true ||
-    checkDetectPage(page, "/business-step1-v3") === true ||
-    checkDetectPage(page, "/business-step2-v3") === true ||
     checkDetectPage(page, "/business-step3-v3") === true ||
     checkDetectPage(page, "/contact-us-v3") === true ||
     checkDetectPage(page, "/news-v3") === true ||
@@ -65,185 +63,16 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     `
   );
-
-  const productPage = await graphql(
-    `
-      query ProductGroup {
-        ProductGroups: allMarkdownRemark(
-          filter: {
-            frontmatter: { lgn: { eq: "vn" } }
-            fileAbsolutePath: { regex: "/(contents/product-v2/)/" }
-          }
-        ) {
-          group(field: frontmatter___type) {
-            group(field: frontmatter___typeParent) {
-              distinct(field: frontmatter___title)
-              nodes {
-                frontmatter {
-                  id
-                  title
-                  subtitle
-                  slug
-                  lgn
-                  type
-                  version
-                  isZigbee
-                  isSensorLight
-                  isLedDriver
-                  button
-                  date
-                  description
-                  details
-                  imgSrcThumbs {
-                    publicURL
-                    childImageSharp {
-                      gatsbyImageData(layout: FULL_WIDTH)
-                    }
-                  }
-                  imgSrcProduct {
-                    publicURL
-                    childImageSharp {
-                      gatsbyImageData(layout: FULL_WIDTH)
-                    }
-                  }
-                  mechanical_1 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_2 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_3 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_4 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_5 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                  mechanical_6 {
-                    imgSrcProduct {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    withNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                    nonNeutral {
-                      publicURL
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
-                  }
-                }
-                html
-              }
-              fieldValue
-            }
-            fieldValue
-          }
-        }
-      }
-    `
+  const res = await axios.get(
+    "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-hot-product"
   );
+
+  const productPage = res.data?.listDevice?.Items;
   const productDetailComponent = require.resolve(
     "./src/pages/product-detail-v2/index.js"
   );
   const policy = require.resolve("./src/pages/policy/index.jsx");
   const aboutUS = require.resolve("./src/pages/about-us-v3/index.jsx");
-  const business1 = require.resolve("./src/pages/business-step1-v3/index.jsx");
-  const business2 = require.resolve("./src/pages/business-step2-v3/index.jsx");
   const business3 = require.resolve("./src/pages/business-step3-v3/index.jsx");
   const contact = require.resolve("./src/pages/contact-us-v3/index.jsx");
   const news = require.resolve("./src/pages/news-v3/index.jsx");
@@ -263,19 +92,19 @@ exports.createPages = async function ({ actions, graphql }) {
     path: `/policy/`,
     component: policy,
   });
-  createPage({
-    path: `/product-detail/`,
-    component: productDetailComponent,
-    context: {
-      data: productPage,
-    },
-  });
-  productPage["data"].ProductGroups.group.forEach(async (prod) => {
+  // createPage({
+  //   path: `/product-detail/`,
+  //   component: productDetailComponent,
+  //   context: {
+  //     data: productPage,
+  //   },
+  // });
+  productPage.forEach(async (prod) => {
     await createPage({
-      path: `/product-detail/${prod.fieldValue}/`,
+      path: `/product-detail/${prod.id}`,
       component: productDetailComponent,
       context: {
-        data: prod.group,
+        data: prod,
       },
     });
   });
@@ -283,15 +112,6 @@ exports.createPages = async function ({ actions, graphql }) {
   createPage({
     path: `/about-us/`,
     component: aboutUS,
-  });
-  createPage({
-    path: `/business-step1/`,
-    component: business1,
-  });
-
-  createPage({
-    path: `/business-step2/`,
-    component: business2,
   });
   createPage({
     path: `/personal-step1/`,
@@ -303,7 +123,7 @@ exports.createPages = async function ({ actions, graphql }) {
     component: personal2,
   });
   createPage({
-    path: `/business-step3/`,
+    path: `/business/`,
     component: business3,
   });
   createPage({

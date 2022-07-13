@@ -43,25 +43,19 @@ function SkeletonProductInfor() {
 }
 
 const IndexPage = ({ pageContext }) => {
+  const { data } = pageContext;
   const [modalShow, setModalShow] = useState(false);
 
   const location = useLocation();
   const { href } = location;
 
-  const deviceTypeId = location.search.split("?").pop();
+  const deviceTypeId = data.id;
   const [deviceType, setDeviceType] = useState(null);
   const [deviceShapeList, setDeviceShapeList] = useState([]);
   const [deviceDetail, setDeviceDetail] = useState(null);
 
   const [activeShape, setActiveShape] = useState(0);
   const [activeDevice, setActiveDevice] = useState(0);
-
-  console.log("deviceTypeId: ", deviceTypeId);
-  console.log("deviceType: ", deviceType);
-  console.log("deviceShapeList: ", deviceShapeList);
-  console.log("activeShape: ", activeShape);
-  console.log("activeDevice: ", activeDevice);
-  console.log("deviceDetail: ", deviceDetail);
 
   useEffect(() => {
     const getDeviceTypeDetail = async () => {
@@ -287,14 +281,13 @@ const IndexPage = ({ pageContext }) => {
       </section>
     );
   };
-
   return (
     <LayoutSmartLighting>
       <Seo
-        title={deviceType?.nameVi}
-        description={deviceType?.listDescriptionVi[0]?.slice(0, 120)}
-        metaImage={deviceDetail?.imageURL && deviceDetail?.imageURL[0]}
-        url={href}
+        title={data?.nameVi}
+        description={data?.descriptionVi}
+        metaImage="/thumbnail.png"
+        url={`/product-detail/${data.id}`}
       />
       <BuildHeader />
       <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />

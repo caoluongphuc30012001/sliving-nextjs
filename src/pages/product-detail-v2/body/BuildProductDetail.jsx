@@ -83,8 +83,6 @@ export default function BuildProductDetail({ deviceDetail = {} }) {
                     }
                   });
 
-                  console.log(splitData);
-
                   return `<td>${splitData
                     .map((item) => item.left)
                     .join("")}</td><td>${splitData

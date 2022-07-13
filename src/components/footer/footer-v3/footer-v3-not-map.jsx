@@ -9,6 +9,7 @@ import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
 
 import "./footer.scss";
+import {Link} from 'gatsby'
 
 const BuildLogo = () => (
   <img src={logoSliving} alt="logo Unicloud" width={283} height="auto" />
@@ -49,14 +50,9 @@ function BuildAboutUs(props) {
       <ul>
         {listArray?.map((about) => (
           <li key={about.id}>
-            <a
-              className="item-about text-white "
-              href={about.url}
-              target={about.url.includes("https://") ? "_blank" : "_self"}
-              rel="noreferrer"
-            >
+            <Link className="item-about text-white " to={about.url}>
               {about.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -81,9 +77,9 @@ function BuildApps() {
 function Footer() {
   const listAbout = [
     { id: 0, title: "Giới thiệu", url: "/about-us" },
-    { id: 1, title: "Giải pháp", url: "/coming-soon" },
+    { id: 1, title: "Giải pháp", url: "/business" },
     { id: 2, title: "Bản tin", url: "https://unicloud.com.vn/news" },
-    { id: 3, title: "Liên hệ", url: "/contact-us/" },
+    { id: 3, title: "Liên hệ", url: "/contact-us" },
   ];
 
   const listHref = [

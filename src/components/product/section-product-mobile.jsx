@@ -51,7 +51,7 @@ const ContentRight = ({ listProduct, current }) => {
           {listProduct.map((item) => {
             return (
               <SwiperSlide key={item.id} className="list-product">
-                <Link to={`/product-detail/?${item.id}`}>
+                <Link to={`/product-detail/${item.id}`}>
                   <div className="item-box">
                     <div className="img-box">
                       <img src={item.imageURL} alt="" />
@@ -85,7 +85,7 @@ const SectionProductMobile = ({ productTypes }) => {
           `https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/dropdown/get-device-type/${current.id}`
         );
 
-        setListProduct(res.data.Items);
+        setListProduct(res.data?.Items);
       } catch (error) {
         console.log(error);
       }

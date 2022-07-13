@@ -9,7 +9,7 @@ import iconPhone from "@images/footer-v3/svg/icon-phone.svg";
 import iconEmail from "@images/footer-v3/svg/icon-email.svg";
 import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
-
+import { Link } from "gatsby";
 import "./footer.scss";
 
 const BuildLogo = () => (
@@ -52,14 +52,9 @@ function BuildAboutUs(props) {
       <ul>
         {listArray?.map((about) => (
           <li key={about.id}>
-            <a
-              className="item-about text-white "
-              href={about.url}
-              target={about.url.includes("https://") ? "_blank" : "_self"}
-              rel="noreferrer"
-            >
-              {about.title}
-            </a>
+            <Link className="item-about text-white " to={about.url}>
+              <div>{about.title}</div>
+            </Link>
           </li>
         ))}
       </ul>
@@ -90,10 +85,10 @@ function Footer() {
 
   const listAbout = [
     { id: 0, title: "Giới thiệu", url: "/about-us" },
-    { id: 1, title: "Giải pháp", url: "/coming-soon" },
+    { id: 1, title: "Giải pháp", url: "/business" },
     { id: 2, title: "Bản tin", url: "https://unicloud.com.vn/news" },
     // { id: 3, title: "Tuyển dụng", url: "https://career.unicloud.com.vn/" },
-    { id: 3, title: "Liên hệ", url: "/contact-us/" },
+    { id: 3, title: "Liên hệ", url: "/contact-us" },
   ];
 
   const listHref = [

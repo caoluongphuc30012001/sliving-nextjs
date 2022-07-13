@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   //   height: 100vh;
-  min-height: 800px;
+  min-height: calc(100vh - 90px);
   .container {
   }
   .container-header {
@@ -45,9 +45,9 @@
 }
 @media only screen and (max-width: 767px) {
   .section-top-solution-package {
-    margin-top: 60px;
+    margin-top: 64px;
     background-image: url("../../images/business-step1-v3/png/img-mobile-top-solution.png");
-    min-height: 560px;
+    min-height: calc(100vh - 64px);
     .container-header {
       margin-top: 58px;
     }

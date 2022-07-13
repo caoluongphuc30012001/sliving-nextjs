@@ -1,9 +1,8 @@
-import React, { useState, useLayoutEffect, useContext, useEffect } from "react";
+import React, { useState,  useContext, useEffect } from "react";
 import { Data } from "@data/tableData2.js";
 
 import { BusinessStateContext } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise-business";
-import { navigate } from "gatsby";
 import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
 const Table2 = ({ table }) => {
@@ -81,7 +80,7 @@ const SubTable = ({ table }) => {
       </tr>
       <tr className="body-table-row">
         <td className="table-data">
-          <div className="quantity-data">liên hệ</div>
+          <div className="quantity-data">Liên hệ</div>
         </td>
       </tr>
     </tbody>

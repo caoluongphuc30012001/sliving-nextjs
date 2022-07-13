@@ -26,7 +26,7 @@ const ListItem = [
   {
     id: 0,
     title: "Giải Pháp Bãi Đỗ Xe Trong Hầm",
-    secondTitle: "Sơ Đồ Giải Pháp Bãi Đỗ Xe Trong Hầm",
+    secondTitle: "Giải Pháp Sơ Đồ Bãi Đỗ Xe Trong Hầm",
     mainImg: item1Img,
     iconList: [
       {
@@ -222,11 +222,6 @@ const SectionParkingSolution = () => {
   return (
     <section className="section-parking-solution">
       <div className="parking-solution-container">
-        {/* <div className="content">
-          <h2 className="sub-title">SMART PARKING</h2>
-          <span className="title">Giải Pháp Smart Parking</span>
-          <div className="underline"></div>
-        </div> */}
         <Row className="row-line-center">
           <span className="title-eng-line-center">SMART PARKING</span>
           <h2 className="title-line-center">Giải Pháp Smart Parking</h2>
