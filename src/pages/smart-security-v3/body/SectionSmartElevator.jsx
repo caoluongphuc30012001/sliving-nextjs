@@ -33,8 +33,8 @@ function SectionSmartElevator() {
               <span>Tiết kiệm thời gian</span>
             </p>
             <p className="sub-title-smart-door">
-              Hệ thống sẽ tính toán sao cho việc di chuyển thang máy ở các tầng
-              trong thời gian ngắn và hợp lý nhất.
+              Hệ thống sẽ tính toán việc di chuyển thang máy đến các tầng trong
+              thời gian ngắn và hợp lý nhất.
             </p>
             <p className="title-smart-door-2">
               <Image src={iconV} />

@@ -122,7 +122,7 @@ const SectionProductsSlider = ({ listSlide }) => {
         </div>
         {listSlide.map((slide, index) => {
           return (
-            <div className={index == toggleState ? "slider active" : "slider"}>
+            <div className={index === toggleState ? "slider active" : "slider"}>
               <div className="slider-left__content">
                 {!slide?.phoneImg ? (
                   <ProductItemSwiper
@@ -156,7 +156,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                   <div className="content-container">
                     <div className="product-right-content">
                       <h4 className="product-right-subtitle">
-                        {slide.subTitle}
+                        {slide.subTitle.toUpperCase()}
                       </h4>
                       <h1 className="product-right-title">{slide.title}</h1>
                       <div className="product-right-divider"></div>

@@ -59,7 +59,7 @@ function SectionQuickSupport() {
           <div className="quick-support-content">
             <div className="quick-support-content-row">
               <h3 className="quick-support-content-title text-capitalize">
-                Hỗ trợ nhanh
+                Liên hệ
               </h3>
             </div>
             <div className="quick-support-content-row d-flex">
@@ -76,7 +76,7 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Điện thoại</h5>
+                <h5>Hotline</h5>
                 <span>19006054</span>
               </div>
             </div>
