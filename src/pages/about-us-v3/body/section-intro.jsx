@@ -27,7 +27,7 @@ const SectionIntro = () => {
         {
           id: 0,
           content:
-            "Không ngừng đổi mới, sáng tạo, Unicloud đồng hành cùng Chính phủ trên con đường số hóa nền kinh tế, gia nhập nhóm doanh nghiệp dẫn đường " +
+            "Không ngừng đổi mới, không ngừng sáng tạo...., Unicloud đồng hành cùng Chính phủ trên con đường số hóa nền kinh tế, gia nhập nhóm doanh nghiệp dẫn đường " +
             "trong cuộc đua cách mạng số vì một Việt Nam hùng cường với nền tảng công nghệ mang tầm Quốc tế. ",
         },
         {

@@ -222,8 +222,8 @@ const SectionProductsSlider = () => {
             title: "Quản Lý Thông Minh Với Sliving App",
             subTitle: "SLIVING APP",
             contents: [
-              "Tính năng vượt trội:Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
-              "Giám sát & cảnh báo:  Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
+              "Tính năng vượt trội: Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
+              "Giám sát & cảnh báo: Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
             ],
             listItem: [],
             titles: [],

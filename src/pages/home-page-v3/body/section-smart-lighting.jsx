@@ -45,20 +45,21 @@ function SectionSmartLighting() {
           <Col lg={7} md={6} sm={12} className="smart-lighting-col-left">
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
-                Chiếu sáng sử dụng công nghệ điều khiển tác động vào nguồn sáng
-                nhằm đạt hai mục tiêu: nâng cao chất lượng chiếu sáng (về độ
-                rọi, độ chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Vì thế, hệ
-                thống sản phẩm chiếu sáng của Sliving không chỉ đáp ứng nhu cầu
-                chiếu sáng mà còn đáp ứng được nhu cầu hoạt động thông minh.
+                Hệ thống chiếu sáng sử dụng công nghệ điều khiển tác động vào
+                nguồn sáng nhằm đạt hai mục tiêu: nâng cao chất lượng chiếu sáng
+                (về độ rọi, độ chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Vì
+                thế, hệ thống sản phẩm chiếu sáng của Sliving đáp ứng được cả
+                nhu cầu chiếu sáng và hoạt động thông minh.
               </p>
               <br />
               <p className="smart-lighting-des">
-                Tích hợp, thử nghiệm thành công và đưa ra thị trường bộ điều
-                khiển panel LED, LED Downlight cho phép bật tắt, Dimming, đổi
-                màu từ xa bằng công nghệ RF. Điều khiển trên Smartphone bằng
-                công nghệ không dây, nhằm mục đích điều khiển chiếu sáng hội
-                trường, phòng trưng bày sản phẩm, bộ điều khiển tòa nhà có nhiều
-                kịch bản chiếu sáng theo yêu cầu của khách hàng.
+                Sau một thời gian nghiên cứu, tích hợp và thử nghiệm thành công
+                bộ điều khiển panel LED, LED Downlight - cho phép bật tắt và
+                Dimming - đổi màu từ xa bằng công nghệ RF, đã chính thức ra mắt
+                thị trường. Điều khiển trên Smartphone bằng công nghệ không dây,
+                nhằm mục đích điều khiển chiếu sáng hội trường, phòng trưng bày
+                sản phẩm, bộ điều khiển tòa nhà có nhiều kịch bản chiếu sáng
+                theo yêu cầu của khách hàng.
               </p>
             </div>
             <div className="smart-lighting-des-mobile d-none">
