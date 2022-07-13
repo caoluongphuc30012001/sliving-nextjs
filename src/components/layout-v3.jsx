@@ -100,7 +100,7 @@ function LayoutV3({ children }) {
   },[url])
   return (
     <>
-      <Navbar listRoute={listRoute} logo={logo} />
+      <Navbar listRoute={listRoute} logo={logo} business={url.includes("business")} />
       <main>{children}</main>
       {/* <FooterV3 /> */}
       <Footer />
