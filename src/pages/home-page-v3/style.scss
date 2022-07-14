@@ -117,8 +117,8 @@ span.detail-v3 {
   .advise-now-btn,
   .learn-more-btn {
     height: 40px;
-    padding: 8px 34px;
-    width: 184px;
+    // padding: 8px 34px;
+    width: clamp(150px, 39.4vw , 184px);
   }
 
   .advise-now-btn {
@@ -186,7 +186,7 @@ span.detail-v3 {
 //   }
 // }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 360px) {
   .btn-group {
     display: block !important;
   }
