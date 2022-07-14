@@ -16,7 +16,13 @@ function SectionSmartLighting() {
     {
       id: 0,
       linkImg: imgSmartRemoteControl,
-      title: "Điều khiển từ xa",
+      title: (
+        <>
+          Điều khiển
+          <br />
+          từ xa
+        </>
+      ),
     },
     {
       id: 1,
