@@ -8,7 +8,7 @@
 .slick-thumb {
   position: relative !important;
   li {
-    width: 170px !important;
+    // width: 170px !important;
     height: 160px;
   }
 }
@@ -24,9 +24,13 @@
 }
 .thumb-bottom-slide {
   margin-top: 32px;
+
+  .wrapper-thumb-bottom{
+    padding: 0 10px;
+  }
 }
 .thumb-bottom {
-  width: 170px !important;
+  // width: 170px !important;
   height: 160px;
   border-radius: 8px;
   img {
@@ -140,7 +144,7 @@
       font-size: 16px;
     }
   }
-  .btn-group{
+  .btn-group {
     display: flex !important;
   }
   .product-info-detail {
@@ -167,8 +171,6 @@
         color: #454647;
       }
     }
-
-   
   }
   .group-shopping-wrap {
     width: 100%;
