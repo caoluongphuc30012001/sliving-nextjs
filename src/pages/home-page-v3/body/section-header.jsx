@@ -15,7 +15,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useTranslation } from "react-i18next";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
@@ -48,14 +47,8 @@ const SectionHeader = () => {
     { id: 0, imgUrl: imgBgMobile },
     { id: 1, imgUrl: imgBgMobile2 },
   ];
-  const { i18n, ready,t } = useTranslation();
-  const Handle = () => {
-    i18n.changeLanguage(i18n.language === "vn" ? "en" : "vn");
-  };
-  console.log(t("about.us.reality"));
   return (
     <header className="home-page-v3">
-      <button onClick={Handle}>click</button>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
