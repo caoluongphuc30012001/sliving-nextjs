@@ -1,3 +1,14 @@
 {
-    
+    "contact.formContact.titleMain":"Hãy Để Chúng Tôi Tư Vấn Đến Bạn",
+    "contact.formContact.subTileMain":"CONTACT US",
+    "contact.formContact.inputTitle.name":"Họ và Tên",
+    "contact.formContact.inputTitle.email":"Email",
+    "contact.formContact.inputTitle.phoneNumber":"Số điện thoại",
+    "contact.formContact.inputTitle.message":"Lời nhắn/ Thắc mắc",
+    "contact.formContact.inputPlaceholder.name":"Nhập tên của bạn ở đây",
+    "contact.formContact.inputPlaceholder.email":"Nhập email của bạn ở đây",
+    "contact.formContact.inputPlaceholder.phoneNumber":"Nhập số điện thoại của bạn ở đây",
+    "contact.formContact.inputPlaceholder.message":"Để lại thắc mắc của bạn ở đây",
+    "contact.formContact.button":"Nhận tư vấn",
+    "contact.formContact.invalid":"Dữ liệu không hợp lệ"
 }

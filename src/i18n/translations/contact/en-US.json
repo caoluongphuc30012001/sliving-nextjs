@@ -1,1 +1,14 @@
-{}
+{
+    "contact.formContact.titleMain":"Let us support you",
+    "contact.formContact.subTileMain":"CONTACT US",
+    "contact.formContact.inputTitle.name":"Full name",
+    "contact.formContact.inputTitle.email":"Email",
+    "contact.formContact.inputTitle.phoneNumber":"Number Phone",
+    "contact.formContact.inputTitle.message":"Message/Question",
+    "contact.formContact.inputPlaceholder.name":"Nhập tên của bạn ở đây",
+    "contact.formContact.inputPlaceholder.email":"Nhập email của bạn ở đây",
+    "contact.formContact.inputPlaceholder.phoneNumber":"Nhập số điện thoại của bạn ở đây",
+    "contact.formContact.inputPlaceholder.message":"Để lại thắc mắc của bạn ở đây",
+    "contact.formContact.button":"Submit",
+    "contact.formContact.invalid":"Dữ liệu không hợp lệ"
+}
