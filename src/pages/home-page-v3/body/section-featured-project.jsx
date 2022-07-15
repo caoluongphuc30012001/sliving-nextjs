@@ -57,7 +57,7 @@ function SectionFeaturedProject() {
       <div className="container-1220 feature-project-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">FEATURED PROJECT</span>
-          <h2 className="title-line-center">Dự Án Thực Tế Nổi Bật Nhất</h2>
+          <h2 className="title-line-center">Dự Án Thực Tế Nổi Bật</h2>
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>

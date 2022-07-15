@@ -1,14 +1,18 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import imgLeft from "../../../images/smart-security-v3/bg-smart-security-4.png";
+import imgLeft from "../../../images/smart-security-v3/bg-smart-security-5.png";
 import iconV from "../../../images/smart-security-v3/icon-tick-v-smart-security.svg";
 
 function SectionSmartDoorLocks() {
   return (
     <section className="bg-smart-door-locks" id="smart-door-locks">
       <Container className="max-width-1180 padding-left-right-smart-door">
-        <h3 className="sub-title-smart-secuirity">SMART DOOR LOCKS</h3>
-        <h2 className="title-smart-secuirity">Hệ Thống Khoá Cửa Thông Minh</h2>
+        <h3 className="sub-title-smart-secuirity" style={{ padding: "0 12px" }}>
+          SMART DOOR LOCK & VIDEO DOOR PHONE
+        </h3>
+        <h2 className="title-smart-secuirity" style={{ padding: "0 12px" }}>
+          Hệ thống khoá cửa và chuông hình thông minh
+        </h2>
         <div>
           <div className="div-under-smart-security"></div>
         </div>
@@ -41,13 +45,13 @@ function SectionSmartDoorLocks() {
               <span>Bảo vệ an toàn tuyệt đối</span>
             </p>
             <p className="sub-title-smart-door">
-              Bảo vệ an toàn tuyệt đối cho căn hộ với các tính năng bảo mật như:
-              báo động âm thanh khi khóa bị tác động một lực mạnh bên ngoài, tự
-              động vô hiệu hóa khi nhập sai mật khẩu nhiều lần liên tiếp,...
+              Với các tính năng bảo mật như: báo động âm thanh khi khóa bị tác
+              động một lực mạnh bên ngoài, tự động vô hiệu hóa khi nhập sai mật
+              khẩu nhiều lần liên tiếp,...
             </p>
             <p className="title-smart-door-2">
               <Image src={iconV} />
-              <span>Kiểm soát lịch trình vào/ra chi tiết</span>
+              <span>Kiểm soát lịch trình vào/ra</span>
             </p>
             <p className="sub-title-smart-door">
               Tăng cường kết nối cho phép bạn khóa và mở cửa từ xa. Tự động gửi

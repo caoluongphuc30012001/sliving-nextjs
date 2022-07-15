@@ -290,7 +290,7 @@ const IndexPage = ({ pageContext }) => {
         url={`/product-detail/${data.id}`}
       />
       <BuildHeader />
-      <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} />
+      <BuildProductDetail deviceDetail={deviceDetail?.ViProductDetail} isLoading={!deviceDetail} />
       <SectionPopularProductSliving />
     </LayoutSmartLighting>
   );

@@ -36,32 +36,68 @@ const SectionSolution = () => {
   const arrProd = [
     {
       id: 0,
-      desc: "Cài đặt lịch trình tắt / mở đèn",
+      desc: (
+        <>
+          Lịch trình
+          <br />
+          tắt/mở đèn
+        </>
+      ),
       icon: iconBulb,
     },
     {
       id: 1,
-      desc: "Công tắc cảm ứng",
+      desc: (
+        <>
+          Công tắc
+          <br />
+          cảm ứng
+        </>
+      ),
       icon: iconTouch,
     },
     {
       id: 2,
-      desc: "Bộ điều khiển ánh sáng tâm trạng",
+      desc: (
+        <>
+          Điều khiển ánh
+          <br />
+          sáng tâm trạng
+        </>
+      ),
       icon: iconLight,
     },
     {
       id: 3,
-      desc: "Cảm biến bảo vệ",
+      desc: (
+        <>
+          Cảm biến
+          <br />
+          bảo vệ
+        </>
+      ),
       icon: iconSecurity,
     },
     {
       id: 4,
-      desc: "Điều khiển từ xa thông minh      ",
+      desc: (
+        <>
+          Điều khiển từ xa
+          <br />
+          thông minh
+        </>
+      ),
       icon: iconRemote,
     },
     {
       id: 5,
-      desc: "Hệ thống điều khiển rèm cửa",
+      desc: (
+        <>
+          Điều khiển
+          <br />
+          rèm cửa
+        </>
+      ),
       icon: iconCurtain,
     },
   ];

@@ -20,8 +20,7 @@ const SmartSecurity = () => {
     <LayoutSecurity>
       <Seo
         title="Smart Building"
-        description="Chúng tôi tự hào khi mang đến cho khách hàng một hàng rào an ninh 
-        ứng dụng công nghệ số kiên cố, hiện đại, vững chắc và an toàn cho các khu dân cư, dự án và tòa nhà."
+        description="Chúng tôi tự hào mang đến cho các dự án BĐS - chung cư, toà nhà văn phòng,... một hàng rào an ninh được ứng dụng công nghệ số kiên cố, vững chắc, hiện đại, và an toàn."
         url="/smart-building/"
         metaImage="/thumbnail.png"
       />

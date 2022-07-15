@@ -14,9 +14,9 @@ function SectionTopSmartSecurity() {
           <Col md={6} className="order-first order-md-last">
             <h2 className="title-top-smart-security">SMART BUILDING</h2>
             <p className="detail-top-smart-security">
-              Chúng tôi tự hào khi mang đến cho khách hàng một hàng rào an ninh
-              ứng dụng công nghệ số kiên cố, hiện đại, vững chắc và an toàn cho
-              các khu dân cư, dự án và tòa nhà.
+              Chúng tôi tự hào mang đến cho các dự án BĐS - chung cư, toà nhà
+              văn phòng,... một hàng rào an ninh được ứng dụng công nghệ số kiên
+              cố, vững chắc, hiện đại, và an toàn.
             </p>
           </Col>
         </Row>

@@ -17,6 +17,7 @@
   font-size: 36px;
   line-height: 48px;
   color: #2c2d2e;
+  text-transform: capitalize;
 }
 .div-under-smart-security {
   width: 80px;
@@ -25,6 +26,17 @@
   background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
   border-radius: 200px;
 }
+
+.div-wrapper-door {
+  .title-smart-parking-security.mobile {
+    display: none;
+  }
+  p {
+    max-width: 300px;
+    padding: 0 12px;
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .sub-title-smart-secuirity {
     font-weight: 700;
@@ -126,6 +138,18 @@
       padding-right: 0px !important;
     }
   }
+
+  .div-wrapper-door {
+    .title-smart-parking-security.desktop {
+      display: none;
+    }
+    .title-smart-parking-security.mobile {
+      display: block;
+    }
+    p {
+      max-width: 100%;
+    }
+  }
 }
 //	section smart parking
 .bg-smart-parking-security {
@@ -159,6 +183,7 @@
   font-size: 16px;
   line-height: 24px;
   color: #454647;
+  text-transform: capitalize;
 }
 @media only screen and (max-width: 575px) {
   .div-wrapper-smart-parking {
@@ -342,4 +367,15 @@
 #smart-turnstile,
 #face-id-attendance {
   scroll-margin-top: 60px;
+}
+
+@media only screen and (max-width: 425px) {
+  .div-wrapper-door {
+    .title-smart-parking-security.desktop {
+      display: block;
+    }
+    .title-smart-parking-security.mobile {
+      display: none;
+    }
+  }
 }

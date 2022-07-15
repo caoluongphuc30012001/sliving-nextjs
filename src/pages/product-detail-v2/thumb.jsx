@@ -6,7 +6,6 @@ import img1 from "@images/product/prod-about.svg";
 import img2 from "@images/product/prod-spec.svg";
 import img3 from "@images/product/prod.svg";
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
 import Slider from "react-slick";
 import "./style.scss";
 
@@ -89,7 +88,7 @@ export default class CenterMode extends Component {
     };
     return (
       <div className="thumb-wrap">
-        <Fancybox options={{ infinite: false }}>
+        <Fancybox options={{ infinite: true }}>
           <Slider
             asNavFor={this.state.nav2}
             infinite={false}
@@ -124,18 +123,16 @@ export default class CenterMode extends Component {
         >
           {this.state.arrThumbs.map((image, index) => {
             return (
-              <React.Fragment key={index.toString()}>
+              <div key={index.toString()} className="wrapper-thumb-bottom">
                 {image !== undefined && (
                   <>
                     <div key={index} className="thumb-bottom">
-                      <div className="" key={index}>
-                        {image && <img src={image} alt="" />}
-                      </div>
+                      {image && <img src={image} alt="" />}
                     </div>
                     <div className="divider-prod" />
                   </>
                 )}
-              </React.Fragment>
+              </div>
             );
           })}
         </Slider>
