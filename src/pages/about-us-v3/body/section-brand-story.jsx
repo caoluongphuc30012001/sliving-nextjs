@@ -12,15 +12,13 @@ function SectionBrandStory() {
         <Row className="row-line-center">
           <span className="title-eng-line-center">BRAND STORY</span>
           <h2 className="title-line-center">
-            {t(`SLIVING_PAGES.ABOUT_US_V3.SectionBrandStory.BRAND_STORY`)}
+            {t("aboutUs.brandStory.mainTitle")}
           </h2>
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
           <p className="description-line-center">
-            {t(
-              `SLIVING_PAGES.ABOUT_US_V3.SectionBrandStory.BRAND_STORY_CONTENT`
-            )}
+            {t("aboutUs.brandStory.mainDesc")}
           </p>
         </Row>
         <div className="brand-story-img">

@@ -6,35 +6,38 @@ import imgService from "../../../images/about-us-v3/svg/icon-service-customer-ce
 import imgProduct from "../../../images/about-us-v3/svg/icon-product-customer-centric.svg";
 import imgProduce from "../../../images/about-us-v3/svg/icon-produce-customer-centric.svg";
 
+import { useTranslation } from "react-i18next";
+
 function SectionCustomerCentric() {
+  const { t } = useTranslation();
   const listCertification = [
     {
       id: 1,
-      title: "Dịch vụ",
+      title: t("aboutUs.customerCentric.groupServices.title1"),
       linkImg: imgService,
       content: [
-        "Kinh nghiệm triển khai lắp đặt tại các dự án lớn",
-        "Dịch vụ bảo hành, đào tạo và chuyển giao dự án cho đối tác chuyên nghiệp.",
+        t("aboutUs.customerCentric.groupServices.desc1.1"),
+        t("aboutUs.customerCentric.groupServices.desc1.2"),
       ],
     },
     {
       id: 2,
-      title: "Sản phẩm",
+      title: t("aboutUs.customerCentric.groupServices.title2"),
       linkImg: imgProduct,
       content: [
-        "Hệ sinh thái sản phẩm đa dạng, tích hợp nhanh chóng.",
-        "Tất cả các sản phẩm đều có thể điều chỉnh theo nhu cầu của khách hàng/doanh nghiệp",
-        "Hệ thống sản phẩm mở cho phép kết nối đa dạng với các đối tác dịch vụ.",
-        "Quy trình thiết kế, thử nghiệm khép kín được kiểm soát chất lượng chặt chẽ.",
+        t("aboutUs.customerCentric.groupServices.desc2.1"),
+        t("aboutUs.customerCentric.groupServices.desc2.2"),
+        t("aboutUs.customerCentric.groupServices.desc2.3"),
+        t("aboutUs.customerCentric.groupServices.desc2.4"),
       ],
     },
     {
       id: 3,
-      title: "Sản xuất",
+      title: t("aboutUs.customerCentric.groupServices.title3"),
       linkImg: imgProduce,
       content: [
-        "Hệ thống máy móc hiện đại cùng tiêu chuẩn phòng sạch đáp ứng tiêu chuẩn khắt khe của lắp ráp.",
-        "Công nghệ khép kín hiện đại.",
+        t("aboutUs.customerCentric.groupServices.desc3.1"),
+        t("aboutUs.customerCentric.groupServices.desc3.2"),
       ],
     },
   ];
@@ -43,7 +46,9 @@ function SectionCustomerCentric() {
       <div className="max-width-1180  section-customer-centric container-v3">
         <Row className="row-line-center">
           <span className="title-eng-line-center">CUSTOMER CENTRIC</span>
-          <h2 className="title-line-center">Lấy khách hàng làm trung tâm</h2>
+          <h2 className="title-line-center">
+            {t("aboutUs.customerCentric.mainTitle")}
+          </h2>
           <div className="img-line-center d-flex justify-content-center">
             <img className="underline-img" src={imgUnderLine} alt="" />
           </div>

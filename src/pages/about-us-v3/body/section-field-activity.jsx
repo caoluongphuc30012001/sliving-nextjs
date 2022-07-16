@@ -9,15 +9,20 @@ import iconActivity2 from "../../../images/about-us-v3/png/img-activity2.png";
 import iconActivity3 from "../../../images/about-us-v3/png/img-activity3.png";
 import iconActivity4 from "../../../images/about-us-v3/png/img-activity4.png";
 
+import { useTranslation } from "react-i18next";
+
 function SectionActivity() {
+  const { t } = useTranslation();
+
   const listCertification = [
     {
       id: 1,
       linkIconLogo: iconCertification1,
       title: (
         <span>
-          Chứng nhận Đầu tư
-          <br /> Khu công nghệ cao
+          {t("aboutUs.fieldActivity.listItems.title1.1")}
+          <br />
+          {t("aboutUs.fieldActivity.listItems.title1.2")}
         </span>
       ),
     },
@@ -26,7 +31,9 @@ function SectionActivity() {
       linkIconLogo: iconCertification2,
       title: (
         <span style={{ whiteSpace: "nowrap" }}>
-          Chứng nhận <br /> Cleanroom Fiel - Phòng Sạch
+          {t("aboutUs.fieldActivity.listItems.title2.1")}
+          <br />
+          {t("aboutUs.fieldActivity.listItems.title2.2")}
         </span>
       ),
     },
@@ -35,7 +42,9 @@ function SectionActivity() {
       linkIconLogo: iconCertification3,
       title: (
         <span>
-          Chứng nhận <br /> EMV Level
+          {t("aboutUs.fieldActivity.listItems.title3.1")}
+          <br />
+          {t("aboutUs.fieldActivity.listItems.title3.2")}
         </span>
       ),
     },
@@ -44,7 +53,9 @@ function SectionActivity() {
       linkIconLogo: iconCertification4,
       title: (
         <span>
-          Chứng nhận <br /> CE-FCC
+          {t("aboutUs.fieldActivity.listItems.title4.1")}
+          <br />
+          {t("aboutUs.fieldActivity.listItems.title4.2")}
         </span>
       ),
     },
@@ -75,7 +86,9 @@ function SectionActivity() {
     <section className="bg-section-activity">
       <div className="section-activity-container">
         <div className="content-container ">
-          <h3 className="section-activity-title">Lĩnh Vực Hoạt Động</h3>
+          <h3 className="section-activity-title">
+            {t("aboutUs.fieldActivity.groupContents.title1")}
+          </h3>
           <div className="max-width-1390 p-relative">
             <Row
               md={4}
@@ -97,7 +110,9 @@ function SectionActivity() {
           </div>
         </div>
         <div className="content-container">
-          <h3 className="section-activity-title">Chứng Nhận</h3>
+          <h3 className="section-activity-title">
+            {t("aboutUs.fieldActivity.groupContents.title2")}
+          </h3>
           <Row
             md={4}
             sm={2}
