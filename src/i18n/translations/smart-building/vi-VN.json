@@ -1,1 +1,192 @@
-{}
+{
+  "smartBuilding.sectionTop.title": "SMART BUILDING",
+  "smartBuilding.sectionTop.subTitle": "Chúng tôi tự hào mang đến cho các dự án BĐS - chung cư, toà nhà văn phòng,... một hàng rào an ninh được ứng dụng công nghệ số kiên cố, vững chắc, hiện đại, và an toàn.",
+  "smartBuilding.sectionSystem.title": "Các Hệ Thống Sử Dụng Trong Giải Pháp Smart Building",
+  "smartBuilding.sectionSystem.subTitle": "SMART BUILDING",
+  "smartBuilding.sectionSystem.smartDoorLock.title1": "SMART DOOR LOCK",
+  "smartBuilding.sectionSystem.smartDoorLock.title2": "VIDEO DOOR PHONE",
+  "smartBuilding.sectionSystem.smartDoorLock.title3": "SMART DOOR LOCK & VIDEO DOOR PHONE",
+  "smartBuilding.sectionSystem.smartDoorLock.subTitle": "Hệ thống khoá cửa và chuông hình thông minh",
+  "smartBuilding.sectionSystem.smartElevator.title": "SMART ELEVATOR",
+  "smartBuilding.sectionSystem.smartElevator.subTitle": "Hệ Thống Thang Máy Thông Minh",
+  "smartBuilding.sectionSystem.smartTurnstile.title": "SMART TURNSTILE",
+  "smartBuilding.sectionSystem.smartTurnstile.subTitle": "Hệ Thống Cửa Quay Thông Minh",
+  "smartBuilding.sectionSystem.smartFaceId.title": "FACE ID TIME ATTENDANCE",
+  "smartBuilding.sectionSystem.smartFaceId.subTitle": "Hệ Thống Chấm Công Bằng Khuôn Mặt",
+  "smartBuilding.sectionSmartDoorLocks.title": "Hệ thống khoá cửa và chuông hình thông minh",
+  "smartBuilding.sectionSmartDoorLocks.subTitle": "SMART DOOR LOCK & VIDEO DOOR PHONE",
+  "smartBuilding.sectionSmartDoorLocks.utilities": {
+    "title": "Tiện Ích",
+    "utilList": [
+      {
+        "title": "Tích hợp cách mở khóa hiện đại",
+        "subTitle": "Hỗ trợ các chế độ truy cập như: thẻ từ, mã số, vân tay, chìa khoá, chuông cửa có hình, điều khiển từ xa..."
+      },
+      {
+        "title": "Bảo vệ an toàn tuyệt đối",
+        "subTitle": "Với các tính năng bảo mật như: báo động âm thanh khi khóa bị tác động một lực mạnh bên ngoài, tự động vô hiệu hóa khi nhập sai mật khẩu nhiều lần liên tiếp,..."
+      },
+      {
+        "title": "Kiểm soát lịch trình vào/ra",
+        "subTitle": "Tăng cường kết nối cho phép bạn khóa và mở cửa từ xa. Tự động gửi tin nhắn, báo cáo lịch sử ra vào. Cung cấp giải pháp ưu việt cho chủ nhà trọ, Homestay để bảo vệ tài sản và quản lý dễ dàng hơn."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyDoorLocks.technologies": {
+    "title": "Công Nghệ Sử Dụng",
+    "technologyList": [
+      {
+        "title": "Thẻ từ",
+        "specificationList": ["Nhận biết thẻ <2cm", "Đọc mã thẻ <0.5s"]
+      },
+      {
+        "title": "Cảm biến",
+        "specificationList": ["Cảm biến vân tay điện dung", "Tỉ lệ sai <0.0002"]
+      },
+      {
+        "title": "Mật khẩu",
+        "specificationList": ["Trộn lẫn số ngẫu nhiên"]
+      },
+      {
+        "title": "Bộ nhớ lưu trữ",
+        "specificationList": ["100 thẻ, 100 vân tay, 100 Password, 8 Bluetooth"]
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyDoorLocks.collaborativeBrand.title": "Thương Hiệu Cộng Tác",
+  "smartBuilding.sectionTechnologyDoorLocks.collaborativeBrand.subTitle": "Hiện tại Unicloud đang cộng tác cùng thương hiệu khoá cửa thông minh Dahua.",
+  "smartBuilding.sectionSmartElevator.title": "Hệ Thống Thang Máy Thông Minh",
+  "smartBuilding.sectionSmartElevator.subTitle": "SMART ELEVATOR",
+  "smartBuilding.sectionSmartElevator.utilities": {
+    "title": "Tiện Ích",
+    "utilList": [
+      {
+        "title": "Tiết kiệm thời gian",
+        "subTitle": "Hệ thống sẽ tính toán việc di chuyển thang máy đến các tầng trong thời gian ngắn và hợp lý nhất."
+      },
+      {
+        "title": "Kiểm soát quyền di chuyển bằng thẻ từ",
+        "subTitle": "Mỗi khách hàng có 1 thẻ định danh riêng biệt, được cấp quyền di chuyển đến các tầng cụ thể. Đem đến sự kiểm soát an ninh tuyệt đối với các trường hợp người lạ vào tòa nhà."
+      },
+      {
+        "title": "Kiểm soát bằng nhận diện khuôn mặt",
+        "subTitle": "Nhận diện khuôn mặt để gọi thang máy, mở rào chắn khu vực gửi xe, tuỳ chọn chuông hình hoặc qua ứng dụng giúp chủ căn hộ có thể gọi thang máy đến đúng căn hộ của mình cách chính xác."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyElevator.technologies": {
+    "title": "Công Nghệ Sử Dụng",
+    "technologyList": [
+      {
+        "title": "Thiết bị đọc thẻ RFID/NFC",
+        "specificationList": []
+      },
+      {
+        "title": "Hệ thống điều khiển thang máy",
+        "specificationList": []
+      },
+      {
+        "title": "Hệ thống Server điều phối",
+        "specificationList": []
+      },
+      {
+        "title": "Ứng dụng gọi thang máy trên Smartphone",
+        "specificationList": []
+      },
+      {
+        "title": "Thiết bị nhận diện khuôn mặt",
+        "specificationList": []
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyElevator.collaborativeBrand.title": "Thương Hiệu Cộng Tác",
+  "smartBuilding.sectionTechnologyElevator.collaborativeBrand.subTitle": "Hiện tại Unicloud đang cộng tác phần cứng cùng thương hiệu thang máy Mitsubishi.",
+  "smartBuilding.sectionSmartTurnstile.title": "Hệ Thống Cửa Quay Thông Minh",
+  "smartBuilding.sectionSmartTurnstile.subTitle": "SMART TURNSTILE",
+  "smartBuilding.sectionSmartTurnstile.utilities": {
+    "title": "Tiện Ích",
+    "utilList": [
+      {
+        "title": "Tích hợp công nghệ định danh eKYC",
+        "subTitle": "Thiết bị nhận diện khuôn mặt 4.0 eKYC ở cửa quay giúp việc nhận diện, phân biệt và theo dấu người ra vào khu vực chính xác."
+      },
+      {
+        "title": "Tự động khoá thông minh",
+        "subTitle": "Tính năng tự động khoá và chống bám đuôi sẽ được kích hoạt sau vài giây khi có một người đi qua và chỉ cho một người đi qua một lần."
+      },
+      {
+        "title": "Tăng cường an ninh",
+        "subTitle": "Hệ thống camera có thể hoạt động offline đảm bảo an ninh ngay cả khi mất điện, gửi cảnh báo khi phát hiện các xâm nhập bất thường."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyTurnstile.technologies": {
+    "title": "Công Nghệ Sử Dụng",
+    "technologyList": [
+      {
+        "title": "Camera FaceID nhận diện khuôn mặt",
+        "specificationList": []
+      },
+      {
+        "title": "Công nghệ định danh 4.0 eKYC",
+        "specificationList": []
+      },
+      {
+        "title": "Thẻ quét để mở cửa",
+        "specificationList": []
+      },
+      {
+        "title": "Phần mềm gửi cảnh báo đến Server chủ",
+        "specificationList": []
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyTurnstile.collaborativeBrand.title": "Thương Hiệu Cộng Tác",
+  "smartBuilding.sectionTechnologyTurnstile.collaborativeBrand.subTitle": "Hệ thống phần mềm và phần cứng của Unicloud có thể tích hợp với mọi sản phẩm cửa quay có Trigger.",
+  "smartBuilding.sectionSmartFaceID.title": "Hệ Thống Chấm Công Bằng Khuôn Mặt",
+  "smartBuilding.sectionSmartFaceID.subTitle": "FACE ID TIME ATTENDANCE",
+  "smartBuilding.sectionSmartFaceID.utilities": {
+    "title": "Tiện Ích",
+    "utilList": [
+      {
+        "title": "Nhận diện nhanh & chính xác",
+        "subTitle": "Có thể xác thực từ khoảng cách xa mà không cần tiếp xúc thiết bị với tốc độ nhận diện gương mặt nhanh chóng và chính xác."
+      },
+      {
+        "title": "Tính bảo mật cao",
+        "subTitle": "Giải pháp chấm công hiện đại với độ bảo mật cao, tránh được tình trạng rò rỉ thông tin và hỗ trợ quản lý, xử lý dữ liệu an toàn."
+      },
+      {
+        "title": "Dễ dàng tích hợp",
+        "subTitle": "Có thể tích hợp FaceID với hệ thống thiết bị thông minh ở cửa ra vào, thang máy, khu chung cư, toà nhà nhằm mục đích tăng cường bảo mật và chấm công tiện lợi."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyFaceID.technologies": {
+    "title": "Công Nghệ Sử Dụng",
+    "technologyList": [
+      {
+        "title": "Công nghệ nhận diện khuôn mặt Face ID",
+        "specificationList": []
+      },
+      {
+        "title": "Giải thuật sinh trắc học khuôn mặt",
+        "specificationList": []
+      },
+      {
+        "title": "Trí tuệ nhân tạo (AI)",
+        "specificationList": []
+      },
+      {
+        "title": "Machine Learning",
+        "specificationList": []
+      },
+      {
+        "title": "Deep Learning",
+        "specificationList": []
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyFaceID.collaborativeBrand.title": "Thương Hiệu Cộng Tác",
+  "smartBuilding.sectionTechnologyFaceID.collaborativeBrand.subTitle": "Unicloud hiện tại đang cung cấp toàn bộ hệ thống Face ID cho khách hàng với các dự án nằm trong trung tâm thương mại, tòa nhà, chung cư, văn phòng,..."
+}

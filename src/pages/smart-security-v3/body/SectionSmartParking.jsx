@@ -1,18 +1,22 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
 import { Container, Row, Col, Image } from "react-bootstrap";
-import icon1 from "../../../images/smart-security-v3/icon-smart-door-lock.svg";
-import icon2 from "../../../images/smart-security-v3/icon-smart-elevator.svg";
-import icon3 from "../../../images/smart-security-v3/icon-smart-turmstile.svg";
-import icon4 from "../../../images/smart-security-v3/icon-face-id-time.svg";
+import icon1 from "@images/smart-security-v3/icon-smart-door-lock.svg";
+import icon2 from "@images/smart-security-v3/icon-smart-elevator.svg";
+import icon3 from "@images/smart-security-v3/icon-smart-turmstile.svg";
+import icon4 from "@images/smart-security-v3/icon-face-id-time.svg";
+import { useTranslation } from "react-i18next";
 
 function SectionSmartParking() {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-smart-parking-security">
       <Container className="max-width-1180 padding-left-right">
-        <h3 className="sub-title-smart-secuirity">SMART BUILDING</h3>
+        <h3 className="sub-title-smart-secuirity">
+          {t("smartBuilding.sectionSystem.subTitle")}
+        </h3>
         <h2 className="title-smart-secuirity">
-          Các Hệ Thống Sử Dụng Trong Giải Pháp Smart Building
+          {t("smartBuilding.sectionSystem.title")}
         </h2>
         <div>
           <div className="div-under-smart-security"></div>
@@ -27,13 +31,15 @@ function SectionSmartParking() {
                   </Col>
                   <Col md={8} lg={9} className="div-wrapper-door">
                     <h3 className="title-smart-parking-security desktop">
-                      SMART DOOR LOCK <br/> VIDEO DOOR PHONE
+                      {t("smartBuilding.sectionSystem.smartDoorLock.title1")}{" "}
+                      <br />{" "}
+                      {t("smartBuilding.sectionSystem.smartDoorLock.title2")}
                     </h3>
                     <h3 className="title-smart-parking-security mobile">
-                      SMART DOOR LOCK & VIDEO DOOR PHONE
+                      {t("smartBuilding.sectionSystem.smartDoorLock.title3")}
                     </h3>
                     <p className="sub-title-smart-parking-security">
-                      Hệ thống khoá cửa và chuông hình thông minh
+                      {t("smartBuilding.sectionSystem.smartDoorLock.subTitle")}
                     </p>
                   </Col>
                 </Row>
@@ -49,10 +55,10 @@ function SectionSmartParking() {
                   </Col>
                   <Col md={8} lg={9} className="">
                     <h3 className="title-smart-parking-security">
-                      SMART ELEVATOR
+                      {t("smartBuilding.sectionSystem.smartElevator.title")}
                     </h3>
                     <p className="sub-title-smart-parking-security">
-                      Hệ Thống Thang Máy Thông Minh
+                      {t("smartBuilding.sectionSystem.smartElevator.subTitle")}
                     </p>
                   </Col>
                 </Row>
@@ -68,10 +74,10 @@ function SectionSmartParking() {
                   </Col>
                   <Col md={8} lg={9} className="">
                     <h3 className="title-smart-parking-security">
-                      SMART TURNSTILE
+                      {t("smartBuilding.sectionSystem.smartTurnstile.title")}
                     </h3>
                     <p className="sub-title-smart-parking-security">
-                      Hệ Thống Cửa Quay Thông Minh
+                      {t("smartBuilding.sectionSystem.smartTurnstile.subTitle")}
                     </p>
                   </Col>
                 </Row>
@@ -87,10 +93,10 @@ function SectionSmartParking() {
                   </Col>
                   <Col md={8} lg={9} className="">
                     <h3 className="title-smart-parking-security">
-                      FACE ID TIME ATTENDANCE
+                      {t("smartBuilding.sectionSystem.smartFaceId.title")}
                     </h3>
                     <p className="sub-title-smart-parking-security">
-                      Hệ Thống Chấm Công Bằng Khuôn Mặt
+                      {t("smartBuilding.sectionSystem.smartFaceId.subTitle")}
                     </p>
                   </Col>
                 </Row>
