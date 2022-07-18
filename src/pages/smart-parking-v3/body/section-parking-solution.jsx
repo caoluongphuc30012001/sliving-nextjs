@@ -21,122 +21,38 @@ import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { Image, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
-const ListItem = [
-  {
-    id: 0,
-    title: "Giải Pháp Bãi Đỗ Xe Trong Hầm",
-    secondTitle: "Giải Pháp Sơ Đồ Bãi Đỗ Xe Trong Hầm",
-    mainImg: item1Img,
-    iconList: [
-      {
-        id: 0,
-        icon_b: unicloud_b,
-        icon: unicloud,
-        title: "Smart Cloud",
-        text: "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả",
-      },
-      {
-        id: 1,
-        icon_b: tv_b,
-        icon: tv,
-        title: "Gói dịch vụ",
-        text: "Cung cấp thông tin chi tiết lịch trình xe/dịch vụ điều hướng phương tiện/dịch vụ thanh toán online",
-      },
-      {
-        id: 2,
-        icon_b: connector_b,
-        icon: connector,
-        title: "Điểm kết nối thông minh",
-        text: "Kết nối tất cả thiết bị trong khu vực bãi đỗ xe thành mạng lưới",
-      },
-      {
-        id: 3,
-        icon_b: wifi_b,
-        icon: wifi,
-        title: "Thiết bị cảm biến",
-        text: "Nhận biết sự thay đổi trạng thái xe ra vào/thu thập thông tin/chuyển đổi tín hiệu",
-      },
-      {
-        id: 4,
-        icon_b: dualrect_b,
-        icon: dualrect,
-        title: "Bảng chỉ dẫn thông minh",
-        text: "Hiển thị thông tin số chỗ trống theo thời gian thực/điều hướng xe di chuyển đến địa điểm đỗ nhanh chóng",
-      },
-      {
-        id: 5,
-        icon_b: phone_b,
-        icon: phone,
-        title: "App & Map",
-        text: "Tích hợp bản đồ trong ứng dụng/định vị, dò, tìm vị trí/đặt chỗ trống thông qua thiết bị di động",
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "Giải Pháp Bãi Đỗ Xe Ngoài Trời",
-    secondTitle: "Sơ Đồ Giải Pháp Bãi Đỗ Xe Ngoài Trời",
-    mainImg: item2Img,
-    iconList: [
-      {
-        id: 0,
-        icon_b: unicloud_b,
-        icon: unicloud,
-        title: "Smart Cloud",
-        text: "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả",
-      },
-      {
-        id: 1,
-        icon_b: tv_b,
-        icon: tv,
-        title: "Gói dịch vụ",
-        text: "Cung cấp thông tin chi tiết lịch trình xe/dịch vụ điều hướng phương tiện/dịch vụ thanh toán online",
-      },
-      {
-        id: 2,
-        icon_b: connector_b,
-        icon: connector,
-        title: "Điểm kết nối thông minh",
-        text: "Kết nối tất cả thiết bị trong khu vực bãi đỗ xe thành mạng lưới",
-      },
-      {
-        id: 3,
-        icon_b: wifi_b,
-        icon: wifi,
-        title: "Thiết bị cảm biến",
-        text: "Nhận biết sự thay đổi trạng thái xe ra vào/thu thập thông tin/chuyển đổi tín hiệu",
-      },
-      {
-        id: 4,
-        icon_b: dualrect_b,
-        icon: dualrect,
-        title: "Bảng chỉ dẫn thông minh",
-        text: "Hiển thị thông tin số chỗ trống theo thời gian thực/điều hướng xe di chuyển đến địa điểm đỗ nhanh chóng",
-      },
-      {
-        id: 5,
-        icon_b: phone_b,
-        icon: phone,
-        title: "App & Map",
-        text: "Tích hợp bản đồ trong ứng dụng/định vị, dò, tìm vị trí/đặt chỗ trống thông qua thiết bị di động",
-      },
-      {
-        id: 6,
-        icon_b: security_b,
-        icon: security,
-        title: "Hệ thống bảo vệ",
-        text: "Đảm bảo các tính năng của thiết bị được hoạt động tốt nhất khi lắp đặt ngoài trời",
-      },
-    ],
-  },
+const mainImgList = [item1Img, item2Img];
+
+const imgIconList = [
+  [
+    { icon_b: unicloud_b, icon: unicloud },
+    { icon_b: tv_b, icon: tv },
+    { icon_b: connector_b, icon: connector },
+    { icon_b: wifi_b, icon: wifi },
+    { icon_b: dualrect_b, icon: dualrect },
+    { icon_b: dualrect_b, icon: dualrect },
+    { icon_b: phone_b, icon: phone },
+  ],
+  [
+    { icon_b: unicloud_b, icon: unicloud },
+    { icon_b: tv_b, icon: tv },
+    { icon_b: connector_b, icon: connector },
+    { icon_b: wifi_b, icon: wifi },
+    { icon_b: dualrect_b, icon: dualrect },
+    { icon_b: phone_b, icon: phone },
+    { icon_b: security_b, icon: security },
+  ],
 ];
 
-const MobileItem = ({ item }) => {
+const MobileItem = ({ item, parentId }) => {
+  const { icon_b } = imgIconList[parentId][item.id];
+
   return (
     <div className="content">
       <div>
-        <img src={item.icon_b} alt="" />
+        <img src={icon_b} alt="" />
       </div>
       <div className="content-title">{item.title}</div>
       <div className="content-text">{item.text}</div>
@@ -144,7 +60,9 @@ const MobileItem = ({ item }) => {
   );
 };
 
-const IconActive = ({ item, isActive, setActive, id }) => {
+const IconActive = ({ item, isActive, setActive, id, parentId }) => {
+  const { icon_b, icon } = imgIconList[parentId][item.id];
+
   return (
     <div
       onClick={() => setActive(id)}
@@ -160,7 +78,7 @@ const IconActive = ({ item, isActive, setActive, id }) => {
         </div>
       )}
       <div className="icon">
-        <img src={isActive ? item.icon_b : item.icon} alt="" />
+        <img src={isActive ? icon_b : icon} alt="" />
       </div>
     </div>
   );
@@ -168,11 +86,14 @@ const IconActive = ({ item, isActive, setActive, id }) => {
 
 const SolutionItem = ({ item, setModalShow }) => {
   const [active, setActive] = useState(0);
+
+  const { t, ready } = useTranslation();
+
   return (
     <div className="solution-item-container">
       <div className="solution-title">{item.title}</div>
       <div>
-        <img src={item.mainImg} alt=""></img>
+        <img src={mainImgList[item.id]} alt=""></img>
       </div>
       <div className="solution-title">{item.secondTitle}</div>
       <div className="solution-content">
@@ -185,6 +106,7 @@ const SolutionItem = ({ item, setModalShow }) => {
                 isActive={false}
                 id={icon.id}
                 setActive={setActive}
+                parentId={item.id}
               />
             ) : (
               <IconActive
@@ -193,13 +115,14 @@ const SolutionItem = ({ item, setModalShow }) => {
                 isActive={true}
                 id={icon.id}
                 setActive={setActive}
+                parentId={item.id}
               />
             );
           })}
         </div>
         <div className="content-container mobile">
           {item.iconList.map((icon) => {
-            return <MobileItem key={icon.id} item={icon} />;
+            return <MobileItem key={icon.id} item={icon} parentId={item.id} />;
           })}
         </div>
       </div>
@@ -210,7 +133,9 @@ const SolutionItem = ({ item, setModalShow }) => {
         onClick={() => setModalShow(true)}
         className="solution-button"
       >
-        <p className="button-text">Tư vấn ngay</p>
+        <p className="button-text">
+          {ready && t("smartParking.sectionParkingSolution.buttonAdvise")}
+        </p>
       </div>
     </div>
   );
@@ -219,27 +144,36 @@ const SolutionItem = ({ item, setModalShow }) => {
 const SectionParkingSolution = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
+  const { t, ready } = useTranslation();
+
+  const listItem = t("smartParking.sectionParkingSolution.listItem", {
+    returnObjects: true,
+  });
+
   return (
     <section className="section-parking-solution">
       <div className="parking-solution-container">
         <Row className="row-line-center">
-          <span className="title-eng-line-center">SMART PARKING</span>
-          <h2 className="title-line-center">Giải Pháp Smart Parking</h2>
+          <span className="title-eng-line-center">
+            {ready && t("smartParking.sectionParkingSolution.title")}
+          </span>
+          <h2 className="title-line-center">
+            {ready && t("smartParking.sectionParkingSolution.subTitle")}
+          </h2>
           <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
         </Row>
-        {ListItem.map((item) => {
-          return (
-            <>
+        {ready &&
+          listItem.map((item) => {
+            return (
               <SolutionItem
                 item={item}
                 key={item.id}
                 setModalShow={setModalShow}
               />
-            </>
-          );
-        })}
+            );
+          })}
       </div>
       <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </section>
