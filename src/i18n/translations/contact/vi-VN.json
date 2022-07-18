@@ -10,5 +10,15 @@
     "contact.formContact.inputPlaceholder.phoneNumber":"Nhập số điện thoại của bạn ở đây",
     "contact.formContact.inputPlaceholder.message":"Để lại thắc mắc của bạn ở đây",
     "contact.formContact.button":"Nhận tư vấn",
-    "contact.formContact.invalid":"Dữ liệu không hợp lệ"
+    "contact.formContact.invalid":"Dữ liệu không hợp lệ",
+    "contact.quickSupport.title":"Hỗ Trợ Nhanh",
+    "contact.quickSupport.hotline":"Hotline",
+    "contact.quickSupport.hotlineSubTitle":"19006054",
+    "contact.quickSupport.email":"Email",
+    "contact.quickSupport.emailSubTitle":" info@unicloud.com.vn",
+    "contact.quickSupport.address":" Địa chỉ",
+    "contact.quickSupport.headquarter":"Trụ sở chính Hà Nội",
+    "contact.quickSupport.headquarterSubTitle":"Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+    "contact.quickSupport.branch":"Chi nhánh Thành phố Hồ Chí Minh",
+    "contact.quickSupport.branchSubTitle":"Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh"
 }
