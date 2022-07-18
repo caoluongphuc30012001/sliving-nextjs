@@ -1,16 +1,16 @@
 import React from "react";
 
-import iconMaintain from "../../../images/smart-parking-v3/svg/icon-maintain.svg";
+import iconMaintain from "@images/smart-parking-v3/svg/icon-maintain.svg";
 
-import iconModernity from "../../../images/smart-parking-v3/svg/icon-modernity.svg";
+import iconModernity from "@images/smart-parking-v3/svg/icon-modernity.svg";
 
-import iconParkingPhone from "../../../images/smart-parking-v3/svg/icon-parking-phone.svg";
+import iconParkingPhone from "@images/smart-parking-v3/svg/icon-parking-phone.svg";
 
-import iconParkingTime from "../../../images/smart-parking-v3/svg/icon-parking-time.svg";
+import iconParkingTime from "@images/smart-parking-v3/svg/icon-parking-time.svg";
 
-import iconSafety from "../../../images/smart-parking-v3/svg/icon-safety.svg";
+import iconSafety from "@images/smart-parking-v3/svg/icon-safety.svg";
 
-import iconSolving from "../../../images/smart-parking-v3/svg/icon-solving.svg";
+import iconSolving from "@images/smart-parking-v3/svg/icon-solving.svg";
 
 const SectionDefinition = () => {
   const infoItem = {
