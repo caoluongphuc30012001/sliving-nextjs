@@ -7,6 +7,9 @@ import iconPhoneMobile from "@images/contact-page-v3/svg/icon-phone-blue.svg";
 import iconEmailMobile from "@images/contact-page-v3/svg/icon-email-blue.svg";
 import iconMapMobile from "@images/contact-page-v3/svg/icon-map-blue.svg";
 // import AddressAndMap from "../../../components/footer/footer-v3/AddressAndMap";
+
+import { useTranslation } from "react-i18next";
+
 import SectionMap from "../../../components/footer/footer-v3/map-contact";
 import { useMemo } from "react";
 
@@ -29,6 +32,9 @@ function SectionQuickSupport() {
   const [map, setMap] = useState();
   const isBrowser = typeof window !== "undefined";
   const MAP_ZOOM = 15;
+
+  const { t } = useTranslation();
+
   const onMapCreated = useCallback(
     (_map) => {
       setMap(_map);
@@ -59,7 +65,7 @@ function SectionQuickSupport() {
           <div className="quick-support-content">
             <div className="quick-support-content-row">
               <h3 className="quick-support-content-title text-capitalize">
-                Liên hệ
+                {t("contact.quickSupport.title")}
               </h3>
             </div>
             <div className="quick-support-content-row d-flex">
@@ -76,8 +82,8 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Hotline</h5>
-                <span>19006054</span>
+                <h5>{t("contact.quickSupport.hotline")}</h5>
+                <span>{t("contact.quickSupport.hotlineSubTitle")}</span>
               </div>
             </div>
             <div className="quick-support-content-row d-flex">
@@ -94,8 +100,8 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Email</h5>
-                <span>info@unicloud.com.vn</span>
+                <h5>{t("contact.quickSupport.email")}</h5>
+                <span>{t("contact.quickSupport.emailSubTitle")}</span>
               </div>
             </div>
             <div className="quick-support-content-row d-flex">
@@ -108,16 +114,11 @@ function SectionQuickSupport() {
                 />
               </div>
               <div className="quick-support-body">
-                <h5>Địa chỉ</h5>
-                <p>Trụ sở chính Hà Nội</p>
-                <span>
-                  Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội
-                </span>
-                <p>Chi nhánh Thành phố Hồ Chí Minh</p>
-                <span>
-                  Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân
-                  Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh
-                </span>
+                <h5>{t("contact.quickSupport.address")}</h5>
+                <p>{t("contact.quickSupport.headquarter")}</p>
+                <span>{t("contact.quickSupport.headquarterSubTitle")}</span>
+                <p>{t("contact.quickSupport.branch")}</p>
+                <span>{t("contact.quickSupport.branchSubTitle")}</span>
               </div>
             </div>
           </div>

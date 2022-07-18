@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import ButtonRounded from "@components/button/button-card-rounded";
 import Navbar from "@components/menu/index";
@@ -7,16 +7,18 @@ import Navbar from "@components/menu/index";
 import logo from "../images/smart-home-v3/png/logo.png";
 import Footer from "./footer/footer-v3/footer-v3-not-map";
 import { useLocation } from "@reach/router";
+
+import { useTranslation } from "react-i18next";
 function LayoutV3({ children }) {
-  // const url = typeof window !== "undefined" ? window.location.href : "";
+  const { t, i18n } = useTranslation();
   const location = useLocation();
-  let url = location.href?location.href:"";
-  const [listRoute,setListRoute] = useState([])
-  useEffect(()=>{
+  let url = location.href ? location.href : "";
+  const [listRoute, setListRoute] = useState([]);
+  useEffect(() => {
     setListRoute([
       {
         id: 0,
-        nameRoute: "TRANG CHỦ",
+        nameRoute: t("menu.homepage"),
         href: "/",
         active:
           !url.includes("about-us") &&
@@ -28,51 +30,51 @@ function LayoutV3({ children }) {
       },
       {
         id: 1,
-        nameRoute: "VỀ CHÚNG TÔI",
+        nameRoute: t("menu.aboutUs"),
         href: "/about-us/",
         active: url.includes("about-us"),
       },
       {
         id: 2,
         nonActive: true,
-        nameRoute: "GIẢI PHÁP",
+        nameRoute: t("menu.method"),
         listRoute: [
           {
             id: 0,
-            nameRoute: "SMART HOME",
+            nameRoute: t("menu.home"),
             href: "/smart-home/",
           },
           {
             id: 1,
-            nameRoute: "SMART LIGHTING",
+            nameRoute: t("menu.lighting"),
             href: "/smart-lighting/",
           },
           {
             id: 2,
-            nameRoute: "SMART PARKING",
+            nameRoute: t("menu.parking"),
             href: "/smart-parking/",
           },
           {
             id: 3,
-            nameRoute: "SMART BUILDING",
+            nameRoute: t("menu.building"),
             href: "/smart-building/",
           },
         ],
       },
       {
         id: 3,
-        nameRoute: "GÓI GIẢI PHÁP",
+        nameRoute: t("menu.package"),
         nonActive: true,
         listRoute: [
           {
             id: 0,
-            nameRoute: "GÓI DOANH NGHIỆP",
+            nameRoute: t("menu.business"),
             href: "/business/",
             active: url.includes("business"),
           },
           {
             id: 1,
-            nameRoute: "GÓI CÁ NHÂN",
+            nameRoute: t("menu.person"),
             href: "/personal-step1/",
             active: url.includes("personal"),
           },
@@ -80,24 +82,24 @@ function LayoutV3({ children }) {
       },
       {
         id: 4,
-        nameRoute: "TIN TỨC",
+        nameRoute: t("menu.new"),
         href: "https://unicloud.com.vn/news",
         active: url.includes("news"),
       },
       {
         id: 5,
-        nameRoute: "QUY TRÌNH",
+        nameRoute: t("menu.process"),
         href: "/implementation-process/",
         active: url.includes("implementation-process"),
       },
       {
         id: 6,
-        nameRoute: "LIÊN HỆ",
+        nameRoute: t("menu.contact"),
         href: "/contact-us",
         active: url.includes("contact-us"),
       },
-    ])
-  },[url])
+    ]);
+  }, [url, i18n.language]);
   return (
     <>
       <Navbar listRoute={listRoute} logo={logo} />

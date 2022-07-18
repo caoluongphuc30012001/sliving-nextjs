@@ -96,6 +96,9 @@ function SectionActivity() {
             </Row>
           </div>
         </div>
+        <div className="line-separator">
+          
+        </div>
         <div className="content-container">
           <h3 className="section-activity-title">Chứng Nhận</h3>
           <Row

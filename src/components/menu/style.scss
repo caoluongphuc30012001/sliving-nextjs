@@ -2,6 +2,20 @@ body {
   padding-right: 0px !important;
 }
 .section-menu-top {
+  .change-language-box{
+    display: flex;
+    width: 52px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .language{
+      font-family: 'SVN Gilroy';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 131.25%;
+    }
+  }
   display: none;
   width: 100%;
   position: fixed;
@@ -276,7 +290,7 @@ body {
     }
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .section-menu-top {
     display: block;
   }
@@ -334,7 +348,7 @@ body {
     }
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   #smart_home_page {
     .section-product-slider {
       margin-top: 64px;
@@ -388,7 +402,7 @@ body {
     margin-top: 64px;
   }
 }
-@media (max-width: 1340px) {
+@media (max-width: 1400px) {
   .section-menu-top {
     .list-item-menu {
       gap: 20px !important;
