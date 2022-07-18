@@ -5,6 +5,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "gatsby";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   return (
     <div className="content-left">
@@ -34,19 +36,22 @@ const ContentRight = ({ listProduct, current }) => {
   return (
     listProduct.length > 0 && (
       <div className="content-right">
-        <Swiper spaceBetween={30} grabCursor={true} breakpoints={{
-          480: {
-            slidesPerView: 1,
-          },
-          // when window width is >= 768px
-          560: {
-            slidesPerView: 2,
-          },
-          760:{
-            slidesPerView:3
-          }
-        }} 
-        // centeredSlides={true}
+        <Swiper
+          spaceBetween={30}
+          grabCursor={true}
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            560: {
+              slidesPerView: 2,
+            },
+            760: {
+              slidesPerView: 3,
+            },
+          }}
+          // centeredSlides={true}
         >
           {listProduct.map((item) => {
             return (
@@ -69,6 +74,7 @@ const ContentRight = ({ listProduct, current }) => {
 };
 const SectionProductMobile = ({ productTypes }) => {
   const [current, setCurrent] = useState("");
+  const { i18n, t } = useTranslation();
 
   const [listProduct, setListProduct] = useState([]);
 
@@ -99,7 +105,8 @@ const SectionProductMobile = ({ productTypes }) => {
       <div className="product-container">
         <div className="title-box">
           <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">Sản Phẩm Sliving</div>
+          <div className="title">{t("sectionProductV3Mobile.titleMain")}</div>
+          {/* <div className="title">Sản Phẩm Sliving</div> */}
           <div className="item-border"></div>
         </div>
         <div className="content">

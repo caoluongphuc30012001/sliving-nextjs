@@ -9,6 +9,8 @@ import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const handle = (item) => {
     setCurrent(item);
@@ -120,6 +122,7 @@ const ItemProduct = ({ listProduct, itemId }) => {
 };
 const SectionProduct = ({ productTypes }) => {
   const [current, setCurrent] = useState("");
+  const { i18n, t } = useTranslation();
 
   const [listProduct, setListProduct] = useState([]);
 
@@ -151,7 +154,8 @@ const SectionProduct = ({ productTypes }) => {
       <div className="product-container ">
         <div className="title-box">
           <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">Sản Phẩm Sliving</div>
+          <div className="title">{t("sectionProductV3.titleMain")}</div>
+          {/* <div className="title">Sản Phẩm Sliving</div> */}
           <div className="item-border"></div>
         </div>
         <div className="content">

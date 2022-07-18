@@ -7,19 +7,22 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { useTranslation } from "react-i18next";
 
 import { Link } from "gatsby";
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [productName, setProductName] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
+  const { i18n, t } = useTranslation();
 
   return (
     <section className="section-popular-product-v3">
       <div className="popular-product-container">
         <div className="title-box">
           <p className="sub-title">FEATURED PRODUCTS</p>
-          <p className="title">Sản Phẩm Nổi Bật</p>
+          <p className="title">{t("sectionPopularProduct.titleMain")}</p>
+          {/* <p className="title">Sản Phẩm Nổi Bật</p> */}
           <div className="item-border"></div>
         </div>
         <div className="content-container">
