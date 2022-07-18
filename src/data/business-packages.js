@@ -8,31 +8,35 @@ import controlIcon from "@images/business-step1-v3/svg/icon-control.svg";
 import carIcon from "@images/business-step1-v3/svg/icon-car.svg";
 import safetyIcon from "@images/business-step1-v3/svg/icon-safety.svg";
 
+import { useTranslation } from "react-i18next";
+
+const { i18n, t } = useTranslation();
+
 export const packagesData = [
   {
     id: 0,
-    title: "Giải pháp chiếu sáng",
+    title: t("business.packagesData.lighting"),
     link: "/smart-lighting/",
     image: lightingSolutionImg,
     icon: bulbIcon,
   },
   {
     id: 1,
-    title: "Giải pháp điều khiển",
+    title: t("business.packagesData.home"),
     link: "/smart-home/",
     image: controlSolutionImg,
     icon: controlIcon,
   },
   {
     id: 2,
-    title: "Giải pháp an ninh",
+    title: t("business.packagesData.building"),
     link: "/smart-building/",
     image: securitySolutionImg,
     icon: safetyIcon,
   },
   {
     id: 3,
-    title: "Giải pháp bãi đỗ xe",
+    title: t("business.packagesData.parking"),
     link: "/smart-parking/",
     image: parkingSolutionImg,
     icon: carIcon,

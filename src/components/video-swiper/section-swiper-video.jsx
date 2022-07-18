@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReactPlayer from "react-player";
-import playIcon from "../../images/smart-home-v3/svg/play-btn.svg";
+import playIcon from "@images/smart-home-v3/svg/play-btn.svg";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import { Image } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,12 +17,15 @@ import "./style.scss";
 // import required modules
 const SectionSwiperVideo = ({ listVideo }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const { t } = useTranslation();
+
   return (
     <section className="section-swiper-video-v3">
       <div className="swiper-video-container">
         <div className="title-box">
           <p className="sub-title">SLIVING PRODUCT EXPERIENCE</p>
-          <p className="title">Trải Nghiệm Smart Home</p>
+          <div className="title">{t("sectionSwiperVideoV3.titleMain")}</div>
+          {/* <p className="title">Trải Nghiệm Smart Home</p> */}
           <div className="item-border"></div>
         </div>
         <Swiper

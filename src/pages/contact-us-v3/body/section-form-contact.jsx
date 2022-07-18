@@ -5,6 +5,7 @@ import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 import ModalThanks from "../../../components/modal/modal-thanks/ModalThanks";
 import axios from "axios";
 
+import { useTranslation } from "react-i18next";
 function SectionFormContact() {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -14,6 +15,8 @@ function SectionFormContact() {
     reset,
     formState: { errors },
   } = useForm({ mode: "onChange" });
+
+  const { i18n, t } = useTranslation();
 
   const googleSheetAPI =
     "https://script.google.com/macros/s/AKfycbzBXBn9hPRVMvstSnUNmQRXpZ_kTothqkts6LHbtfq-yeIEYy4KCPwQ6ouCOBCYjEbx/exec";
@@ -65,8 +68,12 @@ function SectionFormContact() {
       id="section-form-contact"
     >
       <Row className="row-line-center">
-        <span className="title-eng-line-center">CONTACT US</span>
-        <h2 className="title-line-center">Hãy Để Chúng Tôi Tư Vấn Đến Bạn</h2>
+        <span className="title-eng-line-center">
+          {t("contact.formContact.subTileMain")}
+        </span>
+        <h2 className="title-line-center">
+          {t("contact.formContact.titleMain")}
+        </h2>
         <div className="img-line-center">
           <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
         </div>
@@ -74,7 +81,8 @@ function SectionFormContact() {
       <Form onSubmit={handleSubmit(onSubmit)} className="contact-us-form">
         <div>
           <span className="contact-title">
-            Họ và Tên <span style={{ color: "red" }}> *</span>
+            {t("contact.formContact.inputTitle.name")}{" "}
+            <span style={{ color: "red" }}> *</span>
           </span>
           <Controller
             control={control}
@@ -92,7 +100,7 @@ function SectionFormContact() {
                 isInvalid={errors.fullName}
                 isValid={isDirty && !invalid}
                 className="fullName"
-                placeholder="Nhập tên của bạn ở đây"
+                placeholder={t("contact.formContact.inputPlaceholder.name")}
                 autoComplete="off"
               />
             )}
@@ -100,13 +108,14 @@ function SectionFormContact() {
           <Form.Control.Feedback type="invalid">
             {Object.keys(errors).length !== 0 &&
               errors.fullName?.type === "required" && (
-                <span>Dữ liệu không hợp lệ</span>
+                <span>{t('contact.formContact.invalid')}</span>
               )}
           </Form.Control.Feedback>
         </div>
         <div>
           <span className="contact-title">
-            Email <span style={{ color: "red" }}> *</span>
+            {t("contact.formContact.inputTitle.email")}{" "}
+            <span style={{ color: "red" }}> *</span>
           </span>
           <Controller
             control={control}
@@ -131,7 +140,7 @@ function SectionFormContact() {
                   isInvalid={errors.email}
                   isValid={isDirty && !invalid}
                   className="email"
-                  placeholder="Nhập email của bạn ở đây"
+                  placeholder={t("contact.formContact.inputPlaceholder.email")}
                   autoComplete="off"
                 />
               );
@@ -141,17 +150,18 @@ function SectionFormContact() {
           <Form.Control.Feedback type="invalid">
             {Object.keys(errors).length !== 0 &&
               errors.email?.type === "pattern" && (
-                <span>Dữ liệu không hợp lệ</span>
+                <span>{t('contact.formContact.invalid')}</span>
               )}
             {Object.keys(errors).length !== 0 &&
               errors.email?.type === "required" && (
-                <span>Dữ liệu không hợp lệ</span>
+                <span>{t('contact.formContact.invalid')}</span>
               )}
           </Form.Control.Feedback>
         </div>
         <div>
           <span className="contact-title">
-            Số điện thoại <span style={{ color: "red" }}> *</span>
+            {t("contact.formContact.inputTitle.phoneNumber")}{" "}
+            <span style={{ color: "red" }}> *</span>
           </span>
           <Controller
             control={control}
@@ -176,7 +186,9 @@ function SectionFormContact() {
                 isInvalid={errors.telephone}
                 isValid={isDirty && !invalid}
                 className="telephone"
-                placeholder="Nhập số điện thoại của bạn ở đây"
+                placeholder={t(
+                  "contact.formContact.inputPlaceholder.phoneNumber"
+                )}
                 autoComplete="off"
               />
             )}
@@ -184,16 +196,18 @@ function SectionFormContact() {
           <Form.Control.Feedback type="invalid">
             {Object.keys(errors).length !== 0 &&
               errors.telephone?.type === "pattern" && (
-                <span>Dữ liệu không hợp lệ</span>
+                <span>{t('contact.formContact.invalid')}</span>
               )}
             {Object.keys(errors).length !== 0 &&
               errors.telephone?.type === "required" && (
-                <span>Dữ liệu không hợp lệ</span>
+                <span>{t('contact.formContact.invalid')}</span>
               )}
           </Form.Control.Feedback>
         </div>
         <div>
-          <span className="contact-title">Lời nhắn/ Thắc mắc</span>
+          <span className="contact-title">
+            {t("contact.formContact.inputTitle.message")}
+          </span>
           <Controller
             control={control}
             defaultValue=""
@@ -211,7 +225,7 @@ function SectionFormContact() {
                 className="content"
                 as="textarea"
                 rows={9}
-                placeholder="Để lại thắc mắc của bạn ở đây"
+                placeholder={t("contact.formContact.inputPlaceholder.message")}
                 autoComplete="off"
               />
             )}
@@ -219,7 +233,7 @@ function SectionFormContact() {
         </div>
         <Row className="justify-content-center">
           <button type="submit" className="btn-advise-now">
-            <span>Nhận tư vấn</span>
+            <span>{t("contact.formContact.button")}</span>
           </button>
         </Row>
       </Form>

@@ -1,10 +1,10 @@
-import React, { useState,  useContext, useEffect } from "react";
-import { Data } from "@data/tableData2.js";
+import React, { useState, useContext, useEffect } from "react";
 
 import { BusinessStateContext } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise-business";
 import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
+import { useTranslation } from "react-i18next";
 const Table2 = ({ table }) => {
   return (
     <div className="table">
@@ -98,11 +98,11 @@ const SectionProductList = () => {
   // }, []);
   const [solutionNames, setSolutionNames] = useState("");
 
+  const {  t, ready } = useTranslation();
   useEffect(() => {
-    setTableData(Data);
-
-    state["allSolutions"] && setSolutionNames(state["allSolutions"]);
-  }, [tableData]);
+    const data = t("business.tableData2", { returnObjects: true });
+    setTableData(data);
+  }, [ready]);
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
