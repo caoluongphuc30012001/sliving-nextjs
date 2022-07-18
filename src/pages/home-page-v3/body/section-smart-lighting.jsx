@@ -9,8 +9,12 @@ import imgSmartEnergy from "@images/home-page-v3/svg/icon-energy.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { Link } from "gatsby";
 
+import { useTranslation } from "react-i18next";
+
 function SectionSmartLighting() {
   const [modalShow, setModalShow] = React.useState(false);
+
+  const { t } = useTranslation();
 
   const listItemCard = [
     {
@@ -18,21 +22,33 @@ function SectionSmartLighting() {
       linkImg: imgSmartRemoteControl,
       title: (
         <>
-          Điều khiển
+          {t("homePage.smartLighting.groupItems.title1.1")}
           <br />
-          từ xa
+          {t("homePage.smartLighting.groupItems.title1.2")}
         </>
       ),
     },
     {
       id: 1,
       linkImg: imgSmartBrightnessControl,
-      title: "Tăng giảm độ sáng",
+      title: (
+        <>
+          {t("homePage.smartLighting.groupItems.title2.1")}
+          <br />
+          {t("homePage.smartLighting.groupItems.title2.2")}
+        </>
+      ),
     },
     {
       id: 2,
       linkImg: imgSmartEnergy,
-      title: "Tiết kiệm năng lượng",
+      title: (
+        <>
+          {t("homePage.smartLighting.groupItems.title3.1")}
+          <br />
+          {t("homePage.smartLighting.groupItems.title3.2")}
+        </>
+      ),
     },
   ];
   return (
@@ -41,7 +57,7 @@ function SectionSmartLighting() {
         <div className="row-line-center">
           <span className="title-eng-line-center">SMART LIGHTING</span>
           <h1 className="title-line-center">
-            Hệ Thống Điều Khiển Ánh Sáng Thông Minh
+            {t("homePage.smartLighting.mainTitle")}
           </h1>
           <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -51,21 +67,11 @@ function SectionSmartLighting() {
           <Col lg={7} md={6} sm={12} className="smart-lighting-col-left">
             <div className="smart-lighting-des-desktop">
               <p className="smart-lighting-des">
-                Hệ thống chiếu sáng sử dụng công nghệ điều khiển tác động vào
-                nguồn sáng nhằm đạt hai mục tiêu: nâng cao chất lượng chiếu sáng
-                (về độ rọi, độ chói, CRI, thẩm mỹ) và tiết kiệm điện năng. Vì
-                thế, hệ thống sản phẩm chiếu sáng của Sliving đáp ứng được cả
-                nhu cầu chiếu sáng và hoạt động thông minh.
+                {t("homePage.smartLighting.desc1")}
               </p>
               <br />
               <p className="smart-lighting-des">
-                Sau một thời gian nghiên cứu, tích hợp và thử nghiệm thành công
-                bộ điều khiển panel LED, LED Downlight - cho phép bật tắt và
-                Dimming - đổi màu từ xa bằng công nghệ RF, đã chính thức ra mắt
-                thị trường. Điều khiển trên Smartphone bằng công nghệ không dây,
-                nhằm mục đích điều khiển chiếu sáng hội trường, phòng trưng bày
-                sản phẩm, bộ điều khiển tòa nhà có nhiều kịch bản chiếu sáng
-                theo yêu cầu của khách hàng.
+                {t("homePage.smartLighting.desc2")}
               </p>
             </div>
             <div className="smart-lighting-des-mobile d-none">
@@ -84,11 +90,11 @@ function SectionSmartLighting() {
                 className="advise-now-btn"
                 onClick={() => setModalShow(true)}
               >
-                <span>Tư vấn ngay</span>
+                <span>{t("homePage.btnGroup.adviseBtn")}</span>
               </button>
               <Link to="/smart-lighting">
                 <button className="learn-more-btn">
-                  <span>Tìm hiểu thêm</span>
+                  <span>{t("homePage.btnGroup.learnMoreBtn")}</span>
                 </button>
               </Link>
             </div>

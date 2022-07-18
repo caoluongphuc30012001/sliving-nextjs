@@ -7,6 +7,9 @@ import {
   BusinessStateContext,
 } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+
+import { useTranslation } from "react-i18next";
+
 const isBrowser = typeof window !== "undefined";
 const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
   return (
@@ -75,6 +78,9 @@ const SectionProductList = () => {
 
   const [loading, setLoading] = useState(true);
   const [toggle, setToggle] = useState(0);
+
+  const { t } = useTranslation();
+
   useLayoutEffect(() => {
     if (!state["houseID"]) navigate("/personal-step1");
   }, []);
@@ -246,18 +252,30 @@ const SectionProductList = () => {
       <div className="section-container">
         <div className="content-title">
           <div className="sub-title">PRODUCT LIST</div>
-          <div className="title">Danh Sách Thiết Bị Sử Dụng Cho Dự Án</div>
+          <div className="title">
+            {t("personalPackage.personalStep2.mainDesc")}
+          </div>
           <div className="underline"></div>
         </div>
         <div className="table">
           <table className="table-container">
             <thead className="content-container">
               <tr className="table-row">
-                <th className="table-data header">Vị trí lắp đặt</th>
-                <th className="table-data header border-l">Tên thiết bị</th>
-                <th className="table-data header border-l">Cơ Bản</th>
-                <th className="table-data header border-l">Tiện Nghi</th>
-                <th className="table-data header border-l">Cao Cấp</th>
+                <th className="table-data header">
+                  {t("personalPackage.personalStep2.tableHeader.title1")}
+                </th>
+                <th className="table-data header border-l">
+                  {t("personalPackage.personalStep2.tableHeader.title2")}
+                </th>
+                <th className="table-data header border-l">
+                  {t("personalPackage.personalStep2.tableHeader.title3")}
+                </th>
+                <th className="table-data header border-l">
+                  {t("personalPackage.personalStep2.tableHeader.title4")}
+                </th>
+                <th className="table-data header border-l">
+                  {t("personalPackage.personalStep2.tableHeader.title5")}
+                </th>
               </tr>
             </thead>
             {loading && (
@@ -323,7 +341,7 @@ const SectionProductList = () => {
                 role="button"
                 tabIndex={0}
               >
-                <span>Tư Vấn Ngay</span>
+                <span>{t("personalPackage.groupBtn.adviseBtn")}</span>
               </div>
             </div>
             <div className="table">
@@ -368,7 +386,7 @@ const SectionProductList = () => {
             role="button"
             tabIndex={0}
           >
-            <span>Tư Vấn Ngay</span>
+            <span>{t("personalPackage.groupBtn.adviseBtn")}</span>
           </div>
         )}
       </div>

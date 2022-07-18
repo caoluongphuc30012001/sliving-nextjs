@@ -105,7 +105,7 @@ img {
         }
       }
     }
-    .header-content.hide{
+    .header-content.hide {
       position: static;
     }
   }
@@ -192,6 +192,22 @@ img {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+
+    // .intro-bottom-left-content {
+    //   position: relative;
+    //   .intro-icon-title {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     font-family: "SVN Gilroy";
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     font-size: 36px;
+    //     line-height: 48px;
+    //     color: #0979fd;
+    //   }
+    // }
   }
 
   .intro-flex-revert {

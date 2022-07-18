@@ -9,6 +9,8 @@ import item_1 from "../../../images/personal-step1-v3/jpg/item-5.jpg";
 
 import axios from "axios";
 
+import { useTranslation } from "react-i18next";
+
 import {
   BusinessDispatchContext,
   BusinessStateContext,
@@ -41,6 +43,9 @@ const PersonalStep1 = () => {
   const [listOption, setListOption] = useState([]);
   const checkList = [{}, {}, {}, {}];
   const [skeleton, setSkeleton] = useState(true);
+
+  const { t } = useTranslation();
+
   useLayoutEffect(() => {
     const getListHouse = async () => {
       try {
@@ -75,10 +80,11 @@ const PersonalStep1 = () => {
     <section className="personal-step1-container">
       <div className="personal-step1-wrapper">
         <div className="top-content">
-          <h1 className="main-title">Chọn Loại Căn Hộ Bạn Đang Sở Hữu</h1>
+          <h1 className="main-title">
+            {t("personalPackage.personalStep1.mainTitle")}
+          </h1>
           <h4 className="sub-title">
-            Chọn một loại hình căn hộ bạn đang sở hữu, chúng tôi sẽ đưa ra các
-            giải pháp thông minh phù hợp với căn hộ của bạn.
+            {t("personalPackage.personalStep1.mainDesc")}
           </h4>
         </div>
         <div
@@ -155,7 +161,7 @@ const PersonalStep1 = () => {
               dispatch({ type: "GET_HOUSE_ID", payload: activeCard.id });
             }}
           >
-            <span>Nhận Báo giá</span>
+            <span>{t("personalPackage.groupBtn.confirmBtn")}</span>
           </button>
         </Link>
       </div>

@@ -10,29 +10,33 @@ import imgSmartParkingMobile from "@images/home-page-v3/png/img-smart-parking-mo
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { Link } from "gatsby";
 
+import { useTranslation } from "react-i18next";
+
 function SectionSmartParking() {
   const [modalShow, setModalShow] = React.useState(false);
+
+  const { t } = useTranslation();
 
   const listItemCard = [
     {
       id: 0,
       linkImg: imgItemCart1,
-      title: "Phát hiện chỗ trống qua camera và cảm biến siêu âm.",
+      title: t("homePage.smartParking.groupItems.title1"),
     },
     {
       id: 1,
       linkImg: imgItemCart2,
-      title: "Tích hợp bản đồ vào App dễ dàng định vị.",
+      title: t("homePage.smartParking.groupItems.title2"),
     },
     {
       id: 2,
       linkImg: imgItemCart3,
-      title: "Đặt chỗ trước dẫn đường qua vị trí đỗ bằng App.",
+      title: t("homePage.smartParking.groupItems.title3"),
     },
     {
       id: 3,
       linkImg: imgItemCart4,
-      title: "Công nghệ Bluetooth dẫn đường cho xe đến vị trí.",
+      title: t("homePage.smartParking.groupItems.title4"),
     },
   ];
   return (
@@ -41,7 +45,7 @@ function SectionSmartParking() {
         <Row className="row-line-center m-left-right-12">
           <span className="title-eng-line-center">SMART PARKING</span>
           <h1 className="title-line-center">
-            Giải Pháp Quản Lý Bãi Đỗ Xe Thông Minh
+            {t("homePage.smartParking.mainTitle")}
           </h1>
           <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -52,13 +56,10 @@ function SectionSmartParking() {
             className="smart-parking-group-img-mobile"
           />
           <h2 className="smart-parking-title">
-            Ứng dụng công nghệ IoT &amp; AI trong một giải pháp
+            {t("homePage.smartParking.subTitle")}
           </h2>
           <p className="smart-parking-des">
-            Giải pháp bãi đỗ xe thông minh Smart Parking sử dụng các thiết bị
-            cũng như công nghệ tiên tiến giúp quản lý và vận hành bãi đỗ. Tất cả
-            được điều khiển thông qua một ứng dụng (Smart Parking App) do đội
-            ngũ chuyên viên kỹ thuật cao của Unicloud xây dựng.
+            {t("homePage.smartParking.mainDesc")}
           </p>
         </Row>
 
@@ -81,11 +82,11 @@ function SectionSmartParking() {
         </Row>
         <div className="btn-group">
           <button className="advise-now-btn" onClick={() => setModalShow(true)}>
-            <span>Tư vấn ngay</span>
+            <span>{t("homePage.btnGroup.adviseBtn")}</span>
           </button>
           <Link to="/smart-parking">
             <button className="learn-more-btn">
-              <span>Tìm hiểu thêm</span>
+              <span>{t("homePage.btnGroup.learnMoreBtn")}</span>
             </button>
           </Link>
         </div>

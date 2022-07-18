@@ -9,16 +9,19 @@ import imgAppStore from "@images/home-page-v3/png/img-button-app-store.png";
 import imgGooglePlay from "@images/home-page-v3/png/img-button-google-play.png";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 
+import { useTranslation } from "react-i18next";
+
 import { Col, Image, Row } from "react-bootstrap";
 import { Link } from "gatsby";
 
 const SectionProduct = () => {
   const [modalShow, setModalShow] = React.useState(false);
+  const { t } = useTranslation();
 
   const arrSmartTouch = [
     {
       id: 0,
-      title: "Công Tắc cơ Thông Minh",
+      title: t("homePage.products.firstProduct.title"),
       subTitle: "Smart Mechanical Switch",
       image: imgSwitch,
       downloadObjects: [],
@@ -26,30 +29,27 @@ const SectionProduct = () => {
       listItem: [
         {
           id: 0,
-          title: "Trải nghiệm mới mẻ & hiện đại",
-          subTitle:
-            "Mang kiểu dáng của dòng công tắc cơ truyền thống đi kèm với các tính năng hiện đại, dòng sản phẩm công tắc cơ thông minh vừa tạo cảm giác gần gũi, quen thuộc lại vừa mang tới những trải nghiệm mới mẻ và tiện lợi.",
+          title: t("homePage.products.firstProduct.groupDescription.title1"),
+          subTitle: t("homePage.products.firstProduct.groupDescription.desc1"),
           icon: iconCheckOutline,
         },
         {
           id: 1,
-          title: "Dễ sử dụng",
-          subTitle:
-            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
+          title: t("homePage.products.firstProduct.groupDescription.title2"),
+          subTitle: t("homePage.products.firstProduct.groupDescription.desc2"),
           icon: iconCheckOutline,
         },
         {
           id: 2,
-          title: "Tính năng vượt trội",
-          subTitle:
-            "Ngoài tính năng điều khiển bật/ tắt cục bộ như công tắc thường, sản phẩm còn có khả năng kết nối thông qua Gateway để điều khiển trên Internet. Chạy kịch bản bằng thao tác nhấn đơn, nhấn đúp, nhấn giữ, thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái của thiết bị.",
+          title: t("homePage.products.firstProduct.groupDescription.title3"),
+          subTitle: t("homePage.products.firstProduct.groupDescription.desc3"),
           icon: iconCheckOutline,
         },
       ],
     },
     {
       id: 1,
-      title: "Công Tắc Cảm Ứng thông minh",
+      title: t("homePage.products.secondProduct.title"),
       subTitle: "Smart Touch Switch",
       image: imgTouch,
       downloadObjects: [],
@@ -57,30 +57,27 @@ const SectionProduct = () => {
       listItem: [
         {
           id: 0,
-          title: "Thiết kế sang trọng",
-          subTitle:
-            "Với thiết kế đơn giản nhưng không kém phần sang trọng, sản phẩm có mặt kính cường lực chống trầy, sở hữu viền nhôm mạ vàng 18k cao cấp với độ dày vừa phải cùng với đường bo cạnh mềm mại, tạo nên sự thân thiện với người sử dụng vừa thuận tiện cho việc lắp đặt, sử dụng, bảo hành.",
+          title: t("homePage.products.secondProduct.groupDescription.title1"),
+          subTitle: t("homePage.products.secondProduct.groupDescription.desc1"),
           icon: iconCheckOutline,
         },
         {
           id: 1,
-          title: "Dễ sử dụng",
-          subTitle:
-            "Thông qua mạng Wifi/Zigbee kết nối các thiết bị chỉ qua vài bước thiết lập đơn giản, giúp bạn bước vào một không gian Smart Living đẳng cấp.",
+          title: t("homePage.products.secondProduct.groupDescription.title2"),
+          subTitle: t("homePage.products.secondProduct.groupDescription.desc2"),
           icon: iconCheckOutline,
         },
         {
           id: 2,
-          title: "Tính năng vượt trội",
-          subTitle:
-            "Với tính năng bật/tắt cục bộ bằng cảm ứng điện dung, sản phẩm còn có khả năng chạy kịch bản thông qua thao tác nhấn đơn, nhấn đúp, nhấn giữ và thay đổi các thông số độ nhạy, độ sáng, thông báo trạng thái online lên Gateway.",
+          title: t("homePage.products.secondProduct.groupDescription.title3"),
+          subTitle: t("homePage.products.secondProduct.groupDescription.desc3"),
           icon: iconCheckOutline,
         },
       ],
     },
     {
       id: 2,
-      title: "Quản lý thông minh với Sliving app",
+      title: t("homePage.products.thirdProduct.title"),
       subTitle: "Sliving App",
       image: imgApp,
       downloadObjects: [
@@ -98,30 +95,27 @@ const SectionProduct = () => {
       listItem: [
         {
           id: 0,
-          title: "Dễ dàng thao tác",
-          subTitle:
-            "Với thiết kế nhỏ gọn, tinh tế giúp người tiêu dùng dễ dàng sử dụng, dễ sửa chữa và bảo hành. Thiết bị có thể thay thế remote điều khiển của TV, quạt, điều hoà, rèm cửa,... bằng cách đọc lệnh IR, RF. ",
+          title: t("homePage.products.thirdProduct.groupDescription.title1"),
+          subTitle: t("homePage.products.thirdProduct.groupDescription.desc1"),
           icon: iconCheckOutline,
         },
         {
           id: 1,
-          title: "Điều khiển thông minh",
-          subTitle:
-            "Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
+          title: t("homePage.products.thirdProduct.groupDescription.title2"),
+          subTitle: t("homePage.products.thirdProduct.groupDescription.desc2"),
           icon: iconCheckOutline,
         },
         {
           id: 2,
-          title: "Giám sát & cảnh báo",
-          subTitle:
-            "Kiểm soát năng lượng tiêu dùng thông minh nhờ vào tính năng kết nối hai chiều với dàn lạnh, khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm... và đưa ra các cảnh báo kịp thời",
+          title: t("homePage.products.thirdProduct.groupDescription.title3"),
+          subTitle: t("homePage.products.thirdProduct.groupDescription.desc3"),
           icon: iconCheckOutline,
         },
       ],
     },
     {
       id: 3,
-      title: "Động Cơ Rèm Thông Minh",
+      title: t("homePage.products.fourthProduct.title"),
       subTitle: "Smart Curtain",
       image: imgCurtain,
       downloadObjects: [],
@@ -129,23 +123,20 @@ const SectionProduct = () => {
       listItem: [
         {
           id: 0,
-          title: "Hỗ trợ điều khiển từ xa",
-          subTitle:
-            "Với động cơ rèm thông minh, người dùng dễ dàng điều khiển từ xa thông qua ứng dụng hoặc chạy kịch bản mở/đóng theo nhu cầu sử dụng.",
+          title: t("homePage.products.fourthProduct.groupDescription.title1"),
+          subTitle: t("homePage.products.fourthProduct.groupDescription.desc1"),
           icon: iconCheckOutline,
         },
         {
           id: 1,
-          title: "Thiết kế chắc chắn & bền bỉ  ",
-          subTitle:
-            "Bên ngoài của sản phẩm được làm bằng nhôm cao cấp, có khả năng chịu lực, chịu được va chạm mạnh, chịu nhiệt và chống ăn mòn. Kích thước nhỏ gọn nên  phù hợp với nhiều loại hình không gian khác nhau.",
+          title: t("homePage.products.fourthProduct.groupDescription.title2"),
+          subTitle: t("homePage.products.fourthProduct.groupDescription.desc2"),
           icon: iconCheckOutline,
         },
         {
           id: 2,
-          title: "Hoạt động dễ dàng",
-          subTitle:
-            "Khi gặp sự cố về điện, thiết bị vẫn có thể hoạt động bình thường thông qua mở và đóng vật lý dễ dàng.",
+          title: t("homePage.products.fourthProduct.groupDescription.title3"),
+          subTitle: t("homePage.products.fourthProduct.groupDescription.desc3"),
           icon: iconCheckOutline,
         },
       ],
@@ -157,7 +148,9 @@ const SectionProduct = () => {
       <div className="container-1220">
         <Row className="row-line-center">
           <span className="title-eng-line-center">SMART HOME PRODUCTS</span>
-          <h2 className="title-line-center">Sản Phẩm Smart Home</h2>
+          <h2 className="title-line-center">
+            {t("homePage.products.mainTitle")}
+          </h2>
           <div className="img-line-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
@@ -254,11 +247,11 @@ const SectionProduct = () => {
                     className="advise-now-btn"
                     onClick={() => setModalShow(true)}
                   >
-                    <span>Tư vấn ngay</span>
+                    <span>{t("homePage.btnGroup.adviseBtn")}</span>
                   </button>
                   <Link to="/smart-home">
                     <button className="learn-more-btn">
-                      <span>Tìm hiểu thêm</span>
+                      <span>{t("homePage.btnGroup.learnMoreBtn")}</span>
                     </button>
                   </Link>
                 </div>
