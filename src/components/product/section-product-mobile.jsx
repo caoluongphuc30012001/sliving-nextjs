@@ -74,7 +74,7 @@ const ContentRight = ({ listProduct, current }) => {
 };
 const SectionProductMobile = ({ productTypes }) => {
   const [current, setCurrent] = useState("");
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   const [listProduct, setListProduct] = useState([]);
 

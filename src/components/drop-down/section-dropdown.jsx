@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Accordion } from "react-bootstrap";
-import subBackground from "../../images/smart-lighting-v3/png/sub-background.png";
+import subBackground from "@images/smart-lighting-v3/png/sub-background.png";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { useTranslation } from "react-i18next";
 
 const SectionDropdown = ({ listItem }) => {
   const [current, setCurrent] = useState(0);
   const [modalShow, setModalShow] = React.useState(false);
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="section-drop-down">

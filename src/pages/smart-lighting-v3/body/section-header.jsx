@@ -1,15 +1,15 @@
 import React from "react";
-import background1 from "../../../images/smart-lighting-v3/png/bg-header1.png";
-import background2 from "../../../images/smart-lighting-v3/png/bg-header2.png";
-import background3 from "../../../images/smart-lighting-v3/png/bg-header3.png";
+import background1 from "@images/smart-lighting-v3/png/bg-header1.png";
+import background2 from "@images/smart-lighting-v3/png/bg-header2.png";
+import background3 from "@images/smart-lighting-v3/png/bg-header3.png";
 
-import background1_1 from "../../../images/smart-lighting-v3/png/bg-header1-1.png";
-import background2_1 from "../../../images/smart-lighting-v3/png/bg-header2-1.png";
-import background3_1 from "../../../images/smart-lighting-v3/png/bg-header3-1.png";
+import background1_1 from "@images/smart-lighting-v3/png/bg-header1-1.png";
+import background2_1 from "@images/smart-lighting-v3/png/bg-header2-1.png";
+import background3_1 from "@images/smart-lighting-v3/png/bg-header3-1.png";
 import { useTranslation } from "react-i18next";
 
 const SectionHeader = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <header className="section-smart-lighting-header">

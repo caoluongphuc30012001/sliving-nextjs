@@ -1,20 +1,20 @@
 import React from "react";
 
-import iconMaintain from "../../../images/smart-lighting-v3/svg/icon-maintain.svg";
+import iconMaintain from "@images/smart-lighting-v3/svg/icon-maintain.svg";
 
-import iconModernity from "../../../images/smart-lighting-v3/svg/icon-modernity.svg";
+import iconModernity from "@images/smart-lighting-v3/svg/icon-modernity.svg";
 
-import iconParkingPhone from "../../../images/smart-lighting-v3/svg/icon-parking-phone.svg";
+import iconParkingPhone from "@images/smart-lighting-v3/svg/icon-parking-phone.svg";
 
-import iconParkingTime from "../../../images/smart-lighting-v3/svg/icon-parking-time.svg";
+import iconParkingTime from "@images/smart-lighting-v3/svg/icon-parking-time.svg";
 
-import iconSafety from "../../../images/smart-lighting-v3/svg/icon-safety.svg";
+import iconSafety from "@images/smart-lighting-v3/svg/icon-safety.svg";
 
-import iconSolving from "../../../images/smart-lighting-v3/svg/icon-solving.svg";
+import iconSolving from "@images/smart-lighting-v3/svg/icon-solving.svg";
 import { useTranslation } from "react-i18next";
 
 const SectionDefinition = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   const infoItem = {
     title: `${t("sectionDefinition.title")}`,

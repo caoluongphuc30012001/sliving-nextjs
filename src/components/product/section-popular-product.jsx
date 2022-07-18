@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
-import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
+import arrowLeft from "@images/smart-home-v3/svg/arrow-left.svg";
+import arrowRight from "@images/smart-home-v3/svg/arrow-right.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,7 +14,7 @@ const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [productName, setProductName] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="section-popular-product-v3">
