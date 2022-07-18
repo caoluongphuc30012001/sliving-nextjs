@@ -11,50 +11,60 @@ import iconParkingTime from "../../../images/smart-lighting-v3/svg/icon-parking-
 import iconSafety from "../../../images/smart-lighting-v3/svg/icon-safety.svg";
 
 import iconSolving from "../../../images/smart-lighting-v3/svg/icon-solving.svg";
+import { useTranslation } from "react-i18next";
 
 const SectionDefinition = () => {
+  const { i18n, t } = useTranslation();
+
   const infoItem = {
-    title: "Smart Lighting Là Gì ?",
+    title: `${t("sectionDefinition.title")}`,
     webContents: [
       {
         id: 0,
-        content:
-          "Hiểu được vai trò quan trọng của yếu tố" +
-          " ánh sáng trong các tòa nhà, căn hộ... Unicloud " +
-          "đã cho ra đời giải pháp chiếu sáng thông minh" +
-          " Smart Lighting: ứng dụng công nghệ hiện đại để " +
-          "điều khiển và tác động vào nguồn sáng nhằm nâng " +
-          "cao chất lượng chiếu sáng và tiết kiệm năng " +
-          "lượng. ",
+        content: `${t("sectionDefinition.webContentsDes1")}`,
       },
       {
         id: 1,
-        content:
-          "Người dùng có thể dễ dàng điều chỉnh " +
-          "các thiết bị chiếu sáng, bật tắt Dimming, đổi màu, điều khiển ánh sáng trong hội trường," +
-          " phòng trưng bày sản phẩm, chạy kịch bản chiếu " +
-          "sáng, bật/tắt theo ý muốn cá nhân mọi lúc" +
-          ", mọi nơi bằng Smartphone hoặc bằng giọng nói.",
+        content: `${t("sectionDefinition.webContentsDes2")}`,
       },
     ],
     mobileContents: [
       {
         id: 0,
-        content:
-          "Hiểu được vai trò quan trọng của yếu tố ánh sáng trong các tòa nhà, căn hộ... Unicloud đã cho ra đời giải pháp chiếu sáng thông minh Smart Lighting: ứng dụng công nghệ hiện đại để điều khiển và tác động vào nguồn sáng nhằm nâng cao chất lượng chiếu sáng và tiết kiệm năng lượng.",
+        content: `${t("sectionDefinition.mobileContents")}`,
       },
     ],
     listIcon: [
-      { id: 0, title: "Kiểm soát linh hoạt", icon: iconParkingTime },
-      { id: 1, title: "Tuỳ chỉnh theo nhu cầu", icon: iconSafety },
+      {
+        id: 0,
+        title: `${t("sectionDefinition.icon0")}`,
+        icon: iconParkingTime,
+      },
+      {
+        id: 1,
+        title: `${t("sectionDefinition.icon1")}`,
+        icon: iconSafety,
+      },
       {
         id: 2,
-        title: "Tương thích mọi thiết bị",
+        title: `${t("sectionDefinition.icon2")}`,
         icon: iconSolving,
       },
-      { id: 3, title: "Tiết kiệm điện năng", icon: iconMaintain },
-      { id: 4, title: "Tiết kiệm thời gian", icon: iconParkingPhone },
-      { id: 5, title: "An toàn, tiện lợi", icon: iconModernity },
+      {
+        id: 3,
+        title: `${t("sectionDefinition.icon3")}`,
+        icon: iconMaintain,
+      },
+      {
+        id: 4,
+        title: `${t("sectionDefinition.icon4")}`,
+        icon: iconParkingPhone,
+      },
+      {
+        id: 5,
+        title: `${t("sectionDefinition.icon5")}`,
+        icon: iconModernity,
+      },
     ],
   };
 

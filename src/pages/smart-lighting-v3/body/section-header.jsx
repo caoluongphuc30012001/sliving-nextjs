@@ -6,20 +6,21 @@ import background3 from "../../../images/smart-lighting-v3/png/bg-header3.png";
 import background1_1 from "../../../images/smart-lighting-v3/png/bg-header1-1.png";
 import background2_1 from "../../../images/smart-lighting-v3/png/bg-header2-1.png";
 import background3_1 from "../../../images/smart-lighting-v3/png/bg-header3-1.png";
+import { useTranslation } from "react-i18next";
 
 const SectionHeader = () => {
+  const { i18n, t } = useTranslation();
+
   return (
     <header className="section-smart-lighting-header">
       <div className="content-container">
         <div className="content">
-          <h1 className="content-title">SMART LIGHTING</h1>
+          <h1 className="content-title">
+            {t("sectionSmartLightingHeader.title")}
+          </h1>
           <div className="content-subtitle-container">
             <p className="content-subtitle">
-              Smart Lighting - giải pháp chiếu sáng thông minh, tiện lợi cho các
-              không gian như: trung tâm thương mại, tòa nhà, văn phòng, căn
-              hộ,... mang lại cảm giác thoải mái và hiện đại. Unicloud hướng tới
-              xây dựng hệ thống Smart Lighting không chỉ đáp ứng nhu cầu chiếu
-              sáng mà còn đáp ứng được nhu cầu hoạt động thông minh.
+              {t("sectionSmartLightingHeader.subTitle")}
             </p>
           </div>
         </div>
