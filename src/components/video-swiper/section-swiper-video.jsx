@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReactPlayer from "react-player";
-import playIcon from "../../images/smart-home-v3/svg/play-btn.svg";
+import playIcon from "@images/smart-home-v3/svg/play-btn.svg";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import { Image } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
@@ -17,7 +17,7 @@ import "./style.scss";
 // import required modules
 const SectionSwiperVideo = ({ listVideo }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="section-swiper-video-v3">

@@ -1,11 +1,10 @@
 import React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
-import LayoutV3 from "../../components/layout-v3";
-import SectionHelpMore from "../../components/help-more/section-help-more";
+import LayoutV3 from "@components/layout-v3";
+import SectionHelpMore from "@components/help-more/section-help-more";
 import iconArrow from "@images/icon/icon-arrow-process.svg";
 import iconQuestion from "@images/icon/icon-question-process.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
-
 import "./style.scss";
 import Seo from "@components/seo";
 import { useTranslation } from "react-i18next";
@@ -13,7 +12,7 @@ import { useTranslation } from "react-i18next";
 const ImplementationProcess = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
-  const { t, ready } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <LayoutV3>
