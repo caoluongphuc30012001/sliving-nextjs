@@ -13,27 +13,25 @@ import { useTranslation } from "react-i18next";
 import SectionMap from "../../../components/footer/footer-v3/map-contact";
 import { useMemo } from "react";
 
-const listContact = [
-  {
-    id: 0,
-    title: "Trụ sở chính",
-    position: { lat: 21.0300541, lng: 105.7786784 },
-  },
-  {
-    id: 1,
-    title: "Nhà máy",
-    position: { lat: 10.85023, lng: 106.80562 },
-  },
-];
-
 function SectionQuickSupport() {
+  const { t } = useTranslation();
+  const listContact = [
+    {
+      id: 0,
+      title: t("contact.quickSupport.map.headquarter"),
+      position: { lat: 21.0300541, lng: 105.7786784 },
+    },
+    {
+      id: 1,
+      title: t("contact.quickSupport.map.branch"),
+      position: { lat: 10.85023, lng: 106.80562 },
+    },
+  ];
   const [position, setPosition] = useState(listContact[0].position);
   const [activeContact, setActiveContact] = useState(listContact[0]);
   const [map, setMap] = useState();
   const isBrowser = typeof window !== "undefined";
   const MAP_ZOOM = 15;
-
-  const { t } = useTranslation();
 
   const onMapCreated = useCallback(
     (_map) => {
