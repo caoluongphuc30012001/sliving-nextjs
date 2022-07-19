@@ -11,11 +11,6 @@ const isBrowser = typeof window !== "undefined";
 
 export default function AddressAndMap() {
   const { i18n, t } = useTranslation();
-
-  const [position, setPosition] = useState(listContact[0].position);
-  const [map, setMap] = useState();
-
-  const MAP_ZOOM = 15;
   const listContact = [
     {
       key: {
@@ -48,6 +43,11 @@ export default function AddressAndMap() {
       urlIcon: iconBgPhone,
     },
   ];
+  const [position, setPosition] = useState(listContact[0].position);
+  const [map, setMap] = useState();
+
+  const MAP_ZOOM = 15;
+
   const onSelectContact = useCallback(
     (contact) => {
       if (contact.position && map) {
