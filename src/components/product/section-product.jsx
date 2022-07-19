@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
-import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
+import arrowLeft from "@images/smart-home-v3/svg/arrow-left.svg";
+import arrowRight from "@images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
@@ -122,7 +122,7 @@ const ItemProduct = ({ listProduct, itemId }) => {
 };
 const SectionProduct = ({ productTypes }) => {
   const [current, setCurrent] = useState("");
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   const [listProduct, setListProduct] = useState([]);
 

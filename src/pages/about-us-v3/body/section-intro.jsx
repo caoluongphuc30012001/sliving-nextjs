@@ -10,6 +10,8 @@ import iconVision from "../../../images/about-us-v3/svg/icon-vision.svg";
 import iconMission from "../../../images/about-us-v3/svg/icon-mission.svg";
 import iconValue from "../../../images/about-us-v3/svg/icon-value.svg";
 
+import { useTranslation } from "react-i18next";
+
 export const Divider = styled("div")`
   width: 88px;
   height: 4px;
@@ -19,6 +21,8 @@ export const Divider = styled("div")`
 `;
 
 const SectionIntro = () => {
+  const { t } = useTranslation();
+
   const introItems = [
     {
       id: 0,
@@ -26,16 +30,11 @@ const SectionIntro = () => {
       contents: [
         {
           id: 0,
-          content:
-            "Không ngừng đổi mới, không ngừng sáng tạo...., Unicloud đồng hành cùng Chính phủ trên con đường số hóa nền kinh tế, gia nhập nhóm doanh nghiệp dẫn đường " +
-            "trong cuộc đua cách mạng số vì một Việt Nam hùng cường với nền tảng công nghệ mang tầm Quốc tế. ",
+          content: t("aboutUs.intro.groupItems.desc1.1"),
         },
         {
           id: 1,
-          content:
-            "Unicloud giải quyết các vấn đề của người Việt bằng trí tuệ của người Việt, tháo gỡ các bài toán khó cho ngành dịch vụ bằng sự chủ động, " +
-            "nền tảng công nghệ tân tiến, kết nối đa nhiệm tất cả các Thiết bị - Dịch vụ - Con người. Hướng đến trở thành tập đoàn TOP 10 Đông Nam Á " +
-            "và TOP 500 thế giới với 5.000 nhân sự tại ít nhất 10 quốc gia trên toàn cầu.",
+          content: t("aboutUs.intro.groupItems.desc1.2"),
         },
       ],
     },
@@ -45,13 +44,11 @@ const SectionIntro = () => {
       contents: [
         {
           id: 0,
-          content:
-            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế số.",
+          content: t("aboutUs.intro.groupItems.desc2.1"),
         },
         {
           id: 1,
-          content:
-            "Unicloud nghiên cứu và phát triển các giải pháp công nghệ đa năng và toàn diện, làm thay đổi bộ mặt công nghệ quốc gia, nâng tầm chất xám của người Việt.",
+          content: t("aboutUs.intro.groupItems.desc2.2"),
         },
       ],
     },
@@ -61,22 +58,18 @@ const SectionIntro = () => {
       listItem: [
         {
           id: 0,
-          title: "Tự thách thức và giải quyết thách thức",
-          subTitle:
-            "Chủ động xây dựng các yêu cầu và đưa ra các giải pháp giải quyết thách thức.",
+          title: t("aboutUs.intro.groupItems.desc3.1"),
+          subTitle: t("aboutUs.intro.groupItems.subDesc3.1"),
         },
         {
           id: 1,
-          title: "Tự chủ công nghệ",
-          subTitle:
-            "Mang sứ mệnh tiên phong chuyển đổi kinh tế số, đặt mục tiêu góp phần xây dựng Chính phủ điện tử hướng tới Chính phủ số và nền kinh tế số, " +
-            "Unicloud nghiên cứu và phát triển các giải pháp công nghệ đa năng và toàn diện, làm thay đổi bộ mặt công nghệ quốc gia, nâng tầm chất xám của người Việt.",
+          title: t("aboutUs.intro.groupItems.desc3.2"),
+          subTitle: t("aboutUs.intro.groupItems.subDesc3.2"),
         },
         {
           id: 2,
-          title: "Nâng cao giá trị con người",
-          subTitle:
-            "Lấy con người và việc nâng cao giá trị của con người làm kim chỉ nam cho hoạt động của công ty.",
+          title: t("aboutUs.intro.groupItems.desc3.3"),
+          subTitle: t("aboutUs.intro.groupItems.subDesc3.3"),
         },
       ],
     },
@@ -87,7 +80,7 @@ const SectionIntro = () => {
       <div className="intro-container-v3">
         <Row className="row-line-center m-left-right-12">
           <span className="title-eng-line-center">ABOUT US</span>
-          <h2 className="title-line-center">Giới Thiệu Tổng Quan</h2>
+          <h2 className="title-line-center">{t("aboutUs.intro.mainTitle")}</h2>
           <div className="img-line-center">
             <Divider />
           </div>
@@ -105,6 +98,7 @@ const SectionIntro = () => {
                 >
                   <div className="intro-bottom-left-content">
                     <img src={intro.icon} alt="" className="intro-icon" />
+                    {/* <span className="intro-icon-title">Hello</span> */}
                   </div>
                   <div className="intro-bottom-right-content">
                     <div className="intro-grid-gap">

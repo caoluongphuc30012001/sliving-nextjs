@@ -30,6 +30,8 @@ import layoutSmartFactory7 from "@images/about-us-v3/png/layout7.png";
 import smart_factory_image from "@images/about-us-v3/png/img-smart-factory.png";
 import { Image, Row, Col } from "react-bootstrap";
 
+import { useTranslation } from "react-i18next";
+
 export const Divider = styled("div")`
   width: 88px;
   height: 4px;
@@ -63,10 +65,42 @@ const SectionSmartFactory = () => {
   // const [current, setCurrent] = useState(1);
   // const [swip, setSwip] = useState(null);
 
+  const { t } = useTranslation();
+
   const factoryItems = [
-    { id: 0, icon: iconLicense, title: "Khu Công Nghệ Cao cấp phép" },
-    { id: 1, icon: iconSmartFactory, title: "Nhà máy thông minh 4.0" },
-    { id: 2, icon: iconPCCC, title: "Chứng nhận Phòng cháy chữa cháy" },
+    {
+      id: 0,
+      icon: iconLicense,
+      title: (
+        <>
+          {t("aboutUs.smartFactory.listItems.title1.1")}
+          <br />
+          {t("aboutUs.smartFactory.listItems.title1.2")}
+        </>
+      ),
+    },
+    {
+      id: 1,
+      icon: iconSmartFactory,
+      title: (
+        <>
+          {t("aboutUs.smartFactory.listItems.title2.1")}
+          <br />
+          {t("aboutUs.smartFactory.listItems.title2.2")}
+        </>
+      ),
+    },
+    {
+      id: 2,
+      icon: iconPCCC,
+      title: (
+        <>
+          {t("aboutUs.smartFactory.listItems.title3.1")}
+          <br />
+          {t("aboutUs.smartFactory.listItems.title3.2")}
+        </>
+      ),
+    },
   ];
 
   const listSlide = [
@@ -97,7 +131,9 @@ const SectionSmartFactory = () => {
       <div className="smart-factory-container-v3">
         <Row className="row-line-center m-left-right-12">
           <span className="title-eng-line-center">SMART FACTORY</span>
-          <h2 className="title-line-center">Nhà máy thông minh</h2>
+          <h2 className="title-line-center">
+            {t("aboutUs.smartFactory.mainTitle")}
+          </h2>
           <div className="img-line-center">
             <Divider />
           </div>
@@ -107,22 +143,14 @@ const SectionSmartFactory = () => {
           <Col lg={6} md={12} sm={12} className="factory-bottom-left-content">
             <div className="factory-produce-content">
               <h1 className="factory-title-paragraph">
-                Đầu tư nhà máy hiện đại
+                {t("aboutUs.smartFactory.groupContent.title1")}
               </h1>
               <p className="factory-first-desc">
-                Smart Factory của Unicloud được trang bị với hệ thống dây chuyền
-                máy móc lắp ráp linh kiện hiện đại, mang tính tự động hoá cao
-                cho cả linh kiện dán và cắm, đồng thời cũng đảm bảo các yêu cầu
-                cao về quy trình lắp ráp linh kiện tiên tiến nhất. Ngoài ra,
-                toàn bộ nhà máy còn được điều khiển bởi hệ thống kết nối IoT
-                thông minh được chính Unicloud thiết kế và lắp đặt.
+                {t("aboutUs.smartFactory.groupContent.desc1.1")}
               </p>
               <br />
               <p className="factory-second-desc">
-                Với mong muốn mang lại những sản phẩm có chất lượng cao nhất tới
-                khách hàng, mỗi sản phẩm điện tử của Unicloud được sản xuất một
-                cách khép kín thông qua việc đầu tư nhà máy thông minh, dây
-                chuyền lắp ráp linh kiện hiện đại.
+                {t("aboutUs.smartFactory.groupContent.desc1.2")}
               </p>
             </div>
             <div className="factory-list-item">
@@ -147,13 +175,11 @@ const SectionSmartFactory = () => {
           <div className="content-wrap p-relative">
             <div className="factory-second-bottom-left-content">
               <div className="factory-second-produce-content">
-                <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
+                <h1 className="factory-title-paragraph">
+                  {t("aboutUs.smartFactory.groupContent.title2")}
+                </h1>
                 <p className="factory-first-desc">
-                  Unicloud Group đã nghiên cứu, sản xuất và cho ra đời các thiết
-                  bị và giải pháp phần mềm thông minh phục vụ nhu cầu kinh doanh
-                  đa dạng của doanh nghiệp. Các sản phẩm mà Unicloud tự sản xuất
-                  được thử nghiệm, thẩm định nghiêm ngặt để đảm bảo chất lượng
-                  và độ tin cậy cao trước khi đưa ra thị trường.
+                  {t("aboutUs.smartFactory.groupContent.desc2")}
                 </p>
               </div>
             </div>
@@ -198,13 +224,11 @@ const SectionSmartFactory = () => {
           </div>
           <div className="mobile-content d-none">
             <div className="factory-second-produce-content">
-              <h1 className="factory-title-paragraph">Đẩy mạnh sản xuất</h1>
+              <h1 className="factory-title-paragraph">
+                {t("aboutUs.smartFactory.groupContent.title2")}
+              </h1>
               <p className="factory-first-desc">
-                Unicloud Group đã nghiên cứu, sản xuất và cho ra đời các thiết
-                bị và giải pháp phần mềm thông minh phục vụ nhu cầu kinh doanh
-                đa dạng của doanh nghiệp. Các sản phẩm mà Unicloud tự sản xuất
-                được thử nghiệm, thẩm định nghiêm ngặt để đảm bảo chất lượng và
-                độ tin cậy cao trước khi đưa ra thị trường.
+                {t("aboutUs.smartFactory.groupContent.desc2")}
               </p>
             </div>
             <div className="factory-second-produce-content">

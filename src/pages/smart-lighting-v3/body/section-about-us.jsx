@@ -1,16 +1,16 @@
 import React from "react";
-import SectionDropdown from "../../../components/drop-down/section-dropdown";
-import image1 from "../../../images/smart-lighting-v3/jpg/image1.jpg";
-import image2 from "../../../images/smart-lighting-v3/jpg/image2.jpg";
-import image3 from "../../../images/smart-lighting-v3/jpg/image3.jpg";
-import image4 from "../../../images/smart-lighting-v3/jpg/image4.jpg";
-import image5 from "../../../images/smart-lighting-v3/jpg/image5.jpg";
-import image6 from "../../../images/smart-lighting-v3/jpg/image6.jpg";
-import image7 from "../../../images/smart-lighting-v3/jpg/image7.jpg";
+import SectionDropdown from "@components/drop-down/section-dropdown";
+import image1 from "@images/smart-lighting-v3/jpg/image1.jpg";
+import image2 from "@images/smart-lighting-v3/jpg/image2.jpg";
+import image3 from "@images/smart-lighting-v3/jpg/image3.jpg";
+import image4 from "@images/smart-lighting-v3/jpg/image4.jpg";
+import image5 from "@images/smart-lighting-v3/jpg/image5.jpg";
+import image6 from "@images/smart-lighting-v3/jpg/image6.jpg";
+import image7 from "@images/smart-lighting-v3/jpg/image7.jpg";
 import { useTranslation } from "react-i18next";
 
 const SectionAboutUs = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   const listItem = [
     {
