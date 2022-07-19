@@ -1,6 +1,6 @@
 @font-face {
   font-family: "svn-gilroy";
-  src: url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf")
+  src: url("../../public/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "svn-gilroy";
   src: local("svn-gilroy"),
-    url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf")
+    url("../../public/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf")
       format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "SVN-Gilroy";
-  src: url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf")
+  src: url("../../public/fonts/svn-gilroy/SVN-Gilroy-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -29,7 +29,7 @@
 @font-face {
   font-family: "SVN-Gilroy";
   src: local("svn-gilroy"),
-    url("../../../static/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf")
+    url("../../public/fonts/svn-gilroy/SVN-Gilroy-Bold.ttf")
       format("truetype");
   font-weight: bold;
   font-style: normal;

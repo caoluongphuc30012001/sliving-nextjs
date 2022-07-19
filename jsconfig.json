@@ -32,6 +32,9 @@
             "@styles/*": [
                 "styles/*"
             ],
+            "@fonts/*": [
+                "public/fonts/*"
+            ],
         }
     }
 }
