@@ -1,4 +1,9 @@
 {
+    "business.packagesData.solution":"GIẢI PHÁP",
+    "business.packagesData.device":"Tên thiết bị",
+    "business.packagesData.normal":"Cơ Bản",
+    "business.packagesData.advanced":"Nâng Cao",
+    "business.packagesData.contact":"Liên hệ",
     "business.packagesData.lighting":"Giải pháp chiếu sáng",
     "business.packagesData.home":"Giải pháp điều khiển",
     "business.packagesData.building":"Giải pháp an ninh",

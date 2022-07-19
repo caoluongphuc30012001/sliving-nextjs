@@ -6,15 +6,24 @@ import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
 import { useTranslation } from "react-i18next";
 const Table2 = ({ table }) => {
+  const { t } = useTranslation();
   return (
     <div className="table">
       <table className="table-container">
         <thead className="content-container">
           <tr className="table-row">
-            <th className="table-data header">GIẢI PHÁP</th>
-            <th className="table-data header center">Tên thiết bị</th>
-            <th className="table-data header">Cơ Bản</th>
-            <th className="table-data header">Nâng Cao</th>
+            <th className="table-data header">
+              {t("business.packagesData.solution")}
+            </th>
+            <th className="table-data header center">
+              {t("business.packagesData.device")}
+            </th>
+            <th className="table-data header">
+              {t("business.packagesData.normal")}
+            </th>
+            <th className="table-data header">
+              {t("business.packagesData.advanced")}
+            </th>
           </tr>
         </thead>
         <tbody className="body-content-container border-b">
@@ -57,6 +66,7 @@ const Table2 = ({ table }) => {
 };
 
 const SubTable = ({ table }) => {
+  const { t } = useTranslation();
   return (
     <tbody className="body-content-container border-b">
       <tr className="body-table-row">{table.solutionName}</tr>
@@ -80,7 +90,9 @@ const SubTable = ({ table }) => {
       </tr>
       <tr className="body-table-row">
         <td className="table-data">
-          <div className="quantity-data">Liên hệ</div>
+          <div className="quantity-data">
+            {t("business.packagesData.contact")}
+          </div>
         </td>
       </tr>
     </tbody>
@@ -98,11 +110,11 @@ const SectionProductList = () => {
   // }, []);
   const [solutionNames, setSolutionNames] = useState("");
 
-  const {  t, ready } = useTranslation();
+  const { i18n, t, ready } = useTranslation();
   useEffect(() => {
     const data = t("business.tableData2", { returnObjects: true });
     setTableData(data);
-  }, [ready]);
+  }, [ready, i18n.language]);
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;

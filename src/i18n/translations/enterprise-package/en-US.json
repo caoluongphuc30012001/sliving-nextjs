@@ -1,15 +1,20 @@
 {
-    "business.packagesData.lighting":"Giải pháp chiếu sáng",
-    "business.packagesData.home":"Giải pháp điều khiển",
-    "business.packagesData.building":"Giải pháp an ninh",
-    "business.packagesData.parking":"Giải pháp bãi đỗ xe",
+    "business.packagesData.solution":"SOLUTION",
+    "business.packagesData.device":"Detailed equipment",
+    "business.packagesData.normal":"Basic",
+    "business.packagesData.advanced":"Advanced",
+    "business.packagesData.contact":"Contact",
+    "business.packagesData.lighting":"Smart Lighting",
+    "business.packagesData.home":"Smart Home",
+    "business.packagesData.building":"Smart Building",
+    "business.packagesData.parking":"Smart Parking",
     "business.tableData2":{
         "id": 0,
-        "smallNote": "Bảng thiết bị chỉ để tham khảo, để biết thêm thông tin về giải pháp vui lòng liên hệ với chúng tôi để được phục vụ chính xác và nhanh chóng nhất.",
+        "smallNote": "This statistical table shows reference data. Don't hesitate to contact us for direct, accurate, and fast support for the detailed information.",
         "content": [
           {
             "id": 0,
-            "solutionName": "Điều khiển",
+            "solutionName": "Smart Home",
             "deviceList": [
               {
                 "id": "0",
@@ -19,25 +24,25 @@
               },
               {
                 "id": "1",
-                "deviceName": "Bộ điều khiển trung tâm Gateway",
+                "deviceName": "Gateway controller",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "2",
-                "deviceName": "Ổ cắm",
+                "deviceName": "Plug",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "3",
-                "deviceName": "Bộ Điều Khiển Hồng Ngoại",
+                "deviceName": "Infrared controller",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "4",
-                "deviceName": "Bộ điều nhiệt",
+                "deviceName": "Thermostat",
                 "inBasic": true,
                 "inAdvanced": true
               }
@@ -45,7 +50,7 @@
           },
           {
             "id": 1,
-            "solutionName": "Chiếu sáng",
+            "solutionName": "Smart Lighting",
             "deviceList": [
               {
                 "id": "0",
@@ -55,19 +60,19 @@
               },
               {
                 "id": "1",
-                "deviceName": "Bộ điều khiển trung tâm Gateway",
+                "deviceName": "Gateway controller",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "2",
-                "deviceName": "Công tắc cơ (Vuông - Trắng - 3 nút - 1 dây)",
+                "deviceName": "Mechanical Switch (square - white - 3 buttons -  1 wires)",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "3",
-                "deviceName": "Công tắc cảm ứng (Vuông - Trắng - Viền mạ vàng - 1,2,3,4,6 nút - 2 dây)",
+                "deviceName": "Smart Touch Switch (rectangular/square - white/Gold - 1/2/3/4/6 buttons -  2 wires)",
                 "inBasic": true,
                 "inAdvanced": true
               },
@@ -79,31 +84,31 @@
               },
               {
                 "id": "5",
-                "deviceName": "Led Driver 10 kênh",
+                "deviceName": "10 channels - Led driver",
                 "inBasic": false,
                 "inAdvanced": true
               },
               {
                 "id": "6",
-                "deviceName": "Cảm biến ánh sáng",
+                "deviceName": "Lighting sensor ",
                 "inBasic": false,
                 "inAdvanced": true
               },
               {
                 "id": "7",
-                "deviceName": "Cảm biến chuyển động",
+                "deviceName": "Motion Sensor",
                 "inBasic": false,
                 "inAdvanced": true
               },
               {
                 "id": "8",
-                "deviceName": "Công tắc cơ pin",
+                "deviceName": "Mechanical Switch (battery)",
                 "inBasic": false,
                 "inAdvanced": true
               },
               {
                 "id": "9",
-                "deviceName": "Cảm biến cửa",
+                "deviceName": "Door Sensor",
                 "inBasic": false,
                 "inAdvanced": true
               }
@@ -111,7 +116,7 @@
           },
           {
             "id": 2,
-            "solutionName": "An ninh",
+            "solutionName": "Smart Building",
             "deviceList": [
               {
                 "id": "0",
@@ -121,19 +126,19 @@
               },
               {
                 "id": "1",
-                "deviceName": "Bộ điều khiển trung tâm Gateway",
+                "deviceName": "Gateway controller",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "2",
-                "deviceName": "Camera Trong Nhà",
+                "deviceName": "Inside camera",
                 "inBasic": true,
                 "inAdvanced": true
               },
               {
                 "id": "3",
-                "deviceName": "Cảm biến cửa",
+                "deviceName": "Door Sensor",
                 "inBasic": true,
                 "inAdvanced": true
               }
@@ -144,14 +149,14 @@
           "solutionList": [
             {
               "id": 0,
-              "solutionName": "Quản lý bãi đỗ",
-              "softwareName": "Phần mềm quản lý bãi đỗ",
+              "solutionName": "Parking management",
+              "softwareName": "Parking management software",
               "deviceList": {
-                "listName": "Thiết bị quản lý bãi đỗ xe",
+                "listName": "Parking management device",
                 "content": [
                   {
                     "id": 0,
-                    "deviceName": "Barrier (Thanh chắn)"
+                    "deviceName": "Barrier"
                   },
                   {
                     "id": 1,
@@ -166,30 +171,30 @@
             },
             {
               "id": 1,
-              "solutionName": "Quản lý chỗ trống",
-              "softwareName": "Phần mềm quản lý chỗ trống",
+              "solutionName": "Manage vacancies",
+              "softwareName": "Vacancy management software",
               "deviceList": {
-                "listName": "Thiết bị quản lý chỗ trống",
+                "listName": "Space management device",
                 "content": [
                   {
                     "id": 0,
-                    "deviceName": "Máy dò đỗ xe video thông minh ITC314-PH3A-TF SERIES"
+                    "deviceName": "Smart Video Parking Detector ITC314-PH3A-TF SERIES"
                   },
                   {
                     "id": 1,
-                    "deviceName": "Máy dò đỗ xe video thông minh ITC314-PH3A-F SERIES"
+                    "deviceName": "Smart Video Parking Detector ITC314-PH3A-F SERIES"
                   },
                   {
                     "id": 2,
-                    "deviceName": "Bảng thế hiện số chỗ trống"
+                    "deviceName": "Table showing the number of vacancies"
                   },
                   {
                     "id": 3,
-                    "deviceName": "Cảm biến siêu âm từ dưới lên"
+                    "deviceName": "Bottom-up ultrasonic sensor"
                   },
                   {
                     "id": 4,
-                    "deviceName": "Cảm biến siêu âm từ trên xuống"
+                    "deviceName": "Top-down ultrasonic sensor"
                   }
                 ]
               }
@@ -197,7 +202,7 @@
             {
               "id": 2,
               "solutionName": "App & Map",
-              "softwareName": "Ứng dụng quản lý bãi đỗ xe thông minh tích hợp bản đồ chỉ đường",
+              "softwareName": "Smart parking management application with integrated directions map",
               "deviceList": {
                 "listName": "",
                 "content": []
