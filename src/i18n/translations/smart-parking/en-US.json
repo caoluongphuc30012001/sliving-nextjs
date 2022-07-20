@@ -1,1 +1,501 @@
-{}
+{
+  "smartParking.sectionHeader.title": "SMART PARKING",
+  "smartParking.sectionHeader.subTitle": "Smart Parking solution is an effective parking management system of Unicloud Group applied in apartments, buildings, commercial centers, schools, hospitals, etc. Users can use the \"Smart Parking App\" to manage vehicles in and out, detect vacancies, be guided to parking locations to save time, optimize personal costs, increase parking capacity, and offer residents comfort and convenience while using the service.",
+  "smartParking.sectionDefinition.infoItem": {
+    "title": "What is Smart Parking ?",
+    "webContents": [
+      {
+        "id": 0,
+        "content": "Smart Parking management solution meets modern and convenient criteria in controlling and managing vehicle entering/leaving status and allows to choose slots actively through parking application. Users can ensure security and control the source of vehicles effectively helps to solve the limitations of traditional parking."
+      },
+      {
+        "id": 1,
+        "content": "Smart Parking will help businesses save a lot of costs and human resources. Moreover, this solution enhances experiences and satisfaction for residents in finding the location or flexibly paying through the application."
+      }
+    ],
+    "mobileContents": [
+      {
+        "id": 0,
+        "content": "Smart Parking được thiết kế và lắp đặt theo một chu trình khép kín, bao gồm các thiết bị thông minh như: cảm biến, bảng đèn Led điều hướng, camera thông minh.... Tích hợp vào ứng dụng Smart Parking (App) giúp kiểm soát và quản lý xe ra vào, người dùng có thể chủ động đặt chỗ và có sự lựa chọn đỗ xe phù hợp nhất."
+      }
+    ],
+    "listIcon": [
+      {
+        "id": 0,
+        "title": ["Save time, cost, and resources"]
+      },
+      {
+        "id": 1,
+        "title": ["Ensure safety and security, and control the flow of vehicles in and out effectively"]
+      },
+      {
+        "id": 2,
+        "title": ["Overcome the traditional parking limitation (card loss, cash-only,...)"]
+      },
+      {
+        "id": 3,
+        "title": ["The professional and quick installation, warranty, and maintenance service"]
+      },
+      {
+        "id": 4,
+        "title": ["Application easy management"]
+      },
+      {
+        "id": 5,
+        "title": ["Entering/Leaving effective control"]
+      }
+    ]
+  },
+  "smartParking.sectionParkingSolution.title": "SMART PARKING",
+  "smartParking.sectionParkingSolution.subTitle": "Smart Parking Solution",
+  "smartParking.sectionParkingSolution.listItem": [
+    {
+      "id": 0,
+      "title": "Indoor Parking Solution",
+      "secondTitle": "Basement Parking solution compendium",
+      "iconList": [
+        {
+          "id": 0,
+          "title": "Smartcloud",
+          "text": "Accurately & effectively collect/process information"
+        },
+        {
+          "id": 1,
+          "title": "Packaged service",
+          "text": "CProvide detailed information about vehicle schedule/vehicle navigation service/online payment service"
+        },
+        {
+          "id": 2,
+          "title": "Smart connecting node",
+          "text": "Connect devices to a network"
+        },
+        {
+          "id": 3,
+          "title": "Sensor",
+          "text": "Recognize the changes/collect information /trasmit signal"
+        },
+        {
+          "id": 4,
+          "title": "Smart indication signs",
+          "text": "Show number of spaces/navigation"
+        },
+        {
+          "id": 5,
+          "title": "App & Map",
+          "text": "Integrate map/location in the application, find available location/slot via mobile device"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Outdoor Parking Solution",
+      "secondTitle": "Outdoor parking solution compendium",
+      "iconList": [
+        {
+          "id": 0,
+          "title": "Smartcloud",
+          "text": "Accurately & effectively collect/process information"
+        },
+        {
+          "id": 1,
+          "title": "Packaged service",
+          "text": "Provide detailed information about vehicle schedule/vehicle navigation service/online payment service"
+        },
+        {
+          "id": 2,
+          "title": "Smart connecting node",
+          "text": "Connect devices to a network"
+        },
+        {
+          "id": 3,
+          "title": "Sensor",
+          "text": "Recognize the changes/collect information /trasmit signal"
+        },
+        {
+          "id": 4,
+          "title": "Smart indication signs",
+          "text": "Show number of spaces/navigation"
+        },
+        {
+          "id": 5,
+          "title": "App & Map",
+          "text": "Integrate map/location in the application, find available location/slot via mobile device"
+        },
+        {
+          "id": 6,
+          "title": "Protection system",
+          "text": "Assure the device's features are properly operated in outdoor condition"
+        }
+      ]
+    }
+  ],
+  "smartParking.sectionParkingSolution.buttonAdvise": "Consult now",
+  "smartParking.sectionParkingSystem.title": "System",
+  "smartParking.sectionParkingSystem.subTitle": "SMART PARKING",
+  "smartParking.sectionParkingSystem.software.title": "Software",
+  "smartParking.sectionParkingSystem.software.contentList": [
+    {
+      "id": 0,
+      "title": "Parking management softwware (Entering/Leaving)",
+      "content": {
+        "feature": [
+          {
+            "id": 0,
+            "text": "Issue parking cards"
+          },
+          {
+            "id": 1,
+            "text": "Manage time (entering/leaving)"
+          },
+          {
+            "id": 2,
+            "text": "Calculate/Display fees"
+          },
+          {
+            "id": 3,
+            "text": "Open/Close a barrier bar"
+          },
+          {
+            "id": 4,
+            "text": "Manage license plates"
+          },
+          {
+            "id": 5,
+            "text": "Entering/Leaving management"
+          },
+          {
+            "id": 6,
+            "text": "Statistic on the number of vehicles"
+          },
+          {
+            "id": 7,
+            "text": "Statistic parking lot revenue (day/month)"
+          }
+        ],
+        "desc": [
+          {
+            "id": 0,
+            "text": "Identification and storage of license plates quickly."
+          },
+          {
+            "id": 1,
+            "text": "Take photos of people and vehicles entering/leaving the parking lot."
+          },
+          {
+            "id": 2,
+            "text": " Allows long-term parking registration and automatic fees calculation."
+          },
+          {
+            "id": 3,
+            "text": "Always update the number of seats, displayed on both signs and billboards."
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "title": "Vacancies management software",
+      "content": {
+        "feature": [
+          {
+            "id": 0,
+            "text": "Determine the total number of vacancies in the parking lot (outdoor/basement)"
+          },
+          {
+            "id": 1,
+            "text": "Navigate vehicle movement"
+          },
+          {
+            "id": 2,
+            "text": "Show parking space status"
+          },
+          {
+            "id": 3,
+            "text": "Find the car's location in the parking lot"
+          }
+        ],
+        "desc": [
+          {
+            "id": 0,
+            "text": "Show available parking slots"
+          },
+          {
+            "id": 1,
+            "text": "Direct the vehicle to the parking location quickly"
+          },
+          {
+            "id": 2,
+            "text": "Allows users to search for an empty parking spot through the app"
+          }
+        ]
+      }
+    }
+  ],
+  "smartParking.sectionParkingSystem.software.featureTitle": "Function",
+  "smartParking.sectionParkingSystem.software.specificationTitle": "Detailed description",
+  "smartParking.sectionParkingSystem.hardware.title": "Equipment",
+  "smartParking.sectionParkingSystem.hardware.itemList": [
+    {
+      "id": 0,
+      "title": "Parking management equipment (Entering/Leaving)",
+      "contentList": [
+        {
+          "id": 0,
+          "title": "Barrier",
+          "descList": [
+            "Support security staff to control or automatically (after the system has extracted and checked the exact information) and ensure safety and security in the parking lot."
+          ],
+          "attributeList": [
+            {
+              "id": 0,
+              "title": "Power supply",
+              "value": "220V"
+            },
+            {
+              "id": 1,
+              "title": "Frequency",
+              "value": "50/60 Hz"
+            },
+            {
+              "id": 2,
+              "title": "Power",
+              "value": "90W - 120W"
+            },
+            {
+              "id": 3,
+              "title": "Temperature",
+              "value": "-20 - 80 (degrees Celsius)"
+            },
+            {
+              "id": 4,
+              "title": "Length",
+              "value": "1m – 3m"
+            },
+            {
+              "id": 5,
+              "title": "Total weight",
+              "value": "from 50kg"
+            },
+            {
+              "id": 6,
+              "title": "Control distance",
+              "value": "from 50m"
+            },
+            {
+              "id": 7,
+              "title": "Material",
+              "value": "steel, aluminum, plastic,…"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Camera _ ITC215 - PW6M - IRL2F",
+          "descList": [
+            "License plates recognition",
+            "Anti-backlight WDR",
+            "Infrared sensor"
+          ],
+          "attributeList": [
+            {
+              "id": 0,
+              "title": "Image Sensor",
+              "value": "1/2.8’’ CMOS"
+            },
+            {
+              "id": 1,
+              "title": "Image Resolution",
+              "value": "1920 x 1080 (OSD)"
+            },
+            {
+              "id": 2,
+              "title": "Illumination Distance",
+              "value": "12m (39.37 ft)"
+            },
+            {
+              "id": 3,
+              "title": "Capture Range",
+              "value": "3m – 6m (9.84 ft–19.69 ft)"
+            },
+            {
+              "id": 4,
+              "title": "Detected Lane Width",
+              "value": "3m - 4m (9.84 ft–13.12 ft)"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Camera _ IPC - HDBW5442H - ZE",
+          "descList": [
+            "Face detection",
+            "Anti-backlight WDR",
+            "Infrared sensor"
+          ],
+          "attributeList": [
+            {
+              "id": 0,
+              "title": "Max Resolution",
+              "value": "2688(H) x 1520(V)"
+            },
+            {
+              "id": 1,
+              "title": "ROM",
+              "value": "128MB"
+            },
+            {
+              "id": 2,
+              "title": "RAM",
+              "value": "1GB"
+            },
+            {
+              "id": 3,
+              "title": "Scanning System",
+              "value": "Progressive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Vacancies management equipment",
+      "contentList": [
+        {
+          "id": 0,
+          "title": "Smart Video Parking Detector _ ITC314-PH3A-TF SERIES",
+          "descList": [
+            "Monitoring in real-time",
+            "Detect 6 parking spots, 7 color indicator lights",
+            "Recognize license plates",
+            "Support vehicle protection",
+            "State transition speed < 5s"
+          ],
+          "attributeList": [
+            {
+              "id": 0,
+              "title": "Image Sensor",
+              "value": "1/3'' CMOS"
+            },
+            {
+              "id": 1,
+              "title": "Electronic Shutter Speed",
+              "value": "1/3 s–1/10000 s (manual/auto)"
+            },
+            {
+              "id": 2,
+              "title": "Image Resolution",
+              "value": "2304 × 1296"
+            },
+            {
+              "id": 3,
+              "title": "Video Resolution",
+              "value": "2MP (1920 × 1080)"
+            },
+            {
+              "id": 4,
+              "title": "Day/Night",
+              "value": "Switch day/night mode according to brightness"
+            },
+            {
+              "id": 5,
+              "title": "Noise Reduction",
+              "value": "3D DNR"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "title": "Smart Video Parking Detector _ ITC314-PH3A-F SERIES",
+          "descList": [
+            "Monitoring in real-time",
+            "Detect 3 parking spots, 7 color indicator lights",
+            "Recognize license plates",
+            "Support vehicle protection",
+            "State transition speed < 5s"
+          ],
+          "attributeList": [
+            {
+              "id": 0,
+              "title": "Image Sensor",
+              "value": "1/3'' CMOS"
+            },
+            {
+              "id": 1,
+              "title": "Electronic Shutter Speed",
+              "value": "1/3 s–1/10000 s (manual/auto)"
+            },
+            {
+              "id": 2,
+              "title": "Image Resolution",
+              "value": "2304 × 1296"
+            },
+            {
+              "id": 3,
+              "title": "Video Resolution",
+              "value": "2MP (1920 × 1080)"
+            },
+            {
+              "id": 4,
+              "title": "Day/Night",
+              "value": "Switch day/night mode according to brightness"
+            },
+            {
+              "id": 5,
+              "title": "Noise Reduction",
+              "value": "3DNR"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Available Lots Led",
+          "descList": [
+            "Display the number of parking spaces for motorbikes/cars on the screen"
+          ],
+          "attributeList": [
+            {
+              "id": 0,
+              "title": "Specification",
+              "value": "The equipment is compatible with the system"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "smartParking.sectionParkingSystem.appMapContentList": [
+    {
+      "id": 0,
+      "title": "APP",
+      "content": [
+        {
+          "id": 0,
+          "content": "Allow users to book in advance"
+        },
+        {
+          "id": 1,
+          "content": "Determine the exact available position"
+        },
+        {
+          "id": 2,
+          "content": "Register the license plates"
+        },
+        {
+          "id": 3,
+          "content": "Detect/locate position through the map"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "MAP",
+      "content": [
+        {
+          "id": 0,
+          "content": "The map is integrated into the phone application to locate and find position easily"
+        }
+      ]
+    }
+  ]
+}
