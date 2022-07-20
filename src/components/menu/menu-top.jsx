@@ -78,14 +78,14 @@ const MenuTop = ({ logo, listRoute, back, business }) => {
               <span>{t("menu.advise")}</span>
             </button>
           </div>
-        </div>
-        <div className="change-language-box" onClick={changLanguages}>
-          <p className="language">{i18n.language.toUpperCase()}</p>
-          {i18n.language.toUpperCase() === "EN" ? (
-            <img src={england} alt="" className="image" />
-          ) : (
-            <img src={vietnam} alt="" className="image" />
-          )}
+          <div className="change-language-box" onClick={changLanguages}>
+            <p className="language">{i18n.language.toUpperCase()}</p>
+            {i18n.language.toUpperCase() === "EN" ? (
+              <img src={england} alt="" className="image" />
+            ) : (
+              <img src={vietnam} alt="" className="image" />
+            )}
+          </div>
         </div>
       </div>
       {!business && (

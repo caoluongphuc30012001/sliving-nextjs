@@ -44,7 +44,7 @@ const PersonalStep1 = () => {
   const checkList = [{}, {}, {}, {}];
   const [skeleton, setSkeleton] = useState(true);
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useLayoutEffect(() => {
     const getListHouse = async () => {
@@ -120,7 +120,11 @@ const PersonalStep1 = () => {
                   ></img>
                 </div>
                 <div className="solution-item-desc">
-                  <span>{item.nameVi}</span>
+                  <span>
+                    {i18n.language.toUpperCase() === "VN"
+                      ? item.nameVi
+                      : item.nameEn}
+                  </span>
                 </div>
               </div>
             );
@@ -139,7 +143,7 @@ const PersonalStep1 = () => {
               //   key={id}
               // >
               // </div>
-              <div id="card">
+              <div id="card" key={id}>
                 <div className="card-image">
                   <div className="block pulsate"></div>
                 </div>

@@ -1,1 +1,18 @@
-{}
+{
+    "processPage.title": "Solution Package Deployment Process",
+    "processPage.subTitle": "PROCESS",
+    "processPage.process.step1.title": "Receive demand and send preliminary quotation",
+    "processPage.process.step1.subTitle": "Customers contact Sliving and provide information about the need to install a smart solution package. Our expert department will provide preliminary advice on solutions and equipment suitable for customers' needs and conditions and send preliminary quotes for easy reference.",
+    "processPage.process.step2.title": "Survey and send detailed quotation",
+    "processPage.process.step2.subTitle": "After fully understanding the needs of the customer, we will have a practical survey at the installation site, to better understand the project scale, perspective, and design style. Sliving's project technical team will thoroughly discuss and agree on applicable solutions and send specific quotes to customers.",
+    "processPage.process.step3.title": "Sign contract and deposit",
+    "processPage.process.step3.subTitle": "The two parties agree and sign the contract after finalizing the final plan. The customer will deposit an expense and the Sliving team will conduct detailed drawing implementation, technical coordination and quick construction plan.",
+    "processPage.process.step4.title": "Project progress tracking",
+    "processPage.process.step4.subTitle": "Sliving's technical team will directly implement the installation to ensure the project progress according to the plan and consistency with the original design. In addition, we also coordinate with stakeholders in each construction phase to ensure the best project quality.",
+    "processPage.process.step5.title": "Project handover, support and maintenance 24/24",
+    "processPage.process.step5.subTitle": "Conduct pre-acceptance test for the number of installed equipment and system features that meet the requirements properly and sufficiently. Sliving representatives will guide how to use the device and commit to equipment warranty and technical support for customers every day of the week.",
+    "processPage.process.answerProcess.title": "Answers",
+    "processPage.process.answerProcess.subTitle": "Answer all questions of customers about the need to install smart solution packages and the project implementation process.",
+    "processPage.process.buttonAdvise": "Consultation now!"
+  }
+  

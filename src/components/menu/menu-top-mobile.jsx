@@ -2,12 +2,21 @@ import React, { useState } from "react";
 import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import menuIcon from "../../images/smart-home-v3/png/menu-icon.png";
 import close from "../../images/smart-home-v3/png/close.png";
+
+import { useTranslation } from "react-i18next";
+
+import england from "../../images/menu/png/flag-england.png";
+import vietnam from "../../images/menu/flag-vietnam.svg";
 // import { Link } from "gatsby";
 import Link from "@components/gatsby-link";
 import "./style.scss";
 
 const MenuTopMobile = ({ logo, listRoute }) => {
   const [mobile, setMobile] = useState(true);
+  const { i18n, t } = useTranslation();
+  const changLanguages = () => {
+    i18n.changeLanguage(i18n.language.toUpperCase() === "EN" ? "vn" : "en");
+  };
   return (
     <nav className="section-menu-top-mobile">
       <div className="menu-top-container">
@@ -19,15 +28,27 @@ const MenuTopMobile = ({ logo, listRoute }) => {
           </Link>
           {mobile && (
             <div
-              role="button"
-              className="icon-menu"
-              onClick={() => {
-                setMobile(!mobile);
-              }}
-              onKeyDown={() => {}}
-              tabIndex={0}
+              className="group-btn"
             >
-              <img src={menuIcon} alt="" />
+              <div className="change-language-box" onClick={changLanguages}>
+                <p className="language">{i18n.language.toUpperCase()}</p>
+                {i18n.language.toUpperCase() === "EN" ? (
+                  <img src={england} alt="" className="image" />
+                ) : (
+                  <img src={vietnam} alt="" className="image" />
+                )}
+              </div>
+              <div
+                role="button"
+                className="icon-menu"
+                onClick={() => {
+                  setMobile(!mobile);
+                }}
+                onKeyDown={() => {}}
+                tabIndex={0}
+              >
+                <img src={menuIcon} alt="" />
+              </div>
             </div>
           )}
           {!mobile && (
