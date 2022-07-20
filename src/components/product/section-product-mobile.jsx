@@ -8,6 +8,8 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     <div className="content-left">
       <div className="top-menu">
@@ -23,7 +25,7 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
                 setCurrent(item);
               }}
             >
-              <div className="label">{item.nameVi}</div>
+              <div className="label">{checkVn ? item.nameVi : item.nameEn}</div>
               <div className="item-border"></div>
             </div>
           );
@@ -33,6 +35,8 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   );
 };
 const ContentRight = ({ listProduct, current }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     listProduct.length > 0 && (
       <div className="content-right">
@@ -61,7 +65,9 @@ const ContentRight = ({ listProduct, current }) => {
                     <div className="img-box">
                       <img src={item.imageURL} alt="" />
                     </div>
-                    <div className="description">{item.nameVi}</div>
+                    <div className="description">
+                      {checkVn ? item.nameVi : item.nameEn}
+                    </div>
                   </div>
                 </Link>
               </SwiperSlide>

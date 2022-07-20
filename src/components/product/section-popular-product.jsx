@@ -14,8 +14,8 @@ const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [productName, setProductName] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
-  const { t } = useTranslation();
-
+  const { t,i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     <section className="section-popular-product-v3">
       <div className="popular-product-container">
@@ -56,7 +56,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                         </Link>
                         <div className="description-box">
                           <p className="sub-title">{item.nameEn}</p>
-                          <p className="title">{item.nameVi}</p>
+                          <p className="title">{checkVn?item.nameVi:item.nameEn}</p>
                           <div className="btn-group">
                             {/* <button
                               className="advise-now-btn"

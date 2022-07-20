@@ -11,16 +11,20 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { useTranslation } from "react-i18next";
 
 const isBrowser = typeof window !== "undefined";
-const Table = ({ table, handlePlus, handleSub, onInputChange }) => {
+const Table = ({ table }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     <tbody className="body-content-container border-b">
-      <tr className="body-table-row">{table.room.roomValue.nameVi}</tr>
+      <tr className="body-table-row">
+        {checkVn ? table.room.roomValue.nameVi : table.room.roomValue.nameEn}
+      </tr>
       <tr className="body-table-row border-l">
         {table.listDevice.map((item, index) => {
           const id = index + 1;
           return (
             <td key={id} className="table-data border-b">
-              {item.deviceValues.nameVi}
+              {checkVn ? item.deviceValues.nameVi : item.deviceValues.nameEn}
             </td>
           );
         })}
