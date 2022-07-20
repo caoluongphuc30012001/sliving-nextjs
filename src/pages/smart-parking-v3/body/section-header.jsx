@@ -4,7 +4,7 @@ import background from "@images/smart-parking-v3/jpg/bg-parking.jpg";
 import car_img from "@images/smart-parking-v3/png/img-car.png";
 import { useTranslation } from "react-i18next";
 
-const SmartHeader = () => {
+const SectionHeader = () => {
   const { t, ready } = useTranslation();
 
   return (
@@ -33,4 +33,4 @@ const SmartHeader = () => {
   );
 };
 
-export default SmartHeader;
+export default SectionHeader;
