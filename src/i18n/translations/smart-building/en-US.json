@@ -33,7 +33,7 @@
     ]
   },
   "smartBuilding.sectionTechnologyDoorLocks.technologies": {
-    "title": "Technology used",
+    "title": "Applied Technology",
     "technologyList": [
       {
         "title": "NFC card",
@@ -75,7 +75,7 @@
     ]
   },
   "smartBuilding.sectionTechnologyElevator.technologies": {
-    "title": "Technology used",
+    "title": "Applied Technology",
     "technologyList": [
       {
         "title": "RFID/NFC card reader",
@@ -125,7 +125,7 @@
     ]
   },
   "smartBuilding.sectionTechnologyTurnstile.technologies": {
-    "title": "Technology used",
+    "title": "Applied Technology",
     "technologyList": [
       {
         "title": "FaceID camera face recognition",
@@ -167,7 +167,7 @@
     ]
   },
   "smartBuilding.sectionTechnologyFaceID.technologies": {
-    "title": "Technology used",
+    "title": "Applied Technology",
     "technologyList": [
       {
         "title": "FaceID camera face recognition",
