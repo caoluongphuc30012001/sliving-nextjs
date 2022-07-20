@@ -11,34 +11,27 @@ import iconApple from "@images/footer-v3/png/icon-down-apple.png";
 import iconChPlay from "@images/footer-v3/png/icon-down-chplay.png";
 import { Link } from "gatsby";
 import "./footer.scss";
+import { useTranslation } from "react-i18next";
 
 const BuildLogo = () => (
   <img src={logoSliving} alt="logo Unicloud" width={283} height="auto" />
 );
 
 function BuildInformation() {
+  const { i18n, t } = useTranslation();
+
   return (
     <div className="footer-info">
       <BuildLogo />
-      <p className="text-white fs-14 my-4">
-        Hệ sinh thái công nghệ, giải pháp số thuộc Tập Đoàn Công Nghệ Unicloud
-      </p>
+      <p className="text-white fs-14 my-4">{t("footer.description")}</p>
       <h4 className="fs-6 fw-bold text-white mb-3 my-4">
-        Kết nối với chúng tôi
+        {t("footer.connect")}
       </h4>
       <div className="group-icon-social d-flex justify-content-center align-items-center">
-        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
         <img src={iconFb} alt="facebook" />
-        {/* </a> */}
-        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
         <img src={iconYtn} alt="youtube" />
-        {/* </a> */}
-        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
         <img src={iconPhone} alt="phone" />
-        {/* </a> */}
-        {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
         <img src={iconEmail} alt="email" />
-        {/* </a> */}
       </div>
     </div>
   );
@@ -63,53 +56,39 @@ function BuildAboutUs(props) {
 }
 
 function BuildApps() {
-  //   const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="footer-apps">
-      <h4 className="text-white fw-bold fs-4">Kho ứng dụng</h4>
+      <h4 className="text-white fw-bold fs-4">{t("footer.store")}</h4>
       <a href="https://1p.io/AppSlivingApple" target="_blank" rel="noreferrer">
         <img className="my-3" src={iconApple} alt="" />
       </a>
       <a href="https://1p.io/SlivingAppChplay" target="_blank" rel="noreferrer">
         <img className="my-3" src={iconChPlay} alt="" />
       </a>
-      {/* <img src={qrCode} alt="" /> */}
     </div>
   );
 }
-// const scrollTop = () => {
-//   window.scrollTo({ top: 0, behavior: "smooth" });
-// };
+
 function Footer() {
-  //   const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const listAbout = [
-    { id: 0, title: "Giới thiệu", url: "/about-us" },
-    { id: 1, title: "Giải pháp", url: "/business" },
-    { id: 2, title: "Bản tin", url: "https://unicloud.com.vn/news" },
-    // { id: 3, title: "Tuyển dụng", url: "https://career.unicloud.com.vn/" },
-    { id: 3, title: "Liên hệ", url: "/contact-us" },
+    { id: 0, title: `${t("footer.listAboutItem1")}`, url: "/about-us" },
+    { id: 1, title: `${t("footer.listAboutItem2")}`, url: "/business" },
+    {
+      id: 2,
+      title: `${t("footer.listAboutItem3")}`,
+      url: "https://unicloud.com.vn/news",
+    },
+    { id: 3, title: `${t("footer.listAboutItem4")}`, url: "/contact-us" },
   ];
 
   const listHref = [
-    { id: 0, title: "Điều khoản sử dụng", url: "/policy" },
-    { id: 1, title: "Chính sách bảo hành", url: "/coming-soon" },
-    { id: 2, title: "Chính sách bán hàng", url: "/coming-soon" },
-    // { id: 3, title: "Chính sách bảo vệ dữ liệu", url: "/home-page-v3" },
-    // { id: 4, title: "Báo cáo rủi ro & vi phạm", url: "/home-page-v3" },
-    // { id: 1, title: t('footer.link.privacy'), url: '#' },
-    // { id: 2, title: t('footer.link.nda'), url: '#' },
-    // { id: 3, title: t('footer.link.personalPolicy'), url: '#' },
-    // { id: 4, title: t('footer.link.report'), url: '#' },
+    { id: 0, title: `${t("footer.listHrefItem1")}`, url: "/policy" },
+    { id: 1, title: `${t("footer.listHrefItem2")}`, url: "/coming-soon" },
+    { id: 2, title: `${t("footer.listHrefItem3")}`, url: "/coming-soon" },
   ];
-
-  //   const size = useWindowSize();
-  //   const isMobile = useMemo(() => {
-  //     if (size.width && size.width >= 992) {
-  //       return false;
-  //     }
-  //     return true;
-  //   }, [size.width]);
 
   useEffect(() => {
     const funcScroll = () => {
@@ -146,10 +125,13 @@ function Footer() {
                   <BuildInformation />
                 </Col>
                 <Col sm={6} lg={2}>
-                  <BuildAboutUs listArray={listAbout} title="Về Sliving" />
+                  <BuildAboutUs
+                    listArray={listAbout}
+                    title={t("footer.aboutSliving")}
+                  />
                 </Col>
                 <Col sm={6} lg={3}>
-                  <BuildAboutUs listArray={listHref} title="Liên kết" />
+                  <BuildAboutUs listArray={listHref} title={t("footer.link")} />
                 </Col>
                 <Col
                   sm={12}
