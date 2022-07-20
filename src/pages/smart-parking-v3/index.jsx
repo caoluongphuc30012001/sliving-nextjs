@@ -2,13 +2,11 @@ import React from "react";
 import LayoutSmartParking from "@components/layout-smart-parking-v3";
 import SectionHelpMore from "@components/help-more/section-help-more";
 import Seo from "@components/seo";
-import {
-  SectionDefinition,
-  SectionHeader,
-  SectionParkingSolution,
-  SectionParkingSystem,
-} from "./body";
 import "./style.scss";
+import SectionHeader from "./body/section-header";
+import SectionDefinition from "./body/section-definition";
+import SectionParkingSolution from "./body/section-parking-solution";
+import SectionParkingSystem from "./body/section-parking-system";
 
 const SmartParking = () => {
   return (
