@@ -2,47 +2,47 @@ import React, { useCallback, useState, useMemo } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 
 import SectionMap from "./map";
-
+import { useTranslation } from "react-i18next";
 import iconBgPin from "@images/icon/icon-bg-pin.svg";
 import iconBgEmail from "@images/icon/icon-bg-mail.svg";
 import iconBgPhone from "@images/icon/icon-bg-phone.svg";
 
 const isBrowser = typeof window !== "undefined";
 
-const listContact = [
-  {
-    key: {
-      title: "Trụ sở chính Hà Nội",
-      description: "Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
-    },
-    urlIcon: iconBgPin,
-    position: { lat: 21.0300541, lng: 105.7786784 },
-  },
-  {
-    key: {
-      title: "Chi nhánh TP.Hồ Chí Minh",
-      description:
-        "Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
-    },
-    urlIcon: iconBgPin,
-    position: { lat: 10.85023, lng: 106.80562 },
-  },
-  {
-    key: {
-      title: "",
-      description: "info@unicloud.com.vn",
-    },
-    urlIcon: iconBgEmail,
-  },
-  {
-    key: {
-      title: "",
-      description: "19006054",
-    },
-    urlIcon: iconBgPhone,
-  },
-];
 export default function AddressAndMap() {
+  const { i18n, t } = useTranslation();
+  const listContact = [
+    {
+      key: {
+        title: `${t("contact.quickSupport.headquarter")}`,
+        description: `${t("contact.quickSupport.headquarterSubTitle")}`,
+      },
+      urlIcon: iconBgPin,
+      position: { lat: 21.0300541, lng: 105.7786784 },
+    },
+    {
+      key: {
+        title: `${t("contact.quickSupport.branch")}`,
+        description: `${t("contact.quickSupport.branchSubTitle")}`,
+      },
+      urlIcon: iconBgPin,
+      position: { lat: 10.85023, lng: 106.80562 },
+    },
+    {
+      key: {
+        title: "",
+        description: `${t("contact.quickSupport.emailSubTitle")}`,
+      },
+      urlIcon: iconBgEmail,
+    },
+    {
+      key: {
+        title: "",
+        description: `${t("contact.quickSupport.hotlineSubTitle")}`,
+      },
+      urlIcon: iconBgPhone,
+    },
+  ];
   const [position, setPosition] = useState(listContact[0].position);
   const [map, setMap] = useState();
 
@@ -78,7 +78,7 @@ export default function AddressAndMap() {
         </Col>
         <Col sm={12} lg={6}>
           <h3 className="fs-4 fw-bold text-gradient-origan map-detail-address-footer">
-            Kết nối với chúng tôi
+            {t("footer.connect")}
           </h3>
           <div className="group-contact">
             {listContact.map((contact) => (

@@ -1,1 +1,8 @@
-{}
+{
+  "component.sectionHelpMore.title": "CONTACT US",
+  "component.sectionHelpMore.subTitle": "Do you Need More Help?",
+  "component.sectionHelpMore.description": "Queries, complaints and feedback. We will be happy to serve you!",
+  "component.sectionHelpMore.support.title": "Customer Service",
+  "component.sectionHelpMore.business.title": "Sales",
+  "component.sectionHelpMore.media.title": "Communication"
+}
