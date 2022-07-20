@@ -113,7 +113,7 @@ const SectionSolution = () => {
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
-                {t("homePage.solution.mainTitle")}
+                {t("homePage.solution.mainTitle1")}
               </h2>
               <div className="img-line-center">
                 <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -133,7 +133,9 @@ const SectionSolution = () => {
                 there." - Ellie Rodriguez
               </span>
             </div>
-            <span className="detail-v3">{t("homePage.solution.mainDesc")}</span>
+            <span className="detail-v3">
+              {t("homePage.solution.mainDesc1")}
+            </span>
             <ul className="list-ul-li">
               {arrSolution.map((solution) => (
                 <li key={solution.id}>{solution.desc}</li>

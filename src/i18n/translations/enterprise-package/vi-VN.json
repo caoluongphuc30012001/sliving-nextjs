@@ -1,5 +1,9 @@
 {
+
     "business.packagesData.solution":"GIẢI PHÁP",
+    "business.packagesData.listDeviceTitle":"Danh Sách Thiết Bị Sử Dụng Cho Dự Án",
+    "business.packagesData.count":"SỐ LƯỢNG",
+    "business.packagesData.listDeviceSubTitle":"PRODUCT LIST",
     "business.packagesData.device":"Tên thiết bị",
     "business.packagesData.normal":"Cơ Bản",
     "business.packagesData.advanced":"Nâng Cao",
@@ -210,5 +214,8 @@
             }
           ]
         }
-    }  
+    },  
+    "business.header.title":"Gói Giải Pháp",
+    "business.header.subTitle":"Dành Cho Doanh Nghiệp",
+    "business.header.description":"Cung cấp các giải pháp chiếu sáng, điều khiển thông minh, giải pháp an ninh cho tòa nhà, căn hộ, văn phòng, trung tâm thương mại... với đa dạng lựa chọn và chi phí hợp lý nhất."
 }

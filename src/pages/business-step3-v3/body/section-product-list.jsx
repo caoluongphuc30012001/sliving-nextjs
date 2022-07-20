@@ -136,8 +136,12 @@ const SectionProductList = () => {
     <section className="section-business-product-list">
       <div className="section-container">
         <div className="content-title">
-          <div className="sub-title">PRODUCT LIST</div>
-          <div className="title">Danh Sách Thiết Bị Sử Dụng Cho Dự Án</div>
+          <div className="sub-title">
+            {t("business.packagesData.listDeviceSubTitle")}
+          </div>
+          <div className="title">
+            {t("business.packagesData.listDeviceTitle")}
+          </div>
           <div className="underline"></div>
         </div>
         {tableData.content?.map((table) => {
@@ -147,9 +151,15 @@ const SectionProductList = () => {
           <table className="table-container">
             <thead className="content-container">
               <tr className="table-row">
-                <th className="table-data header">Giải pháp</th>
-                <th className="table-data header center">Tên thiết bị</th>
-                <th className="table-data header">Số lượng</th>
+                <th className="table-data header">
+                  {t("business.packagesData.solution")}
+                </th>
+                <th className="table-data header center">
+                  {t("business.packagesData.device")}
+                </th>
+                <th className="table-data header">
+                  {t("business.packagesData.count")}
+                </th>
               </tr>
             </thead>
             {tableData?.subContent?.solutionList?.map((table) => {
@@ -169,7 +179,7 @@ const SectionProductList = () => {
           role="button"
           tabIndex={0}
         >
-          <span>Tư Vấn Ngay</span>
+          <span>{t("sectionDropdown.consultNow")}</span>
         </div>
       </div>
       <ModalAdvise

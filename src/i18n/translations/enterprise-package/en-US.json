@@ -1,5 +1,8 @@
 {
     "business.packagesData.solution":"SOLUTION",
+    "business.packagesData.listDeviceTitle":"Equipment list used for your project",
+    "business.packagesData.count":"Quantity",
+    "business.packagesData.listDeviceSubTitle":"PRODUCT LIST",
     "business.packagesData.device":"Detailed equipment",
     "business.packagesData.normal":"Basic",
     "business.packagesData.advanced":"Advanced",
@@ -210,5 +213,8 @@
             }
           ]
         }
-    }  
+    },  
+    "business.header.title":"Packaged Solutions",
+    "business.header.subTitle":"For Enterprise",
+    "business.header.description":"Provide lighting solutions, intelligent control, and security solutions with diverse options at the most reasonable cost for buildings, apartments, offices, commercial centers, etc."
 }
