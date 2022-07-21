@@ -11,11 +11,25 @@ import BigArrowLeft from "../../images/smart-home-v3/svg/big-arrow-left.svg";
 // import BigArrowRight from "@images/smart-home-v3/svg/big-arrow-right.svg";
 import BigArrowRight from "../../images/smart-home-v3/svg/big-arrow-right.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { useEffect } from "react";
 
 SwiperCore.use([Navigation]);
 
-const ProductItemSwiper = ({ slide, swiperIndex, setSwiperIndex }) => {
+const ProductItemSwiper = ({
+  slide,
+  swiperIndex,
+  setSwiperIndex,
+  resetSwiper,
+  setResetSwiper,
+}) => {
   const [swiper, setSwiper] = useState(null);
+
+  useEffect(() => {
+    if (resetSwiper) {
+      swiper.slideTo(0);
+      setResetSwiper(false);
+    }
+  }, [resetSwiper]);
 
   return (
     <>
@@ -74,9 +88,11 @@ const SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
   const [productName, setProductName] = useState("");
   const [swiperIndex, setSwiperIndex] = useState(0);
+  const [resetSwiper, setResetSwiper] = useState(false);
 
   const increaseToggleTab = () => {
     setSwiperIndex(0);
+    setResetSwiper(true);
     setToggleState(
       toggleState < listSlide.length - 1 ? toggleState + 1 : toggleState
     );
@@ -84,6 +100,7 @@ const SectionProductsSlider = ({ listSlide }) => {
 
   const decreaseToggleTab = () => {
     setSwiperIndex(0);
+    setResetSwiper(true);
     setToggleState((prev) => (prev === 0 ? prev : prev - 1));
   };
   const [modalShow, setModalShow] = React.useState(false);
@@ -129,6 +146,8 @@ const SectionProductsSlider = ({ listSlide }) => {
                     setSwiperIndex={setSwiperIndex}
                     swiperIndex={swiperIndex}
                     slide={slide}
+                    resetSwiper={resetSwiper}
+                    setResetSwiper={setResetSwiper}
                   />
                 ) : (
                   <div className="product-phone-wrapper">
