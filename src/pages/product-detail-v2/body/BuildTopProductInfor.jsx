@@ -1,44 +1,20 @@
 import React from "react";
 import "@i18n/i18n";
-import i18next from "i18next";
 
-const convertLngData = (deviceType) => {
-  if (!deviceType) return null;
-
-  const { nameEn, nameVi, listDescriptionVi, listDescriptionEn } = deviceType;
-
-  return {
-    en: {
-      name: nameEn,
-      listDescription: listDescriptionEn,
-    },
-    vi: {
-      name: nameVi,
-      listDescription: listDescriptionVi,
-    },
-  };
-};
-
-function BuildTopProductInfor({ deviceType }) {
-  // const lngCurrent = i18next.language;
-  const lngCurrent = "vi";
-
-  const data = convertLngData(deviceType);
-
+function BuildTopProductInfor({ subTitle, title, listFeature }) {
   return (
-    data && (
-      <>
-        <h6>{data["en"]?.name}</h6>
-        <h2>{data[lngCurrent]?.name}</h2>
-        <p>
-          {data[lngCurrent]?.listDescription.map((des, index) => (
-            <li key={index.toString()}>
-              <span>{des}</span>
-            </li>
-          ))}
-        </p>
-      </>
-    )
+    <>
+      <h6>{subTitle}</h6>
+      <h2>{title}</h2>
+      <div className="divider" />
+      <ul className="desc-list">
+        {listFeature?.map((des, index) => (
+          <li key={index.toString()}>
+            <span>{des}</span>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 

@@ -7,7 +7,7 @@ import img2 from "@images/product/prod-spec.svg";
 import img3 from "@images/product/prod.svg";
 import React, { Component } from "react";
 import Slider from "react-slick";
-import "./style.scss";
+import "../style.scss";
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
