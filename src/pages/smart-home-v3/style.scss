@@ -731,6 +731,9 @@
             color: #ffffff;
             background: none;
             z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:not(:last-child){
               border-right: 2px solid white;
             }
@@ -738,7 +741,7 @@
               cursor: pointer;
             }
             .product-item-title {
-              padding: 8px 0px;
+              padding: 8px 5px;
               font-size: clamp(10px, 3.125vw, 16px);
             }
           }            
@@ -949,7 +952,7 @@
   }
 
   .section-product-slider {
-    height: 200vh;
+    height: 170vh;
     max-height: 1600px;
     position: relative;
     .products-slider{
@@ -961,13 +964,13 @@
         justify-content: center;
         align-items: center;
         .slider-left__content{
-          height: 50%;
+          height: 45%;
           width: 100%;
           padding: 20px;
         };
         .slider-right__content{
-          top: 50%;
-          height: 50%;
+          top: 45%;
+          height: 55%;
           width: 100%;
           animation-name: FadeUp2;
           .right-content-container {
@@ -1002,14 +1005,14 @@
     }
     .smart__home__bg-left {
       width: 100%;
-      height: 50%;
+      height: 45%;
       top: 0;
       left: 0;
     }
     .smart__home__bg-right {
       width: 100%;
-      height: 50%;
-      top: calc(50%);
+      height: 55%;
+      top: 45%;
       right: 0;
     }
   }
