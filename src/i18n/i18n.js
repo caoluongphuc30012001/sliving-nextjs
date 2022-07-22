@@ -6,10 +6,10 @@ import { initReactI18next } from "react-i18next";
 import dataTranslate from "./translations";
 console.log(dataTranslate);
 const options = {
-  fallbackLng: "en",
+  fallbackLng: "vn",
   supportedLngs: ["vn", "en"],
   // preload: true,
-  lng: "en",
+  lng: "vn",
   load: "all", // we only provide en, de -> no region specific locals like en-US, de-DE
   // have a common namespace used around the full app
   ns: ["translations"],
