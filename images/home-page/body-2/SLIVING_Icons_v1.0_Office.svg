@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:none;stroke:#000000;stroke-width:0.1;stroke-miterlimit:10;}
+	.st3{fill:#09100C;}
+	.st4{fill:#7A7A7A;}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:none;}
+	.st7{fill:#727272;}
+	.st8{opacity:0;fill:#FFFFFF;}
+	.st9{opacity:0;}
+	.st10{fill:#FFFFFF;stroke:#231F20;stroke-miterlimit:10;}
+	.st11{stroke:#000000;stroke-width:8;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#000000;stroke-width:17;stroke-miterlimit:10;}
+	.st14{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st16{fill:#B2B2B2;}
+	.st17{fill:none;stroke:#000000;stroke-width:16;stroke-miterlimit:10;}
+	.st18{fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st19{fill:#171714;}
+</style>
+<g id="Layer_1" class="st0">
+	<g class="st1">
+		<rect x="0.01" y="0" class="st2" width="200" height="200"/>
+		<circle class="st2" cx="100.02" cy="100" r="100"/>
+		<rect x="50.01" y="0.03" class="st2" width="100" height="199.95"/>
+		<line class="st2" x1="100.01" y1="0.03" x2="100.01" y2="199.98"/>
+		<rect x="0.04" y="50" class="st2" width="199.95" height="100"/>
+		<line class="st2" x1="199.99" y1="100" x2="0.04" y2="100"/>
+		<line class="st2" x1="0.08" y1="0.07" x2="199.94" y2="199.93"/>
+		<line class="st2" x1="199.99" y1="0.03" x2="0.04" y2="199.98"/>
+		<rect x="29.3" y="29.29" class="st2" width="141.41" height="141.41"/>
+		<circle class="st2" cx="100.01" cy="100" r="70.71"/>
+		<circle class="st2" cx="100.01" cy="100" r="50"/>
+		<circle class="st2" cx="100.01" cy="100" r="25"/>
+	</g>
+</g>
+<g id="Layer_2">
+	<g>
+		<g>
+			<path class="st3" d="M138.35,145.72h-19.52v-24.26c0-0.28,0.22-0.5,0.5-0.5h18.52c0.28,0,0.5,0.22,0.5,0.5V145.72L138.35,145.72z
+				 M115.97,116.79c-0.82,0.29-1.43,1.06-1.43,1.96v26.96h-5.71v-39.5c0-0.28,0.22-0.5,0.5-0.5h10.43c0.28,0,0.5,0.22,0.5,0.5v10.45
+				h-3.57C116.44,116.67,116.19,116.71,115.97,116.79L115.97,116.79z M105.02,103.47v42.24h-7.14V82.64c0-1.19-0.98-2.17-2.17-2.17
+				h-2.12V64.31c0-0.28,0.22-0.5,0.5-0.5h17.1c0.28,0,0.5,0.22,0.5,0.5v37.12h-4.72C105.81,101.43,105.02,102.33,105.02,103.47
+				L105.02,103.47z M93.59,145.72H79.78V85.26c0-0.28,0.22-0.5,0.5-0.5h12.81c0.28,0,0.5,0.22,0.5,0.5V145.72L93.59,145.72z
+				 M75.49,145.72H64.54v-38.07c0-0.28,0.22-0.5,0.5-0.5h9.95c0.28,0,0.5,0.22,0.5,0.5V145.72L75.49,145.72z M147.93,145.72h-5.77
+				v-26.96c0-1.15-0.72-2.09-1.87-2.09h-15.75v-13.2c0-1.15-1.15-2.04-2.3-2.04h-6.27V61.81c0-1.15-0.91-2.29-2.07-2.29h-8.89v-18.1
+				c0-1.02-0.99-1.84-2.14-1.84c-1.15,0-2.14,0.82-2.14,1.84v18.1h-9.05c-1.15,0-1.9,1.13-1.9,2.29v18.67H77.79
+				c-1.15,0-2.3,1.01-2.3,2.17v20.22H62.51c-1.15,0-2.26,0.85-2.26,2v40.85H52.1c-1.15,0-2.08,0.99-2.08,2.14
+				c0,1.15,0.93,2.14,2.08,2.14h95.84c1.15,0,2.08-0.99,2.08-2.14C150.01,146.71,149.08,145.72,147.93,145.72L147.93,145.72z"/>
+		</g>
+		<rect x="-0.65" class="st6" width="200" height="200"/>
+	</g>
+</g>
+</svg>
