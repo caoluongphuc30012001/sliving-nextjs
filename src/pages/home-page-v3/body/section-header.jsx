@@ -18,24 +18,28 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
+import { useTranslation } from "react-i18next";
+
 const SectionHeader = () => {
+  const { t } = useTranslation();
+
   const arrService = [
     {
       id: 0,
-      title: "Thiết lập và cài đặt",
-      desc: "Dễ dàng thao tác với cấu hình tùy chỉnh để giám sát từ xa và kiểm soát năng lượng tiêu dùng.",
+      title: t("homePage.header.groupServices.title1"),
+      desc: t("homePage.header.groupServices.desc1"),
       icon: iconSettings,
     },
     {
       id: 1,
-      title: "Tư vấn thi công",
-      desc: "Sẵn sàng tư vấn thi công cho khách hàng lắp đặt và sử dụng tiện lợi với không gian sống.",
+      title: t("homePage.header.groupServices.title2"),
+      desc: t("homePage.header.groupServices.desc2"),
       icon: iconSupport,
     },
     {
       id: 2,
-      title: "Hỗ trợ 24/7",
-      desc: "Đồng hành cùng khách hàng 24/7, sẵn sàng hỗ trợ và tư vấn tất cả các ngày trong tuần.",
+      title: t("homePage.header.groupServices.title3"),
+      desc: t("homePage.header.groupServices.desc3"),
       icon: icon24Line,
     },
   ];
@@ -47,7 +51,6 @@ const SectionHeader = () => {
     { id: 0, imgUrl: imgBgMobile },
     { id: 1, imgUrl: imgBgMobile2 },
   ];
-
   return (
     <header className="home-page-v3">
       <Swiper

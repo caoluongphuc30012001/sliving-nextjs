@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Slider from "../../../components/product/section-products-slider";
+import Slider from "@components/product/section-products-slider";
 import axios from "axios";
 // const listSlide = [
 //   {
@@ -211,10 +211,12 @@ const SectionProductsSlider = () => {
         const data = listType.map((item, index) => {
           return {
             id: index,
-            title: item.nameVi,
+            titleVi: item.nameVi,
+            titleEn: item.nameEn,
             subTitle: item.nameEn,
             type: item.id,
-            contents: item.listDescriptionVi,
+            contentVis: item.listDescriptionVi,
+            contentEns: item.listDescriptionEn,
             listItem: listDeviceType[index].Items.slice(0, 3),
             phoneImg: null,
             downloadObjects: [],

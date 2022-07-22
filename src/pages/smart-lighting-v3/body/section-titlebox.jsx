@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function SectionTitlebox() {
+  const { t } = useTranslation();
+
   return (
     <section className="section-title-box">
-        <div className="title-box">
-            <p className="sub-title">SMART LIGHTING PRODUCT</p>
-            <p className="title">Sản Phẩm Smart Lighting</p>
-            <div className="item-border"></div>
-        </div>
+      <div className="title-box">
+        <p className="sub-title"> {t("sectionTitlebox.title")}</p>
+        <p className="title">{t("sectionTitlebox.subTitle")}</p>
+        <div className="item-border"></div>
+      </div>
     </section>
-  )
+  );
 }

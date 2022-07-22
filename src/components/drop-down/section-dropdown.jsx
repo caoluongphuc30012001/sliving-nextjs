@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { Accordion } from "react-bootstrap";
-import subBackground from "../../images/smart-lighting-v3/png/sub-background.png";
+import subBackground from "@images/smart-lighting-v3/png/sub-background.png";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { useTranslation } from "react-i18next";
 
 const SectionDropdown = ({ listItem }) => {
   const [current, setCurrent] = useState(0);
   const [modalShow, setModalShow] = React.useState(false);
+  const { t } = useTranslation();
 
   return (
     <section className="section-drop-down">
       <div className="title-box">
-        <p className="sub-title">SMART LIGHTING</p>
-        <p className="title">Các Giải Pháp Chiếu Sáng</p>
+        <p className="sub-title">{t("sectionDropdown.title")}</p>
+        <p className="title">{t("sectionDropdown.subTitle")}</p>
+        {/* <p className="title">Các Giải Pháp Chiếu Sáng123</p> */}
         <div className="item-border"></div>
       </div>
       <div className="drop-down-wrap">
@@ -36,8 +39,8 @@ const SectionDropdown = ({ listItem }) => {
           </Accordion>
           <div className="advise-box">
             <button className="btn-advise" onClick={() => setModalShow(true)}>
-              <div className="content">Tư vấn ngay</div>
-            </button> 
+              <div className="content">{t("sectionDropdown.consultNow")}</div>
+            </button>
           </div>
         </div>
         <div className="right-part">

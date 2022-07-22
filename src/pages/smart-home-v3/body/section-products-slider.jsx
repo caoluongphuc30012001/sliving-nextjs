@@ -206,10 +206,12 @@ const SectionProductsSlider = () => {
         const data = listType.map((item, index) => {
           return {
             id: index,
-            title: item.nameVi,
+            titleVi: item.nameVi,
+            titleEn: item.nameEn,
             subTitle: item.nameEn,
             type: item.id,
-            contents: item.listDescriptionVi,
+            contentVis: item.listDescriptionVi,
+            contentEns: item.listDescriptionEn,
             listItem: listDeviceType[index].Items,
             phoneImg: null,
             downloadObjects: [],
@@ -219,7 +221,8 @@ const SectionProductsSlider = () => {
           ...data,
           {
             id: data.length,
-            title: "Quản Lý Thông Minh Với Sliving App",
+            titleVi: "Quản Lý Thông Minh Với Sliving App",
+            titleEn: "SLIVING APP",
             subTitle: "SLIVING APP",
             contents: [
               "Tính năng vượt trội: Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",

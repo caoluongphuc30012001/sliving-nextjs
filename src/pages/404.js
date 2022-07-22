@@ -1,8 +1,8 @@
 import React from "react";
 import { navigate } from "gatsby";
 import LayoutV3 from "@components/layout-v3";
-import img404 from "@images/not-found/img-404.png";
 import Seo from "../components/seo";
+import img404 from "@images/not-found/img-404.png";
 
 // markup
 const NotFoundPage = () => {

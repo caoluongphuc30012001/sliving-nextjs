@@ -5,7 +5,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "gatsby";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     <div className="content-left">
       <div className="top-menu">
@@ -21,7 +25,7 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
                 setCurrent(item);
               }}
             >
-              <div className="label">{item.nameVi}</div>
+              <div className="label">{checkVn ? item.nameVi : item.nameEn}</div>
               <div className="item-border"></div>
             </div>
           );
@@ -31,22 +35,27 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   );
 };
 const ContentRight = ({ listProduct, current }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     listProduct.length > 0 && (
       <div className="content-right">
-        <Swiper spaceBetween={30} grabCursor={true} breakpoints={{
-          480: {
-            slidesPerView: 1,
-          },
-          // when window width is >= 768px
-          560: {
-            slidesPerView: 2,
-          },
-          760:{
-            slidesPerView:3
-          }
-        }} 
-        // centeredSlides={true}
+        <Swiper
+          spaceBetween={30}
+          grabCursor={true}
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            560: {
+              slidesPerView: 2,
+            },
+            760: {
+              slidesPerView: 3,
+            },
+          }}
+          // centeredSlides={true}
         >
           {listProduct.map((item) => {
             return (
@@ -56,7 +65,9 @@ const ContentRight = ({ listProduct, current }) => {
                     <div className="img-box">
                       <img src={item.imageURL} alt="" />
                     </div>
-                    <div className="description">{item.nameVi}</div>
+                    <div className="description">
+                      {checkVn ? item.nameVi : item.nameEn}
+                    </div>
                   </div>
                 </Link>
               </SwiperSlide>
@@ -69,6 +80,7 @@ const ContentRight = ({ listProduct, current }) => {
 };
 const SectionProductMobile = ({ productTypes }) => {
   const [current, setCurrent] = useState("");
+  const { t } = useTranslation();
 
   const [listProduct, setListProduct] = useState([]);
 
@@ -99,7 +111,8 @@ const SectionProductMobile = ({ productTypes }) => {
       <div className="product-container">
         <div className="title-box">
           <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">Sản Phẩm Sliving</div>
+          <div className="title">{t("sectionProductV3Mobile.titleMain")}</div>
+          {/* <div className="title">Sản Phẩm Sliving</div> */}
           <div className="item-border"></div>
         </div>
         <div className="content">

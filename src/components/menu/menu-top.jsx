@@ -4,9 +4,12 @@ import dropDown from "../../images/smart-home-v3/svg/arrow-down.svg";
 import ModalAdvise from "../modal/modal-advise/ModalAdvise";
 import ModalAdviseBusiness from "../modal/modal-advise/ModalAdvise-business";
 import backIcon from "../../images/menu/back.svg";
+import england from "../../images/menu/png/flag-england.png";
+import vietnam from "../../images/menu/flag-vietnam.svg";
 import { navigate } from "gatsby";
 import { useLocation } from "@reach/router";
 import "./style.scss";
+import { useTranslation } from "react-i18next";
 const MenuTop = ({ logo, listRoute, back, business }) => {
   const [modalShow, setModalShow] = React.useState(false);
   const location = useLocation();
@@ -14,6 +17,10 @@ const MenuTop = ({ logo, listRoute, back, business }) => {
     if (location.key !== "initial") navigate(-1);
     else navigate("/");
   };
+  const changLanguages = () => {
+    i18n.changeLanguage(i18n.language.toUpperCase() === "EN" ? "vn" : "en");
+  };
+  const { i18n, t } = useTranslation();
   return (
     <nav className="section-menu-top">
       <div className="menu-top-container">
@@ -68,14 +75,29 @@ const MenuTop = ({ logo, listRoute, back, business }) => {
               className="learn-more-btn"
               onClick={() => setModalShow(true)}
             >
-              <span>TƯ VẤN NGAY</span>
+              <span>{t("menu.advise")}</span>
             </button>
+          </div>
+          <div className="change-language-box" onClick={changLanguages}>
+            <p className="language">{i18n.language.toUpperCase()}</p>
+            {i18n.language.toUpperCase() === "EN" ? (
+              <img src={england} alt="" className="image" />
+            ) : (
+              <img src={vietnam} alt="" className="image" />
+            )}
           </div>
         </div>
       </div>
-      {!business && <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />}
-      
-      {business&&<ModalAdviseBusiness show={modalShow} onHide={() => setModalShow(false)} />}
+      {!business && (
+        <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
+      )}
+
+      {business && (
+        <ModalAdviseBusiness
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+      )}
     </nav>
   );
 };

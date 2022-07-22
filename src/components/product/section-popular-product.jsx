@@ -1,25 +1,28 @@
 import React, { useState } from "react";
-import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
-import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
+import arrowLeft from "@images/smart-home-v3/svg/arrow-left.svg";
+import arrowRight from "@images/smart-home-v3/svg/arrow-right.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { useTranslation } from "react-i18next";
 
 import { Link } from "gatsby";
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [productName, setProductName] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
-
+  const { t,i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     <section className="section-popular-product-v3">
       <div className="popular-product-container">
         <div className="title-box">
           <p className="sub-title">FEATURED PRODUCTS</p>
-          <p className="title">Sản Phẩm Nổi Bật</p>
+          <p className="title">{t("sectionPopularProduct.titleMain")}</p>
+          {/* <p className="title">Sản Phẩm Nổi Bật</p> */}
           <div className="item-border"></div>
         </div>
         <div className="content-container">
@@ -53,7 +56,7 @@ const SectionPopularProduct = ({ listProduct }) => {
                         </Link>
                         <div className="description-box">
                           <p className="sub-title">{item.nameEn}</p>
-                          <p className="title">{item.nameVi}</p>
+                          <p className="title">{checkVn?item.nameVi:item.nameEn}</p>
                           <div className="btn-group">
                             {/* <button
                               className="advise-now-btn"

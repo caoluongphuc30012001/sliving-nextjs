@@ -11,6 +11,7 @@ import BigArrowLeft from "../../images/smart-home-v3/svg/big-arrow-left.svg";
 // import BigArrowRight from "@images/smart-home-v3/svg/big-arrow-right.svg";
 import BigArrowRight from "../../images/smart-home-v3/svg/big-arrow-right.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
 SwiperCore.use([Navigation]);
@@ -24,6 +25,8 @@ const ProductItemSwiper = ({
 }) => {
   const [swiper, setSwiper] = useState(null);
 
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   useEffect(() => {
     if (resetSwiper) {
       swiper.slideTo(0);
@@ -74,7 +77,9 @@ const ProductItemSwiper = ({
                   swiper.slideTo(index);
                 }}
               >
-                <span className="product-item-title">{btnItem.nameVi}</span>
+                <span className="product-item-title">
+                  {checkVn ? btnItem.nameVi : btnItem.nameEn}
+                </span>
               </div>
             );
           })}
@@ -90,6 +95,8 @@ const SectionProductsSlider = ({ listSlide }) => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [resetSwiper, setResetSwiper] = useState(false);
 
+  const { i18n, t } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   const increaseToggleTab = () => {
     setSwiperIndex(0);
     setResetSwiper(true);
@@ -177,11 +184,30 @@ const SectionProductsSlider = ({ listSlide }) => {
                       <h4 className="product-right-subtitle">
                         {slide.subTitle.toUpperCase()}
                       </h4>
-                      <h1 className="product-right-title">{slide.title}</h1>
+                      <h1 className="product-right-title">
+                        {checkVn ? slide.titleVi : slide.titleEn}
+                      </h1>
                       <div className="product-right-divider"></div>
                       <ul className="product-right-all-contents">
-                        {slide?.contents &&
-                          slide?.contents.map((content) =>
+                        {checkVn &&
+                          slide?.contentVis &&
+                          slide?.contentVis.map((content) =>
+                            content.split(":").length > 1 ? (
+                              <li className="product-right-desc-container">
+                                <span className="product-right-main-title">
+                                  {`${content.split(":")[0]}: `}
+                                </span>
+                                {content.split(":")[1]}
+                              </li>
+                            ) : (
+                              <li className="product-right-desc-container">
+                                {content.split(":")[0]}
+                              </li>
+                            )
+                          )}
+                        {!checkVn &&
+                          slide?.contentEns &&
+                          slide?.contentEns.map((content) =>
                             content.split(":").length > 1 ? (
                               <li className="product-right-desc-container">
                                 <span className="product-right-main-title">
@@ -204,7 +230,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                             setModalShow(true);
                           }}
                         >
-                          <span>Tư vấn ngay</span>
+                          <span>{t("sectionDropdown.consultNow")}</span>
                         </button>
                         <Link
                           to={
@@ -214,7 +240,7 @@ const SectionProductsSlider = ({ listSlide }) => {
                           }
                         >
                           <button type="button" className="learn-more-btn">
-                            <span>Tìm hiểu thêm</span>
+                            <span>{t("sectionDropdown.learnMore")}</span>
                           </button>
                         </Link>
                       </div>

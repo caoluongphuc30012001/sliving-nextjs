@@ -13,7 +13,11 @@ import imgAboutTop from "@images/home-page-v3/png/about-sliving-top.png";
 import imgSolution from "@images/home-page-v3/png/solution-sliving.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
+import { useTranslation } from "react-i18next";
+
 const SectionSolution = () => {
+  const { t } = useTranslation();
+
   const arrSolution = [
     {
       id: 0,
@@ -38,9 +42,9 @@ const SectionSolution = () => {
       id: 0,
       desc: (
         <>
-          Lịch trình
+          {t("homePage.solution.groupSolutions.desc1.1")}
           <br />
-          tắt/mở đèn
+          {t("homePage.solution.groupSolutions.desc1.2")}
         </>
       ),
       icon: iconBulb,
@@ -49,9 +53,9 @@ const SectionSolution = () => {
       id: 1,
       desc: (
         <>
-          Công tắc
+          {t("homePage.solution.groupSolutions.desc2.1")}
           <br />
-          cảm ứng
+          {t("homePage.solution.groupSolutions.desc2.2")}
         </>
       ),
       icon: iconTouch,
@@ -60,9 +64,9 @@ const SectionSolution = () => {
       id: 2,
       desc: (
         <>
-          Điều khiển ánh
+          {t("homePage.solution.groupSolutions.desc3.1")}
           <br />
-          sáng tâm trạng
+          {t("homePage.solution.groupSolutions.desc3.2")}
         </>
       ),
       icon: iconLight,
@@ -71,9 +75,9 @@ const SectionSolution = () => {
       id: 3,
       desc: (
         <>
-          Cảm biến
+          {t("homePage.solution.groupSolutions.desc4.1")}
           <br />
-          bảo vệ
+          {t("homePage.solution.groupSolutions.desc4.2")}
         </>
       ),
       icon: iconSecurity,
@@ -82,9 +86,9 @@ const SectionSolution = () => {
       id: 4,
       desc: (
         <>
-          Điều khiển từ xa
+          {t("homePage.solution.groupSolutions.desc5.1")}
           <br />
-          thông minh
+          {t("homePage.solution.groupSolutions.desc5.2")}
         </>
       ),
       icon: iconRemote,
@@ -93,9 +97,9 @@ const SectionSolution = () => {
       id: 5,
       desc: (
         <>
-          Điều khiển
+          {t("homePage.solution.groupSolutions.desc6.1")}
           <br />
-          rèm cửa
+          {t("homePage.solution.groupSolutions.desc6.2")}
         </>
       ),
       icon: iconCurtain,
@@ -109,7 +113,7 @@ const SectionSolution = () => {
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
-                Giải pháp Nhà thông minh hàng đầu Việt Nam
+                {t("homePage.solution.mainTitle1")}
               </h2>
               <div className="img-line-center">
                 <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -130,10 +134,7 @@ const SectionSolution = () => {
               </span>
             </div>
             <span className="detail-v3">
-              Sliving cung cấp giải pháp nhà thông minh với thuật toán AI để
-              thực hiện giám sát từ xa an toàn và an ninh. Hỗ trợ điều khiển
-              bằng giọng nói và ứng dụng Mobile để dễ dàng thao tác, nhận thông
-              báo kịp thời với các giải pháp tích hợp như:
+              {t("homePage.solution.mainDesc1")}
             </span>
             <ul className="list-ul-li">
               {arrSolution.map((solution) => (
@@ -142,7 +143,7 @@ const SectionSolution = () => {
             </ul>
             <Link to="/about-us/">
               <button type="button" className="btn-gradient-blue">
-                <span>Khám phá ngay</span>
+                <span>{t("homePage.btnGroup.discoverBtn")}</span>
               </button>
             </Link>
           </Col>
@@ -169,17 +170,14 @@ const SectionSolution = () => {
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">
-                Kiến tạo phong cách sống Hiện Đại Đẳng Cấp
+                {t("homePage.solution.mainTitle2")}
               </h2>
               <div className="img-line-center">
                 <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
               </div>
             </Row>
-
             <span className="detail-v3">
-              Bộ sưu tập các sản phẩm Nhà thông minh đặt riêng của Sliving được
-              thiết kế để mang tới sự tiện nghi, an toàn và hiện đại, giúp nâng
-              cao chất lượng cuộc sống của bạn.
+              {t("homePage.solution.mainDesc2")}
             </span>
             <Row className="">
               {arrProd.map((prod) => (

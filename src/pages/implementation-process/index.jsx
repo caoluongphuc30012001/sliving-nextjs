@@ -1,16 +1,18 @@
 import React from "react";
 import { Col, Container, Row, Image } from "react-bootstrap";
-import LayoutV3 from "../../components/layout-v3";
-import SectionHelpMore from "../../components/help-more/section-help-more";
+import LayoutV3 from "@components/layout-v3";
+import SectionHelpMore from "@components/help-more/section-help-more";
 import iconArrow from "@images/icon/icon-arrow-process.svg";
 import iconQuestion from "@images/icon/icon-question-process.svg";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
-
 import "./style.scss";
 import Seo from "@components/seo";
+import { useTranslation } from "react-i18next";
 
 const ImplementationProcess = () => {
   const [modalShow, setModalShow] = React.useState(false);
+
+  const { t } = useTranslation();
 
   return (
     <LayoutV3>
@@ -27,10 +29,10 @@ const ImplementationProcess = () => {
             fluid
             style={{ maxWidth: 1220 }}
           >
-            <h3 className="sub-title-smart-secuirity">PROCESS</h3>
-            <h2 className="title-smart-secuirity">
-              Quy Trình Triển Khai Gói Giải Pháp
-            </h2>
+            <h3 className="sub-title-smart-secuirity">
+              {t("processPage.subTitle")}
+            </h3>
+            <h2 className="title-smart-secuirity">{t("processPage.title")}</h2>
             <div>
               <div className="div-under-smart-security"></div>
             </div>
@@ -41,14 +43,10 @@ const ImplementationProcess = () => {
                     src={iconArrow}
                     className="img-fluid img-arrow-process"
                   />
-                  01. <span>Tiếp nhận nhu cầu và gửi báo giá sơ bộ</span>
+                  01. <span>{t("processPage.process.step1.title")}</span>
                 </p>
                 <p className="detail-process-sliving">
-                  Khách hàng liên hệ đến Sliving và cung cấp các thông tin về
-                  nhu cầu lắp đặt gói giải pháp thông minh. Bộ phận chuyên gia
-                  của chúng tôi sẽ tư vấn sơ bộ về các giải pháp, thiết bị phù
-                  hợp với nhu cầu, điều kiện của khách hàng và gửi báo giá sơ bộ
-                  để dễ dàng tham khảo.
+                  {t("processPage.process.step1.subTitle")}
                 </p>
               </Col>
               <Col md={6}>
@@ -57,14 +55,10 @@ const ImplementationProcess = () => {
                     src={iconArrow}
                     className="img-fluid img-arrow-process"
                   />
-                  02. <span>Khảo sát và gửi báo giá chi tiết</span>
+                  02. <span>{t("processPage.process.step2.title")}</span>
                 </p>
                 <p className="detail-process-sliving">
-                  Sau khi đã hiểu rõ nhu cầu khách hàng, chúng tôi sẽ có một
-                  buổi khảo sát thực tế tại vị trí thi công lắp đặt, để hiểu rõ
-                  hơn về quy mô dự án, phối cảnh, phong cách thiết kế. Đội kỹ
-                  thuật dự án của Sliving sẽ trao đổi kỹ lưỡng, thống nhất các
-                  giải pháp áp dụng và gửi báo giá cụ thể cho khách hàng.
+                  {t("processPage.process.step2.subTitle")}
                 </p>
               </Col>
               <Col md={6}>
@@ -73,14 +67,10 @@ const ImplementationProcess = () => {
                     src={iconArrow}
                     className="img-fluid img-arrow-process"
                   />
-                  03. <span>Ký hợp đồng và đặt cọc</span>
+                  03. <span>{t("processPage.process.step3.title")}</span>
                 </p>
                 <p className="detail-process-sliving">
-                  Hai bên thoả thuận và tiến hành ký kết hợp đồng sau khi đã
-                  chốt phương án cuối cùng. Khách hàng sẽ cọc một khoản chi phí
-                  và đội ngũ Sliving sẽ tiến hành triển khai bản vẽ chi tiết,
-                  điều phối kỹ thuật và tiến hành phương án thi công nhanh
-                  chóng.
+                  {t("processPage.process.step3.subTitle")}
                 </p>
               </Col>
               <Col md={6}>
@@ -89,14 +79,10 @@ const ImplementationProcess = () => {
                     src={iconArrow}
                     className="img-fluid img-arrow-process"
                   />
-                  04.<span>Theo dõi tiến độ dự án</span>
+                  04.<span>{t("processPage.process.step4.title")}</span>
                 </p>
                 <p className="detail-process-sliving">
-                  Đội ngũ kỹ thuật của Sliving sẽ trực tiếp triển khai lắp đặt
-                  để đảm bảo tiến độ dự án theo đúng kế hoạch và tính nhất quán
-                  với bản thiết kế ban đầu. Ngoài ra chúng tôi cũng phối hợp với
-                  các bên liên quan theo từng giai đoạn thi công để đảm bảo chất
-                  lượng dự án tốt nhất.
+                  {t("processPage.process.step4.subTitle")}
                 </p>
               </Col>
               <Col md={6}>
@@ -105,27 +91,23 @@ const ImplementationProcess = () => {
                     src={iconArrow}
                     className="img-fluid img-arrow-process"
                   />
-                  05.<span>Bàn giao dự án, hỗ trợ, bảo trì 24/24</span>
+                  05.<span>{t("processPage.process.step5.title")}</span>
                 </p>
                 <p className="detail-process-sliving">
-                  Tiến hành nghiệm thu số lượng thiết bị đã lắp đặt, tính năng
-                  hệ thống đáp ứng đúng và đủ như yêu cầu. Đại diện Sliving sẽ
-                  hướng dẫn cách sử dụng thiết bị và cam kết bảo hành thiết bị,
-                  hỗ trợ kỹ thuật cho khách hàng vào tất cả các ngày trong tuần.
+                  {t("processPage.process.step5.subTitle")}
                 </p>
               </Col>
               <Col md={6}>
                 <div className="div-wrapper-answers">
                   <p className="title-answers-process">
                     <Image src={iconQuestion} />
-                    <span>Giải đáp</span>
+                    <span>{t("processPage.process.answerProcess.title")}</span>
                   </p>
                   <p className="detail-answers-process">
-                    Giải đáp mọi thắc mắc của khách hàng về nhu cầu lắp đặt gói
-                    giải pháp thông minh và quy trình triển khai dự án.
+                    {t("processPage.process.answerProcess.subTitle")}
                   </p>
                   <button type="button" onClick={() => setModalShow(true)}>
-                    <span>Tư vấn ngay</span>
+                    <span>{t("processPage.process.buttonAdvise")}</span>
                   </button>
                 </div>
               </Col>

@@ -1,8 +1,10 @@
-import i18n from "i18next";
+import i18n, { ReadCallback } from "i18next";
 import Backend from "i18next-http-backend";
-// import LanguageDetector from "i18next-browser-languagedetector";
+
 import { initReactI18next } from "react-i18next";
 
+import dataTranslate from "./translations";
+console.log(dataTranslate);
 const options = {
   fallbackLng: "vn",
   supportedLngs: ["vn", "en"],
@@ -14,20 +16,13 @@ const options = {
   defaultNS: "translations",
   resources: {
     vn: {
-      translations: require("../i18n/locales/vn/translations.json"),
+      translations: dataTranslate.dataTranslateVn,
     },
     en: {
-      translations: require("../i18n/locales/en/translations.json"),
+      translations: dataTranslate.dataTranslateEn,
     },
   },
   debug: false,
-
-  // react: {
-  //   bindI18n: "languageChanged loaded",
-  //   bindStore: "added removed",
-  //   nsMode: "default",
-  // },
-
   interpolation: {
     escapeValue: false, // not needed for react!!
     formatSeparator: ",",
@@ -38,34 +33,6 @@ const options = {
   },
   useSuspense: false,
 };
-
-// const setting = {
-//   fallbackLng: "vn",
-//   resources: {
-//     vn: {
-//       translations: require("../i18n/locate/vn/translations.json"),
-//     },
-//     en: {
-//       translations: require("../i18n/locate/en/translations.json"),
-//     },
-//   },
-//   // have a common namespace used around the full app
-//   ns: ["translations"],
-//   defaultNS: "translations",
-//   debug: false,
-//   interpolation: {
-//     escapeValue: false, // not needed for react!!
-//   },
-//   react: {
-//     useSuspense: false,
-//     bindI18n: 'languageChanged loaded',
-//   },
-//   load: 'languageOnly', // we only provide en, de -> no region specific locals like en-US, de-DE
-//   initImmediate: false,
-//   serializeConfig: false,
-// }
-
-// for browser use http backend to load translations and browser lng detector
 
 if (!i18n.isInitialized) {
   i18n.use(Backend).use(initReactI18next).init(options);

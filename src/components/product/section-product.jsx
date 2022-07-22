@@ -4,12 +4,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-import arrowLeft from "../../images/smart-home-v3/svg/arrow-left.svg";
-import arrowRight from "../../images/smart-home-v3/svg/arrow-right.svg";
+import arrowLeft from "@images/smart-home-v3/svg/arrow-left.svg";
+import arrowRight from "@images/smart-home-v3/svg/arrow-right.svg";
 import { Link } from "gatsby";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   const handle = (item) => {
     setCurrent(item);
     setListProduct([]);
@@ -28,7 +32,7 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
               handle(item);
             }}
           >
-            <div className="label">{item.nameVi}</div>
+            <div className="label">{checkVn ? item.nameVi : item.nameEn}</div>
             <div className="item-border"></div>
           </div>
         );
@@ -37,12 +41,14 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   );
 };
 const ContentRight = ({ listProduct, current }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     <div className="content-right">
       {listProduct.length > 0 ? (
         <div className="item-product-box">
           <div className="title-box">
-            <p className="title">{current.nameVi}</p>
+            <p className="title">{checkVn?current.nameVi:current.nameEn}</p>
             <div className="navigation">
               <img
                 src={arrowLeft}
@@ -67,6 +73,8 @@ const ContentRight = ({ listProduct, current }) => {
   );
 };
 const SliderComponent = ({ index, productCount, listProduct }) => {
+  const { i18n } = useTranslation();
+  const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   let sliders = [];
   const itemsGrouped = 6;
   for (let j = 0; j < itemsGrouped; j++) {
@@ -79,7 +87,7 @@ const SliderComponent = ({ index, productCount, listProduct }) => {
               <img src={listProduct[currentIndex].imageURL} alt="" />
             </div>
             <div className="name-box">
-              <p className="name">{listProduct[currentIndex].nameVi}</p>
+              <p className="name">{checkVn?listProduct[currentIndex].nameVi:listProduct[currentIndex].nameEn}</p>
             </div>
           </div>
         </Link>
@@ -120,6 +128,7 @@ const ItemProduct = ({ listProduct, itemId }) => {
 };
 const SectionProduct = ({ productTypes }) => {
   const [current, setCurrent] = useState("");
+  const { t } = useTranslation();
 
   const [listProduct, setListProduct] = useState([]);
 
@@ -151,7 +160,8 @@ const SectionProduct = ({ productTypes }) => {
       <div className="product-container ">
         <div className="title-box">
           <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">Sản Phẩm Sliving</div>
+          <div className="title">{t("sectionProductV3.titleMain")}</div>
+          {/* <div className="title">Sản Phẩm Sliving</div> */}
           <div className="item-border"></div>
         </div>
         <div className="content">

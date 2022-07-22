@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Skeleton from "./Skeleton";
+import { useTranslation } from "react-i18next";
 
 BuildProductDetail.propTypes = {
   deviceDetail: PropTypes.object,
@@ -44,6 +45,8 @@ export default function BuildProductDetail({
   deviceDetail = {},
   isLoading = true,
 }) {
+  const { t, ready } = useTranslation();
+
   if (isLoading)
     return (
       <section className="container-wrap product-info-v3">
@@ -60,15 +63,17 @@ export default function BuildProductDetail({
       </section>
     );
 
-  const { listDescription, listFeature, listSpecification } = deviceDetail;
+  const { listDescription, listSpecification } = deviceDetail;
 
   return (
     <section className="container-wrap product-info-v3">
-      {!(listDescription?.length === 0 && listFeature?.length === 0) && (
+      {!(listDescription?.length === 0) && (
         <div className="wrapper-content-product-info">
           {listDescription.length > 0 && (
             <div>
-              <h3 className="title">Mô tả sản phẩm</h3>
+              <h3 className="title">
+                {ready && t("productDetail.titleDescription")}
+              </h3>
               <ul className="desc-list">
                 {listDescription.map((item, index) => {
                   return formatListContent(item, index);
@@ -76,22 +81,12 @@ export default function BuildProductDetail({
               </ul>
             </div>
           )}
-          {listFeature.length > 0 && (
-            <div>
-              <h3 className="title">Tính năng nổi bật</h3>
-              <ul className="desc-list">
-                {listFeature.map((item, index) => (
-                  <li key={index.toString()} className="desc-item">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       )}
       <div className="wrapper-table-product-specification">
-        <div className="table-header">Thông số kỹ thuật</div>
+        <div className="table-header">
+          {ready && t("productDetail.titleSpecification")}
+        </div>
         <table>
           <tbody>
             {listSpecification &&

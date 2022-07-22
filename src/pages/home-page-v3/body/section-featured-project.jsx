@@ -14,8 +14,12 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 
+import { useTranslation } from "react-i18next";
+
 function SectionFeaturedProject() {
   const [solutionTable, setSolutionTable] = React.useState(1);
+
+  const { t } = useTranslation();
 
   const handleSlidesSolutionTable = React.useCallback(
     (numSolutionTable) => {
@@ -28,28 +32,27 @@ function SectionFeaturedProject() {
     {
       id: 1,
       linkImg: imgFeature1,
-      title: "Dự án 1000 căn hộ thông minh cao cấp Sunshine City",
+      title: t("homePage.featuredProject.groupItems.title1"),
     },
     {
       id: 2,
       linkImg: imgFeature2,
-      title:
-        "Dự án 1300 căn hộ trong nghỉ dưỡng – giải trí cao cấp thuộc Sunshine Metaland ",
+      title: t("homePage.featuredProject.groupItems.title2"),
     },
     {
       id: 3,
       linkImg: imgFeature3,
-      title: "Dự án 1200 thuộc hệ thống chuỗi văn phòng hạng A+",
+      title: t("homePage.featuredProject.groupItems.title3"),
     },
     {
       id: 4,
       linkImg: imgFeature4,
-      title: "Dự án 1400 căn hộ lưu trú xa hoa thuộc Sunshine Finance Hub ",
+      title: t("homePage.featuredProject.groupItems.title4"),
     },
     {
       id: 5,
       linkImg: imgFeature5,
-      title: "Dự án 2100 khách sạn 5 sao siêu sang thuộc Sunshine Finance Hub ",
+      title: t("homePage.featuredProject.groupItems.title5"),
     },
   ];
   return (
@@ -57,7 +60,9 @@ function SectionFeaturedProject() {
       <div className="container-1220 feature-project-container">
         <Row className="row-line-center">
           <span className="title-eng-line-center">FEATURED PROJECT</span>
-          <h2 className="title-line-center">Dự Án Thực Tế Nổi Bật</h2>
+          <h2 className="title-line-center">
+            {t("homePage.featuredProject.mainTitle")}
+          </h2>
           <div className="img-line-center d-flex justify-content-center">
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>

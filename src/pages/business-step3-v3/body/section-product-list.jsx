@@ -1,20 +1,29 @@
-import React, { useState,  useContext, useEffect } from "react";
-import { Data } from "@data/tableData2.js";
+import React, { useState, useContext, useEffect } from "react";
 
 import { BusinessStateContext } from "../../../context/businessContext";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise-business";
 import icon from "../../../images/business-step3-v3/png/icon-vector.png";
 
+import { useTranslation } from "react-i18next";
 const Table2 = ({ table }) => {
+  const { t } = useTranslation();
   return (
     <div className="table">
       <table className="table-container">
         <thead className="content-container">
           <tr className="table-row">
-            <th className="table-data header">GIẢI PHÁP</th>
-            <th className="table-data header center">Tên thiết bị</th>
-            <th className="table-data header">Cơ Bản</th>
-            <th className="table-data header">Nâng Cao</th>
+            <th className="table-data header">
+              {t("business.packagesData.solution")}
+            </th>
+            <th className="table-data header center">
+              {t("business.packagesData.device")}
+            </th>
+            <th className="table-data header">
+              {t("business.packagesData.normal")}
+            </th>
+            <th className="table-data header">
+              {t("business.packagesData.advanced")}
+            </th>
           </tr>
         </thead>
         <tbody className="body-content-container border-b">
@@ -57,6 +66,7 @@ const Table2 = ({ table }) => {
 };
 
 const SubTable = ({ table }) => {
+  const { t } = useTranslation();
   return (
     <tbody className="body-content-container border-b">
       <tr className="body-table-row">{table.solutionName}</tr>
@@ -80,7 +90,9 @@ const SubTable = ({ table }) => {
       </tr>
       <tr className="body-table-row">
         <td className="table-data">
-          <div className="quantity-data">Liên hệ</div>
+          <div className="quantity-data">
+            {t("business.packagesData.contact")}
+          </div>
         </td>
       </tr>
     </tbody>
@@ -98,11 +110,11 @@ const SectionProductList = () => {
   // }, []);
   const [solutionNames, setSolutionNames] = useState("");
 
+  const { i18n, t, ready } = useTranslation();
   useEffect(() => {
-    setTableData(Data);
-
-    state["allSolutions"] && setSolutionNames(state["allSolutions"]);
-  }, [tableData]);
+    const data = t("business.tableData2", { returnObjects: true });
+    setTableData(data);
+  }, [ready, i18n.language]);
   const sorting = (col) => {
     // if (order === "ASC") {
     //   const sorted = tableData;
@@ -124,8 +136,12 @@ const SectionProductList = () => {
     <section className="section-business-product-list">
       <div className="section-container">
         <div className="content-title">
-          <div className="sub-title">PRODUCT LIST</div>
-          <div className="title">Danh Sách Thiết Bị Sử Dụng Cho Dự Án</div>
+          <div className="sub-title">
+            {t("business.packagesData.listDeviceSubTitle")}
+          </div>
+          <div className="title">
+            {t("business.packagesData.listDeviceTitle")}
+          </div>
           <div className="underline"></div>
         </div>
         {tableData.content?.map((table) => {
@@ -135,9 +151,15 @@ const SectionProductList = () => {
           <table className="table-container">
             <thead className="content-container">
               <tr className="table-row">
-                <th className="table-data header">Giải pháp</th>
-                <th className="table-data header center">Tên thiết bị</th>
-                <th className="table-data header">Số lượng</th>
+                <th className="table-data header">
+                  {t("business.packagesData.solution")}
+                </th>
+                <th className="table-data header center">
+                  {t("business.packagesData.device")}
+                </th>
+                <th className="table-data header">
+                  {t("business.packagesData.count")}
+                </th>
               </tr>
             </thead>
             {tableData?.subContent?.solutionList?.map((table) => {
@@ -157,7 +179,7 @@ const SectionProductList = () => {
           role="button"
           tabIndex={0}
         >
-          <span>Tư Vấn Ngay</span>
+          <span>{t("sectionDropdown.consultNow")}</span>
         </div>
       </div>
       <ModalAdvise
