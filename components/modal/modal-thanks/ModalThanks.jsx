@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Image, Modal } from "react-bootstrap";
-import iconV from "../../../images/icon/icon-v-thanks.svg";
+import iconV from "@images/icon/icon-v-thanks.svg";
 import style from "./ModalThanks.module.scss";
 
 function ModalThanks(props) {
@@ -16,7 +16,7 @@ function ModalThanks(props) {
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body>
         <p className={style["title-thanks-popup"]}>
-          <Image src={iconV} /> <span>Cảm Ơn Bạn Đã Liên Hệ</span>
+          <Image src={iconV} alt="" /> <span>Cảm Ơn Bạn Đã Liên Hệ</span>
         </p>
         <p className={style["title-thanks-popup-2"]}>
           Thông tin của bạn đã được ghi nhận, chúng tôi sẽ liên hệ tư vấn đến

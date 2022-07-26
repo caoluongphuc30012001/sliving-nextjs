@@ -1,0 +1,18 @@
+{
+  "personalPackage.groupBtn.confirmBtn": "Nhận báo giá",
+  "personalPackage.groupBtn.adviseBtn": "Tư vấn ngay",
+
+  "personalPackage.header.mainTitle": "Gói Giải Pháp",
+  "personalPackage.header.subTitle": "Dành Cho Cá Nhân",
+  "personalPackage.header.mainDesc": "Cung cấp các giải pháp chiếu sáng, điều khiển thông minh, giải pháp an ninh cho tòa nhà, căn hộ, văn phòng, trung tâm thương mại... với đa dạng lựa chọn và chi phí hợp lý nhất.",
+
+  "personalPackage.personalStep1.mainTitle": "Chọn Loại Căn Hộ Bạn Đang Sở Hữu",
+  "personalPackage.personalStep1.mainDesc": "Chọn một loại hình căn hộ bạn đang sở hữu, chúng tôi sẽ đưa ra các giải pháp thông minh phù hợp với căn hộ của bạn.",
+
+  "personalPackage.personalStep2.mainDesc": "Danh Sách Thiết Bị Sử Dụng Cho Dự Án",
+  "personalPackage.personalStep2.tableHeader.title1": "Vị trí lắp đặt",
+  "personalPackage.personalStep2.tableHeader.title2": "Tên thiết bị",
+  "personalPackage.personalStep2.tableHeader.title3": "Cơ Bản",
+  "personalPackage.personalStep2.tableHeader.title4": "Tiện Nghi",
+  "personalPackage.personalStep2.tableHeader.title5": "Cao Cấp"
+}

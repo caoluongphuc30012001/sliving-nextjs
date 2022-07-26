@@ -1,373 +1,24 @@
 import React, { useState } from "react";
-import icon_ellipse from "../../images/smart-parking-v3/png/icon-ellipse.png";
-import barrier from "../../images/smart-parking-v3/png/img-barrier.png";
-import cam1 from "../../images/smart-parking-v3/png/img-camera.png";
-import cam2 from "../../images/smart-parking-v3/png/img-camera2.png";
-import machine1 from "../../images/smart-parking-v3/png/img-machine.png";
-import machine2 from "../../images/smart-parking-v3/png/img-machine2.png";
-import screen from "../../images/smart-parking-v3/png/img-screen.png";
-import ip13 from "../../images/smart-parking-v3/png/img-ip13.png";
-import ip_phone from "../../images/smart-parking-v3/png/icon-iphone-phone.png";
-import ip_map from "../../images/smart-parking-v3/png/icon-iphone-map.png";
+import icon_ellipse from "@images/smart-parking-v3/png/icon-ellipse.png";
+import barrier from "@images/smart-parking-v3/png/img-barrier.png";
+import cam1 from "@images/smart-parking-v3/png/img-camera.png";
+import cam2 from "@images/smart-parking-v3/png/img-camera2.png";
+import machine1 from "@images/smart-parking-v3/png/img-machine.png";
+import machine2 from "@images/smart-parking-v3/png/img-machine2.png";
+import screen from "@images/smart-parking-v3/png/img-screen.png";
+import ip13 from "@images/smart-parking-v3/png/img-ip13.png";
+import ip_phone from "@images/smart-parking-v3/png/icon-iphone-phone.png";
+import ip_map from "@images/smart-parking-v3/png/icon-iphone-map.png";
 import style from "./style.module.scss";
 
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-const softwareContentList = [
-  {
-    id: 0,
-    title: "Quản lý bãi đỗ",
-    content: {
-      feature: [
-        {
-          id: 0,
-          text: "Cấp/phát thẻ",
-        },
-        {
-          id: 1,
-          text: "Quản lý xe ra/vào (thời gian, chụp hình biển số, đóng mở barrier, tính tiền)",
-        },
-        {
-          id: 2,
-          text: "Hiển thị phí gửi xe",
-        },
-        {
-          id: 3,
-          text: "Thống kê chi tiết số lượt xe ra/vào, doanh thu bãi xe (ngày/tháng)",
-        },
-      ],
-      desc: [
-        {
-          id: 0,
-          text: "Nhận diện và lưu trữ biển số nhanh chóng",
-        },
-        {
-          id: 1,
-          text: "Chụp ảnh người và phương tiện ra vào bãi xe",
-        },
-        {
-          id: 2,
-          text: "Đăng ký gửi xe dài hạn & tự động tính toán chi phí",
-        },
-        {
-          id: 3,
-          text: "Cập nhật số lượng chỗ trống và hiển thị trên bảng chỉ dẫn",
-        },
-      ],
-    },
-  },
-  {
-    id: 1,
-    title: "Quản lý chỗ trống",
-    content: {
-      feature: [
-        {
-          id: 0,
-          text: "Xác định tổng số chỗ trống trong bãi xe (ngoài trời hoặc tầng hầm)",
-        },
-        {
-          id: 1,
-          text: "Điều hướng xe di chuyển",
-        },
-        {
-          id: 2,
-          text: "Hiển thị trạng thái ô để xe",
-        },
-        {
-          id: 3,
-          text: "Tìm vị trí xe trong bãi đỗ ",
-        },
-      ],
-      desc: [
-        {
-          id: 0,
-          text: "Hiển thị số lượng vị trí đỗ xe còn trống",
-        },
-        {
-          id: 1,
-          text: "Chỉ dẫn phương tiện đến vị trí đỗ xe nhanh chóng",
-        },
-        {
-          id: 2,
-          text: "Cho phép người dùng tìm kiếm vị trí đỗ xe trống thông qua ứng dụng",
-        },
-      ],
-    },
-  },
+const imgHardwareItemList = [
+  [barrier, cam1, cam2],
+  [machine1, machine2, screen],
 ];
-
-const hardwareItemList = [
-  {
-    id: 0,
-    title: "Thiết bị quản lý bãi đỗ",
-    contentList: [
-      {
-        id: 0,
-        img: barrier,
-        title: "Thanh chắn (Barrier)",
-        descList: [
-          "Hỗ trợ nhân viên kiểm soát hoặc tự động mở/đóng (sau khi hệ thống trích xuất và rà soát thông tin chính xác) đảm bảo an toàn an ninh trong bãi đỗ. ",
-        ],
-        attributeList: [
-          {
-            id: 0,
-            title: "Nguồn cấp",
-            value: "220V",
-          },
-          {
-            id: 1,
-            title: "Tần số",
-            value: "50/60 Hz",
-          },
-          {
-            id: 2,
-            title: "Công suất",
-            value: "90W - 120W",
-          },
-          {
-            id: 3,
-            title: "Nhiệt độ",
-            value: "(-20) đến 80 (độ C)",
-          },
-          {
-            id: 4,
-            title: "Độ dài",
-            value: "1m đến 3m",
-          },
-          {
-            id: 5,
-            title: "Tổng trọng lượng",
-            value: "Từ 50kg",
-          },
-          {
-            id: 6,
-            title: "Khoảng cách điều khiển",
-            value: "Từ 50m",
-          },
-          {
-            id: 7,
-            title: "Chất liệu",
-            value: "Thép, nhôm, nhựa,...",
-          },
-        ],
-      },
-      {
-        id: 1,
-        img: cam1,
-        title: "Camera _ ITC215 - PW6M - IRL2F",
-        descList: [
-          "Nhận diện biến số",
-          "Chống ngược sáng WDR",
-          "Cảm biến hồng ngoại",
-        ],
-        attributeList: [
-          {
-            id: 0,
-            title: "Cảm biến hình ảnh",
-            value: `1/2.8’’ CMOS`,
-          },
-          {
-            id: 1,
-            title: "Độ phân giải hình ảnh",
-            value: "1920 x 1080 (OSD)",
-          },
-          {
-            id: 2,
-            title: "Khoảng cách chiếu sáng",
-            value: "12m (39.37 ft)",
-          },
-          {
-            id: 3,
-            title: "Độ rộng khoảng chụp",
-            value: "3m đến 6m (9.84 ft đến 19.69 ft)",
-          },
-          {
-            id: 4,
-            title: "Độ rộng làn xe",
-            value: "3m - 4m (9.84 ft–13.12 ft)",
-          },
-        ],
-      },
-      {
-        id: 2,
-        img: cam2,
-        title: "Camera _ IPC - HDBW5442H - ZE",
-        descList: [
-          "Phát hiện khuôn mặt",
-          "Chống ngược sáng WDR",
-          "Cảm biến hồng ngoại",
-        ],
-        attributeList: [
-          {
-            id: 0,
-            title: "Độ phân giải lớn nhất",
-            value: "2688(H) x 1520(V)",
-          },
-          {
-            id: 1,
-            title: "Bộ nhớ (ROM)",
-            value: "128MB",
-          },
-          {
-            id: 2,
-            title: "Bộ nhớ (RAM)",
-            value: "1GB",
-          },
-          {
-            id: 3,
-            title: "Hệ thống quét",
-            value: "Cấp tiến",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "Thiết bị quản lý chỗ trống",
-    contentList: [
-      {
-        id: 0,
-        img: machine1,
-        title: "Máy dò đỗ xe video thông minh _ ITC314-PH3A-TF SERIES",
-        descList: [
-          "Giám sát trong thời gian thực",
-          "Phát hiện 3 điểm đỗ, đèn chỉ báo 7 màu",
-          "Nhận diện biển số xe ",
-          "Hỗ trợ bảo vệ phương tiện",
-          "Tốc độ chuyển trạng thái < 5s",
-        ],
-        attributeList: [
-          {
-            id: 0,
-            title: "Cảm biến hình ảnh",
-            value: "1/3'' CMOS",
-          },
-          {
-            id: 1,
-            title: "Tốc độ màn trập điện tử",
-            value: "1/3s đến 1/10000s (tự động/tùy chỉnh)",
-          },
-          {
-            id: 2,
-            title: "Độ phân giải hình ảnh",
-            value: "2304 × 1296",
-          },
-          {
-            id: 3,
-            title: "Độ phân giải video",
-            value: "2MP (1920 × 1080)",
-          },
-          {
-            id: 4,
-            title: "Ngày/Đêm",
-            value: "Chuyển đổi ngày/đêm theo độ sáng",
-          },
-          {
-            id: 5,
-            title: "Giảm nhiễu",
-            value: "3D DNR",
-          },
-        ],
-      },
-      {
-        id: 1,
-        img: machine2,
-        title: "Máy dò đỗ xe video thông minh _ ITC314-PH3A-F SERIES",
-        descList: [
-          "Giám sát trong thời gian thực hiện",
-          "Phát hiện 6 điểm đỗ, đèn chỉ báo 7 màu",
-          "Nhận diện biển số xe ",
-          "Hỗ trợ bảo vệ phương tiện",
-          "Tốc độ chuyển trạng thái < 5s",
-        ],
-        attributeList: [
-          {
-            id: 0,
-            title: "Cảm biến hình ảnh",
-            value: "1/3'' CMOS",
-          },
-          {
-            id: 1,
-            title: "Tốc độ màn trập điện tử",
-            value: "1/3s đến 1/10000s (tự động/tùy chỉnh)",
-          },
-          {
-            id: 2,
-            title: "Độ phân giải hình ảnh",
-            value: "2304 × 1296",
-          },
-          {
-            id: 3,
-            title: "Độ phân giải video",
-            value: "2MP (1920 × 1080)",
-          },
-          {
-            id: 4,
-            title: "Ngày/Đêm",
-            value: "Chuyển đổi ngày/đêm theo độ sáng",
-          },
-          {
-            id: 5,
-            title: "Giảm nhiễu",
-            value: "3DNR",
-          },
-        ],
-      },
-      {
-        id: 2,
-        img: screen,
-        title: "Bảng thế hiện số chỗ trống ",
-        descList: ["Thể hiện số chỗ trống đỗ xe máy và xe ô tô lên màn hình"],
-        attributeList: [
-          {
-            id: 0,
-            title: "Thông số kỹ thuật",
-            value: "Tương thích với hệ thống",
-          },
-        ],
-      },
-    ],
-  },
-];
-
-const appMapContent = [
-  {
-    id: 0,
-    title: "APP",
-    icon: ip_phone,
-    content: [
-      {
-        id: 0,
-        content: "Cho phép người dùng đặt chỗ trước",
-      },
-      {
-        id: 1,
-        content: "Xác định đúng vị trí còn trống",
-      },
-      {
-        id: 2,
-        content: "Nhập trước biển số xe",
-      },
-      {
-        id: 3,
-        content: "Dò bản đồ (map) và định vị hướng đi của xe",
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "MAP",
-    icon: ip_map,
-    content: [
-      {
-        id: 0,
-        content:
-          "Bản đồ được tích hợp vào ứng dụng (app) trên điện thoại để dễ dàng định vị và dò tìm vị trí cần thiết",
-      },
-    ],
-  },
-];
+const iconAppMappContentList = [ip_phone, ip_map];
 
 const HardwareItem = ({ listItem }) => {
   return (
@@ -381,18 +32,19 @@ const HardwareItem = ({ listItem }) => {
           <div key={item.id} className={style["item-sub-container"]}>
             <div className={style["item-content"]}>
               <div className={style["content-left"]}>
-                <Image
+                <img
                   className={style["content-left"]}
-                  src={item.img}
+                  src={imgHardwareItemList[listItem.id][item.id].src}
                   alt=""
                 />
               </div>
               <div className={style["content-right"]}>
                 <div className={style["content-right-title"]}>{item.title}</div>
                 <div className={style["content-right-desc"]}>
-                  {item.descList.map((item) => {
+                  {item.descList.map((item, index) => {
+                    const id = index + 1;
                     return (
-                      <div key={item.id} className={style["desc-text"]}>
+                      <div key={id} className={style["desc-text"]}>
                         {item}
                       </div>
                     );
@@ -436,6 +88,22 @@ const HardwareItem = ({ listItem }) => {
 };
 
 const SectionParkingSystem = () => {
+  const { t } = useTranslation("smartParking");
+
+  const softwareContentList = t(
+    "smartParking.sectionParkingSystem.software.contentList",
+    { returnObjects: true }
+  );
+
+  const hardwareItemList = t(
+    "smartParking.sectionParkingSystem.hardware.itemList",
+    { returnObjects: true }
+  );
+
+  const appMapContent = t(
+    "smartParking.sectionParkingSystem.appMapContentList",
+    { returnObjects: true }
+  );
   const [seclection, setSeclection] = useState(0);
   return (
     <section className={style["section-parking-system"]}>
@@ -484,7 +152,7 @@ const SectionParkingSystem = () => {
                 <div className={style["content-title"]}>
                   Chức năng
                   <div className={style["content-img"]}>
-                    <Image src={icon_ellipse} alt=""></Image>
+                    <img src={icon_ellipse.src} alt=""/>
                   </div>
                 </div>
                 <ul className={style["content-text"]}>
@@ -499,7 +167,7 @@ const SectionParkingSystem = () => {
                 <div className={style["content-title"]}>
                   Mô tả chi tiết
                   <div className={style["content-img"]}>
-                    <Image src={icon_ellipse} alt=""></Image>
+                    <img src={icon_ellipse.src} alt=""/>
                   </div>
                 </div>
                 <ul className={style["content-text"]}>
@@ -525,14 +193,15 @@ const SectionParkingSystem = () => {
             </div>
             <div className={style["appNmap-container"]}>
               <div className={style["appNmap-img"]}>
-                <Image src={ip13} alt=""></Image>
+              <img src={ip13.src} alt=""></img>
               </div>
               <div className={style["appNmap-content-container"]}>
-                {appMapContent.map((item) => {
+                {appMapContent.map((item, index) => {
+                  const id = index + 1;
                   return (
-                    <div className={style["appNmap-content"]}>
+                    <div key={id} className={style["appNmap-content"]}>
                       <div className={style["appNmap-left"]}>
-                        <Image src={item.icon} alt="" />
+                      <img src={iconAppMappContentList[item.id].src} alt="" />
                       </div>
                       <div className={style["appNmap-right"]}>
                         <div className={style["appNmap-right-title"]}>
@@ -540,7 +209,7 @@ const SectionParkingSystem = () => {
                         </div>
                         <div className={style["appNmap-right-text"]}>
                           {item.content.map((item) => {
-                            return <div>{item.content}</div>;
+                            return <div key={item.id}>{item.content}</div>;
                           })}
                         </div>
                       </div>

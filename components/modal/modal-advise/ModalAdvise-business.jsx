@@ -5,7 +5,7 @@ import { Controller, useForm } from "react-hook-form";
 import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
-import swapIcon from "../../../images/business-step2-v3/png/swap.png";
+import swapIcon from "@images/business-step2-v3/png/swap.png";
 function ModalAdvise({
   houseName = "",
   serviceName = "",
