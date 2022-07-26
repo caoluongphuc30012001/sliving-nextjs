@@ -1,0 +1,220 @@
+{
+    "business.packagesData.solution":"SOLUTION",
+    "business.packagesData.listDeviceTitle":"Equipment list used for your project",
+    "business.packagesData.count":"Quantity",
+    "business.packagesData.listDeviceSubTitle":"PRODUCT LIST",
+    "business.packagesData.device":"Detailed equipment",
+    "business.packagesData.normal":"Basic",
+    "business.packagesData.advanced":"Advanced",
+    "business.packagesData.contact":"Contact",
+    "business.packagesData.lighting":"Smart Lighting",
+    "business.packagesData.home":"Smart Home",
+    "business.packagesData.building":"Smart Building",
+    "business.packagesData.parking":"Smart Parking",
+    "business.tableData2":{
+        "id": 0,
+        "smallNote": "This statistical table shows reference data. Don't hesitate to contact us for direct, accurate, and fast support for the detailed information.",
+        "content": [
+          {
+            "id": 0,
+            "solutionName": "Smart Home",
+            "deviceList": [
+              {
+                "id": "0",
+                "deviceName": "Google Home",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "1",
+                "deviceName": "Gateway controller",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "2",
+                "deviceName": "Plug",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "3",
+                "deviceName": "Infrared controller",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "4",
+                "deviceName": "Thermostat",
+                "inBasic": true,
+                "inAdvanced": true
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "solutionName": "Smart Lighting",
+            "deviceList": [
+              {
+                "id": "0",
+                "deviceName": "Google Home",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "1",
+                "deviceName": "Gateway controller",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "2",
+                "deviceName": "Mechanical Switch (square - white - 3 buttons -  1 wires)",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "3",
+                "deviceName": "Smart Touch Switch (rectangular/square - white/Gold - 1/2/3/4/6 buttons -  2 wires)",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "4",
+                "deviceName": "Led downlight (7/9/12W)",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "5",
+                "deviceName": "10 channels - Led driver",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "6",
+                "deviceName": "Lighting sensor ",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "7",
+                "deviceName": "Motion Sensor",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "8",
+                "deviceName": "Mechanical Switch (battery)",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "9",
+                "deviceName": "Door Sensor",
+                "inBasic": false,
+                "inAdvanced": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "solutionName": "Smart Building",
+            "deviceList": [
+              {
+                "id": "0",
+                "deviceName": "Google Home",
+                "inBasic": false,
+                "inAdvanced": true
+              },
+              {
+                "id": "1",
+                "deviceName": "Gateway controller",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "2",
+                "deviceName": "Inside camera",
+                "inBasic": true,
+                "inAdvanced": true
+              },
+              {
+                "id": "3",
+                "deviceName": "Door Sensor",
+                "inBasic": true,
+                "inAdvanced": true
+              }
+            ]
+          }
+        ],
+        "subContent": {
+          "solutionList": [
+            {
+              "id": 0,
+              "solutionName": "Parking management",
+              "softwareName": "Parking management software",
+              "deviceList": {
+                "listName": "Parking management device",
+                "content": [
+                  {
+                    "id": 0,
+                    "deviceName": "Barrier"
+                  },
+                  {
+                    "id": 1,
+                    "deviceName": "Camera_ITC215 - PW6M - IRL2F"
+                  },
+                  {
+                    "id": 2,
+                    "deviceName": "Camera IPC-HDBW5442H - ZE"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 1,
+              "solutionName": "Manage vacancies",
+              "softwareName": "Vacancy management software",
+              "deviceList": {
+                "listName": "Space management device",
+                "content": [
+                  {
+                    "id": 0,
+                    "deviceName": "Smart Video Parking Detector ITC314-PH3A-TF SERIES"
+                  },
+                  {
+                    "id": 1,
+                    "deviceName": "Smart Video Parking Detector ITC314-PH3A-F SERIES"
+                  },
+                  {
+                    "id": 2,
+                    "deviceName": "Table showing the number of vacancies"
+                  },
+                  {
+                    "id": 3,
+                    "deviceName": "Bottom-up ultrasonic sensor"
+                  },
+                  {
+                    "id": 4,
+                    "deviceName": "Top-down ultrasonic sensor"
+                  }
+                ]
+              }
+            },
+            {
+              "id": 2,
+              "solutionName": "App & Map",
+              "softwareName": "Smart parking management application with integrated directions map",
+              "deviceList": {
+                "listName": "",
+                "content": []
+              }
+            }
+          ]
+        }
+    },  
+    "business.header.title":"Package Solutions",
+    "business.header.subTitle":"For Enterprise",
+    "business.header.description":"Provide lighting solutions, intelligent control, and security solutions with diverse options at the most reasonable cost for buildings, apartments, offices, commercial centers, etc."
+}

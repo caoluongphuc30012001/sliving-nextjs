@@ -1,0 +1,196 @@
+{
+  "smartBuilding.sectionTop.title": "SMART BUILDING",
+  "smartBuilding.sectionTop.subTitle": "We are proud to bring customers with a barrier; apply solid, modern, and safe digital technologies for residential areas, projects and buildings.",
+  "smartBuilding.sectionSystem.title": "System in Smart Building solutions",
+  "smartBuilding.sectionSystem.subTitle": "SMART BUILDING",
+  "smartBuilding.sectionSystem.smartDoorLock.title1": "SMART DOOR LOCK",
+  "smartBuilding.sectionSystem.smartDoorLock.title2": "VIDEO DOOR PHONE",
+  "smartBuilding.sectionSystem.smartDoorLock.title3": "SMART DOOR LOCK & VIDEO DOOR PHONE",
+  "smartBuilding.sectionSystem.smartDoorLock.subTitle": "Smart Door Lock System",
+  "smartBuilding.sectionSystem.smartElevator.title": "SMART ELEVATOR",
+  "smartBuilding.sectionSystem.smartElevator.subTitle": "Smart Elevator System",
+  "smartBuilding.sectionSystem.smartTurnstile.title": "SMART TURNSTILE",
+  "smartBuilding.sectionSystem.smartTurnstile.subTitle": "Smart Turntile System",
+  "smartBuilding.sectionSystem.smartFaceId.title": "FACE ID TIME ATTENDANCE",
+  "smartBuilding.sectionSystem.smartFaceId.subTitle": "Face ID Time Attendance System",
+  "smartBuilding.sectionSmartDoorLocks.title": "Smart door lock system",
+  "smartBuilding.sectionSmartDoorLocks.subTitle": "SMART DOOR LOCK & VIDEO DOOR PHONE",
+  "smartBuilding.sectionSmartDoorLocks.utilities": {
+    "title": "Utilities",
+    "utilList": [
+      {
+        "title": "Integrate modern unlocking features",
+        "subTitle": "Access options include an NFC card, code, fingerprint, key, video door phone, remote control, etc."
+      },
+      {
+        "title": "Absolute safety protection",
+        "subTitle": "Absolute safety protection for the apartment: audible alarm when subjected to strong external force; lock down automatically when entering the wrong passcode consecutively; etc."
+      },
+      {
+        "title": "Control detailed entry/exit schedules",
+        "subTitle": "Enhanced connectivity allows remote door opening and locking. Automatically send in and out history messages. A superior solution for innkeepers and homestays to manage and protect properties."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyDoorLocks.technologies": {
+    "title": "Applied Technology",
+    "technologyList": [
+      {
+        "title": "NFC card",
+        "specificationList": ["Recognize card <2cm", "Read card code <0.5s"]
+      },
+      {
+        "title": "Sensor",
+        "specificationList": ["Unlocked capacitive sensor", "Error rate <0.0002"]
+      },
+      {
+        "title": "Password",
+        "specificationList": ["Mix 3 random numbers"]
+      },
+      {
+        "title": "Storage memory",
+        "specificationList": ["100 cards - fingerprint - password, 8 Bluetooth"]
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyDoorLocks.collaborativeBrand.title": "Collaborative Brand",
+  "smartBuilding.sectionTechnologyDoorLocks.collaborativeBrand.subTitle": "Unicloud is currently collaborating with Dahua, a Smart door lock manufacturer.",
+  "smartBuilding.sectionSmartElevator.title": "Smart elevator system",
+  "smartBuilding.sectionSmartElevator.subTitle": "SMART ELEVATOR",
+  "smartBuilding.sectionSmartElevator.utilities": {
+    "title": "Utilities",
+    "utilList": [
+      {
+        "title": "Save time",
+        "subTitle": "Reasonably compute the shortest time for the elevator to move around floors."
+      },
+      {
+        "title": "Control the right to move with magnetic cards",
+        "subTitle": "Unique ID cards are authorized to specific floors. Help keep security under absolute control in case of strangers entering the building."
+      },
+      {
+        "title": "Control by face recognition",
+        "subTitle": "Facial recognition to call the elevator, open the barrier of the parking area, optionally apartment owners either using a video calling bell or through the application for residents to call the elevator to the correct apartment."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyElevator.technologies": {
+    "title": "Applied Technology",
+    "technologyList": [
+      {
+        "title": "RFID/NFC card reader",
+        "specificationList": []
+      },
+      {
+        "title": "Elevator control system",
+        "specificationList": []
+      },
+      {
+        "title": "Coordination server system",
+        "specificationList": []
+      },
+      {
+        "title": "Application to call elevator on smartphone",
+        "specificationList": []
+      },
+      {
+        "title": "Video bell",
+        "specificationList": []
+      },
+      {
+        "title": "Face recognition device",
+        "specificationList": []
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyElevator.collaborativeBrand.title": "Collaborative Brand",
+  "smartBuilding.sectionTechnologyElevator.collaborativeBrand.subTitle": "Unicloud is currently a partner with the Mitsubishi Elevator brand.",
+  "smartBuilding.sectionSmartTurnstile.title": "Smart turnstile system",
+  "smartBuilding.sectionSmartTurnstile.subTitle": "SMART TURNSTILE",
+  "smartBuilding.sectionSmartTurnstile.utilities": {
+    "title": "Utilities",
+    "utilList": [
+      {
+        "title": "Integration of eKYC identity technology",
+        "subTitle": "The face recognition device 4.0 eKYC at the turnstile helps identify, distinguish and track people entering and leaving the area."
+      },
+      {
+        "title": "Automatic smart lock",
+        "subTitle": "Auto-lock and anti-following features will be activated after a few seconds when a person passes and only one person passes once."
+      },
+      {
+        "title": "Increased security",
+        "subTitle": "The camera system can work offline to ensure security even during a power outage and send alerts when abnormal intrusions are detected."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyTurnstile.technologies": {
+    "title": "Applied Technology",
+    "technologyList": [
+      {
+        "title": "FaceID camera face recognition",
+        "specificationList": []
+      },
+      {
+        "title": "Identity technology 4.0 eKYC",
+        "specificationList": []
+      },
+      {
+        "title": "Scan card to open the door",
+        "specificationList": []
+      },
+      {
+        "title": "The software sends an alert to the host server",
+        "specificationList": []
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyTurnstile.collaborativeBrand.title": "Collaborative Brand",
+  "smartBuilding.sectionTechnologyTurnstile.collaborativeBrand.subTitle": "Unicloud's software and hardware system can be integrated with any turnstile product with Trigger",
+  "smartBuilding.sectionSmartFaceID.title": "Face ID time attendance system",
+  "smartBuilding.sectionSmartFaceID.subTitle": "FACE ID TIME ATTENDANCE",
+  "smartBuilding.sectionSmartFaceID.utilities": {
+    "title": "Utilities",
+    "utilList": [
+      {
+        "title": "Fast & Accurate Identification",
+        "subTitle": "Can authenticate from a long distance without touching the device with fast and accurate facial recognition speed."
+      },
+      {
+        "title": "High security",
+        "subTitle": "Modern time attendance solution with high security, avoiding information leakage and supporting safe data management and processing."
+      },
+      {
+        "title": "Easy to integrate",
+        "subTitle": "FaceID can integrate with intelligent device systems at doors, elevators, apartment buildings, and buildings to enhance security and convenient attendance."
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyFaceID.technologies": {
+    "title": "Applied Technology",
+    "technologyList": [
+      {
+        "title": "FaceID camera face recognition",
+        "specificationList": []
+      },
+      {
+        "title": "Face biometric algorithm",
+        "specificationList": []
+      },
+      {
+        "title": "Artificial intelligence",
+        "specificationList": []
+      },
+      {
+        "title": "Machine Learning",
+        "specificationList": []
+      },
+      {
+        "title": "Deep Learning",
+        "specificationList": []
+      }
+    ]
+  },
+  "smartBuilding.sectionTechnologyFaceID.collaborativeBrand.title": "Collaborative Brand",
+  "smartBuilding.sectionTechnologyFaceID.collaborativeBrand.subTitle": "Unicloud is existing provides the entire Face ID system for customers with projects located in commercial centres, buildings, apartments, offices, etc."
+}
