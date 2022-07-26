@@ -3,6 +3,7 @@ import { Form, Modal, FormControl } from "react-bootstrap";
 import { Controller, useForm } from "react-hook-form";
 import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
+import { useTranslation } from "react-i18next";
 import "./ModalAdvise.scss";
 
 function ModalAdvise({
@@ -21,6 +22,8 @@ function ModalAdvise({
     reset,
     formState: { errors },
   } = useForm({ mode: "onChange" });
+
+  const { ready, i18n, t } = useTranslation();
 
   const googleSheetAPI =
     "https://script.google.com/macros/s/AKfycbzBXBn9hPRVMvstSnUNmQRXpZ_kTothqkts6LHbtfq-yeIEYy4KCPwQ6ouCOBCYjEbx/exec";
@@ -92,14 +95,15 @@ function ModalAdvise({
             {/* <p>Hãy để chúng tôi tư vấn đến bạn</p> */}
             <Form.Group className="mb-4" controlId="ControlFullName">
               <Form.Label>
-                Họ và tên<span style={{ color: "red" }}> *</span>
+                {t("modal.advise.input.name")}
+                <span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="text" placeholder="Nhập tên của bạn" /> */}
               <Controller
                 control={control}
                 name="fullName"
                 defaultValue=""
-                rules={{ required: "Chưa nhập họ tên" }}
+                rules={{ required: t("modal.advise.input.nameRequired") }}
                 render={({ field: { onChange, value, ref } }) => (
                   <FormControl
                     onChange={onChange}
@@ -109,7 +113,7 @@ function ModalAdvise({
                     aria-describedby="Nhập tên của bạn"
                     autoComplete="off"
                     type="text"
-                    placeholder="Nhập tên của bạn ở đây"
+                    placeholder={t("modal.advise.input.placeholderName")}
                     // required
                   />
                 )}
@@ -125,7 +129,8 @@ function ModalAdvise({
             </Form.Group>
             <Form.Group className="mb-4" controlId="ControlEmail">
               <Form.Label>
-                Email<span style={{ color: "red" }}> *</span>
+                {t("modal.advise.input.email")}
+                <span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="email" placeholder="Nhập email của bạn" /> */}
               <Controller
@@ -133,10 +138,10 @@ function ModalAdvise({
                 name="email"
                 defaultValue=""
                 rules={{
-                  required: "Chưa nhập email",
+                  required: t("modal.advise.input.emailRequired"),
                   pattern: {
                     value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-                    message: "Vui lòng nhập đúng Email",
+                    message: t("modal.advise.input.placeholderEmailValid"),
                   },
                 }}
                 render={({ field: { onChange, value, ref } }) => (
@@ -145,7 +150,7 @@ function ModalAdvise({
                     value={value}
                     ref={ref}
                     isInvalid={errors.email}
-                    placeholder="Nhập email của bạn ở đây"
+                    placeholder={t("modal.advise.input.placeholderEmail")}
                     aria-label="email"
                     aria-describedby="email"
                     autoComplete="off"
@@ -166,7 +171,8 @@ function ModalAdvise({
             </Form.Group>
             <Form.Group className="mb-4" controlId="ControlTelephone">
               <Form.Label>
-                Số điện thoại<span style={{ color: "red" }}> *</span>
+                {t("modal.advise.input.phoneNumber")}
+                <span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="text" placeholder="Nhập số điện thoại của bạn" /> */}
               <Controller
@@ -174,11 +180,13 @@ function ModalAdvise({
                 name="telephone"
                 defaultValue=""
                 rules={{
-                  required: "Chưa nhập số điện thoại",
+                  required: t("modal.advise.input.phoneNumberRequired"),
                   pattern: {
                     value:
                       /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/,
-                    message: "Số điện thoại không đúng",
+                    message: t(
+                      "modal.advise.input.placeholderPhoneNumberValid"
+                    ),
                   },
                 }}
                 render={({ field: { onChange, value, ref } }) => (
@@ -209,7 +217,9 @@ function ModalAdvise({
             </Form.Group>
             <Form.Group className="mb-4" controlId="ControlContent">
               <Form.Label>
-                {!productName ? "Lời nhắn/ Thắc mắc" : "Tên sản phẩm"}
+                {!productName
+                  ? t("modal.advise.message")
+                  : t("modal.advise.product")}
               </Form.Label>
               {/* <Form.Control as="textarea" rows={3} placeholder="name@example.com" /> */}
               <Controller
@@ -227,14 +237,14 @@ function ModalAdvise({
                     // required
                     as="textarea"
                     rows={3}
-                    placeholder="Để lại thắc mắc của bạn ở đây"
+                    placeholder={t("modal.advise.placeholderMessage")}
                   />
                 )}
               />
             </Form.Group>
 
             <button type="submit">
-              <span>Nhận tư vấn</span>
+              <span>{t("modal.btn")}</span>
             </button>
           </Form>
         </Modal.Body>

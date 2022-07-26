@@ -6,15 +6,17 @@ import axios from "axios";
 import ModalThanks from "../modal-thanks/ModalThanks";
 import "./ModalAdvise.scss";
 import swapIcon from "../../../images/business-step2-v3/png/swap.png";
+import { useTranslation } from "react-i18next";
+
 function ModalAdvise({
   houseName = "",
   serviceName = "",
   solutionNames = "",
   ...props
 }) {
+  const { t, i18n, ready } = useTranslation();
   const { onHide } = props;
-
-  const listOption = [
+  const [listOption, setListOption] = useState([
     {
       id: 0,
       label: "Quy mô nhỏ",
@@ -35,10 +37,16 @@ function ModalAdvise({
       label: "Chọn quy mô",
       value: "Chọn quy mô",
     },
-  ];
+  ]);
   const [modalShow, setModalShow] = React.useState(false);
   const [drop, setDrop] = useState(false);
   const [option, setOption] = useState(listOption[0]);
+  useEffect(() => {
+    setListOption(t("modal.listOption", { returnObjects: true }));
+  }, [ready, i18n.language]);
+  useEffect(() => {
+    setOption(listOption[0]);
+  }, [listOption]);
   useEffect(() => {
     const handleClick = (event) => {
       if (
@@ -123,17 +131,18 @@ function ModalAdvise({
             className="form-advise-sliving"
             onSubmit={handleSubmit(onSubmit)}
           >
-            {/* <p>Hãy để chúng tôi tư vấn đến bạn</p> */}
+            {/* <p>{t("modal.advise.title")}</p> */}
             <Form.Group className="mb-4" controlId="ControlFullName">
               <Form.Label>
-                Tên Công Ty<span style={{ color: "red" }}> *</span>
+                {t("modal.advise.input.company")}
+                <span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="text" placeholder="Nhập tên của bạn" /> */}
               <Controller
                 control={control}
                 name="fullName"
                 defaultValue=""
-                rules={{ required: "Chưa nhập tên công ty của bạn" }}
+                rules={{ required: t("modal.advise.input.companyRequired") }}
                 render={({ field: { onChange, value, ref } }) => (
                   <FormControl
                     onChange={onChange}
@@ -143,7 +152,7 @@ function ModalAdvise({
                     aria-describedby="Nhập tên"
                     autoComplete="off"
                     type="text"
-                    placeholder="Nhập tên"
+                    placeholder={t("modal.advise.input.placeholderCompany")}
                     // required
                   />
                 )}
@@ -159,7 +168,8 @@ function ModalAdvise({
             </Form.Group>
             <Form.Group className="mb-4" controlId="ControlEmail">
               <Form.Label>
-                Email<span style={{ color: "red" }}> *</span>
+                {t("modal.advise.input.email")}
+                <span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="email" placeholder="Nhập email của bạn" /> */}
               <Controller
@@ -167,10 +177,10 @@ function ModalAdvise({
                 name="email"
                 defaultValue=""
                 rules={{
-                  required: "Chưa nhập email",
+                  required: t("modal.advise.input.emailRequired"),
                   pattern: {
                     value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-                    message: "Vui lòng nhập đúng Email",
+                    message: t("modal.advise.input.placeholderEmailValid"),
                   },
                 }}
                 render={({ field: { onChange, value, ref } }) => (
@@ -179,7 +189,7 @@ function ModalAdvise({
                     value={value}
                     ref={ref}
                     isInvalid={errors.email}
-                    placeholder="Nhập email của bạn ở đây"
+                    placeholder={t("modal.advise.input.placeholderEmail")}
                     aria-label="email"
                     aria-describedby="email"
                     autoComplete="off"
@@ -200,7 +210,8 @@ function ModalAdvise({
             </Form.Group>
             <Form.Group className="mb-4" controlId="ControlTelephone">
               <Form.Label>
-                Số điện thoại<span style={{ color: "red" }}> *</span>
+                {t("modal.advise.input.phoneNumber")}
+                <span style={{ color: "red" }}> *</span>
               </Form.Label>
               {/* <Form.Control type="text" placeholder="Nhập số điện thoại của bạn" /> */}
               <Controller
@@ -208,11 +219,13 @@ function ModalAdvise({
                 name="telephone"
                 defaultValue=""
                 rules={{
-                  required: "Chưa nhập số điện thoại",
+                  required: t("modal.advise.input.phoneNumberRequired"),
                   pattern: {
                     value:
                       /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/,
-                    message: "Số điện thoại không đúng",
+                    message: t(
+                      "modal.advise.input.placeholderPhoneNumberValid"
+                    ),
                   },
                 }}
                 render={({ field: { onChange, value, ref } }) => (
@@ -222,7 +235,7 @@ function ModalAdvise({
                     ref={ref}
                     isInvalid={errors.telephone}
                     className="telephone"
-                    placeholder="Nhập số điện thoại của bạn ở đây"
+                    placeholder={t("modal.advise.input.placeholderPhoneNumber")}
                     aria-label="telephone"
                     aria-describedby="telephone"
                     autoComplete="off"
@@ -244,7 +257,7 @@ function ModalAdvise({
             <Form.Group className="mb-4" controlId="select-group">
               <Form.Label>
                 <div className="title-sub">
-                  <p className="title">{"Quy mô "}</p>
+                  <p className="title">{t("modal.advise.scale")}</p>
                   <p className="title-star">*</p>
                 </div>
               </Form.Label>
@@ -291,76 +304,8 @@ function ModalAdvise({
                 </div>
               </div>
             </Form.Group>
-            {/* <div className="title-sub">
-              <p className="title">{"Quy mô "}</p>
-              <p className="title-star">*</p>
-            </div>
-            <div
-              className="selection-box"
-              onClick={() => {
-                setDrop(!drop);
-              }}
-              onKeyDown={() => {}}
-              role="button"
-              tabIndex={0}
-            >
-              <div
-                className={`main-selection ${
-                  option.value !== listOption[listOption?.length - 1].value
-                    ? "done"
-                    : ""
-                }`}
-              >
-                {option.label}
-              </div>
-              <img src={swapIcon} alt="" className="icon-drop-down" />
-              <div className={`drop-box ${drop ? "drop" : ""}`}>
-                {listOption.map((item, index) => {
-                  return (
-                    index !== listOption?.length - 1 && (
-                      <div
-                        key={item.id}
-                        className={`option ${
-                          item.label === option.label ? "active" : ""
-                        }`}
-                        onClick={() => {
-                          setOption(item);
-                        }}
-                        onKeyDown={() => {}}
-                        role="button"
-                        tabIndex={0}
-                      >
-                        {item.label}
-                      </div>
-                    )
-                  );
-                })}
-              </div>
-            </div> */}
-            {/* <Form.Group className="mb-4" controlId="ControlContent">
-              <Form.Label>Lời nhắn/ Thắc mắc</Form.Label>
-              <Form.Control as="textarea" rows={3} placeholder="name@example.com" />
-              <Controller
-                control={control}
-                name="content"
-                defaultValue=""
-                render={({ field: { onChange, value, ref } }) => (
-                  <Form.Control
-                    onChange={onChange}
-                    value={value}
-                    ref={ref}
-                    isInvalid={errors.content}
-                    aria-label="Default select example"
-                    // required
-                    as="textarea"
-                    rows={3}
-                    placeholder="Để lại thắc mắc của bạn ở đây"
-                  />
-                )}
-              />
-            </Form.Group> */}
             <button type="submit">
-              <span>Nhận tư vấn</span>
+              <span>{t("modal.btn")}</span>
             </button>
           </Form>
         </Modal.Body>

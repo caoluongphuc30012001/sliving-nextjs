@@ -222,9 +222,13 @@ const SectionProductsSlider = () => {
           {
             id: data.length,
             titleVi: "Quản Lý Thông Minh Với Sliving App",
-            titleEn: "SLIVING APP",
+            titleEn: "Smart Management with Sliving App",
             subTitle: "SLIVING APP",
-            contents: [
+            contentEns: [
+              "Salient features: Remotely control with Sliving app or voice via virtual assistants like Google Assistant, Siri, Alexa,...and set up scenarios.",
+              "Monitor and get notifications: Thanks to the connection to the two-way indoor unit and control- monitor environmental parameters such as temperature, and humidity, ...then give timely warnings.",
+            ],
+            contentVis: [
               "Tính năng vượt trội: Điều khiển từ xa thông qua ứng dụng Sliving, giọng nói, chạy kịch bản hoặc qua trợ lý ảo như Google Assistant, Siri, Alexa,...",
               "Giám sát & cảnh báo: Kiểm soát năng lượng tiêu dùng thông minh nhờ có tính năng kết nối hai chiều với dàn lạnh, vừa có khả năng điều khiển và giám sát các thông số môi trường như nhiệt độ, độ ẩm,... và đưa ra các cảnh báo kịp thời.",
             ],

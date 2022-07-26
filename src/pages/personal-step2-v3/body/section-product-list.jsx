@@ -108,7 +108,7 @@ const SectionProductList = () => {
     const getServices = async () => {
       try {
         const res = await axios.get(
-          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/services"
+          "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/business/services"
         );
         const list = res.data?.Items.map((item, index) => {
           return {
@@ -128,7 +128,7 @@ const SectionProductList = () => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
-          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/houses"
+          "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/business/houses"
         );
         setCurrentHouse(
           response.data?.Items.find((item) => item.id === state["houseID"])
@@ -144,7 +144,7 @@ const SectionProductList = () => {
     const getDevice = async (houseID, isBasic) => {
       try {
         const res = await axios.post(
-          "https://zacnrkt7mg.execute-api.ap-southeast-1.amazonaws.com/staging/business/devices",
+          "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/business/devices",
           {
             houseID,
             isBasic,
@@ -152,13 +152,14 @@ const SectionProductList = () => {
         );
         setLoading(false);
         let rs = res.data.sort((a, b) =>
-          a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
+        a.room.roomValue.nameVi.localeCompare(b.room.roomValue.nameVi)
         );
         res.data.forEach((item) => {
           item.listDevice = item.listDevice.sort((a, b) =>
-            a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
+          a.deviceValues.nameVi.localeCompare(b.deviceValues.nameVi)
           );
         });
+        console.log("rs: ", rs);
         rs.forEach((item) => {
           item.listDevice.forEach((device) => {
             device.deviceValues.totalBasic =
@@ -170,7 +171,6 @@ const SectionProductList = () => {
           });
         });
         setTableData(rs);
-        console.log(rs);
       } catch (err) {
         console.error(err);
       }
