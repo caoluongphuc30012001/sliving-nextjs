@@ -83,7 +83,7 @@ function ModalAdvise({
         centered
         className={style["modal-advise-sliving"]}
       >
-        <Modal.Header closeButton></Modal.Header>
+        <Modal.Header className={style["modal-header"]} closeButton></Modal.Header>
         <Modal.Body>
           <Form
             className={style["form-advise-sliving"]}
