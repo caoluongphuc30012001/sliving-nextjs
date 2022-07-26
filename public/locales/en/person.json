@@ -1,0 +1,19 @@
+{
+    "personalPackage.groupBtn.confirmBtn": "Received price",
+    "personalPackage.groupBtn.adviseBtn": "Consult now!",
+  
+    "personalPackage.header.mainTitle": "Packaged Solutions",
+    "personalPackage.header.subTitle": "For Households",
+    "personalPackage.header.mainDesc": "Select the suitable solution pack for your flat to experience the most comfortable and modern living space.",
+  
+    "personalPackage.personalStep1.mainTitle": "What apartment do you own?",
+    "personalPackage.personalStep1.mainDesc": "Choose a type of apartment you own, we will offer smart solutions suitable for your apartment.",
+  
+    "personalPackage.personalStep2.mainDesc": "Equipment list used for your project",
+    "personalPackage.personalStep2.tableHeader.title1": "Location",
+    "personalPackage.personalStep2.tableHeader.title2": "Detailed equipment",
+    "personalPackage.personalStep2.tableHeader.title3": "Basic",
+    "personalPackage.personalStep2.tableHeader.title4": "Convenient",
+    "personalPackage.personalStep2.tableHeader.title5": "Advanced"
+  }
+  
