@@ -4,8 +4,7 @@
   //   bottom: 0;
   //   left: 0;
   //   right: 0;
-  //   margin: auto;
-  //   url("../../images/smart-security-v3/bg-top-security.png");
+  margin:0px auto;
   
 .drop-box {
   transition: 0.2s;
@@ -96,25 +95,25 @@
       color: red;
     }
   }
-  max-width: 600px;
+  // max-width: 500px;
   max-height: unset;
   padding: 0px !important;
   overflow-y: hidden;
   .modal-dialog {
     width: auto !important;
   }
-  .btn-close {
+  :global(.btn-close) {
     width: 38px;
     height: 38px;
     padding: 0;
     opacity: 1;
     margin-right: 0px;
     margin-bottom: 0px;
-    // background: url("../../../images/icon/btn-close-modal-digital-banking.svg");
+    background: url("/images/icon/btn-close-modal-digital-banking.svg");
     background-repeat: no-repeat;
   }
   .modal-header {
-    // background: url("../../../images/home-page-v3/img-header-popup.png");
+    background-image: url("/images/home-page-v3/img-header-popup.png");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 220px;
@@ -122,7 +121,7 @@
     margin-left: -1px;
     margin-right: -1px;
   }
-  .modal-content {
+  :global(.modal-content) {
     margin: auto;
     max-width: 450px;
     background: #ffffff;
@@ -174,7 +173,7 @@
 }
 @media only screen and (max-width: 767px) {
   .modal-advise-sliving .modal-header {
-    min-height: 200px;
+    min-height: 220px;
   }
 }
 
