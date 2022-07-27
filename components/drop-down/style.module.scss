@@ -1,0 +1,372 @@
+.section-drop-down {
+  padding: clamp(20px, 5.37vw, 60px) 0px;
+  overflow: hidden;
+  position: relative;
+  .container-dropdown {
+    max-width: 1550px;
+    margin-left: auto;
+  }
+  .title-box {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sub-title {
+      font-family: 'SVN Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 133%;
+      text-align: center;
+      letter-spacing: 0.22em;
+      color: #0979fd;
+    }
+    .title {
+      margin-top: 16px;
+      font-family: 'SVN Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      text-align: center;
+      color: #2c2d2e;
+    }
+    .item-border {
+      margin-top: 16px;
+      width: 88px;
+      height: 4px;
+      background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
+      border-radius: 200px;
+    }
+  }
+  .drop-down-wrap {
+    margin-top: 100px;
+    max-width: 1560px;
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .left-part {
+    width: 495px;
+    min-width: 495px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .advise-box {
+      margin-top: 16px;
+    }
+    .title {
+      font-family: 'SVN Gilroy';
+      font-weight: 700;
+      font-size: 21px;
+      color: #0979fd;
+      margin-bottom: 0px;
+    }
+  }
+  .right-part {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    padding-right: 24%;
+    padding-left: 20px;
+    .main-image {
+      border-radius: 8px;
+    }
+    .sub-background {
+      position: absolute;
+      width: 70%;
+      height: auto;
+      z-index: -1;
+      left: 30%;
+    }
+  }
+  :global(.accordion) {
+    width: 100%;
+    :global(.accordion-item) {
+      border: none;
+      background: none;
+    }
+    :global(.accordion-item:not(:first-child)) {
+      margin-top: 16px;
+    }
+    :global(.accordion-button) {
+      height: 48px;
+      background: #c7e5ff;
+      border-radius: 8px 8px 0px 0px;
+      &:focus {
+        border: none;
+        box-shadow: unset;
+      }
+    }
+    :global(.collapsed) {
+      background: none;
+      .title {
+        color: #76787a;
+        font-size: 21px;
+      }
+    }
+    :global(.accordion-body) {
+      background: #f3f9ff;
+      border-radius: 0px 0px 8px 8px;
+      .content {
+        font-family: 'SVN Gilroy';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #454647;
+      }
+    }
+  }
+}
+@media (min-width: 1180px) {
+  .drop-down-wrap {
+    margin-left: calc(50% - 590px);
+  }
+}
+@media (max-width: 1180px) {
+  .drop-down-wrap {
+    max-width: 1180px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px;
+    .left-part {
+      min-width: 300px;
+      width: 100%;
+    }
+    .right-part {
+      margin-top: 100px;
+      padding: 0;
+      max-width: 900px;
+      .sub-background {
+        height: auto;
+        width: 70%;
+      }
+      .main-image {
+        width: 60%;
+      }
+    }
+  }
+}
+@media (min-width: 570px) {
+  .section-drop-down {
+    :global(.accordion-button) {
+      &::after {
+        background-image: url('/images/smart-lighting-v3/svg/arrow-down.svg');
+      }
+      &:not(.collapsed)::after {
+        background-image: url('/images/smart-lighting-v3/svg/arrow-down1.svg');
+      }
+    }
+    .advise-box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .btn-advise {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        padding: 8px 34px;
+        gap: 10px;
+        width: 177px;
+        height: 40px;
+        background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+        border-radius: 68px;
+        .content {
+          font-family: 'SVN Gilroy';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+
+          color: #ffffff;
+        }
+      }
+      .btn-find-more {
+        margin-left: 34px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 173px;
+        height: 40px;
+        border-radius: 68px;
+        border: 2px solid transparent;
+        background: linear-gradient(to right, white, white),
+          linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+        .content {
+          width: 100%;
+          text-align: center;
+          font-family: 'SVN Gilroy';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .section-drop-down {
+    .title-box {
+      .title {
+        font-size: 28px;
+      }
+    }
+    .advise-box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .btn-advise {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        padding: 8px 34px;
+        gap: 10px;
+        width: 177px;
+        height: 40px;
+        background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
+        border-radius: 68px;
+        .content {
+          font-family: 'SVN Gilroy';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+
+          color: #ffffff;
+        }
+      }
+      .btn-find-more {
+        margin-left: 34px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 173px;
+        height: 40px;
+        border-radius: 68px;
+        border: 2px solid transparent;
+        border: white solid 2px;
+        background: none;
+        .content {
+          width: 100%;
+          text-align: center;
+          font-family: 'SVN Gilroy';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          color: white;
+        }
+      }
+    }
+    .drop-down-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-top: 40px;
+      padding: 0px 20px;
+    }
+    .left-part {
+      .title {
+        font-size: 16px !important;
+      }
+      height: 790px;
+      margin-top: 20px;
+    }
+    .right-part {
+      padding: 0;
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 790px;
+      width: 700px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      z-index: -1;
+      overflow: hidden;
+      .sub-background {
+        display: none;
+      }
+      .main-image {
+        width: 100%;
+        border-radius: 0;
+      }
+      .hide {
+        // z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 790px;
+        width: 100%;
+        background: linear-gradient(
+            91.86deg,
+            rgba(0, 145, 239, 0.5) 1.57%,
+            rgba(50, 215, 212, 0.5) 104.54%
+          ),
+          rgba(0, 0, 0, 0.5);
+      }
+    }
+    :global(.collapsed) {
+      background: none;
+      .title {
+        color: white !important;
+        font-size: 16px !important;
+      }
+    }
+    :global(.accordion-button) {
+      &::after {
+        background-image: url('/images/smart-lighting-v3/svg/arrow-down2.svg');
+      }
+      &:not(.collapsed)::after {
+        background-image: url('/images/smart-lighting-v3/svg/arrow-down1.svg');
+      }
+    }
+    :global(.accordion-body) {
+      // padding: 24px 24px 24px 48px;
+      background: #f3f9ff;
+      border-radius: 0px 0px 8px 8px;
+      .content {
+        font-family: 'SVN Gilroy';
+        font-weight: 500;
+        font-size: 16px !important;
+        line-height: 24px;
+        color: #454647;
+      }
+    }
+  }
+}
+@media (min-width: 570px) and (max-width: 1180px) {
+  .drop-down-wrap {
+    padding: 0 20px !important;
+  }
+}
+.btn-advise,
+.btn-find-more {
+  white-space: nowrap;
+}

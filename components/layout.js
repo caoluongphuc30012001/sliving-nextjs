@@ -1,23 +1,23 @@
-import Head from "next/head";
-import Link from "next/link";
-import classes from "../styles/layout.module.scss";
-import { useRouter } from "next/router";
+import Head from 'next/head'
+import Link from 'next/link'
+import classes from '../styles/layout.module.scss'
+import { useRouter } from 'next/router'
 
 export default function Layout({ children }) {
-  let router = useRouter();
+  let router = useRouter()
   return (
     <div>
       <Head>
         <title>i18n Example</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <header className={classes.header}>
         <nav className={classes.nav}>
-          <Link href="/">
+          <Link href='/'>
             <a>Home</a>
           </Link>
-          <Link href="/about-us">
+          <Link href='/about-us'>
             <a>About</a>
           </Link>
         </nav>
@@ -39,5 +39,5 @@ export default function Layout({ children }) {
         </ul>
       </footer>
     </div>
-  );
+  )
 }
