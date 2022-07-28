@@ -1,6 +1,6 @@
 import imgLeft from '@images/smart-building/img-smart-turnstile.png';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import styles from '../SmartBuilding.module.scss';
 import RowUtilities from './RowUtilities';
 

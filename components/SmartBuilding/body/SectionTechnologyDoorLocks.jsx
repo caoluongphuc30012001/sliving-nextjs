@@ -1,7 +1,7 @@
 import iconPartnership from '@images/smart-building/icon-partner-smart-building.svg';
 import logoDahua from '@images/smart-building/logo-dahua.svg';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import styles from '../SmartBuilding.module.scss';
 import RowTechnology from './RowTechnology';
 

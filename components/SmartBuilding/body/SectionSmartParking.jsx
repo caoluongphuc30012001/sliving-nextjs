@@ -3,7 +3,7 @@ import icon1 from '@images/smart-building/icon-smart-door-lock.svg';
 import icon2 from '@images/smart-building/icon-smart-elevator.svg';
 import icon3 from '@images/smart-building/icon-smart-turmstile.svg';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import styles from '../SmartBuilding.module.scss';
 
 function SectionSmartParking() {
