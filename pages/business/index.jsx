@@ -4,8 +4,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import SectionHeader from "./body/section-header";
-import SectionProductList from "./body/section-product-list";
+import SectionHeader from "../../components/business/body/section-header";
+
+import SectionProductList from "../../components/business//body/section-product-list";
 
 export const getStaticProps = async ({ locale }) => {
   return {
