@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import img404 from "@images/not-found/img-404.png";
-import Seo from "@components/seo";
+import Seo from "@components/common/seo";
 // markup
 const NotFoundPage = () => {
   return (

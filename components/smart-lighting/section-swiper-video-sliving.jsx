@@ -1,10 +1,9 @@
 import React from "react";
-import SectionSwiperVideo from "@components/video-swiper/section-swiper-video";
+import SectionSwiperVideo from "@components/common/video-swiper/section-swiper-video";
 import thumb1 from "@images/smart-home-v3/png/thumb-sliving-01.png";
 import thumb2 from "@images/smart-home-v3/png/thumb-sliving-02.png";
 import thumb3 from "@images/smart-home-v3/png/thumb-sliving-03.png";
 import thumb4 from "@images/smart-home-v3/png/thumb-sliving-04.png";
-import style from  "../style.module.scss";
 export default function SectionSwiperVideoSliving() {
   const listVideo = [
     {

@@ -3,7 +3,7 @@ import React from "react";
 import background from "@images/smart-parking-v3/jpg/bg-parking.jpg";
 import car_img from "@images/smart-parking-v3/png/img-car.png";
 
-import style from "../style.module.scss";
+import style from "./style.module.scss";
 
 import Image from "next/image";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Accordion } from "react-bootstrap";
 import subBackground from "@images/smart-lighting-v3/png/sub-background.png";
-import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
+import ModalAdvise from "@components/common/modal/modal-advise/ModalAdvise";
 import { useTranslation } from "next-i18next";
 
 import style from "./style.module.scss";

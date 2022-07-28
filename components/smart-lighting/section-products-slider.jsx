@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Slider from "@components/product/section-products-slider";
+import Slider from "@components/common/product/section-products-slider";
 import axios from "axios";
 const SectionProductsSlider = () => {
   const [listSlide, setListSlide] = useState([]);

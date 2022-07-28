@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import SectionDefinition from '@pages/smart-parking/body/section-definition';
-import SmartHeader from '@pages/smart-parking/body/section-header';
-import SectionParkingSolution from '@pages/smart-parking/body/section-parking-solution';
-import SectionParkingSystem from '@pages/smart-parking/body/section-parking-system';
+import SectionDefinition from '@components/smart-parking/section-definition';
+import SmartHeader from '@components/smart-parking/section-header';
+import SectionParkingSolution from '@components/smart-parking/section-parking-solution';
+import SectionParkingSystem from '@components/smart-parking/section-parking-system';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';

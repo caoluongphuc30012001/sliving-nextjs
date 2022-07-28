@@ -1,5 +1,5 @@
 import React from "react";
-import SectionDropdown from "@components/drop-down/section-dropdown";
+import SectionDropdown from "@components/common/drop-down/section-dropdown";
 import image1 from "@images/smart-lighting-v3/jpg/image1.jpg";
 import image2 from "@images/smart-lighting-v3/jpg/image2.jpg";
 import image3 from "@images/smart-lighting-v3/jpg/image3.jpg";

@@ -9,7 +9,7 @@ import screen from '@images/smart-parking-v3/png/img-screen.png'
 import ip13 from '@images/smart-parking-v3/png/img-ip13.png'
 import ip_phone from '@images/smart-parking-v3/png/icon-iphone-phone.png'
 import ip_map from '@images/smart-parking-v3/png/icon-iphone-map.png'
-import style from '../style.module.scss'
+import style from './style.module.scss'
 
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'

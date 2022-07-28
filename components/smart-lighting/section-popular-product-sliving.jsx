@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import SectionPopularProduct from "../../../components/product/section-popular-product";
+import SectionPopularProduct from "../common/product/section-popular-product";
 const SectionPopularProductSliving = () => {
   const [listProduct, setListProduct] = useState([]);
   useEffect(() => {

@@ -8,7 +8,7 @@ import background2_1 from "@images/smart-lighting-v3/png/bg-header2-1.png";
 import background3_1 from "@images/smart-lighting-v3/png/bg-header3-1.png";
 
 import { useTranslation } from "next-i18next";
-import style from "../style.module.scss";
+import style from "./style.module.scss";
 const SectionHeader = () => {
   const { t } = useTranslation("smartLighting");
 

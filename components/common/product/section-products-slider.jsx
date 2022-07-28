@@ -10,7 +10,7 @@ import BigArrowLeft from '@images/smart-home-v3/svg/big-arrow-left.svg'
 
 // import BigArrowRight from "@images/smart-home-v3/svg/big-arrow-right.svg";
 import BigArrowRight from '@images/smart-home-v3/svg/big-arrow-right.svg'
-import ModalAdvise from '@components/modal/modal-advise/ModalAdvise'
+import ModalAdvise from '@components/common/modal/modal-advise/ModalAdvise'
 import { useTranslation } from 'next-i18next'
 import { useEffect } from 'react'
 

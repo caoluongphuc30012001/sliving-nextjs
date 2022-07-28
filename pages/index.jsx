@@ -1,13 +1,13 @@
-import React from "react";
-import HomePage from "./home-page";
-import Layout from "../components/layout";
+import React from 'react';
+import HomePage from './home-page';
+// import Layout from "../components/common/layout";
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "home"])),
+      ...(await serverSideTranslations(locale, ['common', 'home'])),
     },
   };
 };
@@ -15,9 +15,9 @@ export const getStaticProps = async ({ locale }) => {
 export default function Home(props) {
   return (
     <div className="app">
-      <Layout>
-        <HomePage />
-      </Layout>
+      {/* <Layout> */}
+      <HomePage />
+      {/* </Layout> */}
     </div>
   );
 }

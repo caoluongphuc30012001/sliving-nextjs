@@ -14,7 +14,7 @@ import iconSolving from "@images/smart-lighting-v3/svg/icon-solving.svg";
 
 import { useTranslation } from "next-i18next";
 
-import style from "../style.module.scss";
+import style from "./style.module.scss";
 const SectionDefinition = () => {
   const { t } = useTranslation("smartLighting");
 

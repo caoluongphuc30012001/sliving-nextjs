@@ -2,7 +2,7 @@ import React from "react";
 
 import { useTranslation } from "next-i18next";
 
-import style from "../style.module.scss"
+import style from "./style.module.scss"
 export default function SectionTitlebox() {
   const { t } = useTranslation("smartLighting");
 

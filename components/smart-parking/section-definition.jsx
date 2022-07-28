@@ -12,7 +12,7 @@ import iconSafety from "@images/smart-parking-v3/svg/icon-safety.svg";
 
 import iconSolving from "@images/smart-parking-v3/svg/icon-solving.svg";
 
-import style from "../style.module.scss";
+import style from "./style.module.scss";
 
 import { useTranslation, i18n } from "next-i18next";
 const SectionDefinition = () => {

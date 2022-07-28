@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import classes from '../styles/layout.module.scss'
 import { useRouter } from 'next/router'
 
 export default function Layout({ children }) {
   let router = useRouter()
   return (
     <div>
-      <Head>
+      {/* <Head>
         <title>i18n Example</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -37,7 +36,7 @@ export default function Layout({ children }) {
             </li>
           ))}
         </ul>
-      </footer>
+      </footer> */}
     </div>
   )
 }
