@@ -14,6 +14,8 @@ import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { useTranslation } from "next-i18next";
 import { useEffect } from "react";
 
+import style from "../../pages/smart-home/style.module.scss";
+
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({
@@ -37,10 +39,10 @@ const ProductItemSwiper = ({
 
   return (
     <>
-      <div className="swiper__container">
+      <div className={style[`swiper__container`]}>
         {slide?.listItem && slide?.listItem.length > 0 && (
           <Swiper
-            className="swiper"
+            className={style[`swiper`]}
             navigation={{
               prevEl: ".prev",
               nextEl: ".next",
@@ -54,15 +56,22 @@ const ProductItemSwiper = ({
             }}
           >
             {slide?.listItem.map((slideItem) => (
-              <SwiperSlide className="swiper__slide" key={slideItem.id}>
-                <img className="slide__img" src={slideItem.imageURL} alt="" />
+              <SwiperSlide
+                className={style[`swiper__slide`]}
+                key={slideItem.id}
+              >
+                <img
+                  className={style[`slide__img`]}
+                  src={slideItem.imageURL}
+                  alt=""
+                />
               </SwiperSlide>
             ))}
           </Swiper>
         )}
       </div>
       {slide?.listItem && slide?.listItem.length > 1 && (
-        <div className="banner-products-btn-group">
+        <div className={style[`banner-products-btn-group`]}>
           {slide?.listItem.map((btnItem, index) => {
             const id = index + 1;
             return (
@@ -73,14 +82,14 @@ const ProductItemSwiper = ({
                 tabIndex={0}
                 className={`${
                   swiperIndex === index
-                    ? "products-btn-item active"
-                    : "products-btn-item"
+                    ? [style["products-btn-item"], style["active"]].join(" ")
+                    : style["products-btn-item"]
                 } `}
                 onClick={() => {
                   swiper.slideTo(index);
                 }}
               >
-                <span className="product-item-title">
+                <span className={style[`product-item-title`]}>
                   {checkVn ? btnItem.nameVi : btnItem.nameEn}
                 </span>
               </div>
@@ -116,13 +125,13 @@ const SectionProductsSlider = ({ listSlide }) => {
   };
   const [modalShow, setModalShow] = React.useState(false);
   return (
-    <section className="section-product-slider">
-      <div className="products-slider">
+    <section className={style[`section-product-slider`]}>
+      <div className={style[`products-slider`]}>
         <div
           onKeyDown={() => {}}
           role="button"
           tabIndex={0}
-          className="btn-big__arrow__left"
+          className={style[`btn-big__arrow__left`]}
           onClick={() => {
             decreaseToggleTab();
           }}
@@ -132,7 +141,7 @@ const SectionProductsSlider = ({ listSlide }) => {
         <div
           role="button"
           tabIndex={0}
-          className="btn-big__arrow__right__mobie"
+          className={style[`btn-big__arrow__right__mobie`]}
           onClick={() => {
             increaseToggleTab();
           }}
@@ -140,7 +149,7 @@ const SectionProductsSlider = ({ listSlide }) => {
           <img src={BigArrowLeft} alt=""></img>
         </div>
         <div
-          className="btn-big__arrow__right"
+          className={style[`btn-big__arrow__right`]}
           onClick={() => increaseToggleTab()}
           onKeyDown={() => {}}
           role="button"
@@ -148,13 +157,17 @@ const SectionProductsSlider = ({ listSlide }) => {
         >
           <img src={BigArrowRight} alt=""></img>
         </div>
-        {listSlide.map((slide, index) => {
+        {listSlide?.map((slide, index) => {
           return (
             <div
-              className={index === toggleState ? "slider active" : "slider"}
+              className={
+                index === toggleState
+                  ? [style["slider"], style["active"]].join(" ")
+                  : style["slider"]
+              }
               key={slide.id}
             >
-              <div className="slider-left__content">
+              <div className={style[`slider-left__content`]}>
                 {!slide?.phoneImg ? (
                   <ProductItemSwiper
                     setSwiperIndex={setSwiperIndex}
@@ -164,19 +177,17 @@ const SectionProductsSlider = ({ listSlide }) => {
                     setResetSwiper={setResetSwiper}
                   />
                 ) : (
-                  <div className="product-phone-wrapper">
+                  <div className={style[`product-phone-wrapper`]}>
                     <img src={slide.phoneImg.img} alt=""></img>
                     {slide?.downloadObjects?.length > 0 && (
-                      <div className="download-apps-container">
+                      <div className={style[`download-apps-container`]}>
                         {slide?.downloadObjects.map((object) => (
-                          <a href={object.link}
-                            key = {object.id}
-                          >
-                            <div className="download-app-item">
+                          <a href={object.link} key={object.id}>
+                            <div className={style[`download-app-item`]}>
                               <img
                                 src={object.img}
                                 alt=""
-                                className="download-app-img"
+                                className={style[`download-app-img`]}
                               ></img>
                             </div>
                           </a>
@@ -186,30 +197,40 @@ const SectionProductsSlider = ({ listSlide }) => {
                   </div>
                 )}
               </div>
-              <div className="slider-right__content">
-                <div className="right-content-container">
-                  <div className="content-container">
-                    <div className="product-right-content">
-                      <h4 className="product-right-subtitle">
+              <div className={style[`slider-right__content`]}>
+                <div className={style[`right-content-container`]}>
+                  <div className={style[`content-container`]}>
+                    <div className={style[`product-right-content`]}>
+                      <h4 className={style[`product-right-subtitle`]}>
                         {slide.subTitle.toUpperCase()}
                       </h4>
-                      <h1 className="product-right-title">
+                      <h1 className={style[`product-right-title`]}>
                         {checkVn ? slide.titleVi : slide.titleEn}
                       </h1>
-                      <div className="product-right-divider"></div>
-                      <ul className="product-right-all-contents">
+                      <div className={style[`product-right-divider`]}></div>
+                      <ul className={style[`product-right-all-contents`]}>
                         {checkVn &&
                           slide?.contentVis &&
                           slide?.contentVis.map((content) =>
                             content.split(":").length > 1 ? (
-                              <li className="product-right-desc-container">
-                                <span className="product-right-main-title">
+                              <li
+                                className={
+                                  style[`product-right-desc-container`]
+                                }
+                              >
+                                <span
+                                  className={style[`product-right-main-title`]}
+                                >
                                   {`${content.split(":")[0]}: `}
                                 </span>
                                 {content.split(":")[1]}
                               </li>
                             ) : (
-                              <li className="product-right-desc-container">
+                              <li
+                                className={
+                                  style[`product-right-desc-container`]
+                                }
+                              >
                                 {content.split(":")[0]}
                               </li>
                             )
@@ -218,22 +239,32 @@ const SectionProductsSlider = ({ listSlide }) => {
                           slide?.contentEns &&
                           slide?.contentEns.map((content) =>
                             content.split(":").length > 1 ? (
-                              <li className="product-right-desc-container">
-                                <span className="product-right-main-title">
+                              <li
+                                className={
+                                  style[`product-right-desc-container`]
+                                }
+                              >
+                                <span
+                                  className={style[`product-right-main-title`]}
+                                >
                                   {`${content.split(":")[0]}: `}
                                 </span>
                                 {content.split(":")[1]}
                               </li>
                             ) : (
-                              <li className="product-right-desc-container">
+                              <li
+                                className={
+                                  style[`product-right-desc-container`]
+                                }
+                              >
                                 {content.split(":")[0]}
                               </li>
                             )
                           )}
                       </ul>
-                      <div className="btn-group">
+                      <div className={style[`btn-group`]}>
                         <button
-                          className="advise-now-btn"
+                          className={style[`advise-now-btn`]}
                           onClick={() => {
                             setProductName(slide.title);
                             setModalShow(true);
@@ -248,7 +279,10 @@ const SectionProductsSlider = ({ listSlide }) => {
                               : `/smart-home`
                           }
                         >
-                          <button type="button" className="learn-more-btn">
+                          <button
+                            type="button"
+                            className={style[`learn-more-btn`]}
+                          >
                             <span>{t("sectionDropdown.learnMore")}</span>
                           </button>
                         </Link>
@@ -261,8 +295,8 @@ const SectionProductsSlider = ({ listSlide }) => {
           );
         })}
       </div>
-      <div className="smart__home__bg-left"></div>
-      <div className="smart__home__bg-right"></div>
+      <div className={style[`smart__home__bg-left`]}></div>
+      <div className={style[`smart__home__bg-right`]}></div>
       <ModalAdvise
         productName={productName}
         show={modalShow}

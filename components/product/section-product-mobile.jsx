@@ -7,26 +7,33 @@ import Link from "next/link";
 import axios from "axios";
 import { useTranslation } from "next-i18next";
 
+import style from "../../pages/smart-home/style.module.scss";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const { i18n } = useTranslation();
   const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
-    <div className="content-left">
-      <div className="top-menu">
+    <div className={style[`content-left`]}>
+      <div className={style[`top-menu`]}>
         {productTypes.map((item) => {
           return (
             <div
               onKeyDown={() => {}}
               role="button"
               tabIndex={0}
-              className={`item-box ${item.id === current.id ? "active" : ""}`}
+              className={
+                item.id === current.id
+                  ? [style["item-box"], style["active"]].join(" ")
+                  : style["item-box"]
+              }
               key={item.id}
               onClick={() => {
                 setCurrent(item);
               }}
             >
-              <div className="label">{checkVn ? item.nameVi : item.nameEn}</div>
-              <div className="item-border"></div>
+              <div className={style[`label`]}>
+                {checkVn ? item.nameVi : item.nameEn}
+              </div>
+              <div className={style[`item-border`]}></div>
             </div>
           );
         })}
@@ -39,7 +46,7 @@ const ContentRight = ({ listProduct, current }) => {
   const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   return (
     listProduct.length > 0 && (
-      <div className="content-right">
+      <div className={style[`content-right`]}>
         <Swiper
           spaceBetween={30}
           grabCursor={true}
@@ -59,13 +66,13 @@ const ContentRight = ({ listProduct, current }) => {
         >
           {listProduct.map((item) => {
             return (
-              <SwiperSlide key={item.id} className="list-product">
+              <SwiperSlide key={item.id} className={style[`list-product`]}>
                 <Link href={`/product-detail/${item.id}`}>
-                  <div className="item-box">
-                    <div className="img-box">
+                  <div className={style[`item-box`]}>
+                    <div className={style[`img-box`]}>
                       <img src={item.imageURL} alt="" />
                     </div>
-                    <div className="description">
+                    <div className={style[`description`]}>
                       {checkVn ? item.nameVi : item.nameEn}
                     </div>
                   </div>
@@ -107,15 +114,17 @@ const SectionProductMobile = ({ productTypes }) => {
     }
   }, [current]);
   return (
-    <section className="section-product-v3-mobile ">
-      <div className="product-container">
-        <div className="title-box">
-          <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">{t("sectionProductV3Mobile.titleMain")}</div>
-          {/* <div className="title">Sản Phẩm Sliving</div> */}
-          <div className="item-border"></div>
+    <section className={style[`section-product-v3-mobile`]}>
+      <div className={style[`product-container`]}>
+        <div className={style[`title-box`]}>
+          <div className={style[`sub-title`]}>SLIVING PRODUCTS</div>
+          <div className={style[`title`]}>
+            {t("sectionProductV3Mobile.titleMain")}
+          </div>
+          {/* <div className={style[`title">Sản Phẩm Sliving</div> */}
+          <div className={style[`item-border`]}></div>
         </div>
-        <div className="content">
+        <div className={style[`content`]}>
           <ContentLeft
             setListProduct={setListProduct}
             current={current}

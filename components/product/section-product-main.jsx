@@ -5,6 +5,7 @@ import axios from "axios";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
 // import "../style.scss";
 import i18next from "i18next";
 const isBrowser = typeof window !== "undefined";
