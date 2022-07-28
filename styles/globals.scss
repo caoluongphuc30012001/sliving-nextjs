@@ -12,3 +12,21 @@ body {
   -webkit-tap-highlight-color: #ad020200;
   scroll-behavior: smooth;
 }
+p,
+span,
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  margin-bottom: 0px !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+.container-1220{
+  width: 100%;
+  max-width: 1220px;
+}

@@ -11,6 +11,7 @@ import axios from "axios";
 import { Spinner } from "react-bootstrap";
 import { useTranslation } from "next-i18next";
 
+import style from "../../pages/smart-home/style.module.scss";
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const { i18n } = useTranslation();
   // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
@@ -20,21 +21,27 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
     setListProduct([]);
   };
   return (
-    <div className="content-left">
+    <div className={style[`content-left`]}>
       {productTypes.map((item) => {
         return (
           <div
             onKeyDown={() => {}}
             role="button"
             tabIndex={0}
-            className={`item-box ${item.id === current.id ? "active" : ""}`}
+            className={
+              item.id === current.id
+                ? [style["item-box"], style["active"]].join(" ")
+                : style["item-box"]
+            }
             key={item.id}
             onClick={() => {
               handle(item);
             }}
           >
-            <div className="label">{checkVn ? item.nameVi : item.nameEn}</div>
-            <div className="item-border"></div>
+            <div className={style[`label`]}>
+              {checkVn ? item.nameVi : item.nameEn}
+            </div>
+            <div className={style[`item-border`]}></div>
           </div>
         );
       })}
@@ -46,12 +53,14 @@ const ContentRight = ({ listProduct, current }) => {
   // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   const checkVn = true;
   return (
-    <div className="content-right">
+    <div className={style[`content-right`]}>
       {listProduct.length > 0 ? (
-        <div className="item-product-box">
-          <div className="title-box">
-            <p className="title">{checkVn ? current.nameVi : current.nameEn}</p>
-            <div className="navigation">
+        <div className={style[`item-product-box`]}>
+          <div className={style[`title-box`]}>
+            <p className={style[`title`]}>
+              {checkVn ? current.nameVi : current.nameEn}
+            </p>
+            <div className={style[`navigation`]}>
               <img
                 src={arrowLeft}
                 alt=""
@@ -67,8 +76,8 @@ const ContentRight = ({ listProduct, current }) => {
           <ItemProduct listProduct={listProduct} itemId={current.id} />
         </div>
       ) : (
-        <div className="spinner-box">
-          <Spinner size="lg" className="spinner" animation="border" />
+        <div className={style[`spinner-box`]}>
+          <Spinner size="lg" className={style[`spinner`]} animation="border" />
         </div>
       )}
     </div>
@@ -85,12 +94,12 @@ const SliderComponent = ({ index, productCount, listProduct }) => {
     if (currentIndex < productCount) {
       const item = (
         <Link href={`/product-detail/${listProduct[currentIndex].id}`}>
-          <div className="item-box">
-            <div className="img-box">
+          <div className={style[`item-box`]}>
+            <div className={style[`img-box`]}>
               <img src={listProduct[currentIndex].imageURL} alt="" />
             </div>
-            <div className="name-box">
-              <p className="name">
+            <div className={style[`name-box`]}>
+              <p className={style[`name`]}>
                 {checkVn
                   ? listProduct[currentIndex].nameVi
                   : listProduct[currentIndex].nameEn}
@@ -102,7 +111,7 @@ const SliderComponent = ({ index, productCount, listProduct }) => {
       sliders.push(item);
     }
   }
-  return <div className="slider-box">{sliders}</div>;
+  return <div className={style[`slider-box`]}>{sliders}</div>;
 };
 const ItemProduct = ({ listProduct, itemId }) => {
   const sliderCount = Math.floor((listProduct.length - 1) / 6) + 1;
@@ -164,15 +173,17 @@ const SectionProduct = ({ productTypes }) => {
   }, [current]);
 
   return (
-    <section className="section-product-v3">
-      <div className="product-container ">
-        <div className="title-box">
-          <div className="sub-title">SLIVING PRODUCTS</div>
-          <div className="title">{t("sectionProductV3.titleMain")}</div>
-          {/* <div className="title">Sản Phẩm Sliving</div> */}
-          <div className="item-border"></div>
+    <section className={style[`section-product-v3`]}>
+      <div className={style[`product-container`]}>
+        <div className={style[`title-box`]}>
+          <div className={style[`sub-title`]}>SLIVING PRODUCTS</div>
+          <div className={style[`title`]}>
+            {t("sectionProductV3.titleMain")}
+          </div>
+          {/* <div className={style[`title">Sản Phẩm Sliving</div> */}
+          <div className={style[`item-border`]}></div>
         </div>
-        <div className="content">
+        <div className={style[`content`]}>
           <ContentLeft
             setListProduct={setListProduct}
             current={current}

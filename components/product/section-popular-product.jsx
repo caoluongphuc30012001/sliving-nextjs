@@ -9,25 +9,29 @@ import { Pagination, Navigation } from "swiper";
 import ModalAdvise from "@components/modal/modal-advise/ModalAdvise";
 import { useTranslation } from "next-i18next";
 
+import style from "../../pages/smart-home/style.module.scss";
+
 import Link from "next/link";
 const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [productName, setProductName] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
-  const { t,i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
   const checkVn = true;
   return (
-    <section className="section-popular-product-v3">
-      <div className="popular-product-container">
-        <div className="title-box">
-          <p className="sub-title">FEATURED PRODUCTS</p>
-          <p className="title">{t("sectionPopularProduct.titleMain")}</p>
-          {/* <p className="title">Sản Phẩm Nổi Bật</p> */}
-          <div className="item-border"></div>
+    <section className={style[`section-popular-product-v3`]}>
+      <div className={style[`popular-product-container`]}>
+        <div className={style[`title-box`]}>
+          <p className={style[`sub-title`]}>FEATURED PRODUCTS</p>
+          <p className={style[`title`]}>
+            {t("sectionPopularProduct.titleMain")}
+          </p>
+          {/* <p className={style[`title">Sản Phẩm Nổi Bật</p> */}
+          <div className={style[`item-border`]}></div>
         </div>
-        <div className="content-container">
-          <div className="swiper-container-v3">
+        <div className={style[`content-container`]}>
+          <div className={style[`swiper-container-v3`]}>
             <Swiper
               slidesPerView={3}
               spaceBetween={20}
@@ -42,25 +46,30 @@ const SectionPopularProduct = ({ listProduct }) => {
               onSlideChange={(swiper) => {
                 setCurrent((swiper.activeIndex % listProduct.length) + 1);
               }}
-              className="container-cover"
+              className={style[`container-cover`]}
             >
               {listProduct.length > 0 &&
                 listProduct.map((item) => {
                   return (
-                    <SwiperSlide key={item.id} className="list-product">
-                      <div className="item-box">
+                    <SwiperSlide
+                      key={item.id}
+                      className={style[`list-product`]}
+                    >
+                      <div className={style[`item-box`]}>
                         <Link href={`/product-detail/${item.id}`}>
-                          <div className="img-box">
-                            <div className="box-shadow"></div>
+                          <div className={style[`img-box`]}>
+                            <div className={style[`box-shadow`]}></div>
                             <img src={item.imageURL} alt="" />
                           </div>
                         </Link>
-                        <div className="description-box">
-                          <p className="sub-title">{item.nameEn}</p>
-                          <p className="title">{checkVn?item.nameVi:item.nameEn}</p>
-                          <div className="btn-group">
+                        <div className={style[`description-box`]}>
+                          <p className={style[`sub-title`]}>{item.nameEn}</p>
+                          <p className={style[`title`]}>
+                            {checkVn ? item.nameVi : item.nameEn}
+                          </p>
+                          <div className={style[`btn-group`]}>
                             {/* <button
-                              className="advise-now-btn"
+                              className={style[`advise-now-btn"
                               onClick={() => {
                                 setProductName(item.nameVi);
                                 setModalShow(true);
@@ -76,9 +85,17 @@ const SectionPopularProduct = ({ listProduct }) => {
                 })}
             </Swiper>
           </div>
-          <div className="nav-swiper-box">
-            <img src={arrowLeft} alt="" className="button-prev-slider" />
-            <img src={arrowRight} alt="" className="button-next-slider" />
+          <div className={style[`nav-swiper-box`]}>
+            <img
+              src={arrowLeft}
+              alt=""
+              className={style[`button-prev-slider`]}
+            />
+            <img
+              src={arrowRight}
+              alt=""
+              className={style[`button-next-slider`]}
+            />
           </div>
         </div>
       </div>
