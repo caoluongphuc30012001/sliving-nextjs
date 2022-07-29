@@ -1,117 +1,113 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 // import ButtonRounded from "@components/button/button-card-rounded";
-import Navbar from "@components/menu/index";
+import Navbar from '@components/common/menu/index';
 // import FooterV3 from "@components/footer/footer-home-page";
 
-import logo from "@images/smart-home-v3/png/logo.png";
-import Footer from "./footer/footer-v3/footer-v3";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
+import logo from '@images/smart-home-v3/png/logo.png';
+// import Footer from './footer/footer-v3/footer-v3';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 function LayoutV3({ children }) {
   //get current router
   const location = useRouter();
-  let url = location.asPath ? location.asPath : "";
+  let url = location.asPath ? location.asPath : '';
   //translate
-  const { t } = useTranslation("menu");
+  const { t } = useTranslation('menu');
   const [listRoute, setListRoute] = useState([]);
-  
+
   useEffect(() => {
     setListRoute([
       {
         id: 0,
-        nameRoute: t("menu.homepage"),
-        href: "/",
+        nameRoute: t('menu.homepage'),
+        href: '/',
         active:
-          !url.includes("about-us") &&
-          !url.includes("implementation-process") &&
-          !url.includes("step") &&
-          !url.includes("business") &&
-          !url.includes("news") &&
-          !url.includes("contact-us"),
+          !url.includes('about-us') &&
+          !url.includes('implementation-process') &&
+          !url.includes('step') &&
+          !url.includes('business') &&
+          !url.includes('news') &&
+          !url.includes('contact-us'),
       },
       {
         id: 1,
-        nameRoute: t("menu.aboutUs"),
-        href: "/about-us/",
-        active: url.includes("about-us"),
+        nameRoute: t('menu.aboutUs'),
+        href: '/about-us/',
+        active: url.includes('about-us'),
       },
       {
         id: 2,
         nonActive: true,
-        nameRoute: t("menu.method"),
+        nameRoute: t('menu.method'),
         listRoute: [
           {
             id: 0,
-            nameRoute: t("menu.home"),
-            href: "/smart-home/",
+            nameRoute: t('menu.home'),
+            href: '/smart-home/',
           },
           {
             id: 1,
-            nameRoute: t("menu.lighting"),
-            href: "/smart-lighting/",
+            nameRoute: t('menu.lighting'),
+            href: '/smart-lighting/',
           },
           {
             id: 2,
-            nameRoute: t("menu.parking"),
-            href: "/smart-parking/",
+            nameRoute: t('menu.parking'),
+            href: '/smart-parking/',
           },
           {
             id: 3,
-            nameRoute: t("menu.building"),
-            href: "/smart-building/",
+            nameRoute: t('menu.building'),
+            href: '/smart-building/',
           },
         ],
       },
       {
         id: 3,
-        nameRoute: t("menu.package"),
+        nameRoute: t('menu.package'),
         nonActive: true,
         listRoute: [
           {
             id: 0,
-            nameRoute: t("menu.business"),
-            href: "/business/",
-            active: url.includes("business"),
+            nameRoute: t('menu.business'),
+            href: '/business/',
+            active: url.includes('business'),
           },
           {
             id: 1,
-            nameRoute: t("menu.person"),
-            href: "/personal-step1/",
-            active: url.includes("personal"),
+            nameRoute: t('menu.person'),
+            href: '/personal-step1/',
+            active: url.includes('personal'),
           },
         ],
       },
       {
         id: 4,
-        nameRoute: t("menu.new"),
-        href: "https://unicloud.com.vn/news",
-        active: url.includes("news"),
+        nameRoute: t('menu.new'),
+        href: 'https://unicloud.com.vn/news',
+        active: url.includes('news'),
       },
       {
         id: 5,
-        nameRoute: t("menu.process"),
-        href: "/implementation-process/",
-        active: url.includes("implementation-process"),
+        nameRoute: t('menu.process'),
+        href: '/implementation-process/',
+        active: url.includes('implementation-process'),
       },
       {
         id: 6,
-        nameRoute: t("menu.contact"),
-        href: "/contact-us",
-        active: url.includes("contact-us"),
+        nameRoute: t('menu.contact'),
+        href: '/contact-us',
+        active: url.includes('contact-us'),
       },
     ]);
-  }, [url, i18n.language]);
+  }, [url]);
   return (
     <>
-      <Navbar
-        listRoute={listRoute}
-        logo={logo}
-        business={url.includes("business")}
-      />
+      <Navbar listRoute={listRoute} logo={logo} business={url.includes('business')} />
       <main>{children}</main>
       {/* <FooterV3 /> */}
-      <Footer />
+      {/* <Footer /> */}
       {/* <ButtonRounded /> */}
     </>
   );

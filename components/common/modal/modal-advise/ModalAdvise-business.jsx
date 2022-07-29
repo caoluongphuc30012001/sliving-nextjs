@@ -266,7 +266,7 @@ function ModalAdvise({
                 >
                   {option.label}
                 </div>
-                <img src={swapIcon} alt="" className="icon-drop-down" />
+                <img src={swapIcon.src} alt="" className="icon-drop-down" />
                 <div className={`drop-box ${drop ? "drop" : ""}`}>
                   {listOption.map((item, index) => {
                     return (
@@ -313,7 +313,7 @@ function ModalAdvise({
               >
                 {option.label}
               </div>
-              <img src={swapIcon} alt="" className="icon-drop-down" />
+              <img src={swapIcon.src} alt="" className="icon-drop-down" />
               <div className={`drop-box ${drop ? "drop" : ""}`}>
                 {listOption.map((item, index) => {
                   return (
