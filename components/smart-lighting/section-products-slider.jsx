@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import Slider from "@components/common/product/section-products-slider";
-import axios from "axios";
+import Slider from '@components/common/product/section-products-slider';
+import axios from 'axios';
 const SectionProductsSlider = () => {
   const [listSlide, setListSlide] = useState([]);
   useEffect(() => {
     const getData = async () => {
       try {
         const res = await axios.get(
-          "https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-product-by-solution?solutionName=Lighting"
+          'https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/slider/get-product-by-solution?solutionName=Lighting',
         );
         const listType = res.data.listType;
         const listDeviceType = res.data.listDeviceType;
