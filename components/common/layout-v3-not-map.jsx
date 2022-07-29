@@ -101,14 +101,14 @@ function LayoutV3({ children }) {
         active: url.includes('contact-us'),
       },
     ]);
-  }, [url]);
+  }, [url, i18n.language]);
   return (
     <>
-      <Navbar listRoute={listRoute} logo={logo} business={url.includes('business')} />
-      <main>{children}</main>
+      <Navbar listRoute={listRoute} logo={logo} />
+      {children}
       {/* <FooterV3 /> */}
-      {/* <Footer /> */}
-      {/* <ButtonRounded /> */}
+      {/* <Footer />
+      <ButtonRounded /> */}
     </>
   );
 }
