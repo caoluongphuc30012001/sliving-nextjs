@@ -20,7 +20,7 @@ const MenuTop = ({ logo, listRoute, back, business }) => {
     location.back();
   };
   const changLanguages = () => {
-    location.push(location.asPath, undefined, {
+    location.replace(location.asPath, undefined, {
       locale: i18n.language === 'vi' ? 'en' : 'vi',
       scroll: false,
     });

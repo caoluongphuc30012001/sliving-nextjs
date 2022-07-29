@@ -6,39 +6,24 @@ import SectionProductList from '../../components/business/section-product-list';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import LayoutV3 from '@components/common/layout-v3';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'business'])),
+      ...(await serverSideTranslations(locale, ['common', 'business', 'menu'])),
       locale: locale,
     },
   };
 };
-const Business = ({ locale }) => {
-  const router = useRouter();
-  const changeLng = () => {
-    router.push(router.asPath, undefined, {
-      locale: locale === 'en' ? 'vi' : 'en',
-      scroll: false,
-    });
-  };
+const Business = () => {
   return (
-    <div>
-      <button
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          zIndex: 100000,
-        }}
-        onClick={changeLng}
-      >
-        click
-      </button>
-      <SectionHeader />
-      <SectionProductList />
-    </div>
+    <LayoutV3>
+      <main id="business">
+        <SectionHeader />
+        <SectionProductList />
+      </main>
+    </LayoutV3>
   );
 };
 

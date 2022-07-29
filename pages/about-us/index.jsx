@@ -11,11 +11,12 @@ import SectionSmartFactory from '@components/about-us/section-smart-factory';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import LayoutV3 from '@components/common/layout-v3';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'aboutUs'])),
+      ...(await serverSideTranslations(locale, ['common', 'aboutUs',"menu"])),
       locale: locale,
     },
   };
@@ -29,26 +30,17 @@ const AboutUs = ({ locale }) => {
     });
   };
   return (
-    <div>
-      <button
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          zIndex: 100000,
-        }}
-        onClick={changeLng}
-      >
-        click
-      </button>
-      <SectionHeader />
-      <SectionIntro />
-      <SectionBrandStory />
-      <SectionCustomerCentric />
-      <SectionSmartFactory />
-      <SectionActivity />
-      <SectionOurPartner />
-    </div>
+    <LayoutV3>
+      <main>
+        <SectionHeader />
+        <SectionIntro />
+        <SectionBrandStory />
+        <SectionCustomerCentric />
+        <SectionSmartFactory />
+        <SectionActivity />
+        <SectionOurPartner />
+      </main>
+    </LayoutV3>
   );
 };
 

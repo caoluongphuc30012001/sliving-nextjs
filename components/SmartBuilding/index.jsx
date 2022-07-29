@@ -1,3 +1,4 @@
+import LayoutBuilding from '@components/common/layout-smart-building';
 import SectionHelpMore from '@components/common/SectionHelpMore';
 import { Container } from 'react-bootstrap';
 import {
@@ -15,21 +16,23 @@ import {
 
 function SmartBuilding() {
   return (
-    <main>
-      <Container className="max-width-100 px-0" fluid>
-        <SectionTopSmartBuilding />
-        <SectionSmartParking />
-        <SectionSmartDoorLocks />
-        <SectionTechnologyDoorLocks />
-        <SectionSmartElevator />
-        <SectionTechnologyElevator />
-        <SectionSmartTurnstile />
-        <SectionTechnologyTurnstile />
-        <SectionSmartFaceID />
-        <SectionTechnologyFaceID />
-        <SectionHelpMore />
-      </Container>
-    </main>
+    <LayoutBuilding>
+      <main>
+        <Container className="max-width-100 px-0" fluid>
+          <SectionTopSmartBuilding />
+          <SectionSmartParking />
+          <SectionSmartDoorLocks />
+          <SectionTechnologyDoorLocks />
+          <SectionSmartElevator />
+          <SectionTechnologyElevator />
+          <SectionSmartTurnstile />
+          <SectionTechnologyTurnstile />
+          <SectionSmartFaceID />
+          <SectionTechnologyFaceID />
+          <SectionHelpMore />
+        </Container>
+      </main>
+    </LayoutBuilding>
   );
 }
 
