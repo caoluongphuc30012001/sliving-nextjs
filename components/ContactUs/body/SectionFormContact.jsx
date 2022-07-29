@@ -1,11 +1,11 @@
+import { ModalThanks } from '@components/common/modal';
 import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import axios from 'axios';
+import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { Form, FormControl, Image, Row } from 'react-bootstrap';
 import { Controller, useForm } from 'react-hook-form';
-import axios from 'axios';
-import { useTranslation } from 'next-i18next';
 import styles from '../ContactUs.module.scss';
-import { ModalThanks } from '@components/common/modal';
 function SectionFormContact() {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -21,9 +21,6 @@ function SectionFormContact() {
   const googleSheetAPI =
     'https://script.google.com/macros/s/AKfycbzBXBn9hPRVMvstSnUNmQRXpZ_kTothqkts6LHbtfq-yeIEYy4KCPwQ6ouCOBCYjEbx/exec';
   const onSubmit = (data) => {
-    setModalShow(true);
-    return;
-
     const googleSheetFormData = new FormData();
     googleSheetFormData.append('fullName', data.fullName);
     googleSheetFormData.append('email', data.email);

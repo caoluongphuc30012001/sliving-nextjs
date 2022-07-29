@@ -1,3 +1,4 @@
+import SectionHelpMore from '@components/common/SectionHelpMore';
 import { Col, Row } from 'react-bootstrap';
 import { SectionFormContact, SectionQuickSupport } from './body';
 
@@ -12,7 +13,7 @@ function ContactUs() {
           <SectionFormContact />
         </Col>
       </Row>
-      {/* <SectionHelpMore /> */}
+      <SectionHelpMore />
     </main>
   );
 }

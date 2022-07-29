@@ -1,4 +1,5 @@
-import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
+import { ModalAdvise } from '@components/common/modal';
+import SectionHelpMore from '@components/common/SectionHelpMore';
 import iconArrow from '@images/icon/icon-arrow-process.svg';
 import iconQuestion from '@images/icon/icon-question-process.svg';
 import { useTranslation } from 'next-i18next';
@@ -105,7 +106,7 @@ const ImplementationProcess = () => {
           <Row className={`gx-5 ${styles['row-main-process']}`}></Row>
         </Container>
       </section>
-      {/* <SectionHelpMore /> */}
+      <SectionHelpMore />
       <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </main>
   );
