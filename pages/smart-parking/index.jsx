@@ -8,41 +8,26 @@ import SectionParkingSystem from '@components/smart-parking/section-parking-syst
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import LayoutParking from '@components/common/layout-smart-parking';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'smartParking'])),
+      ...(await serverSideTranslations(locale, ['common', 'smartParking', 'menu'])),
       locale: locale,
     },
   };
 };
-const SmartParking = ({ locale }) => {
-  const router = useRouter();
-  const changeLng = () => {
-    router.push(router.asPath, undefined, {
-      locale: locale === 'en' ? 'vi' : 'en',
-      scroll: false,
-    });
-  };
+const SmartParking = () => {
   return (
-    <div>
-      <button
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          zIndex: 100000,
-        }}
-        onClick={changeLng}
-      >
-        click
-      </button>
-      <SmartHeader />
-      <SectionDefinition />
-      <SectionParkingSolution />
-      <SectionParkingSystem />
-    </div>
+    <LayoutParking>
+      <main>
+        <SmartHeader />
+        <SectionDefinition />
+        <SectionParkingSolution />
+        <SectionParkingSystem />
+      </main>
+    </LayoutParking>
   );
 };
 

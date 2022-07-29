@@ -3,33 +3,19 @@ import React, { useState, useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { useTranslation, i18n } from "next-i18next";
+import LayoutV3 from "@components/common/layout-v3";
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "home"])),
+      ...(await serverSideTranslations(locale, ["common", "home","menu"])),
     },
   };
 };
 
-const HomePage = (props) => {
-  const { t } = useTranslation("home");
-
-  const [lng, setLng] = useState("en");
-
-  useEffect(() => {
-    i18n.changeLanguage(lng);
-  }, [lng]);
-
-  const handleClick = () => {
-    setLng("en");
-  };
-
+const HomePage = () => {
   return (
-    <div>
-      <h1 style={{ color: "red" }}>{t("hello")}</h1>
-      <button onClick={handleClick}>Click me</button>
-    </div>
+    <LayoutV3></LayoutV3>
   );
 };
 
