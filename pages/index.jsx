@@ -15,9 +15,7 @@ export const getStaticProps = async ({ locale }) => {
 export default function Home(props) {
   return (
     <div className="app">
-      {/* <Layout> */}
       <HomePage />
-      {/* </Layout> */}
     </div>
   );
 }

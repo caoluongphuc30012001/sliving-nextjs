@@ -16,7 +16,7 @@ function SectionBrandStory() {
           <span className={style[`title`]}>BRAND STORY</span>
           <h2 className={style[`main-title`]}>{t('aboutUs.brandStory.mainTitle')}</h2>
           <div className={style[`underline`]}>
-            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
+            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} alt=""/>
           </div>
           <p className={style[`description-line-center`]}>{t('aboutUs.brandStory.mainDesc')}</p>
         </Row>
