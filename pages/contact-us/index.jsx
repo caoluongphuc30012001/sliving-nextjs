@@ -1,7 +1,16 @@
-import React from "react";
+import ContactUs from '@components/ContactUs';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const ContactUs = () => {
-  return <div></div>;
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'contact'])),
+      locale: locale,
+    },
+  };
+};
+const ContactUsPage = () => {
+  return <ContactUs />;
 };
 
-export default ContactUs;
+export default ContactUsPage;

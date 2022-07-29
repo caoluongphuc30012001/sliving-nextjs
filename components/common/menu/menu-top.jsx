@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import dropDown from '@images/smart-home-v3/svg/arrow-down.svg';
-import ModalAdvise from '../modal/modal-advise/ModalAdvise';
-import ModalAdviseBusiness from '../modal/modal-advise/ModalAdvise-business';
 import backIcon from '@images/menu/back.svg';
 import england from '@images/menu/png/flag-england.png';
 import vietnam from '@images/menu/flag-vietnam.svg';
@@ -10,6 +8,7 @@ import { useRouter } from 'next/router';
 // import { useLocation } from "@reach/router";
 import style from './menu.module.scss';
 import { useTranslation } from 'next-i18next';
+import { ModalAdvise, ModalAdviseBusiness } from '../modal';
 const MenuTop = ({ logo, listRoute, back, business }) => {
   const [modalShow, setModalShow] = React.useState(false);
   const location = useRouter();
