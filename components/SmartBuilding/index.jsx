@@ -1,3 +1,4 @@
+import SectionHelpMore from '@components/common/SectionHelpMore';
 import { Container } from 'react-bootstrap';
 import {
   SectionSmartDoorLocks,
@@ -26,7 +27,7 @@ function SmartBuilding() {
         <SectionTechnologyTurnstile />
         <SectionSmartFaceID />
         <SectionTechnologyFaceID />
-        {/* <SectionHelpMore /> */}
+        <SectionHelpMore />
       </Container>
     </main>
   );

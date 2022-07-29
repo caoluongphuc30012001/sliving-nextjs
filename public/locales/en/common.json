@@ -4,5 +4,54 @@
   "component.sectionHelpMore.description": "Queries, complaints and feedback. We will be happy to serve you!",
   "component.sectionHelpMore.support.title": "Customer Service",
   "component.sectionHelpMore.business.title": "Sales",
-  "component.sectionHelpMore.media.title": "Communication"
+  "component.sectionHelpMore.media.title": "Communication",
+  "modal.advise.title": "Please us consult you!",
+  "modal.advise.input.name": "Full Name:",
+  "modal.advise.input.placeholderName": "Enter your name",
+  "modal.advise.input.nameRequired": "No name entered",
+  "modal.advise.input.placeholderNameValid": "",
+  "modal.advise.input.company": "Company name",
+  "modal.advise.input.placeholderCompany": "Enter your name's company",
+  "modal.advise.input.companyRequired": "No company name entered",
+  "modal.advise.input.placeholderCompanyValid": "",
+  "modal.advise.input.email": "Email",
+  "modal.advise.input.placeholderEmail": "Enter your email",
+  "modal.advise.input.emailRequired": "No email entered",
+  "modal.advise.input.placeholderEmailValid": "Please enter correct Email",
+  "modal.advise.input.phoneNumber": "Phone number",
+  "modal.advise.input.placeholderPhoneNumber": "Enter your phone number",
+  "modal.advise.input.phoneNumberRequired": "No phone number entered",
+  "modal.advise.input.placeholderPhoneNumberValid": "Incorrect phone number",
+  "modal.advise.input.address": "Address",
+  "modal.advise.input.placeholderAddress": "Enter your address",
+  "modal.advise.input.addressRequired": "No address entered",
+  "modal.btn": "Consult now!",
+  "modal.listOption": [
+    {
+      "id": 0,
+      "label": "Small scale",
+      "value": "Small scale"
+    },
+    {
+      "id": 1,
+      "label": "Medium scale",
+      "value": "Medium scale"
+    },
+    {
+      "id": 2,
+      "label": "Big scale",
+      "value": "Big scale"
+    },
+    {
+      "id": 3,
+      "label": "Select your scale",
+      "value": "Select your scale"
+    }
+  ],
+  "modal.thank.title": "Thank you for connecting!",
+  "modal.thank.description": "Your information is recorded, and we will contact you to consult the solution at the soonest time. It's nice to help you!",
+  "modal.advise.scale": "Scale",
+  "modal.advise.message": "Message/ Question",
+  "modal.advise.product": "Product name",
+  "modal.advise.placeholderMessage": "Leave your questions here"
 }

@@ -1,97 +1,91 @@
 .modal-advise-sliving {
-  //   display: block !important;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  margin:0px auto;
-  
-.drop-box {
-  transition: 0.2s;
-  position: absolute;
-  opacity: 0;
-  left: 0px;
-  bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 12px;
-  gap: 8px;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  background: #ffffff;
-  border: 1px solid #aaaeb3;
-  border-radius: 8px;
-  width: 100%;
-  justify-content: space-between;
-  z-index: 2;
-  .option {
+  margin: 0px auto;
+  .drop-box {
+    transition: 0.2s;
+    position: absolute;
+    opacity: 0;
+    left: 0px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+    gap: 8px;
     width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #aaaeb3;
+    border-radius: 8px;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+    .option {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 4px 0px 4px 12px;
+      width: 100%;
+      height: 32px;
+      border-radius: 4px;
+      font-family: "SVN Gilroy";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454647;
+    }
+    .active {
+      color: #2391fd;
+      background: #f3f9ff;
+    }
+  }
+  .drop {
+    padding: 12px;
+    height: 150px;
+    opacity: 1;
+    transition: 0.2s;
+  }
+  .selection-box {
+    z-index: 10;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 4px 0px 4px 12px;
+    padding: 0 14px;
+    gap: 8px;
     width: 100%;
-    height: 32px;
-    border-radius: 4px;
-    font-family: "SVN Gilroy";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #454647;
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid #aaaeb3;
+    border-radius: 8px;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    .main-selection {
+      font-family: "SVN Gilroy";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      color: #aaaeb3;
+    }
+    .done {
+      color: #454647;
+    }
   }
-  .active {
-    color: #2391fd;
-    background: #f3f9ff;
-  }
-}
-.drop {
-  padding: 12px;
-  height: 150px;
-  opacity: 1;
-  transition: 0.2s;
-}
-.selection-box {
-  z-index: 10;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 14px;
-  gap: 8px;
-  width: 100%;
-  height: 48px;
-  background: #ffffff;
-  border: 1px solid #aaaeb3;
-  border-radius: 8px;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 20px;
-  .main-selection {
-    font-family: "SVN Gilroy";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+
+  .title-sub {
     display: flex;
     align-items: center;
-    color: #aaaeb3;
-  }
-  .done {
-    color: #454647;
-  }}
-
-
-  .title-sub{
-    display: flex;
-    align-items: center;
-    .title{
-      font-family: 'SVN Gilroy';
+    .title {
+      font-family: "SVN Gilroy";
       font-weight: 700;
       font-size: 16px;
-      color: #2C2D2E;
+      color: #2c2d2e;
     }
-    .title-star{
+    .title-star {
       color: red;
     }
   }
@@ -112,7 +106,8 @@
     background: url("/images/icon/btn-close-modal-digital-banking.svg");
     background-repeat: no-repeat;
   }
-  .modal-header {
+
+  :global(.modal-header) {
     background-image: url("/images/home-page-v3/img-header-popup.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -121,22 +116,23 @@
     margin-left: -1px;
     margin-right: -1px;
   }
+
   :global(.modal-content) {
     margin: auto;
     max-width: 450px;
     background: #ffffff;
-    box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
-      0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+    box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12), 0px 10px 32px -4px rgba(24, 39, 75, 0.1);
     border-radius: 16px 16px 16px 16px;
   }
-  .modal-body {
+
+  :global(.modal-body) {
     padding: 20px;
   }
 }
 
 .form-advise-sliving {
   border-radius: 8px;
-  .form-label {
+  :global(.form-label) {
     display: flex;
     font-style: normal;
     font-weight: 700;
@@ -165,27 +161,28 @@
       line-height: 24px;
     }
   }
-  .invalid-feedback {
+
+  :global(.invalid-feedback) {
     span {
       font-size: 16px;
     }
   }
 }
 @media only screen and (max-width: 767px) {
-  .modal-advise-sliving .modal-header {
+  .modal-advise-sliving :global(.modal-header) {
     min-height: 220px;
   }
 }
 
 @media only screen and (max-height: 700px) {
-  .modal-advise-sliving .modal-header {
+  .modal-advise-sliving :global(.modal-header) {
     background: none;
     min-height: auto;
     margin: 0;
     border: none;
     padding: 16px 16px 0px;
   }
-  .modal-advise-sliving .modal-body {
+  .modal-advise-sliving :global(.modal-body) {
     padding-top: 0;
   }
 }
