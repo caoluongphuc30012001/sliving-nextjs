@@ -1,11 +1,13 @@
+import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
 import iconArrow from '@images/icon/icon-arrow-process.svg';
 import iconQuestion from '@images/icon/icon-question-process.svg';
-import { Col, Container, Image, Row } from 'react-bootstrap';
 import { useTranslation } from 'next-i18next';
+import React from 'react';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import styles from './ImplementationProcess.module.scss';
 
 const ImplementationProcess = () => {
-  // const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState(false);
 
   const { t } = useTranslation('process');
 
@@ -104,7 +106,7 @@ const ImplementationProcess = () => {
         </Container>
       </section>
       {/* <SectionHelpMore /> */}
-      {/* <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} /> */}
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </main>
   );
 };
