@@ -1,7 +1,7 @@
 import iconArrow from '@images/icon/icon-arrow-process.svg';
 import iconQuestion from '@images/icon/icon-question-process.svg';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import styles from './ImplementationProcess.module.scss';
 
 const ImplementationProcess = () => {
