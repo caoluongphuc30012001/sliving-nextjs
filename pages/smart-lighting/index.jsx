@@ -10,6 +10,7 @@ import SectionDefinition from '@components/smart-lighting/section-definition';
 import SectionProductMain from '../../components/common/product/section-product-main';
 // import Seo from "../../components/seo";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import SectionHelpMore from '@components/common/SectionHelpMore';
 // import Link from "next/link";
 // import { useRouter } from "next/router";
 
@@ -41,6 +42,7 @@ const SmartLightingPage = () => {
         <SectionPopularProductSliving />
         <SectionProductMain />
         <SectionSwiperVideoSliving />
+        <SectionHelpMore />
       </main>
     </LayoutSmartLighting>
   );
