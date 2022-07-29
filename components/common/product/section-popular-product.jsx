@@ -77,8 +77,8 @@ const SectionPopularProduct = ({ listProduct }) => {
             </Swiper>
           </div>
           <div className={style["nav-swiper-box"]}>
-            <img src={arrowLeft} alt="" className={style["button-prev-slider"]} />
-            <img src={arrowRight} alt="" className={style["button-next-slider"]}  />
+            <img src={arrowLeft.src} alt="" className={style["button-prev-slider"]} />
+            <img src={arrowRight.src} alt="" className={style["button-next-slider"]}  />
           </div>
         </div>
       </div>
