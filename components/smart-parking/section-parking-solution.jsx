@@ -19,7 +19,7 @@ import wifi_b from "@images/smart-parking-v3/png/icon-wifi-b.png";
 import security_b from "@images/smart-parking-v3/png/icon-security-b.png";
 import imgUnderLine from "@images/home-page-v3/svg/title-line-under.svg";
 
-import ModalAdvise from "../common/modal/modal-advise/ModalAdvise";
+import ModalAdvise from "../common/modal/ModalAdvise/ModalAdvise";
 import { Row } from "react-bootstrap";
 import style from "./style.module.scss";
 

@@ -1,0 +1,137 @@
+/* 
+* ======================Section Help More======================
+*/
+.bg-ground-help-more {
+  background: #fff;
+  .row-line-center .img-line-center {
+    margin-bottom: 14px !important;
+  }
+}
+
+.help-more-container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container-1220 {
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.m-left-right-12 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.help-more-cards {
+  margin-top: 36px !important;
+}
+
+.help-more-card {
+  text-align: center;
+  border: 1px solid #6fc0fe;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 34px 0;
+  // margin-top: 28.5px;
+}
+
+.help-more-card-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.help-more-card-title {
+  margin: 16px 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 133%;
+  text-align: center;
+  text-transform: capitalize;
+
+  background: linear-gradient(264.17deg, #18d8f6 -50.17%, #1c45df 129.42%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.help-more-card-des {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 133%;
+  text-align: center;
+  color: #59637e;
+  margin-bottom: 12px;
+  max-width: 366px;
+  margin: auto;
+  // padding-bottom: 34px;
+}
+
+.row-line-center {
+  text-align: center;
+  .title-eng-line-center {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: 0.22em;
+    color: #0979fd;
+  }
+
+  .title-line-center {
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #2c2d2e;
+    text-transform: capitalize;
+  }
+
+  .img-line-center {
+    margin-top: 16px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .description-line-center {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #454647;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .help-more-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .help-more-cards {
+    margin-top: 0 !important;
+  }
+
+  .row-line-center {
+    .title-eng-line-center,
+    .title-line-center {
+      // text-align: start;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .title-eng-line-center {
+      font-size: 14px;
+    }
+    .img-line-center {
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+    .description-line-center {
+      display: none;
+    }
+  }
+}
