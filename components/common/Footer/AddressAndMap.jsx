@@ -14,6 +14,7 @@ export default function AddressAndMap() {
   const [listContact, setListContact] = useState([
     {
       key: {
+        id: 1,
         title: `${t('contact.quickSupport.headquarter')}`,
         description: `${t('contact.quickSupport.headquarterSubTitle')}`,
       },
@@ -22,6 +23,7 @@ export default function AddressAndMap() {
     },
     {
       key: {
+        id: 2,
         title: `${t('contact.quickSupport.branch')}`,
         description: `${t('contact.quickSupport.branchSubTitle')}`,
       },
@@ -30,6 +32,7 @@ export default function AddressAndMap() {
     },
     {
       key: {
+        id: 3,
         title: '',
         description: `${t('contact.quickSupport.emailSubTitle')}`,
       },
@@ -37,6 +40,7 @@ export default function AddressAndMap() {
     },
     {
       key: {
+        id: 4,
         title: '',
         description: `${t('contact.quickSupport.hotlineSubTitle')}`,
       },
@@ -49,6 +53,7 @@ export default function AddressAndMap() {
       setListContact([
         {
           key: {
+            id: 1,
             title: `${t('contact.quickSupport.headquarter')}`,
             description: `${t('contact.quickSupport.headquarterSubTitle')}`,
           },
@@ -57,6 +62,7 @@ export default function AddressAndMap() {
         },
         {
           key: {
+            id: 2,
             title: `${t('contact.quickSupport.branch')}`,
             description: `${t('contact.quickSupport.branchSubTitle')}`,
           },
@@ -65,6 +71,7 @@ export default function AddressAndMap() {
         },
         {
           key: {
+            id: 3,
             title: '',
             description: `${t('contact.quickSupport.emailSubTitle')}`,
           },
@@ -72,6 +79,7 @@ export default function AddressAndMap() {
         },
         {
           key: {
+            id: 4,
             title: '',
             description: `${t('contact.quickSupport.hotlineSubTitle')}`,
           },
@@ -124,7 +132,7 @@ export default function AddressAndMap() {
               listContact.map((contact) => {
                 return (
                   <div
-                    key={contact.key.title}
+                    key={contact.key.id}
                     className={`${styles['group-contact-wrap']} d-flex align-items-center mb-3`}
                     role="button"
                     onClick={() => onSelectContact(contact)}
