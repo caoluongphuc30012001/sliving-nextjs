@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": [
+                "components/*"
+            ],
+            "@images/*":[
+                "public/images/*"
+            ],
+            "@query/*":[
+                "libs/query/*"
+            ],
+            "@videos/*":[
+                "public/videos/*"
+            ],
+            "@pages/*": [
+                "pages/*"
+            ],
+            "@hooks/*": [
+                "hooks/*"
+            ],
+            "@context/*": [
+                "context/*"
+            ],
+            "@data/*": [
+                "data/*"
+            ],
+            "@i18n/*": [
+                "i18n/*"
+            ],
+            "@styles/*": [
+                "styles/*"
+            ],
+            "@fonts/*": [
+                "public/fonts/*"
+            ],
+        }
+    }
+}
