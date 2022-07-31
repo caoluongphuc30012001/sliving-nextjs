@@ -1,4 +1,11 @@
-@import "./leaflet.scss";
+// @import "./leaflet.scss";
+
+.container-1220 {
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 20px;
+}
 
 .bg-footer {
   background: linear-gradient(267.94deg, #18d8f6 -24.12%, #1c45df 116.36%);
@@ -9,7 +16,7 @@
 }
 
 .background-parent {
-  background-image: url("@images/footer/png/bg-register.png");
+  background-image: url("/images/footer/png/bg-register.png");
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -66,7 +73,7 @@
       transform: translateX(-10px);
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       content: " ";
-      background-image: url("@images/footer/svg/icon-arrow-right-alt.svg");
+      background-image: url("/images/footer/svg/icon-arrow-right-alt.svg");
     }
     &:hover {
       transform: translateX(20px);
@@ -74,7 +81,7 @@
       &::before {
         content: " ";
         transform: translateX(0px);
-        background-image: url("@images/footer/svg/icon-arrow-right-alt.svg");
+        background-image: url("/images/footer/svg/icon-arrow-right-alt.svg");
         background-repeat: no-repeat;
         background-position: center;
         color: #ffffff;

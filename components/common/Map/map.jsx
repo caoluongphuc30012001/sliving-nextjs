@@ -1,5 +1,6 @@
-import React, { useMemo, useRef, useEffect } from "react";
-import iconLocation from "@images/footer/svg/icon-location.svg";
+/* eslint-disable react-hooks/exhaustive-deps */
+import iconLocation from '@images/footer/svg/icon-location.svg';
+import { useMemo } from 'react';
 
 const positionList = {
   headquarters: { lat: 21.0300541, lng: 105.7786784 },
@@ -8,16 +9,10 @@ const positionList = {
 
 function SectionMap({ position, whenCreated }) {
   const BuildMap = useMemo(() => {
-    const {
-      MapContainer,
-      TileLayer,
-      Marker,
-      Popup,
-      Tooltip,
-    } = require("react-leaflet");
-    const L = require("leaflet");
+    const { MapContainer, TileLayer, Marker, Popup, Tooltip } = require('react-leaflet');
+    const L = require('leaflet');
     const iconMap = L.icon({
-      iconUrl: iconLocation,
+      iconUrl: iconLocation.src,
       iconSize: [50, 40], // size of the icon
       iconAnchor: [22, 35], // point of the icon which will correspond to marker's location
       popupAnchor: [-3, -76],
@@ -30,7 +25,7 @@ function SectionMap({ position, whenCreated }) {
         center={position}
         zoom={20}
         scrollWheelZoom={false}
-        style={{ width: "100%", height: 362, zIndex: "1" }}
+        style={{ width: '100%', height: 362, zIndex: '1' }}
         preferCanvas
         whenCreated={whenCreated}
       >
@@ -43,8 +38,8 @@ function SectionMap({ position, whenCreated }) {
             <Tooltip direction="top" offset={[3.25, -20]} opacity={1} permanent>
               {position.lat === positionList.headquarters.lat &&
               position.lng === positionList.headquarters.lng
-                ? "Sunshine Center"
-                : "Unicloud Smart Factory"}
+                ? 'Sunshine Center'
+                : 'Unicloud Smart Factory'}
             </Tooltip>
           </Marker>
         )}
