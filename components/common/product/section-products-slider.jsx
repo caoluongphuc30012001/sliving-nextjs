@@ -21,8 +21,8 @@ const ProductItemSwiper = ({ slide, swiperIndex, setSwiperIndex, resetSwiper, se
   const [swiper, setSwiper] = useState(null);
 
   const { i18n } = useTranslation();
-  // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
-  const checkVn = true;
+  const checkVn = i18n.language.toUpperCase() === 'VI' ? true : false;
+  // const checkVn = true;
   useEffect(() => {
     if (resetSwiper) {
       swiper.slideTo(0);
@@ -91,9 +91,8 @@ const SectionProductsSlider = ({ listSlide }) => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [resetSwiper, setResetSwiper] = useState(false);
 
-  const { t } = useTranslation('smartLighting');
-  // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
-  const checkVn = true;
+  const { t,i18n } = useTranslation('smartLighting');
+  const checkVn = i18n.language.toUpperCase() === "VI" ? true : false;
   const increaseToggleTab = () => {
     setSwiperIndex(0);
     setResetSwiper(true);
