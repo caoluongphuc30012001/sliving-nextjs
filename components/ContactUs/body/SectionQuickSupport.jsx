@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { MapContact } from '@components/common/Footer';
+import { MapContact } from '@components/common/Map';
 import iconEmailMobile from '@images/contact-page/svg/icon-email-blue.svg';
 import iconEmail from '@images/contact-page/svg/icon-email.svg';
 import iconMapMobile from '@images/contact-page/svg/icon-map-blue.svg';
@@ -35,7 +35,7 @@ function SectionQuickSupport() {
   const onMapCreated = useCallback(
     (_map) => {
       setMap(_map);
-      _map.setView(listContact[0].position, MAP_ZOOM);
+      _map.setView(listContact[0]?.position, MAP_ZOOM);
     },
     [listContact],
   );
