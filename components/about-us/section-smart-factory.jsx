@@ -155,18 +155,18 @@ const SectionSmartFactory = () => {
             <div className={style[`factory-list-item`]}>
               {factoryItems.map((item) => (
                 <div key={item.id} className={style[`factory-item-container`]}>
-                  <Image src={item.icon} alt=""></Image>
+                  <img src={item.icon.src} alt="" />
                   <span className={style[`factory-item-desc`]}>{item.title}</span>
                 </div>
               ))}
             </div>
           </Col>
           <Col lg={6} md={12} sm={12} className={style[`factory-bottom-right-content`]}>
-            <Image
-              src={imgSmartFactory}
+            <img
+              src={imgSmartFactory.src}
               alt=""
               className={style[`smart-factory-img img-factory`]}
-            ></Image>
+            />
           </Col>
         </Row>
 
@@ -183,79 +183,58 @@ const SectionSmartFactory = () => {
               </div>
             </div>
             {/* Nhờ Phúc Chỉnh lại */}
-            {/* <div className={style[`factory-second-bottom-right-content`]}>
-              <Image
-                src={layoutSmartFactory1}
+            <div className={style[`factory-second-bottom-right-content`]}>
+              <img
+                src={layoutSmartFactory1.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-1`],
-                ].join(" ")}
-              ></Image>
-              <Image
-                src={layoutSmartFactory2}
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-1`]].join(' ')}
+              />
+              <img
+                src={layoutSmartFactory2.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-2`],
-                ].join(" ")}
-              ></Image>
-              <Image
-                src={layoutSmartFactory3}
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-2`]].join(' ')}
+              />
+              <img
+                src={layoutSmartFactory3.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-3`],
-                ].join(" ")}
-              ></Image>
-              <Image
-                src={layoutSmartFactory4}
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-3`]].join(' ')}
+              />
+              <img
+                src={layoutSmartFactory4.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-4`],
-                ].join(" ")}
-              ></Image>
-              <Image
-                src={layoutSmartFactory5}
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-4`]].join(' ')}
+              />
+              <img
+                src={layoutSmartFactory5.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-5`],
-                ].join(" ")}
-              ></Image>
-              <Image
-                src={layoutSmartFactory6}
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-5`]].join(' ')}
+              />
+              <img
+                src={layoutSmartFactory6.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-6`],
-                ].join(" ")}
-              ></Image>
-              <Image
-                src={layoutSmartFactory7}
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-6`]].join(' ')}
+              />
+              <img
+                src={layoutSmartFactory7.src}
                 alt=""
-                className={[
-                  style[`smart-factory-img`],
-                  style[`smart-factory-layout-7`],
-                ].join(" ")}
-              ></Image>
+                className={[style[`smart-factory-img`], style[`smart-factory-layout-7`]].join(' ')}
+              />
             </div>
-            <Image src={iconHover} alt="" className={style[`icon-hover`]} /> */}
+            <img src={iconHover.src} alt="" className={style[`icon-hover`]} />
           </div>
-          {/* <div className={style[`mobile-content`]}>
+          <div className={style[`mobile-content`]}>
             <div className={style[`factory-second-produce-content`]}>
               <h1 className={style[`factory-title-paragraph`]}>
-                {t("aboutUs.smartFactory.groupContent.title2")}
+                {t('aboutUs.smartFactory.groupContent.title2')}
               </h1>
               <p className={style[`factory-first-desc`]}>
-                {t("aboutUs.smartFactory.groupContent.desc2")}
+                {t('aboutUs.smartFactory.groupContent.desc2')}
               </p>
             </div>
             <div className={style[`factory-second-produce-content`]}>
-              <Image src={smart_factory_image} alt="" />
+              <img src={smart_factory_image.src} alt="" />
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
       {/* <div className={style[`swiper-wrapper-container`]}>

@@ -1,11 +1,13 @@
 import iconBgEmail from '@images/icon/icon-bg-mail.svg';
 import iconBgPhone from '@images/icon/icon-bg-phone.svg';
 import iconBgPin from '@images/icon/icon-bg-pin.svg';
+import { useTranslation } from 'next-i18next';
+import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useTranslation } from 'next-i18next';
-import { SectionMap } from '../Map';
 import styles from './Footer.module.scss';
+
+const SectionMap = dynamic(() => import('../Map/map'));
 
 const isBrowser = typeof window !== 'undefined';
 

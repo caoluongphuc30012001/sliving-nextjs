@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionAboutUs from '@components/smart-lighting/section-about-us';
-import LayoutSmartLighting from '@components/common/layout-v3';
+import LayoutSmartLighting from '@components/common/layout-smart-lighting';
 import SectionHeader from '@components/smart-lighting/section-header';
 import SectionProductsSlider from '@components/smart-lighting/section-products-slider';
 import SectionPopularProductSliving from '@components/smart-lighting/section-popular-product-sliving';

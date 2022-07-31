@@ -1,4 +1,4 @@
-import Layout from '@components/common/Layout';
+import LayoutBuilding from '@components/common/layout-smart-building';
 import SectionHelpMore from '@components/common/SectionHelpMore';
 import { Container } from 'react-bootstrap';
 import {
@@ -16,7 +16,7 @@ import {
 
 function SmartBuilding() {
   return (
-    <Layout>
+    <LayoutBuilding>
       <main>
         <Container className="max-width-100 px-0" fluid>
           <SectionTopSmartBuilding />
@@ -32,7 +32,7 @@ function SmartBuilding() {
           <SectionHelpMore />
         </Container>
       </main>
-    </Layout>
+    </LayoutBuilding>
   );
 }
 
