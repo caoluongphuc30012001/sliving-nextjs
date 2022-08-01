@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 // import ButtonRounded from "@components/button/button-card-rounded";
 import Navbar from '@components/common/menu/index';
-// import FooterV3 from "@components/footer/footer-home-page";
+import Footer from '@components/common/Footer';
 
 import logo from '@images/smart-home-v3/png/logo.png';
-// import Footer from './footer/footer-v3/footer-v3';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-function LayoutV3({ children }) {
+function LayoutMain({ children }) {
   //********get current router********************
   const location = useRouter();
   let url = location.asPath ? location.asPath : '';
@@ -106,10 +105,9 @@ function LayoutV3({ children }) {
     <>
       <Navbar listRoute={listRoute} logo={logo} business={url.includes('business')} />
       <main>{children}</main>
-      {/* <FooterV3 /> */}
-      {/* <Footer /> */}
+      <Footer />
       {/* <ButtonRounded /> */}
     </>
   );
 }
-export default LayoutV3;
+export default LayoutMain;

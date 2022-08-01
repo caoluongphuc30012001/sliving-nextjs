@@ -9,11 +9,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import LayoutParking from '@components/common/layout-smart-parking';
+import SectionHelpMore from '@components/common/SectionHelpMore';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'smartParking', 'menu'])),
+      ...(await serverSideTranslations(locale, ['common', 'smartParking', 'menu', 'footer'])),
       locale: locale,
     },
   };
@@ -26,6 +27,7 @@ const SmartParking = () => {
         <SectionDefinition />
         <SectionParkingSolution />
         <SectionParkingSystem />
+        <SectionHelpMore />
       </main>
     </LayoutParking>
   );

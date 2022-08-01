@@ -16,13 +16,13 @@
 }
 
 .background-parent {
-  background-image: url('/images/footer/png/bg-register.png');
+  background-image: url("/images/footer/png/bg-register.png");
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .footer {
-  margin-top: 400px;
+  // margin-top: calc(80vh / 2);
   //padding-top: 206px;
   position: relative;
   background: #fff;
@@ -72,16 +72,16 @@
     &::before {
       transform: translateX(-10px);
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      content: ' ';
-      background-image: url('/images/footer/svg/icon-arrow-right-alt.svg');
+      content: " ";
+      background-image: url("/images/footer/svg/icon-arrow-right-alt.svg");
     }
     &:hover {
       transform: translateX(20px);
 
       &::before {
-        content: ' ';
+        content: " ";
         transform: translateX(0px);
-        background-image: url('/images/footer/svg/icon-arrow-right-alt.svg');
+        background-image: url("/images/footer/svg/icon-arrow-right-alt.svg");
         background-repeat: no-repeat;
         background-position: center;
         color: #ffffff;

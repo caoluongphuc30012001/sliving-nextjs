@@ -17,7 +17,7 @@ import SectionHelpMore from '@components/common/SectionHelpMore';
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'smartLighting', 'menu'])),
+      ...(await serverSideTranslations(locale, ['common', 'smartLighting', 'menu', 'footer'])),
       locale: locale,
     },
   };

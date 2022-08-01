@@ -1,4 +1,4 @@
-import LayoutV3 from '@components/common/layout-v3';
+import LayoutV3 from '@components/common/layout-main';
 import { ModalAdvise } from '@components/common/modal';
 import SectionHelpMore from '@components/common/SectionHelpMore';
 import iconArrow from '@images/icon/icon-arrow-process.svg';

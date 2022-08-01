@@ -49,11 +49,7 @@ function SectionFormContact() {
 
     axios
       .post('/subscribe', formData)
-      .then((response) => {
-        console.log('response: ', response);
-        console.log('response.status: ', response.status);
-        console.log('response.data: ', response.data);
-      })
+      .then((response) => {})
       .catch(() => {});
     reset();
 

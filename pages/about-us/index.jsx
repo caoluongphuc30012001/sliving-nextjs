@@ -9,26 +9,18 @@ import SectionOurPartner from '@components/about-us/section-our-partner';
 import SectionSmartFactory from '@components/about-us/section-smart-factory';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import LayoutV3 from '@components/common/layout-v3';
+import LayoutV3 from '@components/common/layout-main';
+import SectionHelpMore from '@components/common/SectionHelpMore';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'aboutUs',"menu"])),
+      ...(await serverSideTranslations(locale, ['common', 'aboutUs', 'menu', 'footer'])),
       locale: locale,
     },
   };
 };
-const AboutUs = ({ locale }) => {
-  const router = useRouter();
-  const changeLng = () => {
-    router.push(router.asPath, undefined, {
-      locale: locale === 'en' ? 'vi' : 'en',
-      scroll: false,
-    });
-  };
+const AboutUs = () => {
   return (
     <LayoutV3>
       <main>
@@ -39,6 +31,7 @@ const AboutUs = ({ locale }) => {
         <SectionSmartFactory />
         <SectionActivity />
         <SectionOurPartner />
+        <SectionHelpMore />
       </main>
     </LayoutV3>
   );
