@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 // import ButtonRounded from "@components/button/button-card-rounded";
 import NavbarLighting from '@components/common/menu/index';
-// import FooterV3 from "@components/footer/footer-home-page";
+import Footer from "@components/common/Footer";
 
 import logo from '@images/smart-home-v3/png/logo.png';
-// import Footer from './footer/footer-v3/footer-v3';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 function LayoutSmartLighting({ children }) {
@@ -58,9 +57,8 @@ function LayoutSmartLighting({ children }) {
     <>
       <NavbarLighting logo={logo} listRoute={listRoute} back={true} />
       <main>{children}</main>
-      {/* <FooterV2 /> */}
-      {/* <Footer />
-      <ButtonRounded /> */}
+      <Footer />
+      {/* <ButtonRounded /> */}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import NavbarSecurity from '@components/common/menu/index';
 import logo from '@images/smart-home-v3/png/logo.png';
 import { useTranslation } from 'next-i18next';
-import Footer from './Footer';
+import Footer from "@components/common/Footer";
 function LayoutBuilding({ children }) {
   const { t } = useTranslation('menu');
   const listRoute = [

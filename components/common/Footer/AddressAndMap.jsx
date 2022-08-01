@@ -12,7 +12,7 @@ const SectionMap = dynamic(() => import('../Map/map'));
 const isBrowser = typeof window !== 'undefined';
 
 export default function AddressAndMap() {
-  const { i18n, ready, t } = useTranslation('contact');
+  const { i18n, ready, t } = useTranslation('footer');
   const [listContact, setListContact] = useState([
     {
       key: {

@@ -10,5 +10,17 @@
   "footer.listHrefItem1": "Terms of use",
   "footer.listHrefItem2": "Warranty Policy",
   "footer.listHrefItem3": "Sales policy",
-  "footer.store": "App Store"
+  "footer.store": "App Store",
+  "contact.quickSupport.title":"Quick Support",
+  "contact.quickSupport.hotline":"Hotline",
+  "contact.quickSupport.hotlineSubTitle":"19006054",
+  "contact.quickSupport.email":"Email",
+  "contact.quickSupport.emailSubTitle":" info@unicloud.com.vn",
+  "contact.quickSupport.address":"Address",
+  "contact.quickSupport.headquarter":"Headquarters:",
+  "contact.quickSupport.headquarterSubTitle":"10th Floor, Sunshine Center Building, No. 16, Pham Hung Street, Nam Tu Liem District, Ha Noi City, Vietnam",
+  "contact.quickSupport.branch":"R&D Center and Factory:",
+  "contact.quickSupport.branchSubTitle":"Block 5, Lot I-3B, N6 Street, High-Tech Park, Tan Phu Ward, Thu Duc City, Ho Chi Minh City, Vietnam",
+  "contact.quickSupport.map.headquarter":"Headquarters",
+  "contact.quickSupport.map.branch":"R&D Center and Factory"
 }

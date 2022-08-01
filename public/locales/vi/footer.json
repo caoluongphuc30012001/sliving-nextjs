@@ -10,5 +10,17 @@
   "footer.listHrefItem1": "Điều khoản sử dụng",
   "footer.listHrefItem2": "Chính sách bảo hành",
   "footer.listHrefItem3": "Chính sách bán hàng",
-  "footer.store": "Kho ứng dụng"
+  "footer.store": "Kho ứng dụng",
+  "contact.quickSupport.title":"Hỗ Trợ Nhanh",
+  "contact.quickSupport.hotline":"Hotline",
+  "contact.quickSupport.hotlineSubTitle":"19006054",
+  "contact.quickSupport.email":"Email",
+  "contact.quickSupport.emailSubTitle":" info@unicloud.com.vn",
+  "contact.quickSupport.address":" Địa chỉ",
+  "contact.quickSupport.headquarter":"Trụ sở chính Hà Nội",
+  "contact.quickSupport.headquarterSubTitle":"Tầng 10, Toà nhà Sunshine Center, Số 16 Phạm Hùng, Hà Nội",
+  "contact.quickSupport.branch":"Chi nhánh Thành phố Hồ Chí Minh",
+  "contact.quickSupport.branchSubTitle":"Block 5, Lô I-3B-1, Đường N6, Khu Công Nghệ Cao, Phường Tân Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+  "contact.quickSupport.map.headquarter":"Trụ sở chính",
+  "contact.quickSupport.map.branch":"Nhà máy"
 }

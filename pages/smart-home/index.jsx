@@ -10,7 +10,13 @@ import SectionPopularProductSliving from '@components/smart-home/section-popular
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'smartHome', 'menu','smartLighting'])),
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'smartHome',
+        'menu',
+        'smartLighting',
+        'footer',
+      ])),
       locale: locale,
     },
   };
