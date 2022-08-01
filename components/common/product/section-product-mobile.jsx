@@ -10,7 +10,7 @@ import { useTranslation } from 'next-i18next'
 import style from './style.module.scss'
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const { i18n } = useTranslation("smartLighting")
-  const checkVn = i18n.language.toUpperCase() === 'VN' ? true : false
+  const checkVn = i18n.language.toUpperCase() === 'VI' ? true : false
   return (
     <div className={style['content-left']}>
       <div className={style['top-menu']}>
@@ -37,7 +37,7 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
 }
 const ContentRight = ({ listProduct, current }) => {
   const { i18n } = useTranslation("smartLighting")
-  const checkVn = i18n.language.toUpperCase() === 'VN' ? true : false
+  const checkVn = i18n.language.toUpperCase() === 'VI' ? true : false
   return (
     listProduct.length > 0 && (
       <div className={style['content-right']}>

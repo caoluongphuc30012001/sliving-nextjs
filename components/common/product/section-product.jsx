@@ -13,8 +13,7 @@ import { useTranslation } from 'next-i18next';
 import style from './style.module.scss';
 const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
   const { i18n } = useTranslation('smartLighting');
-  // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
-  const checkVn = true;
+  const checkVn = i18n.language.toUpperCase() === "VI" ? true : false;
   const handle = (item) => {
     setCurrent(item);
     setListProduct([]);
@@ -43,8 +42,7 @@ const ContentLeft = ({ current, setCurrent, productTypes, setListProduct }) => {
 };
 const ContentRight = ({ listProduct, current }) => {
   const { i18n } = useTranslation('smartLighting');
-  // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
-  const checkVn = true;
+  const checkVn = i18n.language.toUpperCase() === "VI" ? true : false;
   return (
     <div className={style['content-right']}>
       {listProduct.length > 0 ? (
@@ -68,8 +66,7 @@ const ContentRight = ({ listProduct, current }) => {
 };
 const SliderComponent = ({ index, productCount, listProduct }) => {
   const { i18n } = useTranslation('smartLighting');
-  // const checkVn = i18n.language.toUpperCase() === "VN" ? true : false;
-  const checkVn = true;
+  const checkVn = i18n.language.toUpperCase() === "VI" ? true : false;
   let sliders = [];
   const itemsGrouped = 6;
   for (let j = 0; j < itemsGrouped; j++) {

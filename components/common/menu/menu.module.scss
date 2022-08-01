@@ -1,12 +1,12 @@
 .section-menu-top {
-  .change-language-box{
+  .change-language-box {
     margin-left: 20px;
     display: flex;
     width: 52px;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    .language{
+    .language {
       font-family: 'SVN Gilroy';
       font-style: normal;
       font-weight: 500;
@@ -42,6 +42,7 @@
     }
     .logo-box {
       min-width: 206px;
+      cursor: pointer;
     }
     .list-item-menu {
       display: flex;
@@ -50,8 +51,8 @@
       padding: 0 10px;
       gap: 40px;
       .item-menu {
-        margin : 0px;
-        font-family: "SVN Gilroy";
+        margin: 0px;
+        font-family: 'SVN Gilroy';
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -83,7 +84,7 @@
             display: flex;
             align-items: center;
             border-bottom: 1px solid #e1e3e6;
-            font-family: "SVN-Gilroy";
+            font-family: 'SVN-Gilroy';
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
@@ -94,7 +95,7 @@
               color: #0979fd;
             }
           }
-          .item-select.active{
+          .item-select.active {
             font-weight: 600;
             color: #0979fd;
           }
@@ -121,15 +122,15 @@
           }
         }
       }
-      .active{
-        font-family: "SVN Gilroy";
+      .active {
+        font-family: 'SVN Gilroy';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
         color: #0979fd;
         &:hover {
-          font-family: "SVN Gilroy";
+          font-family: 'SVN Gilroy';
           font-style: normal;
           font-weight: 700;
           font-size: 16px;
@@ -147,7 +148,7 @@
           }
         }
         p {
-          font-family: "SVN-Gilroy";
+          font-family: 'SVN-Gilroy';
           font-style: normal;
           font-weight: 700;
           font-size: 16px;
@@ -177,7 +178,7 @@
         background-clip: padding-box, border-box;
         background-origin: padding-box, border-box;
         .content {
-          font-family: "SVN-Gilroy";
+          font-family: 'SVN-Gilroy';
           font-style: normal;
           font-weight: 700;
           font-size: 16px;
@@ -202,18 +203,18 @@
   .logo {
     position: static;
   }
-  .group-btn{
+  .group-btn {
     display: flex;
     align-items: center;
   }
-  .change-language-box{
+  .change-language-box {
     display: flex;
     width: 52px;
     align-items: center;
     justify-content: space-between;
     margin-right: 10px;
     cursor: pointer;
-    .language{
+    .language {
       font-family: 'SVN Gilroy';
       font-style: normal;
       font-weight: 500;
@@ -253,7 +254,7 @@
         gap: 10px;
         width: 100%;
         border-bottom: 2px solid #e1e3e6;
-        font-family: "SVN Gilroy";
+        font-family: 'SVN Gilroy';
         font-weight: 500;
         font-size: 16px;
         color: #2c2d2e;
@@ -269,7 +270,7 @@
           transition: 0.25s;
           // margin-top: 10px;
           .item-select {
-            font-family: "SVN Gilroy";
+            font-family: 'SVN Gilroy';
             font-weight: 500;
             font-size: 16px;
             padding: 0 16px;
@@ -291,7 +292,7 @@
         }
       }
       .active {
-        font-family: "SVN Gilroy";
+        font-family: 'SVN Gilroy';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
@@ -326,7 +327,7 @@
   #smart_parking_page {
     .section-smart-parking-v3-header {
       margin-top: 90px;
-      .smart-parking-v3-header{
+      .smart-parking-v3-header {
         height: calc(100vh - 90px);
       }
     }
@@ -402,7 +403,7 @@
   #smart_parking_page {
     .section-smart-parking-v3-header {
       margin-top: 64px;
-      .smart-parking-v3-header{
+      .smart-parking-v3-header {
         height: calc(100vh - 64px);
       }
     }
@@ -429,9 +430,9 @@
   }
 }
 
-.solution-button{
-  .button-text{
-    white-space: nowrap ;
+.solution-button {
+  .button-text {
+    white-space: nowrap;
   }
 }
 /*
