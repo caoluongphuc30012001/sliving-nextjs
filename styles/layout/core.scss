@@ -75,7 +75,7 @@
 }
 
 .container-v2 {
-  max-width: 1440px;
+  max-width: 1180px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -128,7 +128,7 @@ a {
   height: 100%;
 }
 
-.has-image[data-image-fit="contain"] .fancybox__image {
+.has-image[data-image-fit='contain'] .fancybox__image {
   width: 500px !important;
 }
 
@@ -140,7 +140,7 @@ a {
   text-align: center;
   h3 {
     margin-top: 58px;
-    font-family: "SVN Gilroy";
+    font-family: 'SVN Gilroy';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -166,7 +166,7 @@ a {
   }
   span {
     display: block;
-    font-family: "SVN Gilroy";
+    font-family: 'SVN Gilroy';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -186,7 +186,7 @@ a {
     margin-right: auto;
     margin-left: auto;
     span {
-      font-family: "SVN Gilroy";
+      font-family: 'SVN Gilroy';
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
