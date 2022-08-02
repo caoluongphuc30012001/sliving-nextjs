@@ -10,6 +10,7 @@ import imgSmartParkingMobile from '@images/home-page-v3/png/img-smart-parking-mo
 import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import styles from './style.module.scss';
 
 function SectionSmartParking() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -39,38 +40,46 @@ function SectionSmartParking() {
     },
   ];
   return (
-    <section className="bg-ground-smart-parking">
-      <div className="container-1220">
-        <Row className="row-line-center m-left-right-12">
-          <span className="title-eng-line-center">SMART PARKING</span>
-          <h1 className="title-line-center">{t('homePage.smartParking.mainTitle')}</h1>
-          <div className="img-line-center">
-            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} alt="" />
+    <section className={styles['bg-ground-smart-parking']}>
+      <div className={styles['container-1220']}>
+        <Row className={`${styles['row-line-center']} ${styles['m-left-right-12']}`}>
+          <span className={styles['title-eng-line-center']}>SMART PARKING</span>
+          <h1 className={styles['title-line-center']}>{t('homePage.smartParking.mainTitle')}</h1>
+          <div className={styles['img-line-center']}>
+            <Image src={imgUnderLine.src} width={88} height={4} alt="" />
           </div>
-          <Image src={imgSmartParking} className="smart-parking-group-img" alt="" />
-          <Image src={imgSmartParkingMobile} className="smart-parking-group-img-mobile" alt="" />
-          <h2 className="smart-parking-title">{t('homePage.smartParking.subTitle')}</h2>
-          <p className="smart-parking-des">{t('homePage.smartParking.mainDesc')}</p>
+          <Image src={imgSmartParking.src} className={styles['smart-parking-group-img']} alt="" />
+          <Image
+            src={imgSmartParkingMobile.src}
+            className={styles['smart-parking-group-img-mobile']}
+            alt=""
+          />
+          <h2 className={styles['smart-parking-title']}>{t('homePage.smartParking.subTitle')}</h2>
+          <p className={styles['smart-parking-des']}>{t('homePage.smartParking.mainDesc')}</p>
         </Row>
 
-        <Row lg={4} md={4} xs={1} className="smart-parking-cards">
+        <Row lg={4} md={4} xs={1} className={styles['smart-parking-cards']}>
           {listItemCard.map((itemCard, index) => (
             <Col className="gx-5 smart-parking-card-col" key={index.toString()}>
-              <div className="smart-parking-card">
-                <div className="smart-parking-card-top">
-                  <Image src={itemCard.linkImg} className="smart-parking-card-img" alt="" />
+              <div className={styles['smart-parking-card']}>
+                <div className={styles['smart-parking-card-top']}>
+                  <Image
+                    src={itemCard.linkImg.src}
+                    className={styles['smart-parking-card-img']}
+                    alt=""
+                  />
                 </div>
-                <span className="smart-parking-card-title">{itemCard.title}</span>
+                <span className={styles['smart-parking-card-title']}>{itemCard.title}</span>
               </div>
             </Col>
           ))}
         </Row>
-        <div className="btn-group">
-          <button className="advise-now-btn" onClick={() => setModalShow(true)}>
+        <div className={styles['btn-group']}>
+          <button className={styles['advise-now-btn']} onClick={() => setModalShow(true)}>
             <span>{t('homePage.btnGroup.adviseBtn')}</span>
           </button>
           <Link href="/smart-parking">
-            <button className="learn-more-btn">
+            <button className={styles['learn-more-btn']}>
               <span>{t('homePage.btnGroup.learnMoreBtn')}</span>
             </button>
           </Link>

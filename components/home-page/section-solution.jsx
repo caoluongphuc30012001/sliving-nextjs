@@ -15,6 +15,8 @@ import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
 
 import { useTranslation } from 'react-i18next';
 
+import styles from './style.module.scss';
+
 const SectionSolution = () => {
   const { t } = useTranslation('homePage');
 
@@ -106,45 +108,49 @@ const SectionSolution = () => {
     },
   ];
   return (
-    <section className="section-solution">
-      <div className="container-1220 section-solution-about">
+    <section className={styles['section-solution']}>
+      <div className={`${styles['section-solution-about']} container-1220`}>
         <Row className="justify-content-around">
           <Col lg={6} md={6} sm={12}>
-            <Row className="row-line-center m-left-right-12">
-              <span className="title-eng-line-center">ABOUT SLIVING</span>
-              <h2 className="title-line-center">{t('homePage.solution.mainTitle1')}</h2>
-              <div className="img-line-center">
-                <Image src={imgUnderLine} style={{ width: 88, height: 4 }} alt="" />
+            <Row className={`${styles['row-line-center']} ${styles['m-left-right-12']}`}>
+              <span className={styles['title-eng-line-center']}>ABOUT SLIVING</span>
+              <h2 className={styles['title-line-center']}>{t('homePage.solution.mainTitle1')}</h2>
+              <div className={styles['img-line-center']}>
+                <Image src={imgUnderLine.src} width={88} height={4} alt="" />
               </div>
             </Row>
 
-            <img src={imgAboutTop} alt="" className="solution-about-img-mobile" />
+            <img src={imgAboutTop.src} alt="" className={styles['solution-about-img-mobile']} />
 
-            <div className="solution-about-cap d-flex">
-              <div className="solution-about-cap-line"></div>
-              <span className="solution-about-cap-content d-flex align-items-center">
+            <div className={`${styles['solution-about-cap']} d-flex`}>
+              <div className={styles['solution-about-cap-line']}></div>
+              <span className={`${styles['solution-about-cap-content']} d-flex align-items-center`}>
                 {`"The light is what guides you home, the warmth is what keeps you
                 there." - Ellie Rodriguez`}
               </span>
             </div>
-            <span className="detail-v3">{t('homePage.solution.mainDesc1')}</span>
-            <ul className="list-ul-li">
+            <span className={styles['detail-v3']}>{t('homePage.solution.mainDesc1')}</span>
+            <ul className={styles['list-ul-li']}>
               {arrSolution.map((solution) => (
                 <li key={solution.id}>{solution.desc}</li>
               ))}
             </ul>
             <Link href="/about-us/">
-              <button type="button" className="btn-gradient-blue">
+              <button type="button" className={styles['btn-gradient-blue']}>
                 <span>{t('homePage.btnGroup.discoverBtn')}</span>
               </button>
             </Link>
           </Col>
           <Col lg={6} md={6} sm={12}>
-            <div className="p-relative">
-              <img src={imgRight} alt="" className="solution-about-img" />
-              <div className="solution-about-cap-desktop d-flex p-absolute">
-                <div className="solution-about-cap-line"></div>
-                <span className="solution-about-cap-content d-flex align-items-center">
+            <div className={styles['p-relative']}>
+              <img src={imgRight.src} alt="" className={styles['solution-about-img']} />
+              <div
+                className={`${styles['solution-about-cap-desktop']} ${styles['p-absolute']} d-flex`}
+              >
+                <div className={styles['solution-about-cap-line']}></div>
+                <span
+                  className={`${styles['solution-about-cap-content']} d-flex align-items-center`}
+                >
                   {`"The light is what guides you home, the warmth is what keeps
                   you there." - Ellie Rodriguez`}
                 </span>
@@ -153,20 +159,20 @@ const SectionSolution = () => {
           </Col>
         </Row>
       </div>
-      <div className="container-1220 section-solution-sliving">
+      <div className={`${styles['section-solution-sliving']} ${styles['container-1220']}`}>
         <Row className="justify-content-between">
-          <Col lg={6} md={6} sm={12} xs className="solution-sliving-img">
-            <img src={imgLeft} alt="" />
+          <Col lg={6} md={6} sm={12} xs className={styles['solution-sliving-img']}>
+            <img src={imgLeft.src} alt="" />
           </Col>
-          <Col lg={6} md={6} sm={12} className=" solution-sliving-col-right ">
-            <Row className="row-line-center m-left-right-12">
-              <span className="title-eng-line-center">SOLUTION SLIVING</span>
-              <h2 className="title-line-center">{t('homePage.solution.mainTitle2')}</h2>
-              <div className="img-line-center">
-                <Image src={imgUnderLine} style={{ width: 88, height: 4 }} alt="" />
+          <Col lg={6} md={6} sm={12} className="solution-sliving-col-right">
+            <Row className={`${styles['row-line-center']} ${styles['m-left-right-12']}`}>
+              <span className={styles['title-eng-line-center']}>SOLUTION SLIVING</span>
+              <h2 className={styles['title-line-center']}>{t('homePage.solution.mainTitle2')}</h2>
+              <div className={styles['img-line-center']}>
+                <Image src={imgUnderLine.src} width={88} height={4} alt="" />
               </div>
             </Row>
-            <span className="detail-v3">{t('homePage.solution.mainDesc2')}</span>
+            <span className={styles['detail-v3']}>{t('homePage.solution.mainDesc2')}</span>
             <Row className="">
               {arrProd.map((prod) => (
                 <Col
@@ -177,17 +183,17 @@ const SectionSolution = () => {
                   sm={4}
                   // md={6}
                 >
-                  <div className="solution-sliving-card ">
-                    <img src={prod.icon} alt="" />
+                  <div className={styles['solution-sliving-card']}>
+                    <img src={prod.icon.src} alt="" />
                   </div>
-                  <span className="solution-sliving-content">{prod.desc}</span>
+                  <span className={styles['solution-sliving-content']}>{prod.desc}</span>
                 </Col>
               ))}
             </Row>
             <img
-              src={imgSolution}
+              src={imgSolution.src}
               alt=""
-              className="solution-about-img-mobile"
+              className={styles['solution-about-img-mobile']}
               style={{ paddingTop: '32px' }}
             />
           </Col>
