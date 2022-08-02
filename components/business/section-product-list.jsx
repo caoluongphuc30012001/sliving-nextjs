@@ -1,13 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react';
-
-// import { BusinessStateContext } from "@context/businessContext";
-// import ModalAdvise from "@components/modal/modal-advise/ModalAdvise-business";
+import { ModalAdviseBusiness } from '@components/common/modal';
 import icon from '@images/business-step3-v3/png/icon-vector.png';
-
-import { useTranslation } from 'react-i18next';
-
-import style from './style.module.scss';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import style from './Business.module.scss';
 
 const Table2 = ({ table }) => {
   const { t } = useTranslation('business');
@@ -113,7 +109,7 @@ const SubTable = ({ table }) => {
 
 const SectionProductList = () => {
   const [modalShow, setModalShow] = useState(false);
-  // const [activeTable, setActiveTable] = useState(false);
+  const [activeTable, setActiveTable] = useState(false);
   // const [order, setOrder] = useState("ASC");
   const [tableData, setTableData] = useState('');
   // const state = useContext(BusinessStateContext);
@@ -122,11 +118,11 @@ const SectionProductList = () => {
   // }, []);
   const [solutionNames, setSolutionNames] = useState('');
 
-  const { i18n, t, ready } = useTranslation('business');
+  const { t } = useTranslation('business');
   useEffect(() => {
     const data = t('business.tableData2', { returnObjects: true });
     setTableData(data);
-  }, [ready, i18n.language]);
+  }, [t]);
 
   const sorting = (col) => {
     // if (order === "ASC") {
@@ -189,11 +185,11 @@ const SectionProductList = () => {
           <span>{t('sectionDropdown.consultNow')}</span>
         </div>
       </div>
-      {/* <ModalAdvise
+      <ModalAdviseBusiness
         show={modalShow}
         onHide={() => setModalShow(false)}
         solutionNames={solutionNames}
-      /> */}
+      />
     </section>
   );
 };
