@@ -10,6 +10,7 @@ import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
 import Link from 'next/link';
 
 import { useTranslation } from 'react-i18next';
+import styles from './style.module.scss';
 
 function SectionSmartLighting() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -52,60 +53,72 @@ function SectionSmartLighting() {
     },
   ];
   return (
-    <section className="bg-ground-smart-lighting">
-      <div className="container-1220">
-        <div className="row-line-center">
-          <span className="title-eng-line-center">SMART LIGHTING</span>
-          <h1 className="title-line-center">{t('homePage.smartLighting.mainTitle')}</h1>
-          <div className="img-line-center">
-            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} alt="" />
+    <section className={styles['bg-ground-smart-lighting']}>
+      <div className={styles['container-1220']}>
+        <div className={styles['row-line-center']}>
+          <span className={styles['title-eng-line-center']}>SMART LIGHTING</span>
+          <h1 className={styles['title-line-center']}>{t('homePage.smartLighting.mainTitle')}</h1>
+          <div className={styles['img-line-center']}>
+            <Image src={imgUnderLine.src} width={88} height={4} alt="" />
           </div>
         </div>
-        <Row className="smart-lighting-row gx-5">
+        <Row className={`${styles['smart-lighting-row']} gx-5`}>
           <Col lg={7} md={6} sm={12} className="smart-lighting-col-left">
-            <div className="smart-lighting-des-desktop">
-              <p className="smart-lighting-des">{t('homePage.smartLighting.desc1')}</p>
+            <div className={`${styles['smart-lighting-des-desktop']}`}>
+              <p className={`${styles['smart-lighting-des']}`}>
+                {t('homePage.smartLighting.desc1')}
+              </p>
               <br />
-              <p className="smart-lighting-des">{t('homePage.smartLighting.desc2')}</p>
-            </div>
-            <div className="smart-lighting-des-mobile d-none">
-              <p className="smart-lighting-des">
-                Unicloud đã tích hợp, thử nghiệm thành công và đưa ra thị trường bộ điều khiển panel
-                LED, LED Downlight cho phép bật tắt, Dimming, đổi màu từ xa bằng công nghệ RF. Điều
-                khiển trên Smartphone bằng công nghệ không dây, nhằm mục đích điều khiển chiếu sáng
-                hội trường, phòng trưng bày sản phẩm, bộ điều khiển tòa nhà có nhiều kịch bản chiếu
-                sáng theo yêu cầu của khách hàng.
+              <p className={`${styles['smart-lighting-des']}`}>
+                {t('homePage.smartLighting.desc2')}
               </p>
             </div>
-            <div className="btn-group">
-              <button className="advise-now-btn" onClick={() => setModalShow(true)}>
+            <div className={`${styles['smart-lighting-des-mobile']} d-none`}>
+              <p className={`${styles['smart-lighting-des']}`}>
+                {t('homePage.smartLighting.desc3')}
+              </p>
+            </div>
+            <div className={styles['btn-group']}>
+              <button className={styles['advise-now-btn']} onClick={() => setModalShow(true)}>
                 <span>{t('homePage.btnGroup.adviseBtn')}</span>
               </button>
               <Link href="/smart-lighting">
-                <button className="learn-more-btn">
+                <button className={styles['learn-more-btn']}>
                   <span>{t('homePage.btnGroup.learnMoreBtn')}</span>
                 </button>
               </Link>
             </div>
-            <Image src={imgSmartLightingLeft} className="smart-lighting-img-left w-100" alt="" />
+            <Image
+              src={imgSmartLightingLeft.src}
+              className={`${styles['smart-lighting-img-left']} w-100`}
+              alt=""
+            />
           </Col>
           <Col lg={5} md={6} sm={12} className="smart-lighting-col-right">
-            <Row className="smart-lighting-group">
+            <Row className={styles['smart-lighting-group']}>
               {listItemCard.map((itemCard) => (
-                <Col className="smart-lighting-card" key={itemCard.id}>
-                  <div className="smart-lighting-top">
-                    <Image src={itemCard.linkImg} className="smart-lighting-img" alt="" />
+                <Col className={styles['smart-lighting-card']} key={itemCard.id}>
+                  <div className={styles['smart-lighting-top']}>
+                    <Image
+                      src={itemCard.linkImg.src}
+                      className={styles['smart-lighting-img']}
+                      alt=""
+                    />
                   </div>
-                  <div className="smart-lighting-bottom">
-                    <span className="smart-lighting-content">{itemCard.title}</span>
+                  <div className={styles['smart-lighting-bottom']}>
+                    <span className={styles['smart-lighting-content']}>{itemCard.title}</span>
                   </div>
                 </Col>
               ))}
             </Row>
-            <Image src={imgSmartLightingRight} className="smart-lighting-img-right w-100" alt="" />
             <Image
-              src={imgSmartLightingLeft}
-              className="smart-lighting-img-left-mobile d-none w-100"
+              src={imgSmartLightingRight.src}
+              className={`${styles['smart-lighting-img-right']} w-100`}
+              alt=""
+            />
+            <Image
+              src={imgSmartLightingLeft.src}
+              className={`${styles['smart-lighting-img-left-mobile']} d-none w-100`}
               alt=""
             />
           </Col>
