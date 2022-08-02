@@ -1,19 +1,17 @@
-import React from 'react';
-import iconCheckOutline from '@images/icon/icon-check-circle-outline.svg';
+import { ModalAdvise } from '@components/common/modal';
+import imgApp from '@images/home-page-v3/img-app.png';
 import imgCurtain from '@images/home-page-v3/img-curtain.png';
 import imgSwitch from '@images/home-page-v3/img-switch.png';
-import imgApp from '@images/home-page-v3/img-app.png';
 import imgTouch from '@images/home-page-v3/img-touch.png';
-import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
 import imgAppStore from '@images/home-page-v3/png/img-button-app-store.png';
 import imgGooglePlay from '@images/home-page-v3/png/img-button-google-play.png';
-import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
-
-import { useTranslation } from 'react-i18next';
-
-import { Col, Image, Row } from 'react-bootstrap';
+import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import iconCheckOutline from '@images/icon/icon-check-circle-outline.svg';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import styles from './style.module.scss';
+import React from 'react';
+import { Col, Image, Row } from 'react-bootstrap';
+import styles from './HomePage.module.scss';
 
 const SectionProduct = () => {
   const [modalShow, setModalShow] = React.useState(false);

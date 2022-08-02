@@ -1,16 +1,15 @@
-import React from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
-import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import { ModalAdvise } from '@components/common/modal';
 import imgSmartLightingLeft from '@images/home-page-v3/png/img-smart-lighting-left.png';
 import imgSmartLightingRight from '@images/home-page-v3/png/img-smart-lighting-right.png';
-import imgSmartRemoteControl from '@images/home-page-v3/svg/icon-remote-control.svg';
 import imgSmartBrightnessControl from '@images/home-page-v3/svg/icon-brightness-control.svg';
 import imgSmartEnergy from '@images/home-page-v3/svg/icon-energy.svg';
-import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
+import imgSmartRemoteControl from '@images/home-page-v3/svg/icon-remote-control.svg';
+import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-
-import { useTranslation } from 'react-i18next';
-import styles from './style.module.scss';
+import React from 'react';
+import { Col, Image, Row } from 'react-bootstrap';
+import styles from './HomePage.module.scss';
 
 function SectionSmartLighting() {
   const [modalShow, setModalShow] = React.useState(false);

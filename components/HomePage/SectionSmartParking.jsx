@@ -1,16 +1,16 @@
-import React from 'react';
-import { Col, Row, Image } from 'react-bootstrap';
-import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import { ModalAdvise } from '@components/common/modal';
+import imgSmartParkingMobile from '@images/home-page-v3/png/img-smart-parking-mobile.png';
+import imgSmartParking from '@images/home-page-v3/png/img-smart-parking.png';
 import imgItemCart1 from '@images/home-page-v3/svg/icon-smart-parking-item1.svg';
 import imgItemCart2 from '@images/home-page-v3/svg/icon-smart-parking-item2.svg';
 import imgItemCart3 from '@images/home-page-v3/svg/icon-smart-parking-item3.svg';
 import imgItemCart4 from '@images/home-page-v3/svg/icon-smart-parking-item4.svg';
-import imgSmartParking from '@images/home-page-v3/png/img-smart-parking.png';
-import imgSmartParkingMobile from '@images/home-page-v3/png/img-smart-parking-mobile.png';
-import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
+import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-import styles from './style.module.scss';
+import React from 'react';
+import { Col, Image, Row } from 'react-bootstrap';
+import styles from './HomePage.module.scss';
 
 function SectionSmartParking() {
   const [modalShow, setModalShow] = React.useState(false);

@@ -1,21 +1,18 @@
-import React from 'react';
-import { Col, Row, Image } from 'react-bootstrap';
-import Link from 'next/link';
-import imgRight from '@images/home-page-v3/png/img-solution-best.png';
 import imgLeft from '@images/home-page-v3/img-smart-life.png';
-import iconBulb from '@images/icon/icon-bulb.svg';
-import iconTouch from '@images/icon/icon-touch.svg';
-import iconLight from '@images/icon/icon-light.svg';
-import iconSecurity from '@images/icon/icon-security-color.svg';
-import iconRemote from '@images/icon/icon-remote.svg';
-import iconCurtain from '@images/icon/icon-curtain.svg';
 import imgAboutTop from '@images/home-page-v3/png/about-sliving-top.png';
+import imgRight from '@images/home-page-v3/png/img-solution-best.png';
 import imgSolution from '@images/home-page-v3/png/solution-sliving.png';
 import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
-
-import { useTranslation } from 'react-i18next';
-
-import styles from './style.module.scss';
+import iconBulb from '@images/icon/icon-bulb.svg';
+import iconCurtain from '@images/icon/icon-curtain.svg';
+import iconLight from '@images/icon/icon-light.svg';
+import iconRemote from '@images/icon/icon-remote.svg';
+import iconSecurity from '@images/icon/icon-security-color.svg';
+import iconTouch from '@images/icon/icon-touch.svg';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { Col, Image, Row } from 'react-bootstrap';
+import styles from './HomePage.module.scss';
 
 const SectionSolution = () => {
   const { t } = useTranslation('homePage');
@@ -109,7 +106,7 @@ const SectionSolution = () => {
   ];
   return (
     <section className={styles['section-solution']}>
-      <div className={`${styles['section-solution-about']} container-1220`}>
+      <div className={`${styles['section-solution-about']} ${styles['container-1220']}`}>
         <Row className="justify-content-around">
           <Col lg={6} md={6} sm={12}>
             <Row className={`${styles['row-line-center']} ${styles['m-left-right-12']}`}>
@@ -119,9 +116,7 @@ const SectionSolution = () => {
                 <Image src={imgUnderLine.src} width={88} height={4} alt="" />
               </div>
             </Row>
-
             <img src={imgAboutTop.src} alt="" className={styles['solution-about-img-mobile']} />
-
             <div className={`${styles['solution-about-cap']} d-flex`}>
               <div className={styles['solution-about-cap-line']}></div>
               <span className={`${styles['solution-about-cap-content']} d-flex align-items-center`}>
@@ -175,14 +170,7 @@ const SectionSolution = () => {
             <span className={styles['detail-v3']}>{t('homePage.solution.mainDesc2')}</span>
             <Row className="">
               {arrProd.map((prod) => (
-                <Col
-                  key={prod.id}
-                  className="gx-3 gy-3 col-4"
-                  lg={4}
-                  md={4}
-                  sm={4}
-                  // md={6}
-                >
+                <Col key={prod.id} className="gx-3 gy-3 col-4" lg={4} md={4} sm={4}>
                   <div className={styles['solution-sliving-card']}>
                     <img src={prod.icon.src} alt="" />
                   </div>
