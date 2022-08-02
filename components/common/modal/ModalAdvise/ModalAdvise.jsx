@@ -80,13 +80,11 @@ function ModalAdvise({ houseName = '', serviceName = '', productName = '', ...pr
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <Form className={styles['form-advise-sliving']} onSubmit={handleSubmit(onSubmit)}>
-            {/* <p>Hãy để chúng tôi tư vấn đến bạn</p> */}
             <Form.Group className="mb-4" controlId="ControlFullName">
               <Form.Label>
                 {t('modal.advise.input.name')}
                 <span style={{ color: 'red' }}> *</span>
               </Form.Label>
-              {/* <Form.Control type="text" placeholder="Nhập tên của bạn" /> */}
               <Controller
                 control={control}
                 name="fullName"
@@ -102,7 +100,6 @@ function ModalAdvise({ houseName = '', serviceName = '', productName = '', ...pr
                     autoComplete="off"
                     type="text"
                     placeholder={t('modal.advise.input.placeholderName')}
-                    // required
                   />
                 )}
               />
@@ -117,7 +114,6 @@ function ModalAdvise({ houseName = '', serviceName = '', productName = '', ...pr
                 {t('modal.advise.input.email')}
                 <span style={{ color: 'red' }}> *</span>
               </Form.Label>
-              {/* <Form.Control type="email" placeholder="Nhập email của bạn" /> */}
               <Controller
                 control={control}
                 name="email"
@@ -139,7 +135,6 @@ function ModalAdvise({ houseName = '', serviceName = '', productName = '', ...pr
                     aria-label="email"
                     aria-describedby="email"
                     autoComplete="off"
-                    // required
                   />
                 )}
               />
@@ -175,11 +170,10 @@ function ModalAdvise({ houseName = '', serviceName = '', productName = '', ...pr
                     ref={ref}
                     isInvalid={errors.telephone}
                     className="telephone"
-                    placeholder="Nhập số điện thoại của bạn ở đây"
+                    placeholder={t('modal.advise.input.placeholderPhoneNumber')}
                     aria-label="telephone"
                     aria-describedby="telephone"
                     autoComplete="off"
-                    // required
                   />
                 )}
               />
@@ -208,7 +202,6 @@ function ModalAdvise({ houseName = '', serviceName = '', productName = '', ...pr
                     ref={ref}
                     isInvalid={errors.content}
                     aria-label="Default select example"
-                    // required
                     as="textarea"
                     rows={3}
                     placeholder={t('modal.advise.placeholderMessage')}
