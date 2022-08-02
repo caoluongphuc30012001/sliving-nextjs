@@ -75,11 +75,7 @@ function SectionSmartLighting() {
             </div>
             <div className={`${styles['smart-lighting-des-mobile']} d-none`}>
               <p className={`${styles['smart-lighting-des']}`}>
-                Unicloud đã tích hợp, thử nghiệm thành công và đưa ra thị trường bộ điều khiển panel
-                LED, LED Downlight cho phép bật tắt, Dimming, đổi màu từ xa bằng công nghệ RF. Điều
-                khiển trên Smartphone bằng công nghệ không dây, nhằm mục đích điều khiển chiếu sáng
-                hội trường, phòng trưng bày sản phẩm, bộ điều khiển tòa nhà có nhiều kịch bản chiếu
-                sáng theo yêu cầu của khách hàng.
+                {t('homePage.smartLighting.desc3')}
               </p>
             </div>
             <div className={styles['btn-group']}>
