@@ -199,7 +199,6 @@ function ModalAdviseBusiness({ houseName = '', serviceName = '', solutionNames =
                 {t('modal.advise.input.phoneNumber')}
                 <span style={{ color: 'red' }}> *</span>
               </Form.Label>
-              {/* <Form.Control type="text" placeholder="Nhập số điện thoại của bạn" /> */}
               <Controller
                 control={control}
                 name="telephone"

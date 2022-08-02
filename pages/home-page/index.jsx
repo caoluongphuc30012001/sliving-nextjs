@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import SectionHeader from '@components/home-page/section-header';
-import SectionSolution from '@components/home-page/section-solution';
-import SectionFeaturedProject from '@components/home-page/section-featured-project';
-import SectionSmartLighting from '@components/home-page/section-smart-lighting';
-import SectionSmartParking from '@components/home-page/section-smart-parking';
-import SectionHelpMore from '@components/common/SectionHelpMore';
-import SectionProduct from '@components/home-page/section-product';
 import Layout from '@components/common/layout-main';
-
+import SectionHelpMore from '@components/common/SectionHelpMore';
+import {
+  SectionFeaturedProject,
+  SectionHeader,
+  SectionProduct,
+  SectionSmartLighting,
+  SectionSmartParking,
+  SectionSolution,
+} from '@components/HomePage';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export const getStaticProps = async ({ locale }) => {
