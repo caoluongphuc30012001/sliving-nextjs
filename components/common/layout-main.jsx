@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
-// import ButtonRounded from "@components/button/button-card-rounded";
-import Navbar from '@components/common/menu/index';
 import Footer from '@components/common/Footer';
-
+import Navbar from '@components/common/menu/index';
 import logo from '@images/smart-home-v3/png/logo.png';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+
 function LayoutMain({ children }) {
   //********get current router********************
   const location = useRouter();
@@ -100,7 +98,7 @@ function LayoutMain({ children }) {
         active: url.includes('contact-us'),
       },
     ]);
-  }, [url]);
+  }, [t, url]);
   return (
     <>
       <Navbar listRoute={listRoute} logo={logo} business={url.includes('business')} />

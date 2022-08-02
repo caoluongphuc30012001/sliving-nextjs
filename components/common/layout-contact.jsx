@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
-
-// import ButtonRounded from "@components/button/button-card-rounded";
-import Navbar from '@components/common/menu/index';
 import FooterNotMap from '@components/common/FooterNotMap';
-
+import Navbar from '@components/common/menu/index';
 import logo from '@images/smart-home-v3/png/logo.png';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+
 function LayoutContact({ children }) {
   //********get current router********************
   const location = useRouter();
   let url = location.asPath ? location.asPath : '';
   //********translate************
-  const { t, i18n } = useTranslation('menu');
+  const { t } = useTranslation('menu');
   const [listRoute, setListRoute] = useState([]);
 
   useEffect(() => {
@@ -100,14 +98,13 @@ function LayoutContact({ children }) {
         active: url.includes('contact-us'),
       },
     ]);
-  }, [url, i18n.language]);
+  }, [t, url]);
   return (
     <>
       <Navbar listRoute={listRoute} logo={logo} />
       {children}
       <FooterNotMap />
-      {/* <Footer />
-      <ButtonRounded /> */}
+      {/* <ButtonRounded />  */}
     </>
   );
 }
