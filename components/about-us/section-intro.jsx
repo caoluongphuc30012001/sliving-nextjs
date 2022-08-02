@@ -1,25 +1,10 @@
-import React from 'react';
-import { Row } from 'react-bootstrap';
-import styled from 'styled-components';
-
-// import iconVision from "@images/about-us-v3/svg/icon-vision.svg";
-// import iconMission from "@images/about-us-v3/svg/icon-mission.svg";
-// import iconValue from "@images/about-us-v3/svg/icon-value.svg";
-
-import iconVision from '@images/about-us-v3/svg/icon-vision.svg';
 import iconMission from '@images/about-us-v3/svg/icon-mission.svg';
 import iconValue from '@images/about-us-v3/svg/icon-value.svg';
-
-import { useTranslation } from 'react-i18next';
-
+import iconVision from '@images/about-us-v3/svg/icon-vision.svg';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
-import style from './style.module.scss';
-export const Divider = styled('div')`
-  width: 88px;
-  height: 4px;
-  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
-  border-radius: 200px;
-`;
+import { Row } from 'react-bootstrap';
+import style from './AboutUs.module.scss';
 
 const SectionIntro = () => {
   const { t } = useTranslation('aboutUs');
@@ -83,7 +68,7 @@ const SectionIntro = () => {
           <span className={style[`title`]}>ABOUT US</span>
           <h2 className={style[`main-title`]}>{t('aboutUs.intro.mainTitle')}</h2>
           <div className={style[`underline`]}>
-            <Divider />
+            <div className={style['divider']}></div>
           </div>
         </Row>
 

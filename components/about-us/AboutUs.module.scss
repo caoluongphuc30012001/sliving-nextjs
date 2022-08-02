@@ -1,5 +1,5 @@
 // About Us Page Version 3
-.max-width-1180{
+.max-width-1180 {
   display: flex;
   position: relative;
   width: 100%;
@@ -37,32 +37,39 @@
   position: absolute;
 }
 
-.top-content{
+.divider {
+  width: 88px;
+  height: 4px;
+  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
+  border-radius: 200px;
+}
+
+.top-content {
   gap: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .title{
-    font-family: 'SVN Gilroy';
+  .title {
+    font-family: "SVN Gilroy";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 133%;
     text-align: center;
     letter-spacing: 0.22em;
-    color: #0979FD;
+    color: #0979fd;
   }
-  .main-title{
-    font-family: 'SVN Gilroy';
+  .main-title {
+    font-family: "SVN Gilroy";
     font-style: normal;
     font-weight: 700;
     font-size: clamp(28px, 2vw, 36px);
     line-height: 48px;
     text-align: center;
-    color: #2C2D2E;
+    color: #2c2d2e;
   }
-  .underline{
+  .underline {
     width: fit-content;
     height: 4px;
     display: flex;
@@ -171,7 +178,6 @@
 .section-intro-v3 {
   padding-top: clamp(40px, 7vw, 120px);
   background-color: white;
-
 
   .intro-container-v3 {
     max-width: 1180px;
@@ -333,36 +339,36 @@
   .description-line-center {
     margin-bottom: 60px !important;
   }
-  .section-container{
+  .section-container {
     width: 100%;
     padding: 0px 20px;
     max-width: 1220px;
-    .top-content{
+    .top-content {
       gap: 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      .title{
-        font-family: 'SVN Gilroy';
+      .title {
+        font-family: "SVN Gilroy";
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
         line-height: 133%;
         text-align: center;
         letter-spacing: 0.22em;
-        color: #0979FD;
+        color: #0979fd;
       }
-      .main-title{
-        font-family: 'SVN Gilroy';
+      .main-title {
+        font-family: "SVN Gilroy";
         font-style: normal;
         font-weight: 700;
         font-size: clamp(28px, 2vw, 36px);
         line-height: 48px;
         text-align: center;
-        color: #2C2D2E;
+        color: #2c2d2e;
       }
-      .underline{
+      .underline {
         width: fit-content;
         height: 4px;
         display: flex;
@@ -380,7 +386,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .section-customer-centric{
+  .section-customer-centric {
     width: 100%;
     max-width: 1180px;
     display: flex;
@@ -535,7 +541,7 @@
     margin-top: 60px;
     overflow: hidden;
     position: relative;
-    .mobile-content{
+    .mobile-content {
       display: none;
     }
   }
@@ -685,11 +691,7 @@
             width: 0%;
             height: 0px;
             bottom: 0;
-            background: linear-gradient(
-              91.86deg,
-              #0091ef 1.57%,
-              #32d7d4 104.54%
-            );
+            background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
             border-radius: 8px;
             transition: 0.6s;
           }
@@ -732,11 +734,7 @@
             width: 100%;
             height: 8px;
             bottom: 0;
-            background: linear-gradient(
-              91.86deg,
-              #0091ef 1.57%,
-              #32d7d4 104.54%
-            );
+            background: linear-gradient(91.86deg, #0091ef 1.57%, #32d7d4 104.54%);
             border-radius: 8px;
           }
           .swiper-item-wrap {
@@ -1031,7 +1029,7 @@
 //===========================Begin Section Activity
 .bg-section-activity {
   background-color: white;
-  .line-separator{
+  .line-separator {
     display: none;
   }
   .section-activity-container {
@@ -1054,7 +1052,7 @@
     text-align: center;
     color: #0979fd;
   }
-  .first-title{
+  .first-title {
     margin-bottom: 60px !important;
   }
   .activity-row {
@@ -1116,11 +1114,11 @@
     font-size: 16px;
   }
 }
-@media(max-width:767.5px){
-  .bg-section-activity{
-    .line-separator{
+@media (max-width: 767.5px) {
+  .bg-section-activity {
+    .line-separator {
       display: block;
-      border: 1px solid #E1E3E6;
+      border: 1px solid #e1e3e6;
       width: 100%;
     }
   }

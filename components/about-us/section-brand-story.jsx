@@ -1,11 +1,9 @@
-import React from 'react';
-import { Row } from 'react-bootstrap';
-import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
 import imgBrandStory from '@images/about-us-v3/png/img-brand-story.png';
-import { useTranslation } from 'react-i18next';
-
-import style from './style.module.scss';
+import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { Row } from 'react-bootstrap';
+import style from './AboutUs.module.scss';
 
 function SectionBrandStory() {
   const { t } = useTranslation('aboutUs');
@@ -16,7 +14,7 @@ function SectionBrandStory() {
           <span className={style[`title`]}>BRAND STORY</span>
           <h2 className={style[`main-title`]}>{t('aboutUs.brandStory.mainTitle')}</h2>
           <div className={style[`underline`]}>
-            <Image src={imgUnderLine} style={{ width: 88, height: 4 }} alt=""/>
+            <Image src={imgUnderLine} width={88} height={4} alt="" />
           </div>
           <p className={style[`description-line-center`]}>{t('aboutUs.brandStory.mainDesc')}</p>
         </Row>
