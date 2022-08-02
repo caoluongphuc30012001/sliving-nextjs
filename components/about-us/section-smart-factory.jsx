@@ -1,25 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-
-import 'swiper/css/navigation';
-import { Pagination, Navigation, EffectCoverflow } from 'swiper';
-import 'swiper/css/bundle';
-import 'swiper/css';
-import imgSmartFactory from '@images/about-us-v3/png/smart-factory.png';
-import iconLicense from '@images/about-us-v3/svg/icon-license.svg';
-import iconHover from '@images/about-us-v3/svg/icon-hover.svg';
-import iconPCCC from '@images/about-us-v3/svg/icon-pccc.svg';
-import iconSmartFactory from '@images/about-us-v3/svg/icon-smart-factory.svg';
 import slideSmartFactory1 from '@images/about-us-v3/png/1.png';
 import slideSmartFactory2 from '@images/about-us-v3/png/2.png';
 import slideSmartFactory3 from '@images/about-us-v3/png/3.png';
 import slideSmartFactory4 from '@images/about-us-v3/png/4.png';
 import slideSmartFactory5 from '@images/about-us-v3/png/5.png';
+import smart_factory_image from '@images/about-us-v3/png/img-smart-factory.png';
 import layoutSmartFactory1 from '@images/about-us-v3/png/layout1.png';
 import layoutSmartFactory2 from '@images/about-us-v3/png/layout2.png';
 import layoutSmartFactory3 from '@images/about-us-v3/png/layout3.png';
@@ -27,19 +11,18 @@ import layoutSmartFactory4 from '@images/about-us-v3/png/layout4.png';
 import layoutSmartFactory5 from '@images/about-us-v3/png/layout5.png';
 import layoutSmartFactory6 from '@images/about-us-v3/png/layout6.png';
 import layoutSmartFactory7 from '@images/about-us-v3/png/layout7.png';
-import smart_factory_image from '@images/about-us-v3/png/img-smart-factory.png';
-import { Row, Col } from 'react-bootstrap';
-
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
-
-import style from './style.module.scss';
-export const Divider = styled('div')`
-  width: 88px;
-  height: 4px;
-  background: linear-gradient(90deg, #5a20ff 0%, #00e0c5 100%);
-  border-radius: 200px;
-`;
+import imgSmartFactory from '@images/about-us-v3/png/smart-factory.png';
+import iconHover from '@images/about-us-v3/svg/icon-hover.svg';
+import iconLicense from '@images/about-us-v3/svg/icon-license.svg';
+import iconPCCC from '@images/about-us-v3/svg/icon-pccc.svg';
+import iconSmartFactory from '@images/about-us-v3/svg/icon-smart-factory.svg';
+import { useTranslation } from 'next-i18next';
+import { Col, Row } from 'react-bootstrap';
+import 'swiper/css';
+import 'swiper/css/bundle';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import style from './AboutUs.module.scss';
 
 // const BuildArrowCarousel = ({ funcPrev, funcNext }) => {
 //   return (
@@ -134,7 +117,7 @@ const SectionSmartFactory = () => {
           <span className={style[`title`]}>SMART FACTORY</span>
           <h2 className={style[`main-title`]}>{t('aboutUs.smartFactory.mainTitle')}</h2>
           <div className={style[`underline`]}>
-            <Divider />
+            <div className={style['divider']}></div>
           </div>
         </Row>
 

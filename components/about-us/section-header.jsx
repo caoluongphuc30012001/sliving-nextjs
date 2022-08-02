@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
+import { useEffect, useState } from 'react';
+import style from './AboutUs.module.scss';
 
-import { useTranslation } from 'react-i18next';
-
-import style from './style.module.scss';
 const SectionHeader = () => {
   const [headerToggle, setheaderToggle] = useState(false);
   const isBrowser = typeof window !== 'undefined';
@@ -16,7 +15,7 @@ const SectionHeader = () => {
     return () => {
       window.removeEventListener('scroll', OnScroll);
     };
-  }, []);
+  }, [isBrowser]);
 
   function OnScroll() {
     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {

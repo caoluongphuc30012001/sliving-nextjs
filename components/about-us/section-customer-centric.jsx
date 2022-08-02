@@ -1,15 +1,13 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
 import imgCustomerCentric from '@images/about-us-v3/png/img-customer-centric.png';
-import imgService from '@images/about-us-v3/svg/icon-service-customer-centric.svg';
-import imgProduct from '@images/about-us-v3/svg/icon-product-customer-centric.svg';
 import imgProduce from '@images/about-us-v3/svg/icon-produce-customer-centric.svg';
-
-import { useTranslation } from 'react-i18next';
+import imgProduct from '@images/about-us-v3/svg/icon-product-customer-centric.svg';
+import imgService from '@images/about-us-v3/svg/icon-service-customer-centric.svg';
+import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { Col, Row } from 'react-bootstrap';
+import style from './AboutUs.module.scss';
 
-import style from './style.module.scss';
 function SectionCustomerCentric() {
   const { t } = useTranslation('aboutUs');
   const listCertification = [
@@ -72,7 +70,7 @@ function SectionCustomerCentric() {
             ))}
           </Col>
           <Col lg={6} md={12} sm={12}>
-            <Image src={imgCustomerCentric} className={style[`img-customer-centric`]} />
+            <Image src={imgCustomerCentric} className={style[`img-customer-centric`]} alt="" />
           </Col>
         </Row>
       </div>

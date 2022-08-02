@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useContext, useLayoutEffect } from 'react';
-import { useRouter } from 'next/router';
-import axios from 'axios';
-import { Spinner } from 'react-bootstrap';
-import { BusinessStateContext } from '@context/businessContext';
 import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
-
-import { useTranslation } from 'next-i18next';
-
 import style from '@components/person/style.module.scss';
-// import style from '../style.module.scss'
+import { BusinessStateContext } from '@context/businessContext';
+import axios from 'axios';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { useContext, useEffect, useLayoutEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+
 const isBrowser = typeof window !== 'undefined';
 const Table = ({ table }) => {
   const { i18n } = useTranslation();
@@ -90,7 +88,8 @@ const SectionProductList = () => {
       router.replace('/personal-step1', '/personal-step1', {
         scroll: true,
       });
-  }, []);
+  }, [router, state]);
+
   useEffect(() => {
     const scrollEvent = () => {
       if (isBrowser) {
@@ -136,7 +135,8 @@ const SectionProductList = () => {
       }
     };
     if (state['houseID']) getListHouse();
-  }, []);
+  }, [state]);
+
   useEffect(() => {
     const getDevice = async (houseID, isBasic) => {
       try {

@@ -14,7 +14,7 @@ const SectionPopularProduct = ({ listProduct }) => {
   const [current, setCurrent] = useState(1);
   const [productName, setProductName] = useState('');
   const [modalShow, setModalShow] = React.useState(false);
-  const { t, i18n } = useTranslation('smartLighting');
+  const { t, i18n } = useTranslation('common');
   const checkVn = i18n.language.toUpperCase() === 'VI' ? true : false;
   return (
     <section className={style['section-popular-product-v3']}>
