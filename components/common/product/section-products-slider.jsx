@@ -1,34 +1,26 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
-
-import SwiperCore, { Navigation } from 'swiper';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import BigArrowLeft from "@images/smart-home-v3/svg/big-arrow-left.svg";
 import BigArrowLeft from '@images/smart-home-v3/svg/big-arrow-left.svg';
-
-// import BigArrowRight from "@images/smart-home-v3/svg/big-arrow-right.svg";
 import BigArrowRight from '@images/smart-home-v3/svg/big-arrow-right.svg';
 import { useTranslation } from 'next-i18next';
-import { useEffect } from 'react';
-
-import style from './style.module.scss';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import SwiperCore, { Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { ModalAdvise } from '../modal';
+import style from './style.module.scss';
 SwiperCore.use([Navigation]);
 
 const ProductItemSwiper = ({ slide, swiperIndex, setSwiperIndex, resetSwiper, setResetSwiper }) => {
   const [swiper, setSwiper] = useState(null);
+  const { locale } = useRouter();
+  const checkVn = locale.toUpperCase() === 'VI' ? true : false;
 
-  const { i18n } = useTranslation();
-  const checkVn = i18n.language.toUpperCase() === 'VI' ? true : false;
-  // const checkVn = true;
   useEffect(() => {
     if (resetSwiper) {
       swiper.slideTo(0);
       setResetSwiper(false);
     }
-  }, [resetSwiper]);
+  }, [resetSwiper, swiper, setResetSwiper]);
 
   return (
     <>
@@ -91,8 +83,10 @@ const SectionProductsSlider = ({ listSlide }) => {
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [resetSwiper, setResetSwiper] = useState(false);
 
-  const { t,i18n } = useTranslation('smartLighting');
-  const checkVn = i18n.language.toUpperCase() === "VI" ? true : false;
+  const { t } = useTranslation('smartLighting');
+  const { locale } = useRouter();
+  const checkVn = locale.toUpperCase() === 'VI' ? true : false;
+
   const increaseToggleTab = () => {
     setSwiperIndex(0);
     setResetSwiper(true);

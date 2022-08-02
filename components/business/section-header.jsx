@@ -1,16 +1,13 @@
-import React from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
-
-import style from './style.module.scss';
-import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
+import { Col, Container, Row } from 'react-bootstrap';
+import style from './Business.module.scss';
 
 function SectionHeader() {
   const { t } = useTranslation('business');
   return (
     <section className={style[`section-top-solution-package`]}>
-      <Container className={style[``]}>
-        <Row className={style[`gx-5`]}>
+      <Container>
+        <Row className="gx-5">
           <Col md={2} lg={5} xl={7}></Col>
           <Col md={10} lg={7} xl={5}>
             <div className={style[`container-header`]}>

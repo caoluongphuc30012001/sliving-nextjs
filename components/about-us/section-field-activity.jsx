@@ -1,18 +1,16 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import iconCertification1 from '@images/about-us-v3/svg/icon-certification1.svg';
-import iconCertification2 from '@images/about-us-v3/svg/icon-certification2.svg';
-import iconCertification3 from '@images/about-us-v3/svg/icon-certification3.svg';
-import iconCertification4 from '@images/about-us-v3/svg/icon-certification4.svg';
 import iconActivity1 from '@images/about-us-v3/png/img-activity1.png';
 import iconActivity2 from '@images/about-us-v3/png/img-activity2.png';
 import iconActivity3 from '@images/about-us-v3/png/img-activity3.png';
 import iconActivity4 from '@images/about-us-v3/png/img-activity4.png';
-
-import { useTranslation } from 'react-i18next';
-
+import iconCertification1 from '@images/about-us-v3/svg/icon-certification1.svg';
+import iconCertification2 from '@images/about-us-v3/svg/icon-certification2.svg';
+import iconCertification3 from '@images/about-us-v3/svg/icon-certification3.svg';
+import iconCertification4 from '@images/about-us-v3/svg/icon-certification4.svg';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
-import style from './style.module.scss';
+import { Col, Row } from 'react-bootstrap';
+import style from './AboutUs.module.scss';
+
 function SectionActivity() {
   const { t } = useTranslation('aboutUs');
 
@@ -97,7 +95,7 @@ function SectionActivity() {
                 <Col key={item.id}>
                   <div className={style[`activity-card`]}>
                     <div className={style[`activity-card-img`]}>
-                      <Image src={item.linkIconLogo} />
+                      <Image src={item.linkIconLogo} alt="" />
                     </div>
                     <span className={style[`activity-card-title`]}>{item.title}</span>
                   </div>
@@ -116,7 +114,7 @@ function SectionActivity() {
               <Col key={index.toString()}>
                 <div className={style[`certification-card`]}>
                   <div className={style[`certification-card-img`]}>
-                    <Image src={item.linkIconLogo} />
+                    <Image src={item.linkIconLogo} alt="" />
                   </div>
                   <span className={style[`certification-card-title`]}>{item.title}</span>
                 </div>

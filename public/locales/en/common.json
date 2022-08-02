@@ -53,5 +53,6 @@
   "modal.advise.scale": "Scale",
   "modal.advise.message": "Message/ Question",
   "modal.advise.product": "Product name",
-  "modal.advise.placeholderMessage": "Leave your questions here"
+  "modal.advise.placeholderMessage": "Leave your questions here",
+  "sectionPopularProduct.titleMain": "Featured Products"
 }

@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-
+import LayoutV3 from '@components/common/layout-main';
+import SectionHelpMore from '@components/common/SectionHelpMore';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import SectionHeader from '../../components/business/section-header';
 import SectionProductList from '../../components/business/section-product-list';
-
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import LayoutV3 from '@components/common/layout-main';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -22,6 +18,7 @@ const Business = () => {
       <main id="business">
         <SectionHeader />
         <SectionProductList />
+        <SectionHelpMore />
       </main>
     </LayoutV3>
   );
