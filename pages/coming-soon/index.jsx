@@ -1,12 +1,10 @@
-import * as React from 'react';
 import Layout from '@components/common/layout-main';
-import Link from 'next/link';
-import imgComingSoon from '@images/coming-soon/img-coming-soon.png';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import style from './style.module.scss';
 import Seo from '@components/common/seo';
+import imgComingSoon from '@images/coming-soon/img-coming-soon.png';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
+import style from './ComingSoon.module.scss';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -17,10 +15,10 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 function ComingSoon() {
-  const {t} = useTranslation('seo')
+  const { t } = useTranslation('seo');
   return (
     <>
-      <Seo title={t("comingSoon.title")} url="/coming-soon/" metaImage="/thumbnail.png" />
+      <Seo title={t('comingSoon.title')} url="/coming-soon" />
       <Layout>
         <section className={`${style['container-child']} ${style['not-found']}`}>
           <img src={imgComingSoon.src} alt="not found" className={style['img-not-found']} />

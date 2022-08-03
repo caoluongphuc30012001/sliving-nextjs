@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import favicon from '@images/logo/logo-small.svg';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import favicon from '@images/logo/logo-small.svg';
-//import banner from "@images/main-page-v2/header-top-4.jpg";
-function Seo({ url, description, title, metaImage }) {
+import PropTypes from 'prop-types';
+function Seo({ url = '', description = '', title, metaImage = '' }) {
   const { locale } = useRouter();
+
   const site = {
     siteMetadata: {
       title: 'Sliving - Cung cấp giải pháp toàn diện về IoT Platform',
@@ -16,13 +15,13 @@ function Seo({ url, description, title, metaImage }) {
       siteUrl: 'https://sliving.vn',
     },
   };
+
   const lang = locale;
   const metaDescription = description || site.siteMetadata.description;
-  const metaUrl = site.siteMetadata.siteUrl + url || site.siteMetadata.siteUrl;
+  const metaUrl = url ? site.siteMetadata.siteUrl + url : site.siteMetadata.siteUrl;
   const titleMeta = title || site.siteMetadata.title;
-  const image = metaImage
-    ? `${site.siteMetadata.siteUrl}${metaImage}`
-    : `${site.siteMetadata.siteUrl}/thumbnail.png`;
+  const image = metaImage ? metaImage : `${site.siteMetadata.siteUrl}/thumbnail.png`;
+
   return (
     <Head
       htmlAttributes={{
@@ -67,14 +66,8 @@ function Seo({ url, description, title, metaImage }) {
   );
 }
 
-Seo.defaultProps = {
-  meta: [],
-  description: ``,
-};
-
 Seo.propTypes = {
   description: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
   metaImage: PropTypes.string,
   url: PropTypes.string,

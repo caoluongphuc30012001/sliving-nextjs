@@ -1,9 +1,27 @@
+import Seo from '@components/common/seo';
 import ProductDetail from '@components/ProductDetail';
 import axios from 'axios';
+import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 
 export default function ProductDetailPage({ deviceTypeDetail }) {
-  return <ProductDetail deviceTypeDetail={deviceTypeDetail} />;
+  const { t } = useTranslation('seo');
+  const router = useRouter();
+  const { asPath, locale } = router;
+  const { nameEn, nameVi, descriptionVi, imageURL } = deviceTypeDetail;
+
+  return (
+    <>
+      <Seo
+        title={locale === 'en' ? nameEn : nameVi}
+        description={descriptionVi}
+        url={asPath}
+        metaImage={imageURL}
+      />
+      <ProductDetail deviceTypeDetail={deviceTypeDetail} />
+    </>
+  );
 }
 
 export async function getServerSideProps(context) {
@@ -31,6 +49,7 @@ export async function getServerSideProps(context) {
         'footer',
         'contact',
         'menu',
+        'seo',
       ])),
       locale: locale,
     },

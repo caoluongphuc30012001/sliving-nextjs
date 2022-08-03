@@ -15,11 +15,7 @@ const ContactUsPage = () => {
   const { t } = useTranslation('seo');
   return (
     <>
-      <Seo
-        title={t('contact.title')}
-        description={t('contact.description')}
-        url="https://sliving.vn"
-      />
+      <Seo title={t('contact.title')} description={t('contact.description')} url="/contact-us" />
       <ContactUs />
     </>
   );
