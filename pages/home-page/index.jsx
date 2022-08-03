@@ -15,15 +15,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'homePage', 'menu', 'footer', 'seo'])),
+      ...(await serverSideTranslations(locale, ['seo', 'common', 'homePage', 'menu', 'footer'])),
     },
   };
 };
 
 const HomePage = () => {
   const { t } = useTranslation('seo');
-
-  console.log(t('homePage.title'));
 
   return (
     <>
