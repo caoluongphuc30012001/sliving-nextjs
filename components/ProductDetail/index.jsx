@@ -1,3 +1,4 @@
+import LayoutProductDetail from '@components/common/layout-product-detail';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -55,21 +56,23 @@ const ProductDetail = ({ deviceTypeDetail }) => {
   }, [shape_index, device_index, deviceShapeList]);
 
   return (
-    <div>
-      <BuildHeader
-        deviceTypeDetail={deviceTypeDetail}
-        deviceShapeList={deviceShapeList}
-        deviceDetail={deviceDetail}
-        isLoading={!deviceDetail}
-      />
-      <BuildProductDetail
-        deviceDetail={
-          locale === 'vi' ? deviceDetail?.ViProductDetail : deviceDetail?.EnProductDetail
-        }
-        isLoading={!deviceDetail}
-      />
-      <SectionPopularProductSliving />
-    </div>
+    <LayoutProductDetail>
+      <div>
+        <BuildHeader
+          deviceTypeDetail={deviceTypeDetail}
+          deviceShapeList={deviceShapeList}
+          deviceDetail={deviceDetail}
+          isLoading={!deviceDetail}
+        />
+        <BuildProductDetail
+          deviceDetail={
+            locale === 'vi' ? deviceDetail?.ViProductDetail : deviceDetail?.EnProductDetail
+          }
+          isLoading={!deviceDetail}
+        />
+        <SectionPopularProductSliving />
+      </div>
+    </LayoutProductDetail>
   );
 };
 
