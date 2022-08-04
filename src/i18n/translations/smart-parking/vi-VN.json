@@ -57,7 +57,8 @@
         {
           "id": 0,
           "title": "Smart Cloud",
-          "text": "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả"
+          "text": "Thu thập và xử lý dữ liệu thông tin",
+          "text2":"chính xác, hiệu quả"
         },
         {
           "id": 1,
@@ -67,7 +68,9 @@
         {
           "id": 2,
           "title": "Điểm kết nối thông minh",
-          "text": "Kết nối tất cả thiết bị trong khu vực bãi đỗ xe thành mạng lưới"
+          "text": "Kết nối tất cả thiết bị trong khu vực",
+          "text2": "bãi đỗ xe thành mạng lưới"
+
         },
         {
           "id": 3,
@@ -94,7 +97,8 @@
         {
           "id": 0,
           "title": "Smart Cloud",
-          "text": "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả"
+          "text": "Thu thập và xử lý dữ liệu thông tin",
+          "text2":"chính xác, hiệu quả"
         },
         {
           "id": 1,
@@ -104,7 +108,8 @@
         {
           "id": 2,
           "title": "Điểm kết nối thông minh",
-          "text": "Kết nối tất cả thiết bị trong khu vực bãi đỗ xe thành mạng lưới"
+          "text": "Kết nối tất cả thiết bị trong khu vực",
+          "text2": "bãi đỗ xe thành mạng lưới"
         },
         {
           "id": 3,

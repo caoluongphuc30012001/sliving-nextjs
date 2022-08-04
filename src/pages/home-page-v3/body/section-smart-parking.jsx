@@ -26,12 +26,24 @@ function SectionSmartParking() {
     {
       id: 1,
       linkImg: imgItemCart2,
-      title: t("homePage.smartParking.groupItems.title2"),
+      title: (
+        <>
+          {t("homePage.smartParking.groupItems.title2.1")}
+          <br />
+          {t("homePage.smartParking.groupItems.title2.2")}
+        </>
+      ),
     },
     {
       id: 2,
       linkImg: imgItemCart3,
-      title: t("homePage.smartParking.groupItems.title3"),
+      title: (
+        <>
+          {t("homePage.smartParking.groupItems.title3.1")}
+          <br />
+          {t("homePage.smartParking.groupItems.title3.2")}
+        </>
+      ),
     },
     {
       id: 3,

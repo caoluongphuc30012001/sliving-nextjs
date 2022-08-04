@@ -55,7 +55,11 @@ const MobileItem = ({ item, parentId }) => {
         <img src={icon_b} alt="" />
       </div>
       <div className="content-title">{item.title}</div>
-      <div className="content-text">{item.text}</div>
+      <div className="content-text">
+        {item.text}
+        <br />
+        {item.text2}
+      </div>
     </div>
   );
 };
@@ -74,7 +78,11 @@ const IconActive = ({ item, isActive, setActive, id, parentId }) => {
       {isActive && (
         <div className="content">
           <div className="content-title">{item.title}</div>
-          <div className="content-text">{item.text}</div>
+          <div className="content-text">
+            {item.text}
+            <br />
+            {item.text2}
+          </div>
         </div>
       )}
       <div className="icon">
