@@ -77,6 +77,32 @@ const ProductItemSwiper = ({ slide, swiperIndex, setSwiperIndex, resetSwiper, se
   );
 };
 
+function ProductRightAllContents({ slideContent }) {
+  const isOneLine = slideContent && slideContent.length > 1 ? false : true;
+
+  return (
+    <ul
+      className="product-right-all-contents"
+      style={{ listStyle: isOneLine ? 'none' : 'disc', paddingLeft: isOneLine && '0px' }}
+    >
+      {slideContent &&
+        slideContent.map((content, index) => {
+          const id = index + 1;
+          return content.split(':').length > 1 ? (
+            <li className="product-right-desc-container" key={id}>
+              <span className="product-right-main-title">{`${content.split(':')[0]}: `}</span>
+              {content.split(':')[1]}
+            </li>
+          ) : (
+            <li className="product-right-desc-container" key={id}>
+              {content.split(':')[0]}
+            </li>
+          );
+        })}
+    </ul>
+  );
+}
+
 const SectionProductsSlider = ({ listSlide }) => {
   const [toggleState, setToggleState] = useState(0);
   const [productName, setProductName] = useState('');
@@ -170,41 +196,11 @@ const SectionProductsSlider = ({ listSlide }) => {
                         {checkVn ? slide.titleVi : slide.titleEn}
                       </h1>
                       <div className="product-right-divider"></div>
-                      <ul className="product-right-all-contents">
-                        {checkVn &&
-                          slide?.contentVis &&
-                          slide?.contentVis.map((content, index) => {
-                            const id = index + 1;
-                            return content.split(':').length > 1 ? (
-                              <li className="product-right-desc-container" key={id}>
-                                <span className="product-right-main-title">
-                                  {`${content.split(':')[0]}: `}
-                                </span>
-                                {content.split(':')[1]}
-                              </li>
-                            ) : (
-                              <li className="product-right-desc-container" key={id}>
-                                {content.split(':')[0]}
-                              </li>
-                            );
-                          })}
-                        {!checkVn &&
-                          slide?.contentEns &&
-                          slide?.contentEns.map((content) =>
-                            content.split(':').length > 1 ? (
-                              <li className="product-right-desc-container">
-                                <span className="product-right-main-title">
-                                  {`${content.split(':')[0]}: `}
-                                </span>
-                                {content.split(':')[1]}
-                              </li>
-                            ) : (
-                              <li className="product-right-desc-container">
-                                {content.split(':')[0]}
-                              </li>
-                            ),
-                          )}
-                      </ul>
+                      {checkVn ? (
+                        <ProductRightAllContents slideContent={slide?.contentVis} />
+                      ) : (
+                        <ProductRightAllContents slideContent={slide?.contentEns} />
+                      )}
                       <div className={style['btn-group']}>
                         <button
                           className={style['advise-now-btn']}

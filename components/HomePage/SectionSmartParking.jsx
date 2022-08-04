@@ -21,22 +21,26 @@ function SectionSmartParking() {
     {
       id: 0,
       linkImg: imgItemCart1,
-      title: t('homePage.smartParking.groupItems.title1'),
+      title1: t('homePage.smartParking.groupItems.title1.part1'),
+      title2: t('homePage.smartParking.groupItems.title1.part2'),
     },
     {
       id: 1,
       linkImg: imgItemCart2,
-      title: t('homePage.smartParking.groupItems.title2'),
+      title1: t('homePage.smartParking.groupItems.title2.part1'),
+      title2: t('homePage.smartParking.groupItems.title2.part2'),
     },
     {
       id: 2,
       linkImg: imgItemCart3,
-      title: t('homePage.smartParking.groupItems.title3'),
+      title1: t('homePage.smartParking.groupItems.title3.part1'),
+      title2: t('homePage.smartParking.groupItems.title3.part2'),
     },
     {
       id: 3,
       linkImg: imgItemCart4,
-      title: t('homePage.smartParking.groupItems.title4'),
+      title1: t('homePage.smartParking.groupItems.title4.part1'),
+      title2: t('homePage.smartParking.groupItems.title4.part2'),
     },
   ];
   return (
@@ -69,7 +73,9 @@ function SectionSmartParking() {
                     alt=""
                   />
                 </div>
-                <span className={styles['smart-parking-card-title']}>{itemCard.title}</span>
+                <span className={styles['smart-parking-card-title']}>
+                  {itemCard.title1} <br /> {itemCard.title2}
+                </span>
               </div>
             </Col>
           ))}

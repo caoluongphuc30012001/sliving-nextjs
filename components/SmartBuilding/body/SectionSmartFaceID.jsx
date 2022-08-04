@@ -13,10 +13,10 @@ function SectionSmartFaceID() {
         className={`${styles['max-width-1180']} ${styles['padding-left-right-smart-door']}`}
       >
         <h3 className={styles['sub-title-smart-building']}>
-          {t('smartBuilding.sectionSmartTurnstile.subTitle')}
+          {t('smartBuilding.sectionSystem.smartFaceId.title')}
         </h3>
         <h2 className={styles['title-smart-building']}>
-          {t('smartBuilding.sectionSmartTurnstile.title')}
+          {t('smartBuilding.sectionSystem.smartFaceId.subTitle')}
         </h2>
         <div>
           <div className={styles['div-under-smart-building']}></div>

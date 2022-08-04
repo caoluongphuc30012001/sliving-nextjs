@@ -24,15 +24,15 @@ const SectionSolution = () => {
     },
     {
       id: 1,
-      desc: 'Smart Parking',
-    },
-    {
-      id: 2,
       desc: 'Smart Lighting',
     },
     {
-      id: 3,
+      id: 2,
       desc: 'Smart Building',
+    },
+    {
+      id: 3,
+      desc: 'Smart Parking',
     },
   ];
 
@@ -111,7 +111,10 @@ const SectionSolution = () => {
           <Col lg={6} md={6} sm={12}>
             <Row className={`${styles['row-line-center']} ${styles['m-left-right-12']}`}>
               <span className={styles['title-eng-line-center']}>ABOUT SLIVING</span>
-              <h2 className={styles['title-line-center']}>{t('homePage.solution.mainTitle1')}</h2>
+              <h2 className={styles['title-line-center']}>
+                {t('homePage.solution.mainTitle1.part1')} <br />
+                {t('homePage.solution.mainTitle1.part2')}
+              </h2>
               <div className={styles['img-line-center']}>
                 <Image src={imgUnderLine.src} width={88} height={4} alt="" />
               </div>
@@ -124,7 +127,11 @@ const SectionSolution = () => {
                 there." - Ellie Rodriguez`}
               </span>
             </div>
-            <span className={styles['detail-v3']}>{t('homePage.solution.mainDesc1')}</span>
+            <span className={styles['detail-v3']}>
+              {t('homePage.solution.mainDesc1.part1')}
+              <strong>{t('homePage.solution.mainDesc1.part2')}</strong>
+              {t('homePage.solution.mainDesc1.part3')}
+            </span>
             <ul className={styles['list-ul-li']}>
               {arrSolution.map((solution) => (
                 <li key={solution.id}>{solution.desc}</li>
@@ -161,8 +168,11 @@ const SectionSolution = () => {
           </Col>
           <Col lg={6} md={6} sm={12} className="solution-sliving-col-right">
             <Row className={`${styles['row-line-center']} ${styles['m-left-right-12']}`}>
-              <span className={styles['title-eng-line-center']}>SOLUTION SLIVING</span>
-              <h2 className={styles['title-line-center']}>{t('homePage.solution.mainTitle2')}</h2>
+              <span className={styles['title-eng-line-center']}>SLIVING SOLUTION</span>
+              <h2 className={styles['title-line-center']}>
+                {t('homePage.solution.mainTitle2.part1')} <br />
+                {t('homePage.solution.mainTitle2.part2')}
+              </h2>
               <div className={styles['img-line-center']}>
                 <Image src={imgUnderLine.src} width={88} height={4} alt="" />
               </div>
