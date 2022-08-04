@@ -1,56 +1,52 @@
-import React, { useState, useEffect } from 'react';
-
-// import ButtonRounded from "@components/button/button-card-rounded";
+import Footer from '@components/common/Footer';
 import NavbarLighting from '@components/common/menu/index';
-import Footer from "@components/common/Footer";
-
 import logo from '@images/smart-home-v3/png/logo.png';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-function LayoutSmartLighting({ children }) {
-  const { t } = useTranslation("menu");
+
+function LayoutProductDetail({ children }) {
+  const { t } = useTranslation('menu');
   const listRoute = [
     {
       id: 0,
-      nameRoute: t("menu.method"),
+      nameRoute: t('menu.method'),
       listRoute: [
         {
           id: 0,
-          nameRoute: t("menu.home"),
-          href: "/smart-home/",
+          nameRoute: t('menu.home'),
+          href: '/smart-home/',
         },
         {
           id: 1,
-          nameRoute: t("menu.parking"),
-          href: "/smart-parking/",
+          nameRoute: t('menu.parking'),
+          href: '/smart-parking/',
         },
         {
           id: 2,
-          nameRoute: t("menu.building"),
-          href: "/smart-building/",
+          nameRoute: t('menu.building'),
+          href: '/smart-building/',
         },
         {
           id: 3,
-          nameRoute: t("menu.lighting"),
-          href: "/smart-lighting/",
+          nameRoute: t('menu.lighting'),
+          href: '/smart-lighting/',
         },
       ],
     },
     {
       id: 1,
-      nameRoute: t("menu.product"),
-      // href: "/product-detail/",
+      nameRoute: t('menu.product'),
+      href: "/product-detail/",
       active: true,
     },
     {
       id: 2,
-      nameRoute: t("menu.process"),
-      href: "/implementation-process/",
+      nameRoute: t('menu.process'),
+      href: '/implementation-process/',
     },
     {
       id: 3,
-      nameRoute: t("menu.contact"),
-      href: "/contact-us/",
+      nameRoute: t('menu.contact'),
+      href: '/contact-us/',
     },
   ];
   return (
@@ -62,4 +58,4 @@ function LayoutSmartLighting({ children }) {
     </>
   );
 }
-export default LayoutSmartLighting;
+export default LayoutProductDetail;
