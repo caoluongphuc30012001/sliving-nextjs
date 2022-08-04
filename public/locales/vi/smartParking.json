@@ -57,7 +57,8 @@
         {
           "id": 0,
           "title": "Smart Cloud",
-          "text": "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả"
+          "text": "Thu thập và xử lý dữ liệu thông tin",
+          "text2": "chính xác, hiệu quả"
         },
         {
           "id": 1,
@@ -67,7 +68,8 @@
         {
           "id": 2,
           "title": "Điểm kết nối thông minh",
-          "text": "Kết nối tất cả thiết bị trong khu vực bãi đỗ xe thành mạng lưới"
+          "text": "Kết nối tất cả thiết bị trong khu vực",
+          "text2": "bãi đỗ xe thành mạng lưới"
         },
         {
           "id": 3,
@@ -94,7 +96,8 @@
         {
           "id": 0,
           "title": "Smart Cloud",
-          "text": "Thu thập và xử lý dữ liệu thông tin chính xác, hiệu quả"
+          "text": "Thu thập và xử lý dữ liệu thông tin",
+          "text2": "chính xác, hiệu quả"
         },
         {
           "id": 1,
@@ -104,7 +107,8 @@
         {
           "id": 2,
           "title": "Điểm kết nối thông minh",
-          "text": "Kết nối tất cả thiết bị trong khu vực bãi đỗ xe thành mạng lưới"
+          "text": "Kết nối tất cả thiết bị trong khu vực",
+          "text2": "bãi đỗ xe thành mạng lưới"
         },
         {
           "id": 3,
@@ -275,11 +279,7 @@
         {
           "id": 1,
           "title": "Camera _ ITC215 - PW6M - IRL2F",
-          "descList": [
-            "Nhận diện biến số",
-            "Chống ngược sáng WDR",
-            "Cảm biến hồng ngoại"
-          ],
+          "descList": ["Nhận diện biến số", "Chống ngược sáng WDR", "Cảm biến hồng ngoại"],
           "attributeList": [
             {
               "id": 0,
@@ -311,11 +311,7 @@
         {
           "id": 2,
           "title": "Camera _ IPC - HDBW5442H - ZE",
-          "descList": [
-            "Phát hiện khuôn mặt",
-            "Chống ngược sáng WDR",
-            "Cảm biến hồng ngoại"
-          ],
+          "descList": ["Phát hiện khuôn mặt", "Chống ngược sáng WDR", "Cảm biến hồng ngoại"],
           "attributeList": [
             {
               "id": 0,
@@ -434,9 +430,7 @@
         {
           "id": 2,
           "title": "Bảng thế hiện số chỗ trống ",
-          "descList": [
-            "Thể hiện số chỗ trống đỗ xe máy và xe ô tô lên màn hình"
-          ],
+          "descList": ["Thể hiện số chỗ trống đỗ xe máy và xe ô tô lên màn hình"],
           "attributeList": [
             {
               "id": 0,
