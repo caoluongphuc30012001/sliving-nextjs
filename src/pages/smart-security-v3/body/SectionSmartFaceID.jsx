@@ -11,10 +11,10 @@ function SectionSmartFaceID() {
     <section className="bg-smart-door-locks" id="face-id-attendance">
       <Container className="max-width-1180 padding-left-right-smart-door">
         <h3 className="sub-title-smart-secuirity">
-          {t("smartBuilding.sectionSmartTurnstile.subTitle")}
+          {t("smartBuilding.sectionSystem.smartFaceId.title")}
         </h3>
         <h2 className="title-smart-secuirity">
-          {t("smartBuilding.sectionSmartTurnstile.title")}
+          {t("smartBuilding.sectionSystem.smartFaceId.subTitle")}
         </h2>
         <div>
           <div className="div-under-smart-security"></div>

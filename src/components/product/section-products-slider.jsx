@@ -193,14 +193,24 @@ const SectionProductsSlider = ({ listSlide }) => {
                           slide?.contentVis &&
                           slide?.contentVis.map((content) =>
                             content.split(":").length > 1 ? (
-                              <li className="product-right-desc-container">
+                              <li
+                                className={`product-right-desc-container ${
+                                  slide?.contentVis.length > 1 &&
+                                  "adding-desc-dot-style"
+                                }`}
+                              >
                                 <span className="product-right-main-title">
                                   {`${content.split(":")[0]}: `}
                                 </span>
                                 {content.split(":")[1]}
                               </li>
                             ) : (
-                              <li className="product-right-desc-container">
+                              <li
+                                className={`product-right-desc-container ${
+                                  slide?.contentVis.length > 1 &&
+                                  "adding-desc-dot-style"
+                                }`}
+                              >
                                 {content.split(":")[0]}
                               </li>
                             )

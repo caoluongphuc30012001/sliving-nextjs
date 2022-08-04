@@ -25,15 +25,15 @@ const SectionSolution = () => {
     },
     {
       id: 1,
-      desc: "Smart Parking",
-    },
-    {
-      id: 2,
       desc: "Smart Lighting",
     },
     {
-      id: 3,
+      id: 2,
       desc: "Smart Building",
+    },
+    {
+      id: 3,
+      desc: "Smart Parking",
     },
   ];
 
@@ -113,7 +113,9 @@ const SectionSolution = () => {
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">ABOUT SLIVING</span>
               <h2 className="title-line-center">
-                {t("homePage.solution.mainTitle1")}
+                {t("homePage.solution.mainTitle1.1")}
+                <br />
+                {t("homePage.solution.mainTitle1.2")}
               </h2>
               <div className="img-line-center">
                 <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
@@ -134,7 +136,9 @@ const SectionSolution = () => {
               </span>
             </div>
             <span className="detail-v3">
-              {t("homePage.solution.mainDesc1")}
+              {t("homePage.solution.mainDesc1.1")}
+              <b>{t("homePage.solution.mainDesc1.2")}</b>
+              {t("homePage.solution.mainDesc1.3")}
             </span>
             <ul className="list-ul-li">
               {arrSolution.map((solution) => (
@@ -170,7 +174,9 @@ const SectionSolution = () => {
             <Row className="row-line-center m-left-right-12">
               <span className="title-eng-line-center">SOLUTION SLIVING</span>
               <h2 className="title-line-center">
-                {t("homePage.solution.mainTitle2")}
+                {t("homePage.solution.mainTitle2.1")}
+                <br />
+                {t("homePage.solution.mainTitle2.2")}
               </h2>
               <div className="img-line-center">
                 <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
