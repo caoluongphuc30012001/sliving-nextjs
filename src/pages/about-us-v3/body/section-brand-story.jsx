@@ -18,7 +18,9 @@ function SectionBrandStory() {
             <Image src={imgUnderLine} style={{ width: 88, height: 4 }} />
           </div>
           <p className="description-line-center">
-            {t("aboutUs.brandStory.mainDesc")}
+            {t("aboutUs.brandStory.mainDesc1")}
+            <b>{t("aboutUs.brandStory.mainDesc2")}</b>
+            {t("aboutUs.brandStory.mainDesc3")}
           </p>
         </Row>
         <div className="brand-story-img">
