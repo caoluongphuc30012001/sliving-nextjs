@@ -195,8 +195,9 @@ const SectionProductsSlider = ({ listSlide }) => {
                             content.split(":").length > 1 ? (
                               <li
                                 className={`product-right-desc-container ${
-                                  slide?.contentVis.length > 1 &&
-                                  "adding-desc-dot-style"
+                                  slide?.contentVis.length > 1
+                                    ? "adding-desc-dot-style"
+                                    : "remove-desc-dot-style"
                                 }`}
                               >
                                 <span className="product-right-main-title">
@@ -207,8 +208,9 @@ const SectionProductsSlider = ({ listSlide }) => {
                             ) : (
                               <li
                                 className={`product-right-desc-container ${
-                                  slide?.contentVis.length > 1 &&
-                                  "adding-desc-dot-style"
+                                  slide?.contentVis.length > 1
+                                    ? "adding-desc-dot-style"
+                                    : "remove-desc-dot-style"
                                 }`}
                               >
                                 {content.split(":")[0]}
