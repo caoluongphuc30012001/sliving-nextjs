@@ -51,7 +51,7 @@ function LayoutSmartLighting({ children }) {
   return (
     <>
       <NavbarLighting logo={logo} listRoute={listRoute} back={true} />
-      <main>{children}</main>
+      {children}
       <Footer />
       {/* <Footer />
       <ButtonRounded /> */}

@@ -50,7 +50,7 @@ function LayoutSmartHome({ children }) {
   return (
     <>
       <NavbarSmartHome listRoute={listRoute} logo={logo} back={true} />
-      <main>{children}</main>
+      {children}
       <Footer />
       {/* 
       <ButtonRounded /> */}

@@ -1,10 +1,9 @@
 import ModalAdvise from '@components/common/modal/ModalAdvise/ModalAdvise';
 import style from '@components/person/style.module.scss';
-import { BusinessStateContext } from '@context/businessContext';
 import axios from 'axios';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { useContext, useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 
 const isBrowser = typeof window !== 'undefined';
@@ -14,7 +13,7 @@ const Table = ({ table }) => {
   return (
     <tbody className={`${style['body-content-container']} ${style['border-b']}`}>
       <tr className={style['body-table-row']}>
-        {checkVn ? table.room.roomValue.nameVi : table.room.roomValue.nameEn}
+        <td>{checkVn ? table.room.roomValue.nameVi : table.room.roomValue.nameEn}</td>
       </tr>
       <tr className={`${style['body-table-row']} ${style['border-l']}`}>
         {table.listDevice.map((item, index) => {
@@ -65,30 +64,29 @@ const SectionProductList = () => {
   const [totalBasic, setTotalBasic] = useState(0);
   const [totalNormal, setTotalNormal] = useState(0);
   const [totalAdvanced, setTotalAdvanced] = useState(0);
-  const [totalDevice, setTotalDevice] = useState(0);
   const [currentHouse, setCurrentHouse] = useState('');
   const [display, setDisplay] = useState(false);
-  // const [order, setOrder] = useState("ASC");
   const [quantity, setQuantity] = useState(0);
-  const state = useContext(BusinessStateContext);
 
   const [tableData, setTableData] = useState([]);
   const [isBasic, setBasic] = useState(true);
 
-  const [buttonList, setButtonList] = useState([]);
-
   const [loading, setLoading] = useState(true);
-  const [toggle, setToggle] = useState(0);
+
+  const [houseId, setHouseId] = useState(null);
 
   const { t } = useTranslation('person');
 
   const router = useRouter();
+
   useLayoutEffect(() => {
-    if (!state['houseID'])
+    const houseId = router.query.id;
+    if (!houseId)
       router.replace('/personal-step1', '/personal-step1', {
         scroll: true,
       });
-  }, [router, state]);
+    else setHouseId(router.query.id);
+  }, [router]);
 
   useEffect(() => {
     const scrollEvent = () => {
@@ -104,38 +102,18 @@ const SectionProductList = () => {
     };
   }, []);
   useEffect(() => {
-    const getServices = async () => {
-      try {
-        const res = await axios.get(
-          'https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/business/services',
-        );
-        const list = res.data?.Items.map((item, index) => {
-          return {
-            ...item,
-            className: index === 1 ? 'effect left' : 'effect right',
-          };
-        });
-        setButtonList(list.reverse());
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    getServices();
-  }, []);
-  useEffect(() => {
     const getListHouse = async () => {
       try {
         const response = await axios.get(
           'https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/business/houses',
         );
-        setCurrentHouse(response.data?.Items.find((item) => item.id === state['houseID']).nameVi);
+        setCurrentHouse(response.data?.Items.find((item) => item.id === houseId).nameVi);
       } catch (err) {
         console.error(err);
       }
     };
-    if (state['houseID']) getListHouse();
-  }, [state]);
+    if (houseId) getListHouse();
+  }, [houseId]);
 
   useEffect(() => {
     const getDevice = async (houseID, isBasic) => {
@@ -143,7 +121,7 @@ const SectionProductList = () => {
         const res = await axios.post(
           'https://d9i6rfrj7j.execute-api.ap-southeast-1.amazonaws.com/sale/business/devices',
           {
-            houseID,
+            houseID: houseId,
             isBasic,
           },
         );
@@ -169,8 +147,8 @@ const SectionProductList = () => {
       }
     };
 
-    if (state['houseID']) getDevice(state['houseID'], isBasic);
-  }, [isBasic, state]);
+    if (houseId) getDevice(1, isBasic);
+  }, [isBasic, houseId]);
 
   const sumCalculation = (list, property) => {
     const sum = list.listDevice.reduce((prev, item) => {
@@ -196,16 +174,6 @@ const SectionProductList = () => {
     getTotal(setTotalBasic, 'basicCount');
     getTotal(setTotalNormal, 'normalCount');
     getTotal(setTotalAdvanced, 'advancedCount');
-  }, [tableData]);
-
-  useEffect(() => {
-    const getTotal = () => {
-      const total = tableData.reduce((prev, item) => {
-        return prev + sumDeviceCalculation(item);
-      }, 0);
-      setTotalDevice(total);
-    };
-    getTotal();
   }, [tableData]);
 
   return (
@@ -237,20 +205,19 @@ const SectionProductList = () => {
                 </th>
               </tr>
             </thead>
-            {loading && <Spinner animation="border" className="spiner-animation" />}
+            {loading && (
+              <thead className={style['spiner-container']}>
+                <tr className={style['spiner-row']}>
+                  <th colSpan={5} className={style['spiner-box']}>
+                    <Spinner animation="border" className="spiner-animation" />
+                  </th>
+                </tr>
+              </thead>
+            )}
             {!loading &&
               tableData.map((table, index) => {
                 const id = index + 1;
-                return (
-                  <Table
-                    key={id}
-                    table={table}
-                    quantity={quantity}
-                    // handlePlus={handlePlus}
-                    // handleSub={handleSub}
-                    // onInputChange={onInputChange}
-                  />
-                );
+                return <Table key={id} table={table} quantity={quantity} />;
               })}
             <thead className={style['content-container']}>
               <tr className={style['table-row']}>

@@ -27,8 +27,8 @@ const HomePage = () => {
     <>
       <Seo title={t('homePage.title')} description={t('homePage.description')} />
       <Layout>
-        <SectionHeader />
-        <main id="main_page">
+        <main id="main-page">
+          <SectionHeader />
           <SectionSolution />
           <SectionProduct />
           <SectionSmartParking />

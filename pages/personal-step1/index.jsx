@@ -28,7 +28,7 @@ const IndexPage = () => {
     <>
       <Seo title={t('person.title')} description={t('person.description')} url="/personal-step1" />
       <Layout>
-        <main id="business-step1-v3">
+        <main id="personal-step1">
           <SectionHeader />
           <PersonalStep1 />
           <SectionHelpMore />

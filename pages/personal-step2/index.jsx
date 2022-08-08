@@ -27,7 +27,7 @@ const BusinessStep3 = () => {
     <>
       <Seo title={t('person.title')} description={t('person.description')} url="/personal-step2" />
       <Layout>
-        <main id="personal-step2-v3">
+        <main id="personal-step2">
           <SectionProductList />
           <SectionHelpMore />
         </main>

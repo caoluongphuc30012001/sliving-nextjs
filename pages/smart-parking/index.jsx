@@ -33,7 +33,7 @@ const SmartParking = () => {
         url="/smart-parking"
       />
       <LayoutParking>
-        <main>
+        <main id="smart-parking-page">
           <SmartHeader />
           <SectionDefinition />
           <SectionParkingSolution />

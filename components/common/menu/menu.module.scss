@@ -83,7 +83,6 @@
             background-color: white;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #e1e3e6;
             font-family: 'SVN-Gilroy';
             font-style: normal;
             font-weight: 500;
@@ -316,110 +315,6 @@
   }
   .section-menu-top-mobile {
     display: none;
-  }
-
-  #smart_lighting_page {
-    .section-smart-lighting-header {
-      margin-top: 90px;
-      height: calc(100vh - 90px);
-    }
-  }
-  #smart_parking_page {
-    .section-smart-parking-v3-header {
-      margin-top: 90px;
-      .smart-parking-v3-header {
-        height: calc(100vh - 90px);
-      }
-    }
-  }
-  .home-page-v3 {
-    margin-top: 90px;
-    // .swiper{
-    //   .swiper-wrapper{
-    //     .swiper-slide {
-    //       height: calc(100vh - 90px);
-    //     }
-    //   }
-    // }
-  }
-  #about_us_page {
-    .section-about-us-header {
-      margin-top: 90px;
-    }
-  }
-  #business-step1-v3 {
-    .section-business-header-v3 {
-      margin-top: 90px;
-    }
-  }
-  #business-step2-v3 {
-    .section-solution-box {
-      margin-top: 90px;
-    }
-  }
-  #business-step3-v3 {
-    .section-business-product-list {
-      margin-top: 90px;
-    }
-  }
-  #personal-step2-v3 {
-    .section-personal-product-list {
-      margin-top: 90px;
-    }
-  }
-}
-@media (max-width: 1250px) {
-  #smart_home_page {
-    .section-product-slider {
-      margin-top: 64px;
-    }
-  }
-  #business-step1-v3 {
-    .section-business-header-v3 {
-      margin-top: 64px;
-    }
-  }
-  #business-step2-v3 {
-    .section-business-header-v3 {
-      margin-top: 64px;
-    }
-  }
-  #business-step3-v3 {
-    .section-business-product-list {
-      margin-top: 64px;
-    }
-  }
-  #personal-step2-v3 {
-    .section-personal-product-list {
-      margin-top: 64px;
-    }
-  }
-  #smart_lighting_page {
-    .section-smart-lighting-header {
-      margin-top: 64px;
-      height: calc(100vh - 64px);
-    }
-  }
-  #smart_parking_page {
-    .section-smart-parking-v3-header {
-      margin-top: 64px;
-      .smart-parking-v3-header {
-        height: calc(100vh - 64px);
-      }
-    }
-  }
-  .home-page-v3 {
-    margin-top: 64px;
-    // .swiper{
-    //   .swiper-wrapper{
-    //     .swiper-slide {
-    //       height: calc(100vh - 64px);
-    //     }
-    //   }
-    // }
-  }
-  #about_us_page .section-about-us-header {
-    margin-top: 64px;
   }
 }
 @media (max-width: 1420px) {

@@ -38,7 +38,7 @@ const SmartLightingPage = () => {
         url="/smart-lighting"
       />
       <LayoutSmartLighting>
-        <main id="smart_lighting_page">
+        <main id="smart-lighting-page">
           <SectionHeader />
           <SectionDefinition />
           <SectionAboutUs />

@@ -53,7 +53,7 @@ function LayoutParking({ children }) {
   return (
     <>
       <NavbarParking listRoute={listRoute} logo={logo} back={true} />
-      <main>{children}</main>
+      {children}
       <Footer />
       {/* 
       <ButtonRounded /> */}

@@ -1,6 +1,7 @@
 .section-title-box {
   width: 100%;
   padding-top: clamp(40px, 6.25vw, 120px);
+  padding-bottom: clamp(40px, 6.25vw, 120px);
   .title-box {
     width: fit-content;
     margin: 0 auto;
@@ -8,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     .sub-title {
-      font-family: "SVN Gilroy";
+      font-family: 'SVN Gilroy';
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -19,7 +20,7 @@
     }
     .title {
       margin-top: 16px;
-      font-family: "SVN Gilroy";
+      font-family: 'SVN Gilroy';
       font-style: normal;
       font-weight: 700;
       font-size: 36px;
@@ -71,7 +72,7 @@
     .content {
       width: 100%;
       .content-title {
-        font-family: "SVN-Gilroy";
+        font-family: 'SVN-Gilroy';
         font-style: normal;
         font-weight: 800;
         font-size: 62px;
@@ -82,7 +83,7 @@
       .content-subtitle-container {
         .content-subtitle {
           max-width: 590px;
-          font-family: "SVN Gilroy";
+          font-family: 'SVN Gilroy';
           font-style: normal;
           font-weight: 700;
           font-size: clamp(14px, 0.8vw, 16px);
@@ -122,7 +123,7 @@
       .left-content-title {
         height: 100%;
         max-height: 32px;
-        font-family: "SVN Gilroy";
+        font-family: 'SVN Gilroy';
         font-style: normal;
         font-weight: 700;
         font-size: clamp(21px, 5.6vw, 28px);
@@ -145,7 +146,7 @@
         justify-content: center;
         row-gap: 16px;
 
-        font-family: "SVN Gilroy";
+        font-family: 'SVN Gilroy';
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
@@ -178,7 +179,7 @@
       }
 
       .right-icon-item {
-        img{
+        img {
           width: 48px;
           height: 48px;
         }
@@ -191,7 +192,7 @@
         align-items: center;
 
         .icon-item-title {
-          font-family: "SVN Gilroy";
+          font-family: 'SVN Gilroy';
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
@@ -304,7 +305,7 @@
         width: 100%;
         .content-title {
           justify-content: center;
-          font-family: "SVN-Gilroy";
+          font-family: 'SVN-Gilroy';
           font-style: normal;
           font-weight: 700;
           font-size: 32px;

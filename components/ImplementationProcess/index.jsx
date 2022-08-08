@@ -15,7 +15,7 @@ const ImplementationProcess = () => {
 
   return (
     <LayoutV3>
-      <main>
+      <main id="process-page">
         <section className={styles['section-process']}>
           <Container className={styles['padding-left-right']} fluid style={{ maxWidth: 1220 }}>
             <h3 className={styles['sub-title']}>{t('processPage.subTitle')}</h3>
@@ -109,8 +109,8 @@ const ImplementationProcess = () => {
           </Container>
         </section>
         <SectionHelpMore />
-        <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
       </main>
+      <ModalAdvise show={modalShow} onHide={() => setModalShow(false)} />
     </LayoutV3>
   );
 };

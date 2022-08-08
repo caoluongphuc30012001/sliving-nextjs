@@ -17,7 +17,9 @@ import {
 function SmartBuilding() {
   return (
     <LayoutBuilding>
-      <main>
+      <main
+      id="smart-building-page"
+      >
         <Container className="max-width-100 px-0" fluid>
           <SectionTopSmartBuilding />
           <SectionSmartParking />

@@ -102,7 +102,7 @@ function LayoutMain({ children }) {
   return (
     <>
       <Navbar listRoute={listRoute} logo={logo} business={url.includes('business')} />
-      <main>{children}</main>
+      {children}
       <Footer />
       {/* <ButtonRounded /> */}
     </>

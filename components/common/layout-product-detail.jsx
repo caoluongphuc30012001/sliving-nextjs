@@ -35,7 +35,7 @@ function LayoutProductDetail({ children }) {
     {
       id: 1,
       nameRoute: t('menu.product'),
-      href: "/product-detail/",
+      href: '#',
       active: true,
     },
     {
@@ -52,7 +52,7 @@ function LayoutProductDetail({ children }) {
   return (
     <>
       <NavbarLighting logo={logo} listRoute={listRoute} back={true} />
-      <main>{children}</main>
+      {children}
       <Footer />
       {/* <ButtonRounded /> */}
     </>

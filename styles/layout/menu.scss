@@ -1,0 +1,28 @@
+@media (min-width: 1250px) {
+  #main-page,
+  #about-us-page,
+  #smart-home,
+  #smart-lighting-page,
+  #smart-parking-page,
+  #smart-building-page,
+  #process-page,
+  #business,
+  #personal-step1,
+  #personal-step2 {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 1420px) {
+  #main-page,
+  #about-us-page,
+  #smart-home,
+  #smart-lighting-page,
+  #smart-parking-page,
+  #smart-building-page,
+  #process-page,
+  #business,
+  #personal-step1,
+  #personal-step2 {
+    padding-top: 64px;
+  }
+}

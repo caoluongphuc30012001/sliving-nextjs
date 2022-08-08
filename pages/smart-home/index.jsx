@@ -34,11 +34,13 @@ const SmartHome = () => {
         url="/smart-home"
       />
       <LayoutSmartHome>
-        <SectionProductsSlider />
-        <SectionPopularProductSliving />
-        <SectionProductMain />
-        <SectionSwiperVideoSliving />
-        <SectionHelpMore />
+        <main id="smart-home">
+          <SectionProductsSlider />
+          <SectionPopularProductSliving />
+          <SectionProductMain />
+          <SectionSwiperVideoSliving />
+          <SectionHelpMore />
+        </main>
       </LayoutSmartHome>
     </>
   );

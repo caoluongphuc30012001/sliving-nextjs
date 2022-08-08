@@ -1,6 +1,5 @@
-import React, { useContext, useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import Link from 'next/link';
-import imageStep from '@images/business-step1-v3/jpg/control-solution.jpg';
 
 import item_3 from '@images/personal-step1-v3/jpg/item-1.jpg';
 import item_2 from '@images/personal-step1-v3/jpg/item-2.jpg';
@@ -10,8 +9,6 @@ import item_1 from '@images/personal-step1-v3/jpg/item-5.jpg';
 import axios from 'axios';
 
 import { useTranslation } from 'next-i18next';
-
-import { BusinessDispatchContext } from '@context/businessContext';
 
 import style from '@components/person/style.module.scss';
 const imgList = [
@@ -34,8 +31,6 @@ const imgList = [
 ];
 
 const PersonalStep1 = () => {
-  const dispatch = useContext(BusinessDispatchContext);
-
   const [activeCard, setActiveCard] = useState({});
 
   const [listOption, setListOption] = useState([]);
@@ -43,7 +38,7 @@ const PersonalStep1 = () => {
   const [skeleton, setSkeleton] = useState(true);
 
   const { t, i18n } = useTranslation('person');
-
+  const checkVn = i18n.language.toUpperCase() === 'VI';
   useLayoutEffect(() => {
     const getListHouse = async () => {
       try {
@@ -73,14 +68,14 @@ const PersonalStep1 = () => {
     setActiveCard({ ...cardItem });
   };
   return (
-    <section className={style["personal-step1-container"]}>
-      <div className={style["personal-step1-wrapper"]}>
-        <div className={style["top-content"]}>
-          <h1 className={style["main-title"]}>{t('personalPackage.personalStep1.mainTitle')}</h1>
-          <h4 className={style["sub-title"]}>{t('personalPackage.personalStep1.mainDesc')}</h4>
+    <section className={style['personal-step1-container']}>
+      <div className={style['personal-step1-wrapper']}>
+        <div className={style['top-content']}>
+          <h1 className={style['main-title']}>{t('personalPackage.personalStep1.mainTitle')}</h1>
+          <h4 className={style['sub-title']}>{t('personalPackage.personalStep1.mainDesc')}</h4>
         </div>
         <div
-          className={`${style["bottom-content"]} ${
+          className={`${style['bottom-content']} ${
             listOption.length > 0 ? (!skeleton ? '' : style['non-display']) : style['non-display']
           }`}
         >
@@ -89,8 +84,8 @@ const PersonalStep1 = () => {
               <div
                 className={`${
                   item.id === activeCard.id
-                    ? `${style["bottom-content-container"]} ${style["active"]}`
-                    : style["bottom-content-container"]
+                    ? `${style['bottom-content-container']} ${style['active']}`
+                    : style['bottom-content-container']
                 }  `}
                 key={item.id}
                 onClick={() => {
@@ -100,18 +95,22 @@ const PersonalStep1 = () => {
                 role="button"
                 tabIndex={0}
               >
-                <div className={style["image-box"]}>
-                  <img src={imgList[index].img.src} alt="" className={style["solution-item-img"]}></img>
+                <div className={style['image-box']}>
+                  <img
+                    src={imgList[index].img.src}
+                    alt=""
+                    className={style['solution-item-img']}
+                  ></img>
                 </div>
-                <div className={style["solution-item-desc"]}>
-                  <span>{i18n.language.toUpperCase() === 'VN' ? item.nameVi : item.nameEn}</span>
+                <div className={style['solution-item-desc']}>
+                  <span>{checkVn ? item.nameVi : item.nameEn}</span>
                 </div>
               </div>
             );
           })}
         </div>
         <div
-          className={`${style["bottom-content"]} ${
+          className={`${style['bottom-content']} ${
             listOption.length > 0 ? (skeleton ? '' : style['non-display']) : ''
           }`}
         >
@@ -123,28 +122,22 @@ const PersonalStep1 = () => {
               //   key={id}
               // >
               // </div>
-              <div id={style["card"]} key={id}>
-                <div className={style["card-image"]}>
-                  <div className={style["block pulsate"]}></div>
+              <div id={style['card']} key={id}>
+                <div className={style['card-image']}>
+                  <div className={style['block pulsate']}></div>
                 </div>
-                <div className={style["card-content"]}>
-                  <div className={`${style["block2"]} ${style["pulsate"]}`}></div>
-                  <div className={`${style["block3"]} ${style["pulsate"]}`}></div>
-                  <div className={`${style["circle"]} ${style["pulsate"]}`}></div>
+                <div className={style['card-content']}>
+                  <div className={`${style['block2']} ${style['pulsate']}`}></div>
+                  <div className={`${style['block3']} ${style['pulsate']}`}></div>
+                  <div className={`${style['circle']} ${style['pulsate']}`}></div>
                   <div></div>
                 </div>
               </div>
             );
           })}
         </div>
-        <Link href="/personal-step2">
-          <button
-            className={style["advise-now-btn"]}
-            type="button"
-            onClick={() => {
-              dispatch({ type: 'GET_HOUSE_ID', payload: activeCard.id });
-            }}
-          >
+        <Link href={`/personal-step2?id=${activeCard.id}`}>
+          <button className={style['advise-now-btn']} type="button">
             <span>{t('personalPackage.groupBtn.confirmBtn')}</span>
           </button>
         </Link>
