@@ -1,4 +1,5 @@
 module.exports = {
+  target: "experimental-serverless-trace",
   i18n: {
     defaultLocale: "vi",
     localeDetection: false,
