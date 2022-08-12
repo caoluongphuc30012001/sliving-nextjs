@@ -1,6 +1,7 @@
 import LayoutV3 from '@components/common/layout-main';
 import SectionHelpMore from '@components/common/SectionHelpMore';
 import Seo from '@components/common/seo';
+import { i18n } from '@components/next-config';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import SectionHeader from '../../components/business/section-header';
@@ -9,7 +10,10 @@ import SectionProductList from '../../components/business/section-product-list';
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'business', 'menu', 'footer', 'seo'])),
+      ...(await serverSideTranslations(locale, ['common', 'business', 'menu', 'footer', 'seo'],{
+        i18n: i18n,
+        serializeConfig: false,
+      })),
       locale: locale,
     },
   };

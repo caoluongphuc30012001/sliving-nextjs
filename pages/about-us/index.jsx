@@ -8,13 +8,17 @@ import SectionSmartFactory from '@components/about-us/section-smart-factory';
 import LayoutV3 from '@components/common/layout-main';
 import SectionHelpMore from '@components/common/SectionHelpMore';
 import Seo from '@components/common/seo';
+import { i18n } from '@components/next-config';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'aboutUs', 'menu', 'footer', 'seo'])),
+      ...(await serverSideTranslations(locale, ['common', 'aboutUs', 'menu', 'footer', 'seo'],{
+        i18n: i18n,
+        serializeConfig: false,
+      })),
       locale: locale,
     },
   };

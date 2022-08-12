@@ -1,4 +1,5 @@
 import Seo from '@components/common/seo';
+import { i18n } from '@components/next-config';
 import ProductDetail from '@components/ProductDetail';
 import axios from 'axios';
 import { useTranslation } from 'next-i18next';
@@ -43,14 +44,14 @@ export async function getServerSideProps(context) {
   return {
     props: {
       deviceTypeDetail: deviceTypeDetail.data,
-      ...(await serverSideTranslations(locale, [
-        'common',
-        'productDetail',
-        'footer',
-        'contact',
-        'menu',
-        'seo',
-      ])),
+      ...(await serverSideTranslations(
+        locale,
+        ['common', 'productDetail', 'footer', 'contact', 'menu', 'seo'],
+        {
+          i18n: i18n,
+          serializeConfig: false,
+        },
+      )),
       locale: locale,
     },
   };

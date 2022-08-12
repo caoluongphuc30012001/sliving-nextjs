@@ -7,10 +7,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import img404 from '@images/not-found/img-404.png';
 import { useTranslation } from 'next-i18next';
 
+import { i18n } from '@components/next-config';
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'menu', 'footer', '404'])),
+      ...(await serverSideTranslations(locale, ['common', 'menu', 'footer', '404'], {
+        i18n: i18n,
+        serializeConfig: false,
+      })),
     },
   };
 };
