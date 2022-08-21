@@ -3,7 +3,7 @@ import iconMedia from '@images/home-page-v3/svg/icon-media.svg';
 import iconSupport from '@images/home-page-v3/svg/icon-support.svg';
 import imgUnderLine from '@images/home-page-v3/svg/title-line-under.svg';
 import { Col, Image, Row } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import styles from './SectionHelpMore.module.scss';
 
 const SectionHelpMore = () => {

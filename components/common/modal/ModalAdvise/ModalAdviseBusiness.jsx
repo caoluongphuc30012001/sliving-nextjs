@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Form, FormControl, Modal } from 'react-bootstrap';
 import { Controller, useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 import { ModalThanks } from '..';
 import styles from './ModalAdvise.module.scss';
 

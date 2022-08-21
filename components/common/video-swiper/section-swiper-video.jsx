@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import playIcon from '@images/smart-home-v3/svg/play-btn.svg';
 import { FreeMode, Navigation, Thumbs } from 'swiper';
 import { Image } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 // Import Swiper styles
 import 'swiper/css';
