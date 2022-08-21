@@ -47,7 +47,6 @@ deploy_beta:
     - npm run build
   #Todo script to deploy
   only: 
-    - merge_requests
     - develop
   tags:
     - sliving
@@ -60,7 +59,6 @@ release:
     - npm run build
   #Todo script to release
   only:
-    - merge_requests
     - master
   tags: 
     - sliving
