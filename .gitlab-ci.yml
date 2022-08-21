@@ -3,6 +3,7 @@ image: node:14
 stages:
   - lint
   - build
+  - deploy
 
 # Cache the folder node_modules
 cache:
@@ -25,7 +26,7 @@ lint_jobs:
   only:
     - merge_requests
   tags:
-    - sliving
+    - slivings
   
 
 build_jobs:
@@ -37,4 +38,31 @@ build_jobs:
     - merge_requests
   tags:
     - sliving
+
+
+deploy_beta:
+  stage: deploy
+  script:
+    - npm i
+    - npm run build
+  #Todo script to deploy
+  only: 
+    - merge_requests
+    - develop
+  tags:
+    - sliving
+
+
+release:
+  stage: deploy
+  script:
+    - npm i 
+    - npm run build
+  #Todo script to release
+  only:
+    - merge_requests
+    - master
+  tags: 
+    - sliving
+  
 
