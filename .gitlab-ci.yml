@@ -1,0 +1,40 @@
+image: node:14
+
+stages:
+  - lint
+  - build
+
+# Cache the folder node_modules
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  # Copy from the old file .gitlab-ci.yml
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - git submodule update --init --recursive
+
+lint_jobs:
+  stage: lint
+  script: 
+    - npm i
+    - npm run lint
+  only:
+    - merge_requests
+  tags:
+    - sliving
+  
+
+build_jobs:
+  stage: build
+  script:
+    - npm i
+    - npm run build 
+  only:
+    - merge_requests
+  tags:
+    - sliving
+
