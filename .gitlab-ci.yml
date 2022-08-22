@@ -26,7 +26,7 @@ lint_jobs:
   only:
     - merge_requests
   tags:
-    - slivings
+    - sliving
   
 
 build_jobs:
